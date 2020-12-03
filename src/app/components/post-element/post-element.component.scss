@@ -1,0 +1,126 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-post-item {
+  color: white;
+
+  b, strong {
+    font-family: MavenPro-Bold, sans-serif;
+  }
+
+  .post-title {
+    font-size: 1.6em;
+    margin-top: 25px;
+  }
+
+  .post-subtitle {
+    font-size: 1.3em;
+    margin: 20px 0;
+  }
+
+  .post-text {
+    font-size: 1.1em;
+    margin-top: 10px;
+    line-height: 22px;
+  }
+
+  .post-hint {
+    background: $fia-dark-background-color;
+    color: white !important;
+    padding: 15px;
+    margin: 30px 0;
+    border-left: 4px solid $fia-primary-color;
+    border-top-right-radius: $fia-border-radius;
+    border-bottom-right-radius: $fia-border-radius;
+  }
+
+  .post-line {
+    border: none;
+    background: $fia-dark-background-color;
+    height: 1px;
+    margin-block-start: 2.5em;
+    margin-block-end: 2em;
+  }
+
+  .post-list {
+  }
+
+  .post-list-ordered {
+    counter-reset: ordered-list-counter;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+
+    li {
+      margin-left: 15px;
+      counter-increment: ordered-list-counter;
+      display: flex;
+      align-items: center;
+    }
+
+    li::before {
+      content: counter(ordered-list-counter);
+      color: $fia-primary-color;
+      font-size: 1.1em;
+      --size: 28px;
+      left: calc(-1 * var(--size) - 10px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      //top: 0;
+      background: $fia-dark-background-color;
+      border-radius: 50%;
+      text-align: center;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .post-list {
+    padding-inline-start: 30px;
+  }
+
+  .post-ul-content {
+    margin-left: -28px;
+  }
+
+  .post-ol-list p,
+  .post-ul-list p {
+    margin-bottom: 0;
+  }
+
+  .post-ol-list:not(:last-of-type),
+  .post-ul-list:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+
+  .post-ol-sublist,
+  .post-ul-sublist {
+    padding-inline-start: 18px;
+  }
+
+  .post-image-wrapper {
+    margin: 10px 0;
+
+    .post-image {
+      border-radius: $fia-border-radius;
+      max-width: 100%;
+    }
+  }
+
+  .post-table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+
+    .table-row {
+      display: flex;
+
+      th, td {
+        padding: 10px;
+        border: 1px solid black;
+      }
+    }
+  }
+}

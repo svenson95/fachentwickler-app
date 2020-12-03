@@ -1,0 +1,293 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-header {
+  justify-content: space-between;
+  background: black;
+  height: 126px;
+  max-width: 1400px;
+
+  @include to-md {
+    height: 95px;
+  }
+
+  @include to-xs {
+    height: 76px;
+    padding: 0 5px;
+  }
+
+  .fia-logo-wrapper {
+    display: flex;
+    margin-left: 40px;
+    padding: 8px 12px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    @include from-xs {
+      margin-right: 40px;
+    }
+
+    @include to-xs {
+      margin-left: 10px;
+      padding: 8px 0;
+    }
+
+    h1.fia-app-name {
+      margin-bottom: 6px;
+
+      @include from-xs {
+        margin-left: 10px;
+        display: flex;
+      }
+
+      .fia-hover-label {
+        position: absolute;
+        top: 78px;
+        left: 115px;
+        color: $fia-third-color;
+
+        @include to-md {
+          bottom: -25px;
+          transform: translateY(-18px);
+        }
+      }
+    }
+
+    .fia-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include to-xs {
+        width: 40px;
+        height: 40px;
+        border-radius: 20%;
+        border: 1px solid $fia-third-color;
+      }
+
+      .fia-app-icon {
+        height: 26px;
+        color: $fia-third-color;
+
+        @include to-xs {
+          height: 24px;
+        }
+      }
+    }
+
+    .active-route {
+      border-color: $fia-secondary-color;
+
+      .fia-app-icon {
+        color: $fia-secondary-color;
+      }
+    }
+
+    .fia-app-name {
+      font-size: 1.3em;
+      font-family: MavenPro-Bold, sans-serif;
+
+      .fia, .pp, .yio {
+        text-decoration: underline;
+        text-decoration-style: double;
+      }
+
+      .fia { text-decoration-color: $fia-secondary-color; }
+      .pp { text-decoration-color: $fia-third-color; }
+      .yio { text-decoration-color: $fia-primary-color; }
+
+      @include to-xs {
+        display: none;
+      }
+    }
+  }
+
+  .fia-header-details-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    @include from-xs {
+      padding-left: 25px;
+    }
+
+    @include to-md {
+      flex-direction: row-reverse;
+    }
+
+    .fia-header-searchbar {
+
+      @include to-md {
+        display: none;
+      }
+
+      .fia-search-bar {
+        height: 48px;
+        background: $fia-dark-card-color;
+        border-radius: $fia-border-radius;
+        width: 220px;
+
+        @include to-md {
+          width: 150px;
+        }
+
+        ::placeholder {
+          color: $fia-grey-2;
+        }
+
+        ::ng-deep {
+          .mat-form-field-outline {
+            opacity: 1;
+            color: $fia-grey-2;
+          }
+          .mat-form-field-wrapper {
+            .mat-form-field-flex {
+              flex-direction: row-reverse;
+              align-items: center;
+              padding: 0 .75em 0 .75em;
+              height: 48px;
+            }
+            .mat-form-field-infix {
+              padding-left: 0.5em;
+              padding-top: 0.5em;
+              padding-right: 0;
+              padding-bottom: 0.5em;
+              border-top: 0;
+
+              input {
+                margin-bottom: 2px;
+                font-size: .8em;
+              }
+            }
+            .mat-form-field-suffix {
+
+              .mat-icon {
+                font-size: 110%;
+                color: $fia-third-color;
+              }
+            }
+            .mat-form-field-underline {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .fia-title-buttons-wrapper {
+      display: flex;
+      align-items: center;
+
+      @include to-xs {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .fia-page-title {
+        font-size: 1.3em;
+        font-family: MavenPro-Bold, sans-serif;
+        margin-right: 30px;
+        flex-shrink: 1;
+
+        @include from-xs {
+          transform: translateY(-2px);
+        }
+
+        @include to-xs {
+          font-size: .9em;
+          margin-left: 10px;
+        }
+      }
+
+      .fia-button-container {
+        display: flex;
+        color: $fia-third-color;
+        transform: translateY(12px);
+
+        .fia-header-usage-btn {
+          background-color: $fia-secondary-color;
+          color: black;
+          height: fit-content;
+          font-size: .55em;
+          font-family: MavenPro-Bold, sans-serif;
+          text-transform: uppercase;
+          border-radius: $fia-border-radius;
+          padding: 5px 10px;
+          margin-left: 8px;
+          margin-top: 8px;
+          margin-right: 3px;
+
+          @include to-md {
+            font-size: .45em;
+            padding: 5px 8px;
+          }
+
+          @include to-xs {
+            display: none;
+          }
+        }
+
+        .fia-hover-label {
+          transform: translateY(-3px);
+        }
+
+        .fia-sidenav-hamburger-btn,
+        .fia-theme-toggle-wrapper,
+        .fia-admin-panel-btn {
+          margin-top: 5px;
+
+          @include from-xs {
+            margin-right: 15px;
+          }
+
+          @include to-xs {
+            margin-right: 5px;
+          }
+        }
+
+        .fia-admin-panel-btn {
+          margin-top: 0;
+        }
+
+        .fia-theme-toggle-wrapper {
+          margin-right: 0;
+        }
+
+        .fia-sidenav-hamburger-btn {
+          margin-right: 10px;
+          margin-top: 0;
+
+          ::ng-deep .mat-icon {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.fia-header .fia-logo-wrapper {
+  &:hover {
+    .fia-icon-wrapper:not(.active-route) .fia-app-icon {
+      color: white;
+      transition: 150ms;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.fia-header-progress-bar {
+  height: 5px;
+  z-index: 999;
+
+  @include to-xs {
+    position: fixed;
+    top: 75px;
+  }
+}
+

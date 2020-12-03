@@ -1,0 +1,21 @@
+<div class="fia-content">
+<!--  <div [@routeAnimations]="prepareRoute(outlet)">-->
+<!--    <router-outlet #outlet="outlet"></router-outlet>-->
+    <router-outlet></router-outlet>
+<!--  </div>-->
+  <mat-toolbar class="fia-page-footer">
+    <div class="fia-background-view first"></div>
+    <div class="fia-background-view second"></div>
+    <div class="fia-labels-wrapper">
+      <div class="logo">
+        <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span> © 2020
+      </div>
+      <div class="buttons">
+        <a class="legal" routerLink="/impressum">Impressum</a>
+        <a class="about" routerLink="/about">About</a>
+        <a class="feedback" routerLink="/feedback">Feedback</a>
+        <a class="usage" routerLink="/">Usage</a>
+      </div>
+    </div>
+  </mat-toolbar>
+</div>

@@ -1,0 +1,55 @@
+@import 'src/theme/breakpoints';
+
+@mixin from($width) {
+  @media screen and (min-width: $width) {
+    @content
+  }
+}
+
+@mixin from-tiny() {
+  @include from($breakpoint-tiny) {
+    @content
+  }
+}
+
+@mixin to-tiny() {
+  @media screen and (max-width: $breakpoint-tiny) {
+    @content
+  }
+}
+
+@mixin from-xs() {
+  @include from($breakpoint-xs) {
+    @content
+  }
+}
+
+@mixin to-xs() {
+  @media screen and (max-width: $breakpoint-xs) {
+    @content
+  }
+}
+@mixin from-sm() {
+  @include from($breakpoint-sm) {
+    @content
+  }
+}
+
+@mixin to-sm() {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content
+  }
+}
+
+@mixin to-md() {
+  @media screen and (max-width: $breakpoint-md) {
+    @content
+  }
+}
+
+@mixin from-md() {
+  @include from($breakpoint-md) {
+    @content
+  }
+}
+

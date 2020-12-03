@@ -1,0 +1,70 @@
+<mat-toolbar color="primary" class="fia-header">
+  <div class="fia-logo-wrapper fia-header-hover-label" routerLink="/dashboard">
+    <div class="fia-icon-wrapper" [ngClass]="{'active-route': router.url === '/dashboard'}">
+      <svg xmlns='http://www.w3.org/2000/svg' class='fia-app-icon' viewBox='0 0 512 512'>
+        <title>Book</title>
+        <path d='M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288'
+              fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/>
+      </svg>
+    </div>
+    <h1 class="fia-app-name unselectable">
+      <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
+      <mat-label class="fia-hover-label fade-in">Dashboard</mat-label>
+    </h1>
+  </div>
+  <div class="fia-header-details-wrapper">
+    <div class="fia-header-searchbar" *ngIf="!mobileQuery.matches">
+      <mat-form-field class="fia-search-bar" appearance="fill">
+        <mat-icon matSuffix>search</mat-icon>
+        <input matInput type="text" [(ngModel)]="searchValue" placeholder="Suche">
+      </mat-form-field>
+    </div>
+    <div class="fia-title-buttons-wrapper">
+      <h1 class="fia-page-title">{{headerService.pageTitle}}</h1>
+      <div class="fia-button-container">
+        <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="mobileQuery.matches">
+          <mat-icon>menu</mat-icon>
+        </button>
+<!--        <button class="fia-admin-panel-btn fia-header-hover-label" routerLink="einstellungen" mat-icon-button mat-button *ngIf="!mobileQuery.matches">-->
+<!--          <mat-icon>build</mat-icon>-->
+<!--          <mat-label class="fia-hover-label fade-in unselectable">Einstellungen</mat-label>-->
+<!--        </button>-->
+        <div class="fia-theme-toggle-wrapper fia-header-hover-label">
+          <mat-slide-toggle class="fia-theme-toggle" [checked]="darkMode" (change)="toggleTheme()">
+          </mat-slide-toggle>
+          <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
+        </div>
+        <button class="fia-action-btn fia-header-hover-label" mat-icon-button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+          <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
+        </button>
+        <button class="fia-button fia-header-usage-btn unselectable" routerLink="/">
+          usage
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/" *ngIf="mobileQuery.matches">
+            <mat-icon>home</mat-icon>
+            <span>Usage</span>
+          </button>
+          <button mat-menu-item routerLink="mein-profil">
+            <mat-icon>account_circle</mat-icon>
+            <span>Mein Profil</span>
+          </button>
+          <button mat-menu-item routerLink="login">
+            <mat-icon>login</mat-icon>
+            <span>Einloggen</span>
+          </button>
+          <button mat-menu-item routerLink="feedback">
+            <mat-icon>feedback</mat-icon>
+            <span>Feedback</span>
+          </button>
+          <button mat-menu-item routerLink="about">
+            <mat-icon>help</mat-icon>
+            <span>About</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-progress-bar class="fia-header-progress-bar" value="100"></mat-progress-bar>

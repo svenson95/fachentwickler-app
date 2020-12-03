@@ -1,0 +1,313 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-page {
+
+  @include from-xs {
+    padding: 20px 20px 50px 40px;
+  }
+
+  .fia-title {
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .fia-description {
+    color: $fia-grey-1;
+  }
+
+  .fia-welcome-banner {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+
+    .fia-app-icon {
+      width: 300px;
+      height: 300px;
+      flex-shrink: 0;
+      position: absolute;
+      top: 10px;
+
+      @include to-xs {
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 10px;
+      }
+
+      &::ng-deep path {
+        fill: $fia-secondary-color;
+        stroke: $fia-secondary-color;
+        opacity: 0.2;
+      }
+    }
+
+    .fia-labels {
+      font-family: MavenPro-Bold, sans-serif;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+      text-align: right;
+      text-transform: uppercase;
+      margin-top: 10px;
+      align-self: center;
+      width: 100%;
+
+      @include to-sm {
+        font-size: 1.1em;
+      }
+
+      .grey-1 {
+        color: $fia-grey-3;
+      }
+      .grey-2 {
+        color: $fia-grey-2;
+      }
+    }
+  }
+
+  .fia-landing-row {
+    display: flex;
+    max-width: 1135px;
+    flex-direction: row-reverse;
+    margin-bottom: 100px;
+
+    @include to-xs {
+      margin-bottom: 80px;
+    }
+
+    @include to-sm {
+      flex-direction: column;
+    }
+
+    .fia-image-wrapper {
+      text-align: center;
+
+      .fia-landing-image {
+        align-self: center;
+      }
+    }
+
+    .fia-text-column {
+      display: flex;
+      flex-direction: column;
+
+      @include to-sm {
+        align-items: center;
+      }
+
+      @include to-xs {
+        width: 90%;
+        margin: auto;
+      }
+
+      @include from-xs {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    }
+
+    .example-1,
+    .example-2,
+    .example-3,
+    .example-4 {
+      align-self: center;
+      height: auto;
+
+      @include to-xs {
+        width: 90% !important;
+      }
+    }
+  }
+
+  .fia-landing-row.first {
+    justify-content: space-between;
+
+    .fia-image-wrapper {
+
+      @include from-sm {
+        min-width: 400px;
+        width: 600px;
+      }
+
+      .fia-landing-image {
+        display: block;
+        max-width: 100%;
+
+        @include to-xs {
+          margin: auto;
+        }
+      }
+    }
+
+    .fia-text-column {
+      align-items: center;
+      align-self: center;
+
+      .fia-eduaction-svg {
+        width: 120px;
+
+        ::ng-deep svg {
+          stroke: red;
+          fill: red;
+        }
+      }
+    }
+  }
+
+  .fia-landing-row.second {
+    align-items: center;
+
+    @include to-sm {
+      flex-direction: column-reverse;
+    }
+
+    .fia-text-column {
+      align-self: center;
+
+      @include to-sm {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .fia-study-svg, .fia-rest-svg {
+        width: 100px;
+
+        @include from-md {
+          margin-left: 20px;
+        }
+      }
+      .fia-rest-svg {
+        margin-top: 50px;
+      }
+    }
+    .fia-image-wrapper {
+      align-self: center;
+
+      @include from-xs {
+        min-width: 500px;
+      }
+
+      @include to-xs {
+        text-align: center;
+      }
+
+      .fia-landing-image {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .fia-landing-row.third {
+    align-items: center;
+
+    .fia-images-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .fia-text-column {
+      align-self: center;
+      width: 100%;
+
+      @include to-xs {
+        width: 90%;
+      }
+
+      .fia-nerd-svg, .fia-datenbankspeicher-svg {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+      }
+
+      .fia-title, .fia-description {
+        margin: 20px auto 0;
+
+        @include from-xs {
+          width: 400px;
+        }
+      }
+      .fia-description {
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    }
+    .fia-image-wrapper {
+      min-width: 300px;
+      align-self: center;
+      margin: auto;
+
+      @include to-xs {
+        text-align: center;
+      }
+
+      .fia-landing-image {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .fia-landing-row.school {
+
+    @include to-sm {
+      flex-direction: column-reverse;
+    }
+
+    .fia-text-column {
+      align-items: center;
+      align-self: center;
+      max-width: 350px;
+    }
+
+    .fia-cast-icon {
+      width: 100px;
+      height: 100px;
+      font-size: 100px;
+      color: $fia-secondary-color;
+    }
+
+    .fia-image-wrapper {
+      align-self: center;
+      text-align: center;
+
+      @include from-sm {
+        width: 800px;
+        min-width: 400px;
+      }
+
+      .fia-landing-image {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .fia-landing-row.start {
+    display: block;
+    text-align: center;
+
+    .fia-text-column {
+      align-items: center;
+
+      @include to-sm {
+        margin-top: 40px;
+      }
+
+      .fia-leaderboard-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 100px;
+        color: $fia-secondary-color;
+      }
+    }
+
+    .fia-button {
+      margin-top: 20px;
+    }
+  }
+}

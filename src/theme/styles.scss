@@ -1,0 +1,339 @@
+@font-face {
+  font-family: 'MavenPro';
+  src: url('../assets/fonts/MavenPro-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'MavenPro-Black';
+  src: url('../assets/fonts/MavenPro-Black.ttf');
+}
+@font-face {
+  font-family: 'MavenPro-Bold';
+  src: url('../assets/fonts/MavenPro-Bold.ttf');
+}
+
+@import 'src/theme/mixins';
+
+$fia-primary-color: #eb6a1e;
+$fia-primary-color-rgb: rgb(235, 106, 30);
+$fia-secondary-color: #f4ac31;
+$fia-secondary-color-rgb: rgb(244, 172, 49);
+$fia-third-color: #94aac5;
+$fia-third-color-rgb: rgb(148, 170, 197);
+
+$fia-dark-background-color: #141619;
+$fia-dark-card-color: #25272b;
+$fia-dark-card-color-rgb: rgb(37, 39, 43);
+$fia-dark-contrast-color: #1e2023;
+$fia-light-background-color: #f3f3f3;
+$fia-light-card-color: white;
+$fia-light-contrast-color: #d4d4d4;
+
+$fia-grey-1: #989898;
+$fia-grey-2: #b4b4b4;
+$fia-grey-3: #d4d4d4;
+
+$fia-dark-shadow: rgba(15, 15, 15, 1) 0px 4px 4px, rgba(20, 20, 20, 1) 0px 4px 4px;
+$fia-light-shadow: rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px;
+
+$fia-border-radius: 8px;
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+u {
+  text-decoration-color: $fia-secondary-color;
+}
+
+.ddu-list-number,
+.list-number {
+  display: inline-flex;
+  $size: 30px;
+  line-height: $size;
+  width: $size;
+  height: $size;
+  font-size: 1em;
+  justify-content: center;
+  color: $fia-secondary-color;
+  background: $fia-dark-background-color;
+  border-radius: 50%;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+
+/* FIAPPY - PAGE */
+.fia-page {
+  background: $fia-dark-background-color;
+  padding: 30px 20px 20px 40px;
+
+  @include to-xs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+a {
+  color: $fia-secondary-color;
+
+  &:hover {
+    color: white;
+    text-decoration-color: $fia-secondary-color;
+  }
+}
+
+/* FIAPPY - ROUTE ANIMATIONS FIX */
+.fia-content {
+  .ng-animating {
+    transform: translateY(-5px);
+  }
+}
+
+/* FIAPPY - CARDS */
+.fia-card {
+  max-width: 1060px;
+  background: $fia-dark-card-color;
+  padding: 20px;
+  box-shadow: $fia-dark-shadow;
+  border-radius: $fia-border-radius;
+  margin-bottom: 20px;
+
+  @include to-xs {
+    margin-bottom: 5px;
+    border-radius: 0;
+  }
+
+  @include from-xs {
+    padding: 30px;
+  }
+
+  .fia-card-title {
+    font-size: 1.7em;
+    font-family: MavenPro-Bold, sans-serif;
+    letter-spacing: 1px;
+    line-height: 26px;
+    text-decoration: underline;
+    text-decoration-color: $fia-secondary-color;
+
+    @include to-xs {
+      font-size: 1.5em;
+    }
+  }
+
+  p {
+    color: white;
+  }
+}
+
+/* FIAPPY - HEADER BUTTON HOVER HINT LABEL */
+.fia-header-hover-label {
+  .fia-hover-label {
+    align-self: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    height: fit-content;
+
+    @include to-xs {
+      transform: translateY(5px);
+    }
+  }
+  &:hover {
+    .fia-hover-label {
+      @include from-xs {
+        opacity: 1;
+        transition: 200ms;
+      }
+    }
+  }
+  ::ng-deep {
+    .mat-button-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .mat-icon {
+      align-self: center;
+      margin-top: 8px;
+    }
+  }
+
+  &.fia-logo-wrapper {
+    .fia-hover-label {
+      left: 3%;
+      font-size: .55em;
+      font-family: MavenPro, sans-serif;
+    }
+  }
+
+  &.fia-theme-toggle-wrapper {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(2px);
+
+    .mat-slide-toggle-label {
+      font-size: 12px;
+    }
+  }
+
+  &.fia-theme-toggle-wrapper .fia-hover-label {
+    margin-top: 5px;
+  }
+}
+
+/* FIAPPY - INPUT - <mat-form-field> */
+.fia-input {
+
+  .mat-form-field-label {
+    color: $fia-grey-1;
+  }
+  &.mat-form-field-invalid .mat-form-field-label,
+  &.mat-form-field-should-float .mat-form-field-label {
+    color: $fia-primary-color !important;
+  }
+  .mat-form-field-ripple {
+    background-color: $fia-primary-color !important;
+  }
+  .mat-error {
+    margin-bottom: 5px;
+  }
+}
+
+/* FIAPPY - MENU - <mat-menu> */
+.mat-menu-panel {
+  background-color: $fia-secondary-color;
+}
+
+/* FIAPPY - UNDERLINE BUTTON ANIMATION */
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
+
+.fia-button,
+.fia-text-button {
+
+  h1, span {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      left: 0; right: 0;
+      height: 3px;
+      background-color: $fia-secondary-color;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(- $distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+  }
+
+  &:hover {
+  //&:focus {       // TODO: show underline on focus (tab navigation) but remove underlines after click
+    h1, span {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(5px);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
+}
+
+/* FIAPPY - BUTTON */
+.fia-button {
+  background-color: $fia-third-color;
+  color: black;
+  text-transform: uppercase;
+  font-family: MavenPro-Bold, sans-serif;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: $fia-border-radius;
+  letter-spacing: 1px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span::before {
+    background-color: $fia-primary-color;
+  }
+  span::after {
+    background-color: $fia-primary-color;
+  }
+}
+
+/* FIAPPY - BADGE */
+.fia-badge {
+  width: fit-content;
+  height: 14px;
+  flex-shrink: 0;
+  border: white;
+  color: white;
+  font-family: MavenPro-Bold, sans-serif;
+  font-size: .6em;
+  text-transform: uppercase;
+  line-height: 14px;
+  letter-spacing: 1.5px;
+  padding: 0 6px;
+  border-radius: $fia-border-radius;
+}
+
+/* FIAPPY - TOGGLES */
+.fia-theme-toggle {
+  vertical-align: middle;
+
+  ::ng-deep {
+    .mat-slide-toggle-thumb {
+      background-color: $fia-primary-color;
+    }
+    .mat-slide-toggle-bar {
+      background-color: white;
+    }
+  }
+}
+
+/* FIAPPY - LOADING SPINNER */
+.fia-loading-spinner {
+  margin: 50px auto !important;
+
+  $fia-spinner-size: 64px;
+  width: $fia-spinner-size !important;
+  height: $fia-spinner-size !important;
+
+  ::ng-deep svg {
+    width: $fia-spinner-size !important;
+    height: $fia-spinner-size !important;
+
+    circle {
+      stroke: $fia-third-color;
+      stroke-width: 5px !important;
+    }
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .fia-card {
+    background: $fia-dark-card-color;
+  }
+}

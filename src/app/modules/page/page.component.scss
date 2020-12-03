@@ -1,0 +1,68 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-page-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fia-sidenav-content-wrapper {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+
+  ::ng-deep {
+    .fia-page-content {
+      background: black;
+    }
+
+    .mat-drawer-content {
+      background-color: black;
+    }
+  }
+}
+
+.is-mobile .fia-sidenav-content-wrapper {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.fia-sidenav {
+  overflow-x: hidden;
+  border-right: 0;
+}
+
+.fia-sidenav {
+  background: $fia-dark-background-color;
+}
+
+.fia-sidenav ::ng-deep {
+  .mat-drawer-inner-container {
+    overflow-x: hidden;
+
+    div:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.mat-drawer-container {
+  background-color: black;
+
+
+  @include to-xs {
+    margin-top: 70px !important;
+  }
+}
+
+.is-mobile ::ng-deep .fia-header {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}

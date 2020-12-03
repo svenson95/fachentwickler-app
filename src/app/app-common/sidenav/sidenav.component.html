@@ -1,0 +1,47 @@
+<div class="fia-sidenav-content">
+  <div class="fia-app-logo" *ngIf="breakpointObserver.isMatched('(max-width: 600px)')">
+    <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
+  </div>
+
+  <div class="fia-subjects-section">
+    <p class="section-title">Schulfächer</p>
+    <mat-nav-list>
+      <a class="fia-nav-item" mat-list-item
+         *ngFor="let nav of subjectsSection"
+         [routerLink]="'/' + nav.url"
+         (click)="closeSidebar()"
+         [ngClass]="{'active-route': nav.url === router.url}"
+      >
+        {{nav.title}}
+      </a>
+    </mat-nav-list>
+  </div>
+
+  <div class="fia-areas-section">
+    <p class="section-title">Bereiche</p>
+    <mat-nav-list>
+      <a class="fia-nav-item" mat-list-item
+         *ngFor="let nav of areasSection"
+         [routerLink]="'/' + nav.url"
+         (click)="closeSidebar()"
+         [ngClass]="{'active-route': nav.url === router.url}"
+      >
+        {{nav.title}}
+      </a>
+    </mat-nav-list>
+  </div>
+
+  <div class="fia-internal-section">
+    <p class="section-title">Internes</p>
+    <mat-nav-list>
+      <a class="fia-nav-item" mat-list-item
+         *ngFor="let nav of internalSection"
+         [routerLink]="'/' + nav.url"
+         (click)="closeSidebar()"
+         [ngClass]="{'active-route': nav.url === router.url}"
+      >
+        {{nav.title}}
+      </a>
+    </mat-nav-list>
+  </div>
+</div>

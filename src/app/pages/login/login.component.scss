@@ -1,0 +1,75 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-view-wrapper {
+  display: flex;
+  width: fit-content;
+  margin: 40px auto;
+  padding-bottom: 40px;
+
+  @include to-md {
+    flex-direction: column;
+  }
+}
+
+.fia-login-column {
+  text-align: center;
+
+  .fia-input-fields {
+    display: flex;
+    flex-direction: column;
+
+    .fia-name-input {
+      margin-bottom: 8px;
+
+      ::placeholder {
+        color: $fia-grey-1;
+      }
+    }
+
+    ::ng-deep {
+      .mat-form-field-label-wrapper {
+        color: green;
+      }
+    }
+
+    ::ng-deep .mat-form-field-flex {
+      background-color: $fia-dark-contrast-color;
+
+      input {
+        color: white;
+      }
+    }
+  }
+
+  .fia-button {
+    margin-top: 10px;
+  }
+}
+
+.fia-second-column {
+  @include to-md {
+    width: 100%;
+    margin: 30px 0;
+  }
+  @include from-md {
+    margin: 0 50px;
+  }
+}
+
+.fia-register-column {
+  text-align: center;
+  align-self: center;
+
+  .fia-no-account-hint {
+    text-align: center;
+
+    @include to-md {
+      margin: 0;
+    }
+  }
+
+  .fia-button {
+    margin-top: 10px;
+  }
+}

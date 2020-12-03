@@ -1,0 +1,152 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-card-title {
+  margin-bottom: 20px;
+}
+
+.fia-topic {
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  .fia-topic-title {
+    display: flex;
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+
+    @include from-md {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 0;
+
+      @include from-md {
+        margin: 0 20px;
+      }
+
+      @include from-sm {
+        flex-shrink: 0;
+      }
+
+      @include to-sm {
+        min-width: 300px;
+      }
+    }
+
+    hr {
+      min-width: 30px;
+      height: 2px;
+      align-self: center;
+      border: none;
+      //background-color: $fia-dark-background-color;
+      background-color: $fia-secondary-color;
+
+      @include to-md {
+        display: none;
+      }
+
+      &:first-of-type {
+        min-width: 50px;
+      }
+
+      &:last-of-type {
+        width: 100%;
+      }
+    }
+  }
+
+  .fia-links {
+    .fia-link-item {
+      display: flex;
+      justify-content: space-between;
+      background-color: $fia-dark-background-color;
+      border-radius: $fia-border-radius;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      @media screen and (min-width: 1000px) {
+        &:hover {
+          background-color: black;
+          transition: 100ms;
+
+          .fia-link-title {
+            letter-spacing: 0.5px;
+            transition: letter-spacing 400ms ease-out;
+          }
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+
+      @include to-md {
+        flex-direction: column;
+        padding: 8px 10px;
+      }
+
+      .fia-link-title {
+        margin: auto 0;
+        transition: letter-spacing 300ms ease-out;
+
+        @include to-xs {
+          margin-bottom: 0;
+        }
+      }
+
+      .fia-description-row {
+        display: flex;
+        align-items: center;
+
+        @include from-md {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
+
+        .fia-link-description {
+          color: $fia-grey-1;
+          font-size: .95em;
+          margin-bottom: 0;
+
+          @include from-md {
+            min-width: 190px;
+          }
+        }
+
+        .fia-badge {
+          margin-top: 1px;
+          margin-left: 10px;
+
+          @include from-xs {
+            margin-right: 10px;
+          }
+
+          &.article {
+            border: 1px solid $fia-third-color;
+            color: $fia-third-color;
+          }
+          &.tasks {
+            border: 1px solid $fia-grey-1;
+            color: $fia-grey-1;
+          }
+          &.index-cards {
+            border: 1px solid $fia-secondary-color;
+            color: $fia-secondary-color;
+          }
+          &.quiz {
+            border: 1px solid $fia-primary-color;
+            color: $fia-primary-color;
+          }
+        }
+      }
+    }
+  }
+}

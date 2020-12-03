@@ -1,0 +1,57 @@
+<div class="fia-post-item" [ngSwitch]="element.type">
+  <!-- TITLE -->
+  <p class="post-title" *ngSwitchCase="ElementType.TITLE"
+     [innerHTML]="element.content"></p>
+  <!-- SUBTITLE -->
+  <p class="post-subtitle" *ngSwitchCase="ElementType.SUBTITLE"
+     [innerHTML]="element.content"></p>
+  <!-- TEXT -->
+  <p class="post-text" *ngSwitchCase="ElementType.TEXT"
+     [innerHTML]="element.content"></p>
+  <!-- HINT -->
+  <p class="post-hint" *ngSwitchCase="ElementType.HINT"
+     [innerHTML]="element.content"></p>
+  <!-- LINE -->
+  <hr class="post-line" *ngSwitchCase="ElementType.LINE"/>
+  <!-- LIST -->
+  <ul class="post-list" *ngSwitchCase="ElementType.LIST && !element.ordered">
+    <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+    <li class="post-ul-list" *ngFor="let item of element.list">
+      <p *ngIf="isString(item)" [innerHTML]="item"></p>
+      <p *ngIf="item.content" [innerHTML]="item.content"></p>
+      <ul class="post-ul-sublist" *ngIf="item.sublist !== undefined">
+        <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">
+          <p [innerHTML]="subItem"></p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <!-- ORDERED LIST -->
+  <ol class="post-list-ordered" *ngSwitchCase="ElementType.LIST && element.ordered">
+    <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+    <li class="post-ol-list" *ngFor="let item of element.list">
+      <p *ngIf="isString(item)" [innerHTML]="item"></p>
+      <p *ngIf="item.content" [innerHTML]="item.content"></p>
+      <ul class="post-ol-sublist" *ngIf="item.sublist !== undefined">
+        <li class="post-ol-sublist-item" *ngFor="let subItem of item.sublist">
+          <p [innerHTML]="subItem"></p>
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <!-- IMAGE -->
+  <div class="post-image-wrapper" *ngSwitchCase="ElementType.IMAGE">
+    <img class="post-image" *ngIf="image" [src]="image" alt="image"/>
+    <mat-spinner class="fia-loading-spinner" *ngIf="!image"></mat-spinner>
+  </div>
+  <!-- TABLE -->
+  <table class="post-table" *ngSwitchCase="ElementType.TABLE">
+    <p class="post-table-title" *ngIf="element.content !== ''" [innerHTML]="element.content"></p>
+    <tr class="table-row" *ngFor="let row of element.rows">
+      <div *ngFor="let column of row.columns">
+        <th *ngIf="row.type === 'header'" [colSpan]="column.colSpan" [innerHTML]="column.content"></th>
+        <td *ngIf="row.type === 'default'" [colSpan]="column.colSpan" [innerHTML]="column.content"></td>
+      </div>
+    </tr>
+  </table>
+</div>

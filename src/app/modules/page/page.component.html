@@ -1,0 +1,26 @@
+<div class="fia-page-container" [class.is-mobile]="mobileQuery.matches">
+  <app-header [mobileQuery]="mobileQuery"
+              [searchValue]="searchbarValue"
+              [sidenav]="sidenav"
+              [darkMode]="darkMode"
+              [toggleTheme]="toggleTheme"
+  ></app-header>
+
+  <mat-sidenav-container class="fia-sidenav-content-wrapper"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+                         autosize
+                         #sidenavContainer
+  >
+    <mat-sidenav class="fia-sidenav" #sidenav
+                 [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [opened]="!mobileQuery.matches"
+                 [fixedInViewport]="mobileQuery.matches"
+                 fixedTopGap="56"
+    >
+      <app-sidenav></app-sidenav>
+    </mat-sidenav>
+
+    <app-content></app-content>
+
+  </mat-sidenav-container>
+</div>

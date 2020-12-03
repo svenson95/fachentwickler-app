@@ -1,0 +1,92 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.fia-sidenav ::ng-deep .mat-drawer-inner-container::-webkit-scrollbar {
+  display: none;
+}
+
+.fia-sidenav-content {
+  .fia-app-logo {
+    font-size: 4em;
+    font-family: MavenPro-Bold, sans-serif;
+    color: $fia-grey-1;
+    opacity: 0.15;
+    position: absolute;
+    top: 45px;
+    left: 11px;
+    z-index: -1;
+
+    .fia, .pp, .yio {
+      text-decoration: underline;
+      text-decoration-style: double;
+    }
+
+    .fia { text-decoration-color: $fia-secondary-color; }
+    .pp { text-decoration-color: $fia-third-color; }
+    .yio { text-decoration-color: $fia-primary-color; }
+  }
+}
+
+.fia-subjects-section {
+  @include to-xs {
+    margin-top: 70px;
+  }
+}
+
+.fia-areas-section,
+.fia-internal-section {
+  @include to-xs {
+    margin-top: 20px;
+  }
+}
+
+.fia-subjects-section,
+.fia-areas-section,
+.fia-internal-section {
+  min-width: 245px;
+
+  @include from-xs {
+    margin-top: 30px;
+  }
+
+  .section-title {
+    background: $fia-dark-card-color;
+    color: white;
+    font-size: 1.3em;
+    font-family: MavenPro-Bold, sans-serif;
+    padding: 8px 20px;
+    padding-left: 35px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    border-top-right-radius: $fia-border-radius;
+    border-bottom-right-radius: $fia-border-radius;
+    box-shadow: $fia-dark-shadow;
+    letter-spacing: 1px;
+
+    @include to-xs {
+      width: 180px;
+    }
+  }
+
+  .fia-nav-item {
+    color: white;
+    font-size: 1em;
+    height: 28px;
+    //background-color: $fia-dark-background-color;
+    margin-left: 20px;
+
+    &:hover {
+      background-color: $fia-dark-background-color;
+    }
+
+    &:hover:not(.active-route) {
+      color: $fia-secondary-color;
+    }
+
+    &.active-route {
+      text-decoration: underline;
+      text-decoration-color: $fia-secondary-color;
+    }
+  }
+}

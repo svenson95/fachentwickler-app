@@ -1,0 +1,77 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-page-footer {
+  height: fit-content;
+  position: relative;
+  background: black;
+  padding: 20px 40px;
+
+  @include to-xs {
+    padding: 20px 0 60px;
+  }
+
+  .fia-background-view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &.first {
+      background-color: $fia-dark-background-color;
+      z-index: 1;
+    }
+    &.second {
+      background-color: black;
+      z-index: 2;
+
+      @include from-xs {
+        border-top-left-radius: $fia-border-radius;
+      }
+    }
+  }
+
+  .fia-labels-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1110px;
+    justify-content: space-between;
+    font-size: .8em;
+    color: white;
+    z-index: 3;
+    padding: 0 5px;
+
+    @include to-xs {
+      padding: 0 20px;
+      height: 120px;
+    }
+  }
+
+  .logo {
+    font-family: MavenPro-Bold, sans-serif;
+
+    .fia, .pp, .yio { text-decoration: underline double; }
+    .fia { text-decoration-color: $fia-secondary-color; }
+    .pp { text-decoration-color: $fia-third-color; }
+    .yio { text-decoration-color: $fia-primary-color; }
+  }
+
+  .buttons {
+    font-size: .8em;
+
+    @include to-md {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      a {
+        line-height: 32px;
+      }
+    }
+
+    .legal, .about, .feedback {
+      margin-right: 20px;
+    }
+  }
+}
