@@ -138,6 +138,7 @@ a {
     letter-spacing: 1px;
     opacity: 0;
     height: fit-content;
+    transition: opacity 250ms ease-in-out;
 
     @include to-xs {
       transform: translateY(5px);
@@ -147,7 +148,7 @@ a {
     .fia-hover-label {
       @include from-xs {
         opacity: 1;
-        transition: 200ms;
+        transition: opacity 250ms ease-in-out;
       }
     }
   }
