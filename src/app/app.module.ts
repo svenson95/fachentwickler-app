@@ -12,33 +12,33 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './app-common/header/header.component';
 import { SidenavComponent } from './app-common/sidenav/sidenav.component';
 import { ContentComponent } from './app-common/content/content.component';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PageComponent,
-    HeaderComponent,
-    SidenavComponent,
-    ContentComponent,
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    AngularMaterialModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    {
-      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-      useValue: {appearance: 'fill'}
-    }
-  ],
-  entryComponents: [AppComponent],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        PageComponent,
+        HeaderComponent,
+        SidenavComponent,
+        ContentComponent,
+    ],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        AngularMaterialModule,
+        ReactiveFormsModule
+    ],
+    providers: [
+        {
+            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+            useValue: {appearance: 'fill'}
+        }
+    ],
+    entryComponents: [AppComponent],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

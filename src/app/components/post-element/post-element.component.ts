@@ -20,8 +20,6 @@ export class PostElementComponent implements OnInit {
   ngOnInit(): void {
     if (this.element.type === 'image') {
       this.loadImage(this.element.content);
-    } else if (this.element.type === 'table') {
-      console.log(this.element);
     }
   }
 

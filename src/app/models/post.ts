@@ -17,9 +17,9 @@ export interface PostElement {
   content: string;
   language?: 'java' | 'php' | 'javascript' | 'sql';
   list?: Array<string | SublistItem>;
-  ordered?: boolean | null;
+  ordered?: boolean;
   rows?: TableRow[];
-  object?: object | null;
+  object?: object;
 }
 
 interface SublistItem {
