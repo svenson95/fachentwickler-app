@@ -1,0 +1,77 @@
+<div class="fia-page">
+  <mat-card class="fia-card">
+    <mat-spinner class="fia-loading-spinner" *ngIf="indexCardsContent === undefined"></mat-spinner>
+    <p class="fia-card-title" *ngIf="indexCardsContent !== undefined"
+       [innerHTML]="indexCardsDetails.title"></p>
+    <p class="fia-card-description" *ngIf="indexCardsContent !== undefined"
+       [innerHTML]="indexCardsDetails.description"></p>
+    <mat-card-content class="fia-card-content" *ngIf="indexCardsContent !== undefined">
+      <div class="fia-index-card">
+        <hr class="v-line-1"/>
+        <hr class="v-line-2"/>
+        <div class="fia-content-wrapper">
+          <div class="index-card-title">
+            <div class="index-card-type">
+              <p class="label">{{isAnswerVisible ? 'Antwort' : 'Frage'}}</p>
+<!--              <p class="answer-label">Antwort</p>-->
+            </div>
+            <div class="index-card-level">
+              <p class="label">{{level+1}} von {{indexCardsContent.questions.length}}</p>
+            </div>
+          </div>
+          <div class="index-card-content">
+            <p class="content" [innerHTML]="answerVisible(indexCardsContent)">
+<!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in-->
+<!--              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat-->
+<!--              cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in-->
+<!--              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat-->
+<!--              cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+
+<!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in-->
+<!--              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat-->
+<!--              cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+<!--              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in-->
+<!--              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat-->
+<!--              cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+            </p>
+          </div>
+        </div>
+        <hr class="h-line-1"/>
+        <hr class="h-line-2"/>
+        <hr class="h-line-3"/>
+        <hr class="h-line-4"/>
+        <hr class="h-line-5"/>
+        <hr class="h-line-6"/>
+        <hr class="h-line-7"/>
+        <hr class="h-line-8"/>
+        <hr class="h-line-9"/>
+        <hr class="h-line-10"/>
+        <hr class="h-line-11"/>
+        <hr class="h-line-12"/>
+        <hr class="h-line-13"/>
+      </div>
+      <div class="fia-buttons-container">
+        <button class="fia-text-button" (click)="showAnswer()"
+                [disabled]="isAnswerVisible">
+          <span>Weiter</span>
+        </button>
+        <button class="fia-text-button" (click)="increaseLevel()"
+                [disabled]="!isAnswerVisible || end">
+          <span>Nächste Frage</span>
+        </button>
+        <button class="fia-text-button disabled" (click)="resetLevel()" [disabled]="!end">
+          <span>Zurück zum Anfang</span>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

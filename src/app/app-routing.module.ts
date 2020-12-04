@@ -14,19 +14,31 @@ const subjectsPaths = (): Array<Route> => {
 };
 
 const postPaths = () => {
-  const subjects: Route[] = [];
+  const posts: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
-    subjects.push({
+    posts.push({
       path: sub + '/:topic/:post',
       loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostModule)
     },);
   });
-  return subjects;
+  return posts;
+};
+
+const indexCardsPaths = () => {
+  const indexCards: Route[] = [];
+  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+    indexCards.push({
+      path: sub + '/:topic/:post/index-cards',
+      loadChildren: () => import('src/app/pages/index-cards/index-cards.module').then(m => m.IndexCardsModule)
+    },);
+  });
+  return indexCards;
 };
 
 const routes: Routes = [
   ...subjectsPaths(),
   ...postPaths(),
+  ...indexCardsPaths(),
   {
     path: '',
     loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),

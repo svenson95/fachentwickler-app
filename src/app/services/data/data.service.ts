@@ -42,4 +42,13 @@ export class DataService {
         return response;
       }));
   }
+
+  getIndexCards(postUrl: string): Observable<IndexCardsData> {
+    return this.httpClient.get<IndexCardsData>(`${environment.baseUrl}/index-cards/${postUrl}`)
+      .pipe(map((response) => {
+        console.log('response getIndexCards');
+        console.log(response);
+        return response;
+      }));
+  }
 }

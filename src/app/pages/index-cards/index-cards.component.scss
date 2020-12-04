@@ -1,0 +1,105 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-card {
+  .fia-card-title {
+    margin-bottom: 5px;
+  }
+  .fia-card-description {
+  }
+
+  .fia-card-content {
+    display: flex;
+    margin-top: 30px;
+  }
+}
+
+
+.fia-index-card {
+  background-color: #fdfdfd;
+  width: 500px;
+  min-height: 300px;
+  padding-top: 35px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 30px;
+  box-shadow: $fia-dark-shadow;
+
+  .fia-content-wrapper {
+    padding-left: 55px;
+    padding-right: 40px;
+
+    .index-card-title .index-card-type .label,
+    .index-card-title .index-card-level .label,
+    .index-card-content .content {
+      color: black;
+      margin-block-end: 0;
+    }
+
+    .index-card-title {
+      display:  flex;
+      justify-content: space-between;
+    }
+
+    .index-card-content {
+      margin-top: 3px;
+    }
+  }
+
+  .v-line-1, .v-line-2 {
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    width: 2px;
+    border: none;
+    background-color: #fdeaea;
+    z-index: 0;
+  }
+
+  .v-line-1 { left: 40px; }
+  .v-line-2 { left: 44px; }
+
+  .h-line-1, .h-line-2, .h-line-3, .h-line-4, .h-line-5, .h-line-6, .h-line-7,
+  .h-line-8, .h-line-9, .h-line-10, .h-line-11, .h-line-12, .h-line-13 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border: none;
+    background-color: #e0e0e0;
+  }
+
+  .h-line-1 { top: 50px; }
+  .h-line-2 { top: 70px; }
+  .h-line-3 { top: 90px; }
+  .h-line-4 { top: 110px; }
+  .h-line-5 { top: 130px; }
+  .h-line-6 { top: 150px; }
+  .h-line-7 { top: 170px; }
+  .h-line-8 { top: 190px; }
+  .h-line-9 { top: 210px; }
+  .h-line-10 { top: 230px; }
+  .h-line-11 { top: 250px; }
+  .h-line-12 { top: 270px; }
+  .h-line-13 { top: 290px; }
+
+}
+
+.fia-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: $fia-border-radius;
+
+  button:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  button:disabled {
+    background: $fia-grey-1;
+    span {
+      color: $fia-dark-card-color;
+    }
+  }
+}
