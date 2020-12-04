@@ -7,20 +7,18 @@
        [innerHTML]="indexCardsDetails.description"></p>
     <mat-card-content class="fia-card-content" *ngIf="indexCardsContent !== undefined">
       <div class="fia-index-card">
-        <hr class="v-line-1"/>
-        <hr class="v-line-2"/>
         <div class="fia-content-wrapper">
           <div class="index-card-title">
             <div class="index-card-type">
               <p class="label">{{isAnswerVisible ? 'Antwort' : 'Frage'}}</p>
-<!--              <p class="answer-label">Antwort</p>-->
             </div>
             <div class="index-card-level">
               <p class="label">{{level+1}} von {{indexCardsContent.questions.length}}</p>
             </div>
           </div>
           <div class="index-card-content">
-            <p class="content" [innerHTML]="answerVisible(indexCardsContent)">
+            <p class="content" [innerHTML]="answerVisible(indexCardsContent)"
+               [ngClass]="{'shortAnswer': stripHtml(answerVisible(indexCardsContent)).length < 400}">
 <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
 <!--              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
 <!--              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in-->
@@ -45,6 +43,8 @@
             </p>
           </div>
         </div>
+        <hr class="v-line-1"/>
+        <hr class="v-line-2"/>
         <hr class="h-line-1"/>
         <hr class="h-line-2"/>
         <hr class="h-line-3"/>

@@ -71,4 +71,10 @@ export class IndexCardsComponent implements OnInit {
     return this.indexCardsContent.questions[this.level + 1] === undefined;
   }
 
+  stripHtml(html): string {
+    let tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  }
+
 }

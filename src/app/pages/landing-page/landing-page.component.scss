@@ -207,6 +207,7 @@
 
   .fia-landing-row.third {
     align-items: center;
+    justify-content: space-between;
 
     .fia-images-wrapper {
       display: flex;
@@ -214,23 +215,30 @@
     }
     .fia-text-column {
       align-self: center;
-      width: 100%;
 
       @include to-xs {
         width: 90%;
       }
 
-      .fia-nerd-svg, .fia-datenbankspeicher-svg {
-        width: 100px;
-        height: 100px;
-        margin-left: 20px;
+      .fia-nerd-svg, .fia-world-grid-svg {
+        width: 64px;
+        height: 64px;
+      }
+
+      .fia-datenbankspeicher-svg {
+        width: 96px;
+        height: 96px;
+      }
+
+      .fia-world-grid-svg {
+        align-self: flex-end;
       }
 
       .fia-title, .fia-description {
         margin: 20px auto 0;
 
         @include from-xs {
-          width: 400px;
+          width: 350px;
         }
       }
       .fia-description {
@@ -239,9 +247,9 @@
       }
     }
     .fia-image-wrapper {
-      min-width: 300px;
+      min-width: 400px;
+      max-width: 680px;
       align-self: center;
-      margin: auto;
 
       @include to-xs {
         text-align: center;

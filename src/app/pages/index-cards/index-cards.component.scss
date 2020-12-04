@@ -11,23 +11,35 @@
   .fia-card-content {
     display: flex;
     margin-top: 30px;
+
+    @include to-sm {
+      flex-direction: column;
+    }
   }
 }
 
 
 .fia-index-card {
   background-color: #fdfdfd;
-  width: 600px;
   min-height: 350px;
   padding-top: 35px;
   overflow: hidden;
   position: relative;
-  margin-right: 30px;
   box-shadow: $fia-dark-shadow;
+
+  @include from-sm {
+    width: 600px;
+    min-width: 500px;
+    margin-right: 10px;
+  }
 
   .fia-content-wrapper {
     padding-left: 80px;
     padding-right: 40px;
+
+    @include to-xs {
+      padding-left: 60px;
+    }
 
     .index-card-title .index-card-type .label,
     .index-card-title .index-card-level .label,
@@ -36,6 +48,18 @@
       margin-block-end: 0;
       font-size: 1.1em;
       line-height: 25px;
+
+      @include to-xs {
+        font-size: 1em;
+      }
+    }
+
+    .content {
+      padding-bottom: 10px;
+    }
+
+    .content.shortAnswer {
+      margin-top: 25px;
     }
 
     .index-card-title {
@@ -44,7 +68,6 @@
     }
 
     .index-card-content {
-      //margin-top: 0;
     }
   }
 
@@ -58,8 +81,18 @@
     z-index: 0;
   }
 
-  .v-line-1 { left: 62px; }
-  .v-line-2 { left: 68px; }
+  .v-line-1 {
+    left: 62px;
+    @include to-xs {
+      left: 40px;
+    }
+  }
+  .v-line-2 {
+    left: 68px;
+    @include to-xs {
+      left: 46px;
+    }
+  }
 
   .h-line-1, .h-line-2, .h-line-3, .h-line-4, .h-line-5, .h-line-6,
   .h-line-7, .h-line-8, .h-line-9, .h-line-10, .h-line-11, .h-line-12 {
@@ -90,11 +123,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
   border-radius: $fia-border-radius;
+  margin: 20px;
+
+  @include to-sm {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   button:not(:last-child) {
-    margin-bottom: 50px;
+    @include from-sm {
+      margin-bottom: 50px;
+    }
+
+    @include to-sm {
+      margin-bottom: 15px;
+    }
   }
 
   button:disabled {
