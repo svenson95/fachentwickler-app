@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HeaderService} from '../../services/header.service';
-import {LF1_POSTS} from '../../../data/posts/lf-1';
-import {subjects} from '../../../data/menu-items';
-import {subjectsData} from '../../../data/data-subjects';
+import { HeaderService } from '../../services/header.service';
+import { LF1_POSTS } from '../../../data/posts/lf-1';
+import { subjectsData } from '../../../data/data-subjects';
 
 @Component({
   selector: 'app-dashboard',

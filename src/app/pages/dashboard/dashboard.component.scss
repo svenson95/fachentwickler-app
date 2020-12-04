@@ -11,6 +11,10 @@
 
 .fia-next-exams {
   .fia-view-wrapper {
+    .fia-no-exams {
+      font-size: 1.1em;
+      color: $fia-grey-1;
+    }
   }
 }
 
@@ -41,7 +45,7 @@
     }
 
     .fia-progress-week {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
 
       .progress-bar {
         ::ng-deep .mat-progress-bar-fill::after {

@@ -13,7 +13,7 @@ export interface Post {
 }
 
 export interface PostElement {
-  type: ElementType;
+  type: ElementType | string;
   content: string;
   language?: 'java' | 'php' | 'javascript' | 'sql';
   list?: Array<string | SublistItem>;
