@@ -1,11 +1,11 @@
-import {Component, ElementRef, OnDestroy, OnInit} from '@angular/core';
-import {NavigationEnd, Router} from '@angular/router';
-import {Subject} from '../../models/subject';
-import {subjects} from '../../../data/menu-items';
-import {DataService} from '../../services/data.service';
-import {HeaderService} from '../../services/header.service';
-import {Subscription} from 'rxjs';
-import {PostType} from '../../models/post-type';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subject } from '../../models/subject';
+import { subjects } from '../../../data/menu-items';
+import { DataService } from '../../services/data.service';
+import { HeaderService } from '../../services/header.service';
+import { Subscription } from 'rxjs';
+import { PostType } from '../../models/post-type';
 
 @Component({
   selector: 'app-subject',
@@ -50,18 +50,6 @@ export class SubjectComponent implements OnInit, OnDestroy {
         console.log('Error while GET subject', error);
       }
     );
-  }
-
-  badgeTranslator(text: PostType): string {
-    if (text === PostType.ARTICLE) {
-      return 'Artikel';
-    } else if (text === PostType.TASKS) {
-      return 'Aufgaben';
-    } else if (text === PostType.INDEX_CARDS) {
-      return 'Karteikarten';
-    } else if (text === PostType.QUIZ) {
-      return 'Quiz';
-    }
   }
 
 }

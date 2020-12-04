@@ -14,14 +14,7 @@
             <p class="fia-link-title">{{post.title}}</p>
             <div class="fia-description-row">
               <p class="fia-link-description">{{post.description}}</p>
-              <div class="fia-badge unselectable" [ngClass]="{
-                'article': post.type === PostType.ARTICLE,
-                'tasks': post.type === PostType.TASKS,
-                'index-cards': post.type === PostType.INDEX_CARDS,
-                'quiz': post.type === PostType.QUIZ
-              }">
-                {{badgeTranslator(post.type)}}
-              </div>
+              <app-post-badge [post]="post"></app-post-badge>
             </div>
           </div>
         </div>

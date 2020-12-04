@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SubjectComponent } from './subject.component';
 import { SubjectPageRoutingModule } from './subject-routing.module';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { PostBadgeModule } from '../../components/post-badge/post-badge.module';
 
 
 
@@ -11,7 +12,8 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
   imports: [
     CommonModule,
     SubjectPageRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    PostBadgeModule
   ]
 })
 export class SubjectModule { }

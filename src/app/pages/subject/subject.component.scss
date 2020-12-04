@@ -78,7 +78,7 @@
           transition: 100ms;
 
           .fia-link-title {
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
             transition: letter-spacing 400ms ease-out;
           }
         }
@@ -118,32 +118,6 @@
 
           @include from-md {
             min-width: 190px;
-          }
-        }
-
-        .fia-badge {
-          margin-top: 1px;
-          margin-left: 10px;
-
-          @include from-xs {
-            margin-right: 10px;
-          }
-
-          &.article {
-            border: 1px solid $fia-third-color;
-            color: $fia-third-color;
-          }
-          &.tasks {
-            border: 1px solid $fia-grey-1;
-            color: $fia-grey-1;
-          }
-          &.index-cards {
-            border: 1px solid $fia-secondary-color;
-            color: $fia-secondary-color;
-          }
-          &.quiz {
-            border: 1px solid $fia-primary-color;
-            color: $fia-primary-color;
           }
         }
       }
