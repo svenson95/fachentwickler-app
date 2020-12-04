@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from '../../models/subject';
 import { subjects } from '../../../data/menu-items';
-import { DataService } from '../../services/data.service';
+import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { Subscription } from 'rxjs';
 import { PostType } from '../../models/post-type';

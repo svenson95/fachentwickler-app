@@ -1,17 +1,17 @@
-import {PostType} from './post-type';
+import { PostType } from './post-type';
 
 export interface Subject {
   subject: string;
   topics: Topic[];
-  tests?: Post[];
+  tests?: SubjectPost[];
 }
 
 export interface Topic {
   title: string;
-  links: Post[];
+  links: SubjectPost[];
 }
 
-interface Post {
+export interface SubjectPost {
   title: string;
   description: string;
   url: string;

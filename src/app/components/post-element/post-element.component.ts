@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {PostElement} from '../../models/post';
-import {DataService} from '../../services/data.service';
-import {ElementType} from '../../models/element-type';
+import { Component, Input, OnInit } from '@angular/core';
+import { PostElement } from '../../models/post';
+import { DataService } from '../../services/data/data.service';
+import { ElementType } from '../../models/element-type';
 
 @Component({
   selector: 'app-post-element',

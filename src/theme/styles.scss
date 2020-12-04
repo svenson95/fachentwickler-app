@@ -46,6 +46,10 @@ $fia-border-radius: 8px;
   user-select: none;
 }
 
+b, strong {
+  font-family: MavenPro-Bold, sans-serif;
+}
+
 u {
   text-decoration-color: $fia-secondary-color;
 }
@@ -122,6 +126,11 @@ a {
     @include to-xs {
       font-size: 1.5em;
     }
+  }
+
+  .fia-card-description {
+    font-size: 1.2em;
+    color: $fia-grey-1;
   }
 
   p {
@@ -225,7 +234,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   border-radius: $fia-border-radius;
   letter-spacing: 1px;
 
-  &:not(.disabled) {
+  &:not(:disabled) {
     cursor: pointer;
 
     h1, span {

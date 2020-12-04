@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../../services/data.service';
-import {Post} from '../../models/post';
-import {Router} from '@angular/router';
-import {HeaderService} from '../../services/header.service';
-import {subjects} from '../../../data/menu-items';
+import { DataService } from '../../services/data/data.service';
+import { Post } from '../../models/post';
+import { Router } from '@angular/router';
+import { HeaderService } from '../../services/header.service';
+import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-post',
