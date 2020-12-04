@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HeaderService} from '../../services/header.service';
+import {LF1_POSTS} from '../../../data/posts/lf-1';
+import {subjects} from '../../../data/menu-items';
+import {subjectsData} from '../../../data/data-subjects';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,12 +11,14 @@ import {HeaderService} from '../../services/header.service';
 })
 export class DashboardComponent implements OnInit {
 
-  loremIpsum = Array.from({length: 10}, () =>
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
+  examplePost = {
+    description: subjectsData[0].topics[0].links[1].description,
+    postId: subjectsData[0].topics[0].links[1].postId,
+    subject: LF1_POSTS[1].subject,
+    title: subjectsData[0].topics[0].links[1].title,
+    type: subjectsData[0].topics[0].links[1].type,
+    url: LF1_POSTS[1].url
+  };
 
   constructor(private headerService: HeaderService) {
     this.headerService.setPageTitle('Dashboard');

@@ -4,3 +4,58 @@
 .fia-card:not(:last-of-type) {
   margin-bottom: 20px;
 }
+
+.fia-view-wrapper {
+  padding-top: 10px;
+}
+
+.fia-next-exams {
+  .fia-view-wrapper {
+  }
+}
+
+.fia-user-progress {
+  overflow: hidden;
+
+  .fia-view-wrapper {
+    .label {
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      height: 6px;
+      ::ng-deep .mat-progress-bar-buffer  {
+        background: $fia-dark-background-color;
+      }
+    }
+
+    .fia-progress-lesson {
+      margin-bottom: 20px;
+
+      .progress-bar {
+        ::ng-deep .mat-progress-bar-fill::after {
+          background: $fia-secondary-color;
+        }
+      }
+    }
+
+    .fia-progress-week {
+      margin-bottom: 20px;
+
+      .progress-bar {
+        ::ng-deep .mat-progress-bar-fill::after {
+          background: $fia-primary-color;
+        }
+      }
+    }
+
+    .fia-next-lesson {
+      ::ng-deep .fia-post-link-wrapper {
+        background: rgba($fia-secondary-color-rgb, 0.15);
+      }
+    }
+
+  }
+
+}
