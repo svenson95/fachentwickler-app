@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const deutsch_posts: Post[] = [
+export const DEUTSCH_POSTS: Post[] = [
     {
         "url": "kommunikation_und_informationsquellen/sender_empfänger_modell",
         "topic": "Kommunikation",

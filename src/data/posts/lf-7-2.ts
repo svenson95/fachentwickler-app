@@ -1,10 +1,10 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf7_1_posts: Post[] = [
+export const LF7_2_POSTS: Post[] = [
     {
-        "url": "/lf-7-1/vernetzte_systeme/",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
-        "subject": "lf-7-1",
+        "url": "test",
+        "topic": "test",
+        "subject": "lf-7-2",
         "lessonDate": "2020-01-01",
         "lastUpdate": "2020-01-01",
         "schoolWeek": "15",
@@ -26,7 +26,7 @@ export const lf7_1_posts: Post[] = [
     {
         "url": "test",
         "topic": "test",
-        "subject": "lf-7-1",
+        "subject": "lf-7-2",
         "lessonDate": "2020-01-01",
         "lastUpdate": "2020-01-01",
         "schoolWeek": "15",

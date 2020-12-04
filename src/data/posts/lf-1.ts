@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf1_posts: Post[] = [
+export const LF1_POSTS: Post[] = [
     {
         "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",

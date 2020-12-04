@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const englisch_posts: Post[] = [
+export const ENGLISCH_POSTS: Post[] = [
     {
         "url": "basics/introductions",
         "topic": "Basics",

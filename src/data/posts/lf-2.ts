@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf2_posts: Post[] = [
+export const LF2_POSTS: Post[] = [
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",

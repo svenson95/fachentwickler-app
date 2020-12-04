@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf9_posts: Post[] = [
+export const LF9_POSTS: Post[] = [
     {
         "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einstieg_in_das_lernfeld",
         "topic": "Öffentliche Netze und Dienste",

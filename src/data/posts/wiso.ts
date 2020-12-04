@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const wiso_posts: Post[] = [
+export const WISO_POSTS: Post[] = [
     {
         "url": "berufsbildung_und_arbeitswelt/geschichte_der_beruflichen_ausbildung",
         "topic": "Berufsbildung und Arbeitswelt",

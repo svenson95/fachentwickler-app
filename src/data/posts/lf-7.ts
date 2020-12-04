@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf7_posts: Post[] = [
+export const LF7_POSTS: Post[] = [
     {
         "url": "e_technik/einfuehrung",
         "topic": "E-Technik",

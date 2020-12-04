@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf4_1_posts: Post[] = [
+export const LF4_1_POSTS: Post[] = [
     {
         "url": "einfache_it_systeme/grundbegriffe_der_elektronen",
         "topic": "Einfache IT-Systeme",

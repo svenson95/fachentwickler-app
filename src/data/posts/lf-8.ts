@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf8_posts: Post[] = [
+export const LF8_POSTS: Post[] = [
     {
         "url": "uebertragungstechnik/ports",
         "topic": "Übertragungstechnik",

@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf3_posts: Post[] = [
+export const LF3_POSTS: Post[] = [
     {
         "url": "netzplantechnik/regeln_der_netzplantechnik",
         "topic": "Netzplantechnik",

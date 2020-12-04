@@ -1,6 +1,6 @@
-import {Post} from "../../app/models/post";
+import {Post} from '../../app/models/post';
 
-export const lf6_posts: Post[] = [
+export const LF6_POSTS: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
