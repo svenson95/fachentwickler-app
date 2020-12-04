@@ -1,0 +1,69 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-post-link-wrapper {
+  display: flex;
+  padding: 20px 40px;
+  margin-left: -40px;
+  margin-right: -40px;
+
+  .label {
+    font-size: 1.2em;
+    align-self: center;
+    margin-bottom: 0;
+    margin-right: 20px;
+
+    @include from-md {
+      flex-shrink: 0;
+    }
+  }
+
+  .fia-post-link {
+    background: $fia-dark-card-color;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: $fia-border-radius;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 200ms ease-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media screen and (min-width: 1000px) {
+      &:hover {
+        background: black;
+        transition: background 200ms ease-out;
+
+        .fia-title {
+          letter-spacing: 0.6px;
+          transition: letter-spacing 400ms ease-out;
+        }
+      }
+    }
+
+    .fia-title-wrapper {
+      align-self: center;
+
+      .fia-title {
+        margin-bottom: 0;
+        transition: letter-spacing 400ms ease-out;
+      }
+    }
+
+    .fia-description-wrapper {
+      display: flex;
+      align-self: center;
+
+      .fia-description {
+        margin-bottom: 0;
+      }
+
+      ::ng-deep .fia-badge {
+        margin-top: 2px;
+      }
+    }
+  }
+}
