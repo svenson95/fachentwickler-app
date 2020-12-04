@@ -25,7 +25,7 @@ export class IndexCardsComponent implements OnInit {
               private router: Router
   ) {
     this.headerService.setPageTitle(
-      'Karteikarten - ' + subjects.find(sub => sub.url === router.url.substring(
+      subjects.find(sub => sub.url === router.url.substring(
         0, router.url.indexOf('/', 1)
       ))?.title
     );
