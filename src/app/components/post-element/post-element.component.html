@@ -14,7 +14,7 @@
   <!-- LINE -->
   <hr class="post-line" *ngSwitchCase="ElementType.LINE"/>
   <!-- LIST -->
-  <ul class="post-list" *ngSwitchCase="ElementType.LIST && !element.ordered">
+  <ul class="post-list" *ngIf="element.type === ElementType.LIST && !element.ordered">
     <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
     <li class="post-ul-list" *ngFor="let item of element.list">
       <p *ngIf="isString(item)" [innerHTML]="item"></p>
@@ -27,7 +27,7 @@
     </li>
   </ul>
   <!-- ORDERED LIST -->
-  <ol class="post-list-ordered" *ngSwitchCase="ElementType.LIST && element.ordered">
+  <ol class="post-list-ordered" *ngIf="element.type === ElementType.LIST && element.ordered">
     <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
     <li class="post-ol-list" *ngFor="let item of element.list">
       <p *ngIf="isString(item)" [innerHTML]="item"></p>
