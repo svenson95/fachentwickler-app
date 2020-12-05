@@ -9,7 +9,7 @@
     </div>
     <h1 class="fia-app-name unselectable">
       <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
-      <mat-label class="fia-hover-label fade-in">Dashboard</mat-label>
+      <mat-label class="fia-hover-label fade-in">{{authService.isAuthenticated ? 'Dashboard' : 'Login'}}</mat-label>
     </h1>
   </div>
   <div class="fia-header-details-wrapper">

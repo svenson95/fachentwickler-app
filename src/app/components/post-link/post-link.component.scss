@@ -8,28 +8,35 @@
   margin-right: -40px;
 
   .label {
-    font-size: 1.2em;
+    font-size: 1em;
     align-self: center;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 5px;
 
     @include from-md {
+      font-size: 1.2em;
+      margin-right: 20px;
       flex-shrink: 0;
     }
   }
 
   .fia-post-link {
-    background: $fia-dark-card-color;
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: $fia-border-radius;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    background: $fia-dark-card-color;
+    padding: 8px 12px;
+    border-radius: $fia-border-radius;
     cursor: pointer;
     transition: background 200ms ease-out;
+    text-decoration: none;
 
     &:focus {
       outline: none;
+    }
+
+    @include to-xs {
+      flex-direction: column;
     }
 
     @media screen and (min-width: 1000px) {
@@ -45,7 +52,10 @@
     }
 
     .fia-title-wrapper {
-      align-self: center;
+
+      @include from-xs {
+        align-self: center;
+      }
 
       .fia-title {
         margin-bottom: 0;
@@ -55,16 +65,31 @@
 
     .fia-description-wrapper {
       display: flex;
-      align-self: center;
+
+      @include from-xs {
+        align-self: center;
+      }
+
+      @include to-xs {
+        margin-top: -5px;
+      }
 
       .fia-description {
         color: $fia-grey-1;
         font-size: 0.95em;
         margin-bottom: 0;
+
+        @include to-xs {
+          font-size: .85em;
+        }
       }
 
       ::ng-deep .fia-badge {
         margin-top: 2px;
+
+        @include to-xs {
+          font-size: .5em;
+        }
       }
     }
   }
