@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { MatDialog } from '@angular/material/dialog';
+import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -18,9 +20,14 @@ export class HeaderComponent implements OnInit {
 
   constructor(public router: Router,
               public headerService: HeaderService,
-              public authService: AuthService
+              public authService: AuthService,
+              public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {}
+
+  openLogoutDialog(): void {
+    this.dialog.open(LogoutDialogComponent, { restoreFocus: true });
+  }
 
 }

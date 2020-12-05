@@ -37,10 +37,15 @@ export class AppComponent implements OnDestroy {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => this.viewportScroller.scrollToPosition([0, 0]));
 
-    this.authService.authenticated().subscribe((response) => {
-      console.log('response auth');
-      console.log(response);
-    });
+    this.authService.authenticated().subscribe(
+      (value) => {
+        console.log('response authenticated');
+        console.log(value);
+      }, (error) => {
+        console.log('ERROR authenticated');
+        console.log(error);
+      }
+    );
   }
 
   ngOnDestroy(): void {

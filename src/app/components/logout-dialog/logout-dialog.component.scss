@@ -1,0 +1,17 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+::ng-deep {
+  .mat-dialog-container {
+    background: $fia-secondary-color-rgb;
+
+    .mat-button {
+      background: black;
+      color: white;
+
+      &:hover {
+        color: $fia-secondary-color;
+      }
+    }
+  }
+}

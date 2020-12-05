@@ -228,11 +228,13 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   color: black;
   text-transform: uppercase;
   font-family: MavenPro-Bold, sans-serif;
+  font-size: 1em;
   padding: 10px 20px;
   border: none;
   outline: none;
   border-radius: $fia-border-radius;
   letter-spacing: 1px;
+  text-decoration: none;
 
   &:disabled {
     background: $fia-grey-1;
@@ -270,6 +272,8 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
 
     &:hover {
+      color: black;
+
       //&:focus {       // TODO: show underline on focus (tab navigation) but remove underlines after click
       h1, span {
         &:before,
@@ -287,6 +291,12 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
   }
 
+}
+
+/* FIAPPY - BADGE */
+.mat-snack-bar-container {
+  background: $fia-secondary-color;
+  color: black;
 }
 
 /* FIAPPY - BADGE */

@@ -38,33 +38,33 @@
           <mat-icon>more_vert</mat-icon>
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>
-        <button class="fia-header-usage-btn unselectable" routerLink="/">
+        <a class="fia-header-usage-btn unselectable" routerLink="/">
           usage
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item routerLink="/" *ngIf="mobileQuery.matches">
+        </a>
+        <mat-menu class="fia-more-menu" #menu="matMenu">
+          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="mobileQuery.matches">
             <mat-icon>home</mat-icon>
-            <span>Usage</span>
-          </button>
-          <button mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated">
+            <span class="label">Usage</span>
+          </a>
+          <a class="fia-menu-button" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated">
             <mat-icon>account_circle</mat-icon>
-            <span>Mein Profil</span>
-          </button>
-          <button mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated">
+            <span class="label">Mein Profil</span>
+          </a>
+          <a class="fia-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated">
             <mat-icon>login</mat-icon>
-            <span>Einloggen</span>
-          </button>
-          <button mat-menu-item routerLink="feedback">
+            <span class="label">Einloggen</span>
+          </a>
+          <a class="fia-menu-button" mat-menu-item routerLink="feedback">
             <mat-icon>feedback</mat-icon>
-            <span>Feedback</span>
-          </button>
-          <button mat-menu-item routerLink="about">
+            <span class="label">Feedback</span>
+          </a>
+          <a class="fia-menu-button" mat-menu-item routerLink="about">
             <mat-icon>help</mat-icon>
-            <span>About</span>
-          </button>
-          <button mat-menu-item (click)="authService.logout()" *ngIf="authService.isAuthenticated">
+            <span class="label">About</span>
+          </a>
+          <button class="fia-menu-button" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
             <mat-icon>logout</mat-icon>
-            <span>Ausloggen</span>
+            <span class="label">Ausloggen</span>
           </button>
         </mat-menu>
       </div>

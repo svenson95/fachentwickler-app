@@ -13,6 +13,7 @@ import { HeaderComponent } from './app-common/header/header.component';
 import { SidenavComponent } from './app-common/sidenav/sidenav.component';
 import { ContentComponent } from './app-common/content/content.component';
 import { CommonModule } from '@angular/common';
+import { LogoutDialogComponent } from './components/logout-dialog/logout-dialog.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
         HeaderComponent,
         SidenavComponent,
         ContentComponent,
+        LogoutDialogComponent
     ],
     imports: [
         CommonModule,
