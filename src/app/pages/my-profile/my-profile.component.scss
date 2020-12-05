@@ -1,2 +1,36 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
+
+.fia-card {
+  .fia-view-wrapper {
+    margin-top: 40px;
+    font-size: 1.2em;
+
+    .fia-user-name,
+    .fia-user-email,
+    .fia-user-role {
+      display: flex;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $fia-grey-1;
+      }
+
+      .key, .value {
+        margin: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .key {
+        min-width: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .value {
+        border-left: 1px solid $fia-grey-1;
+        padding-left: 20px;
+      }
+    }
+  }
+}
