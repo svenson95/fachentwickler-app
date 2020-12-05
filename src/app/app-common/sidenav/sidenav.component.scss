@@ -57,6 +57,10 @@
     margin-top: 30px;
   }
 
+  @include to-md {
+    min-width: 125px;
+  }
+
   .section-title {
     background: $fia-dark-card-color;
     color: white;
@@ -65,11 +69,15 @@
     padding: 8px 20px;
     padding-left: 35px;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 30px;
     border-top-right-radius: $fia-border-radius;
     border-bottom-right-radius: $fia-border-radius;
     box-shadow: $fia-dark-shadow;
     letter-spacing: 1px;
+
+    @include to-md {
+      font-size: 1.2em;
+    }
 
     @include to-xs {
       width: 180px;

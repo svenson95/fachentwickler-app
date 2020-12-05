@@ -134,7 +134,7 @@ a {
   }
 
   p {
-    color: white;
+    color: $fia-light-background-color;
   }
 }
 
@@ -338,7 +338,15 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       background-color: $fia-primary-color;
     }
     .mat-slide-toggle-bar {
-      background-color: white;
+      background-color: black;
+    }
+  }
+
+  &.mat-checked {
+    ::ng-deep {
+      .mat-slide-toggle-bar {
+        background-color: white;
+      }
     }
   }
 }
@@ -366,9 +374,165 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   }
 }
 
-/* LIGHT THEME */
+/* LIGHT-THEME */
 .light-theme {
-  .fia-card {
-    background: $fia-dark-card-color;
+
+  a:hover {
+    color: black !important;
+    text-decoration-color: $fia-primary-color !important;
+  }
+
+  p {
+    color: black !important;
+  }
+
+  u {
+    text-decoration-color: $fia-primary-color;
+  }
+
+  .fia-page, .fia-sidenav {
+    background: $fia-light-background-color !important;
+  }
+
+  .fia-page {
+    .fia-forgot-password-btn {
+      color: $fia-primary-color;
+    }
+    .mat-progress-bar-buffer {
+      background: $fia-light-background-color !important;
+    }
+    .fia-card {
+      color: black !important;
+      background: $fia-light-card-color !important;
+      box-shadow: $fia-light-shadow;
+
+      .fia-card-title, .fia-topic-title p {
+        color: black !important;
+      }
+
+      .fia-post-link {
+        background: $fia-light-background-color !important;
+
+        &:hover {
+          background: white !important;
+        }
+      }
+
+      .fia-link-item {
+        background: $fia-light-background-color !important;
+
+        .fia-link-title {
+          color: black;
+        }
+      }
+
+      .fia-post-item {
+        .post-title,
+        .post-subtitle,
+        .post-text {
+          color: black;
+        }
+
+        hr {
+          background: $fia-grey-3;
+        }
+
+        .ddu-list-number, .list-number {
+          background: $fia-light-background-color;
+          color: $fia-primary-color;
+        }
+      }
+    }
+
+    .fia-input .mat-form-field-flex {
+      background: $fia-light-background-color !important;
+
+      input {
+        color: black !important;
+      }
+    }
+  }
+
+  .fia-sidenav {
+    .section-title {
+      color: black !important;
+      background: white !important;
+      box-shadow: $fia-light-shadow !important;
+    }
+    .fia-nav-item {
+      color: black !important;
+
+      &:hover, &:focus {
+        background: $fia-light-background-color !important;
+      }
+
+      &.active-route {
+        text-decoration-color: $fia-primary-color !important;
+      }
+
+      &:not(.active-route) {
+        &:hover, &:focus {
+          color: $fia-primary-color !important;
+        }
+      }
+    }
+  }
+
+
+  .fia-header {
+    background: white !important;
+
+    .fia-search-bar {
+      color: black;
+      background: $fia-light-background-color !important;
+    }
+
+    .fia-logo-wrapper {
+      .fia-app-name {
+        color: black;
+      }
+
+      &:hover {
+        .fia-app-icon {
+          color: black !important;
+        }
+      }
+    }
+
+    .fia-title-buttons-wrapper {
+      .fia-page-title {
+        color: black;
+      }
+    }
+  }
+
+  .fia-page-footer {
+    background: white !important;
+    .fia-background-view {
+      &.first {
+        background-color: $fia-light-background-color !important;
+      }
+      &.second {
+        background-color: white !important;
+      }
+    }
+
+    .logo span {
+      color: black;
+    }
+
+    .buttons {
+
+      a {
+        color: $fia-primary-color;
+      }
+
+      a:hover {
+        color: black;
+      }
+    }
+  }
+  .fia-sidenav-content-wrapper .mat-drawer-content {
+    background-color: white !important;
   }
 }

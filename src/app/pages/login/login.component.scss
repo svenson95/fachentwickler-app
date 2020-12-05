@@ -93,3 +93,14 @@
   .fia-button {
   }
 }
+
+/* LIGHT-THEME */
+::ng-deep {
+  .light-theme {
+    .fia-register-column {
+      .fia-no-account-hint {
+        color: black !important;
+      }
+    }
+  }
+}

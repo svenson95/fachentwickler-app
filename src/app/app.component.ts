@@ -13,8 +13,6 @@ import { AuthService } from './services/auth/auth.service';
 })
 export class AppComponent implements OnDestroy {
   title = 'fiappy-app';
-  themeColor: 'dark' | 'light' = 'dark';
-  isDark = true;
 
   mobileQuery: MediaQueryList;
   MOBILE_QUERY_LISTENER: () => void;
@@ -23,7 +21,6 @@ export class AppComponent implements OnDestroy {
 
   constructor(private changeDetectorRef: ChangeDetectorRef,
               private media: MediaMatcher,
-              private overlayContainer: OverlayContainer,
               private router: Router,
               private viewportScroller: ViewportScroller,
               private authService: AuthService
@@ -32,7 +29,7 @@ export class AppComponent implements OnDestroy {
     this.tinyDisplay = media.matchMedia('(max-width: 350px)');
     this.MOBILE_QUERY_LISTENER = () => changeDetectorRef.detectChanges();
     this.TINY_DISPLAY_LISTENER = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this.MOBILE_QUERY_LISTENER);
+    // this.mobileQuery.addListener(this.MOBILE_QUERY_LISTENER);
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => this.viewportScroller.scrollToPosition([0, 0]));
@@ -49,17 +46,6 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this.MOBILE_QUERY_LISTENER);
-  }
-
-  toggleTheme(): void {
-    this.isDark = !this.isDark;
-    if (this.isDark) {
-      this.overlayContainer.getContainerElement().classList.add('light-theme');
-    } else {
-      this.overlayContainer
-        .getContainerElement()
-        .classList.remove('light-theme');
-    }
+    // this.mobileQuery.removeListener(this.MOBILE_QUERY_LISTENER);
   }
 }

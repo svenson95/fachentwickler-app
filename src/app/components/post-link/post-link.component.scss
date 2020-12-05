@@ -45,7 +45,7 @@
         transition: background 200ms ease-out;
 
         .fia-title {
-          letter-spacing: 0.6px;
+          letter-spacing: 0.5px;
           transition: letter-spacing 400ms ease-out;
         }
       }
@@ -68,6 +68,7 @@
 
       @include from-xs {
         align-self: center;
+        flex-direction: row-reverse;
       }
 
       @include to-xs {
@@ -81,6 +82,10 @@
 
         @include to-xs {
           font-size: .85em;
+        }
+
+        @include from-xs {
+          min-width: 190px;
         }
       }
 

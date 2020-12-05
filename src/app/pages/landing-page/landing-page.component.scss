@@ -319,3 +319,20 @@
     }
   }
 }
+
+/* LIGHT-THEME */
+::ng-deep {
+  .light-theme {
+    .fia-welcome-banner {
+      .fia-labels {
+        .grey-1 {
+          color: $fia-grey-1 !important;
+        }
+
+        .grey-2 {
+          color: $fia-grey-3 !important;
+        }
+      }
+    }
+  }
+}

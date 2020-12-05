@@ -4,7 +4,7 @@
 .fia-page-footer {
   height: fit-content;
   position: relative;
-  background: black;
+  background: $fia-dark-background-color;
   padding: 35px 40px;
 
   @include to-xs {

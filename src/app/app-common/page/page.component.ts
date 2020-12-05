@@ -12,8 +12,6 @@ import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
 })
 export class PageComponent implements OnInit, AfterViewInit {
 
-  @Input('theme') theme;
-  @Input('toggleTheme') toggleTheme;
   @Input('mobileQuery') mobileQuery;
   @ViewChild('sidenav') public sidenav: MatSidenav;
   @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
