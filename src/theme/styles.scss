@@ -234,6 +234,14 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   border-radius: $fia-border-radius;
   letter-spacing: 1px;
 
+  &:disabled {
+    background: $fia-grey-1;
+
+    span {
+      color: $fia-dark-card-color;
+    }
+  }
+
   &:not(:disabled) {
     cursor: pointer;
 
@@ -316,6 +324,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   margin: 50px auto !important;
 
   $fia-spinner-size: 64px;
+  &.fia-login-column {
+    $fia-spinner-size: 28px;
+  }
+
   width: $fia-spinner-size !important;
   height: $fia-spinner-size !important;
 

@@ -5,15 +5,11 @@ import { ViewportScroller } from '@angular/common';
 import { NavigationEnd , Router} from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { AuthService } from './services/auth/auth.service';
-// import { slideInAnimation } from './app-common/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass'],
-  // animations: [
-  //   slideInAnimation
-  // ]
+  styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnDestroy {
   title = 'fiappy-app';

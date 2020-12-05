@@ -1,14 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-// import {slideInAnimation} from '../../app-common/animations';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+// import { slideInAnimation } from '../../animations/slideIn.animation';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
-  animations: [
-    // slideInAnimation
-  ]
+  // animations: [
+  //   slideInAnimation
+  // ]
 })
 export class ContentComponent implements OnInit {
 
