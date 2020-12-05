@@ -9,7 +9,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularMaterialModule } from './app-common/angular-material.module';
-import { PageComponentModule } from './modules/page/page.module';
+import { PageComponentModule } from './app-common/page/page.module';
 
 @NgModule({
     declarations: [AppComponent],
