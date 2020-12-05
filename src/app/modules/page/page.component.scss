@@ -23,6 +23,19 @@
 
     .mat-drawer-content {
       background-color: black;
+
+      // Scrollbar
+      &::-webkit-scrollbar {
+        width: 6px;
+        overflow-y: scroll;
+        background: transparent;
+        //box-shadow: inset 0 0 4px $fia-secondary-color;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $fia-secondary-color;
+        border-radius: 0;
+      }
     }
   }
 }
