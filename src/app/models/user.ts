@@ -12,3 +12,9 @@ export interface AuthUser {
   username: string;
   password: string;
 }
+
+export interface RegisterUser {
+  username: string;
+  email: string;
+  password: string;
+}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import {Routes, RouterModule, Route} from '@angular/router';
-import {subjectsData} from '../data/data-subjects';
-import {AuthGuardService} from './services/auth/auth-guard.service';
+import { Routes, RouterModule, Route } from '@angular/router';
+import { subjectsData } from '../data/data-subjects';
+import { AuthGuardService } from './services/auth/auth-guard.service';
 
 const subjectsPaths = (): Array<Route> => {
   const subjects: Route[] = [];
@@ -67,6 +67,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('src/app/pages/login/login.module').then(m => m.LoginModule),
     data: { animation: 'LoginPage' }
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('src/app/pages/register/register.module').then(m => m.RegisterModule),
+    data: { animation: 'RegisterPage' }
   },
   {
     path: 'about',

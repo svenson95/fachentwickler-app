@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { User, AuthUser } from '../../models/user';
+
+import { User, AuthUser, RegisterUser } from '../../models/user';
 import { AuthResponse } from '../../models/auth-response';
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+
+const AUTH_STORAGE_KEY = 'fia_token';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +19,7 @@ import { AuthResponse } from '../../models/auth-response';
 export class AuthService {
 
   private loginUrl = `${environment.baseUrl}/user/login`;
+  private registerUrl = `${environment.baseUrl}/user/register`;
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
   // private clientId = 'id';
@@ -23,7 +31,10 @@ export class AuthService {
   public isAuthenticated = false;
   public redirectUrl: string;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient,
+              private router: Router,
+              private snackBar: MatSnackBar
+  ) {}
 
   login(user: AuthUser): Observable<AuthResponse> {
     const httpOptions = {
@@ -46,8 +57,35 @@ export class AuthService {
       );
   }
 
-  logout(): void {
-    console.log('log out');
+  register(user: RegisterUser): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      withCredentials: true
+    };
+
+    return this.httpClient.post<any>(this.registerUrl, JSON.stringify(user), httpOptions)
+      .pipe(
+        map(authResponseData => {
+          this.data = authResponseData;
+          this.user = authResponseData.user;
+          this.token = authResponseData.token;
+          this.isAuthenticated = true;
+          this.storeToken();
+          return authResponseData;
+        })
+      );
+  }
+
+  invalidate(): void {
+    this.isAuthenticated = false;
+    localStorage.removeItem(AUTH_STORAGE_KEY);
+    this.router.navigateByUrl('/');
+    this.snackBar.openFromComponent(SnackbarComponent, {
+      duration: 3000,
+      data: 'Erfolgreich abgemeldet'
+    });
   }
 
   authenticated(): Observable<AuthResponse> {
@@ -74,7 +112,7 @@ export class AuthService {
   }
 
   storeToken(): void {
-    localStorage.setItem('fia_token', this.token);
+    localStorage.setItem(AUTH_STORAGE_KEY, this.token);
     console.log('token stored');
   }
 }
