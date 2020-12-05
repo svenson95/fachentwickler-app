@@ -1,38 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './app-common/angular-material.module';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { PageComponent } from './modules/page/page.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './app-common/header/header.component';
-import { SidenavComponent } from './app-common/sidenav/sidenav.component';
-import { ContentComponent } from './app-common/content/content.component';
 import { CommonModule } from '@angular/common';
-import { LogoutDialogComponent } from './components/logout-dialog/logout-dialog.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AngularMaterialModule } from './app-common/angular-material.module';
+import { PageComponentModule } from './modules/page/page.module';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        PageComponent,
-        HeaderComponent,
-        SidenavComponent,
-        ContentComponent,
-        LogoutDialogComponent
-    ],
+    declarations: [AppComponent],
     imports: [
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule,
-        AngularMaterialModule,
-        ReactiveFormsModule
+      CommonModule,
+      BrowserModule,
+      BrowserAnimationsModule,
+      AppRoutingModule,
+      FormsModule,
+      HttpClientModule,
+      AngularMaterialModule,
+      ReactiveFormsModule,
+      PageComponentModule,
     ],
     providers: [
         {
