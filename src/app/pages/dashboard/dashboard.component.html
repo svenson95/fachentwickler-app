@@ -2,7 +2,7 @@
   <mat-card class="fia-card fia-next-exams">
     <p class="fia-card-title">Anstehende Klausuren</p>
     <mat-card-content class="fia-view-wrapper">
-      <p class="fia-no-exams">Keine anstehenden Klausuren</p>
+      <p class="fia-no-exams">Keine anstehenden Klausuren <span>| Hallo {{user.name}}</span></p>
     </mat-card-content>
   </mat-card>
 
@@ -11,13 +11,15 @@
     <mat-card-content class="fia-view-wrapper">
 
       <div class="fia-progress-lesson">
-        <p class="label">Lektion 1 von 2</p>
-        <mat-progress-bar class="progress-bar" value="20"></mat-progress-bar>
+        <p class="label">
+          Lektion {{user.progress?.length || '...'}} von {{allLessons?.length || '...'}}
+        </p>
+        <mat-progress-bar class="progress-bar" [value]="lessonsPercentage"></mat-progress-bar>
       </div>
 
       <div class="fia-progress-week">
-        <p class="label">Woche 1 von 2</p>
-        <mat-progress-bar class="progress-bar" value="30"></mat-progress-bar>
+        <p class="label">Woche 17 von 40</p>
+        <mat-progress-bar class="progress-bar" [value]="(17 / 40) * 100"></mat-progress-bar>
       </div>
 
       <app-post-link class="fia-next-lesson" [post]="examplePost"></app-post-link>

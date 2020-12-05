@@ -1,10 +1,11 @@
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {OverlayContainer} from '@angular/cdk/overlay';
-import {ViewportScroller} from '@angular/common';
-import {NavigationEnd, Router} from '@angular/router';
-import {filter} from 'rxjs/operators';
-// import {slideInAnimation} from './app-common/animations';
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { ViewportScroller } from '@angular/common';
+import { NavigationEnd , Router} from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { AuthService } from './services/auth/auth.service';
+// import { slideInAnimation } from './app-common/animations';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,8 @@ export class AppComponent implements OnDestroy {
               private media: MediaMatcher,
               private overlayContainer: OverlayContainer,
               private router: Router,
-              private viewportScroller: ViewportScroller
+              private viewportScroller: ViewportScroller,
+              private authService: AuthService
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.tinyDisplay = media.matchMedia('(max-width: 350px)');
@@ -38,6 +40,11 @@ export class AppComponent implements OnDestroy {
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => this.viewportScroller.scrollToPosition([0, 0]));
+
+    this.authService.authenticated().subscribe((response) => {
+      console.log('response auth');
+      console.log(response);
+    });
   }
 
   ngOnDestroy(): void {

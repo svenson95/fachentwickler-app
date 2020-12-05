@@ -1,6 +1,7 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {HeaderService} from '../../services/header.service';
+import { HeaderService } from '../../services/header.service';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,8 @@ export class HeaderComponent implements OnInit {
   @Input('toggleTheme') toggleTheme;
 
   constructor(public router: Router,
-              public headerService: HeaderService
+              public headerService: HeaderService,
+              public authService: AuthService
   ) {}
 
   ngOnInit(): void {}

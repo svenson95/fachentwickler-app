@@ -46,8 +46,17 @@ export class DataService {
   getIndexCards(postUrl: string): Observable<IndexCardsData> {
     return this.httpClient.get<IndexCardsData>(`${environment.baseUrl}/index-cards/${postUrl}`)
       .pipe(map((response) => {
-        console.log('response getIndexCards');
-        console.log(response);
+        // console.log('response getIndexCards');
+        // console.log(response);
+        return response;
+      }));
+  }
+
+  getAllLessons(): Observable<string[]> {
+    return this.httpClient.get<string[]>(`${environment.baseUrl}/posts/all-lessons`)
+      .pipe(map((response) => {
+        // console.log('response getAllLessons');
+        // console.log(response);
         return response;
       }));
   }

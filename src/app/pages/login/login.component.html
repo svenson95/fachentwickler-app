@@ -2,32 +2,42 @@
   <mat-card class="fia-card">
     <p class="fia-card-title">Einloggen</p>
     <mat-card-content class="fia-view-wrapper">
-      <div class="fia-login-column">
+      <form class="fia-login-column" [formGroup]="formGroup" (ngSubmit)="login($event)" #form>
         <div class="fia-input-fields">
           <mat-form-field class="fia-input fia-name-input">
             <mat-label class="label">Benutzername</mat-label>
-            <input matInput type="text" [formControl]="usernameFormControl"/>
-            <mat-error *ngIf="usernameFormControl.hasError('username') && !usernameFormControl.hasError('required')">
+            <input matInput type="text" ngModel [formControl]="username"/>
+            <mat-error *ngIf="username.hasError('username') && !username.hasError('required')">
               Benutzername ungültig
             </mat-error>
-            <mat-error *ngIf="usernameFormControl.hasError('required')">
+            <mat-error *ngIf="username.hasError('required')">
               Benutzername <strong>erforderlich</strong>
             </mat-error>
           </mat-form-field>
 
           <mat-form-field class="fia-input fia-password-input">
             <mat-label>Passwort</mat-label>
-            <input matInput type="password" [formControl]="passwordFormControl"/>
-            <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
+            <input matInput type="password" ngModel [formControl]="password"/>
+            <mat-error *ngIf="password.hasError('password') && !password.hasError('required')">
               Passwort ungültig
             </mat-error>
-            <mat-error *ngIf="passwordFormControl.hasError('requireed')">
+            <mat-error *ngIf="password.hasError('minlength')">
+              Passwort zu kurz (min. 4 Zeichen)
+            </mat-error>
+            <mat-error *ngIf="password.hasError('required')">
               Passwort <strong>erforderlich</strong>
             </mat-error>
           </mat-form-field>
         </div>
-        <button class="fia-text-button"><span>Fortfahren</span></button>
-      </div>
+        <div class="fia-buttons-wrapper">
+          <button class="fia-text-button" type="submit" [disabled]="form.invalid">
+            <span>Fortfahren</span>
+          </button>
+          <a class="fia-forgot-password-btn" routerLink="/forgot-password">
+            Passwort vergessen?
+          </a>
+        </div>
+      </form>
       <hr class="fia-second-column"/>
       <div class="fia-register-column">
         <p class="fia-no-account-hint">Noch nicht registriert?</p>

@@ -46,11 +46,11 @@
             <mat-icon>home</mat-icon>
             <span>Usage</span>
           </button>
-          <button mat-menu-item routerLink="mein-profil">
+          <button mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated">
             <mat-icon>account_circle</mat-icon>
             <span>Mein Profil</span>
           </button>
-          <button mat-menu-item routerLink="login">
+          <button mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated">
             <mat-icon>login</mat-icon>
             <span>Einloggen</span>
           </button>
@@ -61,6 +61,10 @@
           <button mat-menu-item routerLink="about">
             <mat-icon>help</mat-icon>
             <span>About</span>
+          </button>
+          <button mat-menu-item (click)="authService.logout()" *ngIf="authService.isAuthenticated">
+            <mat-icon>logout</mat-icon>
+            <span>Ausloggen</span>
           </button>
         </mat-menu>
       </div>

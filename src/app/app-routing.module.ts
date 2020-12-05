@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule, Route} from '@angular/router';
 import {subjectsData} from '../data/data-subjects';
+import {AuthGuardService} from './services/auth/auth-guard.service';
 
 const subjectsPaths = (): Array<Route> => {
   const subjects: Route[] = [];
@@ -47,17 +48,20 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
-    data: { animation: 'DashboardPage' }
+    data: { animation: 'DashboardPage' },
+    canActivate: [AuthGuardService]
   },
   {
     path: 'mein-profil',
     loadChildren: () => import('src/app/pages/my-profile/my-profile.module').then(m => m.MyProfileModule),
-    data: { animation: 'MyProfilePage' }
+    data: { animation: 'MyProfilePage' },
+    canActivate: [AuthGuardService]
   },
   {
     path: 'einstellungen',
     loadChildren: () => import('src/app/pages/settings/settings.module').then(m => m.SettingsModule),
-    data: { animation: 'SettingsPage' }
+    data: { animation: 'SettingsPage' },
+    canActivate: [AuthGuardService]
   },
   {
     path: 'login',

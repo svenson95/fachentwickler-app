@@ -27,6 +27,10 @@
       }
     }
 
+    .fia-password-input {
+      margin-bottom: 8px;
+    }
+
     ::ng-deep {
       .mat-form-field-label-wrapper {
         color: green;
@@ -42,8 +46,18 @@
     }
   }
 
-  .fia-button {
-    margin-top: 10px;
+
+  .fia-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .fia-button {
+      margin-top: 10px;
+    }
+
+    .fia-forgot-password-btn {
+      margin-top: 10px;
+    }
   }
 }
 
