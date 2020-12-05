@@ -15,7 +15,7 @@
     align-self: center;
 
     @include from-md {
-      margin-right: 50px;
+      margin-right: 0;
     }
   }
 }
@@ -31,7 +31,7 @@
 
     .fia-name-input,
     .fia-email-input {
-      margin-bottom: 8px;
+      margin-bottom: 15px;
 
       ::placeholder {
         color: $fia-grey-1;
@@ -87,7 +87,11 @@
 .fia-register-column {
   text-align: center;
   align-self: center;
-  margin: 30px auto 0;
+  margin: 30px 50px 0 auto;
+
+  @include to-sm {
+    margin: 30px auto 0;
+  }
 
   .fia-no-account-hint {
     text-align: center;

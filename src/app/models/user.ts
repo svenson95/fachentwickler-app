@@ -4,7 +4,7 @@ export interface User {
   email: string;
   password: string;
   progress: string[];
-  role: 'admin' | 'user';
+  role: UserRole;
   theme: 'light' | 'dark';
 }
 
@@ -14,7 +14,13 @@ export interface AuthUser {
 }
 
 export interface RegisterUser {
-  username: string;
+  name: string;
   email: string;
   password: string;
+  role: UserRole;
+}
+
+export enum UserRole {
+  ADMIN = 'admin',
+  USER = 'user'
 }
