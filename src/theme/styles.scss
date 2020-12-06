@@ -54,6 +54,10 @@ u {
   text-decoration-color: $fia-secondary-color;
 }
 
+hr {
+  background: black;
+}
+
 .ddu-list-number,
 .list-number {
   display: inline-flex;
@@ -105,6 +109,7 @@ a {
   box-shadow: $fia-dark-shadow;
   border-radius: $fia-border-radius;
   margin-bottom: 20px;
+  transition: none;
 
   @include to-xs {
     margin-bottom: 5px;
@@ -382,6 +387,11 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     text-decoration-color: $fia-primary-color !important;
   }
 
+  hr {
+    background: $fia-grey-3 !important;
+  }
+
+
   p {
     color: black !important;
   }
@@ -390,8 +400,29 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     text-decoration-color: $fia-primary-color;
   }
 
+  .mat-dialog-container {
+    background: $fia-secondary-color-rgb;
+
+    .mat-button {
+      background: white;
+      color: black;
+
+      &:hover {
+        color: $fia-primary-color;
+      }
+    }
+  }
+
+  .fia-text-button span {
+    color: white;
+  }
+
   .fia-page, .fia-sidenav {
     background: $fia-light-background-color !important;
+  }
+
+  .fia-page-container {
+    background: white;
   }
 
   .fia-page {
@@ -411,15 +442,19 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       }
 
       .fia-post-link {
-        background: $fia-light-background-color !important;
+        background: white !important;
 
         &:hover {
-          background: white !important;
+          background: rgba($fia-secondary-color-rgb, 0.3) !important;
         }
       }
 
       .fia-link-item {
         background: $fia-light-background-color !important;
+
+        &:hover {
+          background: rgba($fia-secondary-color-rgb, 0.3) !important;
+        }
 
         .fia-link-title {
           color: black;
@@ -431,10 +466,6 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         .post-subtitle,
         .post-text {
           color: black;
-        }
-
-        hr {
-          background: $fia-grey-3;
         }
 
         .ddu-list-number, .list-number {

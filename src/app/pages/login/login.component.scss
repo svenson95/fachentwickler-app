@@ -67,7 +67,6 @@
 }
 
 .fia-divider-line {
-  background: $fia-grey-1;
   border: none;
 
   @include to-md {
@@ -76,7 +75,7 @@
     margin: 30px 0;
   }
   @include from-md {
-    width: 2px;
+    width: 1px;
     margin: 0 50px;
   }
 }
