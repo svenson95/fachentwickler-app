@@ -20,6 +20,7 @@ export class AuthService {
 
   private loginUrl = `${environment.baseUrl}/user/login`;
   private registerUrl = `${environment.baseUrl}/user/register`;
+  private logoutUrl = `${environment.baseUrl}/user/logout`;
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
   // private clientId = 'id';
@@ -46,13 +47,13 @@ export class AuthService {
 
     return this.httpClient.post<AuthResponse>(this.loginUrl, JSON.stringify(user), httpOptions)
       .pipe(
-        map(authResponseData => {
-          this.data = authResponseData;
-          this.user = authResponseData.user;
-          this.token = authResponseData.token;
+        map(response => {
+          this.data = response;
+          this.user = response.user;
+          this.token = response.token;
           this.isAuthenticated = true;
           this.storeToken();
-          return authResponseData;
+          return response;
         })
       );
   }
@@ -78,14 +79,22 @@ export class AuthService {
       );
   }
 
-  invalidate(): void {
+  invalidate(): Observable<any> {
+    const httpOptions = {
+      withCredentials: true
+    };
     this.isAuthenticated = false;
     localStorage.removeItem(AUTH_STORAGE_KEY);
-    this.router.navigateByUrl('/');
-    this.snackBar.openFromComponent(SnackbarComponent, {
-      duration: 3000,
-      data: 'Erfolgreich abgemeldet'
-    });
+    return this.httpClient.get<any>(this.logoutUrl, httpOptions)
+      .pipe(
+        map(response => {
+          this.data = null;
+          this.user = null;
+          this.token = null;
+          this.isAuthenticated = false;
+          return response;
+        })
+      );
   }
 
   authenticated(): Observable<AuthResponse> {
