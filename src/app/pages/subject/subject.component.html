@@ -5,9 +5,9 @@
     <mat-card-content *ngIf="subject !== undefined">
       <div class="fia-topic" *ngFor="let topic of subject.topics">
         <h2 class="fia-topic-title">
-          <hr/>
+          <hr class="fia-topic-divider"/>
           <p>{{topic.title}}</p>
-          <hr/>
+          <hr class="fia-topic-divider"/>
         </h2>
         <div class="fia-links">
           <a class="fia-link-item" *ngFor="let post of topic.links" [routerLink]="post.url">

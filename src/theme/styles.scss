@@ -55,7 +55,7 @@ u {
 }
 
 hr {
-  background: black;
+  background: $fia-grey-1;
 }
 
 .ddu-list-number,
@@ -387,10 +387,9 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     text-decoration-color: $fia-primary-color !important;
   }
 
-  hr {
+  hr:not(.v-line-1):not(.v-line-2):not(.fia-topic-divider) {
     background: $fia-grey-3 !important;
   }
-
 
   p {
     color: black !important;
@@ -426,6 +425,9 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   }
 
   .fia-page {
+    .fia-no-exams {
+      color: $fia-grey-1 !important;
+    }
     .fia-forgot-password-btn {
       color: $fia-primary-color;
     }
@@ -465,6 +467,15 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         .post-title,
         .post-subtitle,
         .post-text {
+          color: black;
+        }
+
+        .post-hint {
+          color: black !important;
+          background: $fia-light-background-color;
+        }
+
+        .post-list {
           color: black;
         }
 

@@ -25,7 +25,6 @@
   padding-top: 35px;
   overflow: hidden;
   position: relative;
-  box-shadow: $fia-dark-shadow;
 
   @include from-sm {
     width: 600px;
@@ -141,4 +140,15 @@
     }
   }
 
+}
+
+
+.fia-index-card {
+  box-shadow: $fia-dark-shadow;
+}
+
+::ng-deep {
+  .light-theme .fia-index-card {
+    box-shadow: rgba(200, 199, 200, 0.4) 2px 4px 6px, rgba(220, 220, 220, 0.3) -2px -4px 6px;
+  }
 }
