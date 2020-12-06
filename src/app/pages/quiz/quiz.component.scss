@@ -75,7 +75,7 @@
 
         .fia-quiz-answer {
           padding: 12px 15px;
-          background: rgba($fia-secondary-color-rgb, 0.3);
+          background: rgba($fia-grey-3, 0.2);
           border-radius: $fia-border-radius;
           cursor: pointer;
           transition: background 200ms ease-in-out;
@@ -86,7 +86,7 @@
 
           @include from-sm {
             &:hover {
-              background: rgba($fia-primary-color-rgb, 0.5);
+              background: rgba($fia-secondary-color-rgb, 0.3);
               transition: background 200ms ease-in-out;
               font-weight: 900;
             }
