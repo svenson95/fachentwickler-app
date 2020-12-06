@@ -34,3 +34,15 @@
     }
   }
 }
+
+::ng-deep {
+  .light-theme {
+    .fia-card .fia-view-wrapper {
+      .fia-user-name, .fia-user-email, .fia-user-role {
+        &:not(:last-of-type), .value {
+          border-color: $fia-grey-3 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<div class="fia-page">
+  <mat-card class="fia-card">
+    <mat-spinner class="fia-loading-spinner" *ngIf="quizContent === undefined"></mat-spinner>
+    <p class="fia-card-title" *ngIf="quizContent !== undefined"
+       [innerHTML]="quizDetails.title"></p>
+    <p class="fia-card-description" *ngIf="quizContent !== undefined"
+       [innerHTML]="quizDetails.description"></p>
+    <mat-card-content class="fia-card-content" *ngIf="quizContent !== undefined">
+      <div class="fia-quiz">
+        <div class="fia-content-wrapper">
+          <div class="quiz-details">
+            <div class="quiz-level">
+              <p class="key">Frage</p>
+              <p class="value">{{level+1}} von {{quizContent.questions.length}}</p>
+            </div>
+            <div class="quiz-wrong-answers">
+              <p class="key">Fehler</p>
+              <p class="value">{{wrongAnswers}}</p>
+            </div>
+          </div>
+          <div class="quiz-question" *ngIf="!end">
+            <p class="label" [innerHTML]="quizContent.questions[level].question"></p>
+            <div class="fia-quiz-answers-wrapper">
+              <p class="fia-quiz-answer answer-1" [innerHTML]="quizContent.questions[level].choice1" (click)="checkAnswer(1)"
+                 [class.correct]="answer === 1 && quizContent.questions[level].answer === 1"
+                 [class.wrong]="answer === 1 && quizContent.questions[level].answer === 2"
+              ></p>
+              <p class="fia-quiz-answer answer-2" [innerHTML]="quizContent.questions[level].choice2" (click)="checkAnswer(2)"
+                 [class.correct]="answer === 2 && quizContent.questions[level].answer === 2"
+                 [class.wrong]="answer === 2 && quizContent.questions[level].answer === 1"
+              ></p>
+            </div>
+          </div>
+          <div class="fia-quiz-end" *ngIf="end">
+            <p class="fia-quiz-done-label">Fertig</p>
+            <div class="fia-quiz-end-wrapper">
+              <p [innerHTML]="wrongAnswers > 6 ? finishTexts[6] : finishTexts[wrongAnswers]"></p>
+              <span class="fia-emoji" *ngIf="wrongAnswers > 0">{{finishEmojis[wrongAnswers > 6 ? 6 : wrongAnswers]}}</span>
+              <div class="congrat-emoji" *ngIf="wrongAnswers === 0">
+                <div class="success-animation">
+                  <svg class="success-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" fill="transparent">
+                    <circle class="success-mark__circle" cx="26" cy="26" r="25"/>
+                    <path class="success-mark__check" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <button class="fia-text-button" (click)="resetLevel()">
+              <span>Neustarten</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

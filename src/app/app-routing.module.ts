@@ -20,7 +20,7 @@ const postPaths = () => {
     posts.push({
       path: sub + '/:topic/:post',
       loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostModule)
-    },);
+    });
   });
   return posts;
 };
@@ -31,15 +31,27 @@ const indexCardsPaths = () => {
     indexCards.push({
       path: sub + '/:topic/:post/index-cards',
       loadChildren: () => import('src/app/pages/index-cards/index-cards.module').then(m => m.IndexCardsModule)
-    },);
+    });
   });
   return indexCards;
+};
+
+const quizPaths = () => {
+  const quizzes: Route[] = [];
+  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+    quizzes.push({
+      path: sub + '/:topic/:post/quiz',
+      loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizModule)
+    });
+  });
+  return quizzes;
 };
 
 const routes: Routes = [
   ...subjectsPaths(),
   ...postPaths(),
   ...indexCardsPaths(),
+  ...quizPaths(),
   {
     path: '',
     loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),
