@@ -26,7 +26,7 @@
 
       // Scrollbar
       &::-webkit-scrollbar {
-        width: 5px;
+        width: 6px;
         overflow-y: scroll;
         background: transparent;
         //box-shadow: inset 0 0 4px $fia-secondary-color;
@@ -61,6 +61,10 @@
 
     div:nth-child(3) {
       margin-bottom: 50px;
+
+      @include to-xs {
+        margin-bottom: 60px;
+      }
     }
   }
 }

@@ -1,16 +1,12 @@
 <div class="fia-sidenav-content">
-  <div class="fia-app-logo" *ngIf="breakpointObserver.isMatched('(max-width: 600px)')">
-    <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
-  </div>
-
-  <div class="fia-subjects-section">
+    <div class="fia-subjects-section">
     <p class="section-title">Schulfächer</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
          *ngFor="let nav of subjectsSection"
          [routerLink]="'/' + nav.url"
          (click)="closeSidebar()"
-         [ngClass]="{'active-route': nav.url === router.url}"
+         [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
       >
         {{nav.title}}
       </a>
@@ -24,7 +20,7 @@
          *ngFor="let nav of areasSection"
          [routerLink]="'/' + nav.url"
          (click)="closeSidebar()"
-         [ngClass]="{'active-route': nav.url === router.url}"
+         [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
       >
         {{nav.title}}
       </a>
@@ -38,7 +34,7 @@
          *ngFor="let nav of internalSection"
          [routerLink]="'/' + nav.url"
          (click)="closeSidebar()"
-         [ngClass]="{'active-route': nav.url === router.url}"
+         [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
       >
         {{nav.title}}
       </a>

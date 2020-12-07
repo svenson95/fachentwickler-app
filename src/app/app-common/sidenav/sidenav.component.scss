@@ -14,30 +14,12 @@
 }
 
 .fia-sidenav-content {
-  .fia-app-logo {
-    font-size: 4em;
-    font-family: MavenPro-Bold, sans-serif;
-    color: $fia-grey-1;
-    opacity: 0.15;
-    position: absolute;
-    top: 45px;
-    left: 11px;
-    z-index: -1;
 
-    .fia, .pp, .yio {
-      text-decoration: underline;
-      text-decoration-style: double;
-    }
-
-    .fia { text-decoration-color: $fia-secondary-color; }
-    .pp { text-decoration-color: $fia-third-color; }
-    .yio { text-decoration-color: $fia-primary-color; }
-  }
 }
 
 .fia-subjects-section {
   @include to-xs {
-    margin-top: 70px;
+    margin-top: 50px;
   }
 }
 
@@ -52,6 +34,7 @@
 .fia-areas-section,
 .fia-internal-section {
   min-width: 245px;
+  margin-right: 30px;
 
   @include from-xs {
     margin-top: 30px;
@@ -62,18 +45,15 @@
   }
 
   .section-title {
-    background: $fia-dark-card-color;
-    color: white;
+    color: $fia-grey-1;
     font-size: 1.3em;
-    font-family: MavenPro-Bold, sans-serif;
-    padding: 8px 20px;
-    padding-left: 35px;
+    font-family: MavenPro-Black, sans-serif;
+    padding: 8px 20px 8px 10px;
+    margin-left: 25px;
     margin-bottom: 0;
-    margin-right: 30px;
-    border-top-right-radius: $fia-border-radius;
-    border-bottom-right-radius: $fia-border-radius;
-    box-shadow: $fia-dark-shadow;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    width: fit-content;
+    border-bottom: 4px double $fia-primary-color;
 
     @include to-md {
       font-size: 1.2em;
@@ -100,8 +80,7 @@
     }
 
     &.active-route {
-      text-decoration: underline;
-      text-decoration-color: $fia-secondary-color;
+      color: $fia-secondary-color;
     }
   }
 }

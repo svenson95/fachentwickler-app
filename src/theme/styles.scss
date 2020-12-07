@@ -351,7 +351,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
   ::ng-deep {
     .mat-slide-toggle-thumb {
-      background-color: $fia-primary-color;
+      background-color: $fia-third-color;
     }
     .mat-slide-toggle-bar {
       background-color: black;
@@ -426,6 +426,14 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
   .fia-text-button span {
     color: white;
+  }
+
+  .fia-header {
+    .active-route {
+      .fia-app-icon {
+        color: $fia-primary-color !important;
+      }
+    }
   }
 
   .fia-page, .fia-sidenav {
@@ -509,9 +517,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
   .fia-sidenav {
     .section-title {
-      color: black !important;
-      background: white !important;
-      box-shadow: $fia-light-shadow !important;
+      color: $fia-grey-1 !important;
     }
     .fia-nav-item {
       color: black !important;
@@ -521,7 +527,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       }
 
       &.active-route {
-        text-decoration-color: $fia-primary-color !important;
+        color: $fia-primary-color !important;
       }
 
       &:not(.active-route) {
@@ -547,8 +553,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       }
 
       &:hover {
-        .fia-app-icon {
-          color: black !important;
+        .fia-icon-wrapper:not(.active-route) {
+          .fia-app-icon {
+            color: $fia-secondary-color !important;
+          }
         }
       }
     }

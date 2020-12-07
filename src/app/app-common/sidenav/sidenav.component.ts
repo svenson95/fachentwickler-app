@@ -3,7 +3,7 @@ import { MenuItem } from '../../models/menu-item';
 import { areas, internal, subjects } from '../../../data/menu-items';
 import { SidenavService } from '../../services/sidenav.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -25,8 +25,10 @@ export class SidenavComponent implements OnInit {
   }
 
   closeSidebar(): void {
-    if (this.sidenavService.isOpen() && this.breakpointObserver.isMatched('(max-width: 600px)')) {
-      this.sidenavService.close();
+    if (this.breakpointObserver.isMatched('(max-width: 600px)')) {
+      if (this.sidenavService.isOpen()) {
+        this.sidenavService.close();
+      }
     }
   }
 
