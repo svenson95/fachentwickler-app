@@ -59,8 +59,10 @@ export class QuizComponent implements OnInit {
   }
 
   checkAnswer(answer: number): void {
+    if (this.answer !== undefined) {
+      return;
+    }
     this.answer = answer;
-    console.log(event.target);
 
     if (answer === this.quizContent.questions[this.level].answer) {
       this.isCorrectAnswer = true;
@@ -70,7 +72,7 @@ export class QuizComponent implements OnInit {
     }
 
     setTimeout(() => {
-      this.answer = null;
+      this.answer = undefined;
       this.isCorrectAnswer = null;
       if (this.quizContent.questions[this.level + 1] !== undefined) {
         this.level++;
