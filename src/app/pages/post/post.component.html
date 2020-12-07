@@ -10,5 +10,8 @@
     <mat-card-content class="fia-post-content" *ngIf="post !== undefined">
       <app-post-element *ngFor="let element of post.elements" [element]="element"></app-post-element>
     </mat-card-content>
+    <p class="fia-post-last-update" *ngIf="post !== undefined">
+      Letzte Aktualisierung: {{transformDate(post.lastUpdate)}}
+    </p>
   </mat-card>
 </div>

@@ -34,6 +34,7 @@ export class PostElementComponent implements OnInit {
         this.image = 'data:image/png;base64,' + dataStrings.join('');
       },
       (error) => {
+        this.image = null;
         console.log('Error while GET post image', error);
       }
     );

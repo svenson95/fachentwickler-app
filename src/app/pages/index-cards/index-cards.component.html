@@ -72,5 +72,8 @@
         </button>
       </div>
     </mat-card-content>
+    <p class="fia-post-last-update" *ngIf="indexCardsContent !== undefined">
+      Letzte Aktualisierung: {{transformDate(indexCardsContent.lastUpdate)}}
+    </p>
   </mat-card>
 </div>

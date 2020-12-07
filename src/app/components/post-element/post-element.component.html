@@ -42,7 +42,8 @@
   <!-- IMAGE -->
   <div class="post-image-wrapper" *ngSwitchCase="ElementType.IMAGE">
     <img class="post-image" *ngIf="image" [src]="image" alt="image"/>
-    <mat-spinner class="fia-loading-spinner" *ngIf="!image"></mat-spinner>
+    <mat-spinner class="fia-loading-spinner" *ngIf="image === false"></mat-spinner>
+    <p style="color: grey !important;" *ngIf="image === null">no image found</p>
   </div>
   <!-- TABLE -->
   <table class="post-table" *ngSwitchCase="ElementType.TABLE">

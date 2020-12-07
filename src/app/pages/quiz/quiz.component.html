@@ -52,5 +52,8 @@
         </div>
       </div>
     </mat-card-content>
+    <p class="fia-post-last-update" *ngIf="quizContent !== undefined">
+      Letzte Aktualisierung: {{transformDate(quizContent.lastUpdate)}}
+    </p>
   </mat-card>
 </div>

@@ -4,6 +4,7 @@ import { Post } from '../../models/post';
 import { Router } from '@angular/router';
 import { HeaderService } from '../../services/header.service';
 import { subjects } from '../../../data/menu-items';
+import { transformDate } from '../../app-common/transform-date';
 
 @Component({
   selector: 'app-post',
@@ -13,6 +14,7 @@ import { subjects } from '../../../data/menu-items';
 export class PostComponent implements OnInit {
 
   post: Post;
+  transformDate = transformDate;
 
   constructor(private dataService: DataService,
               private router: Router,
