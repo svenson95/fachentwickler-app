@@ -48,11 +48,13 @@
   <!-- TABLE -->
   <table class="post-table" *ngSwitchCase="ElementType.TABLE">
     <p class="post-table-title" *ngIf="element.content !== ''" [innerHTML]="element.content"></p>
-    <tr class="table-row" *ngFor="let row of element.rows">
-      <div *ngFor="let column of row.columns">
-        <th *ngIf="row.type === 'header'" [colSpan]="column.colSpan" [innerHTML]="column.content"></th>
-        <td *ngIf="row.type === 'default'" [colSpan]="column.colSpan" [innerHTML]="column.content"></td>
-      </div>
-    </tr>
+    <tbody>
+      <tr class="table-row" *ngFor="let row of element.rows">
+        <ng-container *ngFor="let column of row.columns">
+          <th *ngIf="row.type === 'header'" [colSpan]="column.colSpan" [innerHTML]="column.content"></th>
+          <td *ngIf="row.type === 'default'" [colSpan]="column.colSpan" [innerHTML]="column.content"></td>
+        </ng-container>
+      </tr>
+    </tbody>
   </table>
 </div>

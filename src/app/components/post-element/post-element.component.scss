@@ -104,17 +104,19 @@
   }
 
   .post-table {
-    display: table;
     border-collapse: collapse;
-    width: 100%;
     table-layout: fixed;
 
+    .post-table-title {
+      font-size: 1.1em;
+    }
+
     .table-row {
-      display: flex;
 
       th, td {
-        padding: 10px;
-        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+        border: 1px solid $fia-grey-1;
       }
     }
   }
