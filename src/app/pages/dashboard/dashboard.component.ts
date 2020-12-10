@@ -5,6 +5,7 @@ import { subjectsData } from '../../../data/data-subjects';
 import { AuthService } from '../../services/auth/auth.service';
 import { User } from '../../models/user';
 import { DataService } from '../../services/data/data.service';
+import { DashboardData } from '../../models/dashboard-data';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +13,9 @@ import { DataService } from '../../services/data/data.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  user: User;
+  dashboard: DashboardData;
 
   examplePost = {
     description: subjectsData[0].topics[0].links[1].description,
@@ -21,9 +25,6 @@ export class DashboardComponent implements OnInit {
     type: subjectsData[0].topics[0].links[1].type,
     url: LF1_POSTS[1].url
   };
-  user: User;
-  allLessons: string[];
-  lessonsPercentage = 0;
 
   constructor(private headerService: HeaderService,
               private authService: AuthService,
@@ -31,10 +32,18 @@ export class DashboardComponent implements OnInit {
   ) {
     this.headerService.setPageTitle('Dashboard');
     this.user = this.authService.user;
-    this.dataService.getAllLessons().subscribe((response) => {
-      this.allLessons = response;
-      this.lessonsPercentage = (this.user.progress?.length / response.length) * 100;
-    });
+
+    if (!this.dataService.dashboard) {
+      this.dataService.getAllLessons().subscribe((response) => {
+        this.dashboard = {
+          allLessons: response,
+          lessonsPercentage: (this.user.progress?.length / response.length) * 100
+        };
+        this.dataService.storeDashboard(this.dashboard);
+      });
+    } else {
+      this.dashboard = this.dataService.dashboard;
+    }
   }
 
   ngOnInit(): void {

@@ -7,11 +7,14 @@ import { map } from 'rxjs/operators';
 import { Post } from '../../models/post';
 import { IndexCardsData } from '../../models/index-cards';
 import { QuizData } from '../../models/quiz';
+import { DashboardData } from '../../models/dashboard-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+
+  public dashboard: DashboardData;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -48,7 +51,7 @@ export class DataService {
   getQuiz(postUrl: string): Observable<QuizData> {
     return this.httpClient.get<QuizData>(`${environment.baseUrl}/quiz/${postUrl}`)
       .pipe(map((response) => {
-        // console.log('response GET quiz', response);
+        console.log('response GET quiz', response);
         return response;
       }));
   }
@@ -69,5 +72,9 @@ export class DataService {
         // console.log('response GET posts/all-lessons', response);
         return response;
       }));
+  }
+
+  storeDashboard(dashboard): void {
+    this.dashboard = dashboard;
   }
 }
