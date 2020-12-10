@@ -459,8 +459,12 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       background: $fia-light-card-color !important;
       box-shadow: $fia-light-shadow;
 
-      .fia-card-title, .fia-topic-title p {
+      .fia-card-title, .fia-topic-title p, .label {
         color: black !important;
+      }
+
+      .fia-card-description, .fia-post-last-update {
+        color: $fia-grey-1 !important;
       }
 
       .fia-post-link {
@@ -481,6 +485,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         .fia-link-title {
           color: black;
         }
+
+        .fia-link-description {
+          color: $fia-grey-1 !important;
+        }
       }
 
       .fia-post-item {
@@ -496,6 +504,17 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         }
 
         .post-list {
+          color: black;
+        }
+
+        .post-list-ordered {
+          li::before {
+            color: $fia-primary-color !important;
+            background: $fia-light-background-color !important;
+          }
+        }
+
+        .post-table {
           color: black;
         }
 
@@ -527,12 +546,12 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       }
 
       &.active-route {
-        color: $fia-primary-color !important;
+        color: $fia-secondary-color !important;
       }
 
       &:not(.active-route) {
         &:hover, &:focus {
-          color: $fia-primary-color !important;
+          color: $fia-secondary-color !important;
         }
       }
     }
@@ -555,7 +574,9 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
       &:hover {
         .fia-icon-wrapper:not(.active-route) {
           .fia-app-icon {
-            color: $fia-secondary-color !important;
+            @include from-sm {
+              color: $fia-secondary-color !important;
+            }
           }
         }
       }

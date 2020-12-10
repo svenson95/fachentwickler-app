@@ -55,7 +55,7 @@
 
     li::before {
       content: counter(ordered-list-counter);
-      color: $fia-primary-color;
+      color: $fia-secondary-color;
       font-size: 1.1em;
       --size: 28px;
       left: calc(-1 * var(--size) - 10px);
