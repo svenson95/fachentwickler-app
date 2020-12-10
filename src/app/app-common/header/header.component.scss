@@ -301,6 +301,10 @@
   height: 5px;
   z-index: 999;
 
+  ::ng-deep .mat-progress-bar-buffer {
+    background: $fia-third-color;
+  }
+
   @include to-xs {
     position: fixed;
     top: 75px;
