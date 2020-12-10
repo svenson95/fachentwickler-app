@@ -35,5 +35,6 @@ interface TableRow {
 interface TableColumn {
   align: 'left' | 'middle' | 'right';
   content: string;
-  colSpan?: any;
+  colSpan?: number;
+  rowSpan?: number;
 }
