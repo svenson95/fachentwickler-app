@@ -73,6 +73,7 @@
 
   .post-list {
     padding-inline-start: 30px;
+    font-size: 1.1em;
   }
 
   .post-ul-content {
@@ -106,6 +107,8 @@
   .post-table {
     border-collapse: collapse;
     table-layout: fixed;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     .post-table-title {
       font-size: 1.1em;

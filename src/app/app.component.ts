@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { OverlayContainer } from '@angular/cdk/overlay';
 import { ViewportScroller } from '@angular/common';
 import { NavigationEnd , Router} from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -15,9 +14,9 @@ export class AppComponent implements OnDestroy {
   title = 'fiappy-app';
 
   mobileQuery: MediaQueryList;
+  tinyDisplay: MediaQueryList;
   MOBILE_QUERY_LISTENER: () => void;
   TINY_DISPLAY_LISTENER: () => void;
-  tinyDisplay: MediaQueryList;
 
   constructor(private changeDetectorRef: ChangeDetectorRef,
               private media: MediaMatcher,
@@ -29,7 +28,8 @@ export class AppComponent implements OnDestroy {
     this.tinyDisplay = media.matchMedia('(max-width: 350px)');
     this.MOBILE_QUERY_LISTENER = () => changeDetectorRef.detectChanges();
     this.TINY_DISPLAY_LISTENER = () => changeDetectorRef.detectChanges();
-    // this.mobileQuery.addListener(this.MOBILE_QUERY_LISTENER);
+    this.mobileQuery.addListener(this.MOBILE_QUERY_LISTENER);
+    this.tinyDisplay.addListener(this.TINY_DISPLAY_LISTENER);
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => this.viewportScroller.scrollToPosition([0, 0]));
@@ -46,6 +46,7 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // this.mobileQuery.removeListener(this.MOBILE_QUERY_LISTENER);
+    this.mobileQuery.removeListener(this.MOBILE_QUERY_LISTENER);
+    this.tinyDisplay.removeListener(this.TINY_DISPLAY_LISTENER);
   }
 }

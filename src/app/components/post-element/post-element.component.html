@@ -46,13 +46,15 @@
     <p style="color: grey !important;" *ngIf="image === null">no image found</p>
   </div>
   <!-- TABLE -->
+  <p class="post-table-title" *ngIf="element.type === ElementType.TABLE && element.content !== ''" [innerHTML]="element.content"></p>
   <table class="post-table" *ngSwitchCase="ElementType.TABLE">
-    <p class="post-table-title" *ngIf="element.content !== ''" [innerHTML]="element.content"></p>
     <tbody>
       <tr class="table-row" *ngFor="let row of element.rows">
         <ng-container *ngFor="let column of row.columns">
-          <th *ngIf="row.type === 'header'" [colSpan]="column.colSpan" [innerHTML]="column.content"></th>
-          <td *ngIf="row.type === 'default'" [colSpan]="column.colSpan" [innerHTML]="column.content"></td>
+          <th *ngIf="row.type === 'header' && !column.rowSpan" [colSpan]="column.colSpan" [innerHTML]="column.content"></th>
+          <th *ngIf="row.type === 'header' && column.rowSpan" [rowSpan]="column.rowSpan" [innerHTML]="column.content"></th>
+          <td *ngIf="row.type === 'default' && !column.rowSpan" [colSpan]="column.colSpan" [innerHTML]="column.content"></td>
+          <td *ngIf="row.type === 'default' && column.rowSpan" [rowSpan]="column.rowSpan" [innerHTML]="column.content"></td>
         </ng-container>
       </tr>
     </tbody>
