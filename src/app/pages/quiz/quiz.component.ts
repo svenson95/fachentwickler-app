@@ -64,7 +64,7 @@ export class QuizComponent implements OnInit {
     }
     this.answer = answer;
 
-    if (answer === this.quizContent.questions[this.level].answer) {
+    if (this.isCorrect(answer)) {
       this.isCorrectAnswer = true;
     } else {
       this.isCorrectAnswer = false;
@@ -87,9 +87,10 @@ export class QuizComponent implements OnInit {
   }
 
   resetLevel(): void {
+    this.answer = null;
+    this.isCorrectAnswer = null;
     this.level = 0;
     this.end = false;
-    this.answer = null;
   }
 
 }

@@ -44,9 +44,11 @@
       .quiz-level, .quiz-wrong-answers {
         .key {
           font-family: MavenPro-Bold, sans-serif;
+          padding-top: 5px;
         }
-        .key, .value {
-          padding: 5px 0;
+        .value {
+          padding-top: 2px;
+          padding-bottom: 5px;
         }
       }
       .quiz-level {
@@ -83,12 +85,16 @@
           &:first-of-type {
             margin-bottom: 10px;
           }
+        }
 
-          @include from-sm {
-            &:hover {
-              background: rgba($fia-secondary-color-rgb, 0.3);
-              transition: background 200ms ease-in-out;
-              font-weight: 900;
+        &:not(.is-checking-answer) {
+          .fia-quiz-answer {
+            @include from-sm {
+              &:hover {
+                background: rgba($fia-grey-3, 0.4);
+                transition: background 200ms ease-in-out;
+                font-weight: 900;
+              }
             }
           }
         }

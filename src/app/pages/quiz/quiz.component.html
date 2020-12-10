@@ -20,7 +20,7 @@
           </div>
           <div class="quiz-question" *ngIf="!end">
             <p class="label" [innerHTML]="quizContent.questions[level].question"></p>
-            <div class="fia-quiz-answers-wrapper">
+            <div class="fia-quiz-answers-wrapper" [class.is-checking-answer]="answer !== undefined">
               <p class="fia-quiz-answer answer-1" [innerHTML]="quizContent.questions[level].choice1" (click)="checkAnswer(1)"
                  [class.correct]="answer === 1 && quizContent.questions[level].answer === 1"
                  [class.wrong]="answer === 1 && quizContent.questions[level].answer === 2"
