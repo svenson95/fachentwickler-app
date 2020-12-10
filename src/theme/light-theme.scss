@@ -1,0 +1,238 @@
+@import 'src/theme/variables';
+
+
+/* LIGHT-THEME */
+.light-theme {
+  background-color: white !important;
+
+  .fia-header-progress-bar {
+    .mat-progress-bar-buffer {
+      background: #e79e7a !important;
+    }
+  }
+
+  a:hover {
+    color: black !important;
+    text-decoration-color: $fia-primary-color !important;
+  }
+
+  hr:not(.v-line-1):not(.v-line-2):not(.fia-topic-divider) {
+    background: $fia-grey-3 !important;
+  }
+
+  p {
+    color: black !important;
+  }
+
+  u {
+    text-decoration-color: $fia-primary-color;
+  }
+
+  .mat-dialog-container {
+    background: $fia-secondary-color-rgb;
+
+    .mat-button {
+      background: white;
+      color: black;
+
+      &:hover {
+        color: $fia-primary-color;
+      }
+    }
+  }
+
+  .fia-text-button span {
+    color: white;
+  }
+
+  .fia-header {
+    .active-route {
+      .fia-app-icon {
+        color: $fia-primary-color !important;
+      }
+    }
+  }
+
+  .fia-page, .fia-sidenav {
+    background: $fia-light-background-color !important;
+  }
+
+  .fia-page-container {
+    background: white;
+  }
+
+  .fia-page {
+    .fia-no-exams {
+      color: $fia-grey-1 !important;
+    }
+    .fia-forgot-password-btn {
+      color: $fia-primary-color;
+    }
+    .mat-progress-bar-buffer {
+      background: $fia-light-background-color !important;
+    }
+    .fia-card {
+      color: black !important;
+      background: $fia-light-card-color !important;
+      box-shadow: $fia-light-shadow;
+
+      .fia-card-title, .fia-topic-title p, .label {
+        color: black !important;
+      }
+
+      .fia-card-description, .fia-post-last-update {
+        color: $fia-grey-1 !important;
+      }
+
+      .fia-post-link {
+        background: white !important;
+
+        &:hover {
+          background: rgba($fia-secondary-color-rgb, 0.3) !important;
+        }
+      }
+
+      .fia-link-item {
+        background: $fia-light-background-color !important;
+
+        &:hover {
+          background: rgba($fia-secondary-color-rgb, 0.3) !important;
+        }
+
+        .fia-link-title {
+          color: black;
+        }
+
+        .fia-link-description {
+          color: $fia-grey-1 !important;
+        }
+      }
+
+      .fia-post-item {
+        .post-title,
+        .post-subtitle,
+        .post-text {
+          color: black;
+        }
+
+        .post-hint {
+          color: black !important;
+          background: $fia-light-background-color;
+        }
+
+        .post-list {
+          color: black;
+        }
+
+        .post-list-ordered {
+          li::before {
+            color: $fia-primary-color !important;
+            background: $fia-light-background-color !important;
+          }
+        }
+
+        .post-table {
+          color: black;
+        }
+
+        .ddu-list-number, .list-number {
+          background: $fia-light-background-color;
+          color: $fia-primary-color;
+        }
+      }
+    }
+
+    .fia-input .mat-form-field-flex {
+      background: $fia-light-background-color !important;
+
+      input {
+        color: black !important;
+      }
+    }
+  }
+
+  .fia-sidenav {
+    .section-title {
+      color: $fia-grey-1 !important;
+    }
+    .fia-nav-item {
+      color: black !important;
+
+      &:hover, &:focus {
+        background: $fia-light-background-color !important;
+      }
+
+      &.active-route {
+        color: $fia-secondary-color !important;
+      }
+
+      &:not(.active-route) {
+        &:hover, &:focus {
+          color: $fia-secondary-color !important;
+        }
+      }
+    }
+  }
+
+
+  .fia-header {
+    background: white !important;
+
+    .fia-search-bar {
+      color: black;
+      background: $fia-light-background-color !important;
+    }
+
+    .fia-logo-wrapper {
+      .fia-app-name {
+        color: black;
+      }
+
+      &:hover {
+        .fia-icon-wrapper:not(.active-route) {
+          .fia-app-icon {
+            @include from-sm {
+              color: $fia-secondary-color !important;
+            }
+          }
+        }
+      }
+    }
+
+    .fia-title-buttons-wrapper {
+      .fia-page-title {
+        color: black;
+      }
+    }
+  }
+
+  .fia-page-footer {
+    background: white !important;
+    .fia-background-view {
+      &.first {
+        background-color: $fia-light-background-color !important;
+      }
+      &.second {
+        background-color: white !important;
+      }
+    }
+
+    .logo span {
+      color: black;
+    }
+
+    .buttons {
+
+      a {
+        color: $fia-primary-color;
+      }
+
+      a:hover {
+        color: black;
+      }
+    }
+  }
+  .fia-sidenav-content-wrapper .mat-drawer-content {
+    background-color: white !important;
+  }
+}

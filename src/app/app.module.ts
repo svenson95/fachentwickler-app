@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularMaterialModule } from './app-common/angular-material.module';
 import { PageComponentModule } from './app-common/page/page.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { SnackbarModule } from './app-common/snackbar/snackbar.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
       AngularMaterialModule,
       ReactiveFormsModule,
       PageComponentModule,
+      SnackbarModule
     ],
     providers: [
       {
