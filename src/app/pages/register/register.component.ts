@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit, OnChanges {
   nameAlreadyTaken: boolean;
   emailAlreadyTaken: boolean;
 
+  // Validators
   NameAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
     if (this.nameAlreadyTaken) {
       return { alreadyTaken: true };
@@ -28,7 +29,6 @@ export class RegisterComponent implements OnInit, OnChanges {
       return null;
     }
   }
-
   EmailAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
     if (this.emailAlreadyTaken) {
       return { alreadyTaken: true };
@@ -44,14 +44,23 @@ export class RegisterComponent implements OnInit, OnChanges {
               private snackBar: MatSnackBar
   ) {
     this.headerService.setPageTitle('Registrieren');
+    this.name = new FormControl('', {
+      validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken],
+      updateOn: 'submit'
+    });
+    this.email = new FormControl('', {
+      validators: [Validators.required, Validators.email, this.EmailAlreadyTaken],
+      updateOn: 'submit'
+    });
+    this.password = new FormControl('', {
+      validators: [Validators.required, Validators.minLength(4)],
+      updateOn: 'submit'
+    });
     this.formGroup = formBuilder.group({
       name: this.name,
       email: this.email,
       password: this.password
     });
-    this.name = new FormControl('test', [Validators.required, Validators.minLength(4), this.NameAlreadyTaken]);
-    this.email = new FormControl('test@mail.de', [Validators.required, Validators.email, this.EmailAlreadyTaken]);
-    this.password = new FormControl('test', [Validators.required, Validators.minLength(4)]);
   }
 
   ngOnInit(): void {
@@ -61,6 +70,11 @@ export class RegisterComponent implements OnInit, OnChanges {
   }
 
   register(event): void {
+
+    if (this.formGroup.invalid) {
+      return;
+    }
+
     const name = this.name.value.toLowerCase();
     const email = this.email.value.toLowerCase();
     const password = this.password.value.toLowerCase();

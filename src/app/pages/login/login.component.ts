@@ -14,9 +14,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 
-  username = new FormControl('test', [Validators.required, Validators.minLength(4)]);
-  password = new FormControl('test', [Validators.required, Validators.minLength(4)]);
   formGroup: FormGroup;
+  username: FormControl;
+  password: FormControl;
   loading = false;
 
   constructor(private router: Router,
@@ -26,6 +26,14 @@ export class LoginComponent implements OnInit {
               private formBuilder: FormBuilder
   ) {
     this.headerService.setPageTitle('Login');
+    this.username = new FormControl('test', {
+      validators: [Validators.required, Validators.minLength(4)],
+      updateOn: 'submit'
+    });
+    this.password = new FormControl('test', {
+      validators: [Validators.required, Validators.minLength(4)],
+      updateOn: 'submit'
+    });
     this.formGroup = formBuilder.group({
       username: this.username,
       password: this.password
@@ -36,6 +44,11 @@ export class LoginComponent implements OnInit {
   }
 
   login(event): void {
+
+    if (this.formGroup.invalid) {
+      return;
+    }
+
     this.loading = true;
     const username = this.formGroup.get('username').value.toLowerCase();
     const password = this.formGroup.get('password').value.toLowerCase();

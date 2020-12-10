@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
 
 import { User, AuthUser, RegisterUser } from '../../models/user';
 import { AuthResponse } from '../../models/auth-response';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
 const AUTH_STORAGE_KEY = 'fia_token';
 
