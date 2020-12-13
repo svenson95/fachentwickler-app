@@ -55,9 +55,10 @@ hr {
 /* FIAPPY - PAGE */
 .fia-page {
   background: $fia-dark-background-color;
-  padding: 30px 20px 20px 40px;
+  padding: 35px 20px 20px 40px;
 
   @include to-xs {
+    padding-top: 30px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -218,13 +219,13 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 .fia-text-button {
-  background-color: $fia-third-color;
-  color: black;
+  background-color: transparent;
+  color: $fia-third-color;
   text-transform: uppercase;
   font-family: MavenPro-Bold, sans-serif;
   font-size: 1em;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid $fia-third-color;
   outline: none;
   border-radius: $fia-border-radius;
   letter-spacing: 1px;
@@ -232,6 +233,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
   &:disabled {
     background: $fia-grey-1;
+    border: none;
 
     span {
       color: $fia-dark-card-color;
@@ -250,7 +252,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         position: absolute;
         bottom: 1px;
         left: 0; right: 0;
-        height: 3px;
+        height: 2px;
         background-color: $fia-secondary-color;
       }
       &:before {
@@ -266,7 +268,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
 
     &:hover {
-      color: black;
+      //color: black;
 
       //&:focus {       // TODO: show underline on focus (tab navigation) but remove underlines after click
       h1, span {

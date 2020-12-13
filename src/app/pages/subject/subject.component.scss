@@ -39,11 +39,11 @@
 
     hr {
       min-width: 30px;
-      height: 2px;
+      height: 1px;
       align-self: center;
       border: none;
       //background-color: $fia-dark-background-color;
-      background-color: $fia-secondary-color;
+      background-color: $fia-grey-1;
 
       @include to-md {
         display: none;
@@ -79,8 +79,9 @@
           transition: 100ms;
 
           .fia-link-title {
-            letter-spacing: 0.3px;
-            transition: letter-spacing 600ms ease-out;
+            font-weight: 900;
+            letter-spacing: 0.2px;
+            transition: all 500ms ease-in-out;
           }
         }
       }

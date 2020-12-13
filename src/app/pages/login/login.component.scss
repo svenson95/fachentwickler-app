@@ -89,7 +89,10 @@
     margin-bottom: 20px;
   }
 
-  .fia-button {
+  .fia-text-button:hover {
+    span {
+      color: $fia-third-color;
+    }
   }
 }
 

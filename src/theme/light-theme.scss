@@ -42,7 +42,7 @@
   }
 
   .fia-text-button span {
-    color: white;
+    //color: white;
   }
 
   .fia-header {
@@ -78,6 +78,10 @@
 
       .fia-card-title, .fia-topic-title p, .label {
         color: black !important;
+      }
+
+      .fia-topic-title hr {
+        background-color: $fia-grey-3 !important;
       }
 
       .fia-card-description, .fia-post-last-update {
@@ -168,7 +172,7 @@
 
       &:not(.active-route) {
         &:hover, &:focus {
-          color: $fia-secondary-color !important;
+          //color: $fia-secondary-color !important;
         }
       }
     }
@@ -228,6 +232,10 @@
       }
 
       a:hover {
+        color: black;
+      }
+
+      .footer-divider {
         color: black;
       }
     }

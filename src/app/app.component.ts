@@ -36,11 +36,9 @@ export class AppComponent implements OnDestroy {
 
     this.authService.authenticated().subscribe(
       (value) => {
-        console.log('response authenticated');
-        console.log(value);
+        console.log('response authenticated', value);
       }, (error) => {
-        console.log('ERROR authenticated');
-        console.log(error);
+        console.log('ERROR authenticated', error);
       }
     );
   }

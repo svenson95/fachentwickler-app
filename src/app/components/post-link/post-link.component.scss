@@ -21,7 +21,7 @@
 
     @include from-md {
       width: 100px;
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-right: 20px;
       flex-shrink: 0;
     }
@@ -63,8 +63,9 @@
         transition: background 200ms ease-out;
 
         .fia-title {
-          letter-spacing: 0.3px;
-          transition: letter-spacing 600ms ease-out;
+          font-weight: 900;
+          letter-spacing: 0.2px;
+          transition: all 500ms ease-in-out;
         }
       }
     }

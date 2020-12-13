@@ -130,6 +130,15 @@
     margin-right: 0;
   }
 
+  button {
+    @include to-xs {
+      width: fit-content;
+      align-self: center;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
   button:not(:last-child) {
     @include from-sm {
       margin-bottom: 50px;

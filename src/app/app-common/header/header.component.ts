@@ -15,7 +15,6 @@ import { LoadingService } from '../../services/loading.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  themeColor: 'dark' | 'light' = 'dark';
   isDark = true;
   loadingSubscription: Subscription;
   isLoading = false;
