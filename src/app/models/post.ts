@@ -1,4 +1,4 @@
-import {ElementType} from './element-type';
+import { ElementType } from './element-type';
 
 export interface Post {
   title?: string;
@@ -10,6 +10,7 @@ export interface Post {
   lastUpdate: string;
   schoolWeek: string;
   elements: PostElement[];
+  postId?: string;
 }
 
 export interface PostElement {

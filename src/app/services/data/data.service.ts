@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Subject, SubjectPost} from '../../models/subject';
+import { Subject } from '../../models/subject';
 import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 import { Post } from '../../models/post';
@@ -16,7 +16,10 @@ import { SchoolWeek } from '../../models/school-week';
 export class DataService {
 
   public dashboard: DashboardData;
-  public schoolWeek = 17;
+  public schoolWeek: SchoolWeek;
+
+  // Settings
+  public schoolWeekValue = 17;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -30,10 +33,10 @@ export class DataService {
   }
 
   // Subject component - GET subject-post
-  getSubjectPost(postId: string): Observable<SubjectPost> {
-    return this.httpClient.get<SubjectPost>(`${environment.baseUrl}/subjects/post/${postId}`)
+  getSubjectPost(postId: string): Observable<Post> {
+    return this.httpClient.get<Post>(`${environment.baseUrl}/subjects/post/${postId}`)
       .pipe(map((response) => {
-        console.log('response GET subject-post', response);
+        // console.log('response GET subject-post', response);
         return response;
       }));
   }
@@ -76,7 +79,7 @@ export class DataService {
       }));
   }
 
-  // Dashboard component - GET posts/all          // TODO: rename backend-route
+  // Dashboard component - GET posts/all-ids          // TODO: rename backend-route
   getAllLessons(): Observable<string[]> {
     return this.httpClient.get<string[]>(`${environment.baseUrl}/posts/all-lessons`)
       .pipe(map((response) => {
@@ -94,7 +97,7 @@ export class DataService {
     }));
   }
 
-  // Dashboard component - GET posts/all-school-weeks
+  // Curriculum component - GET all school-week cards
   getAllWeeks(): Observable<SchoolWeek[]> {
     return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/posts/all-school-weeks`)
       .pipe(map((response) => {

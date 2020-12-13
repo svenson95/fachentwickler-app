@@ -18,14 +18,15 @@
       </div>
 
       <div class="fia-progress-week">
-        <p class="label">Woche {{dataService.schoolWeek}} von 40</p>
-        <mat-progress-bar class="progress-bar" [value]="(dataService.schoolWeek / 40) * 100"></mat-progress-bar>
+        <p class="label">Woche {{dataService.schoolWeekValue}} von 40</p>
+        <mat-progress-bar class="progress-bar" [value]="(dataService.schoolWeekValue / 40) * 100"></mat-progress-bar>
       </div>
 
-      <app-post-link class="fia-next-lesson" [post]="examplePost" [title]="'Nächste Lektion'"></app-post-link>
+      <app-post-link class="fia-next-lesson" *ngIf="dashboard !== undefined" [post]="dashboard.nextLesson" [title]="'Nächste Lektion'"
+      ></app-post-link>
 
     </mat-card-content>
   </mat-card>
 
-  <app-school-week-card></app-school-week-card>
+  <app-school-week-card *ngIf="schoolWeek !== undefined" [week]="schoolWeek" [is-dashboard-page]="true"></app-school-week-card>
 </div>

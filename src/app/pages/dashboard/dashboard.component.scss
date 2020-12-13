@@ -32,6 +32,11 @@
     .label {
       font-size: 1.2em;
       margin-bottom: 8px;
+
+      @include to-xs {
+        font-size: 1.1em;
+        margin-bottom: 3px;
+      }
     }
 
     .progress-bar {

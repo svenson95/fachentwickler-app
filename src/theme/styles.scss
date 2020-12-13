@@ -316,13 +316,24 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   flex-shrink: 0;
   border: white;
   color: white;
-  font-family: MavenPro-Bold, sans-serif;
-  font-size: .6em;
+  //font-family: MavenPro-Bold, sans-serif;
   text-transform: uppercase;
-  line-height: 14px;
   letter-spacing: 1.5px;
-  padding: 0 6px;
   border-radius: 12px;
+
+  @include to-md {
+    line-height: 14px;
+    padding: 0 8px;
+    font-size: .6em;
+    font-weight: 500;
+  }
+
+  @include from-md {
+    line-height: 16px;
+    padding: 0 10px 2px;
+    font-size: .7em;
+    font-weight: 600;
+  }
 }
 
 /* FIAPPY - TOGGLES */

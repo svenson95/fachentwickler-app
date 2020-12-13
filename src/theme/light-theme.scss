@@ -71,6 +71,14 @@
     .mat-progress-bar-buffer {
       background: $fia-light-background-color !important;
     }
+
+    .fia-school-week-card {
+      .fia-button-wrapper .fia-previous-week-btn,
+      .fia-button-wrapper .fia-next-week-btn {
+        background: $fia-light-background-color !important;
+      }
+    }
+
     .fia-card {
       color: black !important;
       background: $fia-light-card-color !important;

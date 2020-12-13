@@ -6,6 +6,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { User } from '../../models/user';
 import { DataService } from '../../services/data/data.service';
 import { DashboardData } from '../../models/dashboard-data';
+import { SchoolWeek } from '../../models/school-week';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,8 +15,9 @@ import { DashboardData } from '../../models/dashboard-data';
 })
 export class DashboardComponent implements OnInit {
 
-  user: User;
-  dashboard: DashboardData;
+  public user: User;
+  public dashboard: DashboardData;
+  public schoolWeek: SchoolWeek;
 
   examplePost = {
     description: subjectsData[0].topics[0].links[1].description,
@@ -32,21 +34,52 @@ export class DashboardComponent implements OnInit {
   ) {
     this.headerService.setPageTitle('Dashboard');
     this.user = this.authService.user;
-
-    if (!this.dataService.dashboard) {
-      this.dataService.getAllLessons().subscribe((response) => {
-        this.dashboard = {
-          allLessons: response,
-          lessonsPercentage: (this.user.progress?.length / response.length) * 100
-        };
-        this.dataService.storeDashboard(this.dashboard);
-      });
-    } else {
-      this.dashboard = this.dataService.dashboard;
-    }
   }
 
   ngOnInit(): void {
+    if (!this.dataService.dashboard) {
+      this.fetchAllLessons();
+    } else {
+      this.dashboard = this.dataService.dashboard;
+    }
+
+    if (!this.dataService.schoolWeek) {
+      this.fetchSchoolWeek();
+    } else {
+      this.schoolWeek = this.dataService.schoolWeek;
+    }
+  }
+
+  async fetchAllLessons(): Promise<void> {
+    this.dataService.getAllLessons().subscribe(
+      (lessons) => {
+        this.fetchNextLesson(lessons);
+      }, (error) => {
+        console.log('error while GET all-lessons', error);
+      }
+    );
+  }
+
+  fetchNextLesson(lessons): void {
+    this.dataService.getSubjectPost(lessons[this.authService.user.progress.length]).subscribe(
+      (nextLesson) => {
+        this.dashboard = {
+          allLessons: lessons,
+          lessonsPercentage: (this.authService.user.progress.length / lessons.length) * 100,
+          nextLesson
+        };
+      }, (error) => {
+        console.log('error while GET next-lesson', error);
+      }
+    );
+  }
+
+  fetchSchoolWeek(): void {
+    this.dataService.getSchoolWeek(this.dataService.schoolWeekValue).subscribe((response) => {
+      this.schoolWeek = response;
+      this.dataService.schoolWeek = response;
+      localStorage.setItem('dev_schoolweek', JSON.stringify(response));
+    });
   }
 
 }
