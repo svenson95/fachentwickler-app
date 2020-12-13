@@ -3,7 +3,7 @@
 
 .fia-post-link-wrapper {
   display: flex;
-  padding: 20px 40px;
+  padding: 0 40px 10px;
   margin-left: -40px;
   margin-right: -40px;
 
@@ -14,6 +14,7 @@
     margin-right: 5px;
 
     @include from-md {
+      width: 100px;
       font-size: 1.2em;
       margin-right: 20px;
       flex-shrink: 0;
@@ -24,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: $fia-dark-card-color;
+    background: $fia-dark-background-color;
     padding: 8px 12px;
     border-radius: $fia-border-radius;
     cursor: pointer;
@@ -45,8 +46,8 @@
         transition: background 200ms ease-out;
 
         .fia-title {
-          letter-spacing: 0.5px;
-          transition: letter-spacing 400ms ease-out;
+          letter-spacing: 0.3px;
+          transition: letter-spacing 600ms ease-out;
         }
       }
     }

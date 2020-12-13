@@ -85,10 +85,10 @@
       }
 
       .fia-post-link {
-        background: white !important;
+        background: $fia-light-background-color !important;
 
         &:hover {
-          background: rgba($fia-secondary-color-rgb, 0.3) !important;
+          background: rgba($fia-grey-1, 0.2) !important;
         }
       }
 

@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PostLinkComponent implements OnInit {
 
   @Input('post') post;
+  @Input('title') title;
 
   constructor() {}
 
