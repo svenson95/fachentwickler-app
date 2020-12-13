@@ -27,7 +27,7 @@
     </mat-nav-list>
   </div>
 
-  <div class="fia-internal-section">
+  <div class="fia-internal-section" *ngIf="authService.isAuthenticated">
     <p class="section-title">Internes</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple

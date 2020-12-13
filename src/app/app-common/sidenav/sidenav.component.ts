@@ -4,6 +4,7 @@ import { areas, internal, subjects } from '../../../data/menu-items';
 import { SidenavService } from '../../services/sidenav.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -18,7 +19,8 @@ export class SidenavComponent implements OnInit {
 
   constructor(private sidenavService: SidenavService,
               public breakpointObserver: BreakpointObserver,
-              public router: Router
+              public router: Router,
+              public authService: AuthService
   ) { }
 
   ngOnInit(): void {
