@@ -54,4 +54,8 @@ html, body {
 body {
   background: black;
   margin: 0;
+
+  &.scroll-locked {
+    overflow: hidden;
+  }
 }

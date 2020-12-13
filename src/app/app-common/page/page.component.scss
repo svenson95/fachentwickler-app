@@ -59,11 +59,11 @@
   .mat-drawer-inner-container {
     overflow-x: hidden;
 
-    div:nth-child(3) {
+    div:last-of-type {
       margin-bottom: 50px;
 
       @include to-xs {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
       }
     }
   }

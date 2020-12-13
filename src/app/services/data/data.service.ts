@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Subject } from '../../models/subject';
+import {Subject, SubjectPost} from '../../models/subject';
 import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 import { Post } from '../../models/post';
@@ -25,6 +25,15 @@ export class DataService {
     return this.httpClient.get<Subject>(`${environment.baseUrl}/subjects/${subjectUrl}`)
       .pipe(map((response) => {
         // console.log('response GET subject', response);
+        return response;
+      }));
+  }
+
+  // Subject component - GET subject-post
+  getSubjectPost(postId: string): Observable<SubjectPost> {
+    return this.httpClient.get<SubjectPost>(`${environment.baseUrl}/subjects/post/${postId}`)
+      .pipe(map((response) => {
+        console.log('response GET subject-post', response);
         return response;
       }));
   }

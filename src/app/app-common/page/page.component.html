@@ -14,6 +14,7 @@
                  [opened]="!mobileQuery.matches"
                  [fixedInViewport]="mobileQuery.matches"
                  fixedTopGap="56"
+                 (openedChange)="onSideMenuToggled(sidenav.opened)"
     >
       <app-sidenav></app-sidenav>
     </mat-sidenav>
