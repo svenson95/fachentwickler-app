@@ -20,6 +20,7 @@
 
 .fia-user-progress {
   overflow: hidden;
+  padding-bottom: 20px;
 
   .fia-view-wrapper {
     .label {
@@ -55,9 +56,9 @@
     }
 
     .fia-next-lesson {
-      ::ng-deep .fia-post-link-wrapper {
-        background: rgba($fia-secondary-color-rgb, 0.15);
-      }
+      //::ng-deep .fia-post-link {
+      //  background: $fia-dark-background-color;
+      //}
     }
 
   }

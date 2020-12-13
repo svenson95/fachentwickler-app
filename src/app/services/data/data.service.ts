@@ -8,6 +8,7 @@ import { Post } from '../../models/post';
 import { IndexCardsData } from '../../models/index-cards';
 import { QuizData } from '../../models/quiz';
 import { DashboardData } from '../../models/dashboard-data';
+import { SchoolWeek } from '../../models/school-week';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ import { DashboardData } from '../../models/dashboard-data';
 export class DataService {
 
   public dashboard: DashboardData;
+  public schoolWeek = 17;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -72,6 +74,15 @@ export class DataService {
         // console.log('response GET posts/all-lessons', response);
         return response;
       }));
+  }
+
+  // Dashboard component - GET posts/school-week/:number
+  getSchoolWeek(week: number): Observable<SchoolWeek> {
+    return this.httpClient.get<SchoolWeek>(`${environment.baseUrl}/posts/school-week/` + week)
+      .pipe(map((response) => {
+        console.log('response GET posts/school-week/:number', response);
+        return response;
+    }));
   }
 
   storeDashboard(dashboard): void {

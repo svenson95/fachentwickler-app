@@ -1,0 +1,40 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-school-week-card {
+  color: white;
+
+  .fia-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .fia-card-title {
+      margin-bottom: 2px;
+    }
+
+    .fia-button-wrapper {
+      .fia-previous-week-btn,
+      .fia-next-week-btn {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba($fia-grey-1, 0.1);
+          border-radius: $fia-border-radius;
+        }
+      }
+
+      .fia-previous-week-btn {
+      }
+
+      .fia-next-week-btn {
+      }
+    }
+  }
+}

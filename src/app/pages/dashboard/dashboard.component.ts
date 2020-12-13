@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private headerService: HeaderService,
               private authService: AuthService,
-              private dataService: DataService
+              public dataService: DataService
   ) {
     this.headerService.setPageTitle('Dashboard');
     this.user = this.authService.user;
