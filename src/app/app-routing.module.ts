@@ -97,27 +97,33 @@ const routes: Routes = [
   },
   {
     path: 'lehrmaterial',
-    loadChildren: () => import('src/app/pages/teacher-files/teacher-files.module').then(m => m.TeacherFilesModule)
+    loadChildren: () => import('src/app/pages/teacher-files/teacher-files.module').then(m => m.TeacherFilesModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'mitteilungen',
-    loadChildren: () => import('src/app/pages/messages/messages.module').then(m => m.MessagesModule)
+    loadChildren: () => import('src/app/pages/messages/messages.module').then(m => m.MessagesModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'lehrplan',
-    loadChildren: () => import('src/app/pages/curriculum/curriculum.module').then(m => m.CurriculumModule)
+    loadChildren: () => import('src/app/pages/curriculum/curriculum.module').then(m => m.CurriculumModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'vertretungsplan',
-    loadChildren: () => import('src/app/pages/substitution-schedule/substitution-schedule.module').then(m => m.SubstitutionScheduleModule)
+    loadChildren: () => import('src/app/pages/substitution-schedule/substitution-schedule.module').then(m => m.SubstitutionScheduleModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'feedback',
-    loadChildren: () => import('src/app/pages/feedback/feedback.module').then(m => m.FeedbackModule)
+    loadChildren: () => import('src/app/pages/feedback/feedback.module').then(m => m.FeedbackModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'klausuren',
-    loadChildren: () => import('src/app/pages/exams/exams.module').then(m => m.ExamsModule)
+    loadChildren: () => import('src/app/pages/exams/exams.module').then(m => m.ExamsModule),
+    canActivate: [AuthGuardService]
   },
   // {
   //   path: '**',

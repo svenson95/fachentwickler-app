@@ -13,7 +13,6 @@ export class PostLinkComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.post);
   }
 
 }

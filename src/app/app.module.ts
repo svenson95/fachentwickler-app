@@ -14,31 +14,31 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { SnackbarModule } from './app-common/snackbar/snackbar.module';
 
 @NgModule({
-    declarations: [AppComponent],
-    imports: [
-      CommonModule,
-      BrowserModule,
-      BrowserAnimationsModule,
-      AppRoutingModule,
-      FormsModule,
-      HttpClientModule,
-      AngularMaterialModule,
-      ReactiveFormsModule,
-      PageComponentModule,
-      SnackbarModule
-    ],
-    providers: [
-      {
-        provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-        useValue: { appearance: 'fill' }
-      },
-      {
-        provide: HTTP_INTERCEPTORS,
-        useClass: LoadingInterceptor,
-        multi: true
-      }
-    ],
-    entryComponents: [AppComponent],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    AngularMaterialModule,
+    ReactiveFormsModule,
+    PageComponentModule,
+    SnackbarModule
+  ],
+  providers: [
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: {appearance: 'fill'}
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true
+    }
+  ],
+  entryComponents: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
