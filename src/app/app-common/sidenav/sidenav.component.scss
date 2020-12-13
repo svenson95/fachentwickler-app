@@ -68,10 +68,13 @@
   .fia-nav-item {
     color: white;
     font-size: 1em;
-    font-weight: 900;
     letter-spacing: 1px;
     height: 30px;
     margin-left: 20px;
+
+    @include from-sm {
+      font-weight: 900;
+    }
 
     &:hover, &:focus {
       background-color: $fia-dark-background-color;
@@ -90,47 +93,49 @@
     padding-right: 2px;
   }
 
-  &:not(.active-route) span {
-    position: relative;
+  @include from-sm {
+    &:not(.active-route) span {
+      position: relative;
 
-    &:focus,
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 1px;
-      left: 0; right: 0;
-      height: 2px;
-      background-color: $fia-secondary-color;
-    }
-    &:before {
-      opacity: 0;
-      transform: translateY(- $distance);
-      transition: transform 0s $easeOutBack, opacity 0s;
-    }
-    &:after {
-      opacity: 0;
-      transform: translateY($distance/2);
-      transition: transform $duration $easeOutBack, opacity $duration;
-    }
-  }
-
-  &:focus,
-  &:hover {
-    color: black;
-
-    span {
-      &:before,
+      &:focus,
       &:before,
       &:after {
-        opacity: 1;
-        transform: translateY(3px);
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: $fia-secondary-color;
       }
       &:before {
-        transition: transform $duration $easeOutBack, opacity $duration;
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
       }
       &:after {
-        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      color: black;
+
+      span {
+        &:before,
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(3px);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
       }
     }
   }

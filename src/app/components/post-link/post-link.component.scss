@@ -79,8 +79,11 @@
       }
 
       .fia-title {
-        margin-bottom: 0;
         transition: letter-spacing 400ms ease-out;
+
+        @include to-md {
+          margin-bottom: 3px;
+        }
       }
     }
 

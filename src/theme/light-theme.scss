@@ -165,6 +165,7 @@
       &:not(.active-route) {
         &:hover, &:focus {
           //color: $fia-secondary-color !important;
+          background: transparent !important;
         }
       }
     }
