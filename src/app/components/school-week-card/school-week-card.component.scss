@@ -7,7 +7,6 @@
   .fia-header-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     .fia-card-title {
       margin-bottom: 2px;
@@ -21,12 +20,14 @@
         background: transparent;
         border: none;
         outline: none;
-        color: white;
+        color: $fia-third-color;
         cursor: pointer;
+        line-height: initial;
 
-        &:hover {
-          background: rgba($fia-grey-1, 0.1);
-          border-radius: $fia-border-radius;
+        &:not(.disabled) {
+          &:hover {
+            background: rgba($fia-grey-1, 0.1);
+          }
         }
       }
 
@@ -36,5 +37,16 @@
       .fia-next-week-btn {
       }
     }
+  }
+
+  .fia-weekday-group {
+    @include from-md {
+      margin-top: 20px;
+    }
+  }
+
+  .fia-no-content-label {
+    color: $fia-grey-1;
+    font-size: 1.1em;
   }
 }

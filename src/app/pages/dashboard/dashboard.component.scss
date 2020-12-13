@@ -1,6 +1,12 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
+.fia-card {
+  @include to-xs {
+    margin-bottom: 20px;
+  }
+}
+
 .fia-card:not(:last-of-type) {
   margin-bottom: 20px;
 }

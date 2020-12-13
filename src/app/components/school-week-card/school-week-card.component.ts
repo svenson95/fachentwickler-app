@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SchoolWeek } from '../../models/school-week';
 import { getWeekday } from '../../app-common/getWeekday';
 import { transformDate } from '../../app-common/transform-date';
@@ -12,19 +12,26 @@ import { DataService } from '../../services/data/data.service';
 })
 export class SchoolWeekCardComponent implements OnInit {
 
+  @Input() week?: SchoolWeek;
+
   getWeekday = getWeekday;
   transformDate = transformDate;
   schoolWeek: SchoolWeek;
   currentWeek: number;
 
   constructor(private dataService: DataService) {
-    this.currentWeek = this.dataService.schoolWeek;
-    this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
-      this.schoolWeek = response;
-    });
   }
 
   ngOnInit(): void {
+    if (this.week) {
+      this.currentWeek = Number(this.week.schoolWeek);
+    } else {
+      this.currentWeek = this.dataService.schoolWeek;
+    }
+
+    this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
+      this.schoolWeek = response;
+    });
   }
 
   fullSubjectName = (subject: string) => {
@@ -42,7 +49,7 @@ export class SchoolWeekCardComponent implements OnInit {
   getNextWeek(): void {
     this.schoolWeek = undefined;
     this.currentWeek++;
-    this.dataService.getSchoolWeek(this.currentWeek++).subscribe(response => {
+    this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
       this.schoolWeek = response;
     });
   }

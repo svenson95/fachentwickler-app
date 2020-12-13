@@ -85,6 +85,15 @@ export class DataService {
     }));
   }
 
+  // Dashboard component - GET posts/all-school-weeks
+  getAllWeeks(): Observable<SchoolWeek[]> {
+    return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/posts/all-school-weeks`)
+      .pipe(map((response) => {
+        // console.log('response GET posts/all-school-weeks', response);
+        return response;
+      }));
+  }
+
   storeDashboard(dashboard): void {
     this.dashboard = dashboard;
   }

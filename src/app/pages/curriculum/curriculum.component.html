@@ -1,8 +1,3 @@
 <div class="fia-page">
-  <mat-card class="fia-card">
-    <p class="fia-card-title">Lehrplan</p>
-    <mat-card-content class="fia-view-wrapper">
-      <p>curriculum works!</p>
-    </mat-card-content>
-  </mat-card>
+  <app-school-week-card *ngFor="let week of schoolWeeks" [week]="week"></app-school-week-card>
 </div>

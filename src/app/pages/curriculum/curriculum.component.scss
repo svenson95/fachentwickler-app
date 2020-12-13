@@ -1,2 +1,13 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
+
+::ng-deep .fia-school-week-card {
+
+  @include from-sm {
+    margin-bottom: 30px !important;
+  }
+
+  @include to-sm {
+    margin-bottom: 20px !important;
+  }
+}

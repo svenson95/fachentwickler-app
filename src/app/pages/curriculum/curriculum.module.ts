@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CurriculumComponent } from './curriculum.component';
 import { CurriculumPageRoutingModule } from './curriculum-routing.module';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { SchoolWeekCardModule } from '../../components/school-week-card/school-week-card.module';
 
 
 
@@ -11,7 +12,8 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
   imports: [
     CommonModule,
     CurriculumPageRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    SchoolWeekCardModule
   ]
 })
 export class CurriculumModule { }
