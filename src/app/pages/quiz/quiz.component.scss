@@ -1,6 +1,10 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
+.fia-card .fia-card-content {
+  justify-content: space-evenly;
+}
+
 .fia-card {
   .fia-card-title {
     margin-bottom: 5px;

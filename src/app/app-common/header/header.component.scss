@@ -111,7 +111,7 @@
     justify-content: space-between;
 
     @include from-xs {
-      padding-left: 26px;
+      padding-left: 37px;
     }
 
     @include to-md {
@@ -207,6 +207,12 @@
         color: $fia-third-color;
         transform: translateY(12px);
 
+        .fia-action-btn {
+          &:hover, &:focus {
+            background: rgba($fia-dark-card-color, 0.5);
+          }
+        }
+
         .fia-header-usage-btn {
           background-color: $fia-secondary-color;
           color: black;
@@ -219,7 +225,7 @@
           line-height: 12px;
           border: none;
           outline: none;
-          border-radius: $fia-border-radius;
+          border-radius: 12px;
           padding: 5px 10px;
           margin-left: 8px;
           margin-top: 8px;
@@ -275,7 +281,7 @@
 }
 
 .fia-header .fia-logo-wrapper {
-  &:hover {
+  &:hover, &:focus {
     .fia-icon-wrapper:not(.active-route) .fia-app-icon {
       @include from-md {
         color: white;

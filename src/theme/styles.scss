@@ -67,7 +67,7 @@ hr {
 a {
   color: $fia-secondary-color;
 
-  &:hover {
+  &:hover, &:focus {
     color: white;
     text-decoration-color: $fia-secondary-color;
   }
@@ -322,7 +322,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   line-height: 14px;
   letter-spacing: 1.5px;
   padding: 0 6px;
-  border-radius: $fia-border-radius;
+  border-radius: 12px;
 }
 
 /* FIAPPY - TOGGLES */

@@ -41,7 +41,6 @@
     padding: 8px 12px;
     border-radius: $fia-border-radius;
     cursor: pointer;
-    transition: background 200ms ease-out;
     text-decoration: none;
 
     &:focus {
@@ -59,12 +58,11 @@
 
     @media screen and (min-width: 1000px) {
       &:hover {
-        background: black;
-        transition: background 200ms ease-out;
-
         .fia-title {
           font-weight: 900;
           letter-spacing: 0.2px;
+          text-decoration: underline;
+          text-decoration-color: $fia-secondary-color;
           transition: all 500ms ease-in-out;
         }
       }
@@ -88,6 +86,7 @@
 
     .fia-description-wrapper {
       display: flex;
+      align-items: center;
 
       @include to-xs {
         margin-top: -5px;

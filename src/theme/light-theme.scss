@@ -99,10 +99,6 @@
       .fia-link-item {
         background: $fia-light-background-color !important;
 
-        &:hover {
-          background: rgba($fia-secondary-color-rgb, 0.3) !important;
-        }
-
         .fia-link-title {
           color: black;
         }
@@ -157,14 +153,10 @@
 
   .fia-sidenav {
     .section-title {
-      color: $fia-grey-1 !important;
+      color: black !important;
     }
     .fia-nav-item {
       color: black !important;
-
-      &:hover, &:focus {
-        background: $fia-light-background-color !important;
-      }
 
       &.active-route {
         color: $fia-secondary-color !important;

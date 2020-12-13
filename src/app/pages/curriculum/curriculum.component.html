@@ -1,3 +1,4 @@
 <div class="fia-page">
+  <mat-spinner class="fia-loading-spinner" *ngIf="schoolWeeks === undefined"></mat-spinner>
   <app-school-week-card *ngFor="let week of schoolWeeks" [week]="week"></app-school-week-card>
 </div>

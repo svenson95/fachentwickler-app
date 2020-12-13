@@ -37,6 +37,7 @@
   margin-right: 30px;
 
   @include from-xs {
+    margin-left: 10px;
     margin-top: 30px;
   }
 
@@ -45,15 +46,15 @@
   }
 
   .section-title {
-    color: $fia-grey-1;
+    color: white;
     font-size: 1.3em;
-    font-family: MavenPro-Black, sans-serif;
     padding: 8px 20px 8px 10px;
     margin-left: 25px;
     margin-bottom: 0;
     letter-spacing: 2px;
     width: fit-content;
     border-bottom: 4px double $fia-primary-color;
+    text-transform: uppercase;
 
     @include to-md {
       font-size: 1.2em;
@@ -67,11 +68,12 @@
   .fia-nav-item {
     color: white;
     font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 1px;
     height: 30px;
     margin-left: 20px;
-    letter-spacing: 1px;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: $fia-dark-background-color;
     }
 
@@ -91,6 +93,7 @@
   &:not(.active-route) span {
     position: relative;
 
+    &:focus,
     &:before,
     &:after {
       content: '';
@@ -112,11 +115,12 @@
     }
   }
 
+  &:focus,
   &:hover {
     color: black;
 
-    //&:focus {       // TODO: show underline on focus (tab navigation) but remove underlines after click
     span {
+      &:before,
       &:before,
       &:after {
         opacity: 1;

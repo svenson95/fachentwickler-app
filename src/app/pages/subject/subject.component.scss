@@ -64,23 +64,25 @@
       display: flex;
       justify-content: space-between;
       background-color: $fia-dark-background-color;
-      border-radius: $fia-border-radius;
+      //border-radius: $fia-border-radius;
       padding: 10px 20px;
       cursor: pointer;
       text-decoration: none;
+      border-right: 5px solid $fia-third-color;
 
       &:focus {
         outline: none;
       }
 
       @media screen and (min-width: 1000px) {
-        &:hover {
-          background-color: black;
-          transition: 100ms;
+        &:hover, &:focus {
+          border-color: $fia-secondary-color;
 
           .fia-link-title {
             font-weight: 900;
             letter-spacing: 0.2px;
+            text-decoration: underline;
+            text-decoration-color: $fia-secondary-color;
             transition: all 500ms ease-in-out;
           }
         }
@@ -98,6 +100,7 @@
       .fia-link-title {
         margin: auto 0;
         transition: letter-spacing 300ms ease-out;
+        text-decoration-color: $fia-secondary-color;
 
         @include to-xs {
           margin-bottom: 0;
