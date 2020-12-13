@@ -1,2 +1,51 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
+
+
+.fia-card {
+  .fia-view-wrapper {
+    margin-top: 40px;
+    font-size: 1.2em;
+
+    div:not(:last-of-type) {
+      border-bottom: 1px solid $fia-grey-1;
+    }
+
+    .fia-teacher {
+      display: flex;
+
+      .key, .value {
+        margin: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .key {
+        min-width: 130px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .value {
+        color: $fia-primary-color;
+        border-left: 1px solid $fia-grey-1;
+        padding-left: 20px;
+        outline: none;
+
+        &:hover {
+          color: white;
+          text-decoration-color: $fia-primary-color;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .light-theme {
+    .fia-teacher,
+    .fia-teacher .value {
+      border-color: $fia-grey-3 !important;
+    }
+  }
+}

@@ -22,8 +22,7 @@ import {
     swapHorizontalOutline,
     todayOutline,
 } from 'ionicons/icons';
-
-import {MenuItem} from '../app/models/menu-item';
+import { MenuItem } from '../app/models/menu-item';
 
 export const subjects: MenuItem[] = [
   {
@@ -175,12 +174,6 @@ export const internal: MenuItem[] = [
     shortTitle: 'Schuljahresplan',
     url: '/schuljahresplan',
     icon: calendarOutline,
-  },
-  {
-    title: 'Lehrer',
-    shortTitle: 'Lehrer',
-    url: '/lehrer',
-    icon: peopleOutline,
   },
   {
     title: 'Feedback',
