@@ -131,9 +131,10 @@
           color: $fia-grey-1;
           font-size: .95em;
           margin-bottom: 0;
+          text-align: right;
 
           @include from-md {
-            min-width: 75px;
+            min-width: 70px;
           }
         }
       }

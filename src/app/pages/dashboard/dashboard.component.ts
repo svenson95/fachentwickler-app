@@ -68,6 +68,7 @@ export class DashboardComponent implements OnInit {
           lessonsPercentage: (this.authService.user.progress.length / lessons.length) * 100,
           nextLesson
         };
+        this.dataService.dashboard = this.dashboard;
       }, (error) => {
         console.log('error while GET next-lesson', error);
       }

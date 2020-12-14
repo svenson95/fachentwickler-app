@@ -119,13 +119,14 @@
         color: $fia-grey-1;
         font-size: 0.95em;
         margin-bottom: 0;
+        text-align: right;
 
         @include to-xs {
           font-size: .85em;
         }
 
         @include from-sm {
-          min-width: 75px;
+          min-width: 70px;
         }
       }
 
