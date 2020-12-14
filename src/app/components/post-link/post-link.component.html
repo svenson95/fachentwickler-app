@@ -2,7 +2,7 @@
   <p class="label" [innerHTML]="title"></p>
   <a class="fia-post-link" [routerLink]="'/' + post.subject + '/' + post.url">
     <div class="fia-title-wrapper">
-      <p class="fia-title">{{post.title}}</p>
+      <p class="fia-title" [ngClass]="{exam: post.url.includes('test')}">{{post.title}}</p>
     </div>
     <div class="fia-description-wrapper">
       <p class="fia-description">{{transformDate(post.lessonDate)}}</p>

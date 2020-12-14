@@ -94,6 +94,11 @@
           margin-bottom: 5px;
         }
       }
+
+      .fia-title.exam {
+        text-decoration: underline;
+        text-decoration-color: $fia-primary-color !important;
+      }
     }
 
     .fia-description-wrapper {
