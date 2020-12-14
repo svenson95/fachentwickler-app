@@ -108,6 +108,10 @@
 
       .fia-post-link {
         background: $fia-light-background-color !important;
+
+        .fia-description {
+          color: $fia-grey-1 !important;
+        }
       }
 
       .fia-link-item {
@@ -263,6 +267,15 @@
       }
     }
   }
+
+  .fia-my-profile {
+    .fia-input {
+      .mat-form-field-flex {
+        background: white !important;
+      }
+    }
+  }
+
   .fia-sidenav-content-wrapper .mat-drawer-content {
     background-color: white !important;
   }
