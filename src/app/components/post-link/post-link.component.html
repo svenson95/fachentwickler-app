@@ -1,11 +1,11 @@
 <div class="fia-post-link-wrapper">
-  <p class="label">{{title}}</p>
+  <p class="label" [innerHTML]="title"></p>
   <a class="fia-post-link" [routerLink]="'/' + post.subject + '/' + post.url">
     <div class="fia-title-wrapper">
       <p class="fia-title">{{post.title}}</p>
     </div>
     <div class="fia-description-wrapper">
-      <p class="fia-description">{{post.description}}</p>
+      <p class="fia-description">{{transformDate(post.lessonDate)}}</p>
       <app-post-badge [post]="post"></app-post-badge>
     </div>
   </a>

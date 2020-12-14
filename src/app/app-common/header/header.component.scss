@@ -86,7 +86,7 @@
     }
 
     .fia-app-name {
-      font-size: 1.3em;
+      font-size: 1.2em;
       font-family: MavenPro-Bold, sans-serif;
 
       .fia, .pp, .yio {
@@ -119,6 +119,7 @@
     }
 
     .fia-header-searchbar {
+      margin-right: 20px;
 
       @include to-md {
         display: none;
@@ -187,7 +188,7 @@
       }
 
       .fia-page-title {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-family: MavenPro-Bold, sans-serif;
         margin-right: 30px;
         flex-shrink: 1;
@@ -206,6 +207,10 @@
         display: flex;
         color: $fia-third-color;
         transform: translateY(12px);
+
+        .fia-header-hover-label {
+          margin-right: 5px;
+        }
 
         .fia-action-btn {
           &:hover, &:focus {
@@ -264,7 +269,9 @@
         }
 
         .fia-theme-toggle-wrapper {
-          margin-right: 0;
+          @include to-sm {
+            margin-right: 0;
+          }
         }
 
         .fia-sidenav-hamburger-btn {

@@ -198,7 +198,7 @@ a {
   }
   &.mat-form-field-invalid .mat-form-field-label,
   &.mat-form-field-should-float .mat-form-field-label {
-    color: $fia-primary-color !important;
+    color: $fia-primary-color;
   }
   .mat-form-field-ripple {
     background-color: $fia-primary-color !important;
@@ -219,17 +219,21 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 .fia-text-button {
-  background-color: transparent;
+  background-color: $fia-dark-background-color;
   color: $fia-third-color;
   text-transform: uppercase;
   font-family: MavenPro-Bold, sans-serif;
   font-size: 1em;
   padding: 10px 20px;
-  border: 1px solid $fia-third-color;
+  border: none;
   outline: none;
   border-radius: $fia-border-radius;
   letter-spacing: 1px;
   text-decoration: none;
+
+  &.second-color {
+    background-color: black;
+  }
 
   &:disabled {
     background: $fia-grey-1;
@@ -252,8 +256,8 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         position: absolute;
         bottom: 1px;
         left: 0; right: 0;
-        height: 2px;
-        background-color: $fia-secondary-color;
+        height: 1px;
+        background-color: $fia-third-color;
       }
       &:before {
         opacity: 0;
@@ -275,7 +279,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         &:before,
         &:after {
           opacity: 1;
-          transform: translateY(5px);
+          transform: translateY(3px);
         }
         &:before {
           transition: transform $duration $easeOutBack, opacity $duration;
@@ -291,11 +295,11 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 /* FIAPPY - DIALOG */
 .mat-dialog-container {
-  background: $fia-secondary-color-rgb;
+  background: black;
+  color: white;
 
   .mat-button {
-    background: black;
-    color: white;
+    background: $fia-dark-background-color;
 
     &:hover {
       color: $fia-secondary-color;

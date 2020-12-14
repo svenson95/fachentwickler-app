@@ -13,11 +13,13 @@
     }
 
     .fia-button-wrapper {
+      height: fit-content;
+
       .fia-previous-week-btn,
       .fia-next-week-btn {
+        background: $fia-dark-background-color;
         width: 40px;
         height: 40px;
-        background: transparent;
         border: none;
         outline: none;
         color: $fia-third-color;
@@ -26,12 +28,13 @@
 
         &:not(.disabled) {
           &:hover {
-            background: rgba($fia-grey-1, 0.1);
+            color: $fia-secondary-color;
           }
         }
       }
 
       .fia-previous-week-btn {
+        margin-right: 8px;
       }
 
       .fia-next-week-btn {

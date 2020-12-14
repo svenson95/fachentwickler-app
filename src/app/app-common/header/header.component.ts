@@ -7,6 +7,8 @@ import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dia
 import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { LoadingService } from '../../services/loading.service';
+import { SidenavService } from '../../services/sidenav.service';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +17,6 @@ import { LoadingService } from '../../services/loading.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  isDark = true;
   loadingSubscription: Subscription;
   isLoading = false;
 
@@ -27,6 +28,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
               public headerService: HeaderService,
               public authService: AuthService,
               public loadingService: LoadingService,
+              private sidenavService: SidenavService,
               public dialog: MatDialog,
               @Inject(DOCUMENT) private document: HTMLDocument
   ) {}
@@ -34,7 +36,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.loadingSubscription = this.loadingService.loading$.pipe().subscribe(
+    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
         this.isLoading = status;
       }
@@ -50,11 +52,17 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   toggleTheme(): void {
-    this.isDark = !this.isDark;
-    if (this.isDark) {
+    this.authService.theme === 'dark' ? this.authService.theme = 'light' : this.authService.theme = 'dark';
+    if (this.authService.theme === 'dark') {
       this.document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
     } else {
       this.document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
+    }
+  }
+
+  closeSidenav(): void {
+    if (this.sidenavService.isOpen() && this.mobileQuery.matches) {
+      this.sidenavService.close();
     }
   }
 

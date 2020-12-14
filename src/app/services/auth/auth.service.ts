@@ -3,7 +3,6 @@ import { environment } from '../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -28,6 +27,7 @@ export class AuthService {
 
   public data: any | undefined;
   public user: User;
+  public theme: 'dark' | 'light' = 'dark';
   public isAuthenticated = false;
   public redirectUrl: string;
 
@@ -47,6 +47,7 @@ export class AuthService {
     return this.httpClient.post<AuthResponse>(this.loginUrl, JSON.stringify(user), httpOptions)
       .pipe(
         map(response => {
+          // console.log('response GET login', response);
           this.data = response;
           this.user = response.user;
           this.token = response.token;

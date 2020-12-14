@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../../models/post';
+import { transformDate } from '../../app-common/transform-date';
 
 @Component({
   selector: 'app-post-link',
@@ -7,10 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostLinkComponent implements OnInit {
 
-  @Input('post') post;
+  @Input('post') post: Post;
   @Input('title') title;
 
-  constructor() {}
+  transformDate = transformDate;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

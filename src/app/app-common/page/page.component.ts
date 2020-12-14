@@ -18,8 +18,6 @@ export class PageComponent implements OnInit, AfterViewInit {
   @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
-  darkMode = true;
-
   searchbarValue: string;
   searchbarFormgroup: FormGroup;
   searchbarHideRequiredControl = new FormControl(false);

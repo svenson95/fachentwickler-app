@@ -17,4 +17,6 @@ export interface SubjectPost {
   url: string;
   type?: PostType | string;
   postId: string;
+  lessonDate?: string;
+  subject?: string;
 }

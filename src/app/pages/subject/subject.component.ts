@@ -6,6 +6,7 @@ import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { Subscription } from 'rxjs';
 import { PostType } from '../../models/post-type';
+import { transformDate } from '../../app-common/transform-date';
 
 @Component({
   selector: 'app-subject',
@@ -19,6 +20,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
   subjectTitle: string;
   ROUTER_EVENT: Subscription;
   PostType = PostType;
+  transformDate = transformDate;
 
   constructor(private router: Router,
               private elRef: ElementRef,

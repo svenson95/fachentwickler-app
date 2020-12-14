@@ -13,12 +13,24 @@
   .fia-topic-title {
     display: flex;
     color: white;
-    font-size: 1.3em;
-    margin-bottom: 5px;
+    font-size: 1.2em;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include to-xs {
+      background: rgba($fia-dark-background-color, 0.4);
+    }
 
     @include from-md {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 0;
     }
 
     p {
@@ -33,7 +45,7 @@
       }
 
       @include to-sm {
-        min-width: 300px;
+        min-width: 150px;
       }
     }
 
@@ -50,7 +62,7 @@
       }
 
       &:first-of-type {
-        min-width: 50px;
+        min-width: 32px;
       }
 
       &:last-of-type {
@@ -68,22 +80,21 @@
       padding: 10px 20px;
       cursor: pointer;
       text-decoration: none;
-      border-right: 5px solid $fia-third-color;
+      border-right: 4px solid $fia-third-color;
 
       &:focus {
         outline: none;
       }
 
-      @media screen and (min-width: 1000px) {
+      @media screen and (min-width: 600px) {
         &:hover, &:focus {
           border-color: $fia-secondary-color;
 
           .fia-link-title {
-            font-weight: 900;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.15px;
             text-decoration: underline;
             text-decoration-color: $fia-secondary-color;
-            transition: all 500ms ease-in-out;
+            transition: letter-spacing 500ms ease-in-out;
           }
         }
       }
@@ -122,7 +133,7 @@
           margin-bottom: 0;
 
           @include from-md {
-            min-width: 190px;
+            min-width: 75px;
           }
         }
       }

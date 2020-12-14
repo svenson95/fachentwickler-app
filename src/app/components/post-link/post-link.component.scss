@@ -9,8 +9,9 @@
 
   @include to-md {
     flex-direction: column;
-
-    margin-right: -20px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 26px;
   }
 
   .label {
@@ -42,6 +43,7 @@
     border-radius: $fia-border-radius;
     cursor: pointer;
     text-decoration: none;
+    border-right: 4px solid $fia-third-color;
 
     &:focus {
       outline: none;
@@ -57,13 +59,16 @@
     }
 
     @media screen and (min-width: 1000px) {
+      &:hover, &:focus {
+        border-color: $fia-secondary-color;
+      }
+
       &:hover {
         .fia-title {
-          font-weight: 900;
-          letter-spacing: 0.2px;
+          letter-spacing: 0.15px;
           text-decoration: underline;
           text-decoration-color: $fia-secondary-color;
-          transition: all 500ms ease-in-out;
+          transition: letter-spacing 500ms ease-in-out;
         }
       }
     }
@@ -81,8 +86,12 @@
       .fia-title {
         transition: letter-spacing 400ms ease-out;
 
+        @include from-md {
+          margin-bottom: 0;
+        }
+
         @include to-md {
-          margin-bottom: 3px;
+          margin-bottom: 5px;
         }
       }
     }
@@ -100,8 +109,10 @@
       }
 
       @include to-sm {
+        width: 100%;
+        flex-direction: row-reverse;
         align-self: start;
-        flex-direction: row;
+        justify-content: space-between;
       }
 
       .fia-description {
@@ -114,7 +125,7 @@
         }
 
         @include from-sm {
-          min-width: 180px;
+          min-width: 75px;
         }
       }
 
@@ -123,6 +134,10 @@
 
         @include to-xs {
           font-size: .5em;
+        }
+
+        @include to-sm {
+          margin-left: 0;
         }
       }
     }

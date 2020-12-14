@@ -15,7 +15,7 @@ export class CurriculumComponent implements OnInit {
 
   constructor(private headerService: HeaderService,
               private dataService: DataService) {
-    this.allWeeks = Array.from(Array(this.dataService.schoolWeek + 1).keys());
+    this.allWeeks = Array.from(Array(this.dataService.schoolWeekValue + 1).keys());
     this.allWeeks.shift();      // remove school-week 0
     this.headerService.setPageTitle('Lehrplan');
 

@@ -8,7 +8,7 @@
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
       >
-        <span>{{nav.title}}</span>
+        <span [innerHTML]="nav.title"></span>
       </a>
     </mat-nav-list>
   </div>
@@ -22,7 +22,7 @@
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
       >
-        <span>{{nav.title}}</span>
+        <span [innerHTML]="nav.title"></span>
       </a>
     </mat-nav-list>
   </div>
@@ -36,7 +36,7 @@
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
       >
-        <span>{{nav.title}}</span>
+        <span [innerHTML]="nav.title"></span>
       </a>
     </mat-nav-list>
   </div>

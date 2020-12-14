@@ -3,11 +3,19 @@
 
 /* LIGHT-THEME */
 .light-theme {
-  background-color: white !important;
+  background: white !important;
 
   .fia-header-progress-bar {
     .mat-progress-bar-buffer {
       background: #e79e7a !important;
+    }
+  }
+
+  .fia-text-button {
+    background-color: $fia-light-background-color !important;
+
+    &.second-color {
+      background-color: white !important;
     }
   }
 
@@ -29,15 +37,11 @@
   }
 
   .mat-dialog-container {
-    background: $fia-secondary-color-rgb;
+    background: $fia-light-background-color !important;
+    color: black;
 
     .mat-button {
-      background: white;
-      color: black;
-
-      &:hover {
-        color: $fia-primary-color;
-      }
+      background: $fia-light-card-color !important;
     }
   }
 
@@ -88,8 +92,14 @@
         color: black !important;
       }
 
-      .fia-topic-title hr {
-        background-color: $fia-grey-3 !important;
+      .fia-topic-title {
+        hr {
+          background-color: $fia-grey-3 !important;
+        }
+
+        @include to-xs {
+          background: rgba($fia-light-background-color, 0.6) !important;
+        }
       }
 
       .fia-card-description, .fia-post-last-update {
@@ -98,10 +108,6 @@
 
       .fia-post-link {
         background: $fia-light-background-color !important;
-
-        &:hover {
-          background: rgba($fia-grey-1, 0.2) !important;
-        }
       }
 
       .fia-link-item {
@@ -141,6 +147,12 @@
 
         .post-table {
           color: black;
+
+          .table-row {
+            th {
+              background: $fia-light-background-color !important;
+            }
+          }
         }
 
         .ddu-list-number, .list-number {
@@ -165,6 +177,10 @@
     }
     .fia-nav-item {
       color: black !important;
+
+      .mat-list-item-content {
+        background: $fia-light-background-color !important;
+      }
 
       &.active-route {
         color: $fia-secondary-color !important;
@@ -207,6 +223,12 @@
     .fia-title-buttons-wrapper {
       .fia-page-title {
         color: black;
+      }
+
+      .fia-action-btn {
+        &:hover, &:focus {
+          background: rgba($fia-light-card-color, 0.5) !important;
+        }
       }
     }
   }

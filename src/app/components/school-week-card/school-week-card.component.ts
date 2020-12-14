@@ -13,25 +13,17 @@ import { DataService } from '../../services/data/data.service';
 export class SchoolWeekCardComponent implements OnInit {
 
   @Input() week?: SchoolWeek;
+  @Input('is-dashboard-page') isDashboardPage?: boolean;
 
   getWeekday = getWeekday;
   transformDate = transformDate;
-  schoolWeek: SchoolWeek;
   currentWeek: number;
 
   constructor(private dataService: DataService) {
   }
 
   ngOnInit(): void {
-    if (this.week) {
-      this.currentWeek = Number(this.week.schoolWeek);
-    } else {
-      this.currentWeek = this.dataService.schoolWeek;
-    }
-
-    this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
-      this.schoolWeek = response;
-    });
+    this.currentWeek = Number(this.week.schoolWeek);
   }
 
   fullSubjectName = (subject: string) => {
@@ -39,18 +31,18 @@ export class SchoolWeekCardComponent implements OnInit {
   }
 
   getPreviousWeek(): void {
-    this.schoolWeek = undefined;
+    this.week = undefined;
     this.currentWeek--;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
-      this.schoolWeek = response;
+      this.week = response;
     });
   }
 
   getNextWeek(): void {
-    this.schoolWeek = undefined;
+    this.week = undefined;
     this.currentWeek++;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
-      this.schoolWeek = response;
+      this.week = response;
     });
   }
 

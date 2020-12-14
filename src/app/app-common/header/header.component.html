@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="fia-header">
-  <div class="fia-logo-wrapper fia-header-hover-label" routerLink="/dashboard">
+  <div class="fia-logo-wrapper fia-header-hover-label" routerLink="/dashboard" (click)="closeSidenav()">
     <div class="fia-icon-wrapper" [ngClass]="{'active-route': router.url === '/dashboard'}">
       <svg xmlns='http://www.w3.org/2000/svg' class='fia-app-icon' viewBox='0 0 512 512'>
         <title>Book</title>
@@ -20,7 +20,7 @@
       </mat-form-field>
     </div>
     <div class="fia-title-buttons-wrapper">
-      <h1 class="fia-page-title">{{headerService.pageTitle}}</h1>
+      <h1 class="fia-page-title" [innerHTML]="headerService.pageTitle"></h1>
       <div class="fia-button-container">
         <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="mobileQuery.matches">
           <mat-icon>menu</mat-icon>
@@ -30,7 +30,7 @@
 <!--          <mat-label class="fia-hover-label fade-in unselectable">Einstellungen</mat-label>-->
 <!--        </button>-->
         <div class="fia-theme-toggle-wrapper fia-header-hover-label">
-          <mat-slide-toggle class="fia-theme-toggle" [checked]="isDark" (change)="toggleTheme()">
+          <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="toggleTheme()">
           </mat-slide-toggle>
           <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
         </div>
@@ -71,4 +71,4 @@
     </div>
   </div>
 </mat-toolbar>
-<mat-progress-bar class="fia-header-progress-bar" value="100" [mode]="isLoading ? 'indeterminate' : ''"></mat-progress-bar>
+<mat-progress-bar class="fia-header-progress-bar" value="100" [mode]="isLoading ? 'indeterminate' : 'determinate'"></mat-progress-bar>
