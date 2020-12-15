@@ -5,13 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularMaterialModule } from './app-common/angular-material.module';
 import { PageComponentModule } from './app-common/page/page.module';
-import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { SnackbarModule } from './app-common/snackbar/snackbar.module';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,8 @@ import { SnackbarModule } from './app-common/snackbar/snackbar.module';
     AngularMaterialModule,
     ReactiveFormsModule,
     PageComponentModule,
-    SnackbarModule
+    SnackbarModule,
+    HighlightModule
   ],
   providers: [
     {
@@ -36,6 +38,12 @@ import { SnackbarModule } from './app-common/snackbar/snackbar.module';
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,
       multi: true
+    },
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
     }
   ],
   entryComponents: [AppComponent],

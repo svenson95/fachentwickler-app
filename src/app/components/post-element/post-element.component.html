@@ -59,4 +59,8 @@
       </tr>
     </tbody>
   </table>
+  <!-- CODE -->
+  <pre class="post-code" *ngSwitchCase="ElementType.CODE">
+    <code [highlight]="element.content" [ngClass]="element.language"></code>
+  </pre>
 </div>

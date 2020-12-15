@@ -28,7 +28,7 @@
     background: $fia-grey-3 !important;
   }
 
-  p {
+  p, code {
     color: black !important;
   }
 
@@ -154,6 +154,19 @@
           .table-row {
             th {
               background: $fia-light-background-color !important;
+            }
+          }
+        }
+
+        .post-code {
+          code {
+            background: rgba($fia-light-background-color, 0.5) !important;
+            color: black;
+          }
+
+          code.sql{
+            .hljs-keyword {
+              color: black;
             }
           }
         }

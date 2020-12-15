@@ -384,3 +384,46 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
   }
 }
+
+.post-code {
+  margin: 0;
+
+  code.sql{
+    .hljs-keyword {
+      color: white;
+    }
+  }
+
+  code {
+
+    .hljs-meta {
+      color: #ff922c;
+    }
+    .hljs-variable {
+      color: #a055c6;
+    }
+    .hljs-number {
+      color: #249eff;
+    }
+    .hljs-keyword {
+      font-weight: normal;
+      color: #ff922c;
+    }
+    .hljs-function {
+      .hljs-title {
+        font-weight: normal;
+        color: #ffbe01;
+      }
+    }
+    .hljs-string {
+      color: #58bf0e;
+    }
+    .hljs-literal {
+      font-weight: bold;
+      color: #b800b8;
+    }
+    .hljs-comment {
+      color: #b4b4b4
+    }
+  }
+}

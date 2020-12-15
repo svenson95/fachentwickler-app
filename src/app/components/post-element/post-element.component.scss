@@ -1,6 +1,9 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
+// ngx-highlightjs styling - Code Highlighting
+@import '~highlight.js/styles/github.css';
+
 .fia-post-item {
   color: white;
   overflow: auto;
@@ -130,4 +133,13 @@
       }
     }
   }
+
+  .post-code {
+    code {
+      padding: 20px;
+      color: white;
+      background: black;
+    }
+  }
+
 }
