@@ -2,34 +2,102 @@
 @import 'src/theme/mixins';
 
 .fia-card {
+  .fia-card-title {
+    z-index: 99;
+  }
   .fia-view-wrapper {
     margin-top: 40px;
     font-size: 1.2em;
 
-    .fia-user-name,
-    .fia-user-email,
-    .fia-user-role {
+    @include to-xs {
+      font-size: 1em;
+    }
+
+    .fia-start-change-btn {
+      width: 100px;
+      font-size: .6em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      padding: 5px 10px;
+      margin-left: 10px;
+
+      &:hover:not([disabled]) {
+        cursor: pointer;
+        background: $fia-secondary-color;
+      }
+
+      &.save {
+        background: $fia-primary-color;
+        color: white;
+      }
+    }
+
+    .fia-input {
+
+      @include from-sm {
+        width: 300px;
+      }
+
+      @include from-xs {
+        width: 250px;
+      }
+
+      @include to-xs {
+        width: 100%;
+      }
+
+      .mat-input-element {
+        color: white;
+      }
+    }
+
+    .password input {
+      width: 70px;
+    }
+
+    .password input ::placeholder {
+      color: red;
+    }
+
+    .fia-input ::ng-deep {
+      .mat-form-field-outline {
+        color: $fia-grey-1;
+        opacity: 1;
+      }
+
+      .mat-form-field-label {
+        color: $fia-grey-1;
+      }
+
+      .mat-form-field-underline {
+        background-image: linear-gradient(to right, rgba($fia-grey-1, 0.25) 0%, rgba($fia-grey-1, 0.25) 0%);
+      }
+    }
+
+    hr {
+      height: 1px;
+      border: none;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .fia-edit-wrapper {
       display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
 
-      &:not(:last-of-type) {
-        border-bottom: 1px solid $fia-grey-1;
-      }
+      .fia-edit-user-btn {
+        font-size: .8em;
+        width: fit-content;
 
-      .key, .value {
-        margin: 0;
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-
-      .key {
-        min-width: 120px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .value {
-        border-left: 1px solid $fia-grey-1;
-        padding-left: 20px;
+        &:not(:first-of-type) {
+          margin-top: 15px;
+        }
       }
     }
   }
@@ -38,9 +106,14 @@
 ::ng-deep {
   .light-theme {
     .fia-card .fia-view-wrapper {
-      .fia-user-name, .fia-user-email, .fia-user-role {
-        &:not(:last-of-type), .value {
-          border-color: $fia-grey-3 !important;
+      .fia-input ::ng-deep {
+        .mat-form-field-outline {
+          color: $fia-grey-3 !important;
+          opacity: 1;
+        }
+
+        .mat-form-field-label {
+          color: $fia-grey-2 !important;
         }
       }
     }

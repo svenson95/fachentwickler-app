@@ -20,6 +20,13 @@ export interface RegisterUser {
   role: UserRole;
 }
 
+export interface EditUser {
+  name: string;
+  newName?: string;
+  email: string;
+  password: string;
+}
+
 export enum UserRole {
   ADMIN = 'admin',
   USER = 'user'

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularMaterialModule } from '../../app-common/angular-material.module';
+
 import { MyProfileComponent } from './my-profile.component';
 import { MyProfilePageRoutingModule } from './my-profile-routing.module';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
 
 
@@ -10,8 +12,9 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
   declarations: [MyProfileComponent],
   imports: [
     CommonModule,
-    MyProfilePageRoutingModule,
-    AngularMaterialModule
+    ReactiveFormsModule,
+    AngularMaterialModule,
+    MyProfilePageRoutingModule
   ]
 })
 export class MyProfileModule { }

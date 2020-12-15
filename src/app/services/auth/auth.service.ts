@@ -6,7 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-import { User, AuthUser, RegisterUser } from '../../models/user';
+import { User, AuthUser, RegisterUser, EditUser } from '../../models/user';
 import { AuthResponse } from '../../models/auth-response';
 
 const AUTH_STORAGE_KEY = 'fia_token';
@@ -18,6 +18,7 @@ export class AuthService {
 
   private loginUrl = `${environment.baseUrl}/user/login`;
   private registerUrl = `${environment.baseUrl}/user/register`;
+  private editUserUrl = `${environment.baseUrl}/user/edit-user`;
   private logoutUrl = `${environment.baseUrl}/user/logout`;
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
@@ -75,6 +76,28 @@ export class AuthService {
           this.isAuthenticated = true;
           this.storeToken();
           return authResponseData;
+        })
+      );
+  }
+
+  editUser(updatedUser: EditUser): Observable<AuthResponse> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      withCredentials: true
+    };
+
+    return this.httpClient.patch<AuthResponse>(this.editUserUrl, JSON.stringify(updatedUser), httpOptions)
+      .pipe(
+        map(response => {
+          // console.log('response PATCH edit-user', response);
+          this.data = response;
+          this.user = response.user;
+          this.token = response.token;
+          this.isAuthenticated = true;
+          this.storeToken();
+          return response;
         })
       );
   }
