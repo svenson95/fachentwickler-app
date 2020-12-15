@@ -16,13 +16,17 @@
     text-decoration: none;
     border-right: 4px solid $fia-third-color;
 
+    &.isCompleted {
+      border-color: $fia-secondary-color;
+    }
+
     &:focus {
       outline: none;
     }
 
     @media screen and (min-width: 600px) {
       &:hover, &:focus {
-        border-color: $fia-secondary-color;
+        border-color: $fia-primary-color;
 
         .fia-link-title {
           letter-spacing: 0.25px;
