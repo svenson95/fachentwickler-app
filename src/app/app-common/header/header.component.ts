@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { MatDialog } from '@angular/material/dialog';
-import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
 import { delay } from 'rxjs/operators';
+import {LogoutDialogComponent} from '../../components/logout-dialog/logout-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -47,8 +47,11 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     this.loadingSubscription.unsubscribe();
   }
 
-  openLogoutDialog(): void {
-    this.dialog.open(LogoutDialogComponent, { restoreFocus: true });
+  async openLogoutDialog(): Promise<void> {
+    await this.dialog.open(LogoutDialogComponent, {
+      restoreFocus: true,
+      panelClass: 'logout-modal'
+    });
   }
 
   toggleTheme(): void {

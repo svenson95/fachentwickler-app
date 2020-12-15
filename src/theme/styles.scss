@@ -29,7 +29,14 @@ b, strong {
 }
 
 u {
-  text-decoration-color: $fia-secondary-color;
+  text-decoration: none;
+  border-radius: 2px;
+  background: rgba($fia-primary-color-rgb, 0.4);
+  padding: 2px 4px;
+  margin-left: -4px;
+  margin-right: -4px;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
 hr {
@@ -300,20 +307,6 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
   }
 
-}
-
-/* FIAPPY - DIALOG */
-.mat-dialog-container {
-  background: black;
-  color: white;
-
-  .mat-button {
-    background: $fia-dark-background-color;
-
-    &:hover {
-      color: $fia-secondary-color;
-    }
-  }
 }
 
 /* FIAPPY - SNACKBAR */

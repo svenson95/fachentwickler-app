@@ -13,7 +13,7 @@ export class LogoutDialogComponent implements OnInit {
 
   constructor(public authService: AuthService,
               private router: Router,
-              private snackBar: MatSnackBar
+              private snackBar: MatSnackBar,
   ) { }
 
   ngOnInit(): void {

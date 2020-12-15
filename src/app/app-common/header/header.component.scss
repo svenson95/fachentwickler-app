@@ -24,8 +24,8 @@
     border: 2px solid transparent;
 
     @include from-xs {
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 55px;
+      margin-right: 55px;
     }
 
     @include to-xs {
@@ -44,7 +44,7 @@
       .fia-hover-label {
         position: absolute;
         top: 78px;
-        left: 115px;
+        left: 120px;
         color: $fia-third-color;
         font-size: 0.5em;
 
@@ -111,7 +111,7 @@
     justify-content: space-between;
 
     @include from-xs {
-      padding-left: 37px;
+      padding-left: 40px;
     }
 
     @include to-md {

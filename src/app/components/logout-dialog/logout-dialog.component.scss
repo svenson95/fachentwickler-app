@@ -1,3 +1,15 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
+.mat-dialog-container {
+  background: black;
+  color: white;
+
+  .fia-no-btn, .fia-logout-btn {
+    background: $fia-dark-background-color;
+
+    &:hover {
+      color: $fia-secondary-color;
+    }
+  }
+}
