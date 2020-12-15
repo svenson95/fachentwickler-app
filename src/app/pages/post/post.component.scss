@@ -3,7 +3,11 @@
 
 .fia-card {
   .fia-card-title {
-    margin-bottom: 5px;
+    margin-bottom: 0;
+
+    @include from-xs {
+      margin-bottom: 2px;
+    }
   }
   .fia-card-description {
   }
@@ -12,7 +16,7 @@
 .fia-post-content {
 
   app-post-element:first-child ::ng-deep .fia-post-item {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
 }

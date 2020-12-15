@@ -14,16 +14,17 @@
     }
 
     .fia-start-change-btn {
-      width: 100px;
+      background: $fia-grey-3;
       font-size: .6em;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
+      width: 100px;
       border: none;
       outline: none;
       border-radius: 20px;
       padding: 5px 10px;
-      margin-left: 10px;
+      margin-left: 20px;
 
       &:hover:not([disabled]) {
         cursor: pointer;
@@ -44,10 +45,6 @@
 
       @include from-xs {
         width: 250px;
-      }
-
-      @include to-xs {
-        width: 100%;
       }
 
       .mat-input-element {

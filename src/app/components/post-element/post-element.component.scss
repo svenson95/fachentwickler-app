@@ -59,9 +59,9 @@
       content: counter(ordered-list-counter);
       color: $fia-secondary-color;
       font-size: 1.1em;
-      --size: 28px;
+      --size: 32px;
       left: calc(-1 * var(--size) - 10px);
-      line-height: var(--size);
+      line-height: calc(var(--size) - 1px);
       width: var(--size);
       height: var(--size);
       //top: 0;

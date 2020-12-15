@@ -52,7 +52,10 @@
   .fia-header {
     .active-route {
       .fia-app-icon {
-        color: $fia-primary-color !important;
+
+        @include from-xs {
+          color: $fia-primary-color !important;
+        }
       }
     }
   }
@@ -173,6 +176,10 @@
         color: black !important;
       }
     }
+  }
+
+  .fia-sidenav-content-wrapper {
+    background-color: white !important;
   }
 
   .fia-sidenav {

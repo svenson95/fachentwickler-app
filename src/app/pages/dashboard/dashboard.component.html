@@ -12,7 +12,7 @@
 
       <div class="fia-progress-lesson">
         <p class="label">
-          Lektion {{user?.progress.length || '...'}} von {{dashboard?.allLessons.length || '...'}}
+          Lektion {{user?.progress.length !== undefined ? user?.progress.length : '...'}} von {{dashboard?.allLessons.length || '...'}}
         </p>
         <mat-progress-bar class="progress-bar" [value]="dashboard?.lessonsPercentage"></mat-progress-bar>
       </div>

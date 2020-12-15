@@ -7,9 +7,14 @@
   .fia-header-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .fia-card-title {
       margin-bottom: 2px;
+
+      @include to-xs {
+        margin-bottom: 0;
+      }
     }
 
     .fia-button-wrapper {

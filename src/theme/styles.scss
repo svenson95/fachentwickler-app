@@ -39,8 +39,8 @@ hr {
 .ddu-list-number,
 .list-number {
   display: inline-flex;
-  $size: 30px;
-  line-height: $size;
+  $size: 32px;
+  line-height: $size - 1px;
   width: $size;
   height: $size;
   font-size: 1em;
@@ -51,6 +51,15 @@ hr {
   margin-right: 5px;
   flex-shrink: 0;
 }
+
+.post-title .ddu-list-number,
+.post-title .list-number {
+  line-height: 35px;
+  width: 36px;
+  height: 36px;
+}
+
+
 
 /* FIAPPY - PAGE */
 .fia-page {
@@ -210,7 +219,7 @@ a {
 
 /* FIAPPY - MENU - <mat-menu> */
 .mat-menu-panel {
-  background-color: $fia-secondary-color;
+  background-color: $fia-grey-4;
 }
 
 /* FIAPPY - UNDERLINE BUTTON ANIMATION */
@@ -320,7 +329,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   flex-shrink: 0;
   border: white;
   color: white;
-  //font-family: MavenPro-Bold, sans-serif;
+  font-family: MavenPro-Bold, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   border-radius: 12px;
@@ -329,14 +338,12 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     line-height: 14px;
     padding: 0 8px;
     font-size: .6em;
-    font-weight: 500;
   }
 
   @include from-md {
     line-height: 16px;
     padding: 0 8px 2px;
     font-size: .65em;
-    font-weight: 600;
   }
 }
 

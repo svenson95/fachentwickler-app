@@ -1,10 +1,11 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subject } from '../../models/subject';
-import { subjects } from '../../../data/menu-items';
+import { Subscription } from 'rxjs';
+
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
-import { Subscription } from 'rxjs';
+import { subjects } from '../../../data/menu-items';
+import { Subject } from '../../models/subject';
 import { PostType } from '../../models/post-type';
 import { transformDate } from '../../app-common/transform-date';
 
@@ -31,7 +32,14 @@ export class SubjectComponent implements OnInit, OnDestroy {
       if (nav instanceof NavigationEnd) {
         this.subjectTitle = subjects.find(sub => sub.url === nav.url)?.title;
         this.headerService.setPageTitle(this.subjectTitle);
-        this.loadSubject(nav);
+        this.dataService.getSubject(nav.url.substr(1)).subscribe(
+          (data) => {
+            this.subject = data;
+          },
+          (error) => {
+            console.log('Error while GET subject', error);
+          }
+        );
       }
     });
   }
@@ -41,17 +49,6 @@ export class SubjectComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.ROUTER_EVENT.unsubscribe();
-  }
-
-  loadSubject(nav): void {
-    this.dataService.getSubject(nav.url.substr(1)).subscribe(
-      (data) => {
-        this.subject = data;
-      },
-      (error) => {
-        console.log('Error while GET subject', error);
-      }
-    );
   }
 
 }

@@ -5,7 +5,7 @@
   justify-content: space-between;
   background: black;
   height: 126px;
-  max-width: 1420px;
+  max-width: 1460px;
 
   @include to-md {
     height: 95px;
@@ -30,7 +30,7 @@
 
     @include to-xs {
       margin-left: 10px;
-      padding: 8px 0;
+      padding: 0;
     }
 
     h1.fia-app-name {
@@ -247,11 +247,10 @@
         }
 
         .fia-hover-label {
-          transform: translateY(-3px);
+          transform: translateY(3px);
         }
 
         .fia-sidenav-hamburger-btn,
-        .fia-theme-toggle-wrapper,
         .fia-admin-panel-btn {
           margin-top: 5px;
 
@@ -261,6 +260,14 @@
 
           @include to-xs {
             margin-right: 5px;
+          }
+        }
+
+        .fia-theme-toggle-wrapper {
+          margin-top: 5px;
+
+          @include from-xs {
+            margin-right: 10px;
           }
         }
 
