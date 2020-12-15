@@ -8,7 +8,7 @@
 
   .fia-header-progress-bar {
     .mat-progress-bar-buffer {
-      background: #dcb4a0 !important;
+      background: $fia-light-background-color !important;
     }
   }
 
@@ -17,6 +17,14 @@
 
     &.second-color {
       background-color: white !important;
+    }
+
+    &:disabled {
+      background: rgba($fia-dark-card-color, 0.2) !important;
+
+      span {
+        color: white !important;
+      }
     }
   }
 
@@ -214,6 +222,7 @@
           @include from-md {
             .fia-nav-item-icon {
               color: black !important;
+              transition: color 200ms ease-in-out;
             }
           }
         }
@@ -226,6 +235,7 @@
           @include from-md {
             .fia-nav-item-icon {
               color: black !important;
+              transition: $fia-nav-item-icon-fade-duration;
             }
           }
         }

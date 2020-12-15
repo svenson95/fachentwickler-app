@@ -84,6 +84,7 @@
       width: $size;
       height: $size;
       color: $fia-third-color;
+      transition: $fia-nav-item-icon-fade-duration;
     }
 
     &:hover, &:focus {
@@ -92,6 +93,7 @@
       @include from-md {
         .fia-nav-item-icon {
           color: white;
+          transition: $fia-nav-item-icon-fade-duration;
         }
       }
     }

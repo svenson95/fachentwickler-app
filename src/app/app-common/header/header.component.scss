@@ -322,7 +322,7 @@
   z-index: 999;
 
   ::ng-deep .mat-progress-bar-buffer {
-    background: #e79e7a;
+    background: $fia-dark-background-color;
   }
 
   @include to-xs {
