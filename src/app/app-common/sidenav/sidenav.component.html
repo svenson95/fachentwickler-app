@@ -3,12 +3,13 @@
     <p class="section-title">Schulfächer</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
-         *ngFor="let nav of subjectsSection"
-         [routerLink]="'/' + nav.url"
+         *ngFor="let navItem of subjectsSection"
+         [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
-         [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
+         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <span [innerHTML]="nav.title"></span>
+        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
+        <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
   </div>
@@ -17,12 +18,13 @@
     <p class="section-title">Theorie</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
-         *ngFor="let nav of areasSection"
-         [routerLink]="'/' + nav.url"
+         *ngFor="let navItem of areasSection"
+         [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
-         [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
+         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <span [innerHTML]="nav.title"></span>
+        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
+        <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
   </div>
@@ -31,12 +33,13 @@
     <p class="section-title">Internes</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
-         *ngFor="let nav of internalSection"
-         [routerLink]="'/' + nav.url"
+         *ngFor="let navItem of internalSection"
+         [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
-         [ngClass]="{'active-route': router.url.startsWith(nav.url)}"
+         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <span [innerHTML]="nav.title"></span>
+        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
+        <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
   </div>

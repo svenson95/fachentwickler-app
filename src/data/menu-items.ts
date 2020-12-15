@@ -28,85 +28,85 @@ export const subjects: MenuItem[] = [
     title: 'Lernfeld<wbr/> 1',
     shortTitle: 'LF 1',
     url: '/lf-1',
-    icon: earthOutline
+    icon: 'earth-outline'
   },
   {
     title: 'Lernfeld<wbr/> 2',
     shortTitle: 'LF 2',
     url: '/lf-2',
-    icon: businessOutline
+    icon: 'business-outline'
   },
   {
     title: 'Lernfeld<wbr/> 3',
     shortTitle: 'LF 3',
     url: '/lf-3',
-    icon: pieChartOutline,
+    icon: 'pie-chart-outline',
   },
   {
     title: 'Lernfeld<wbr/> 4-1',
     shortTitle: 'LF 4-1',
     url: '/lf-4-1',
-    icon: flashOutline,
+    icon: 'flash-outline',
   },
   {
     title: 'Lernfeld<wbr/> 4-2',
     shortTitle: 'LF 4-2',
     url: '/lf-4-2',
-    icon: hardwareChipOutline,
+    icon: 'hardware-chip-outline',
   },
   {
     title: 'Lernfeld<wbr/> 5',
     shortTitle: 'LF 5',
     url: '/lf-5',
-    icon: codeSlashOutline,
+    icon: 'code-slash-outline',
   },
   {
     title: 'Lernfeld<wbr/> 6',
     shortTitle: 'LF 6',
     url: '/lf-6',
-    icon: codeSlashOutline,
+    icon: 'code-slash-outline',
   },
   {
     title: 'Lernfeld<wbr/> 7',
     shortTitle: 'LF 7',
     url: '/lf-7',
-    icon: gitNetworkOutline,
+    icon: 'git-network-outline',
   },
   {
     title: 'Lernfeld<wbr/> 8',
     shortTitle: 'LF 8',
     url: '/lf-8',
-    icon: swapHorizontalOutline,
+    icon: 'swap-horizontal-outline',
   },
   {
     title: 'Lernfeld<wbr/> 9',
     shortTitle: 'LF 9',
     url: '/lf-9',
-    icon: globeOutline,
+    icon: 'globe-outline',
   },
   {
     title: 'Wahl<wbr/>pflicht',
     shortTitle: 'WP',
     url: '/wp',
-    icon: serverOutline,
+    icon: 'server-outline',
   },
   {
     title: 'WiSo',
     shortTitle: 'WiSo',
     url: '/wiso',
-    icon: bodyOutline,
+    icon: 'body-outline',
   },
   {
     title: 'Englisch',
     shortTitle: 'Eng',
     url: '/englisch',
-    icon: languageOutline,
+    icon: 'language-outline',
   },
   {
     title: 'Deutsch',
     shortTitle: 'Deu',
     url: '/deutsch',
-    icon: pencilOutline,
+    icon: 'pencil-outline',
   },
 ];
 
@@ -115,31 +115,31 @@ export const areas: MenuItem[] = [
     title: 'Syntax',
     shortTitle: 'Syntax',
     url: '/syntax',
-    icon: codeSlashOutline,
+    icon: 'code-slash-outline',
   },
   {
     title: 'Angewandte<wbr/> Informatik',
     shortTitle: 'Ang. Inf.',
     url: '/angewandte-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   },
   {
     title: 'Technische<wbr/> Informatik',
     shortTitle: 'Tech. Inf.',
     url: '/technische-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   },
   {
     title: 'Praktische<wbr/> Informatik',
     shortTitle: 'Prak. Inf.',
     url: '/praktische-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   },
   {
     title: 'Theoretische<wbr/> Informatik',
     shortTitle: 'Theo. Inf.',
     url: '/theoretische-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   }
 ];
 
@@ -148,43 +148,43 @@ export const internal: MenuItem[] = [
     title: 'Lehrmaterial',
     shortTitle: 'Lehrmaterial',
     url: '/lehrmaterial',
-    icon: folderOutline,
+    icon: 'folder-outline',
   },
   {
     title: 'Mitteilungen',
     shortTitle: 'Mitteilungen',
     url: '/mitteilungen',
-    icon: mailOutline,
+    icon: 'mail-outline',
   },
   {
     title: 'Lehrplan',
     shortTitle: 'Lehrplan',
     url: '/lehrplan',
-    icon: fileTrayFullOutline,
+    icon: 'file-tray-full-outline',
   },
   {
     title: 'Vertretungs<wbr/>plan',
     shortTitle: 'Vertretungsplan',
     url: '/vertretungsplan',
-    icon: todayOutline,
+    icon: 'today-outline',
   },
   {
     title: 'Schuljahres<wbr/>plan',
     shortTitle: 'Schuljahresplan',
     url: '/schuljahresplan',
-    icon: calendarOutline,
+    icon: 'calendar-outline',
   },
   {
     title: 'Feedback',
     shortTitle: 'Feedback',
     url: '/feedback',
-    icon: megaphoneOutline,
+    icon: 'megaphone-outline',
   },
   {
     title: 'Klausuren',
     shortTitle: 'Klausuren',
     url: '/klausuren',
-    icon: schoolOutline,
+    icon: 'school-outline',
   },
 ];
 

@@ -189,14 +189,27 @@
         background: $fia-light-background-color !important;
       }
 
+      &:hover, &:focus {
+        background-color: $fia-light-background-color !important;
+      }
+
       &.active-route {
         color: $fia-secondary-color !important;
+
+        &:hover, &:focus {
+          .fia-nav-item-icon {
+            color: black !important;
+          }
+        }
       }
 
       &:not(.active-route) {
         &:hover, &:focus {
-          //color: $fia-secondary-color !important;
           background: transparent !important;
+
+          .fia-nav-item-icon {
+            color: black !important;
+          }
         }
       }
     }
