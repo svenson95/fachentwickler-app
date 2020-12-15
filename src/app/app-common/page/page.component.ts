@@ -1,9 +1,11 @@
-import { AfterViewInit, Component, Inject, Input, OnInit, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { SidenavService } from '../../services/sidenav.service';
-import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
+import { AfterViewInit, ChangeDetectorRef, Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatMenuTrigger } from '@angular/material/menu';
+import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
+
+import { SidenavService } from '../../services/sidenav.service';
 
 /** @title Responsive sidenav */
 @Component({
@@ -13,7 +15,6 @@ import { DOCUMENT } from '@angular/common';
 })
 export class PageComponent implements OnInit, AfterViewInit {
 
-  @Input('mobileQuery') mobileQuery;
   @ViewChild('sidenav') public sidenav: MatSidenav;
   @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
@@ -23,13 +24,36 @@ export class PageComponent implements OnInit, AfterViewInit {
   searchbarHideRequiredControl = new FormControl(false);
   searchbarFloatLabelControl = new FormControl('auto');
 
+  // Breakpoint observers
+  isMobile: boolean;
+  isLandscape: boolean;
+  tinyDisplay: boolean;
+
   constructor(private fb: FormBuilder,
+              private breakpointObserver: BreakpointObserver,
+              private changeDetectorRef: ChangeDetectorRef,
               private sidenavService: SidenavService,
               @Inject(DOCUMENT) private document: HTMLDocument
   ) {
     this.searchbarFormgroup = fb.group({
       hideRequired: this.searchbarHideRequiredControl,
       floatLabel: this.searchbarFloatLabelControl
+    });
+    breakpointObserver.observe([
+      Breakpoints.HandsetLandscape
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.isLandscape = this.breakpointObserver.isMatched('(orientation: landscape)');
+      }
+    });
+    breakpointObserver.observe([
+      Breakpoints.HandsetPortrait,
+      Breakpoints.Small
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.isMobile = this.breakpointObserver.isMatched('(max-width: 600px)');
+        this.tinyDisplay = this.breakpointObserver.isMatched('(max-width: 350px)');
+      }
     });
   }
 

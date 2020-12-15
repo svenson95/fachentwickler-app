@@ -139,7 +139,18 @@
       padding: 20px;
       color: white;
       background: black;
+
+      @include to-xs {
+        font-size: .8em;
+      }
     }
   }
 
+}
+
+.fia-post-item.code {
+  @include to-xs {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }

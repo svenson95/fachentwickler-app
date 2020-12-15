@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   loadingSubscription: Subscription;
   isLoading = false;
 
-  @Input('mobileQuery') mobileQuery;
+  @Input() isMobile;
   @Input('searchValue') searchValue;
   @Input('sidenav') sidenav;
 
@@ -64,7 +64,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   closeSidenav(): void {
-    if (this.sidenavService.isOpen() && this.mobileQuery.matches) {
+    if (this.sidenavService.isOpen() && this.isMobile) {
       this.sidenavService.close();
     }
   }

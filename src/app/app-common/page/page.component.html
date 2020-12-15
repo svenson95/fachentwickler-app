@@ -1,18 +1,18 @@
-<div class="fia-page-container" [class.is-mobile]="mobileQuery.matches">
-  <app-header [mobileQuery]="mobileQuery"
+<div class="fia-page-container" [class.is-mobile]="isMobile">
+  <app-header [isMobile]="isMobile"
               [searchValue]="searchbarValue"
               [sidenav]="sidenav"
   ></app-header>
 
   <mat-sidenav-container class="fia-sidenav-content-wrapper"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+                         [style.marginTop.px]="isMobile ? 56 : 0"
                          autosize
                          #sidenavContainer
   >
     <mat-sidenav class="fia-sidenav" #sidenav
-                 [mode]="mobileQuery.matches ? 'over' : 'side'"
-                 [opened]="!mobileQuery.matches"
-                 [fixedInViewport]="mobileQuery.matches"
+                 [mode]="isMobile ? 'over' : 'side'"
+                 [opened]="!isMobile && !this.isLandscape"
+                 [fixedInViewport]="isMobile"
                  fixedTopGap="56"
                  (openedChange)="onSideMenuToggled(sidenav.opened)"
     >

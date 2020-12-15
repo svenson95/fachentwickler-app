@@ -55,8 +55,15 @@ export class LoginComponent implements OnInit {
 
     this.authService.login({username, password} as AuthUser).subscribe(
       (value) => {
-        console.log('response login');
-        console.log(value);
+        // console.log('response login');
+        // console.log(value);
+        this.authService.theme = value.user.theme;
+        if (value.user.theme === 'light') {
+          document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
+        } else {
+          document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
+        }
+
         this.router.navigateByUrl('/dashboard');
         this.loading = false;
       }, (error) => {

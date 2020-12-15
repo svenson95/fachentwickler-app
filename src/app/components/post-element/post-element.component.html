@@ -1,4 +1,4 @@
-<div class="fia-post-item" [ngSwitch]="element.type">
+<div class="fia-post-item" [ngSwitch]="element.type" [ngClass]="element.type">
   <!-- TITLE -->
   <p class="post-title" *ngSwitchCase="ElementType.TITLE"
      [innerHTML]="element.content"></p>

@@ -12,7 +12,7 @@
     </h1>
   </div>
   <div class="fia-header-details-wrapper">
-    <div class="fia-header-searchbar" *ngIf="!mobileQuery.matches">
+    <div class="fia-header-searchbar" *ngIf="!isMobile">
       <mat-form-field class="fia-search-bar" appearance="fill">
         <mat-icon matSuffix>search</mat-icon>
         <input matInput type="text" [(ngModel)]="searchValue" placeholder="Suche">
@@ -21,7 +21,7 @@
     <div class="fia-title-buttons-wrapper">
       <h1 class="fia-page-title" [innerHTML]="headerService.pageTitle"></h1>
       <div class="fia-button-container">
-        <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="mobileQuery.matches">
+        <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile">
           <mat-icon>menu</mat-icon>
         </button>
 <!--        <button class="fia-admin-panel-btn fia-header-hover-label" routerLink="einstellungen" mat-icon-button mat-button *ngIf="!mobileQuery.matches">-->
@@ -41,7 +41,7 @@
           usage
         </a>
         <mat-menu class="fia-more-menu" #menu="matMenu">
-          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="mobileQuery.matches">
+          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="isMobile">
             <mat-icon>home</mat-icon>
             <span class="label">Usage</span>
           </a>
