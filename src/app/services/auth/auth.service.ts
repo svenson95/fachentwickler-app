@@ -138,6 +138,10 @@ export class AuthService {
             this.token = authResponseData.token;
             this.storeToken();
           }
+          if (this.theme !== authResponseData.user.theme) {
+            this.theme = authResponseData.user.theme;
+            document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
+          }
           return authResponseData;
         })
       );

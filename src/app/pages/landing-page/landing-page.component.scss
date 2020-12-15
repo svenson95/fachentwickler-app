@@ -51,14 +51,20 @@
     }
 
     .fia-labels {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-self: center;
+      margin-top: 10px;
       font-family: MavenPro-Bold, sans-serif;
       font-size: 1.4em;
       letter-spacing: 2px;
       text-align: right;
       text-transform: uppercase;
-      margin-top: 10px;
-      align-self: center;
-      width: 100%;
+
+      :not(:last-of-type) {
+        margin-bottom: 5px;
+      }
 
       @include to-sm {
         font-size: 1.1em;
@@ -69,6 +75,9 @@
       }
       .grey-2 {
         color: $fia-grey-2;
+      }
+      .grey-3 {
+        color: $fia-grey-1;
       }
     }
   }
@@ -342,8 +351,10 @@
         .grey-1 {
           color: $fia-grey-1 !important;
         }
-
         .grey-2 {
+          color: $fia-grey-2 !important;
+        }
+        .grey-3 {
           color: $fia-grey-3 !important;
         }
       }

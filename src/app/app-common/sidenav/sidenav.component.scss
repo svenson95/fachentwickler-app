@@ -89,8 +89,10 @@
     &:hover, &:focus {
       background-color: $fia-dark-background-color;
 
-      .fia-nav-item-icon {
-        color: white;
+      @include from-md {
+        .fia-nav-item-icon {
+          color: white;
+        }
       }
     }
 

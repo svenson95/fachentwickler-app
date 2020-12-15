@@ -1,4 +1,5 @@
 @import 'src/theme/variables';
+@import 'src/theme/mixins';
 
 
 /* LIGHT-THEME */
@@ -7,7 +8,7 @@
 
   .fia-header-progress-bar {
     .mat-progress-bar-buffer {
-      background: #e79e7a !important;
+      background: #dcb4a0 !important;
     }
   }
 
@@ -210,8 +211,10 @@
         color: $fia-secondary-color !important;
 
         &:hover, &:focus {
-          .fia-nav-item-icon {
-            color: black !important;
+          @include from-md {
+            .fia-nav-item-icon {
+              color: black !important;
+            }
           }
         }
       }
@@ -220,8 +223,10 @@
         &:hover, &:focus {
           background: transparent !important;
 
-          .fia-nav-item-icon {
-            color: black !important;
+          @include from-md {
+            .fia-nav-item-icon {
+              color: black !important;
+            }
           }
         }
       }
