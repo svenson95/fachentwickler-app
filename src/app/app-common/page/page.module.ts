@@ -8,7 +8,7 @@ import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ContentComponent } from '../content/content.component';
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 import { RouterModule } from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({

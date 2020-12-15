@@ -52,10 +52,6 @@
   .fia-header {
     .active-route {
       .fia-app-icon {
-
-        @include from-xs {
-          color: $fia-primary-color !important;
-        }
       }
     }
   }
