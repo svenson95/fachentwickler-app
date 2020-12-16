@@ -1,0 +1,103 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-exam-item {
+  display: flex;
+  flex-direction: column;
+
+  .fia-icon-details-title-wrapper {
+    display: flex;
+    align-items: center;
+
+    @include to-sm {
+      align-items: start;
+      flex-direction: column-reverse;
+    }
+
+    .fia-icon-details {
+      display: flex;
+      align-items: center;
+      background: $fia-dark-background-color;
+      padding: 10px;
+
+      .fia-exam-item-icon {
+        color: white;
+        margin-right: 12px;
+        $size: 48px;
+        font-size: $size;
+        width: $size;
+        height: $size;
+      }
+    }
+
+    .details-button-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-right: 5px;
+
+      .fia-details-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2px;
+
+        .date,
+        .weekday {
+          width: 100px;
+          letter-spacing: 1px;
+          margin-bottom: 2px;
+        }
+
+        .weekday {
+          text-align: right;
+        }
+      }
+
+      .fia-show-lessons-btn {
+        background: transparent;
+        color: $fia-third-color;
+        letter-spacing: 1px;
+        border: 1px solid $fia-third-color;
+        outline: none;
+        padding: 4px 8px;
+        cursor: pointer;
+
+        &.is-open {
+          color: $fia-grey-1;
+          border-color: $fia-grey-1;
+        }
+
+        &:hover {
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+
+    .fia-exam-title-wrapper {
+
+      .fia-exam-subject {
+        margin-bottom: 0;
+      }
+
+      .fia-exam-subject, .fia-exam-title {
+        margin-left: 20px;
+      }
+
+      .fia-exam-title {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        flex-grow: 1;
+        margin-left: 20px;
+
+        @include from-sm {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+
+  .fia-lessons-container {
+    padding-top: 10px;
+  }
+}

@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../models/post';
 import { transformDate } from '../../app-common/transform-date';
+
 import { AuthService } from '../../services/auth/auth.service';
+import { Post } from '../../models/post';
+import { SubjectPost } from '../../models/subject';
 
 @Component({
   selector: 'app-post-link',
@@ -10,7 +12,7 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class PostLinkComponent implements OnInit {
 
-  @Input('post') post: Post;
+  @Input('post') post: Post | SubjectPost;
   @Input('title') title;
 
   transformDate = transformDate;

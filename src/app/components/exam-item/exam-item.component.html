@@ -1,0 +1,25 @@
+<div class="fia-exam-item">
+  <div class="fia-icon-details-title-wrapper">
+    <div class="fia-icon-details">
+      <mat-icon class="fia-exam-item-icon">insert_invitation</mat-icon>
+      <div class="details-button-wrapper">
+        <div class="fia-details-wrapper">
+          <p class="date">{{transformDate(exam.date)}}</p>
+          <p class="weekday">{{getWeekday(exam.date)}}</p>
+        </div>
+        <button class="fia-show-lessons-btn" (click)="showLessons()" [class.is-open]="lessonsVisible">
+          {{lessonsVisible ? 'Ausblenden' : 'Lektionen anzeigen'}}
+        </button>
+      </div>
+    </div>
+    <div class="fia-exam-title-wrapper">
+      <p class="fia-exam-subject" [innerHTML]="fullSubjectName(exam.subject)"></p>
+      <p class="fia-exam-title">{{exam.title}}</p>
+    </div>
+  </div>
+  <div class="fia-lessons-container" *ngIf="lessonsVisible">
+    <div class="fia-lesson-wrapper" *ngFor="let lesson of examLessons">
+      <app-post-link [post]="lesson"></app-post-link>
+    </div>
+  </div>
+</div>

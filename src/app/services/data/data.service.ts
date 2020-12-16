@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Subject } from '../../models/subject';
+import { Subject, SubjectPost } from '../../models/subject';
 import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 import { Post } from '../../models/post';
@@ -9,17 +9,19 @@ import { IndexCardsData } from '../../models/index-cards';
 import { QuizData } from '../../models/quiz';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
+import { ExamDate } from '../../models/exam-date';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  public dashboard: DashboardData;
-  public schoolWeek: SchoolWeek;
-
   // Settings
   public schoolWeekValue = 17;
+
+  public dashboard: DashboardData;
+  public schoolWeek: SchoolWeek;
+  public openExams: ExamDate[] = [];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -33,10 +35,10 @@ export class DataService {
   }
 
   // Subject component - GET subject-post
-  getSubjectPost(postId: string): Observable<Post> {
-    return this.httpClient.get<Post>(`${environment.baseUrl}/subjects/post/${postId}`)
+  getSubjectPost(postId: string): Observable<SubjectPost> {
+    return this.httpClient.get<SubjectPost>(`${environment.baseUrl}/subjects/post/${postId}`)
       .pipe(map((response) => {
-        // console.log('response GET subject-post', response);
+        // console.log('response GET subjects/post', response);
         return response;
       }));
   }

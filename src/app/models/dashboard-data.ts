@@ -1,7 +1,7 @@
-import { Post } from './post';
+import { SubjectPost } from './subject';
 
 export interface DashboardData {
   allLessons: string[];
   lessonsPercentage: number;
-  nextLesson: Post;
+  nextLesson: SubjectPost;
 }
