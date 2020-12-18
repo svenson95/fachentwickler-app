@@ -4,15 +4,11 @@
 .fia-header {
   justify-content: space-between;
   background: black;
-  height: 126px;
-  max-width: 1460px;
-
-  @include to-md {
-    height: 95px;
-  }
+  height: 80px;
+  max-width: 1430px;
 
   @include to-xs {
-    height: 76px;
+    height: 75px;
     padding: 0 5px;
   }
 
@@ -22,10 +18,12 @@
     align-items: center;
     cursor: pointer;
     border: 2px solid transparent;
+    background: transparent;
+    font-size: 1em;
 
     @include from-xs {
-      margin-left: 55px;
-      margin-right: 55px;
+      margin-left: 10px;
+      margin-right: 50px;
     }
 
     @include to-xs {
@@ -34,6 +32,7 @@
     }
 
     h1.fia-app-name {
+      color: white;
       margin-bottom: 6px;
 
       @include from-xs {
@@ -43,15 +42,10 @@
 
       .fia-hover-label {
         position: absolute;
-        top: 78px;
-        left: 120px;
+        top: 48px;
+        left: 76px;
         color: $fia-third-color;
         font-size: 0.5em;
-
-        @include to-md {
-          bottom: -25px;
-          transform: translateY(-18px);
-        }
       }
     }
 
@@ -110,16 +104,18 @@
     width: 100%;
     justify-content: space-between;
 
-    @include from-xs {
+    @include from-md {
       padding-left: 40px;
-    }
-
-    @include to-md {
       flex-direction: row-reverse;
     }
 
+    @include from-xs {
+      padding-left: 6px;
+    }
+
     .fia-header-searchbar {
-      margin-right: 20px;
+      margin-left: 20px;
+      margin-right: 10px;
 
       @include to-md {
         display: none;
@@ -130,9 +126,10 @@
         background: $fia-dark-card-color;
         border-radius: $fia-border-radius;
         width: 220px;
+        box-shadow: black 0 0 8px, black 0 0 8px;
 
         @include to-md {
-          width: 150px;
+          display: none;
         }
 
         ::placeholder {
@@ -178,63 +175,93 @@
       }
     }
 
-    .fia-title-buttons-wrapper {
-      display: flex;
-      align-items: center;
+    .fia-page-title {
+      font-size: 1.15em;
+      font-family: MavenPro-Bold, sans-serif;
+      text-transform: uppercase;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 6px 30px;
+
+      @include from-md {
+        font-size: 7.5em;
+        color: $fia-secondary-color;
+        opacity: 0.2;
+        position: absolute;
+        left: 230px;
+        top: 10px;
+      }
+
+      @include to-md {
+        margin-left: 0;
+        padding: 6px 18px;
+        font-size: 3vw;
+        line-height: 20px;
+        flex-shrink: 1;
+      }
 
       @include to-xs {
-        width: 100%;
-        justify-content: space-between;
+        font-size: .9em;
+        margin-left: 10px;
+        padding: 0;
       }
 
-      .fia-page-title {
-        font-size: 1.2em;
-        font-family: MavenPro-Bold, sans-serif;
-        margin-right: 30px;
-        flex-shrink: 1;
-
-        @include from-xs {
-          transform: translateY(-2px);
-        }
-
-        @include to-xs {
-          font-size: .9em;
-          margin-left: 10px;
-        }
+      @include to-tiny {
+        font-size: .8em;
       }
+    }
+
+    .fia-searchbar-buttons-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      z-index: 2;
 
       .fia-button-container {
         display: flex;
         color: $fia-third-color;
-        transform: translateY(12px);
+        margin-top: 20px;
 
         .fia-header-hover-label {
           margin-right: 5px;
         }
 
         .fia-action-btn {
+          margin-left: 10px;
+
+          @include to-xs {
+            margin-left: 0;
+            margin-right: 10px;
+          }
+
           &:hover, &:focus {
-            background: rgba($fia-dark-card-color, 0.5);
+            background: transparent;
+          }
+
+          .fia-hover-label {
+            margin-top: 0;
           }
         }
 
         .fia-header-usage-btn {
           background-color: $fia-secondary-color;
-          color: black;
           height: fit-content;
+          padding: 5px 10px;
+          margin-left: 8px;
+          margin-top: 8px;
+          margin-right: 8px;
+
+          border: none;
+          outline: none;
+          border-radius: 12px;
+
+          color: black;
           font-size: .55em;
           font-family: MavenPro-Bold, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
           line-height: 12px;
-          border: none;
-          outline: none;
-          border-radius: 12px;
-          padding: 5px 10px;
-          margin-left: 8px;
-          margin-top: 8px;
-          margin-right: 10px;
 
           @include to-md {
             font-size: .45em;
@@ -244,10 +271,6 @@
           @include to-xs {
             display: none;
           }
-        }
-
-        .fia-hover-label {
-          transform: translateY(3px);
         }
 
         .fia-sidenav-hamburger-btn,
@@ -273,12 +296,6 @@
 
         .fia-admin-panel-btn {
           margin-top: 0;
-        }
-
-        .fia-theme-toggle-wrapper {
-          @include to-sm {
-            margin-right: 0;
-          }
         }
 
         .fia-sidenav-hamburger-btn {

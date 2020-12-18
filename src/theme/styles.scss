@@ -161,7 +161,8 @@ a {
     transition: opacity 250ms ease-in-out;
 
     @include to-xs {
-      transform: translateY(5px);
+      transform: translateY(3px);
+      line-height: 20px;
     }
   }
   &:hover {
@@ -186,6 +187,7 @@ a {
   &.fia-logo-wrapper {
     .fia-hover-label {
       left: 3%;
+      top: 48px;
       font-size: .55em;
       font-family: MavenPro, sans-serif;
     }
@@ -201,7 +203,7 @@ a {
     }
   }
 
-  &.fia-theme-toggle-wrapper .fia-hover-label {
+  .fia-hover-label {
     margin-top: 5px;
   }
 }

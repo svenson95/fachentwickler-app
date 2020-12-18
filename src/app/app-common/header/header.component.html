@@ -1,5 +1,7 @@
 <mat-toolbar color="primary" class="fia-header">
-  <div class="fia-logo-wrapper fia-header-hover-label" routerLink="/dashboard" (click)="closeSidenav()">
+  <button class="fia-logo-wrapper fia-header-hover-label" [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
+          (click)="closeSidenav()" [disabled]="router.url === '/dashboard' || router.url === '/login'"
+  >
     <div class="fia-icon-wrapper" [ngClass]="{'active-route': router.url === '/dashboard'}">
       <svg xmlns='http://www.w3.org/2000/svg' class='fia-app-icon' viewBox='0 0 512 512'>
         <path d='M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288'
@@ -10,18 +12,18 @@
       <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
       <mat-label class="fia-hover-label fade-in">{{authService.isAuthenticated ? 'Dashboard' : 'Login'}}</mat-label>
     </h1>
-  </div>
+  </button>
   <div class="fia-header-details-wrapper">
-    <div class="fia-header-searchbar" *ngIf="!isMobile">
-      <mat-form-field class="fia-search-bar" appearance="fill">
-        <mat-icon matSuffix>search</mat-icon>
-        <input matInput type="text" [(ngModel)]="searchValue" placeholder="Suche">
-      </mat-form-field>
-    </div>
-    <div class="fia-title-buttons-wrapper">
-      <h1 class="fia-page-title" [innerHTML]="headerService.pageTitle"></h1>
+    <h1 class="fia-page-title unselectable" [innerHTML]="headerService.pageTitle"></h1>
+    <div class="fia-searchbar-buttons-wrapper">
+      <div class="fia-header-searchbar" *ngIf="!isMobile.matches">
+        <mat-form-field class="fia-search-bar" appearance="fill">
+          <mat-icon matSuffix>search</mat-icon>
+          <input matInput type="text" [(ngModel)]="searchValue" placeholder="Suche">
+        </mat-form-field>
+      </div>
       <div class="fia-button-container">
-        <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile">
+        <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
           <mat-icon>menu</mat-icon>
         </button>
 <!--        <button class="fia-admin-panel-btn fia-header-hover-label" routerLink="einstellungen" mat-icon-button mat-button *ngIf="!mobileQuery.matches">-->
@@ -29,19 +31,19 @@
 <!--          <mat-label class="fia-hover-label fade-in unselectable">Einstellungen</mat-label>-->
 <!--        </button>-->
         <div class="fia-theme-toggle-wrapper fia-header-hover-label">
-          <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="toggleTheme()">
+          <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="authService.toggleTheme()">
           </mat-slide-toggle>
           <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
         </div>
+        <a class="fia-header-usage-btn unselectable" routerLink="/">
+          usage
+        </a>
         <button class="fia-action-btn fia-header-hover-label" mat-icon-button mat-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>
-        <a class="fia-header-usage-btn unselectable" routerLink="/">
-          usage
-        </a>
         <mat-menu class="fia-more-menu" #menu="matMenu">
-          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="isMobile">
+          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="isMobile.matches">
             <mat-icon>home</mat-icon>
             <span class="label">Usage</span>
           </a>

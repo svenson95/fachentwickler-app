@@ -250,11 +250,12 @@
     .fia-search-bar {
       color: black;
       background: $fia-light-background-color !important;
+      box-shadow: white 0 0 8px, white 0 0 8px !important;
     }
 
     .fia-logo-wrapper {
       .fia-app-name {
-        color: black;
+        color: black !important;
       }
 
       &:hover {
@@ -268,11 +269,11 @@
       }
     }
 
-    .fia-title-buttons-wrapper {
-      .fia-page-title {
-        color: black;
-      }
+    .fia-page-title {
+      color: black;
+    }
 
+    .fia-searchbar-buttons-wrapper {
       .fia-action-btn {
         &:hover, &:focus {
           background: rgba($fia-light-card-color, 0.5) !important;

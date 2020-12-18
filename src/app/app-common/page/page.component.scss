@@ -55,23 +55,7 @@
   background: $fia-dark-background-color;
 }
 
-.fia-sidenav ::ng-deep {
-  .mat-drawer-inner-container {
-    overflow-x: hidden;
-
-    div:last-of-type {
-      margin-bottom: 50px;
-
-      @include to-xs {
-        margin-bottom: 40px;
-      }
-    }
-  }
-}
-
 .mat-drawer-container {
-  background-color: black;
-
   @include to-xs {
     margin-top: 70px !important;
   }
