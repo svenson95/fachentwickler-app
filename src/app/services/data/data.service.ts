@@ -108,7 +108,11 @@ export class DataService {
       }));
   }
 
-  storeDashboard(dashboard): void {
-    this.dashboard = dashboard;
+  getExamDates(): Observable<ExamDate[]> {
+    return this.httpClient.get<ExamDate[]>(`${environment.baseUrl}/exam-dates`)
+      .pipe(map((response) => {
+        console.log('response GET exam-dates', response);
+        return response;
+      }));
   }
 }
