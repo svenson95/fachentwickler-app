@@ -23,8 +23,9 @@ export interface RegisterUser {
 export interface EditUser {
   name: string;
   newName?: string;
-  email: string;
-  password: string;
+  email?: string;
+  password?: string;
+  theme?: string;
 }
 
 export enum UserRole {

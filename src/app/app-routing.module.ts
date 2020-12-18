@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, Route } from '@angular/router';
+import { Routes, RouterModule, Route, PreloadAllModules } from '@angular/router';
+
 import { subjectsData } from '../data/data-subjects';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 
@@ -55,7 +56,31 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),
-    data: { animation: 'HomePage' }
+    data: { animation: 'StartPage' }
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('src/app/pages/about/about.module').then(m => m.AboutModule),
+    data: { animation: 'AboutPage' }
+  },
+  {
+    path: 'feedback',
+    loadChildren: () => import('src/app/pages/feedback/feedback.module').then(m => m.FeedbackModule)
+  },
+  {
+    path: 'impressum',
+    loadChildren: () => import('src/app/pages/legal/legal.module').then(m => m.LegalModule),
+    data: { animation: 'LegalPage' }
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('src/app/pages/login/login.module').then(m => m.LoginModule),
+    data: { animation: 'LoginPage' }
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('src/app/pages/register/register.module').then(m => m.RegisterModule),
+    data: { animation: 'RegisterPage' }
   },
   {
     path: 'dashboard',
@@ -74,26 +99,6 @@ const routes: Routes = [
     loadChildren: () => import('src/app/pages/settings/settings.module').then(m => m.SettingsModule),
     data: { animation: 'SettingsPage' },
     canActivate: [AuthGuardService]
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('src/app/pages/login/login.module').then(m => m.LoginModule),
-    data: { animation: 'LoginPage' }
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('src/app/pages/register/register.module').then(m => m.RegisterModule),
-    data: { animation: 'RegisterPage' }
-  },
-  {
-    path: 'about',
-    loadChildren: () => import('src/app/pages/about/about.module').then(m => m.AboutModule),
-    data: { animation: 'AboutPage' }
-  },
-  {
-    path: 'impressum',
-    loadChildren: () => import('src/app/pages/legal/legal.module').then(m => m.LegalModule),
-    data: { animation: 'LegalPage' }
   },
   {
     path: 'lehrmaterial',
@@ -116,11 +121,6 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: 'feedback',
-    loadChildren: () => import('src/app/pages/feedback/feedback.module').then(m => m.FeedbackModule),
-    canActivate: [AuthGuardService]
-  },
-  {
     path: 'klausuren',
     loadChildren: () => import('src/app/pages/exams/exams.module').then(m => m.ExamsModule),
     canActivate: [AuthGuardService]
@@ -134,7 +134,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      scrollPositionRestoration: 'enabled'
+      scrollPositionRestoration: 'enabled',
+      preloadingStrategy: PreloadAllModules
     })
   ],
   exports: [RouterModule]

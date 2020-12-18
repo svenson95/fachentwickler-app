@@ -58,11 +58,7 @@ export class LoginComponent implements OnInit {
         // console.log('response login');
         // console.log(value);
         this.authService.theme = value.user.theme;
-        if (value.user.theme === 'light') {
-          document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
-        } else {
-          document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
-        }
+        this.authService.toggleTheme();
 
         this.router.navigateByUrl('/dashboard');
         this.loading = false;

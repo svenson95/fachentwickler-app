@@ -54,17 +54,8 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
 
-  toggleTheme(): void {
-    this.authService.theme === 'dark' ? this.authService.theme = 'light' : this.authService.theme = 'dark';
-    if (this.authService.theme === 'dark') {
-      this.document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
-    } else {
-      this.document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
-    }
-  }
-
   closeSidenav(): void {
-    if (this.sidenavService.isOpen() && this.isMobile) {
+    if (this.sidenavService.isOpen() && this.isMobile.matches) {
       this.sidenavService.close();
     }
   }

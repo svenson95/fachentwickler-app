@@ -1,34 +1,44 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { AuthService } from './auth.service';
 import { Observable } from 'rxjs';
+
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate {
+
   constructor(private authService: AuthService,
               private router: Router
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-    | Observable<boolean
-    | UrlTree>
-    | Promise<boolean
-    | UrlTree>
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
     | boolean
-    | UrlTree {
-    return this.checkLogin(state.url);
+    | UrlTree
+  {
+    return this.userIsAuthenticated(state.url).then((authState) => {
+      return authState;
+    });
   }
 
-  checkLogin(url: string): boolean {
+  /* -- Auth validation on route load -- */
+  async userIsAuthenticated(url: string): Promise<boolean> {
+
+    // Store the attempted URL for redirecting    TODO: check redirectUrl in login & register function
+    this.authService.redirectUrl = url;
+
     if (this.authService.isAuthenticated) {
       return true;
+    } else if (!this.authService.isAuthenticated) {
+      if (this.router.url !== '/login') {
+        this.router.navigateByUrl('/login');
+      }
+      return false;
     }
 
-    // Store the attempted URL for redirecting
-    this.authService.redirectUrl = url;
-    this.router.navigateByUrl('/login');
-    return false;
   }
+
 }
