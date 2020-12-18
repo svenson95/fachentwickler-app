@@ -9,7 +9,7 @@ import {HeaderService} from '../../services/header.service';
 export class LandingPageComponent implements OnInit {
 
   constructor(private headerService: HeaderService) {
-    this.headerService.setPageTitle('Home');
+    this.headerService.setPageTitle('Start');
   }
 
   ngOnInit(): void {

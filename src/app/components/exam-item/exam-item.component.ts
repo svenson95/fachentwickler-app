@@ -47,14 +47,19 @@ export class ExamItemComponent implements OnInit {
 
   async getExamLessons(): Promise<SubjectPost[]> {
     const lessons = [];
-    await this.exam.lessons.forEach(lesson => {
+    await this.exam.lessons.forEach((lesson, index) => {
       this.dataService.getSubjectPost(lesson).subscribe(
         (post) => {
-          lessons.push(post);
+          lessons[index] = post;
         }, (error) => {
           console.log('error while GET subject-post', error);
         }
       );
+    });
+    lessons.sort((a, b) => {
+      if (a.date > b.date) { return 1; }
+      if (a.date < b.date) { return -1; }
+      return 0;
     });
     return lessons;
   }

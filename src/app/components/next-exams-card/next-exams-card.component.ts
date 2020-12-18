@@ -34,8 +34,13 @@ export class NextExamsCardComponent implements OnInit {
           if (today < examDate) {
             this.openExams = [...this.openExams, exam];
           }
-          this.dataService.openExams = this.openExams;
         });
+        this.openExams.sort((a, b) => {
+          if (a.date > b.date) { return 1; }
+          if (a.date < b.date) { return -1; }
+          return 0;
+        });
+        this.dataService.openExams = this.openExams;
       }, (error) => {
         console.log('error while GET exam-dates', error);
       }

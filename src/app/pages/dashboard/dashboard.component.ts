@@ -79,7 +79,6 @@ export class DashboardComponent implements OnInit {
     this.dataService.getSchoolWeek(this.dataService.schoolWeekValue).subscribe((response) => {
       this.schoolWeek = response;
       this.dataService.schoolWeek = response;
-      localStorage.setItem('dev_schoolweek', JSON.stringify(response));
     });
   }
 
