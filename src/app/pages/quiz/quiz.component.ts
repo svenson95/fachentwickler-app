@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { SubjectPost } from '../../models/subject';
 import { Quiz } from '../../models/quiz';
 import { DataService } from '../../services/data/data.service';
-import { transformDate } from '../../app-common/transform-date';
 
 @Component({
   selector: 'app-quiz',
@@ -16,7 +15,6 @@ export class QuizComponent implements OnInit {
 
   quizContent: Quiz;
   quizDetails: SubjectPost;
-  transformDate = transformDate;
 
   level = 0;
   wrongAnswers = 0;

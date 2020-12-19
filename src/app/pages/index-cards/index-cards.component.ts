@@ -5,7 +5,6 @@ import { DataService } from '../../services/data/data.service';
 import { Router } from '@angular/router';
 import { IndexCards } from '../../models/index-cards';
 import { SubjectPost } from '../../models/subject';
-import { transformDate } from 'src/app/app-common/transform-date';
 
 @Component({
   selector: 'app-index-cards',
@@ -16,7 +15,6 @@ export class IndexCardsComponent implements OnInit {
 
   indexCardsContent: IndexCards;
   indexCardsDetails: SubjectPost;
-  transformDate = transformDate;
 
   level = 0;
   isAnswerVisible = false;

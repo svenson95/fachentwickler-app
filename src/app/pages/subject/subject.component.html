@@ -13,7 +13,7 @@
           <a class="fia-link-item" *ngFor="let post of topic.links" [routerLink]="post.url" [ngClass]="{isCompleted: isAlreadyCompleted(post.postId)}">
             <p class="fia-link-title">{{post.title}}</p>
             <div class="fia-description-row">
-              <p class="fia-link-description">{{transformDate(post.lessonDate)}}</p>
+              <p class="fia-link-description">{{post.lessonDate | date:'dd.MM.yyyy'}}</p>
               <app-post-badge [post]="post"></app-post-badge>
             </div>
           </a>
@@ -29,7 +29,7 @@
         <a class="fia-link-item" *ngFor="let test of subject.tests" [routerLink]="test.url" [ngClass]="{isCompleted: isAlreadyCompleted(test.postId)}">
           <p class="fia-link-title">{{test.title}}</p>
           <div class="fia-description-row">
-            <p class="fia-link-description">{{transformDate(test.lessonDate)}}</p>
+            <p class="fia-link-description">{{test.lessonDate | date:'dd.MM.yyyy'}}</p>
           </div>
         </a>
       </div>

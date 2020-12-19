@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { transformDate } from '../../app-common/transform-date';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
@@ -14,8 +13,6 @@ export class PostLinkComponent implements OnInit {
 
   @Input('post') post: Post | SubjectPost;
   @Input('title') title;
-
-  transformDate = transformDate;
 
   constructor(private authService: AuthService) {
   }

@@ -4,7 +4,7 @@
       <mat-icon class="fia-exam-item-icon">insert_invitation</mat-icon>
       <div class="details-button-wrapper">
         <div class="fia-details-wrapper">
-          <p class="date">{{transformDate(exam.date)}}</p>
+          <p class="date">{{exam.date | date:'dd.MM.yyyy'}}</p>
           <p class="weekday">{{getWeekday(exam.date)}}</p>
         </div>
         <button class="fia-show-lessons-btn" (click)="showLessons()" [class.is-open]="lessonsVisible">

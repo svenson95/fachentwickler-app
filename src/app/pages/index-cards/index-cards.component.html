@@ -73,7 +73,7 @@
       </div>
     </mat-card-content>
     <p class="fia-post-last-update" *ngIf="indexCardsContent !== undefined">
-      Letzte Aktualisierung: {{transformDate(indexCardsContent.lastUpdate)}}
+      Letzte Aktualisierung: {{indexCardsContent.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
 </div>

@@ -5,7 +5,7 @@
       <p class="fia-title" [ngClass]="{exam: post.url.includes('test')}">{{post.title}}</p>
     </div>
     <div class="fia-description-wrapper">
-      <p class="fia-description">{{transformDate(post.lessonDate)}}</p>
+      <p class="fia-description">{{post.lessonDate | date:'dd.MM.yyyy'}}</p>
       <app-post-badge [post]="post"></app-post-badge>
     </div>
   </a>

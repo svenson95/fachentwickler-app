@@ -2,8 +2,8 @@
   <div class="fia-header-wrapper">
     <div class="fia-title-description-wrapper">
       <p class="fia-card-title">Schulwoche #{{currentWeek}}</p>
-      <p class="fia-card-description" *ngIf="week !== undefined && week?.posts.length !== 0">
-        {{transformDate(week.posts[0]?.lessonDate)}} - {{transformDate(week.posts[week.posts.length-1]?.lessonDate)}}
+      <p class="fia-card-description">
+        {{week?.posts[0].lessonDate | date:'dd.MM.yyyy' || '..'}} - {{week?.posts[week.posts.length-1].lessonDate | date:'dd.MM.yyyy' || '..'}}
       </p>
     </div>
     <div class="fia-button-wrapper" *ngIf="isDashboardPage">
