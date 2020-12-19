@@ -7,6 +7,7 @@ import { environment } from '../../../environments/environment';
 
 import { User, AuthUser, RegisterUser, EditUser } from '../../models/user';
 import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse } from '../../models/auth-response';
+import { DashboardData } from '../../models/dashboard-data';
 
 const AUTH_STORAGE_KEY = 'fiappy_auth';
 
@@ -23,7 +24,7 @@ export class AuthService {
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
   /* -- Auth Rest API links -- */
-  public data: any | undefined;
+  public data: DashboardData | undefined;
   public user: User;
   public token = 'jwt';
   public theme: 'dark' | 'light' = 'dark';
@@ -49,11 +50,16 @@ export class AuthService {
       .pipe(
         map(response => {
           console.log('response POST login', response);
-          this.data = response;
-          this.user = response.user;
-          this.token = response.token;
-          this.isAuthenticated = true;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.data));
+          this.isAuthenticated = response.isAuthenticated;
+
+          if (response.isAuthenticated) {
+            this.user = response.user;
+            this.token = response.token;
+            if (this.theme !== this.user.theme) {
+              this.toggleTheme();
+            }
+            this.storeData();
+          }
           return response;
         })
       );
@@ -69,13 +75,14 @@ export class AuthService {
 
     return this.httpClient.post<RegisterResponse>(this.registerUrl, JSON.stringify(user), httpOptions)
       .pipe(
-        map(authResponseData => {
-          this.data = authResponseData;
-          this.user = authResponseData.user;
-          this.token = authResponseData.token;
-          this.isAuthenticated = true;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.data));
-          return authResponseData;
+        map(response => {
+          this.isAuthenticated = response.success;
+          if (response.success) {
+            this.user = response.user;
+            this.token = response.token;
+            this.storeData();
+          }
+          return response;
         })
       );
   }
@@ -92,9 +99,10 @@ export class AuthService {
       .pipe(
         map(response => {
           console.log('response PATCH edit-user', response);
-          this.data = response;
-          this.user = response.user;
-          localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(this.data));
+          if (response.success) {
+            this.user = response.user;
+            this.storeData();
+          }
           return response;
         })
       );
@@ -120,17 +128,6 @@ export class AuthService {
 
   authenticated(): Observable<AuthenticatedResponse> {
 
-    const devData = localStorage.getItem('dev_data');
-    const devUser = localStorage.getItem('dev_user');
-    if (devUser && devData) {
-      this.data = JSON.parse(devData);
-      this.user = JSON.parse(devUser);
-      if (this.theme !== this.user.theme) {
-        this.toggleTheme();
-      }
-      this.isAuthenticated = true;
-    }
-
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -140,14 +137,16 @@ export class AuthService {
 
     return this.httpClient.get<AuthenticatedResponse>(this.authenticatedUrl, httpOptions)
       .pipe(
-        map(authResponseData => {
-          this.data = authResponseData;
-          this.user = authResponseData.user;
-          if (this.theme !== authResponseData.user.theme) {
-            this.toggleTheme();
+        map(response => {
+          this.isAuthenticated = response.isAuthenticated;
+          if (response.isAuthenticated) {
+            this.user = response.user;
+            if (this.theme !== this.user.theme) {
+              this.toggleTheme();
+            }
+            this.storeData();
           }
-          this.isAuthenticated = authResponseData.isAuthenticated;
-          return authResponseData;
+          return response;
         })
       );
   }
@@ -160,17 +159,17 @@ export class AuthService {
     }
 
     try {
-      this.data = JSON.parse(stored);
-      console.log('auth data restored', this.data);
-      this.user = this.data.user;
-      this.token = this.data.token;
+      const data = JSON.parse(stored);
+      console.log('stored auth data found', data);
+      this.user = data.user;
+      this.token = data.token;
       if (this.theme !== this.user.theme) {
         this.toggleTheme();
       }
       this.isAuthenticated = true;
-      return this.data;
+      return data;
     } catch (err) {
-      console.log('checking stored cookies token ...', err);
+      console.log('checking stored auth cookie ...', err);
       await this.authenticated().subscribe(
         (value) => {
           console.log('response authenticated', value);
@@ -192,5 +191,15 @@ export class AuthService {
     } else {
       document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
     }
+  }
+
+  storeData(): void {
+    localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify({
+      data: this.data,
+      user: this.user,
+      token: this.token,
+      theme: this.theme,
+      isAuthenticated: this.isAuthenticated
+    }));
   }
 }

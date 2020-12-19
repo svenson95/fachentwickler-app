@@ -57,9 +57,6 @@ export class LoginComponent implements OnInit {
       (value) => {
         // console.log('response login');
         // console.log(value);
-        this.authService.theme = value.user.theme;
-        this.authService.toggleTheme();
-
         this.router.navigateByUrl('/dashboard');
         this.loading = false;
       }, (error) => {
