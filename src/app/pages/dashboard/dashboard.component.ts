@@ -37,6 +37,11 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.setupComponent();
+  }
+
+  /* -- Component functions -- */
+  setupComponent(): void {
     if (!this.dataService.dashboard) {
       this.fetchAllLessons();
     } else {
@@ -50,6 +55,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  /* -- Get all lessons for calculating user progress -- */
   async fetchAllLessons(): Promise<void> {
     this.dataService.getAllLessons().subscribe(
       (lessons) => {
@@ -60,6 +66,7 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  /* -- Get next lesson for user progress module -- */
   fetchNextLesson(lessons): void {
     this.dataService.getSubjectPost(lessons[this.authService.user.progress.length]).subscribe(
       (nextLesson) => {
@@ -75,6 +82,7 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  /* -- Get current school week card with all lessons -- */
   fetchSchoolWeek(): void {
     this.dataService.getSchoolWeek(this.dataService.schoolWeekValue).subscribe((response) => {
       this.schoolWeek = response;

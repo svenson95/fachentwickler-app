@@ -5,10 +5,10 @@
   justify-content: space-between;
   background: black;
   height: 80px;
-  max-width: 1430px;
+  max-width: 1395px;
 
   @include to-xs {
-    height: 75px;
+    height: 60px;
     padding: 0 5px;
   }
 
@@ -23,7 +23,7 @@
 
     @include from-xs {
       margin-left: 10px;
-      margin-right: 50px;
+      margin-right: 40px;
     }
 
     @include to-xs {
@@ -42,7 +42,7 @@
 
       .fia-hover-label {
         position: absolute;
-        top: 48px;
+        top: 46px;
         left: 76px;
         color: $fia-third-color;
         font-size: 0.5em;
@@ -55,8 +55,8 @@
       justify-content: center;
 
       @include to-xs {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         border-radius: 20%;
         border: 1px solid $fia-third-color;
       }
@@ -66,7 +66,7 @@
         color: $fia-third-color;
 
         @include to-xs {
-          height: 24px;
+          height: 20px;
         }
       }
     }
@@ -184,12 +184,12 @@
       padding: 6px 30px;
 
       @include from-md {
-        font-size: 7.5em;
+        font-size: 2.5em;
         color: $fia-secondary-color;
-        opacity: 0.2;
+        opacity: 0.25;
         position: absolute;
-        left: 230px;
-        top: 10px;
+        left: 185px;
+        top: 15px;
       }
 
       @include to-md {
@@ -222,16 +222,31 @@
         color: $fia-third-color;
         margin-top: 20px;
 
+        @include to-md {
+          margin-top: 25px;
+        }
+
+        @include to-xs {
+          margin-top: 15px;
+        }
+
         .fia-header-hover-label {
           margin-right: 5px;
+
+          @include to-md {
+            .fia-hover-label {
+              margin-top: 0;
+            }
+          }
         }
 
         .fia-action-btn {
-          margin-left: 10px;
+          margin-left: 5px;
+          margin-right: 0;
 
           @include to-xs {
             margin-left: 0;
-            margin-right: 10px;
+            margin-right: 5px;
           }
 
           &:hover, &:focus {
@@ -240,10 +255,14 @@
 
           .fia-hover-label {
             margin-top: 0;
+
+            @include to-md {
+              margin-top: -4px;
+            }
           }
         }
 
-        .fia-header-usage-btn {
+        .fia-header-login-btn {
           background-color: $fia-secondary-color;
           height: fit-content;
           padding: 5px 10px;
@@ -344,7 +363,7 @@
 
   @include to-xs {
     position: fixed;
-    top: 75px;
+    top: 60px;
   }
 }
 

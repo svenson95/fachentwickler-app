@@ -66,12 +66,15 @@ hr {
   height: 36px;
 }
 
-
+.mat-app-background {
+  background-color: black;
+  color: white;
+}
 
 /* FIAPPY - PAGE */
 .fia-page {
   background: $fia-dark-background-color;
-  padding: 35px 20px 20px 40px;
+  padding: 35px 20px 20px 0;
 
   @include to-xs {
     padding-top: 30px;
@@ -98,16 +101,16 @@ a {
 
 /* FIAPPY - CARDS */
 .fia-card {
-  max-width: 1060px;
+  max-width: 1075px;
   background: $fia-dark-card-color;
   padding: 20px;
   box-shadow: $fia-dark-shadow;
   border-radius: $fia-border-radius;
   margin-bottom: 20px;
+  margin-right: 0;
   transition: none;
 
   @include to-xs {
-    margin-bottom: 5px;
     border-radius: 0;
   }
 
@@ -144,8 +147,8 @@ a {
     margin-top: 40px;
   }
 
-  p {
-    color: $fia-light-background-color;
+  p, li {
+    color: white;
   }
 }
 
@@ -254,11 +257,11 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   }
 
   &:disabled {
-    background: $fia-grey-1;
+    background: black;
     border: none;
 
     span {
-      color: $fia-dark-card-color;
+      color: #36393c;
     }
   }
 

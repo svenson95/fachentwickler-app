@@ -5,6 +5,11 @@
 /* LIGHT-THEME */
 .light-theme {
   background: white !important;
+  color: black !important;
+
+  .fia-header {
+    background-color: white !important;
+  }
 
   .fia-header-progress-bar {
     .mat-progress-bar-buffer {
@@ -37,7 +42,7 @@
     background: $fia-grey-3 !important;
   }
 
-  p, code {
+  li, code, p {
     color: black !important;
   }
 
@@ -70,7 +75,7 @@
   }
 
   .fia-page-container {
-    background: white;
+    background-color: white !important;
   }
 
   .fia-page {
@@ -245,7 +250,6 @@
 
 
   .fia-header {
-    background: white !important;
 
     .fia-search-bar {
       color: black;
