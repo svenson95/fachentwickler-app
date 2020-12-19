@@ -43,6 +43,15 @@ export class DataService {
       }));
   }
 
+  // Exam-Item component - GET subject-posts
+  getSubjectPosts(postIds: string): Observable<SubjectPost[]> {
+    return this.httpClient.get<SubjectPost[]>(`${environment.baseUrl}/subjects/posts/${postIds}`)
+      .pipe(map((response) => {
+        console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
+        return response;
+      }));
+  }
+
   // Post component - GET post
   getPost(postUrl: string): Observable<Post> {
     return this.httpClient.get<Post>(`${environment.baseUrl}/posts/${postUrl}`)

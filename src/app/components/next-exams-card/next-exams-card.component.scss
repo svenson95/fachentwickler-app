@@ -3,7 +3,7 @@
 
 .fia-next-exams {
   .fia-view-wrapper {
-    margin-top: 20px;
+    margin-top: 30px;
 
     .fia-no-exams {
       font-size: 1.1em;
@@ -11,9 +11,7 @@
     }
 
     .fia-exam-item-wrapper:not(:last-of-type) {
-      border-bottom: 1px solid $fia-grey-1;
       margin-bottom: 20px;
-      padding-bottom: 20px;
     }
   }
 }

@@ -79,6 +79,7 @@
     }
 
     .fia-title-wrapper {
+      margin-right: 5px;
 
       @include from-xs {
         align-self: center;
@@ -98,11 +99,6 @@
         @include to-md {
           margin-bottom: 5px;
         }
-      }
-
-      .fia-title.exam {
-        text-decoration: underline;
-        text-decoration-color: $fia-primary-color !important;
       }
     }
 
@@ -135,9 +131,15 @@
           margin-top: 4px;
         }
 
-        @include from-sm {
-          min-width: 70px;
+        @include to-md {
+          max-width: 80px;
         }
+
+        @include from-sm {
+        }
+      }
+
+      app-post-badge {
       }
 
       ::ng-deep .fia-badge {

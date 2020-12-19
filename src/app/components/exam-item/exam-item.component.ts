@@ -13,7 +13,7 @@ import { SubjectPost } from '../../models/subject';
 export class ExamItemComponent implements OnInit {
 
   @Input() exam: ExamDate;
-  examLessons: string[] | SubjectPost[] = [];
+  examLessons: SubjectPost[] = [];
   lessonsVisible: boolean;
 
   constructor(private dataService: DataService) { }
@@ -29,35 +29,32 @@ export class ExamItemComponent implements OnInit {
     if (this.lessonsVisible) {
       this.lessonsVisible = null;
     } else {
-      const thisExam = this.dataService.openExams?.find(e => e.title === this.exam.title);
-      if (typeof thisExam?.lessons[0] === 'string') {
+      if (this.examLessons.length === 0) {
         this.getExamLessons().then(lessons => {
           this.examLessons = lessons;
         });
-      } else {
-        this.examLessons = thisExam.lessons;
       }
       this.lessonsVisible = true;
     }
   }
 
   async getExamLessons(): Promise<SubjectPost[]> {
-    const lessons = [];
-    await this.exam.lessons.forEach((lesson, index) => {
-      this.dataService.getSubjectPost(lesson).subscribe(
-        (post) => {
-          lessons[index] = post;
-        }, (error) => {
-          console.log('error while GET subject-post', error);
-        }
-      );
-    });
-    lessons.sort((a, b) => {
-      if (a.date > b.date) { return 1; }
-      if (a.date < b.date) { return -1; }
-      return 0;
-    });
-    return lessons;
+    const postIdsArray = '_' + this.exam.lessons.join();
+    this.dataService.getSubjectPosts(postIdsArray).subscribe(
+      (posts) => {
+        this.examLessons = posts;
+
+        this.examLessons.sort((a, b) => {
+          if (a.lessonDate > b.lessonDate) { return 1; }
+          if (a.lessonDate < b.lessonDate) { return -1; }
+          return 0;
+        });
+        return this.examLessons as SubjectPost[];
+      }, (error) => {
+        console.log('error while GET subject-posts (exam lessons)', error);
+      }
+    );
+    return;
   }
 
 }

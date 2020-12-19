@@ -17,13 +17,14 @@
     .fia-icon-details {
       display: flex;
       align-items: center;
-      background: $fia-dark-background-color;
-      padding: 10px;
+      background: rgba($fia-third-color-rgb, 0.25);
+      padding: 10px 10px 10px 25px;
+      margin-left: -30px;
 
       .fia-exam-item-icon {
-        color: white;
-        margin-right: 12px;
-        $size: 48px;
+        color: $fia-third-color;
+        margin-right: 15px;
+        $size: 40px;
         font-size: $size;
         width: $size;
         height: $size;
@@ -42,13 +43,14 @@
 
         .date,
         .weekday {
-          width: 100px;
+          width: 105px;
           letter-spacing: 1px;
-          margin-bottom: 2px;
+          margin-bottom: 3px;
         }
 
         .weekday {
           text-align: right;
+          text-transform: uppercase;
         }
       }
 
@@ -67,8 +69,10 @@
         }
 
         &:hover {
-          color: white;
-          border-color: white;
+          @include from-md {
+            color: white;
+            border-color: white;
+          }
         }
       }
     }
@@ -77,20 +81,34 @@
 
       .fia-exam-subject {
         margin-bottom: 0;
+
+        @include to-xs {
+          font-size: .9em;
+        }
       }
 
       .fia-exam-subject, .fia-exam-title {
-        margin-left: 20px;
+
+        @include from-md {
+          margin-left: 20px;
+        }
+
+        @include to-md {
+          margin-left: 10px;
+        }
       }
 
       .fia-exam-title {
         font-size: 1.1em;
         letter-spacing: 1px;
         flex-grow: 1;
-        margin-left: 20px;
 
         @include from-sm {
           margin-bottom: 0;
+        }
+
+        @include to-xs {
+          font-size: 1em;
         }
       }
     }
@@ -98,6 +116,40 @@
   }
 
   .fia-lessons-container {
-    padding-top: 10px;
+    padding-top: 15px;
+    margin-left: 50px;
+    position: relative;
+
+    .fia-vertical-line {
+      width: 2px;
+      background: rgba($fia-third-color-rgb, 0.25) !important;
+      border: none;
+      position: absolute;
+      top: -7px;
+      left: -36px;
+      bottom: 10px;
+
+      @include to-sm {
+        bottom: 30px;
+      }
+
+      @include to-md {
+        bottom: 47px;
+      }
+    }
+
+    .fia-lesson-wrapper {
+      position: relative;
+
+      .fia-horizontal-line {
+        height: 2px;
+        width: 34px;
+        background: rgba($fia-third-color-rgb, 0.25) !important;
+        border: none;
+        position: absolute;
+        top: 10px;
+        left: -34px;
+      }
+    }
   }
 }

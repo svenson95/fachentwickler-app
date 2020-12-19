@@ -18,7 +18,9 @@
     </div>
   </div>
   <div class="fia-lessons-container" *ngIf="lessonsVisible">
+    <hr class="fia-vertical-line">
     <div class="fia-lesson-wrapper" *ngFor="let lesson of examLessons">
+      <hr class="fia-horizontal-line">
       <app-post-link [post]="lesson"></app-post-link>
     </div>
   </div>
