@@ -320,31 +320,6 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   color: black;
 }
 
-/* FIAPPY - BADGE */
-.fia-badge {
-  width: fit-content;
-  height: 14px;
-  flex-shrink: 0;
-  border: white;
-  color: white;
-  font-family: MavenPro-Bold, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  border-radius: 12px;
-
-  @include to-md {
-    line-height: 14px;
-    padding: 0 8px;
-    font-size: .6em;
-  }
-
-  @include from-md {
-    line-height: 16px;
-    padding: 0 8px 2px;
-    font-size: .65em;
-  }
-}
-
 /* FIAPPY - TOGGLES */
 .fia-theme-toggle {
   vertical-align: middle;

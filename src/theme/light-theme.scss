@@ -125,6 +125,10 @@
         .fia-description {
           color: $fia-grey-1 !important;
         }
+
+        .fia-badge.test {
+          color: $fia-light-background-color;
+        }
       }
 
       .fia-link-item {

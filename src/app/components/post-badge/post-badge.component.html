@@ -2,7 +2,8 @@
                 'article': post.type === PostType.ARTICLE,
                 'tasks': post.type === PostType.TASKS,
                 'index-cards': post.type === PostType.INDEX_CARDS,
-                'quiz': post.type === PostType.QUIZ
+                'quiz': post.type === PostType.QUIZ,
+                'test': post.type === undefined
               }">
   {{badgeTranslator(post.type)}}
 </div>
