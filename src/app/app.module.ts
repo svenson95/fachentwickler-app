@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,6 +30,10 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
     HighlightModule
   ],
   providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'de-DE'
+    },
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: {appearance: 'fill'}

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { getWeekday } from '../../app-common/getWeekday';
 
 import { subjects } from '../../../data/menu-items';
 import { DataService } from '../../services/data/data.service';
@@ -16,7 +15,6 @@ export class ExamItemComponent implements OnInit {
   @Input() exam: ExamDate;
   examLessons: string[] | SubjectPost[] = [];
   lessonsVisible: boolean;
-  getWeekday = getWeekday;
 
   constructor(private dataService: DataService) { }
 

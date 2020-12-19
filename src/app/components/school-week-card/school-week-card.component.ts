@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SchoolWeek } from '../../models/school-week';
-import { getWeekday } from '../../app-common/getWeekday';
+
 import { subjects } from '../../../data/menu-items';
 import { DataService } from '../../services/data/data.service';
+import { SchoolWeek } from '../../models/school-week';
 
 @Component({
   selector: 'app-school-week-card',
@@ -14,7 +14,6 @@ export class SchoolWeekCardComponent implements OnInit {
   @Input() week?: SchoolWeek;
   @Input('is-dashboard-page') isDashboardPage?: boolean;
 
-  getWeekday = getWeekday;
   currentWeek: number;
 
   constructor(private dataService: DataService) {
