@@ -34,7 +34,7 @@
     h1.fia-app-name {
       color: white;
       margin-bottom: 4px;
-      font-family: Raleway-ExtraLight, sans-serif;
+      font-family: Raleway-Light, sans-serif;
 
       @include from-xs {
         margin-left: 10px;
@@ -177,7 +177,6 @@
       display: flex;
       align-items: center;
       margin-right: 15px;
-      margin-bottom: 0;
       padding: 6px 20px;
 
       color: white;
@@ -201,14 +200,15 @@
       }
 
       .title {
-        font-size: 1.10em;
+        font-size: 1.1em;
         margin-bottom: 0;
         white-space: pre-line;
+        margin-bottom: 0;
         line-height: 18px;
-        font-family: Raleway-ExtraLight, sans-serif;
+        font-family: Raleway-Light, sans-serif;
 
         @include to-xs {
-          font-size: 1em;
+          font-size: .9em;
         }
 
         @include from-md {
@@ -329,6 +329,10 @@
           @include from-md {
             margin-right: 10px;
             margin-top: 23px;
+          }
+
+          @include to-tiny {
+            display: none;
           }
 
           .fia-hover-label {

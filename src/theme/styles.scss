@@ -11,8 +11,8 @@
   src: url('../assets/fonts/Raleway-Italic.ttf');
 }
 @font-face {
-  font-family: 'Raleway-ExtraLight';
-  src: url('../assets/fonts/Raleway-ExtraLight.ttf');
+  font-family: 'Raleway-Light';
+  src: url('../assets/fonts/Raleway-Light.ttf');
 }
 
 @import 'src/theme/mixins';
@@ -39,12 +39,9 @@ i {
 u {
   text-decoration: none;
   border-radius: 2px;
-  background: rgba($fia-primary-color-rgb, 0.4);
-  padding: 2px 4px;
-  margin-left: -4px;
-  margin-right: -4px;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  background: rgba($fia-secondary-color-rgb, 0.4);
+  padding: 2px 2px;
+  margin: -2px;
 }
 
 hr {
@@ -132,7 +129,7 @@ a {
 
   .fia-card-title {
     font-size: 1.7em;
-    font-family: Raleway-ExtraLight, sans-serif;
+    font-family: Raleway-Light, sans-serif;
     letter-spacing: 1px;
     line-height: 26px;
     text-decoration: underline;
@@ -380,9 +377,11 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 }
 
 /* FIAPPY - POST LINK (SUBJECT, DASHBOARD, ...) */
-::ng-deep app-post-link:not(:last-of-type) .fia-post-link-wrapper,
-::ng-deep .fia-lesson-wrapper:not(:last-of-type) .fia-post-link-wrapper {
-  margin-bottom: 10px;
+app-post-link:not(:last-of-type),
+.fia-lesson-wrapper:not(:last-of-type) {
+  .fia-post-link-wrapper {
+    margin-bottom: 10px;
+  }
 }
 
 /* FIAPPY - POST ELEMENT CODE STYLING */

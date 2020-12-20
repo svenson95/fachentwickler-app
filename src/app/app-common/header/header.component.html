@@ -14,11 +14,11 @@
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
-    <p class="fia-page-title">
+    <div class="fia-page-title">
       <span class="bracket">[</span>
-      <span class="title">{{headerService.pageTitle}}</span>
+      <p class="title">{{headerService.pageTitle}}</p>
       <span class="bracket">]</span>
-    </p>
+    </div>
     <div class="fia-searchbar-buttons-wrapper">
       <div class="fia-header-searchbar" *ngIf="!isMobile.matches">
         <mat-form-field class="fia-search-bar" appearance="fill">
