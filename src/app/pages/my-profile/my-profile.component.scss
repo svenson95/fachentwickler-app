@@ -13,12 +13,9 @@
       font-size: 1em;
     }
 
-    .fia-start-change-btn {
-      background: $fia-grey-3;
-      font-size: .6em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .fia-start-change-btn,
+    .fia-discard-change-btn,
+    .fia-save-change-btn {
       width: 100px;
       border: none;
       outline: none;
@@ -26,15 +23,32 @@
       padding: 5px 10px;
       margin-left: 20px;
 
+      font-size: .6em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
       &:hover:not([disabled]) {
         cursor: pointer;
+      }
+    }
+
+    .fia-start-change-btn {
+      background: $fia-grey-3;
+
+      &:hover:not([disabled]) {
         background: $fia-secondary-color;
       }
+    }
 
-      &.save {
-        background: $fia-primary-color;
-        color: white;
-      }
+    .fia-discard-change-btn {
+      background: $fia-third-color;
+    }
+
+    .fia-save-change-btn {
+      background: $fia-primary-color;
+
+      color: white;
+      font-family: Raleway-Bold, sans-serif;
     }
 
     .fia-input {
@@ -58,6 +72,12 @@
 
     .password input ::placeholder {
       color: red;
+    }
+
+    .theme .fia-input ::ng-deep {
+      .mat-form-field-infix {
+        display: flex;
+      }
     }
 
     .fia-input ::ng-deep {

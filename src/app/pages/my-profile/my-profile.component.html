@@ -6,34 +6,46 @@
         <div class="fia-user-detail name">
           <mat-form-field class="fia-input name" appearance="legacy">
             <mat-label>Name</mat-label>
-            <input matInput type="text" [formControl]="username" #nameInput="matInput" (change)="username.setValue(nameInput.value)" />
+            <input matInput type="text" [formControl]="username" #usernameInput="matInput" (keyup)="username.setValue(usernameInput.value)" />
           </mat-form-field>
-          <button class="fia-start-change-btn" (click)="toggleChangeName($event)"
-                  [ngClass]="{save: username.enabled}" [disabled]="email.enabled || password.enabled"
-          >
-            {{nameInput.disabled ? 'Bearbeiten' : 'Speichern'}}
+          <button class="fia-start-change-btn" (click)="toggleChangeName($event)" *ngIf="username.disabled" [disabled]="email.enabled || password.enabled">
+            Bearbeiten
+          </button>
+          <button class="fia-discard-change-btn" (click)="toggleChangeName($event)" *ngIf="username.enabled && username.value === user.name">
+            Abbrechen
+          </button>
+          <button class="fia-save-change-btn" (click)="saveChangeName($event)" *ngIf="username.enabled && username.value !== user.name" [disabled]="email.enabled || password.enabled">
+            Speichern
           </button>
         </div>
         <div class="fia-user-detail email">
           <mat-form-field class="fia-input email" appearance="legacy">
             <mat-label>E-Mail</mat-label>
-            <input matInput type="text" [formControl]="email" #emailInput="matInput" (change)="email.setValue(emailInput.value)" />
+            <input matInput type="text" [formControl]="email" #emailInput="matInput" (keyup)="email.setValue(emailInput.value)" />
           </mat-form-field>
-          <button class="fia-start-change-btn" (click)="toggleChangeEmail($event)"
-                  [ngClass]="{save: email.enabled}" [disabled]="username.enabled || password.enabled"
-          >
-            {{emailInput.disabled ? 'Bearbeiten' : 'Speichern'}}
+          <button class="fia-start-change-btn" (click)="toggleChangeEmail($event)" *ngIf="email.disabled" [disabled]="username.enabled || password.enabled">
+            Bearbeiten
+          </button>
+          <button class="fia-discard-change-btn" (click)="toggleChangeEmail($event)" *ngIf="email.enabled && email.value === user.email">
+            Abbrechen
+          </button>
+          <button class="fia-save-change-btn" (click)="saveChangeEmail($event)" *ngIf="email.enabled && email.value !== user.email" [disabled]="username.enabled || password.enabled">
+            Speichern
           </button>
         </div>
         <div class="fia-user-detail password">
           <mat-form-field class="fia-input password mat-form-field-should-float" appearance="legacy">
             <mat-label>Passwort</mat-label>
-            <input matInput type="password" [formControl]="password" #passwordInput="matInput" (change)="password.setValue(passwordInput.value)" />
+            <input matInput type="password" [formControl]="password" #passwordInput="matInput" (keyup)="password.setValue(passwordInput.value)" />
           </mat-form-field>
-          <button class="fia-start-change-btn" (click)="toggleChangePassword($event)"
-                  [ngClass]="{save: password.enabled}" [disabled]="username.enabled || email.enabled"
-          >
-            {{passwordInput.disabled ? 'Bearbeiten' : 'Speichern'}}
+          <button class="fia-start-change-btn" (click)="toggleChangePassword($event)" *ngIf="password.disabled" [disabled]="username.enabled || email.enabled">
+            Bearbeiten
+          </button>
+          <button class="fia-discard-change-btn" (click)="toggleChangePassword($event)" *ngIf="password.value.length === 0">
+            Abbrechen
+          </button>
+          <button class="fia-save-change-btn" (click)="saveChangePassword($event)" *ngIf="password.enabled && password.value.length > 0" [disabled]="username.enabled || email.enabled">
+            Speichern
           </button>
         </div>
         <div class="fia-user-detail role">
@@ -52,11 +64,13 @@
           <mat-form-field class="fia-input theme" appearance="legacy">
             <mat-label>Standard-Theme</mat-label>
             <input matInput type="text" [formControl]="theme"/>
+            <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="toggleChangeTheme($event)">
+            </mat-slide-toggle>
           </mat-form-field>
+          <button class="fia-save-change-btn" (click)="saveChangeTheme($event)" *ngIf="authService.theme !== authService.user.theme">
+            Speichern
+          </button>
         </div>
-        <button class="fia-text-button fia-submit-edit-user-btn" type="submit" *ngIf="formGroup.touched">
-          <span>Änderungen übernehmen</span>
-        </button>
       </form>
 
       <hr/>

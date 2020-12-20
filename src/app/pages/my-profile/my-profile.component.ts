@@ -1,12 +1,13 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { MatInput } from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+import { EditUser, User } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { User } from '../../models/user';
 import { DataService } from '../../services/data/data.service';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {MatInput} from '@angular/material/input';
-import {SnackbarComponent} from '../../app-common/snackbar/snackbar.component';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-my-profile',
@@ -19,6 +20,7 @@ export class MyProfileComponent implements OnInit {
   isEditable = false;
   progressPercentage: number;
 
+  /* -- Form values -- */
   formGroup: FormGroup;
   username: FormControl;
   email: FormControl;
@@ -27,20 +29,26 @@ export class MyProfileComponent implements OnInit {
   progress: FormControl;
   theme: FormControl;
 
-  @ViewChild('nameInput') nameInput: MatInput;
+  @ViewChild('usernameInput') usernameInput: MatInput;
   @ViewChild('emailInput') emailInput: MatInput;
   @ViewChild('passwordInput') passwordInput: MatInput;
 
   constructor(private headerService: HeaderService,
-              private authService: AuthService,
+              public authService: AuthService,
               private dataService: DataService,
               private matSnackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
-    this.headerService.setPageTitle('Mein Profil');
-    this.user = this.authService.user;
+    this.setupForms();
+  }
 
-    if (dataService.dashboard === undefined) {
+  ngOnInit(): void {
+    this.setupComponent();
+  }
+
+  /* -- Initial functions -- */
+  setupComponent(): void {
+    if (this.dataService.dashboard === undefined) {
       this.dataService.getAllLessons().subscribe(
         (lessons) => {
           this.progressPercentage = Math.floor((this.user.progress.length / lessons.length) * 100);
@@ -49,7 +57,15 @@ export class MyProfileComponent implements OnInit {
           console.log('error while GET all-lessons', error);
         }
       );
+    } else {
+      this.progressPercentage = Math.floor((this.user.progress.length / this.dataService.dashboard.allLessons.length) * 100);
+      this.progress.setValue(this.progressPercentage + ' %');
     }
+  }
+
+  setupForms(): void {
+    this.headerService.setPageTitle('Mein Profil');
+    this.user = this.authService.user;
 
     this.username = new FormControl({ value: this.user.name, disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
@@ -59,7 +75,7 @@ export class MyProfileComponent implements OnInit {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.password = new FormControl({ value: this.user.email, disabled: true }, {
+    this.password = new FormControl({ value: this.user.password.substring(0, 8), disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
@@ -67,7 +83,7 @@ export class MyProfileComponent implements OnInit {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.progress = new FormControl({ value: '0', disabled: true }, {
+    this.progress = new FormControl({ value: 0, disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
@@ -75,7 +91,7 @@ export class MyProfileComponent implements OnInit {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.formGroup = formBuilder.group({
+    this.formGroup = this.formBuilder.group({
       username: this.username,
       email: this.email,
       password: this.password,
@@ -85,108 +101,7 @@ export class MyProfileComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  toggleChangeName(event): void {
-    event.preventDefault();
-
-    if (this.formGroup.controls['username'].disabled) {
-      this.formGroup.controls['username'].enable();
-      this.nameInput.focus();
-    } else {
-      const updatedUser = {
-        "name": this.authService.user.name,
-        "newName": this.formGroup.get('username').value.toLowerCase(),
-        "email": this.authService.user.email,
-        "password": this.authService.user.password
-      };
-
-      this.authService.editUser(updatedUser).subscribe(
-        (response) => {
-          this.authService.user = response.user;
-          this.formGroup.controls['username'].disable();
-
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Benutzername erfolgreich geändert'
-          });
-        }, (error) => {
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Fehler: ' + error
-          });
-        }
-      );
-    }
-  }
-
-  toggleChangeEmail(event): void {
-    event.preventDefault();
-
-    if (this.formGroup.controls['email'].disabled) {
-      this.formGroup.controls['email'].enable();
-      this.emailInput.focus();
-    } else {
-      const updatedUser = {
-        "name": this.authService.user.name,
-        "email": this.formGroup.get('email').value.toLowerCase(),
-        "password": this.authService.user.password
-      };
-
-      this.authService.editUser(updatedUser).subscribe(
-        (response) => {
-          this.authService.user = response.user;
-          this.formGroup.controls['email'].disable();
-
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'E-Mail erfolgreich geändert'
-          });
-        }, (error) => {
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Fehler: ' + error
-          });
-        }
-      );
-    }
-  }
-
-  toggleChangePassword(event): void {
-    event.preventDefault();
-
-    if (this.formGroup.controls['password'].disabled) {
-      this.formGroup.controls['password'].setValue('');
-      this.formGroup.controls['password'].enable();
-      this.passwordInput.focus();
-    } else {
-      const updatedUser = {
-        "name": this.authService.user.name,
-        "email": this.authService.user.email,
-        "password": this.formGroup.get('password').value
-      };
-
-      this.authService.editUser(updatedUser).subscribe(
-        (response) => {
-          this.authService.user = response.user;
-          this.formGroup.controls['password'].disable();
-          this.formGroup.controls['password'].setValue(this.user.password.substring(0, 10));
-
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Passwort erfolgreich geändert'
-          });
-        }, (error) => {
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Fehler: ' + error.toString()
-          });
-        }
-      );
-    }
-  }
-
+  /* -- Component functions -- */
   resetProgress(): void {
 
   }
@@ -196,11 +111,158 @@ export class MyProfileComponent implements OnInit {
   }
 
   markAsDirty(event): void {
-    if (this.formGroup.controls['username'].value !== this.authService.user.name) {
+    if (this.username.value !== this.authService.user.name) {
       this.formGroup.markAsTouched();
     } else {
       this.formGroup.markAsUntouched();
     }
+  }
+
+  /* -- Change username -- */
+  toggleChangeName(event): void {
+    event.preventDefault();
+
+    if (this.username.disabled) {
+      this.username.enable();
+      this.usernameInput.focus();
+    } else {
+      this.username.setValue(this.user.name);
+      this.username.disable();
+    }
+  }
+
+  saveChangeName(event): void {
+    const updatedUser = {
+      name: this.authService.user.name,
+      newName: this.username.value.toLowerCase(),
+      email: this.authService.user.email,
+      password: this.authService.user.password
+    };
+
+    this.authService.editUser(updatedUser).subscribe(
+      (response) => {
+        this.authService.user = response.user;
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Benutzername geändert'
+        });
+      }, (error) => {
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+        });
+      }
+    ).add(() => {
+      this.username.disable();
+    });
+  }
+
+  /* -- Change email -- */
+  toggleChangeEmail(event): void {
+    event.preventDefault();
+
+    if (this.email.disabled) {
+      this.email.enable();
+      this.emailInput.focus();
+    } else {
+      this.email.setValue(this.user.email);
+      this.email.disable();
+    }
+  }
+
+  saveChangeEmail(event): void {
+    const updatedUser = {
+      name: this.authService.user.name,
+      email: this.email.value.toLowerCase(),
+      password: this.authService.user.password
+    };
+
+    this.authService.editUser(updatedUser).subscribe(
+      (response) => {
+        this.authService.user = response.user;
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'E-Mail geändert'
+        });
+      }, (error) => {
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+        });
+      }
+    ).add(() => {
+      this.email.disable();
+    });
+  }
+
+  /* -- Change password -- */
+  toggleChangePassword(event): void {
+    event.preventDefault();
+
+    if (this.password.disabled) {
+      this.password.setValue('');
+      this.password.enable();
+      this.passwordInput.focus();
+    } else {
+      this.password.setValue(this.user.password.substring(0, 8));
+      this.password.disable();
+    }
+  }
+
+  saveChangePassword(event): void {
+    const updatedUser = {
+      name: this.authService.user.name,
+      newName: this.username.value.toLowerCase(),
+      email: this.authService.user.email.toLowerCase(),
+      password: this.password.value
+    };
+
+    this.authService.editUser(updatedUser).subscribe(
+      (response) => {
+        this.authService.user = response.user;
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Passwort geändert'
+        });
+      }, (error) => {
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+        });
+      }
+    ).add(() => {
+      this.password.disable();
+      this.password.setValue(this.user.password.substring(0, 8));
+    });
+  }
+
+  /* -- Change theme -- */
+  toggleChangeTheme(event): void {
+    this.authService.toggleTheme();
+    this.theme.setValue(this.authService.theme);
+  }
+
+  saveChangeTheme(event): void {
+    const updatedUser = {
+      name: this.authService.user.name,
+      theme: this.authService.theme
+    } as EditUser;
+
+    this.authService.editUser(updatedUser).subscribe(
+      (response) => {
+        this.authService.user = response.user;
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Standard-Theme geändert'
+        });
+      }, (error) => {
+        console.log('Error while PATCH user/edit-user', error);
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+        });
+      }
+    );
   }
 
 }
