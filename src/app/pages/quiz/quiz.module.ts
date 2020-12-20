@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
 import { QuizComponent } from './quiz.component';
 import { QuizRoutingModule } from './quiz-routing.module';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
   imports: [
     CommonModule,
     QuizRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    LessonFooterModule
   ]
 })
 export class QuizModule { }

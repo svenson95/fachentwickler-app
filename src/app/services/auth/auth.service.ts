@@ -5,8 +5,8 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
-import { User, AuthUser, RegisterUser, EditUser } from '../../models/user';
-import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse } from '../../models/auth-response';
+import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
+import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse, AddProgressResponse } from '../../models/fetch-response';
 import { DashboardData } from '../../models/dashboard-data';
 
 const AUTH_STORAGE_KEY = 'fiappy_auth';
@@ -20,6 +20,7 @@ export class AuthService {
   private loginUrl = `${environment.baseUrl}/user/login`;
   private registerUrl = `${environment.baseUrl}/user/register`;
   private editUserUrl = `${environment.baseUrl}/user/edit-user`;
+  private addProgressUrl = `${environment.baseUrl}/user/add-progress`;
   private logoutUrl = `${environment.baseUrl}/user/logout`;
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
@@ -96,16 +97,33 @@ export class AuthService {
     };
 
     return this.httpClient.patch<EditUserResponse>(this.editUserUrl, JSON.stringify(updatedUser), httpOptions)
-      .pipe(
-        map(response => {
-          console.log('response PATCH edit-user', response);
-          if (response.success) {
-            this.user = response.user;
-            this.storeData();
-          }
-          return response;
-        })
-      );
+      .pipe(map(response => {
+        console.log('response PATCH edit-user', response);
+        if (response.success) {
+          this.user = response.user;
+          this.storeData();
+        }
+        return response;
+      }));
+  }
+
+  addProgress(progress: UserProgress): Observable<AddProgressResponse> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      withCredentials: true
+    };
+
+    return this.httpClient.post<AddProgressResponse>(this.addProgressUrl, JSON.stringify(progress), httpOptions)
+      .pipe(map(response => {
+        console.log('response POST user/add-progress');
+        if (response.success) {
+          this.user = response.user;
+          this.storeData();
+        }
+        return response;
+      }));
   }
 
   invalidate(): Observable<LogoutResponse> {
@@ -201,5 +219,9 @@ export class AuthService {
       theme: this.theme,
       isAuthenticated: this.isAuthenticated
     }));
+  }
+
+  alreadyRead(lesson: string): boolean {
+    return this.user.progress.includes(lesson);
   }
 }

@@ -11,12 +11,12 @@
   }
   .fia-card-description {
   }
-}
 
-.fia-post-content {
-
-  app-post-element:first-child ::ng-deep .fia-post-item {
-    margin-top: 20px;
+  .fia-post-content {
+    app-post-element:first-child ::ng-deep {
+      .fia-post-item {
+        margin-top: 20px;
+      }
+    }
   }
-
 }

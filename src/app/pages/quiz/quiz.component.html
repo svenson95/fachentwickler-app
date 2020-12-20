@@ -56,4 +56,6 @@
       Letzte Aktualisierung: {{quizContent.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
+
+  <app-lesson-footer [post]="quizDetails" *ngIf="quizDetails !== undefined"></app-lesson-footer>
 </div>

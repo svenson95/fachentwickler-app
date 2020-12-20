@@ -5,6 +5,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 import { PostComponent } from './post.component';
 import { PostPageRoutingModule } from './post-routing.module';
 import { PostElementModule } from '../../components/post-element/post-element.module';
+import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
 
 
 
@@ -13,11 +14,12 @@ import { PostElementModule } from '../../components/post-element/post-element.mo
     exports: [
         PostComponent
     ],
-    imports: [
-        CommonModule,
-        PostPageRoutingModule,
-        AngularMaterialModule,
-        PostElementModule
-    ]
+  imports: [
+    CommonModule,
+    PostPageRoutingModule,
+    AngularMaterialModule,
+    PostElementModule,
+    LessonFooterModule
+  ]
 })
 export class PostModule { }

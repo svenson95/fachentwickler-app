@@ -76,4 +76,6 @@
       Letzte Aktualisierung: {{indexCardsContent.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
+
+  <app-lesson-footer [post]="indexCardsDetails" *ngIf="indexCardsDetails !== undefined"></app-lesson-footer>
 </div>

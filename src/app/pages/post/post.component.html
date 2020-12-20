@@ -14,4 +14,6 @@
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
+
+  <app-lesson-footer [post]="post" *ngIf="post !== undefined"></app-lesson-footer>
 </div>

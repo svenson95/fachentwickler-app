@@ -1,0 +1,19 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-card {
+  .fia-button-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .fia-text-button:not(:first-of-type) {
+      margin-right: 20px;
+    }
+
+    .fia-text-button {
+      @include to-xs {
+        font-size: .9em;
+      }
+    }
+  }
+}

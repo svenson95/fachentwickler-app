@@ -17,7 +17,7 @@
     margin-top: 30px;
 
     @include to-sm {
-      flex-direction: column;
+      //flex-direction: column;
     }
   }
 }
@@ -25,8 +25,13 @@
 
 .fia-quiz {
 
-  @include from-md {
+  @include from-sm {
     width: 600px;
+    padding: 20px 0;
+  }
+
+  @include to-sm {
+    width: 500px;
   }
 
   p { margin: 0; }
@@ -47,7 +52,7 @@
 
       .quiz-level, .quiz-wrong-answers {
         .key {
-          font-family: MavenPro-Bold, sans-serif;
+          font-family: Raleway-Regular, sans-serif;
           padding-top: 5px;
         }
         .value {
@@ -70,10 +75,9 @@
 
       .label {
         padding: 10px 15px;
-        background: $fia-dark-background-color;
         border: 1px solid $fia-secondary-color;
         border-radius: $fia-border-radius;
-        font-family: MavenPro-Bold, sans-serif;
+        font-family: Raleway-Bold, sans-serif;
       }
 
       .fia-quiz-answers-wrapper {
@@ -176,7 +180,10 @@
 
 ::ng-deep {
   .light-theme {
-    .quiz-question .label, .quiz-level, .quiz-wrong-answers {
+    .quiz-question .label {
+
+    }
+    .quiz-level, .quiz-wrong-answers {
       background: $fia-light-background-color !important;
     }
   }

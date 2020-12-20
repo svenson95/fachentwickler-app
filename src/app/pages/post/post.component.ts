@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data/data.service';
-import { Post } from '../../models/post';
 import { Router } from '@angular/router';
-import { HeaderService } from '../../services/header.service';
+
 import { subjects } from '../../../data/menu-items';
+import { DataService } from '../../services/data/data.service';
+import { HeaderService } from '../../services/header.service';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-post',
@@ -18,12 +19,13 @@ export class PostComponent implements OnInit {
               private router: Router,
               private headerService: HeaderService
   ) {
+    this.headerService.setPageTitle(
+      subjects.find(sub => sub.url === this.router.url.substring(0, this.router.url.indexOf('/', 2))
+    )?.title);
+
     this.dataService.getPost(router.url).subscribe(
       (data) => {
         this.post = data;
-        this.headerService.setPageTitle(
-          subjects.find(sub => sub.url.substr(1) === this.post.subject
-        )?.title);
       },
       (error) => {
         console.log('Error while GET post', error);
