@@ -24,12 +24,6 @@
   }
 }
 
-.fia-subjects-section {
-  @include to-xs {
-    margin-top: 30px;
-  }
-}
-
 .fia-areas-section,
 .fia-internal-section {
   @include to-xs {
@@ -53,6 +47,7 @@
   .section-title {
     color: white;
     font-size: 1.3em;
+    font-family: Raleway-ExtraLight, sans-serif;
     padding: 8px 20px 8px 10px;
     margin-left: 30px;
     margin-right: 30px;
@@ -67,8 +62,9 @@
     }
 
     @include to-xs {
-      margin-left: 20px;
-      margin-right: 20px;
+      font-size: 1.1em;
+      margin-left: 15px;
+      margin-right: 15px;
     }
   }
 
@@ -80,6 +76,11 @@
     margin-left: 25px;
     width: fit-content;
     max-width: 160px;
+
+    @include to-xs {
+      font-size: .9em;
+      margin-left: 15px;
+    }
 
     @media not all and (min-resolution:.001dpcm){
       @supports (-webkit-appearance:none) {
@@ -110,11 +111,21 @@
 
     &.active-route {
       color: $fia-secondary-color;
-    }
 
-    @include to-xs {
-      margin-left: 15px;
+      .fia-nav-item-icon {
+        color: white;
+      }
     }
+  }
+}
+
+.fia-subjects-section {
+  @include to-xs {
+    margin-top: 30px;
+  }
+
+  @include from-xs {
+    margin-top: 55px;
   }
 }
 

@@ -15,9 +15,9 @@ import { SchoolWeek } from '../../models/school-week';
 })
 export class DashboardComponent implements OnInit {
 
-  public user: User;
-  public dashboard: DashboardData;
-  public schoolWeek: SchoolWeek;
+  user: User;
+  dashboard: DashboardData;
+  schoolWeek: SchoolWeek;
 
   examplePost = {
     description: subjectsData[0].topics[0].links[1].description,
@@ -42,11 +42,7 @@ export class DashboardComponent implements OnInit {
 
   /* -- Component functions -- */
   setupComponent(): void {
-    if (!this.dataService.dashboard) {
-      this.fetchAllLessons();
-    } else {
-      this.dashboard = this.dataService.dashboard;
-    }
+    this.fetchAllLessons();
 
     if (!this.dataService.schoolWeek) {
       this.fetchSchoolWeek();

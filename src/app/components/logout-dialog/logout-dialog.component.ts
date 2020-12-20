@@ -26,7 +26,7 @@ export class LogoutDialogComponent implements OnInit {
         this.router.navigateByUrl('/');
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Erfolgreich abgemeldet'
+          data: 'Du hast dich abgemeldet'
         });
       }, error => {
         this.router.navigateByUrl('/');

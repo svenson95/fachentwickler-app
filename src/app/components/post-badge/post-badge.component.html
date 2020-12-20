@@ -1,9 +1,9 @@
 <div class="fia-badge unselectable" [ngClass]="{
-                'article': post.type === PostType.ARTICLE,
-                'tasks': post.type === PostType.TASKS,
-                'index-cards': post.type === PostType.INDEX_CARDS,
-                'quiz': post.type === PostType.QUIZ,
-                'test': post.type === undefined
+                'article': post?.type === PostType.ARTICLE,
+                'tasks': post?.type === PostType.TASKS,
+                'index-cards': post?.type === PostType.INDEX_CARDS,
+                'quiz': post?.type === PostType.QUIZ,
+                'test': post?.type === undefined
               }">
-  {{badgeTranslator(post.type)}}
+  {{badgeTranslator(post?.type)}}
 </div>

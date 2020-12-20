@@ -50,7 +50,6 @@
 
         .weekday {
           text-align: right;
-          text-transform: uppercase;
         }
       }
 
@@ -121,20 +120,24 @@
     position: relative;
 
     .fia-vertical-line {
-      width: 2px;
+      width: 3px;
       background: rgba($fia-third-color-rgb, 0.25) !important;
       border: none;
       position: absolute;
       top: -7px;
       left: -36px;
-      bottom: 10px;
+      bottom: 9px;
 
       @include to-sm {
-        bottom: 30px;
+        bottom: 29px;
       }
 
       @include to-md {
         bottom: 47px;
+      }
+
+      @include to-xs {
+        bottom: 34px;
       }
     }
 
@@ -142,13 +145,13 @@
       position: relative;
 
       .fia-horizontal-line {
-        height: 2px;
-        width: 34px;
+        height: 3px;
+        width: 33px;
         background: rgba($fia-third-color-rgb, 0.25) !important;
         border: none;
         position: absolute;
         top: 10px;
-        left: -34px;
+        left: -33px;
       }
     }
   }

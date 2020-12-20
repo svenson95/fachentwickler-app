@@ -6,6 +6,7 @@ export interface User {
   progress: string[];
   role: UserRole;
   theme: 'light' | 'dark';
+  _id: string;
 }
 
 export interface AuthUser {
@@ -31,4 +32,10 @@ export interface EditUser {
 export enum UserRole {
   ADMIN = 'admin',
   USER = 'user'
+}
+
+export interface UserProgress {
+  _id?: string;
+  userId: string;
+  postId: string;
 }

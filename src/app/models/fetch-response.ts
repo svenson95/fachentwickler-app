@@ -29,6 +29,7 @@ export interface AuthenticatedResponse {
   message: string;
   user?: User;
   token?: string;
+  error?: any;
   response: HttpErrorResponse;
   request: any;
 }
@@ -38,4 +39,12 @@ export interface EditUserResponse {
   message: string;
   user?: User;
   error?: Error;
+}
+
+export interface AddProgressResponse {
+  success: boolean;
+  message: string;
+  progress?: any;
+  user?: User;
+  error?: any;
 }

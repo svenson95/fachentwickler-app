@@ -5,7 +5,7 @@
   justify-content: space-between;
   background: black;
   height: 80px;
-  max-width: 1395px;
+  max-width: 1405px;
 
   @include to-xs {
     height: 60px;
@@ -33,7 +33,8 @@
 
     h1.fia-app-name {
       color: white;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      font-family: Raleway-ExtraLight, sans-serif;
 
       @include from-xs {
         margin-left: 10px;
@@ -45,7 +46,11 @@
         top: 46px;
         left: 76px;
         color: $fia-third-color;
-        font-size: 0.5em;
+        font-size: 12px;
+
+        @include to-md {
+          display: none;
+        }
       }
     }
 
@@ -53,13 +58,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      @include to-xs {
-        width: 32px;
-        height: 32px;
-        border-radius: 20%;
-        border: 1px solid $fia-third-color;
-      }
 
       .fia-app-icon {
         height: 26px;
@@ -81,7 +79,8 @@
 
     .fia-app-name {
       font-size: 1.2em;
-      font-family: MavenPro-Bold, sans-serif;
+      font-family: Raleway-Regular, sans-serif;
+      font-weight: 100;
 
       .fia, .pp, .yio {
         text-decoration: underline;
@@ -106,7 +105,6 @@
 
     @include from-md {
       padding-left: 40px;
-      flex-direction: row-reverse;
     }
 
     @include from-xs {
@@ -115,7 +113,6 @@
 
     .fia-header-searchbar {
       margin-left: 20px;
-      margin-right: 10px;
 
       @include to-md {
         display: none;
@@ -127,6 +124,7 @@
         border-radius: $fia-border-radius;
         width: 220px;
         box-shadow: black 0 0 8px, black 0 0 8px;
+        margin-right: 10px;
 
         @include to-md {
           display: none;
@@ -176,38 +174,63 @@
     }
 
     .fia-page-title {
-      font-size: 1.15em;
-      font-family: MavenPro-Bold, sans-serif;
-      text-transform: uppercase;
-      margin-left: 15px;
+      display: flex;
+      align-items: center;
       margin-right: 15px;
-      padding: 6px 30px;
+      margin-bottom: 0;
+      padding: 6px 20px;
 
-      @include from-md {
-        font-size: 2.5em;
-        color: $fia-secondary-color;
-        opacity: 0.25;
-        position: absolute;
-        left: 185px;
-        top: 15px;
-      }
+      color: white;
+      font-weight: 200;
+      letter-spacing: 1px;
+      text-transform: uppercase;
 
       @include to-md {
         margin-left: 0;
         padding: 6px 18px;
-        font-size: 3vw;
-        line-height: 20px;
         flex-shrink: 1;
       }
 
       @include to-xs {
-        font-size: .9em;
-        margin-left: 10px;
+        margin-left: 5px;
         padding: 0;
       }
 
       @include to-tiny {
         font-size: .8em;
+      }
+
+      .title {
+        font-size: 1.10em;
+        margin-bottom: 0;
+        white-space: pre-line;
+        line-height: 18px;
+        font-family: Raleway-ExtraLight, sans-serif;
+
+        @include to-xs {
+          font-size: 1em;
+        }
+
+        @include from-md {
+          padding: 0 5px;
+        }
+      }
+
+      .bracket {
+        font-size: 1.2em;
+        color: $fia-primary-color !important;
+
+        @include to-xs {
+          font-size: 1.1em;
+        }
+
+        &:first-of-type {
+          margin-right: 2px;
+        }
+
+        &:last-of-type {
+          margin-left: 2px;
+        }
       }
     }
 
@@ -220,23 +243,20 @@
       .fia-button-container {
         display: flex;
         color: $fia-third-color;
-        margin-top: 20px;
-
-        @include to-md {
-          margin-top: 25px;
-        }
-
-        @include to-xs {
-          margin-top: 15px;
-        }
+        align-items: center;
 
         .fia-header-hover-label {
           margin-right: 5px;
 
           @include to-md {
             .fia-hover-label {
-              margin-top: 0;
+              display: none;
             }
+          }
+
+          .fia-hover-label {
+            font-size: 11px;
+            line-height: 14px;
           }
         }
 
@@ -254,11 +274,8 @@
           }
 
           .fia-hover-label {
-            margin-top: 0;
-
-            @include to-md {
-              margin-top: -4px;
-            }
+            position: absolute;
+            top: 37px;
           }
         }
 
@@ -267,7 +284,6 @@
           height: fit-content;
           padding: 5px 10px;
           margin-left: 8px;
-          margin-top: 8px;
           margin-right: 8px;
 
           border: none;
@@ -276,11 +292,11 @@
 
           color: black;
           font-size: .55em;
-          font-family: MavenPro-Bold, sans-serif;
+          font-weight: 600;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
-          line-height: 12px;
+          line-height: 13px;
 
           @include to-md {
             font-size: .45em;
@@ -306,10 +322,19 @@
         }
 
         .fia-theme-toggle-wrapper {
-          margin-top: 5px;
-
           @include from-xs {
+            margin-right: 15px;
+          }
+
+          @include from-md {
             margin-right: 10px;
+            margin-top: 23px;
+          }
+
+          .fia-hover-label {
+            @include from-md {
+              margin-top: 10px;
+            }
           }
         }
 

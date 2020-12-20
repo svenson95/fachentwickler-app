@@ -1,14 +1,18 @@
 @font-face {
-  font-family: 'MavenPro';
-  src: url('../assets/fonts/MavenPro-VariableFont_wght.ttf');
+  font-family: 'Raleway-Regular';
+  src: url('../assets/fonts/Raleway-Regular.ttf');
 }
 @font-face {
-  font-family: 'MavenPro-Black';
-  src: url('../assets/fonts/MavenPro-Black.ttf');
+  font-family: 'Raleway-Bold';
+  src: url('../assets/fonts/Raleway-Bold.ttf');
 }
 @font-face {
-  font-family: 'MavenPro-Bold';
-  src: url('../assets/fonts/MavenPro-Bold.ttf');
+  font-family: 'Raleway-Italic';
+  src: url('../assets/fonts/Raleway-Italic.ttf');
+}
+@font-face {
+  font-family: 'Raleway-ExtraLight';
+  src: url('../assets/fonts/Raleway-ExtraLight.ttf');
 }
 
 @import 'src/theme/mixins';
@@ -25,7 +29,11 @@
 }
 
 b, strong {
-  font-family: MavenPro-Bold, sans-serif;
+  font-family: Raleway-Bold, sans-serif;
+}
+
+i {
+  font-family: Raleway-Italic, sans-serif;
 }
 
 u {
@@ -41,6 +49,10 @@ u {
 
 hr {
   background: $fia-grey-1;
+}
+
+button {
+  font-family: Raleway-Regular, sans-serif;
 }
 
 .ddu-list-number,
@@ -74,7 +86,7 @@ hr {
 /* FIAPPY - PAGE */
 .fia-page {
   background: $fia-dark-background-color;
-  padding: 35px 20px 20px 0;
+  padding: 30px 20px 20px 0;
 
   @include to-xs {
     padding-top: 30px;
@@ -120,7 +132,7 @@ a {
 
   .fia-card-title {
     font-size: 1.7em;
-    font-family: MavenPro-Bold, sans-serif;
+    font-family: Raleway-ExtraLight, sans-serif;
     letter-spacing: 1px;
     line-height: 26px;
     text-decoration: underline;
@@ -156,12 +168,13 @@ a {
 .fia-header-hover-label {
   .fia-hover-label {
     align-self: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     opacity: 0;
     height: fit-content;
     transition: opacity 250ms ease-in-out;
+
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     @include to-xs {
       transform: translateY(3px);
@@ -183,7 +196,9 @@ a {
     }
     .mat-icon {
       align-self: center;
-      margin-top: 8px;
+
+      @include from-sm {
+      }
     }
   }
 
@@ -192,14 +207,13 @@ a {
       left: 3%;
       top: 48px;
       font-size: .55em;
-      font-family: MavenPro, sans-serif;
+      font-family: Raleway-Regular, sans-serif;
     }
   }
 
   &.fia-theme-toggle-wrapper {
     display: flex;
     flex-direction: column;
-    transform: translateY(2px);
 
     .mat-slide-toggle-label {
       font-size: 12px;
@@ -243,7 +257,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   background-color: $fia-dark-background-color;
   color: $fia-third-color;
   text-transform: uppercase;
-  font-family: MavenPro-Bold, sans-serif;
+  font-family: Raleway-Bold, sans-serif;
   font-size: 1em;
   padding: 10px 20px;
   border: none;
@@ -322,7 +336,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 /* FIAPPY - TOGGLES */
 .fia-theme-toggle {
-  vertical-align: middle;
+  align-self: center;
 
   ::ng-deep {
     .mat-slide-toggle-thumb {

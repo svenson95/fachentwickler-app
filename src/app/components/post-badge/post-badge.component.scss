@@ -7,10 +7,10 @@
   flex-shrink: 0;
   border: white;
   color: white;
-  font-family: MavenPro-Bold, sans-serif;
+  font-family: Raleway-Bold, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-radius: 12px;
+  border-radius: 8px;
 
   margin-top: 1px;
   margin-left: 10px;
@@ -49,7 +49,7 @@
     color: $fia-primary-color;
   }
   &.test {
-    background: $fia-secondary-color;
+    background: $fia-third-color;
     color: $fia-dark-background-color;
 
     @include to-md {

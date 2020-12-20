@@ -1,12 +1,14 @@
-<div class="fia-post-link-wrapper">
+<div class="fia-post-link-wrapper" *ngIf="post !== undefined">
   <p class="label" [innerHTML]="title" *ngIf="title"></p>
   <a class="fia-post-link" [routerLink]="'/' + post.subject + '/' + post.url" [ngClass]="{isCompleted: isAlreadyCompleted(post.postId)}">
     <div class="fia-title-wrapper">
-      <p class="fia-title" [ngClass]="{exam: post.url.includes('test')}">{{post.title}}</p>
+      <p class="fia-title" [ngClass]="{exam: post.url?.includes('test')}">
+        {{post.title}}
+      </p>
     </div>
     <div class="fia-description-wrapper">
       <p class="fia-description">{{post.lessonDate | date: 'EEEE, dd.MM.yyyy'}}</p>
-      <app-post-badge [post]="post"></app-post-badge>
+      <app-post-badge [post]="post || post.details"></app-post-badge>
     </div>
   </a>
 </div>

@@ -35,9 +35,8 @@
   .fia-labels-wrapper {
     display: flex;
     width: 100%;
-    max-width: 1110px;
+    max-width: 1050px;
     justify-content: space-between;
-    font-size: .8em;
     color: white;
     z-index: 3;
     padding: 0 5px;
@@ -49,7 +48,9 @@
   }
 
   .logo {
-    font-family: MavenPro-Bold, sans-serif;
+    font-family: Raleway-ExtraLight, sans-serif;
+    font-weight: 100;
+    font-size: 1em;
 
     .fia, .pp, .yio { text-decoration: underline double; }
     .fia { text-decoration-color: $fia-secondary-color; }
@@ -58,7 +59,7 @@
   }
 
   .buttons {
-    font-size: .8em;
+    font-size: .7em;
 
     @include to-md {
       display: flex;

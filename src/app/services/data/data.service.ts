@@ -44,8 +44,8 @@ export class DataService {
   }
 
   // Exam-Item component - GET subject-posts
-  getSubjectPosts(postIds: string): Observable<SubjectPost[]> {
-    return this.httpClient.get<SubjectPost[]>(`${environment.baseUrl}/subjects/posts/${postIds}`)
+  getSubjectPosts(postIdsString: string): Observable<SubjectPost[]> {
+    return this.httpClient.get<SubjectPost[]>(`${environment.baseUrl}/subjects/posts/${postIdsString}`)
       .pipe(map((response) => {
         console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
         return response;
@@ -112,7 +112,7 @@ export class DataService {
   getAllWeeks(): Observable<SchoolWeek[]> {
     return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/posts/all-school-weeks`)
       .pipe(map((response) => {
-        // console.log('response GET posts/all-school-weeks', response);
+        console.log('response GET posts/all-school-weeks', response);
         return response;
       }));
   }

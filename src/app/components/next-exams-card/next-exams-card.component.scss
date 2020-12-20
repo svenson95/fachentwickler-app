@@ -12,6 +12,10 @@
 
     .fia-exam-item-wrapper:not(:last-of-type) {
       margin-bottom: 20px;
+
+      @include to-xs {
+        margin-bottom: 30px;
+      }
     }
   }
 }

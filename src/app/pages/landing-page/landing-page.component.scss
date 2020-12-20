@@ -17,7 +17,6 @@
   }
 
   .fia-welcome-banner {
-    margin-top: 10px;
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
@@ -52,7 +51,7 @@
       width: 100%;
       align-self: center;
       margin-top: 10px;
-      font-family: MavenPro-Bold, sans-serif;
+      font-family: Raleway-Bold, sans-serif;
       font-size: 1.4em;
       letter-spacing: 2px;
       text-align: right;
@@ -64,6 +63,10 @@
 
       @include to-sm {
         font-size: 1.1em;
+      }
+
+      @include to-xs {
+        line-height: 15px;
       }
 
       .grey-1 {

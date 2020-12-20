@@ -11,11 +11,13 @@ export interface Post {
   schoolWeek: string;
   elements: PostElement[];
   postId?: string;
+  _id?: string;
 }
 
 export interface PostElement {
   type: ElementType | string;
   content: string;
+  toggable?: boolean;
   language?: 'java' | 'php' | 'javascript' | 'sql';
   list?: Array<string | SublistItem>;
   ordered?: boolean;

@@ -8,6 +8,7 @@ export interface IndexCards {
   lastUpdate: string;
   schoolWeek: string;
   questions: Question[];
+  _id?: string;
 }
 
 interface Question {

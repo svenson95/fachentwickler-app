@@ -227,6 +227,10 @@
       &.active-route {
         color: $fia-secondary-color !important;
 
+        .fia-nav-item-icon {
+          color: black !important;
+        }
+
         &:hover, &:focus {
           @include from-md {
             .fia-nav-item-icon {
@@ -278,7 +282,7 @@
     }
 
     .fia-page-title {
-      color: black;
+      color: black !important;
     }
 
     .fia-searchbar-buttons-wrapper {

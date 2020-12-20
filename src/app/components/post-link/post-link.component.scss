@@ -105,6 +105,7 @@
     .fia-description-wrapper {
       display: flex;
       align-items: center;
+      flex-shrink: 0;
 
       @include to-xs {
         margin-top: -5px;
@@ -129,6 +130,7 @@
         @include to-xs {
           font-size: .85em;
           margin-top: 4px;
+          line-height: 14px;
         }
 
         @include to-md {
