@@ -4,11 +4,11 @@
       <p class="fia-card-title">Schulwoche #{{currentWeek}}</p>
       <p class="fia-card-description">
         <span>
-          {{(week?.posts[0].lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
+          {{(week?.posts[0]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
         </span>
         <span> - </span>
         <span>
-          {{(week?.posts[week.posts.length-1].lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
+          {{(week?.posts[week.posts.length-1]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
         </span>
       </p>
     </div>
@@ -26,7 +26,7 @@
     <div class="fia-weekday-group" *ngIf="week !== undefined">
       <app-post-link *ngFor="let post of week.posts" [post]="post" [title]="fullSubjectName(post.subject)"></app-post-link>
     </div>
-    <p class="fia-no-content-label" *ngIf="week !== undefined && week?.posts.length === 0">
+    <p class="fia-no-content-label" *ngIf="week && week.posts.length === 0">
       Artikel noch nicht freigeschaltet
     </p>
   </mat-card-content>

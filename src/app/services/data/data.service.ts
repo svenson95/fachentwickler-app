@@ -17,7 +17,7 @@ import { ExamDate } from '../../models/exam-date';
 export class DataService {
 
   // Settings
-  public schoolWeekValue = 17;
+  public schoolWeekValue = 19;
 
   public dashboard: DashboardData;
   public schoolWeek: SchoolWeek;

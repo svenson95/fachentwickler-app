@@ -5,7 +5,11 @@
   justify-content: space-between;
   background: black;
   height: 80px;
-  max-width: 1405px;
+  max-width: 1400px;
+
+  @include from-md {
+    padding: 0 20px;
+  }
 
   @include to-xs {
     height: 60px;
@@ -44,7 +48,7 @@
       .fia-hover-label {
         position: absolute;
         top: 46px;
-        left: 76px;
+        left: 80px;
         color: $fia-third-color;
         font-size: 12px;
 
@@ -124,7 +128,6 @@
         border-radius: $fia-border-radius;
         width: 220px;
         box-shadow: black 0 0 8px, black 0 0 8px;
-        margin-right: 10px;
 
         @include to-md {
           display: none;
@@ -183,6 +186,10 @@
       font-weight: 200;
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      @include from-sm {
+        margin-left: 8px;
+      }
 
       @include to-md {
         margin-left: 0;

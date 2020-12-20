@@ -51,10 +51,10 @@
     <tbody>
       <tr class="table-row" *ngFor="let row of element.rows">
         <ng-container *ngFor="let column of row.columns">
-          <th *ngIf="row.type === 'header' && !column.rowSpan" [colSpan]="column.colSpan" [innerHTML]="column.content"></th>
-          <th *ngIf="row.type === 'header' && column.rowSpan" [rowSpan]="column.rowSpan" [innerHTML]="column.content"></th>
-          <td *ngIf="row.type === 'default' && !column.rowSpan" [colSpan]="column.colSpan" [innerHTML]="column.content"></td>
-          <td *ngIf="row.type === 'default' && column.rowSpan" [rowSpan]="column.rowSpan" [innerHTML]="column.content"></td>
+          <th *ngIf="row.type === 'header' && !column.rowSpan" [colSpan]="column.colSpan" [innerHTML]="column.content" [class]="column.align"></th>
+          <th *ngIf="row.type === 'header' && column.rowSpan" [rowSpan]="column.rowSpan" [innerHTML]="column.content" [class]="column.align"></th>
+          <td *ngIf="row.type === 'default' && !column.rowSpan" [colSpan]="column.colSpan" [innerHTML]="column.content" [class]="column.align"></td>
+          <td *ngIf="row.type === 'default' && column.rowSpan" [rowSpan]="column.rowSpan" [innerHTML]="column.content" [class]="column.align"></td>
         </ng-container>
       </tr>
     </tbody>
