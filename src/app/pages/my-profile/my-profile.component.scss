@@ -63,6 +63,10 @@
 
       .mat-input-element {
         color: white;
+
+        &:disabled {
+          opacity: 1;
+        }
       }
     }
 

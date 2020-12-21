@@ -39,15 +39,20 @@ export class MyProfileComponent implements OnInit {
               private matSnackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
-    this.setupForms();
+    this.headerService.setPageTitle('Mein Profil');
+    this.user = this.authService.user;
+    this.authService.themeChange.subscribe((theme) => {
+      this.theme.setValue(theme);
+    });
+    this.initializeForms();
   }
 
   ngOnInit(): void {
-    this.setupComponent();
+    this.initializeComponent();
   }
 
   /* -- Initial functions -- */
-  setupComponent(): void {
+  initializeComponent(): void {
     if (this.dataService.dashboard === undefined) {
       this.dataService.getAllLessons().subscribe(
         (lessons) => {
@@ -63,10 +68,7 @@ export class MyProfileComponent implements OnInit {
     }
   }
 
-  setupForms(): void {
-    this.headerService.setPageTitle('Mein Profil');
-    this.user = this.authService.user;
-
+  initializeForms(): void {
     this.username = new FormControl({ value: this.user.name, disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
@@ -87,9 +89,9 @@ export class MyProfileComponent implements OnInit {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.theme = new FormControl({ value: this.user.theme, disabled: true }, {
+    this.theme = new FormControl({ value: this.authService.theme, disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
-      updateOn: 'submit'
+      updateOn: 'change'
     });
     this.formGroup = this.formBuilder.group({
       username: this.username,
@@ -237,11 +239,6 @@ export class MyProfileComponent implements OnInit {
   }
 
   /* -- Change theme -- */
-  toggleChangeTheme(event): void {
-    this.authService.toggleTheme();
-    this.theme.setValue(this.authService.theme);
-  }
-
   saveChangeTheme(event): void {
     const updatedUser = {
       name: this.authService.user.name,

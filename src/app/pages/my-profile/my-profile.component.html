@@ -64,7 +64,7 @@
           <mat-form-field class="fia-input theme" appearance="legacy">
             <mat-label>Standard-Theme</mat-label>
             <input matInput type="text" [formControl]="theme"/>
-            <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="toggleChangeTheme($event)">
+            <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="authService.toggleTheme()">
             </mat-slide-toggle>
           </mat-form-field>
           <button class="fia-save-change-btn" (click)="saveChangeTheme($event)" *ngIf="authService.theme !== authService.user.theme">

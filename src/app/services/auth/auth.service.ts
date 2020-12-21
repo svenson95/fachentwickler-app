@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
@@ -31,6 +31,8 @@ export class AuthService {
   public theme: 'dark' | 'light' = 'dark';
   public isAuthenticated = false;
   public redirectUrl: string;
+
+  public themeChange: Subject<string> = new Subject<string>();
 
   constructor(private httpClient: HttpClient,
               private router: Router
@@ -204,6 +206,7 @@ export class AuthService {
 
   toggleTheme(): void {
     this.theme === 'dark' ? this.theme = 'light' : this.theme = 'dark';
+    this.themeChange.next(this.theme);
     if (this.theme === 'dark') {
       document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
     } else {
