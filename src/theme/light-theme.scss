@@ -225,10 +225,6 @@
     .fia-nav-item {
       color: black !important;
 
-      .mat-list-item-content {
-        background: $fia-light-background-color !important;
-      }
-
       &:hover, &:focus {
         background-color: $fia-light-background-color !important;
       }

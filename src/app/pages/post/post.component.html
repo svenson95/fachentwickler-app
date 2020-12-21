@@ -1,5 +1,8 @@
 <div class="fia-page">
   <mat-card class="fia-card">
+    <p class="fia-error-message" *ngIf="post && post.elements === undefined">
+      Artikel nicht gefunden
+    </p>
     <p class="fia-card-title" *ngIf="post !== undefined">
       {{post.title}}
     </p>
@@ -10,10 +13,10 @@
     <mat-card-content class="fia-post-content" *ngIf="post !== undefined">
       <app-post-element *ngFor="let element of post.elements" [element]="element"></app-post-element>
     </mat-card-content>
-    <p class="fia-post-last-update" *ngIf="post !== undefined">
+    <p class="fia-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
 
-  <app-lesson-footer [post]="post" *ngIf="post !== undefined"></app-lesson-footer>
+  <app-lesson-footer [post]="post" *ngIf="authService.isAuthenticated && post && post.elements !== undefined"></app-lesson-footer>
 </div>

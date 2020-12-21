@@ -4,8 +4,8 @@
       <mat-icon class="fia-exam-item-icon">insert_invitation</mat-icon>
       <div class="details-button-wrapper">
         <div class="fia-details-wrapper">
-          <p class="date">{{exam.date | date:'dd.MM.yyyy'}}</p>
-          <p class="weekday">{{exam.date | date: 'EEEE'}}</p>
+          <p class="date">{{exam.date | date:'dd.MM.yyyy'}} <span class="bracket">|</span> {{exam.date | date: 'EEEE'}}</p>
+          <p class="days-left">{{daysLeft(exam.date)}}</p>
         </div>
         <button class="fia-show-lessons-btn" (click)="showLessons()" [class.is-open]="lessonsVisible"
                 [disabled]="lessonsVisible && examLessons === undefined"

@@ -42,7 +42,7 @@
 
       .progress-bar {
         ::ng-deep .mat-progress-bar-fill::after {
-          background: $fia-secondary-color;
+          background-color: $fia-secondary-color !important;
         }
       }
     }
@@ -52,7 +52,7 @@
 
       .progress-bar {
         ::ng-deep .mat-progress-bar-fill::after {
-          background: $fia-primary-color;
+          background-color: $fia-primary-color !important;
         }
       }
     }

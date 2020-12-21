@@ -5,10 +5,29 @@ import { DataService } from '../../services/data/data.service';
 import { ExamDate } from '../../models/exam-date';
 import { SubjectPost } from '../../models/subject';
 
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+
 @Component({
   selector: 'app-exam-item',
   templateUrl: './exam-item.component.html',
-  styleUrls: ['./exam-item.component.scss']
+  styleUrls: ['./exam-item.component.scss'],
+  // animations: [
+  //   trigger('listAnimation', [
+  //     transition('* => *', [ // each time the binding value changes
+  //       query(':leave', [
+  //         stagger(100, [
+  //           animate('1.5s', style({ opacity: 0 }))
+  //         ])
+  //       ]),
+  //       query(':enter', [
+  //         style({ opacity: 0 }),
+  //         stagger(100, [
+  //           animate('1.5s', style({ opacity: 1 }))
+  //         ])
+  //       ])
+  //     ])
+  //   ])
+  // ]
 })
 export class ExamItemComponent implements OnInit {
 
@@ -55,6 +74,15 @@ export class ExamItemComponent implements OnInit {
       }
     );
     return;
+  }
+
+  daysLeft(date: string): string {
+    const DAY_MILLISECONDS = 24 * 60 * 60 * 1000;
+    const today = new Date();
+    const examDate = new Date(date);
+    const days = Math.ceil(Math.abs((today.getTime() - examDate.getTime()) / DAY_MILLISECONDS));
+    const suffix = days > 1 ? 'Tage' : 'Tag';
+    return `Noch ${days} ${suffix}`;
   }
 
 }

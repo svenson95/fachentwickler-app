@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { subjects } from '../../../data/menu-items';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
 
 @Component({
@@ -17,7 +18,8 @@ export class PostComponent implements OnInit {
 
   constructor(private dataService: DataService,
               private router: Router,
-              private headerService: HeaderService
+              private headerService: HeaderService,
+              public authService: AuthService
   ) {
     this.headerService.setPageTitle(
       subjects.find(sub => sub.url === this.router.url.substring(0, this.router.url.indexOf('/', 2))
