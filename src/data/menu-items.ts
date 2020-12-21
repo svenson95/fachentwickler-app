@@ -143,18 +143,18 @@ export const areas: MenuItem[] = [
   }
 ];
 
-export const internal: MenuItem[] = [
-  {
-    title: 'Lehrmaterial',
-    shortTitle: 'Lehrmaterial',
-    url: '/lehrmaterial',
-    icon: 'folder-outline',
-  },
+export const myClass: MenuItem[] = [
   {
     title: 'Mitteilungen',
     shortTitle: 'Mitteilungen',
     url: '/mitteilungen',
     icon: 'mail-outline',
+  },
+  {
+    title: 'Lehrmaterial',
+    shortTitle: 'Lehrmaterial',
+    url: '/lehrmaterial',
+    icon: 'folder-outline',
   },
   {
     title: 'Lehrplan',
@@ -188,4 +188,4 @@ export const internal: MenuItem[] = [
   },
 ];
 
-export const pages = [...subjects, ...areas, ...internal];
+export const pages = [...subjects, ...areas, ...myClass];
