@@ -27,14 +27,13 @@
     }
 
     @include to-md {
-      background: $fia-dark-background-color;
+      border: 2px solid $fia-dark-background-color;
+      color: $fia-grey-1;
+      border-bottom: none;
       align-self: start;
       padding-left: 5px;
       padding-right: 5px;
       margin-left: 12px;
-      margin-top: 10px;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
 
       font-size: .8em;
     }
@@ -156,10 +155,6 @@
 
       ::ng-deep .fia-badge {
         margin-top: 2px;
-
-        @include to-xs {
-          font-size: .6em;
-        }
 
         @include to-sm {
           margin-left: 0;

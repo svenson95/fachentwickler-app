@@ -1,5 +1,21 @@
 <div class="fia-sidenav-content">
-    <div class="fia-subjects-section">
+
+  <div class="fia-my-class-section" *ngIf="authService.isAuthenticated">
+    <p class="section-title">Meine Klasse</p>
+    <mat-nav-list>
+      <a class="fia-nav-item" mat-list-item disableRipple
+         *ngFor="let navItem of myClassSection"
+         [routerLink]="'/' + navItem.url"
+         (click)="closeSidebar()"
+         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
+      >
+        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
+        <span [innerHTML]="navItem.title"></span>
+      </a>
+    </mat-nav-list>
+  </div>
+
+  <div class="fia-subjects-section">
     <p class="section-title">Schulfächer</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
@@ -29,18 +45,4 @@
     </mat-nav-list>
   </div>
 
-  <div class="fia-internal-section" *ngIf="authService.isAuthenticated">
-    <p class="section-title">Internes</p>
-    <mat-nav-list>
-      <a class="fia-nav-item" mat-list-item disableRipple
-         *ngFor="let navItem of internalSection"
-         [routerLink]="'/' + navItem.url"
-         (click)="closeSidebar()"
-         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
-      >
-        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
-        <span [innerHTML]="navItem.title"></span>
-      </a>
-    </mat-nav-list>
-  </div>
 </div>

@@ -122,7 +122,8 @@
       .fia-post-link-wrapper {
         .label {
           @include to-md {
-            background: $fia-light-background-color !important;
+            color: $fia-grey-1 !important;
+            border-color: $fia-light-background-color !important;
           }
         }
       }
@@ -343,11 +344,12 @@
 
   .fia-exam-item {
     .fia-icon-details {
-      //background: $fia-light-background-color !important;
-
       .fia-exam-item-icon {
-        //color: $fia-third-color !important;
       }
+    }
+
+    .fia-exam-subject {
+      color: $fia-grey-1 !important;
     }
 
     .fia-show-lessons-btn {

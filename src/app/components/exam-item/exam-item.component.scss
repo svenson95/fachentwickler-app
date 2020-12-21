@@ -86,6 +86,7 @@
     .fia-exam-title-wrapper {
 
       .fia-exam-subject {
+        color: $fia-grey-1;
         margin-bottom: 0;
 
         @include to-xs {
