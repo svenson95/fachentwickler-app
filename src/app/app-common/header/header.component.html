@@ -14,7 +14,7 @@
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
-    <div class="fia-page-title">
+    <div class="fia-page-title" (click)="isMobile.matches ? goToSubject() : goToSubject()">
       <span class="bracket">[</span>
       <p class="title">{{headerService.pageTitle}}</p>
       <span class="bracket">]</span>
@@ -34,7 +34,7 @@
 <!--          <mat-icon>build</mat-icon>-->
 <!--          <mat-label class="fia-hover-label fade-in unselectable">Einstellungen</mat-label>-->
 <!--        </button>-->
-        <div class="fia-theme-toggle-wrapper fia-header-hover-label">
+        <div class="fia-theme-toggle-wrapper fia-header-hover-label" *ngIf="!isMobile.matches">
           <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="authService.toggleTheme()">
           </mat-slide-toggle>
           <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
@@ -47,13 +47,17 @@
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>
         <mat-menu class="fia-more-menu" #menu="matMenu">
-          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="isMobile.matches">
-            <mat-icon>home</mat-icon>
-            <span class="label">Usage</span>
+          <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="authService.toggleTheme()">
+            <mat-icon>invert_colors</mat-icon>
+            <span class="label">{{authService.theme === 'dark' ? 'Light': 'Dark'}} Theme aktivieren</span>
           </a>
           <a class="fia-menu-button" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated">
             <mat-icon>account_circle</mat-icon>
             <span class="label">Mein Profil</span>
+          </a>
+          <a class="fia-menu-button" mat-menu-item routerLink="/" *ngIf="isMobile.matches">
+            <mat-icon>home</mat-icon>
+            <span class="label">Usage</span>
           </a>
           <a class="fia-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated">
             <mat-icon>login</mat-icon>

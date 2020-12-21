@@ -50,7 +50,7 @@
         top: 46px;
         left: 80px;
         color: $fia-third-color;
-        font-size: 12px;
+        font-size: 10px;
 
         @include to-md {
           display: none;
@@ -68,7 +68,7 @@
         color: $fia-third-color;
 
         @include to-xs {
-          height: 20px;
+          height: 24px;
         }
       }
     }
@@ -191,6 +191,10 @@
         margin-left: 8px;
       }
 
+      @include from-md {
+
+      }
+
       @include to-md {
         margin-left: 0;
         padding: 6px 18px;
@@ -224,19 +228,19 @@
       }
 
       .bracket {
-        font-size: 1.2em;
+        font-size: 1.3em;
         color: $fia-primary-color !important;
 
         @include to-xs {
-          font-size: 1.1em;
+          font-size: 1.2em;
         }
 
         &:first-of-type {
-          margin-right: 2px;
+          margin-right: 1px;
         }
 
         &:last-of-type {
-          margin-left: 2px;
+          margin-left: 1px;
         }
       }
     }
@@ -262,7 +266,7 @@
           }
 
           .fia-hover-label {
-            font-size: 11px;
+            font-size: 9px;
             line-height: 14px;
           }
         }
@@ -299,7 +303,7 @@
 
           color: black;
           font-size: .55em;
-          font-weight: 600;
+          font-family: Raleway-Bold, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
@@ -354,7 +358,6 @@
         }
 
         .fia-sidenav-hamburger-btn {
-          margin-right: 10px;
           margin-top: 0;
 
           ::ng-deep .mat-icon {

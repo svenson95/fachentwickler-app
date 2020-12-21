@@ -1,14 +1,14 @@
-import { AfterViewInit, Component, Inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
+import { delay } from 'rxjs/operators';
+
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { MatDialog } from '@angular/material/dialog';
-import { DOCUMENT } from '@angular/common';
-import { Subscription } from 'rxjs';
 import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
-import { delay } from 'rxjs/operators';
-import {LogoutDialogComponent} from '../../components/logout-dialog/logout-dialog.component';
+import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -29,8 +29,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
               public authService: AuthService,
               public loadingService: LoadingService,
               private sidenavService: SidenavService,
-              public dialog: MatDialog,
-              @Inject(DOCUMENT) private document: HTMLDocument
+              public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {}
@@ -57,6 +56,13 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   closeSidenav(): void {
     if (this.sidenavService.isOpen() && this.isMobile.matches) {
       this.sidenavService.close();
+    }
+  }
+
+  goToSubject(): void {
+    const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
+    if (subjectUrl && this.router.url !== subjectUrl) {
+      this.router.navigateByUrl(subjectUrl);
     }
   }
 
