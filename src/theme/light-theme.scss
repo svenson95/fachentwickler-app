@@ -119,6 +119,14 @@
         color: $fia-grey-1 !important;
       }
 
+      .fia-post-link-wrapper {
+        .label {
+          @include to-md {
+            background: $fia-light-background-color !important;
+          }
+        }
+      }
+
       .fia-post-link {
         background: $fia-light-background-color !important;
 
@@ -343,10 +351,11 @@
     }
 
     .fia-show-lessons-btn {
+      color: white !important;
+
       &:hover {
         @include from-md {
-          color: black !important;
-          border-color: black !important;
+          //color: black !important;
         }
       }
     }

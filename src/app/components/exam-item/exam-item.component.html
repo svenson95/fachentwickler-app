@@ -7,7 +7,9 @@
           <p class="date">{{exam.date | date:'dd.MM.yyyy'}}</p>
           <p class="weekday">{{exam.date | date: 'EEEE'}}</p>
         </div>
-        <button class="fia-show-lessons-btn" (click)="showLessons()" [class.is-open]="lessonsVisible">
+        <button class="fia-show-lessons-btn" (click)="showLessons()" [class.is-open]="lessonsVisible"
+                [disabled]="lessonsVisible && examLessons === undefined"
+        >
           {{lessonsVisible ? 'Ausblenden' : 'Lektionen anzeigen'}}
         </button>
       </div>

@@ -79,11 +79,12 @@
     height: fit-content;
     margin-left: 25px;
     width: fit-content;
-    max-width: 160px;
+    max-width: 170px;
 
     @include to-xs {
       font-size: .9em;
       margin-left: 15px;
+      margin-right: 15px;
     }
 
     @media not all and (min-resolution:.001dpcm){
@@ -118,6 +119,12 @@
 
       .fia-nav-item-icon {
         color: white;
+      }
+    }
+
+    ::ng-deep .mat-list-item-content {
+      @include to-xs {
+        padding: 0 10px;
       }
     }
   }

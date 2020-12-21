@@ -7,7 +7,11 @@
       </p>
     </div>
     <div class="fia-description-wrapper">
-      <p class="fia-description">{{post.lessonDate | date: 'EEEE | dd.MM.yyyy'}}</p>
+      <p class="fia-description">
+        {{post.lessonDate | date: 'EEEE'}}
+        <span class="fia-post-link-description-bracket">|</span>
+        {{post.lessonDate | date: 'dd.MM.yyyy'}}
+      </p>
       <app-post-badge [post]="post || post.details"></app-post-badge>
     </div>
   </a>

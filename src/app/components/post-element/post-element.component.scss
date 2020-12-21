@@ -119,7 +119,20 @@
 
   .post-ol-sublist,
   .post-ul-sublist {
-    padding-inline-start: 18px;
+    padding-inline-start: 0;
+    padding-top: 3px;
+
+    li {
+      display: flex;
+      list-style-type: none;
+
+      &::before {
+        color: black;
+        font-size: 1em;
+        content: '-';
+        margin-right: 5px;
+      }
+    }
   }
 
   .post-image-wrapper {

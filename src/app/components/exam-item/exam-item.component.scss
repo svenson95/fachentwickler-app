@@ -21,9 +21,14 @@
       padding: 10px 10px 10px 25px;
       margin-left: -30px;
 
+      @include to-sm {
+        padding: 10px 10px 10px 35px;
+      }
+
       .fia-exam-item-icon {
-        color: $fia-third-color;
         margin-right: 15px;
+        align-self: flex-end;
+        color: $fia-third-color;
         $size: 40px;
         font-size: $size;
         width: $size;
@@ -39,13 +44,13 @@
       .fia-details-wrapper {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2px;
+        font-size: .85em;
 
         .date,
         .weekday {
           width: 105px;
           letter-spacing: 1px;
-          margin-bottom: 3px;
+          margin-bottom: 1px;
         }
 
         .weekday {
@@ -54,23 +59,25 @@
       }
 
       .fia-show-lessons-btn {
-        background: transparent;
-        color: $fia-third-color;
-        letter-spacing: 1px;
-        border: 1px solid $fia-third-color;
+        background: $fia-third-color;
+        cursor: pointer;
+        border: none;
         outline: none;
         padding: 4px 8px;
-        cursor: pointer;
+
+        color: black;
+        font-size: .8em;
+        font-family: Raleway-Bold, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
 
         &.is-open {
-          color: $fia-grey-1;
-          border-color: $fia-grey-1;
+          background: rgba($fia-grey-1, 0.5);
         }
 
         &:hover {
           @include from-md {
-            color: white;
-            border-color: white;
+            //color: white;
           }
         }
       }
@@ -88,11 +95,11 @@
 
       .fia-exam-subject, .fia-exam-title {
 
-        @include from-md {
+        @include from-sm {
           margin-left: 20px;
         }
 
-        @include to-md {
+        @include to-sm {
           margin-left: 10px;
         }
       }
@@ -129,11 +136,11 @@
       bottom: 9px;
 
       @include to-sm {
-        bottom: 29px;
+        bottom: 26px;
       }
 
       @include to-md {
-        bottom: 47px;
+        bottom: 41px;
       }
 
       @include to-xs {

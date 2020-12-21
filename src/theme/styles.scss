@@ -80,6 +80,12 @@ button {
   color: white;
 }
 
+.fia-title, .fia-link-title {
+  @include to-xs {
+    font-size: .9em;
+  }
+}
+
 /* FIAPPY - PAGE */
 .fia-page {
   background: $fia-dark-background-color;
