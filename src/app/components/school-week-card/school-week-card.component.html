@@ -23,10 +23,18 @@
   </div>
   <mat-card-content class="fia-view-wrapper">
     <mat-spinner class="fia-loading-spinner" *ngIf="week === undefined"></mat-spinner>
-    <div class="fia-weekday-group" *ngIf="week !== undefined">
-      <app-post-link *ngFor="let post of week.posts" [post]="post" [title]="fullSubjectName(post.subject)"></app-post-link>
+    <div class="fia-weekday-group" *ngIf="week !== null && week !== undefined">
+
+      <div class="fia-weekday-item" *ngFor="let week of weekdays()">
+        <div class="fia-label-wrapper">
+          <p class="fia-weekday-label">{{weekdayAsString(week.day)}}</p>
+          <hr class="weekday-spacer"/>
+        </div>
+        <app-post-link *ngFor="let post of week.lessons" [post]="post" [title]="fullSubjectName(post.subject)"></app-post-link>
+      </div>
+
     </div>
-    <p class="fia-no-content-label" *ngIf="week && week.posts.length === 0">
+    <p class="fia-no-data" *ngIf="week && week.posts.length === 0">
       Artikel noch nicht freigeschaltet
     </p>
   </mat-card-content>

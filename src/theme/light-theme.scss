@@ -79,7 +79,7 @@
   }
 
   .fia-page {
-    .fia-no-exams {
+    .fia-no-data {
       color: $fia-grey-1 !important;
     }
     .fia-forgot-password-btn {
@@ -93,6 +93,11 @@
       .fia-button-wrapper .fia-previous-week-btn,
       .fia-button-wrapper .fia-next-week-btn {
         background: $fia-light-background-color !important;
+      }
+      .fia-weekday-label {
+        @include from-xs {
+          color: $fia-grey-2 !important;
+        }
       }
     }
 

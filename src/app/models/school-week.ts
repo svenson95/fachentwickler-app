@@ -5,10 +5,15 @@ export interface SchoolWeek {
   posts: SchoolWeekPost[];
 }
 
-interface SchoolWeekPost {
+export interface SchoolWeekPost {
   details: Post;
   id: string;
   lessonDate: string;
   schoolWeek: string;
   subject: string;
+}
+
+export interface Weekdays {
+  day: number;
+  lessons: SchoolWeekPost[];
 }

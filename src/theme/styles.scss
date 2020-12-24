@@ -96,6 +96,11 @@ button {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .fia-no-data {
+    font-size: 1.1em;
+    color: $fia-grey-1 !important;
+  }
 }
 
 a {

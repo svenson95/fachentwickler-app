@@ -52,10 +52,32 @@
     @include from-md {
       margin-top: 10px;
     }
-  }
 
-  .fia-no-content-label {
-    color: $fia-grey-1;
-    font-size: 1.1em;
+    .fia-weekday-item {
+      .fia-label-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 25px 0 20px;
+
+        .fia-weekday-label {
+          width: fit-content;
+          margin: 0;
+          border-radius: 8px;
+
+          text-transform: uppercase;
+          letter-spacing: 1px;
+
+          @include from-xs {
+            color: $fia-grey-1;
+          }
+        }
+        .weekday-spacer {
+          width: 100%;
+          height: 1px;
+          border: none;
+          margin-left: 25px;
+        }
+      }
+    }
   }
 }
