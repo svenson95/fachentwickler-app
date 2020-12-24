@@ -6,19 +6,18 @@
   height: 14px;
   flex-shrink: 0;
   border: white;
+  margin-top: 1px;
+  margin-left: 10px;
+
   color: white;
+  font-size: .6em;
   font-family: Raleway-Bold, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-radius: 8px;
-
-  margin-top: 1px;
-  margin-left: 10px;
 
   @include to-md {
     line-height: 14px;
     padding: 0 8px;
-    font-size: .6em;
     float: right;
   }
 
@@ -28,7 +27,6 @@
   }
 
   @include from-md {
-    font-size: .65em;
     line-height: 16px;
     padding: 0 8px 2px;
   }

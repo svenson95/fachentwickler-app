@@ -6,81 +6,6 @@
 }
 
 .fia-page {
-  .fia-link-item {
-    display: flex;
-    justify-content: space-between;
-    background-color: $fia-dark-background-color;
-    //border-radius: $fia-border-radius;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-decoration: none;
-    border-right: 4px solid $fia-third-color;
-
-    &.isCompleted {
-      border-color: $fia-secondary-color;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    @media screen and (min-width: 600px) {
-      &:hover, &:focus {
-        border-color: $fia-primary-color;
-
-        .fia-link-title {
-          letter-spacing: 0.25px;
-          text-decoration: underline;
-          text-decoration-color: $fia-secondary-color;
-          transition: letter-spacing 500ms ease-in-out;
-        }
-      }
-    }
-
-    &:not(:last-of-type) {
-      margin-bottom: 8px;
-    }
-
-    @include to-md {
-      padding: 8px 10px;
-    }
-
-    .fia-link-title {
-      margin: auto 0;
-      transition: letter-spacing 300ms ease-out;
-      text-decoration-color: $fia-secondary-color;
-
-      @include to-xs {
-        margin: 0;
-      }
-    }
-
-    .fia-description-row {
-      display: flex;
-      flex-direction: column;
-
-      @include to-md {
-        align-items: flex-end;
-      }
-
-      @include from-md {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .fia-link-description {
-        color: $fia-grey-1;
-        font-size: .95em;
-        margin-bottom: 0;
-        text-align: right;
-
-        @include from-md {
-          min-width: 78px;
-        }
-      }
-    }
-  }
 }
 
 .fia-topic {
@@ -149,9 +74,6 @@
   }
 
   .fia-links {
-    .fia-link-item {
-
-    }
   }
 }
 

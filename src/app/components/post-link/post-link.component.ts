@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
 import { SubjectPost } from '../../models/subject';
+import { SchoolWeekPost } from '../../models/school-week';
 
 @Component({
   selector: 'app-post-link',
@@ -11,10 +13,12 @@ import { SubjectPost } from '../../models/subject';
 })
 export class PostLinkComponent implements OnInit {
 
-  @Input('post') post: Post | SubjectPost;
+  @Input('post') post: Post | SubjectPost | SchoolWeekPost;
   @Input('title') title;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService,
+              public router: Router
+  ) {
   }
 
   ngOnInit(): void {
