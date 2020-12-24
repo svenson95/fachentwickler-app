@@ -22,17 +22,24 @@
       margin-left: -30px;
 
       @include to-sm {
-        padding: 10px 10px 10px 35px;
+        padding: 10px 10px 10px 25px;
       }
 
       .fia-exam-item-icon {
-        margin-right: 15px;
         align-self: flex-end;
         color: $fia-third-color;
         $size: 40px;
         font-size: $size;
         width: $size;
         height: $size;
+
+        @include from-xs {
+          margin-right: 15px;
+        }
+
+        @include to-xs {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -44,16 +51,24 @@
       .fia-details-wrapper {
         display: flex;
         justify-content: space-between;
-        font-size: .85em;
+        font-size: .8em;
+
+        @include to-xs {
+          font-size: .7em;
+        }
 
         .date,
         .days-left {
           letter-spacing: 1px;
-          margin-bottom: 1px;
+          margin-bottom: 0;
+
+          @include from-xs {
+            margin-bottom: 1px;
+          }
         }
 
         .date {
-          width: 170px;
+          width: 160px;
 
           .bracket {
             color: $fia-third-color;
@@ -61,7 +76,7 @@
         }
 
         .days-left {
-          width: 100px;
+          width: 90px;
           text-align: right;
         }
       }
@@ -110,7 +125,6 @@
         }
 
         @include to-sm {
-          margin-left: 10px;
         }
       }
 
