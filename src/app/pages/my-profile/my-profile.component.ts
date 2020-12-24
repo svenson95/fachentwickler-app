@@ -137,8 +137,7 @@ export class MyProfileComponent implements OnInit {
     const updatedUser = {
       name: this.authService.user.name,
       newName: this.username.value.toLowerCase(),
-      email: this.authService.user.email,
-      password: this.authService.user.password
+      email: this.authService.user.email
     };
 
     this.authService.editUser(updatedUser).subscribe(
@@ -214,8 +213,7 @@ export class MyProfileComponent implements OnInit {
   saveChangePassword(event): void {
     const updatedUser = {
       name: this.authService.user.name,
-      newName: this.username.value.toLowerCase(),
-      email: this.authService.user.email.toLowerCase(),
+      email: this.authService.user.email,
       password: this.password.value
     };
 
