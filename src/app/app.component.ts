@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { registerLocaleData, ViewportScroller } from '@angular/common';
-import localeDe from '@angular/common/locales/de';
+import { ViewportScroller } from '@angular/common';
 import { NavigationEnd , Router} from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -15,7 +14,6 @@ export class AppComponent {
   constructor(private router: Router,
               private viewportScroller: ViewportScroller
   ) {
-    registerLocaleData(localeDe);
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => this.viewportScroller.scrollToPosition([0, 0]));
   }

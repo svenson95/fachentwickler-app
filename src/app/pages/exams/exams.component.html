@@ -1,8 +1,25 @@
 <div class="fia-page">
   <mat-card class="fia-card">
-    <p class="fia-card-title">Klausuren</p>
+    <p class="fia-card-title">Termine</p>
     <mat-card-content class="fia-view-wrapper">
-      <p>exams works!</p>
+      <div class="fia-exams-view">
+        <div class="fia-calendar-column">
+          <mat-calendar (yearSelected)="calendarDate.setFullYear($event.getFullYear())"
+                        (monthSelected)="calendarDate.setMonth($event.getMonth())"
+                        [dateClass]="dateClass()"
+                        [minDate]="minDate"
+                        [maxDate]="maxDate"
+                        [dateFilter]="disableWeekend"
+                        #calendar
+          ></mat-calendar>
+        </div>
+        <div class="fia-exams-column">
+          <mat-spinner class="fia-loading-spinner" *ngIf="allExams === undefined"></mat-spinner>
+          <app-exam-item class="fia-exam" *ngFor="let exam of monthExams" [exam]="exam"></app-exam-item>
+          <p class="fia-no-data" *ngIf="monthExams && monthExams.length === 0">Keine Klausuren in diesem Monat</p>
+          <p class="fia-no-data" *ngIf="allExams === null">Fehler beim Laden der Klausuren</p>
+        </div>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
