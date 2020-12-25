@@ -20,9 +20,10 @@
     </div>
   </div>
   <div class="fia-lessons-container" *ngIf="lessonsVisible">
-    <hr class="fia-vertical-line">
-    <div class="fia-lesson-wrapper" *ngFor="let lesson of examLessons">
+    <div class="fia-lesson-wrapper" *ngFor="let lesson of examLessons; let i = index;">
       <hr class="fia-horizontal-line">
+      <hr class="fia-vertical-line-1" *ngIf="i !== examLessons.length - 1">
+      <hr class="fia-vertical-line-2">
       <app-post-link [post]="lesson"></app-post-link>
     </div>
   </div>

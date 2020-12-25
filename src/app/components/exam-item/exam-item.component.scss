@@ -158,39 +158,32 @@
     margin-left: 50px;
     position: relative;
 
-    .fia-vertical-line {
-      width: 3px;
-      background: rgba($fia-third-color-rgb, 0.25) !important;
-      border: none;
-      position: absolute;
-      top: -7px;
-      left: -36px;
-      bottom: 9px;
-
-      @include to-sm {
-        bottom: 26px;
-      }
-
-      @include to-md {
-        bottom: 41px;
-      }
-
-      @include to-xs {
-        bottom: 34px;
-      }
-    }
-
     .fia-lesson-wrapper {
       position: relative;
+
+      .fia-horizontal-line, .fia-vertical-line-1, .fia-vertical-line-2 {
+        border: none;
+        position: absolute;
+        background: rgba($fia-third-color-rgb, 0.25) !important;
+        left: -33px;
+      }
 
       .fia-horizontal-line {
         height: 3px;
         width: 33px;
-        background: rgba($fia-third-color-rgb, 0.25) !important;
-        border: none;
-        position: absolute;
         top: 10px;
-        left: -33px;
+      }
+
+      .fia-vertical-line-1 {
+        width: 3px;
+        top: 13px;
+        bottom: -2px;
+      }
+
+      .fia-vertical-line-2 {
+        height: 32px;
+        width: 3px;
+        top: -22px;
       }
     }
   }
