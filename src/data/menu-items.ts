@@ -26,61 +26,61 @@ import { MenuItem } from '../app/models/menu-item';
 export const subjects: MenuItem[] = [
   {
     title: 'Lernfeld 1',
-    shortTitle: 'LF 1',
+    shortTitle: 'LF-1',
     url: '/lf-1',
     icon: 'earth-outline'
   },
   {
     title: 'Lernfeld 2',
-    shortTitle: 'LF 2',
+    shortTitle: 'LF-2',
     url: '/lf-2',
     icon: 'business-outline'
   },
   {
     title: 'Lernfeld 3',
-    shortTitle: 'LF 3',
+    shortTitle: 'LF-3',
     url: '/lf-3',
     icon: 'pie-chart-outline',
   },
   {
     title: 'Lernfeld 4-1',
-    shortTitle: 'LF 4-1',
+    shortTitle: 'LF-4-1',
     url: '/lf-4-1',
     icon: 'flash-outline',
   },
   {
     title: 'Lernfeld 4-2',
-    shortTitle: 'LF 4-2',
+    shortTitle: 'LF-4-2',
     url: '/lf-4-2',
     icon: 'hardware-chip-outline',
   },
   {
     title: 'Lernfeld 5',
-    shortTitle: 'LF 5',
+    shortTitle: 'LF-5',
     url: '/lf-5',
     icon: 'code-slash-outline',
   },
   {
     title: 'Lernfeld 6',
-    shortTitle: 'LF 6',
+    shortTitle: 'LF-6',
     url: '/lf-6',
     icon: 'code-slash-outline',
   },
   {
     title: 'Lernfeld 7',
-    shortTitle: 'LF 7',
+    shortTitle: 'LF-7',
     url: '/lf-7',
     icon: 'git-network-outline',
   },
   {
     title: 'Lernfeld 8',
-    shortTitle: 'LF 8',
+    shortTitle: 'LF-8',
     url: '/lf-8',
     icon: 'swap-horizontal-outline',
   },
   {
     title: 'Lernfeld 9',
-    shortTitle: 'LF 9',
+    shortTitle: 'LF-9',
     url: '/lf-9',
     icon: 'globe-outline',
   },
@@ -104,7 +104,7 @@ export const subjects: MenuItem[] = [
   },
   {
     title: 'Deutsch',
-    shortTitle: 'Deu',
+    shortTitle: 'De',
     url: '/deutsch',
     icon: 'pencil-outline',
   },

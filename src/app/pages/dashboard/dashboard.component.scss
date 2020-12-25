@@ -66,3 +66,48 @@
   }
 
 }
+
+.fia-schedule {
+  .fia-view-wrapper {
+    display: flex;
+
+    @include to-sm {
+      flex-direction: column;
+    }
+
+    .fia-substitions-schedule {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include from-sm {
+        min-width: 150px;
+        border-left: 1px solid $fia-grey-4;
+        padding: 8px;
+        margin-left: 20px;
+      }
+
+      .fia-substitution-label, .fia-no-data {
+        padding: 0 10px;
+
+        @include from-sm {
+          margin-left: 12px;
+        }
+      }
+
+      .fia-substitution-label {
+        padding-bottom: 8px;
+        border-bottom: 1px solid $fia-grey-4;
+
+        @include to-sm {
+          margin-top: 20px;
+        }
+      }
+
+      .fia-no-data {
+        margin-top: 10px;
+        font-size: .9em;
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
   user: User;
   dashboard: DashboardData;
   schoolWeek: SchoolWeek;
+  scheduleSubstitutions = false;
 
   examplePost = {
     description: subjectsData[0].topics[0].links[1].description,

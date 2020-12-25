@@ -1,0 +1,81 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  tbody {
+    display: flex;
+
+    tr {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-of-type) {
+        border-right: 1px solid $fia-grey-4;
+      }
+
+      th {
+        border-bottom: 1px solid $fia-grey-4;
+
+        @include to-md {
+          font-size: .8em;
+        }
+      }
+
+      th, td {
+        padding: 8px;
+
+        @include to-md {
+          padding: 6px;
+        }
+      }
+
+      td {
+        display: flex;
+        flex-direction: column;
+        min-height: 40px;
+        justify-content: center;
+
+        @include to-md {
+          font-size: .9em;
+        }
+
+        .fia-hour-subject,
+        .fia-hour-teacher {
+        }
+
+        .fia-hour-subject {
+          @include from-sm {
+            min-width: 50px;
+          }
+        }
+
+        .fia-hour-teacher {
+          color: $fia-grey-1 !important;
+          font-size: .9em;
+          line-height: 12px;
+
+          @include to-md {
+            font-size: .8em;
+          }
+        }
+      }
+
+      .fia-schedule-header {
+        color: $fia-grey-1;
+      }
+
+      .fia-schedule-header,
+      .fia-schedule-time {
+      }
+
+      .fia-schedule-time {
+        @include to-xs {
+          font-size: .8em;
+        }
+      }
+    }
+  }
+}

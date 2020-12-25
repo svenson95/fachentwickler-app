@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { PostLinkComponent } from './post-link.component';
 import { PostBadgeModule } from '../post-badge/post-badge.module';
-import {RouterModule} from '@angular/router';
 
 
 

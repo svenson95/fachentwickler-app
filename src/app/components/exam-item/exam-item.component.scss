@@ -39,6 +39,10 @@
 
         @include to-xs {
           margin-right: 10px;
+          $size: 30px;
+          font-size: $size;
+          width: $size;
+          height: $size;
         }
       }
     }
@@ -69,6 +73,10 @@
 
         .date {
           width: 160px;
+
+          @include to-xs {
+            width: 150px;
+          }
 
           .bracket {
             color: $fia-third-color;
