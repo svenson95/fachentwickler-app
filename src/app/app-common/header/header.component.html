@@ -21,9 +21,9 @@
     </div>
     <div class="fia-searchbar-buttons-wrapper">
       <div class="fia-header-searchbar" *ngIf="!isMobile.matches">
-        <mat-form-field class="fia-search-bar" appearance="fill">
+        <mat-form-field class="fia-search-bar" appearance="fill" (change)="searchForPost($event)" (click)="openSearchView($event)">
           <mat-icon matSuffix>search</mat-icon>
-          <input matInput type="text" [(ngModel)]="searchValue" placeholder="Suche">
+          <input matInput type="text" [(ngModel)]="searchValue" placeholder="Suche" (keyup)="changeRoute($event)">
         </mat-form-field>
       </div>
       <div class="fia-button-container">

@@ -8,6 +8,7 @@ import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
+import { SearchPostService } from '../../services/data/search-post.service';
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 
 @Component({
@@ -29,6 +30,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
               public authService: AuthService,
               public loadingService: LoadingService,
               private sidenavService: SidenavService,
+              private searchPostService: SearchPostService,
               public dialog: MatDialog
   ) {}
 
@@ -64,6 +66,30 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     if (subjectUrl && this.router.url !== subjectUrl) {
       this.router.navigateByUrl(subjectUrl);
     }
+  }
+
+  openSearchView(event): void {
+    if (event.target.value !== '') {
+      this.router.navigateByUrl('search/' + event.target.value);
+    } else {
+      this.router.navigateByUrl('search');
+    }
+  }
+
+  searchForPost(event): void {
+    if (event.target.value !== '') {
+      this.searchPostService.searchPost(this.searchPostService.searchValue).subscribe((response) => {
+        this.searchPostService.searchResults$.next(response);
+      });
+    } else {
+      this.router.navigateByUrl('search');
+    }
+  }
+
+  changeRoute(event): void {
+    this.searchPostService.searchValue = event.target.value;
+    console.log('TARGET VALUE', event.target.value);
+    this.router.navigateByUrl('search' + (event.target.value !== '' ? `/${event.target.value}` : ''));
   }
 
 }

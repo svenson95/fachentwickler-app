@@ -128,7 +128,6 @@
         background: $fia-dark-card-color;
         border-radius: $fia-border-radius;
         width: 220px;
-        box-shadow: black 0 0 8px, black 0 0 8px;
 
         @include to-md {
           display: none;

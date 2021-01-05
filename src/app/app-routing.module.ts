@@ -125,6 +125,11 @@ const routes: Routes = [
     loadChildren: () => import('src/app/pages/exams/exams.module').then(m => m.ExamsModule),
     canActivate: [AuthGuardService]
   },
+  {
+    path: 'search',
+    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule),
+    canActivate: [AuthGuardService]
+  },
   // {
   //   path: '**',
   //   redirectTo: '/login'

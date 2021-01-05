@@ -1,0 +1,17 @@
+<div class="fia-page">
+  <mat-card class="fia-card">
+    <p class="fia-card-title">Ergebnisse</p>
+    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading && searchPostService.searchValue !== undefined"></mat-spinner>
+    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue === undefined">
+      Suchbegriff eingeben
+    </p>
+    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue !== undefined && !isLoading">
+      Nichts gefunden
+    </p>
+    <mat-card-content>
+      <div class="fia-search-results">
+        <app-post-link *ngFor="let post of searchResults" [post]="post"></app-post-link>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
