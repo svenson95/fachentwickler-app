@@ -276,6 +276,7 @@
         .fia-action-btn {
           margin-left: 5px;
           margin-right: 0;
+          background: $fia-dark-card-color;
 
           @include to-xs {
             margin-left: 0;
@@ -283,7 +284,9 @@
           }
 
           &:hover, &:focus {
-            background: transparent;
+            :not(.fia-hover-label) {
+              color: $fia-secondary-color;
+            }
           }
 
           .fia-hover-label {
