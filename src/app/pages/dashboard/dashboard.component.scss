@@ -96,8 +96,9 @@
       }
 
       .fia-substitution-label {
+        color: white;
         padding-bottom: 8px;
-        border-bottom: 1px solid $fia-grey-4;
+        border-bottom: 1px solid $fia-grey-1;
 
         @include to-sm {
           margin-top: 20px;
@@ -109,5 +110,14 @@
         font-size: .9em;
       }
     }
+  }
+}
+
+::ng-deep .light-theme {
+  .fia-schedule-time, .fia-hour-subject, .fia-substitution-label {
+    color: black !important;
+  }
+  .fia-substitution-label {
+    border-color: $fia-grey-4 !important;
   }
 }

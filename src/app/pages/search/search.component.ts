@@ -1,10 +1,10 @@
-import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { delay } from 'rxjs/operators';
+
 import { HeaderService } from '../../services/header.service';
 import { SearchPostService } from '../../services/data/search-post.service';
-import { SubjectPost } from '../../models/subject';
-import {delay} from 'rxjs/operators';
-import {Subscription} from 'rxjs';
-import {LoadingService} from '../../services/loading.service';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-search',
@@ -24,10 +24,6 @@ export class SearchComponent implements OnInit, AfterViewInit, OnDestroy {
               public searchPostService: SearchPostService
   ) {
     this.headerService.setPageTitle('Suche');
-    // this.searchPostService.searchResults.subscribe(value => {
-    //   this.searchResults = value;
-    //   console.log('searchResults', this.searchResults);
-    // });
   }
 
   ngOnInit(): void {
@@ -37,7 +33,6 @@ export class SearchComponent implements OnInit, AfterViewInit, OnDestroy {
     this.resultsSubscription = this.searchPostService.searchResults$.pipe(delay(0)).subscribe(
       (posts) => {
         this.searchResults = posts;
-        console.log('POSTS', posts);
       }
     );
 

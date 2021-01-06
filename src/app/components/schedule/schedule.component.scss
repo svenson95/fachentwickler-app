@@ -1,7 +1,7 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
-.fia-table {
+.fia-schedule-table {
   border-collapse: collapse;
   table-layout: fixed;
 
@@ -13,11 +13,12 @@
       flex-direction: column;
 
       &:not(:last-of-type) {
-        border-right: 1px solid $fia-grey-4;
+        border-right: 1px solid $fia-grey-1;
       }
 
       th {
-        border-bottom: 1px solid $fia-grey-4;
+        min-height: 20px;
+        border-bottom: 1px solid $fia-grey-1;
 
         @include to-md {
           font-size: .8em;
@@ -37,6 +38,7 @@
         flex-direction: column;
         min-height: 40px;
         justify-content: center;
+        text-align: center;
 
         @include to-md {
           font-size: .9em;
@@ -47,8 +49,14 @@
         }
 
         .fia-hour-subject {
+          color: white;
+
           @include from-sm {
             min-width: 50px;
+          }
+
+          @include to-sm {
+            white-space: nowrap;
           }
         }
 
@@ -72,10 +80,27 @@
       }
 
       .fia-schedule-time {
+        text-align: left;
+        color: white;
+
+        @include from-xs {
+          min-width: 50px;
+        }
+
         @include to-xs {
-          font-size: .8em;
+          font-size: .7em;
         }
       }
     }
+  }
+}
+
+::ng-deep .light-theme .fia-schedule-table {
+  tr, th {
+    border-color: $fia-grey-4 !important;
+  }
+
+  td, span {
+    color: black !important;
   }
 }

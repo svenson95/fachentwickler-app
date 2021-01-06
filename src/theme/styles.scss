@@ -76,7 +76,7 @@ button {
 }
 
 .mat-app-background {
-  background-color: black;
+  background-color: $fia-dark-header-color;
   color: white;
 }
 
@@ -235,6 +235,9 @@ a {
 
 /* FIAPPY - INPUT - <mat-form-field> */
 .fia-input {
+  &.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 0;
+  }
 
   .mat-form-field-label {
     color: $fia-grey-1;
@@ -252,8 +255,9 @@ a {
 }
 
 /* FIAPPY - MENU - <mat-menu> */
-.mat-menu-panel {
+::ng-deep .mat-menu-panel {
   background-color: white;
+  border-radius: 0;
 }
 
 /* FIAPPY - UNDERLINE BUTTON ANIMATION */

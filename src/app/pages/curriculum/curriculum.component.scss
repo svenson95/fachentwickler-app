@@ -12,6 +12,10 @@
   }
 }
 
-.fia-loading-spinner {
-  margin: 110px auto 130px !important;
+.fia-spinner-wrapper {
+  max-width: 1065px;
+
+  .fia-loading-spinner {
+    margin: 110px auto 130px !important;
+  }
 }

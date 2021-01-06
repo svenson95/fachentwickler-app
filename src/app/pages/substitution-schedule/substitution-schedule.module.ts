@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SubstitutionScheduleComponent } from './substitution-schedule.component';
 import { SubstitutionScheduleRoutingModule } from './substitution-schedule-routing.module';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { ScheduleModule } from '../../components/schedule/schedule.module';
 
 
 
@@ -11,7 +12,8 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
   imports: [
     CommonModule,
     SubstitutionScheduleRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    ScheduleModule
   ]
 })
 export class SubstitutionScheduleModule { }

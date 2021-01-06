@@ -34,6 +34,7 @@
         height: $size;
 
         @include from-xs {
+          margin-top: 7px;
           margin-right: 15px;
         }
 
@@ -67,7 +68,12 @@
           margin-bottom: 0;
 
           @include from-xs {
+            line-height: 16px;
             margin-bottom: 1px;
+          }
+
+          @include to-xs {
+            line-height: 14px;
           }
         }
 
@@ -121,8 +127,12 @@
         letter-spacing: 1px;
         margin-bottom: 0;
 
-        @include to-xs {
+        @include from-xs {
           font-size: .9em;
+        }
+
+        @include to-xs {
+          font-size: .8em;
         }
       }
 
@@ -137,7 +147,7 @@
       }
 
       .fia-exam-title {
-        font-size: 1.1em;
+        font-size: 1em;
         letter-spacing: 1px;
         flex-grow: 1;
 
@@ -146,7 +156,7 @@
         }
 
         @include to-xs {
-          font-size: 1em;
+          font-size: .9em;
         }
       }
     }
@@ -165,13 +175,27 @@
         border: none;
         position: absolute;
         background: rgba($fia-third-color-rgb, 0.25) !important;
-        left: -33px;
+
+        @include from-xs {
+          left: -38px;
+        }
+
+        @include to-xs {
+          left: -42px;
+        }
       }
 
       .fia-horizontal-line {
         height: 3px;
-        width: 33px;
         top: 10px;
+
+        @include from-xs {
+          width: 38px;
+        }
+
+        @include to-xs {
+          width: 42px;
+        }
       }
 
       .fia-vertical-line-1 {
@@ -181,8 +205,8 @@
       }
 
       .fia-vertical-line-2 {
-        height: 32px;
         width: 3px;
+        height: 32px;
         top: -22px;
       }
     }

@@ -1,2 +1,11 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
+
+.fia-card {
+  .fia-schedule-content {
+
+    td {
+      color: black;
+    }
+  }
+}

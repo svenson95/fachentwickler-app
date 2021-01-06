@@ -4,32 +4,11 @@
 .fia-page-footer {
   height: fit-content;
   position: relative;
-  background: $fia-dark-background-color;
+  background: $fia-dark-header-color;
   padding: 35px 40px;
 
   @include to-xs {
     padding: 20px 0 60px;
-  }
-
-  .fia-background-view {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-
-    &.first {
-      background-color: $fia-dark-background-color;
-      z-index: 1;
-    }
-    &.second {
-      background-color: black;
-      z-index: 2;
-
-      @include from-xs {
-        border-top-left-radius: $fia-border-radius;
-      }
-    }
   }
 
   .fia-labels-wrapper {

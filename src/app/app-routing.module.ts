@@ -15,7 +15,7 @@ const subjectsPaths = (): Array<Route> => {
   return subjects;
 };
 
-const postPaths = () => {
+const postPaths = (): Array<Route> => {
   const posts: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
     posts.push({
@@ -26,7 +26,7 @@ const postPaths = () => {
   return posts;
 };
 
-const indexCardsPaths = () => {
+const indexCardsPaths = (): Array<Route> => {
   const indexCards: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
     indexCards.push({
@@ -37,7 +37,7 @@ const indexCardsPaths = () => {
   return indexCards;
 };
 
-const quizPaths = () => {
+const quizPaths = (): Array<Route> => {
   const quizzes: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
     quizzes.push({

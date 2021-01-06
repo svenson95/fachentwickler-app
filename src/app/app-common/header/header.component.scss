@@ -3,9 +3,9 @@
 
 .fia-header {
   justify-content: space-between;
-  background: black;
+  background: $fia-dark-header-color;
   height: 80px;
-  max-width: 1400px;
+  max-width: 1370px;
 
   @include from-md {
     padding: 0 20px;
@@ -27,13 +27,24 @@
 
     @include from-xs {
       margin-left: 10px;
-      margin-right: 40px;
+      margin-right: 10px;
     }
 
     @include to-xs {
       margin-left: 10px;
       margin-right: 10px;
-      padding: 0;
+      padding: 5px;
+
+      border: 1px solid $fia-third-color;
+      border-radius: 6px;
+
+      &.active-route {
+        border-color: $fia-secondary-color;
+
+        .fia-app-icon {
+          color: $fia-secondary-color !important;
+        }
+      }
     }
 
     h1.fia-app-name {
@@ -69,16 +80,8 @@
         color: $fia-third-color;
 
         @include to-xs {
-          height: 24px;
+          height: 20px;
         }
-      }
-    }
-
-    .active-route {
-      border-color: $fia-secondary-color;
-
-      .fia-app-icon {
-        color: $fia-secondary-color;
       }
     }
 
@@ -179,6 +182,7 @@
     .fia-page-title {
       display: flex;
       align-items: center;
+      margin-left: 18px;
       margin-right: 15px;
       padding: 6px 10px;
 
@@ -187,21 +191,18 @@
       letter-spacing: 1px;
       text-transform: uppercase;
 
-      @include from-sm {
-        margin-left: 20px;
-      }
-
-      @include from-md {
-
+      @include to-sm {
+        margin-left: 0;
       }
 
       @include to-md {
-        margin-left: 3px;
+        margin-left: 10px;
         padding: 6px 0;
         flex-shrink: 1;
       }
 
       @include to-xs {
+        margin-left: 3px;
         padding: 0;
       }
 

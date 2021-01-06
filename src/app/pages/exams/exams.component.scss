@@ -73,6 +73,29 @@
       }
     }
 
+    ::ng-deep .fia-exam-item {
+      .fia-lesson-wrapper {
+        .fia-horizontal-line, .fia-vertical-line-1, .fia-vertical-line-2 {
+          @include from-xs {
+            left: -27px !important;
+          }
+          @include to-xs {
+            left: -30px !important;
+          }
+        }
+
+        .fia-horizontal-line {
+          @include from-xs {
+            width: 27px !important;
+          }
+
+          @include to-xs {
+            width: 30px !important;
+          }
+        }
+      }
+    }
+
     .fia-no-data {
       padding: 10px;
     }
@@ -85,15 +108,15 @@
   align-items: self-end !important;
 
   .fia-icon-details {
-    margin-left: 0 !important;
-    padding-left: 10px !important;
+    margin-left: -20px !important;
+    //padding-left: 10px !important;
   }
 
   .fia-exam-title-wrapper {
     margin-bottom: 5px;
 
     .fia-exam-subject, .fia-exam-title {
-      margin-left: 15px !important;
+      margin-left: 10px !important;
     }
   }
 }
