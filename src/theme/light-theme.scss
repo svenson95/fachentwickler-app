@@ -346,9 +346,7 @@
     color: white !important;
 
     &:hover {
-      @include from-md {
-        //color: black !important;
-      }
+      color: white !important;
     }
   }
 

@@ -37,13 +37,11 @@
 
       border: 1px solid $fia-third-color;
       border-radius: 6px;
+    }
 
-      &.active-route {
-        border-color: $fia-secondary-color;
-
-        .fia-app-icon {
-          color: $fia-secondary-color !important;
-        }
+    &.active-route {
+      .fia-app-icon {
+        color: $fia-secondary-color !important;
       }
     }
 

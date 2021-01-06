@@ -3,15 +3,29 @@
   <div class="fia-my-class-section" *ngIf="authService.isAuthenticated">
     <p class="section-title">Meine Klasse</p>
     <mat-nav-list>
-      <a class="fia-nav-item" mat-list-item disableRipple
+      <div class="fia-nav-item-wrapper"
          *ngFor="let navItem of myClassSection"
-         [routerLink]="'/' + navItem.url"
-         (click)="closeSidebar()"
-         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
-        <span [innerHTML]="navItem.title"></span>
-      </a>
+        <a class="fia-nav-item" mat-list-item disableRipple
+           *ngIf="navItem.url.startsWith('http://')"
+           (click)="closeSidebar()"
+           [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
+           [href]="navItem.url"
+           target="_blank"
+        >
+          <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+          <span [innerHTML]="navItem.title"></span>
+        </a>
+        <a class="fia-nav-item" mat-list-item disableRipple
+           *ngIf="!navItem.url.startsWith('http://')"
+           (click)="closeSidebar()"
+           [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
+           [routerLink]="'/' + navItem.url"
+        >
+          <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+          <span [innerHTML]="navItem.title"></span>
+        </a>
+      </div>
     </mat-nav-list>
   </div>
 
@@ -24,7 +38,7 @@
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
+        <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
@@ -39,7 +53,7 @@
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <ion-icon class="fia-nav-item-icon" [name]="navItem.icon"></ion-icon>
+        <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>

@@ -50,6 +50,11 @@ export class ExamsComponent implements OnInit, AfterViewInit {
   fetchData(): void {
     this.dataService.getExamDates().subscribe(
       (response) => {
+        response.sort((a, b) => {
+          if (a.date > b.date) { return 1; }
+          if (a.date < b.date) { return -1; }
+          return 0;
+        });
         this.allExams = response;
       }, (error) => {
         this.allExams = null;
@@ -63,22 +68,23 @@ export class ExamsComponent implements OnInit, AfterViewInit {
     const FORWARD_BUTTON = document.querySelector('.mat-calendar-next-button');
     if (BACK_BUTTON) {
       this.renderer.listen(BACK_BUTTON, 'click', () => {
-        console.log(this.dateAdapter.today());
-        if (this.calendarDate.getMonth() === 0) {
+        const month = this.calendarDate.getMonth() as number;
+        if (month === 0) {
           this.calendarDate.setFullYear(this.calendarDate.getFullYear() - 1);
           this.calendarDate.setMonth(11);
         } else {
-          this.calendarDate.setMonth(this.calendarDate.getMonth() - 1);
+          this.calendarDate.setMonth(month - 1);
         }
       });
     }
     if (FORWARD_BUTTON) {
       this.renderer.listen(FORWARD_BUTTON, 'click', () => {
-        if (this.calendarDate.getMonth() === 11) {
+        const month = this.calendarDate.getMonth() as number;
+        if (month === 11) {
           this.calendarDate.setFullYear(this.calendarDate.getFullYear() + 1);
           this.calendarDate.setMonth(0);
         } else {
-          this.calendarDate.setMonth(this.calendarDate.getMonth() + 1);
+          this.calendarDate.setMonth(month + 1);
         }
       });
     }
@@ -92,7 +98,7 @@ export class ExamsComponent implements OnInit, AfterViewInit {
           this.calendarDate.setMonth(this.calendarDate.getMonth() - 1);
         }
       });
-    }
+    };
   }
 
   /* -- Component functions -- */

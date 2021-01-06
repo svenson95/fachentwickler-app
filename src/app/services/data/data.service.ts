@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Subject, SubjectPost } from '../../models/subject';
 import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
+
 import { Post } from '../../models/post';
 import { IndexCardsData } from '../../models/index-cards';
 import { QuizData } from '../../models/quiz';
@@ -103,7 +104,7 @@ export class DataService {
   getSchoolWeek(week: number): Observable<SchoolWeek> {
     return this.httpClient.get<SchoolWeek>(`${environment.baseUrl}/posts/school-week/` + week)
       .pipe(map((response) => {
-        console.log('response GET posts/school-week/:number', response);
+        // console.log('response GET posts/school-week/:number', response);
         return response;
     }));
   }
@@ -112,15 +113,16 @@ export class DataService {
   getAllWeeks(): Observable<SchoolWeek[]> {
     return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/posts/all-school-weeks`)
       .pipe(map((response) => {
-        console.log('response GET posts/all-school-weeks', response);
+        // console.log('response GET posts/all-school-weeks', response);
         return response;
       }));
   }
 
+  // Exams page & Next-exams-card component - GET all exam dates
   getExamDates(): Observable<ExamDate[]> {
     return this.httpClient.get<ExamDate[]>(`${environment.baseUrl}/exam-dates`)
       .pipe(map((response) => {
-        console.log('response GET exam-dates', response);
+        // console.log('response GET exam-dates', response);
         return response;
       }));
   }
