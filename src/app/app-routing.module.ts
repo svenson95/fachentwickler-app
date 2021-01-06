@@ -111,6 +111,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
+    path: 'mitteilungen/:url',
+    loadChildren: () => import('src/app/pages/news-article/news-article.module').then(m => m.NewsArticleModule),
+    canActivate: [AuthGuardService]
+  },
+  {
     path: 'lehrplan',
     loadChildren: () => import('src/app/pages/curriculum/curriculum.module').then(m => m.CurriculumModule),
     canActivate: [AuthGuardService]

@@ -1,17 +1,18 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
 import { HeaderService } from '../../services/header.service';
 import { SearchPostService } from '../../services/data/search-post.service';
 import { LoadingService } from '../../services/loading.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit, AfterViewInit, OnDestroy {
+export class SearchComponent implements OnInit, OnDestroy {
 
   resultsSubscription: Subscription;
   searchResults = [];
@@ -21,15 +22,13 @@ export class SearchComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(private headerService: HeaderService,
               private loadingService: LoadingService,
-              public searchPostService: SearchPostService
+              public searchPostService: SearchPostService,
+              private router: Router
   ) {
     this.headerService.setPageTitle('Suche');
   }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
     this.resultsSubscription = this.searchPostService.searchResults$.pipe(delay(0)).subscribe(
       (posts) => {
         this.searchResults = posts;
@@ -41,6 +40,16 @@ export class SearchComponent implements OnInit, AfterViewInit, OnDestroy {
         this.isLoading = status;
       }
     );
+
+    if (this.searchResults.length === 0) {
+      const searchValue = this.router.url.substring(8, this.router.url.length);
+      if (searchValue !== '') {
+        this.searchPostService.searchValue = searchValue;
+        this.searchPostService.searchPosts(searchValue).subscribe((response) => {
+          this.searchPostService.searchResults$.next(response);
+        });
+      }
+    }
   }
 
   ngOnDestroy(): void {

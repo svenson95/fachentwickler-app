@@ -1,0 +1,28 @@
+<mat-card class="fia-card">
+  <div class="fia-card-header">
+    <p class="fia-card-title">{{onlyLastOne === true ? 'Letzte Mitteilung' : 'Ankündigungen'}}</p>
+    <button class="fia-button show-more" routerLink="/mitteilungen" *ngIf="onlyLastOne === true">Mitteilungen</button>
+  </div>
+  <mat-card-content class="fia-view-wrapper">
+    <div class="fia-news-container">
+      <ng-container *ngIf="onlyLastOne === true && newsList !== undefined && newsList.length !== undefined">
+        <div class="fia-news-item">
+          <div class="fia-news-header">
+            <p class="date">{{newsList[0].date | date:'dd.MM.yyyy'}}</p>
+            <p class="title">{{newsList[0].title}}</p>
+          </div>
+          <a class="fia-button" [routerLink]="'/mitteilungen/' + newsList[0]?.url">Lesen</a>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="onlyLastOne === undefined">
+        <div class="fia-news-item" *ngFor="let news of newsList">
+          <div class="fia-news-header">
+            <p class="date">{{news.date | date:'dd.MM.yyyy'}}</p>
+            <p class="title">{{news.title}}</p>
+          </div>
+          <a class="fia-button" [routerLink]="'/mitteilungen/' + news.url">Lesen</a>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card-content>
+</mat-card>

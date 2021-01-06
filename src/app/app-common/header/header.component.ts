@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   isLoading = false;
 
   @Input() isMobile;
-  @Input('searchValue') searchValue;
   @Input('sidenav') sidenav;
 
   constructor(public router: Router,
@@ -30,7 +29,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
               public authService: AuthService,
               public loadingService: LoadingService,
               private sidenavService: SidenavService,
-              private searchPostService: SearchPostService,
+              public searchPostService: SearchPostService,
               public dialog: MatDialog
   ) {}
 
@@ -77,8 +76,8 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   searchForPost(event): void {
-    if (event.target.value !== '') {
-      this.searchPostService.searchPost(this.searchPostService.searchValue).subscribe((response) => {
+    if (event.target.value !== '' && !this.isLoading) {
+      this.searchPostService.searchPosts(this.searchPostService.searchValue).subscribe((response) => {
         this.searchPostService.searchResults$.next(response);
       });
     } else {
@@ -88,8 +87,13 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
   changeRoute(event): void {
     this.searchPostService.searchValue = event.target.value;
-    console.log('TARGET VALUE', event.target.value);
     this.router.navigateByUrl('search' + (event.target.value !== '' ? `/${event.target.value}` : ''));
+
+    if (event.target.value !== '' && !this.isLoading) {
+      this.searchPostService.searchPosts(this.searchPostService.searchValue).subscribe((response) => {
+        this.searchPostService.searchResults$.next(response);
+      });
+    }
   }
 
 }

@@ -21,7 +21,6 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
   /* -- Post search variables -- */
-  searchbarValue: string;
   searchbarFormgroup: FormGroup;
   searchbarHideRequiredControl = new FormControl(false);
   searchbarFloatLabelControl = new FormControl('auto');

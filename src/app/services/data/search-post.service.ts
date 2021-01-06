@@ -16,7 +16,7 @@ export class SearchPostService {
   constructor(private httpClient: HttpClient) { }
 
   // Search component - GET post
-  searchPost(text: string): Observable<SubjectPost[]> {
+  searchPosts(text: string): Observable<SubjectPost[]> {
     return this.httpClient.get<SubjectPost[]>(`${environment.baseUrl}/search/${text}`)
       .pipe(map((response) => {
         console.log('response GET search post', response);

@@ -1,11 +1,11 @@
 <div class="fia-page">
   <mat-card class="fia-card">
     <p class="fia-card-title">Ergebnisse</p>
-    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading && searchPostService.searchValue !== undefined"></mat-spinner>
-    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue === undefined">
+    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading"></mat-spinner>
+    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue === ''">
       Suchbegriff eingeben
     </p>
-    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue !== undefined && !isLoading">
+    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue !== '' && !isLoading">
       Nichts gefunden
     </p>
     <mat-card-content>

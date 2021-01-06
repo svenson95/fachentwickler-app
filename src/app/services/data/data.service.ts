@@ -11,6 +11,7 @@ import { QuizData } from '../../models/quiz';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 import { ExamDate } from '../../models/exam-date';
+import { SchoolNews } from '../../models/school-news';
 
 @Injectable({
   providedIn: 'root'
@@ -123,6 +124,24 @@ export class DataService {
     return this.httpClient.get<ExamDate[]>(`${environment.baseUrl}/exam-dates`)
       .pipe(map((response) => {
         // console.log('response GET exam-dates', response);
+        return response;
+      }));
+  }
+
+  // Messages & Dashboard page - GET all news
+  getNewsList(): Observable<SchoolNews[]> {
+    return this.httpClient.get<SchoolNews[]>(`${environment.baseUrl}/news`)
+      .pipe(map((response) => {
+        // console.log('response GET news', response);
+        return response;
+      }));
+  }
+
+  // Messages & Dashboard page - GET specific news object
+  getNewsObject(url: string): Observable<SchoolNews> {
+    return this.httpClient.get<SchoolNews>(`${environment.baseUrl}/news/${url}`)
+      .pipe(map((response) => {
+        // console.log('response GET news object', response);
         return response;
       }));
   }
