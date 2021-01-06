@@ -94,30 +94,6 @@
           text-align: right;
         }
       }
-
-      .fia-show-lessons-btn {
-        background: $fia-third-color;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        padding: 4px 8px;
-
-        color: black;
-        font-size: .8em;
-        font-family: Raleway-Bold, sans-serif;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-
-        &.is-open {
-          background: rgba($fia-grey-1, 0.5);
-        }
-
-        &:hover {
-          @include from-md {
-            //color: white;
-          }
-        }
-      }
     }
 
     .fia-exam-title-wrapper {

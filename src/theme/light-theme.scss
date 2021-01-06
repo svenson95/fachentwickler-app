@@ -342,13 +342,12 @@
     }
   }
 
-    .fia-show-lessons-btn {
-      color: white !important;
+  .fia-button {
+    color: white !important;
 
-      &:hover {
-        @include from-md {
-          //color: black !important;
-        }
+    &:hover {
+      @include from-md {
+        //color: black !important;
       }
     }
   }
