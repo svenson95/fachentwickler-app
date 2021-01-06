@@ -89,7 +89,7 @@ button {
 /* FIAPPY - PAGE */
 .fia-page {
   background: $fia-dark-background-color;
-  padding: 30px 20px 20px 0;
+  padding: 20px 20px 20px 0;
 
   @include to-xs {
     padding-top: 30px;
@@ -121,7 +121,7 @@ a {
 
 /* FIAPPY - CARDS */
 .fia-card {
-  max-width: 1065px;
+  max-width: 1067px;
   background: $fia-dark-card-color;
   padding: 20px;
   box-shadow: $fia-dark-shadow;
@@ -139,7 +139,7 @@ a {
   }
 
   .fia-card-title {
-    font-size: 1.7em;
+    font-size: 1.6em;
     font-family: Raleway-Light, sans-serif;
     letter-spacing: 1px;
     line-height: 26px;

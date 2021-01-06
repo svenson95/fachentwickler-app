@@ -5,6 +5,7 @@
   </div>
   <mat-card-content class="fia-view-wrapper">
     <div class="fia-news-container">
+      <mat-spinner class="fia-loading-spinner" *ngIf="newsList === undefined"></mat-spinner>
       <ng-container *ngIf="onlyLastOne === true && newsList !== undefined && newsList.length !== undefined">
         <div class="fia-news-item">
           <div class="fia-news-header">

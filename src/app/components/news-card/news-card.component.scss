@@ -16,7 +16,13 @@
 }
 
 .fia-news-container {
-  margin-top: 10px !important;
+  @include from-xs {
+    margin-top: 20px !important;
+  }
+
+  @include to-xs {
+    margin-top: 10px !important;
+  }
 
   .fia-news-item {
     display: flex;
@@ -45,6 +51,12 @@
         @include to-xs {
           min-width: 55px;
         }
+      }
+
+      .title {
+        margin-right: 10px;
+        align-self: center;
+        line-height: 12px;
       }
 
       .date, .title {
@@ -83,13 +95,26 @@
 
 ::ng-deep .light-theme {
   .fia-card-header .fia-button.show-more {
-    color: $fia-grey-3 !important;
-    border-color: $fia-grey-3 !important;
+    color: $fia-grey-2 !important;
+    border-color: $fia-grey-2 !important;
   }
 
   .fia-news-container {
     .fia-news-item:not(:last-of-type) {
       border-color: $fia-grey-4 !important;
     }
+  }
+}
+
+.fia-loading-spinner {
+
+  @include from-xs {
+    margin-top: -12px !important;
+    margin-bottom: 4px !important;
+  }
+
+  @include to-xs {
+    margin-top: -10px !important;
+    margin-bottom: 2px !important;
   }
 }

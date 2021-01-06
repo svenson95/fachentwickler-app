@@ -40,6 +40,10 @@
     }
 
     &.active-route {
+      @include to-xs {
+        border-color: $fia-secondary-color !important;
+      }
+
       .fia-app-icon {
         color: $fia-secondary-color !important;
       }
@@ -180,7 +184,7 @@
     .fia-page-title {
       display: flex;
       align-items: center;
-      margin-left: 18px;
+      margin-left: 19px;
       margin-right: 15px;
       padding: 6px 10px;
 

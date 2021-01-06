@@ -49,7 +49,7 @@ export class DataService {
   getSubjectPosts(postIdsString: string): Observable<SubjectPost[]> {
     return this.httpClient.get<SubjectPost[]>(`${environment.baseUrl}/subjects/posts/${postIdsString}`)
       .pipe(map((response) => {
-        console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
+        // console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
         return response;
       }));
   }
@@ -78,7 +78,7 @@ export class DataService {
   getQuiz(postUrl: string): Observable<QuizData> {
     return this.httpClient.get<QuizData>(`${environment.baseUrl}/quiz/${postUrl}`)
       .pipe(map((response) => {
-        console.log('response GET quiz', response);
+        // console.log('response GET quiz', response);
         return response;
       }));
   }

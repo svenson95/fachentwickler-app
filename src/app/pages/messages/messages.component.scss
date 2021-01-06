@@ -5,7 +5,7 @@
 .fia-card {
   .fia-view-wrapper {
     margin-top: 40px;
-    font-size: 1.1em;
+    font-size: 1em;
 
     @include to-xs {
       font-size: 1em;
@@ -20,20 +20,15 @@
 
       .key, .value {
         margin: 0;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding: 10px;
       }
 
       .key {
         @include from-xs {
-          padding-left: 20px;
-          padding-right: 20px;
           min-width: 130px;
         }
 
         @include to-xs {
-          padding-left: 10px;
-          padding-right: 10px;
           min-width: 90px;
         }
       }
@@ -42,16 +37,6 @@
         color: $fia-primary-color;
         border-left: 1px solid $fia-grey-1;
         outline: none;
-
-        @include from-xs {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        @include to-xs {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
 
         &:hover {
           color: white;
