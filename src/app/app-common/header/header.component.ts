@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
-import { delay } from 'rxjs/operators';
+import { fromEvent, Subscription } from 'rxjs';
+import { debounceTime, delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @Input() isMobile;
   @Input('sidenav') sidenav;
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   constructor(public router: Router,
               public headerService: HeaderService,
@@ -41,10 +42,26 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
         this.isLoading = status;
       }
     );
+    this.debounceSearchInput();
   }
 
   ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
+  }
+
+  debounceSearchInput(): void {
+    fromEvent(this.searchInput.nativeElement,'keyup')
+      .pipe(
+        filter(Boolean),
+        tap(() => {
+          this.searchPostService.searchValue = this.searchInput.nativeElement.value;
+          this.router.navigateByUrl('search' + (this.searchInput.nativeElement.value !== '' ? `/${this.searchInput.nativeElement.value}` : ''));
+        }),
+        debounceTime(500),
+        distinctUntilChanged(),
+        tap(this.searchForPost)
+      )
+      .subscribe();
   }
 
   async openLogoutDialog(): Promise<void> {
@@ -68,29 +85,16 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   openSearchView(event): void {
-    if (event.target.value !== '') {
+    if (event.target.value !== '' && event.target.value !== undefined) {
       this.router.navigateByUrl('search/' + event.target.value);
     } else {
       this.router.navigateByUrl('search');
     }
   }
 
-  searchForPost(event): void {
-    if (event.target.value !== '' && !this.isLoading) {
-      this.searchPostService.searchPosts(this.searchPostService.searchValue).subscribe((response) => {
-        this.searchPostService.searchResults$.next(response);
-      });
-    } else {
-      this.router.navigateByUrl('search');
-    }
-  }
-
-  changeRoute(event): void {
-    this.searchPostService.searchValue = event.target.value;
-    this.router.navigateByUrl('search' + (event.target.value !== '' ? `/${event.target.value}` : ''));
-
-    if (event.target.value !== '' && !this.isLoading) {
-      this.searchPostService.searchPosts(this.searchPostService.searchValue).subscribe((response) => {
+  searchForPost(): void {
+    if (!this.isLoading) {
+      this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
         this.searchPostService.searchResults$.next(response);
       });
     }
