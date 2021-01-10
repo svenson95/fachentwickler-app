@@ -53,10 +53,6 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     fromEvent(this.searchInput.nativeElement,'keyup')
       .pipe(
         filter(Boolean),
-        tap(() => {
-          this.searchPostService.searchValue = this.searchInput.nativeElement.value;
-          this.router.navigateByUrl('search' + (this.searchInput.nativeElement.value !== '' ? `/${this.searchInput.nativeElement.value}` : ''));
-        }),
         debounceTime(500),
         distinctUntilChanged(),
         tap(this.searchForPost)
@@ -84,9 +80,9 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-  openSearchView(event): void {
-    if (event.target.value !== '' && event.target.value !== undefined) {
-      this.router.navigateByUrl('search/' + event.target.value);
+  openSearchView(): void {
+    if (this.searchInput.nativeElement.value !== '' && this.searchInput.nativeElement.value !== undefined) {
+      this.router.navigateByUrl('search/' + this.searchInput.nativeElement.value);
     } else {
       this.router.navigateByUrl('search');
     }
