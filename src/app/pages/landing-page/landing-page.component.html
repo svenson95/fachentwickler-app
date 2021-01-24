@@ -15,9 +15,9 @@
   <div class="fia-landing-row start">
     <div class="fia-text-column">
       <mat-icon class="fia-leaderboard-icon">leaderboard</mat-icon>
-      <p class="fia-title">Prüfungsvorbereitung</p>
+      <p class="fia-title">Registriere dich und lerne für die Prüfung</p>
       <p class="fia-description">
-        Geh jede Unterrichtsstunde nochmal durch.
+        Lernplattform für die schulische Ausbildung zum Fachinformatiker für Anwendungsentwicklung.
       </p>
     </div>
     <button class="fia-text-button second-color" routerLink="login">
@@ -25,70 +25,76 @@
     </button>
   </div>
   <div class="fia-landing-row first">
-    <div class="fia-text-column">
-      <img class="fia-eduaction-svg" src="../../../assets/images/education.svg" alt="education-svg">
-      <div class="fia-text-wrapper">
-        <p class="fia-title">Unterrichtstool für die Schule</p>
-        <p class="fia-description">
-          Alle Inhalte des Lehrplans in digitaler Form.<br/>
-          Unterstützung zum Unterricht für Schüler und Lehrer.<br/>
-          Verpasse keine anstehenden Klassenarbeiten und Mitteilungen mehr.
-        </p>
+    <div class="fia-text-row">
+      <div class="fia-text-column">
+        <img class="fia-eduaction-svg" src="../../../assets/images/education.svg" alt="education-svg">
+        <div class="fia-text-wrapper">
+          <p class="fia-title">Unterrichtstool für die Schule</p>
+          <p class="fia-description">
+            Unterstützung zum Unterricht für Schüler und Lehrer.<br/>
+            Verpasse keine anstehenden Klassenarbeiten und Mitteilungen mehr.
+          </p>
+        </div>
+      </div>
+      <div class="fia-text-column">
+        <img class="fia-study-svg" src="../../../assets/images/study.svg" alt="study-svg">
+        <div class="fia-text-wrapper">
+          <p class="fia-title">Besser auf Tests vorbereiten</p>
+          <p class="fia-description">
+            Alle Inhalte des Lehrplans in digitaler Form.<br/>
+            Keine Unklarheiten mehr über die Themen der nächsten Klassenarbeit.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="fia-image-wrapper">
-      <img class="fia-landing-image example-1" src="../../../assets/images/landing-example-1.png" alt="example-1"/>
+    <div class="fia-components-wrapper">
+      <app-news-card [onlyLastOne]="true"></app-news-card>
+      <app-next-exams-card></app-next-exams-card>
+      <app-user-progress-card [user]="testUser" [dashboard]="testDashboard"></app-user-progress-card>
+<!--      <img class="fia-landing-image example-1" src="../../../assets/images/landing-example-1.png" alt="example-1"/>-->
     </div>
   </div>
   <div class="fia-landing-row second">
-    <div class="fia-image-wrapper">
-      <img class="fia-landing-image example-2" src="../../../assets/images/landing-example-2.png" alt="example-2"/>
-    </div>
-    <div class="fia-text-column">
-      <img class="fia-study-svg" src="../../../assets/images/study.svg" alt="study-svg">
-      <p class="fia-title">Vorbereitung zur Zwischen- und Abschlussprüfung</p>
-      <p class="fia-description">
-        Lerne mithilfe verschiedener Lernmethoden um die Inhalte besser im Gedächtnis zu behalten.
-        Wiederhole das Unterrichtsthema am Abend und teste dein Wissen mit einem Quiz oder Karteikarten-Fragen-Antworten.
-      </p>
-
-      <img class="fia-rest-svg" src="../../../assets/images/rest.svg" alt="rest-svg">
-      <p class="fia-title">Unterrichtsstoff nachholen</p>
-      <p class="fia-description">
-        Du hast den Unterricht verpasst oder die Erklärung vom Lehrer nicht richtig vestanden?
-        Unter dem Menüpunkt <a routerLink="/lehrplan">Lehrplan</a> findest du jede Schulwoche mit allen Informationen zum wiederholen.
-      </p>
-    </div>
-  </div>
-  <div class="fia-landing-row third">
-    <div class="fia-text-column">
-      <div class="fia-images-wrapper">
-        <img class="fia-nerd-svg" src="../../../assets/images/nerd.svg" alt="nerd-svg">
-        <img class="fia-datenbankspeicher-svg" src="../../../assets/images/datenbankspeicher.svg" alt="datenbankspeicher-svg">
-        <img class="fia-world-grid-svg" src="../../../assets/images/world-grid.svg" alt="world-grid.svg"/>
+    <div class="fia-text-row">
+      <div class="fia-text-column">
+        <img class="fia-rest-svg" src="../../../assets/images/rest.svg" alt="rest-svg">
+        <p class="fia-title">Vorbereitung zur Zwischen- und Abschlussprüfung</p>
+        <p class="fia-description">
+          Lerne mithilfe verschiedener Lernmethoden um die Inhalte besser im Gedächtnis zu behalten.
+          Teste dein Wissen mit einem Quiz oder vorgefertigten Karteikarten.
+        </p>
       </div>
-      <p class="fia-title">Grundlagen der Informationstechnik</p>
-      <p class="fia-description">
-        Spannung und Strom, Berechnung von Widerständen, Begriffe der Informationstechnik, Zahlensysteme, PC-Technik,
-        Aufbau und Funktionsweise von Stromkreisen. Statische Methoden, Datentypen und Schleifen in der Programmierung ...
-      </p>
     </div>
-    <div class="fia-image-wrapper">
-      <img class="fia-landing-image example-3" src="../../../assets/images/landing-example-3.png" alt="example-3"/>
+    <div class="fia-component-wrapper">
+      <app-quiz-card [quizContent]="testQuizContent" [quizDetails]="testQuizDetails"></app-quiz-card>
+      <app-indexcards-card [indexCardsContent]="testIndexcardsContent" [indexCardsDetails]="testIndexcardsDetails"></app-indexcards-card>
     </div>
   </div>
   <div class="fia-landing-row school">
-    <div class="fia-image-wrapper">
-      <img class="fia-landing-image example-4" src="../../../assets/images/landing-example-4.png" alt="example-4"/>
+    <div class="fia-text-row">
+      <div class="fia-text-column">
+        <mat-icon class="fia-cast-icon">cast_for_education</mat-icon>
+        <p class="fia-title">Unterrichtsstoff nachholen</p>
+        <p class="fia-description">
+          Du hast den Unterricht verpasst oder die Erklärung vom Lehrer nicht richtig vestanden?
+          Unter dem Menüpunkt <a routerLink="/lehrplan">Lehrplan</a> findest du jede Schulwoche mit allen Informationen zum wiederholen.
+        </p>
+      </div>
+      <div class="fia-text-column">
+        <div class="fia-images-wrapper">
+          <img class="fia-nerd-svg" src="../../../assets/images/nerd.svg" alt="nerd-svg">
+          <img class="fia-datenbankspeicher-svg" src="../../../assets/images/datenbankspeicher.svg" alt="datenbankspeicher-svg">
+          <img class="fia-world-grid-svg" src="../../../assets/images/world-grid.svg" alt="world-grid.svg"/>
+        </div>
+        <p class="fia-title">Grundlagen der Informationstechnik</p>
+        <p class="fia-description">
+          Spannung und Strom, Berechnung von Widerständen, Begriffe der Informationstechnik, Zahlensysteme, PC-Technik,
+          Aufbau und Funktionsweise von Stromkreisen. Statische Methoden, Datentypen und Schleifen in der Programmierung ...
+        </p>
+      </div>
     </div>
-    <div class="fia-text-column">
-      <mat-icon class="fia-cast-icon">cast_for_education</mat-icon>
-      <p class="fia-title">Unterstützendes Homeschooling</p>
-      <p class="fia-description">
-        Lerne mit verschiedenen Lernmethoden um die Inhalte besser im Gedächtnis zu behalten. <br/>
-        Teste dein Wissen mit einem Quiz oder vorgefertigten Karteikarten zum üben.<br/>
-        Keine Unklarheiten mehr über die Themen der nächsten Klassenarbeit.<br/>
-      </p>
+    <div class="fia-component-wrapper">
+      <app-school-week-card [week]="testSchoolWeek"></app-school-week-card>
     </div>
   </div>
 </div>

@@ -11,6 +11,7 @@ import { NextExamsCardModule } from '../../components/next-exams-card/next-exams
 import { ScheduleModule } from '../../components/schedule/schedule.module';
 import { SchoolWeekCardModule } from '../../components/school-week-card/school-week-card.module';
 import { NewsCardModule } from '../../components/news-card/news-card.module';
+import { UserProgressCardModule } from '../../components/user-progress-card/user-progress-card.module';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -23,7 +24,8 @@ import { NewsCardModule } from '../../components/news-card/news-card.module';
       SchoolWeekCardModule,
       NextExamsCardModule,
       ScheduleModule,
-      NewsCardModule
+      NewsCardModule,
+      UserProgressCardModule
     ]
 })
 export class DashboardModule { }

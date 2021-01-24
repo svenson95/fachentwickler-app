@@ -159,6 +159,15 @@
 
         .post-list {
           color: black;
+
+          .post-ol-sublist,
+          .post-ul-sublist {
+            li {
+              &::before {
+                color: black;
+              }
+            }
+          }
         }
 
         .post-list-ordered {

@@ -15,59 +15,11 @@
   padding-top: 10px;
 }
 
-.fia-user-progress {
-  overflow: hidden;
-  padding-bottom: 20px;
-
-  .fia-view-wrapper {
-    .label {
-      font-size: 1.1em;
-      margin-bottom: 8px;
-
-      @include to-xs {
-        font-size: 1.1em;
-        margin-bottom: 3px;
-      }
-    }
-
-    .progress-bar {
-      height: 6px;
-      ::ng-deep .mat-progress-bar-buffer  {
-        background: $fia-dark-background-color;
-      }
-    }
-
-    .fia-progress-lesson {
-      margin-bottom: 20px;
-
-      .progress-bar {
-        ::ng-deep .mat-progress-bar-fill::after {
-          background-color: $fia-secondary-color !important;
-        }
-      }
-    }
-
-    .fia-progress-week {
-      margin-bottom: 30px;
-
-      .progress-bar {
-        ::ng-deep .mat-progress-bar-fill::after {
-          background-color: $fia-primary-color !important;
-        }
-      }
-    }
-
-    .fia-next-lesson {
-      //::ng-deep .fia-post-link {
-      //  background: $fia-dark-background-color;
-      //}
-    }
-
+.fia-schedule {
+  .fia-card-title {
+    margin-bottom: 2px;
   }
 
-}
-
-.fia-schedule {
   .fia-view-wrapper {
     display: flex;
 
@@ -82,7 +34,7 @@
 
       @include from-sm {
         min-width: 150px;
-        border-left: 1px solid $fia-grey-4;
+        border-left: 1px solid $fia-grey-1;
         padding: 8px;
         margin-left: 20px;
       }
@@ -117,7 +69,7 @@
   .fia-schedule-time, .fia-hour-subject, .fia-substitution-label {
     color: black !important;
   }
-  .fia-substitution-label {
+  .fia-substitution-label, .fia-substitions-schedule {
     border-color: $fia-grey-4 !important;
   }
 }

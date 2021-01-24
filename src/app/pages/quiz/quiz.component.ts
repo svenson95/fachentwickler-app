@@ -16,23 +16,6 @@ export class QuizComponent implements OnInit {
   quizContent: Quiz;
   quizDetails: SubjectPost;
 
-  level = 0;
-  wrongAnswers = 0;
-  answer: number;
-  isCorrectAnswer: boolean;
-  end = false;
-
-  finishTexts = [
-    'Du hast das Quiz ohne Fehler abgeschlossen',
-    'Du hattest einen Fehler',
-    'Du hattest zwei Fehler',
-    'Du hattest drei Fehler',
-    'Du hattest vier Fehler',
-    'Du hattest fünf Fehler',
-    'Du hattest mehr als 5 Fehler',
-  ];
-  finishEmojis = ['⭐', '👍', '😐', '😲', '🤨', '😦', '😵'];
-
   constructor(private headerService: HeaderService,
               private dataService: DataService,
               private router: Router
@@ -54,41 +37,6 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  checkAnswer(answer: number): void {
-    if (this.answer !== undefined) {
-      return;
-    }
-    this.answer = answer;
-
-    if (this.isCorrect(answer)) {
-      this.isCorrectAnswer = true;
-    } else {
-      this.isCorrectAnswer = false;
-      this.wrongAnswers++;
-    }
-
-    setTimeout(() => {
-      this.answer = undefined;
-      this.isCorrectAnswer = null;
-      if (this.quizContent.questions[this.level + 1] !== undefined) {
-        this.level++;
-      } else if (this.quizContent.questions[this.level + 1] === undefined) {
-        this.end = true;
-      }
-    }, 2000);
-  }
-
-  isCorrect(answer): boolean {
-    return this.quizContent.questions[this.level].answer === answer;
-  }
-
-  resetLevel(): void {
-    this.answer = null;
-    this.isCorrectAnswer = null;
-    this.level = 0;
-    this.end = false;
   }
 
 }

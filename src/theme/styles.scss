@@ -139,7 +139,7 @@ a {
   }
 
   .fia-card-title {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-family: Raleway-Light, sans-serif;
     letter-spacing: 1px;
     line-height: 26px;
@@ -147,7 +147,7 @@ a {
     text-decoration-color: $fia-secondary-color;
 
     @include to-xs {
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
   }
 

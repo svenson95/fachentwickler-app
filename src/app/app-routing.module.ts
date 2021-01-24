@@ -26,6 +26,17 @@ const postPaths = (): Array<Route> => {
   return posts;
 };
 
+const editPostPaths = (): Array<Route> => {
+  const posts: Route[] = [];
+  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+    posts.push({
+      path: sub + '/:topic/:post/edit',
+      loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostModule)
+    });
+  });
+  return posts;
+};
+
 const indexCardsPaths = (): Array<Route> => {
   const indexCards: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
@@ -51,6 +62,7 @@ const quizPaths = (): Array<Route> => {
 const routes: Routes = [
   ...subjectsPaths(),
   ...postPaths(),
+  ...editPostPaths(),
   ...indexCardsPaths(),
   ...quizPaths(),
   {

@@ -50,12 +50,14 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   debounceSearchInput(): void {
-    fromEvent(this.searchInput.nativeElement,'keyup')
+    fromEvent(this.searchInput.nativeElement, 'keyup')
       .pipe(
         filter(Boolean),
         debounceTime(500),
         distinctUntilChanged(),
-        tap(this.searchForPost)
+        tap(ev => {
+          this.searchForPost();
+        })
       )
       .subscribe();
   }
@@ -89,11 +91,9 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   searchForPost(): void {
-    if (!this.isLoading) {
-      this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
-        this.searchPostService.searchResults$.next(response);
-      });
-    }
+    this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
+      this.searchPostService.searchResults$.next(response);
+    });
   }
 
 }

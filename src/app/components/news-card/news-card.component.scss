@@ -5,6 +5,10 @@
   display: flex;
   justify-content: space-between;
 
+  .fia-card-title {
+    margin-bottom: 0;
+  }
+
   .fia-button.show-more {
     align-self: start;
     color: $fia-grey-1;

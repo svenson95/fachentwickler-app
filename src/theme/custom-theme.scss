@@ -47,12 +47,14 @@ $fiappy-light-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($fiappy-dark-theme);
 
+@import 'src/theme/variables.scss';
+
 
 html, body {
   height: 100%;
 }
 body {
-  background: black;
+  background: $fia-dark-header-color;
   margin: 0;
 
   &.scroll-locked {

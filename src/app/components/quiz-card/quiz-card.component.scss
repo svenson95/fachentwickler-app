@@ -1,0 +1,186 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-card .fia-card-content {
+  justify-content: space-evenly;
+}
+
+.fia-card {
+  .fia-card-title {
+    margin-bottom: 5px;
+  }
+  .fia-card-description {
+  }
+
+  .fia-card-content {
+    display: flex;
+    margin-top: 30px;
+
+    @include to-sm {
+      //flex-direction: column;
+    }
+  }
+}
+
+.fia-quiz {
+
+  @include from-sm {
+    width: 600px;
+    padding: 20px 0;
+  }
+
+  @include to-sm {
+    width: 500px;
+  }
+
+  p { margin: 0; }
+
+  .fia-content-wrapper {
+    font-size: 1.1em;
+
+    .quiz-details {
+      display:  flex;
+      justify-content: space-between;
+      text-align: center;
+
+      .quiz-level, .quiz-wrong-answers {
+        background: $fia-dark-background-color;
+        border-radius: $fia-border-radius;
+        padding: 8px 20px;
+      }
+
+      .quiz-level, .quiz-wrong-answers {
+        .key {
+          font-family: Raleway-Regular, sans-serif;
+          padding-top: 5px;
+        }
+        .value {
+          padding-top: 2px;
+          padding-bottom: 5px;
+        }
+      }
+      .quiz-level {
+        .key, .value {
+        }
+      }
+      .quiz-wrong-answers {
+        .key, .value {
+        }
+      }
+    }
+
+    .quiz-question {
+      margin-top: 40px;
+
+      .label {
+        padding: 10px 15px;
+        border: 1px solid $fia-secondary-color;
+        border-radius: $fia-border-radius;
+        font-family: Raleway-Bold, sans-serif;
+      }
+
+      .fia-quiz-answers-wrapper {
+        margin-top: 10px;
+
+        .fia-quiz-answer {
+          padding: 12px 15px;
+          background: rgba($fia-grey-3, 0.2);
+          border-radius: $fia-border-radius;
+          cursor: pointer;
+          transition: background 200ms ease-in-out;
+
+          &:first-of-type {
+            margin-bottom: 10px;
+          }
+        }
+
+        &:not(.is-checking-answer) {
+          .fia-quiz-answer {
+            @include from-sm {
+              &:hover {
+                background: rgba($fia-grey-3, 0.4);
+                transition: background 200ms ease-in-out;
+              }
+            }
+          }
+        }
+
+        .fia-quiz-answer.correct {
+          background: rgba(10,230,10, 0.2);
+        }
+        .fia-quiz-answer.wrong {
+          background: rgba(red, 0.2);
+        }
+      }
+    }
+
+    .fia-quiz-end {
+      text-align: center;
+
+      .fia-quiz-done-label {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+      }
+
+      .fia-emoji {
+        font-size: 4em;
+        line-height: 100px;
+      }
+
+      .congrat-emoji {
+        .success-animation { margin: 30px auto;}
+
+        .success-mark {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          display: block;
+          stroke-width: 4;
+          stroke: $fia-secondary-color;
+          position: relative;
+          margin: 0 auto;
+
+          @include to-xs {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        .success-mark__circle {
+          stroke-dasharray: 166;
+          stroke-dashoffset: 166;
+          animation: stroke 0.4s cubic-bezier(0.6, 0, 0.45, 1) 0.1s forwards;
+        }
+
+        .success-mark__check {
+          stroke-dasharray: 48;
+          stroke-dashoffset: 48;
+          animation: stroke 0.45s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+        }
+
+        @keyframes stroke {
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+      }
+
+      .fia-text-button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
+
+::ng-deep {
+  .light-theme {
+    .quiz-question .label {
+
+    }
+    .quiz-level, .quiz-wrong-answers {
+      background: $fia-light-background-color !important;
+    }
+  }
+}
+

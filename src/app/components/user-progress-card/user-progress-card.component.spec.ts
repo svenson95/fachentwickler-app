@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditPostComponent } from './edit-post.component';
+import { UserProgressCardComponent } from './user-progress-card.component';
 
-describe('PostComponent', () => {
-  let component: EditPostComponent;
-  let fixture: ComponentFixture<EditPostComponent>;
+describe('UserProgressCardComponent', () => {
+  let component: UserProgressCardComponent;
+  let fixture: ComponentFixture<UserProgressCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditPostComponent ]
+      declarations: [ UserProgressCardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditPostComponent);
+    fixture = TestBed.createComponent(UserProgressCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

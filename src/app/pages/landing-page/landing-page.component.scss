@@ -84,8 +84,7 @@
   .fia-landing-row {
     display: flex;
     max-width: 1135px;
-    flex-direction: row-reverse;
-    margin-bottom: 100px;
+    flex-direction: column;
 
     @include to-xs {
       margin-bottom: 80px;
@@ -96,16 +95,20 @@
     }
 
     .fia-image-wrapper {
-      text-align: center;
-
       .fia-landing-image {
         align-self: center;
       }
     }
 
+    .fia-text-row {
+      display: flex;
+      align-self: center;
+    }
+
     .fia-text-column {
       display: flex;
       flex-direction: column;
+      margin-bottom: 20px;
 
       @include to-sm {
         align-items: center;
@@ -138,20 +141,17 @@
   .fia-landing-row.first {
     justify-content: space-between;
 
-    .fia-image-wrapper {
+    .fia-components-wrapper {
+      max-width: 800px;
+      align-self: center;
+    }
 
-      @include from-sm {
-        min-width: 400px;
-        width: 600px;
-      }
+    .fia-text-row {
+      margin-top: 50px;
+      margin-bottom: 20px;
 
-      .fia-landing-image {
-        display: block;
-        max-width: 100%;
-
-        @include to-xs {
-          margin: auto;
-        }
+      @include to-xs {
+        flex-direction: column;
       }
     }
 
@@ -162,18 +162,28 @@
       .fia-eduaction-svg {
         width: 120px;
       }
+
+      .fia-study-svg {
+        width: 120px;
+
+        @include from-md {
+          margin-left: 20px;
+        }
+      }
     }
   }
 
   .fia-landing-row.second {
     align-items: center;
 
-    @include to-sm {
-      flex-direction: column-reverse;
+    .fia-text-row {
+      margin-top: 30px;
+      margin-bottom: 20px;
     }
 
     .fia-text-column {
       align-self: center;
+      max-width: 400px;
 
       @include to-sm {
         margin-bottom: 20px;
@@ -186,18 +196,15 @@
         }
       }
 
-      .fia-study-svg, .fia-rest-svg {
+      .fia-rest-svg {
         width: 100px;
 
         @include from-md {
           margin-left: 20px;
         }
       }
-      .fia-rest-svg {
-        margin-top: 50px;
-      }
     }
-    .fia-image-wrapper {
+    .fia-component-wrapper {
       align-self: center;
 
       @include from-xs {
@@ -209,24 +216,30 @@
       }
 
       .fia-landing-image {
-        max-width: 100%;
+        max-width: 800px;
       }
     }
   }
 
-  .fia-landing-row.third {
-    align-items: center;
-    justify-content: space-between;
+  .fia-landing-row.school {
 
-    .fia-images-wrapper {
-      display: flex;
-      justify-content: space-evenly;
-    }
-    .fia-text-column {
-      align-self: center;
+    .fia-text-row {
+      margin-top: 40px;
+      margin-bottom: 20px;
 
       @include to-xs {
-        width: 90%;
+        flex-direction: column;
+      }
+    }
+
+    .fia-text-column {
+      align-items: center;
+      align-self: center;
+      max-width: 400px;
+
+      .fia-nerd-svg {
+        vertical-align: top;
+        margin-right: 5px;
       }
 
       .fia-nerd-svg, .fia-world-grid-svg {
@@ -240,51 +253,16 @@
       }
 
       .fia-world-grid-svg {
+        margin-left: 5px;
         align-self: flex-end;
       }
 
-      .fia-title, .fia-description {
-        @include from-xs {
-          width: 400px;
-        }
-
-        @include from-sm {
-          margin: 20px auto 0;
-        }
+      .fia-cast-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 100px;
+        color: $fia-secondary-color;
       }
-      .fia-description {
-        margin: auto;
-        margin-bottom: 20px;
-      }
-    }
-    .fia-image-wrapper {
-      max-width: 680px;
-      align-self: center;
-
-      @include from-md {
-        min-width: 400px;
-      }
-
-      @include to-xs {
-        text-align: center;
-      }
-
-      .fia-landing-image {
-        max-width: 100%;
-      }
-    }
-  }
-
-  .fia-landing-row.school {
-
-    @include to-sm {
-      flex-direction: column-reverse;
-    }
-
-    .fia-text-column {
-      align-items: center;
-      align-self: center;
-      max-width: 400px;
 
       .fia-title {
         align-self: start;
@@ -295,14 +273,7 @@
       }
     }
 
-    .fia-cast-icon {
-      width: 100px;
-      height: 100px;
-      font-size: 100px;
-      color: $fia-secondary-color;
-    }
-
-    .fia-image-wrapper {
+    .fia-component-wrapper {
       align-self: center;
       text-align: center;
 
