@@ -289,22 +289,25 @@
         }
 
         .fia-header-login-btn {
-          background-color: $fia-secondary-color;
+          background-color: $fia-light-background-color;
           height: fit-content;
           padding: 3px 10px;
           margin-left: 12px;
           margin-right: 8px;
 
-          border: 1px solid $fia-third-color;
           outline: none;
 
-          color: black;
+          color: $fia-third-color;
           font-size: .5em;
           font-family: Raleway-Bold, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
           line-height: 13px;
+
+          &:hover {
+            color: black;
+          }
 
           @include to-md {
             font-size: .45em;
