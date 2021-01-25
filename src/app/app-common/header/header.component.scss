@@ -289,11 +289,11 @@
         }
 
         .fia-header-login-btn {
-          background-color: $fia-light-background-color;
+          background-color: $fia-dark-card-color;
           height: fit-content;
           padding: 3px 10px;
           margin-left: 12px;
-          margin-right: 8px;
+          margin-right: 12px;
 
           outline: none;
 
@@ -306,7 +306,7 @@
           line-height: 13px;
 
           &:hover {
-            color: black;
+            color: white;
           }
 
           @include to-md {
@@ -406,3 +406,12 @@
   }
 }
 
+::ng-deep .light-theme {
+  .fia-header-login-btn {
+    background-color: $fia-light-background-color !important;
+
+    &:hover {
+      color: black;
+    }
+  }
+}

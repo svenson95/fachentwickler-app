@@ -1,8 +1,6 @@
 <mat-toolbar color="primary" class="fia-header">
-  <button class="fia-logo-wrapper fia-header-hover-label" (click)="closeSidenav()"
-          [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
-          [disabled]="router.url === '/dashboard' || router.url === '/login'"
-          [ngClass]="{'active-route': router.url === '/dashboard'}"
+  <button class="fia-logo-wrapper fia-header-hover-label" (click)="closeSidenav()" routerLink="/"
+          [ngClass]="{'active-route': router.url === '/' || router.url === '/dashboard' || router.url === '/login'}"
   >
     <div class="fia-icon-wrapper">
       <svg xmlns='http://www.w3.org/2000/svg' class='fia-app-icon' viewBox='0 0 512 512'>
@@ -12,7 +10,7 @@
     </div>
     <h1 class="fia-app-name unselectable">
       <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
-      <mat-label class="fia-hover-label fade-in">{{authService.isAuthenticated ? 'Dashboard' : 'Login'}}</mat-label>
+      <mat-label class="fia-hover-label fade-in">Start</mat-label>
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
@@ -43,19 +41,19 @@
           </mat-slide-toggle>
           <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
         </div>
-        <a class="fia-header-login-btn unselectable" routerLink="/login" *ngIf="!authService.isAuthenticated">
-          login
+        <a class="fia-header-login-btn unselectable" [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'">
+          {{authService.isAuthenticated ? 'Dashboard' : 'Login'}}
         </a>
         <button class="fia-action-btn fia-header-hover-label" mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>
         <mat-menu class="fia-more-menu" #menu="matMenu">
-          <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="authService.toggleTheme()">
-            <mat-icon>invert_colors</mat-icon>
-            <span class="label">{{authService.theme === 'dark' ? 'Light': 'Dark'}} Theme aktivieren</span>
+          <a class="fia-menu-button" mat-menu-item routerLink="/dashboard" *ngIf="authService.isAuthenticated && isMobile.matches">
+            <mat-icon>dashboard</mat-icon>
+            <span class="label">Dashboard</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated">
+          <a class="fia-menu-button" mat-menu-item routerLink="/mein-profil" *ngIf="authService.isAuthenticated">
             <mat-icon>account_circle</mat-icon>
             <span class="label">Mein Profil</span>
           </a>
@@ -79,6 +77,10 @@
             <mat-icon>logout</mat-icon>
             <span class="label">Ausloggen</span>
           </button>
+          <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="authService.toggleTheme()">
+            <mat-icon>invert_colors</mat-icon>
+            <span class="label">{{authService.theme === 'dark' ? 'Light': 'Dark'}} Theme aktivieren</span>
+          </a>
         </mat-menu>
       </div>
     </div>
