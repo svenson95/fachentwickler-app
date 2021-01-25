@@ -139,7 +139,7 @@ a {
   }
 
   .fia-card-title {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-family: Raleway-Light, sans-serif;
     letter-spacing: 1px;
     line-height: 26px;
@@ -147,7 +147,7 @@ a {
     text-decoration-color: $fia-secondary-color;
 
     @include to-xs {
-      font-size: 1.3em;
+      font-size: 1.4em;
     }
   }
 
@@ -306,6 +306,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   border-radius: $fia-border-radius;
   letter-spacing: 1px;
   text-decoration: none;
+
+  @include to-xs {
+    font-size: .9em;
+  }
 
   &.second-color {
     background-color: black;

@@ -4,10 +4,6 @@
 .fia-card {
   .fia-card-title {
     margin-bottom: 0;
-
-    @include from-xs {
-      margin-bottom: 5px;
-    }
   }
   .fia-card-description {
   }

@@ -144,8 +144,7 @@ const routes: Routes = [
   },
   {
     path: 'search',
-    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule),
-    canActivate: [AuthGuardService]
+    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule)
   },
   // {
   //   path: '**',

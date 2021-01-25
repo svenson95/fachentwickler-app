@@ -87,7 +87,7 @@
     flex-direction: column;
 
     @include to-xs {
-      margin-bottom: 80px;
+      margin-bottom: 20px;
     }
 
     @include to-sm {
@@ -114,7 +114,7 @@
       }
 
       @include to-xs {
-        width: 85%;
+        width: 75%;
         margin: auto;
       }
 
@@ -136,8 +136,15 @@
     justify-content: space-between;
 
     .fia-components-wrapper {
-      max-width: 800px;
       align-self: center;
+
+      @include from-xs {
+        max-width: 800px;
+      }
+
+      @include to-xs {
+        width: 100%;
+      }
     }
 
     .fia-text-row {
@@ -200,6 +207,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
 
       @include from-xs {
         min-width: 500px;
@@ -274,11 +282,14 @@
 
     .fia-component-wrapper {
       align-self: center;
-      //text-align: center;
 
       @include from-sm {
         width: 800px;
         min-width: 400px;
+      }
+
+      @include to-xs {
+        width: 100%;
       }
 
       .fia-landing-image {

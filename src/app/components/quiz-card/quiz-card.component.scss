@@ -33,10 +33,18 @@
     width: 500px;
   }
 
+  @include to-xs {
+    width: 100%;
+  }
+
   p { margin: 0; }
 
   .fia-content-wrapper {
     font-size: 1.1em;
+
+    @include to-xs {
+      font-size: 1em;
+    }
 
     .quiz-details {
       display:  flex;
