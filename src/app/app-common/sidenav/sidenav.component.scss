@@ -94,7 +94,7 @@
       width: $size;
       height: $size;
       color: $fia-third-color;
-      transition: $fia-nav-item-icon-fade-duration;
+      transition: hover $fia-nav-item-icon-fade-duration;
       flex-shrink: 0;
     }
 

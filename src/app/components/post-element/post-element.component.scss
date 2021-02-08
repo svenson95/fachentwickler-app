@@ -127,9 +127,9 @@
       list-style-type: none;
 
       &::before {
-        color: black;
+        color: white;
         font-size: 1em;
-        content: '-';
+        content: "→";
         margin-right: 5px;
       }
     }

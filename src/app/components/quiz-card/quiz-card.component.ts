@@ -31,8 +31,6 @@ export class QuizCardComponent implements OnInit {
   constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
-    console.log('quizContent', this.quizContent);
-    console.log('quizDetails', this.quizDetails);
   }
 
   checkAnswer(answer: number): void {

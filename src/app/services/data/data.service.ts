@@ -19,7 +19,7 @@ import { SchoolNews } from '../../models/school-news';
 export class DataService {
 
   // Settings
-  public schoolWeekValue = 20;
+  public schoolWeekValue = 21;
 
   public dashboard: DashboardData;
   public schoolWeek: SchoolWeek;

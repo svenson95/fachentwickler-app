@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SearchPostService {
 
-  searchValue: string;
+  searchValue = '';
   searchResults$: Subject<SubjectPost[]> = new Subject();
 
   constructor(private httpClient: HttpClient) { }

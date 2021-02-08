@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
 import { AuthService } from '../../services/auth/auth.service';
-import { UserProgress } from '../../models/user';
+import { UserProgress, UserRole } from '../../models/user';
 import { SubjectPost } from '../../models/subject';
 import { Post } from '../../models/post';
 
@@ -17,6 +17,8 @@ export class LessonFooterComponent implements OnInit {
   @Input() post: Post | SubjectPost;
   alreadyRead: boolean;
   POST_ID: string;
+
+  UserRole = UserRole;
 
   constructor(public authService: AuthService,
               private matSnackBar: MatSnackBar,

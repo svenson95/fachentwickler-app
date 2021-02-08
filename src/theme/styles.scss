@@ -138,28 +138,6 @@ a {
     padding: 30px;
   }
 
-  .fia-card-title {
-    font-size: 1.6em;
-    font-family: Raleway-Light, sans-serif;
-    letter-spacing: 1px;
-    line-height: 26px;
-    text-decoration: underline;
-    text-decoration-color: $fia-secondary-color;
-
-    @include to-xs {
-      font-size: 1.4em;
-    }
-  }
-
-  .fia-card-description {
-    font-size: 1.2em;
-    color: $fia-grey-1;
-
-    @include to-xs {
-      font-size: 1em;
-    }
-  }
-
   .fia-post-last-update {
     font-size: .9em;
     color: $fia-grey-1;
@@ -169,6 +147,28 @@ a {
 
   p, li {
     color: white;
+  }
+}
+
+.fia-card-title {
+  font-size: 1.5em;
+  font-family: Raleway-Light, sans-serif;
+  letter-spacing: 1px;
+  line-height: 26px;
+  text-decoration: underline;
+  text-decoration-color: $fia-secondary-color;
+
+  @include to-xs {
+    font-size: 1.4em;
+  }
+}
+
+.fia-card-description {
+  font-size: 1.1em;
+  color: $fia-grey-1;
+
+  @include to-xs {
+    font-size: 1em;
   }
 }
 

@@ -47,7 +47,7 @@
   }
 
   u {
-    background: rgba($fia-secondary-color-rgb, 0.3);
+    background: rgba($fia-secondary-color-rgb, 0.15);
   }
 
   .mat-dialog-container {
@@ -281,7 +281,7 @@
         .fia-icon-wrapper:not(.active-route) {
           .fia-app-icon {
             @include from-sm {
-              color: $fia-secondary-color !important;
+              color: black !important;
             }
           }
         }

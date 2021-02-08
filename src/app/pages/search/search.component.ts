@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit, OnDestroy {
   searchResults = [];
 
   loadingSubscription: Subscription;
-  isLoading = false;
+  isLoading: boolean;
 
   constructor(private headerService: HeaderService,
               private loadingService: LoadingService,

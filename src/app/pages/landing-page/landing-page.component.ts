@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {HeaderService} from '../../services/header.service';
-import {Quiz} from '../../models/quiz';
-import {SubjectPost} from '../../models/subject';
-import {DataService} from '../../services/data/data.service';
-import {IndexCards} from '../../models/index-cards';
+
+import { HeaderService } from '../../services/header.service';
+import { DataService } from '../../services/data/data.service';
+import { Quiz } from '../../models/quiz';
+import { SubjectPost } from '../../models/subject';
+import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'app-landing-page',
@@ -68,7 +69,6 @@ export class LandingPageComponent implements OnInit {
       (data) => {
         this.testQuizContent = data.content;
         this.testQuizDetails = data.details;
-        console.log('Quiz fetched', data);
       },
       (error) => {
         console.log('Error while GET quiz', error);

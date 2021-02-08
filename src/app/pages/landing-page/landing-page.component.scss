@@ -126,7 +126,6 @@
 
     .fia-component-wrapper {
       ::ng-deep .fia-card-title {
-        margin-bottom: 0;
         line-height: 20px;
       }
     }
@@ -165,7 +164,7 @@
         width: 120px;
       }
 
-      .fia-study-svg {
+      .fia-reading-svg {
         width: 120px;
 
         @include to-xs {
@@ -239,6 +238,7 @@
     }
 
     .fia-text-column {
+      display: flex;
       align-items: center;
       align-self: center;
       max-width: 360px;
@@ -264,10 +264,16 @@
         align-self: flex-end;
       }
 
-      .fia-cast-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 100px;
+      .fia-sneeze-svg {
+        width: 80px;
+        height: 80px;
+        color: $fia-secondary-color;
+        margin-right: 20px;
+      }
+
+      .fia-question-svg {
+        width: 80px;
+        height: 80px;
         color: $fia-secondary-color;
       }
 
@@ -309,7 +315,7 @@
         margin-top: 40px;
       }
 
-      .fia-startup-svg {
+      .fia-rocket-svg {
         width: 100px;
         height: 100px;
         font-size: 100px;
