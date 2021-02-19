@@ -68,3 +68,19 @@
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
 }
+
+#fia-header.scrolled ::ng-deep {
+
+  .fia-hover-label {
+    opacity: 0;
+  }
+
+  .fia-header {
+    height: 60px;
+    transition: height 300ms ease-out;
+
+    @include to-xs {
+      height: 50px;
+    }
+  }
+}

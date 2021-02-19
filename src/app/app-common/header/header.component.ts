@@ -9,7 +9,9 @@ import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
 import { SearchPostService } from '../../services/data/search-post.service';
+
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
+import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +21,8 @@ import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dia
 export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
 
   loadingSubscription: Subscription;
-  isLoading = false;
+  isLoading: boolean;
+  isScrolled: boolean;
 
   @Input() isMobile;
   @Input('sidenav') sidenav;
@@ -31,17 +34,19 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
               public loadingService: LoadingService,
               private sidenavService: SidenavService,
               public searchPostService: SearchPostService,
-              public dialog: MatDialog
-  ) {}
-
-  ngOnInit(): void {}
-
-  ngAfterViewInit(): void {
+              public dialog: MatDialog,
+  ) {
     this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
         this.isLoading = status;
       }
     );
+  }
+
+  ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
     this.debounceSearchInput();
   }
 
@@ -50,22 +55,31 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   debounceSearchInput(): void {
-    fromEvent(this.searchInput.nativeElement, 'keyup')
-      .pipe(
-        filter(Boolean),
-        debounceTime(500),
-        distinctUntilChanged(),
-        tap(ev => {
-          this.searchForPost();
-        })
-      )
-      .subscribe();
+    if (this.searchInput) {
+      fromEvent(this.searchInput.nativeElement, 'keyup')
+        .pipe(
+          filter(Boolean),
+          debounceTime(500),
+          distinctUntilChanged(),
+          tap(ev => {
+            this.searchForPost();
+          })
+        )
+        .subscribe();
+    }
   }
 
   async openLogoutDialog(): Promise<void> {
     await this.dialog.open(LogoutDialogComponent, {
       restoreFocus: true,
       panelClass: 'logout-modal'
+    });
+  }
+
+  async openImageManager(): Promise<void> {
+    await this.dialog.open(ImageManagerDialogComponent, {
+      restoreFocus: true,
+      panelClass: 'image-manager-modal'
     });
   }
 
@@ -91,9 +105,11 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   searchForPost(): void {
-    this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
-      this.searchPostService.searchResults$.next(response);
-    });
+    if (this.searchInput.nativeElement.value !== '') {
+      this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
+        this.searchPostService.searchResults$.next(response);
+      });
+    }
   }
 
 }

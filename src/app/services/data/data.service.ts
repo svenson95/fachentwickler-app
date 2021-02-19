@@ -74,6 +74,17 @@ export class DataService {
       }));
   }
 
+  // Image Manager component - GET images
+  getAllImages(): Observable<any> {
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'image/png');
+    return this.httpClient.get<any>(`${environment.baseUrl}/images/all`, {headers})
+      .pipe(map((response) => {
+        // console.log('response GET images', response);
+        return response;
+      }));
+  }
+
   // Quiz component - GET quiz
   getQuiz(postUrl: string): Observable<QuizData> {
     return this.httpClient.get<QuizData>(`${environment.baseUrl}/quiz/${postUrl}`)

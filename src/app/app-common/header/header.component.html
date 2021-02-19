@@ -3,14 +3,16 @@
           [ngClass]="{'active-route': router.url === '/' || router.url === '/dashboard' || router.url === '/login'}"
   >
     <div class="fia-icon-wrapper">
-      <svg xmlns='http://www.w3.org/2000/svg' class='fia-app-icon' viewBox='0 0 512 512'>
-        <path d='M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288'
-              fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='28'/>
+      <svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path d="m479.867 339.862v-159.25l-30 10v149.25c-18.655 6.281-32.133 23.926-32.133 44.671v80.333c0 8.284 6.716 15 15 15h64.266c8.284 0 15-6.716 15-15v-80.333c0-20.745-13.478-38.39-32.133-44.671z"/>
+          <path d="m241.775 250.492-145.375-48.458v102.166c0 3.979 1.581 7.794 4.394 10.607 41.462 41.457 96.585 64.289 155.213 64.289 58.629 0 113.747-22.832 155.2-64.291 2.813-2.813 4.393-6.628 4.393-10.605v-102.166l-145.37 48.457c-9.937 3.309-19.94 2.838-28.455.001z"/>
+          <path d="m256 222.8c1.602 0 3.204-.257 4.743-.77l241-80.333c6.125-2.042 10.257-7.774 10.257-14.23s-4.131-12.188-10.257-14.23l-241-80.333c-3.078-1.025-6.408-1.025-9.486 0l-241 80.333c-6.126 2.041-10.257 7.773-10.257 14.23s4.131 12.188 10.257 14.23l241 80.333c1.539.513 3.141.77 4.743.77z"/>
+        </g>
       </svg>
     </div>
     <h1 class="fia-app-name unselectable">
-      <span class="fia">fia</span><span class="pp">pp</span><span class="yio">y.io</span>
-      <mat-label class="fia-hover-label fade-in">Start</mat-label>
+      <span class="fia">Fi</span><span class="pp">De</span><span class="yio">MY</span>
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
@@ -56,10 +58,6 @@
           <a class="fia-menu-button" mat-menu-item routerLink="/mein-profil" *ngIf="authService.isAuthenticated">
             <mat-icon>account_circle</mat-icon>
             <span class="label">Mein Profil</span>
-          </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="/">
-            <mat-icon>home</mat-icon>
-            <span class="label">Usage</span>
           </a>
           <a class="fia-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated">
             <mat-icon>login</mat-icon>

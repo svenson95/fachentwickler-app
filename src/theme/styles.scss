@@ -15,6 +15,11 @@
   src: url('../assets/fonts/Raleway-Light.ttf');
 }
 
+@font-face {
+  font-family: 'Grandstander';
+  src: url('../assets/fonts/Grandstander-VariableFont_wght.ttf');
+}
+
 @import 'src/theme/mixins';
 @import 'src/theme/variables';
 @import 'src/theme/light-theme';
