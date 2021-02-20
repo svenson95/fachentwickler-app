@@ -15,6 +15,7 @@
   .fia-card-content {
     display: flex;
     margin-top: 30px;
+    flex-shrink: 1;
 
     @include to-sm {
       flex-direction: column;
@@ -31,8 +32,8 @@
   position: relative;
 
   @include from-sm {
-    width: 600px;
-    min-width: 500px;
+    width: 550px;
+    min-width: 450px;
     margin-right: 10px;
   }
 

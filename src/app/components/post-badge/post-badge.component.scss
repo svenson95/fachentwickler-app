@@ -2,8 +2,10 @@
 @import 'src/theme/mixins';
 
 .fia-badge {
+  display: flex;
+  align-items: center;
   width: fit-content;
-  height: 14px;
+  height: 15px;
   flex-shrink: 0;
   border: white;
   margin-top: 1px;
@@ -11,12 +13,11 @@
 
   color: white;
   font-size: .6em;
-  font-family: Raleway-Bold, sans-serif;
+  font-family: Nunito-ExtraBold, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 
   @include to-md {
-    line-height: 14px;
     padding: 0 8px;
     float: right;
   }
@@ -27,8 +28,7 @@
   }
 
   @include from-md {
-    line-height: 16px;
-    padding: 0 8px 2px;
+    padding: 0 8px;
   }
 
   @include from-sm {

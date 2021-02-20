@@ -128,14 +128,14 @@
 
       .fia-description {
         color: $fia-grey-1;
-        font-size: 0.95em;
+        font-size: .9em;
         margin-bottom: 0;
         text-align: right;
         line-height: 17px;
 
         @include to-xs {
           font-size: .85em;
-          margin-top: 4px;
+          margin-top: 7px;
           line-height: 14px;
         }
 

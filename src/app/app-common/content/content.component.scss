@@ -26,14 +26,33 @@
     }
   }
 
-  .logo {
-    font-family: Raleway-Light, sans-serif;
+  .fia-branding {
+    display: flex;
     font-size: .9em;
 
-    .fia, .pp, .yio { text-decoration: underline double; }
-    .fia { text-decoration-color: $fia-secondary-color; }
-    .pp { text-decoration-color: $fia-third-color; }
-    .yio { text-decoration-color: $fia-primary-color; }
+    .first, .second, .third {
+      font-family: Nunito-Light, sans-serif;
+      text-decoration: underline double;
+      letter-spacing: -1px;
+    }
+    .first { text-decoration-color: $fia-third-color; }
+    .second { text-decoration-color: $fia-secondary-color; }
+    .third { text-decoration-color: $fia-primary-color; }
+
+    .fia-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      margin-right: 4px;
+      fill: $fia-secondary-color;
+    }
+
+    .copyright {
+      font-family: Nunito-Regular, sans-serif;
+      font-size: .8em;
+      margin-left: 5px;
+    }
   }
 
   .buttons {

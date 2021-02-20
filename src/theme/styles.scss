@@ -1,23 +1,22 @@
+
 @font-face {
-  font-family: 'Raleway-Regular';
-  src: url('../assets/fonts/Raleway-Regular.ttf');
-}
-@font-face {
-  font-family: 'Raleway-Bold';
-  src: url('../assets/fonts/Raleway-Bold.ttf');
-}
-@font-face {
-  font-family: 'Raleway-Italic';
-  src: url('../assets/fonts/Raleway-Italic.ttf');
-}
-@font-face {
-  font-family: 'Raleway-Light';
-  src: url('../assets/fonts/Raleway-Light.ttf');
+  font-family: 'Nunito-Light';
+  src: url('../assets/fonts/Nunito-Light.ttf');
 }
 
 @font-face {
-  font-family: 'Grandstander';
-  src: url('../assets/fonts/Grandstander-VariableFont_wght.ttf');
+  font-family: 'Nunito-Regular';
+  src: url('../assets/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito-Italic';
+  src: url('../assets/fonts/Nunito-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito-ExtraBold';
+  src: url('../assets/fonts/Nunito-ExtraBold.ttf');
 }
 
 @import 'src/theme/mixins';
@@ -34,11 +33,11 @@
 }
 
 b, strong {
-  font-family: Raleway-Bold, sans-serif;
+  font-family: Nunito-ExtraBold, sans-serif;
 }
 
 i {
-  font-family: Raleway-Italic, sans-serif;
+  font-family: Nunito-Italic, sans-serif;
 }
 
 u {
@@ -54,7 +53,7 @@ hr {
 }
 
 button {
-  font-family: Raleway-Regular, sans-serif;
+  font-family: Nunito-Regular, sans-serif;
 }
 
 .ddu-list-number,
@@ -157,7 +156,7 @@ a {
 
 .fia-card-title {
   font-size: 1.5em;
-  font-family: Raleway-Light, sans-serif;
+  font-family: Nunito-Light, sans-serif;
   letter-spacing: 1px;
   line-height: 26px;
   text-decoration: underline;
@@ -220,7 +219,7 @@ a {
       left: 3%;
       top: 48px;
       font-size: .55em;
-      font-family: Raleway-Regular, sans-serif;
+      font-family: Nunito-Regular, sans-serif;
     }
   }
 
@@ -252,7 +251,7 @@ a {
 
   color: black;
   font-size: .8em;
-  font-family: Raleway-Bold, sans-serif;
+  font-family: Nunito-ExtraBold, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 
@@ -303,7 +302,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   background-color: $fia-dark-background-color;
   color: $fia-third-color;
   text-transform: uppercase;
-  font-family: Raleway-Bold, sans-serif;
+  font-family: Nunito-ExtraBold, sans-serif;
   font-size: 1em;
   padding: 10px 20px;
   border: none;

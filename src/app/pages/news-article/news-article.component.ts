@@ -17,7 +17,7 @@ export class NewsArticleComponent implements OnInit {
               private headerService: HeaderService,
               private dataService: DataService
   ) {
-    this.headerService.setPageTitle('News');
+    this.headerService.setPageTitle('Mitteilung');
   }
 
   ngOnInit(): void {

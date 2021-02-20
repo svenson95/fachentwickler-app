@@ -114,10 +114,6 @@
         hr {
           background-color: $fia-grey-3 !important;
         }
-
-        @include to-xs {
-          background: rgba($fia-light-background-color, 0.6) !important;
-        }
       }
 
       .fia-card-description, .fia-post-last-update {
@@ -314,7 +310,7 @@
       }
     }
 
-    .logo {
+    .fia-branding {
       color: black;
     }
 

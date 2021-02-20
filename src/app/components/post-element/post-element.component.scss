@@ -10,7 +10,7 @@
 
   .post-title {
     font-size: 1.6em;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Nunito-Light, sans-serif;
     margin-top: 10px;
 
     @include to-xs {
@@ -20,7 +20,7 @@
 
   .post-subtitle {
     font-size: 1.3em;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Nunito-Light, sans-serif;
     margin-top: 20px;
 
     @include to-xs {
@@ -157,7 +157,7 @@
     .table-row {
 
       th {
-        font-family: Raleway-Bold, sans-serif;
+        font-family: Nunito-ExtraBold, sans-serif;
         background: $fia-dark-background-color;
       }
 

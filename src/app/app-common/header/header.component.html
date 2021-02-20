@@ -12,7 +12,7 @@
       </svg>
     </div>
     <h1 class="fia-app-name unselectable">
-      <span class="fia">Fi</span><span class="pp">De</span><span class="yio">MY</span>
+      <span class="first">Fia</span><span class="second">de</span><span class="third">m</span>y
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
@@ -71,14 +71,19 @@
             <mat-icon>help</mat-icon>
             <span class="label">About</span>
           </a>
-          <button class="fia-menu-button" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
-            <mat-icon>logout</mat-icon>
-            <span class="label">Ausloggen</span>
+          <button class="fia-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches">
+            <!--            *ngIf="authService.user.role === UserRole.ADMIN"-->
+            <mat-icon>perm_media</mat-icon>
+            <span class="label">Image-Manager</span>
           </button>
           <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="authService.toggleTheme()">
             <mat-icon>invert_colors</mat-icon>
             <span class="label">{{authService.theme === 'dark' ? 'Light': 'Dark'}} Theme aktivieren</span>
           </a>
+          <button class="fia-menu-button" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
+            <mat-icon>logout</mat-icon>
+            <span class="label">Ausloggen</span>
+          </button>
         </mat-menu>
       </div>
     </div>

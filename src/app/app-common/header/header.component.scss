@@ -19,8 +19,7 @@
 
   .fia-logo-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border: 2px solid transparent;
     background: transparent;
@@ -33,16 +32,16 @@
     }
 
     @include to-sm {
-      width: 158px;
+      width: 153px;
     }
 
     @include to-md {
-      width: 162px;
+      width: 158px;
     }
 
     @include to-xs {
       width: fit-content;
-      height: 34px;
+      height: 36px;
       padding: 5px;
       margin-left: 10px;
       margin-right: 10px;
@@ -53,8 +52,13 @@
     }
 
     &.active-route {
-      @include to-xs {
+      fill: $fia-secondary-color;
+
+      .fia-icon-wrapper {
         fill: $fia-secondary-color;
+      }
+
+      @include to-xs {
         border-color: $fia-secondary-color !important;
       }
     }
@@ -63,7 +67,7 @@
       color: white;
       margin-bottom: 4px;
       font-size: 1.2em;
-      font-family: Grandstander, sans-serif;
+      font-family: Nunito-Light, sans-serif;
       line-height: 24px;
       letter-spacing: -1px;
 
@@ -79,23 +83,27 @@
       width: 24px;
       margin-bottom: -5px;
 
+      svg {
+        height: 24px;
+      }
+
       @include from-xs {
         fill: $fia-third-color;
-        margin-right: 16px;
+        margin-right: 6px;
       }
     }
 
     .fia-app-name {
       z-index: 1;
 
-      .fia, .pp, .yio {
+      .first, .second, .third {
         text-decoration: underline;
         text-decoration-style: double;
       }
 
-      .fia { text-decoration-color: $fia-third-color; }
-      .pp { text-decoration-color: $fia-secondary-color; }
-      .yio { text-decoration-color: $fia-primary-color; }
+      .first { text-decoration-color: $fia-third-color; }
+      .second { text-decoration-color: $fia-secondary-color; }
+      .third { text-decoration-color: $fia-primary-color; }
 
       @include to-xs {
         display: none;
@@ -176,8 +184,8 @@
     .fia-page-title {
       display: flex;
       align-items: center;
-      margin-left: 15px;
-      margin-right: 15px;
+      margin-left: 12px;
+      margin-right: 12px;
       padding: 6px 10px;
 
       color: white;
@@ -206,18 +214,19 @@
 
       .title {
         font-size: 1.1em;
+        margin-top: 2px;
         margin-bottom: 0;
         white-space: pre-line;
-        margin-bottom: 0;
-        line-height: 18px;
-        font-family: Raleway-Light, sans-serif;
+        line-height: 20px;
+        font-family: Nunito-Light, sans-serif;
+
+        @include from-xs {
+          padding: 0 5px;
+        }
 
         @include to-xs {
           font-size: .9em;
-        }
-
-        @include from-md {
-          padding: 0 5px;
+          padding: 0 3px;
         }
       }
 
@@ -298,11 +307,11 @@
 
           color: $fia-third-color;
           font-size: .5em;
-          font-family: Raleway-Bold, sans-serif;
+          font-family: Nunito-ExtraBold, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
-          line-height: 13px;
+          line-height: 14px;
 
           &:hover {
             color: white;
@@ -370,9 +379,9 @@
 
 .fia-header .fia-logo-wrapper {
   &:hover, &:focus {
-    .fia-icon-wrapper:not(.active-route) .fia-app-icon {
+    .fia-icon-wrapper:not(.active-route) {
       @include from-md {
-        color: white;
+        fill: $fia-secondary-color;
         transition: 150ms;
       }
     }
@@ -421,6 +430,13 @@
 
     &:hover {
       color: black;
+    }
+  }
+
+  .scrolled  {
+    .fia-search-bar {
+      background: rgba($fia-light-card-color, .5) !important;
+      //transition: background-color 300ms ease-in;
     }
   }
 }

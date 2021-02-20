@@ -13,7 +13,7 @@
   }
 
   .fia-description {
-    color: $fia-grey-1;
+    color: $fia-grey-1 !important;
   }
 
   .fia-welcome-banner {
@@ -51,7 +51,7 @@
       width: 100%;
       align-self: center;
       margin-top: 10px;
-      font-family: Raleway-Bold, sans-serif;
+      font-family: Nunito-ExtraBold, sans-serif;
       font-size: 1.4em;
       letter-spacing: 2px;
       text-align: right;
@@ -202,6 +202,7 @@
         width: 100px;
       }
     }
+
     .fia-component-wrapper {
       display: flex;
       flex-direction: column;
@@ -290,7 +291,7 @@
       align-self: center;
 
       @include from-sm {
-        width: 800px;
+        width: 750px;
         min-width: 400px;
       }
 

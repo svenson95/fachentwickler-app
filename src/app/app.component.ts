@@ -9,7 +9,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'fiappy-app';
+  title = 'fiademy-app';
 
   constructor(private router: Router,
               private viewportScroller: ViewportScroller
