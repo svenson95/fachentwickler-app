@@ -1,5 +1,7 @@
 <mat-toolbar color="primary" class="fia-header">
-  <button class="fia-logo-wrapper fia-header-hover-label" (click)="closeSidenav()" routerLink="/"
+  <button class="fia-logo-wrapper fia-header-hover-label"
+          (click)="closeSidenav()"
+          [routerLink]="isMobile.matches ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
           [ngClass]="{'active-route': router.url === '/' || router.url === '/dashboard' || router.url === '/login'}"
   >
     <div class="fia-icon-wrapper">

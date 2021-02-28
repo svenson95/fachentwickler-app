@@ -30,7 +30,7 @@
   </div>
 
   <div class="fia-subjects-section">
-    <p class="section-title">Ausbildung</p>
+    <p class="section-title">Lernfelder</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of subjectsSection"
@@ -44,11 +44,26 @@
     </mat-nav-list>
   </div>
 
-  <div class="fia-areas-section">
-    <p class="section-title">Theorie</p>
+  <div class="fia-study-section">
+    <p class="section-title">Studium</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
-         *ngFor="let navItem of areasSection"
+         *ngFor="let navItem of studySection"
+         [routerLink]="'/' + navItem.url"
+         (click)="closeSidebar()"
+         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
+      >
+        <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+        <span [innerHTML]="navItem.title"></span>
+      </a>
+    </mat-nav-list>
+  </div>
+
+  <div class="fia-areas-section">
+    <p class="section-title">Sprachen</p>
+    <mat-nav-list>
+      <a class="fia-nav-item" mat-list-item disableRipple
+         *ngFor="let navItem of languageSection"
          [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"

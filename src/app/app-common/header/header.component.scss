@@ -286,7 +286,7 @@
 
           &:hover {
             :not(.fia-hover-label) {
-              color: $fia-secondary-color;
+              color: white;
             }
           }
 
@@ -430,6 +430,12 @@
 
     &:hover {
       color: black;
+    }
+  }
+
+  .fia-button-container .fia-action-btn:hover {
+    .mat-icon {
+      color: black !important;
     }
   }
 

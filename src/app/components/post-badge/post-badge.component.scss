@@ -22,6 +22,10 @@
     float: right;
   }
 
+  @include to-xs {
+    font-size: .55em;
+  }
+
   @include to-tiny {
     font-size: .5em;
     line-height: 15px;

@@ -21,11 +21,11 @@ export class DashboardComponent implements OnInit {
   scheduleSubstitutions = false;
 
   examplePost = {
-    description: subjectsData[0].topics[0].links[1].description,
-    postId: subjectsData[0].topics[0].links[1].postId,
+    description: subjectsData[0].topics[0].links[0].description,
+    postId: subjectsData[0].topics[0].links[0].postId,
     subject: LF1_POSTS[1].subject,
-    title: subjectsData[0].topics[0].links[1].title,
-    type: subjectsData[0].topics[0].links[1].type,
+    title: subjectsData[0].topics[0].links[0].title,
+    type: subjectsData[0].topics[0].links[0].type,
     url: LF1_POSTS[1].url
   };
 

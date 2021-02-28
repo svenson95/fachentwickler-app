@@ -58,7 +58,13 @@
       text-transform: uppercase;
 
       :not(:last-of-type) {
-        margin-bottom: 5px;
+        @include from-sm {
+          margin-bottom: 5px;
+        }
+
+        @include to-sm {
+          margin-bottom: 2px;
+        }
       }
 
       @include to-sm {

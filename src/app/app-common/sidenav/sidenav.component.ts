@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../../models/menu-item';
-import { areas, myClass, subjects } from '../../../data/menu-items';
+import { study, languages, myClass, subjects } from '../../../data/menu-items';
 import { SidenavService } from '../../services/sidenav.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
@@ -14,7 +14,8 @@ import { AuthService } from '../../services/auth/auth.service';
 export class SidenavComponent implements OnInit {
 
   subjectsSection: MenuItem[] = subjects;
-  areasSection: MenuItem[] = areas;
+  studySection: MenuItem[] = study;
+  languageSection: MenuItem[] = languages;
   myClassSection: MenuItem[] = myClass;
 
   constructor(private sidenavService: SidenavService,
