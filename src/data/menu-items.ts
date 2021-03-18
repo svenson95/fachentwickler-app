@@ -153,16 +153,22 @@ export const myClass: MenuItem[] = [
     icon: mailOutline,
   },
   {
-    title: 'Lehrmaterial',
-    shortTitle: 'Lehrmaterial',
-    url: '/lehrmaterial',
-    icon: folderOutline,
+    title: 'Klausuren',
+    shortTitle: 'Klausuren',
+    url: '/klausuren',
+    icon: schoolOutline,
   },
   {
     title: 'Lehrplan',
     shortTitle: 'Lehrplan',
     url: '/lehrplan',
-    icon: 'file-tray-full-outline',
+    icon: fileTrayFullOutline,
+  },
+  {
+    title: 'Lehrmaterial',
+    shortTitle: 'Lehrmaterial',
+    url: '/lehrmaterial',
+    icon: folderOutline,
   },
   {
     title: 'Vertretungsplan',
@@ -173,21 +179,9 @@ export const myClass: MenuItem[] = [
   {
     title: 'Schuljahresplan',
     shortTitle: 'Schuljahresplan',
-    url: '/schuljahresplan',
-    icon: 'calendar-outline',
-  },
-  {
-    title: 'Feedback',
-    shortTitle: 'Feedback',
-    url: '/feedback',
-    icon: 'megaphone-outline',
-  },
-  {
-    title: 'Klausuren',
-    shortTitle: 'Klausuren',
-    url: '/klausuren',
-    icon: 'school-outline',
-  },
+    url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/20_21/se-fi_20-21.pdf',
+    icon: calendarOutline,
+  }
 ];
 
 export const pages = [...subjects, ...study, ...languages, ...myClass];

@@ -774,7 +774,7 @@ export const LF7_POSTS: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2020-12-21",
         "schoolWeek": "16",
         "elements": [
             {
@@ -787,7 +787,7 @@ export const LF7_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Eine Kollisionsdomäne ist das geteilte Medium, auf dem die gleichen physikalischen Größen miteinander kollidieren. Sie umfasst alle Geräte die mit einem gemeinsamen Medium verbunden sind. Das Medium ist also eine zwischen allen Netzwerk-Geräten geteilte Ressource. Repeater und Hub's erweitern die Reichweite einer Kollisionsdomäne. Eine Bridge, Switch oder Router begrenzen die Kollisionsdomäne."
+                "content": "<u>Eine Kollisionsdomäne ist das geteilte Medium, auf dem die gleichen physikalischen Größen miteinander kollidieren.</u> Sie umfasst alle Geräte die mit einem gemeinsamen Medium verbunden sind. Das Medium ist also eine zwischen allen Netzwerk-Geräten geteilte Ressource. Repeater und Hub's erweitern die Reichweite einer Kollisionsdomäne. Eine Bridge, Switch oder Router begrenzen die Kollisionsdomäne."
             },
             {
                 "type": "list",
@@ -810,7 +810,7 @@ export const LF7_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Hier kann ein Repeater als Netzwerkgerät verwendet werden, um längere Strecken eines LANs zu überbrücken. Der Repeater empfängt ein Signal, entfernt bzw. korrigiert Verzerrungen und sendet das Signal wieder los."
+                "content": "Hier kann ein <b>Repeater</b> als Netzwerkgerät verwendet werden, <b>um längere Strecken eines LANs zu überbrücken</b>. Der Repeater empfängt ein Signal, entfernt bzw. korrigiert Verzerrungen und sendet das Signal wieder los."
             },
             {
                 "type": "text",
@@ -834,7 +834,7 @@ export const LF7_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "<u>Bei der Übertragung von Signalen hat man nicht nur mit Leitungsverlusten zu rechnen</u>, sondern auch mit <u>Reflexionen des Signals</u> und die damit verbundenen möglichen <u>Verfälschungen der Daten</u>. Reflexionen gibt es bei elektrischen Wellen, um zu verstehen was Reflexionen bedeuten, hilft es die Signale als Wellen zu betrachten."
+                "content": "<u>Bei der Übertragung von Signalen hat man nicht nur mit Leitungsverlusten zu rechnen</u>, sondern auch mit <b>Reflexionen des Signals</b> und die damit verbundenen möglichen <b>Verfälschungen der Daten</b>. Reflexionen gibt es bei elektrischen Wellen, um zu verstehen was Reflexionen bedeuten, hilft es die Signale als Wellen zu betrachten."
             },
             {
                 "type": "hint",
@@ -1207,6 +1207,836 @@ export const LF7_POSTS: Post[] = [
             {
                 "type": "text",
                 "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/wlan_umts_und_lte",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-11-16",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/widerstandsberechnung_1",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-11-17",
+        "lastUpdate": "2020-12-21",
+        "schoolWeek": "18",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/topologien_wiederholung",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-11-20",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/test",
+        "topic": "test",
+        "subject": "lf-7",
+        "lessonDate": "2020-11-20",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/widerstandsberechnung_2",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-12-08",
+        "lastUpdate": "2020-12-21",
+        "schoolWeek": "19",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "R-L-C-Rechnung <br/> <a href='https://www.elektroniktutor.de/analogtechnik/zkomplex.html'>Komplexe Widerstandsberechnung von R-C-L-Kombinationen</a>"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/intranet_und_extranet",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-12-08",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "19",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/ipv4",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-12-11",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "19",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/wechselstromwiderstaende_berechnen",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-01-12",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "LF-7-1"
+          },
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/datensicherheit_und_datenuebertragung_1",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-01-12",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "LF-7-2"
+          },
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/datensicherheit_und_datenuebertragung_2",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-01-15",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "LF-7-2"
+          },
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/viren_und_malware_1",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-02-09",
+        "lastUpdate": "2021-03-07",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "LF-7-2"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Arbeiten Sie den u. angehängten Text durch",
+                    "Ergänzen und überprüfen Sie den Text durch Ihre Internet-Recherche",
+                    "Dir Ergänzungen bitte in den Abgabeordner hochladen"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Grundbauplan eines Virus"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Ein Virus besteht aus mehreren funktionalen Komponenten, von denen eine obligatorisch ist, die anderen aber nicht unbedingt vorhanden sein müssen",
+                        "sublist": [
+                            "Infektion",
+                            "Payload (Nutzlast)",
+                            "Tarnung"
+                        ]
+                    },
+                    "<b>Grundsätzlich</b>: Ein Virus ist ein Programm",
+                    "Dieses spezielle Programm enthält die Befehle, die zur Erzeugung einer Kopie des Programms führen",
+                    "Der Teil des Computervirus, der sich mit der Anfertigung von Kopien seiner selbst beschäftigt, wird Infektionsroutine genannt",
+                    {
+                        "content": "Das aus dem militärischen Bereich stammende Wort Payload bezeichnet die „Nutzlast“ eines Virus. Man bezeichnet damit die verankerten Schadensfunktionen",
+                        "sublist": [
+                            "Je nach Absichten und Einfallsreichtum des Programmierers kann ein Virus die unterschiedlichsten Aktionen ausführen",
+                            "Dies reicht von der Anzeige von störenden Bildschirmmeldungen bis zum Löschen von Dateien oder dem Unbrauchbarmachen von ganzen Datenträgern",
+                            "Schadensfunktionen gekoppelt an bestimmte Ereignisse <br/> → z.B. an ein bestimmtes Datum (z. B. Freitag, den 13.) <br/> → oder an ein anderes Ereignis zu koppeln (z. B. 50. Neustart des Rechners) <br/> → Es existieren allerdings auch Viren, die keine Payload mit sich führen, da sie z. B. nur als konzeptionelle Viren geschrieben wurden",
+                            "Auch Viren ohne Payload sind nicht ganz ungefährlich"
+                        ]
+                    },
+                    "Durch fehlerhaft programmierte Infektionsroutinen können auch diese zu einem Datenverlust führen",
+                    "Um auf einem System nach der Infektion nicht entdeckt zu werden, enthalten die meisten Viren spezielle Tarnroutinen. Dies kann sich auf die Art und Weise der Infektion oder Manipulation des befallenen Systems auswirken"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Bootsektorvirus"
+            },
+            {
+                "type": "text",
+                "content": "Bootsektorviren besetzen den Lebensraum des Bootsektors einer Platte. Ein Bootsektorvirus nutzt die Tatsache, dass jeder Computer irgendwann einmal gestartet werden muss."
+            },
+            {
+                "type": "text",
+                "content": "Arbeitsweise eines Bootsektorvirus ..."
+            },
+            {
+                "type": "subtitle",
+                "content": "Allgemein – Der Startvorgang des Rechnersystems"
+            },
+            {
+                "type": "text",
+                "content": "Als Erstes nach dem Einschalten führt das BIOS eine Fehlererkennung durch (POST) und leitet dann den Start des Betriebssystems ein, in dem auf den verfügbaren Datenträgern nach einem Bootsektor gesucht wird. Der Inhalt des Bootsektors wird in den Speicher geladen und ausgeführt. Der Code im Bootsektor enthält weitere Anweisungen, wie und wo die Startdateien des Betriebssystems zu laden sind."
+            },
+            {
+                "type": "text",
+                "content": "Bootsektorviren nutzen diese Vorgehensweise, um vor dem Start des eigentlichen Betriebssystems vom befallenen Rechner ausgeführt zu werden.Eine weitere Verbreitung dieser Viren erfolgt über die Infektion der Bootsektoren von Disketten, USB-Sticks usw."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Infektionsmethode"
+            },
+            {
+                "type": "text",
+                "content": "Die nebenstehende Abbildung zeigt schematisch die Festplatte eines virusfreien PCs. Der Bootsektor des Systems befindet sich auf dem ersten Sektor des Datenträgers und wird grundsätzlich vom BIOS geladen, um den Startvorgang des Betriebssystems einzuleiten."
+            },
+            {
+                "type": "text",
+                "content": "Wird dieser PC eingeschaltet, so lädt das BIOS den Bootsektorcode © und startet diesen. Der Code enthält Anweisungen und Informationen, die es erlauben, den Rest des Betriebssystems von den jeweiligen Sektoren der Festplatte zu laden."
+            },
+            {
+                "type": "text",
+                "content": "Disketten besitzen ebenfalls einen Bootsektor. Auch wenn ein Computer nicht von einer Diskette gestartet werden kann, so befindet sich im dortigen Sektor ein Miniprogramm, das eine Fehlermeldung ausgibt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6045112bb0c00c20f201d191"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Start des PCs nach einer Bootsektorinfektion:"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Nehmen Sie an, der Benutzer dieses Computers hat eine Diskette mit einem Bootsektorvirus erhalten und Dateien von dieser Diskette kopiert. Der Rechner muss irgendwann einmal neu gestartet werden und die Diskette wurde im Laufwerk vergessen.",
+                    "Nachdem der POST erfolgreich durchgeführt wurde, sucht das BIOS gemäß der eingestellten Bootreihenfolge nach startbaren Laufwerken – meist LW – C: <br/> <u>Von der noch im Laufwerk befindlichen Diskette wird der Bootsektor ausgelesen und ausgeführt. <br/> In diesem Fall wird der Virus aktiv.</u>"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6045118db0c00c20f201d193"
+            },
+            {
+                "type": "list",
+                "content": "Virus infizierte HD",
+                "list": [
+                    "Die <u>Infektionsroutine</u> des Virus <u>sucht</u> nun <u>andere installierte Datenträger</u> und erkennt das C-Laufwerk.",
+                    "<u>Zur Infektion</u> des Laufwerks <u>erstellt</u> der Virus <u>zuerst eine Kopie</u> des originalen Bootsektors (1). Hierzu wird meist eine im Virus fest programmierte Sektoradresse als Speicher-Ort für die Backup-Kopie gewählt.",
+                    "Anschließend <u>schreibt der Virus sich selbst an die Stelle des Bootsektors</u> (2). Um den erfolgreichen Infektionsvorgang zu vertuschen, wäre es jetzt für den Virus möglich, eine Fehlermeldung auf dem Bildschirm auszugeben, die besagt, dass eine nicht bootfähige Diskette im Laufwerk liegt. Der Benutzer wird sich an <u>die Diskette im Laufwerk erinnern</u>, diese entfernen und den <u>Rechner neu starten</u>.",
+                    "Beim nächsten Neustart ohne eingelegte Diskette liest das BIOS den Virus-Sektor und startet diesen. Wiederum würde nach infizierbaren Disketten oder Festplatten gesucht, mit der Ausnahme, dass der Virus nun weiß, dass er von einer bootfähigen Festplatte gestartet wurde. Da die Adresse für das Backup des Originalsektors bekannt ist, verzweigt der Virus nach Abarbeitung seines Codes an die Adresse des originalen Bootsektors, und der PC startet wie gewöhnlich."
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Speicherresistente Bootsektorviren"
+            },
+            {
+                "type": "text",
+                "content": "Speicherresident ist ein Virus dann, wenn er im Speicher verbleibt und weiterhin aktiv ist – unabhängig davon ob die Ursache des „Virenstartes“ beendet wurde oder nicht. Viren dieser Art werden manchmal auch TSR-Viren genannt („Terminate and Stay Resident“)."
+            },
+            {
+                "type": "subtitle",
+                "content": "Arbeitsweise Speicherresidenter Bootsektorviren:"
+            },
+            {
+                "type": "list",
+                "content": "Ein speicherresidenter Bootsektorvirus würde bei seiner Ausführung zuerst über eine BIOS-Funktion den Wert für den maximal verfügbaren Speicher um den Betrag seiner eigenen Größe reduzieren.",
+                "list": [
+                    "Ein Virus ist z.B. 1 kB groß, so wird ein für die DOS-Architektur geschriebener Bootsektorvirus den Wert für verfügbaren Speicher von 640 kB auf 639 kB reduzieren. Anschließend kopiert sich der Virus in den als „nicht existent“ markierten Arbeitsspeicher.",
+                    "<b>Damit der Virus auch wirklich aktiv bleiben kann, wird die Software-IRQ-Tabelle des PCs manipuliert.</b> Die Software-IRQs stellen grundlegende PC-Funktionalitäten zur Verfügung, auf denen Programmierer auch ohne Vorhandensein eines Betriebssystems aufbauen können. In der IRQ-Tabelle ist zu einer bestimmten IRQ-Nummer (entspricht einer Funktion) die Speicheradresse abgelegt, an der die entsprechende Funktion aufgerufen werden kann. <b>Der Virus liest einen Wert für einen gewünschten IRQ aus</b> (z. B. den IRQ für Datenträgerzugriffe) und <b>schreibt seine eigene Adresse im Speicher in diese Tabelle. Die ursprüngliche IRQ-Adresse wird im Virus gespeichert.</b>",
+                    "Anschließend kann sich diese Instanz des Virus beenden; seine gerade angelegte Kopie bleibt im Speicher aktiv und wird von allen anderen Programmen unabsichtlich immer dann aufgerufen, wenn sie die entsprechende IRQ-Funktion benutzen. Der residente Virus hat dann bei seiner Ausführung Gelegenheit, weitere Ziele zu infizieren, Schadensfunktionen auszuführen oder den Funktionsaufruf an die Originalfunktion weiterzuleiten.Im letzteren Fall würde die Anwesenheit eines Virus nicht weiter auffallen, da der PC normal zu arbeiten scheint."
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Programmierfehler in Bootsektorviren:"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Nicht jeder Bootsektorvirus, implementiert Schadensroutine.",
+                    "Oft führen Programmierfehler oder Designfehler in diesen Viren bei der Infektion eines Systems zu empfindlichen Datenverlusten.",
+                    "Auch der „gut gemeinte“ Scherzvirus kann auf Grund eines Programmierfehlers oder einer Inkompatibilität nicht selten zu empfindlichen Datenverlusten führen.",
+                    {
+                        "content": "Beispiel:",
+                        "sublist": [
+                            "Ist der vom Virus für das Backup des Originalsektors verwendete Platz schon belegt, so werden diese Daten überschrieben und sind somit verloren.",
+                            "Drastischer sind die Folgen einer Doppelinfektion mit zwei verschiedenen Viren, bei denen einer nur eine Variante des anderen ist."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60451274b0c00c20f201d195"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Wird das mit Virus A bereits infizierte System zusätzlich noch von Virus B befallen und hat der Programmierer der Variante B diesen Sonderfall nicht berücksichtigt, so wird Virus B den Inhalt des Bootsektors von seinem gewohnten Platz an die Stelle des Backup-Platzes kopieren. In diesem Fall befindet sich aber nicht der Original-Bootsektor, sondern Virus A im betreffenden Sektor.",
+                    "Der an der Backup-Stelle befindliche originale Bootsektor wird hierbei durch Virus A überschrieben. Wird dieses System nun gestartet, so verzweigt Virus B, der zuerst gestartet wird, auf Virus A (1).",
+                    "Dieser wiederum würde nach seinem Programmablauf den eigentlichen Bootsektor aufrufen, der sich an der Backup-Adresse befindet. In diesem Fall ruft Virus A sich in einer Endlosschleife selbst immer wieder auf, da er selbst an dieser Adresse sitzt (2). Das System kann ohne Eingriff von außen nicht mehr starten."
+                ]
+            }
+        ]
+    },
+    {
+        "url": "e_technik/viren_und_malware_2",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-02-12",
+        "lastUpdate": "2021-02-26",
+        "schoolWeek": "21",
+        "elements": [
+          {
+            "type": "title",
+            "content": "LF-7-2"
+          },
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "e_technik/serverlizenzen_und_lizenzstrukturen_1",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-03-02",
+        "lastUpdate": "2021-03-03",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "LF-7-2"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Erarbeiten Sie sich die Lizenz-Strukturen der Windows Betriebssysteme für ...",
+                        "sublist": [
+                            "1.1 Clients",
+                            "1.2 Server",
+                            "1.3 Welche Dienste können von den Servern angeboten werden",
+                            "1.4 Untersuchen Sie äquivalent das Linux Betriebssystem <br/> Bei Microsoft können Sie sich die aktuellen Informationen holen, z.B. für den Standard.-, Datacenterserver, für User Kerne usw. <br/><br/> Produktbestimmungen für Microsoft-Volumenlizenzierung (Deutsch, Juni 2019 <br/><br/> Lizenzen waren schon Prüfungsrelevant! Ich persönlich finde es nur ziemlich \"belastend\", da MS seine Rahmenbedingungen gelegentlich verändert. z. B. von der Kauflizenz zur monatlichen Liasinlizenz inklusive der Veränderung der Lizenzbedingungen. Ich hoffe, dass Sie bis zu Ihrer Prüfung keine Veränderung mehr bekommen und so zumindest den Überblick behalten."
+                        ]
+                    },
+                    {
+                        "content": "Für mich ist auch der Vergleich mit Linux und Mac wichtig. Sie sollten immer Argumente für den Kunden und seine Aufgaben haben. Als Facharbeiter haben Sie immer eine Beratungspflicht.",
+                        "sublist": [
+                            "2.1 Erarbeiten Sie sich das Linux – Lizenzmodell",
+                            "2.2 Erarbeiten Sie sich das MAC-OS – Lizenzmodell"
+                        ]
+                    },
+                    "Vergleichen Sie die Lizenzmodelle miteinander. Stellen Sie die Vor- und Nachteile gegenüber. "
+                ]
+            },
+            {
+                "type": "text",
+                "content": "<a href='http://159.65.105.150/lf-7/e_technik/serverlizenzen_und_lizenzstrukturen_2'>Aufgabe gelöst? Zur Musterlösung</a>"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/grundlagen_der_uebertragungstechnik_1",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-03-02",
+        "lastUpdate": "2021-03-05",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "LF-7-1"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Worin besteht das Prinzip der elektrischen Nachrichten-Übertragungstechnik?",
+                    "Formulieren Sie in Stichworten die Aufgaben der Nachrichtentechnik.",
+                    "Welche Aufgabe hat das Signal in der Nachrichten-Übertragungstechnik?",
+                    "Warum wird bei jedem Übertragungssystem ein Sender benötigt?",
+                    "In welchem Verhältnis müssen Nutzsignal und Störsignal stehen, um eine möglichst hohe Qualität einer Übertragung zu bewirken? Begründen Sie Ihre Antwort!",
+                    "Beschreiben Sie die wesentlichen Unterschiede zwischen den verschiedenen Übertragunsarten?"
+                ]
+            }
+        ]
+    },
+    {
+    "url": "e_technik/grundlagen_der_uebertragungstechnik_2",
+    "topic": "E-Technik",
+    "subject": "lf-7",
+    "lessonDate": "2021-03-03",
+    "lastUpdate": "2021-03-05",
+    "schoolWeek": "22",
+    "elements": [
+      {
+        "type": "title",
+        "content": "LF-7-1"
+      },
+      {
+        "type": "title",
+        "content": "Definition"
+      },
+      {
+        "type": "text",
+        "content": "Übertragung von Wirkungen mit Hilfe elektrischer, magnetischer oder optischer Größen"
+      },
+      {
+        "type": "list",
+        "content": "",
+        "list": [
+          "Beschreibung aus physikalischer und mathematischer Sicht",
+          "Begriffsbestimmungen",
+          "Abkürzungen"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Welche elementaren Formen der Darstellung von Nachrichten gibt es?"
+      },
+      {
+        "type": "list",
+        "content": "",
+        "list": [
+          "Ton",
+          "Bild",
+          "Text",
+          "Daten"
+        ]
+      },
+    ]
+  }
+    {
+        "url": "e_technik/serverlizenzen_und_lizenzstrukturen_2",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2021-03-05",
+        "lastUpdate": "2021-03-02",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "LF-7-2"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Erarbeiten Sie sich die Lizenz-Strukturen der Windows Betriebssysteme für ...",
+                        "sublist": [
+                            "1.1 Clients",
+                            "1.2 Server",
+                            "1.3 Welche Dienste können von den Servern angeboten werden",
+                            "1.4 Untersuchen Sie äquivalent das Linux Betriebssystem <br/> Bei Microsoft können Sie sich die aktuellen Informationen holen, z.B. für den Standard.-, Datacenterserver, für User Kerne usw. <br/><br/> Produktbestimmungen für Microsoft-Volumenlizenzierung (Deutsch, Juni 2019 <br/><br/> Lizenzen waren schon Prüfungsrelevant! Ich persönlich finde es nur ziemlich \"belastend\", da MS seine Rahmenbedingungen gelegentlich verändert. z. B. von der Kauflizenz zur monatlichen Liasinlizenz inklusive der Veränderung der Lizenzbedingungen. Ich hoffe, dass Sie bis zu Ihrer Prüfung keine Veränderung mehr bekommen und so zumindest den Überblick behalten."
+                        ]
+                    },
+                    {
+                        "content": "Für mich ist auch der Vergleich mit Linux und Mac wichtig. Sie sollten immer Argumente für den Kunden und seine Aufgaben haben. Als Facharbeiter haben Sie immer eine Beratungspflicht.",
+                        "sublist": [
+                            "2.1 Erarbeiten Sie sich das Linux – Lizenzmodell",
+                            "2.2 Erarbeiten Sie sich das MAC-OS – Lizenzmodell"
+                        ]
+                    },
+                    "Vergleichen Sie die Lizenzmodelle miteinander. Stellen Sie die Vor- und Nachteile gegenüber. "
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt eine ganze Reihe an unterschiedlichen Arten von Softwarelizenzen. Bei einer Softwarelizenz handelt es sich um eine Vereinbarung zwischen Nutzer und Softwarehersteller. Durch die Lizenz werden die Nutzungsbedingungen bestimmt und der Nutzer hat die Berechtigung die Software zu verwenden."
+            },
+            {
+                "type": "list",
+                "content": "Softwarelizenzen lassen sich in verschiedene Kategorien unterteilen …",
+                "list": [
+                    {
+                        "content": "Freeware",
+                        "sublist": [
+                            "darf kostenlos genutzt werden"
+                        ]
+                    },
+                    {
+                        "content": "Public Domain („geemeinfrei“)",
+                        "sublist": [
+                            "darf kostenlos genutzt werden, zusätzlich verzichtet der Hersteller auf sein Urheberrecht (in Deutschland ist es nicht möglich aufs Urheberrecht zu verzichten)"
+                        ]
+                    },
+                    {
+                        "content": "Open Source",
+                        "sublist": [
+                            "bedeutet, dass der Quellcode frei zugänglich ist. Die Nutzung muss deswegen aber nicht automatisch kostenlos sein"
+                        ]
+                    },
+                    {
+                        "content": "Freie Softwarelizenz",
+                        "sublist": [
+                            "heißt, dass die Nutzung kostenfrei. Anpassungen des Quellcodes sind problemlos möglich. Der Urheber ist bei dieser Lizenzform zu einer Offenlegung des Codes verpflichtet"
+                        ]
+                    },
+                    {
+                        "content": "Kommerzielle Software",
+                        "sublist": [
+                            "muss käuflich erworben werden, dazu zählen auch „kostenfreie Käufe“, wenn der Nutzer beispielsweise kostenlos eine Lizenz vom Hersteller erhält zu Promotionzwecken"
+                        ]
+                    },
+                    {
+                        "content": "Proprietäre Lizenz",
+                        "sublist": [
+                            "gibt dem Nutzer das Recht, mehrere Kopien der Anwendung zu nutzen"
+                        ]
+                    },
+                    {
+                        "content": "Arbeitsstation Lizenz",
+                        "sublist": [
+                            "gestattet die Nutzung nur auf einem dedizierten Computer"
+                        ]
+                    },
+                    {
+                        "content": "Copyleft-Lizenz/GNU General Public Lizenz",
+                        "sublist": [
+                            "gehört in die Kategorie Open Source. Quellcode darf verändert werden, muss aber laut GNU GPL für jedermann zugänglich gemacht werden"
+                        ]
+                    },
+                    {
+                        "content": "Current Use Lizenz",
+                        "sublist": [
+                            "erlaubt dem Nutzer, die Software auf mehreren Geräten gleichzeitig zu nutzen. Die maximale Nutzungsanzahl wird über die Nutzungsbedingungen vorgegeben"
+                        ]
+                    },
+                    {
+                        "content": "Standardlizenz (Concurrent Use Lizenz)",
+                        "sublist": [
+                            "erlaubt dem Nutzer, die software auf mehreren Geräten zu installieren aber pro Lizenz nur eine aktive Nutzung gleichzeitig"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Lizenzstrukturen der Windows Betriebssysteme"
+            },
+            {
+                "type": "text",
+                "content": "Mit Windows 10 hat sich die Art und Weise der Lizenzierung geändert, nun ist das Betriebssystem als „Windows-as-a-Service“ zu erwerben. Das bedeutet auch, dass es in Zukunft keine neuen Hauptversionen von Windows geben wird. Nach wie vor gibt es verschiedene Editionen und Leistungsumfänge. Es gibt beispielsweise Betriebssysteme die für <b>Clients</b> (Benutzer) oder für <b>Server</b> (Website-Hosting, Netzwerke, ...) ausgerichtet sind."
+            },
+            {
+                "type": "subtitle",
+                "content": "Lizenzstrukturen der Windows Betriebssysteme"
+            },
+            {
+                "type": "text",
+                "content": "Mit Windows 10 hat sich die Art und Weise der Lizenzierung geändert, nun ist das Betriebssystem als „Windows-as-a-Service“ zu erwerben. Das bedeutet auch, dass es in Zukunft keine neuen Hauptversionen von Windows geben wird. Nach wie vor gibt es verschiedene Editionen und Leistungsumfänge. Es gibt beispielsweise Betriebssysteme die für <b>Clients</b> (Benutzer) oder für <b>Server</b> (Website-Hosting, Netzwerke, ...) ausgerichtet sind."
+            },
+            {
+                "type": "subtitle",
+                "content": "Device CAL"
+            },
+            {
+                "type": "text",
+                "content": "Die <u>Device CAL</u> Lizenz erlaubt einem Gerät den Zugriff auf die Serversoftware. Das Gerät kann von mehreren Nutzern verwendet werden. Diese Art der Lizenzierung ist sinnvoll, wenn jeder Mitarbeiter nur an seinem eigenen PC arbeitet oder sogar PC’s von Mitarbeitern gemeinsam benutzt werden."
+            },
+            {
+                "type": "subtitle",
+                "content": "User CAL"
+            },
+            {
+                "type": "text",
+                "content": "Mit der User-Lizenz kann ein Benutzer von verschiedenen Geräten aus auf die Server-Software zugreifen. Gut geeignet wenn Mitarbeiter mit mehreren Geräten arbeiten."
+            },
+            {
+                "type": "subtitle",
+                "content": "Server CAL / Windows CAL"
+            },
+            {
+                "type": "text",
+                "content": "Wie oben bereits erklärt, werden Zugriffslizenzen benötigt um auf Microsoft Server Software zuzugreifen. Die Kosten für Zugriffslizenzen übersteigen oft bei weitem die Ausgaben für <u>Server-Lizenzen</u>. Deshalb gibt es in diesem Bereich oft ein erhebliches Sparpotential."
+            },
+            {
+                "type": "list",
+                "content": "Beispiele von verschiedenen Zugriffslizenz-Modellen:",
+                "list": [
+                    "Device CALs (gerätegebundene Zugriffslizenzen). Beliebig viele Nutzer",
+                    "User CALs (personengebundene Zugriffslizenzen). Mehrere Geräte",
+                    "Core CALs sind CAL-Bundles. Zugriffsrecht auf mehrere Server",
+                    "Windows Server CAL",
+                    "Office SharePoint Server CAL",
+                    "SQL Server CAL",
+                    "System Center Configuration Manager CAL"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Client Access License"
+            },
+            {
+                "type": "text",
+                "content": "Eine CAL, zu deutsch (Client-)Zugriffslizenz, ist eine besondere Form von Lizenz, die hauptsächlich bei Microsoft Produkten verbreitet ist. Dieses Modell erfordert drei Lizenzen – für den Client, für den Server und <u>Zugriffslizenzen</u>, durch die der Server autorisiert wird Clientverbindungen anzunehmen."
+            },
+            {
+                "type": "hint",
+                "content": "„A CAL is not a software product; rather, it is a license that gives a user the right to access the services of the server.“ Microsoft, 2021<sup>1</sup>"
+            },
+            {
+                "type": "list",
+                "content": "Es gibt hierbei zwei Lizenzierungsmöglichkeiten:",
+                "list": [
+                    "Lizenz pro Gerät (Client) → beliebig viele Nutzer pro Gerät",
+                    "Lizenz pro Nutzer (User) → beliebig viele Geräte pro Nutzer"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Linux Client- und Server-Lizenzen"
+            },
+            {
+                "type": "text",
+                "content": "Im Vergleich ..."
+            },
+            {
+                "type": "subtitle",
+                "content": "Linux und Windows im direkten Vergleich"
+            },
+            {
+                "type": "table",
+                "content": "test",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "" },
+                            { "align": "left", "content": "Windows" },
+                            { "align": "left", "content": "Linux" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kosten" },
+                            { "align": "left", "content": "Lizenzkosten pro Benutzer" },
+                            { "align": "left", "content": "Lizenzkostenfrei; je nach Distribution Kosten für Support" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Standardbedienung" },
+                            { "align": "left", "content": "Grafische Benutzeroberfläche" },
+                            { "align": "left", "content": "Kommandozeile" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Remote-Zugriff" },
+                            { "align": "left", "content": "Terminal-Server/Client muss installiert und konfiguriert werden" },
+                            { "align": "left", "content": "Integrierte Lösung (Terminal und Shell)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Software & Features" },
+                            { "align": "left", "content": "Unterstützt gängige Programme; Nutzung von Microsoft-Anwendungen möglich" },
+                            { "align": "left", "content": "Nicht für alle Programme existieren Portierungen; großes Arsenal an mitgelieferten Anwendungen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Hardware-Unterstützung" },
+                            { "align": "left", "content": "Neue Hardware standardmäßig auf Windows-Systeme ausgerichtet" },
+                            { "align": "left", "content": "Hardware-Treiber für Linux-Distributionen in der Regel erst etwas später nutzbar" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Support" },
+                            { "align": "left", "content": "Hohes Nutzerfehlerpotenzial; integriertes Interface als potenzieller Angriffspunkt" },
+                            { "align": "left", "content": "Gewöhnliche Nutzer haben keinen Zugriff auf elementare Systemeinstellungen; bekannte Sicherheitslücken werden schnell geschlossen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Dokumentation" },
+                            { "align": "left", "content": "System und Systemanwendungen ausgezeichnet dokumentiert; API-Komponenten und Datenformate eher weniger" },
+                            { "align": "left", "content": "Kompletter Quellcode von System, API, Bibliotheken und Anwendungen offengelegt; Man- und Info-Pages (größtenteils englischsprachig)" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<sup>1</sup> Client Access Licenses and Management Licenses, 05.03.2021 17:23 | <a href='https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license'>https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license</a>",
+                    "<a href='http://www.informatik.uni-oldenburg.de/~iug09/igr/koenigssee.informatik.uni-oldenburg.de_1211/index.php/software/23-lizenzen/78-formen-von-softwarelizenzen.html'>http://www.informatik.uni-oldenburg.de/~iug09/igr/koenigssee.informatik.uni-oldenburg.de_1211/index.php/software/23-lizenzen/78-formen-von-softwarelizenzen.html</a>",
+                    "<a href='https://www.bsh-ag.de/it-wissensdatenbank/lizenz/'>https://www.bsh-ag.de/it-wissensdatenbank/lizenz/</a>",
+                    "<a href='https://de.wikipedia.org/wiki/Client_Access_License'>https://de.wikipedia.org/wiki/Client_Access_License</a>",
+                    "<a href='https://www.software-express.de/lizenzierung/server-cal-windows-cal-microsoft-cal-core-cal/'>https://www.software-express.de/lizenzierung/server-cal-windows-cal-microsoft-cal-core-cal/</a>"
+                ]
             }
         ]
     },

@@ -591,6 +591,126 @@ export const LF3_POSTS: Post[] = [
         ]
     },
     {
+        "url": "netzplantechnik/netzplan_und_gantt_diagramm_wiederholung",
+        "topic": "Netzplantechnik",
+        "subject": "lf-3",
+        "lessonDate": "2021-02-11",
+        "lastUpdate": "2021-02-26",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Gegeben:"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Nr" },
+                            { "align": "middle", "content": "Dauer" },
+                            { "align": "middle", "content": "Vorgänger" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "5 Tage" },
+                            { "align": "middle", "content": "2, 6" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "1 Tage" },
+                            { "align": "middle", "content": "9" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "3 Tage" },
+                            { "align": "middle", "content": "-" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "3 Tage" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "4" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "3, 5, 7" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "7 Tage" },
+                            { "align": "middle", "content": "-" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "8, 10" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            }
+        ]
+    },
+    {
         "url": "visualisierung/visualisierungs_regeln",
         "topic": "Visualisierung",
         "subject": "lf-3",

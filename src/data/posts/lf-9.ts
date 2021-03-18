@@ -1,4 +1,4 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
 
 export const LF9_POSTS: Post[] = [
     {
@@ -1431,76 +1431,943 @@ export const LF9_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-
-
-
-
     {
-        "url": "test",
-        "topic": "test",
+        "url": "oeffentliche_netze_und_dienste/was_ist_isdn",
+        "topic": "Öffentliche Netze und Dienste",
         "subject": "lf-9",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
+        "lessonDate": "2020-11-18",
+        "lastUpdate": "2021-01-12",
+        "schoolWeek": "18",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "ISDN (engl. <i>Integrated Services Digital Network</i>, zu deutsch <i>Dienstintegrierendes Digitales Netzwerk</i>) ist ein internationaler Standard für digitale Telekommunikationsnetze. Es handelt sich um ein digitales Netzwerk für die Telekommunikationsdienste Sprache, Daten, Text und Bilder. Mehrere Endgeräte können gleichzeitig den selben ISDN-Anschluss parallel nutzen. In Deutschland verstehen viele unter ISDN den ISDN-Anschluss über welchen sie telefonieren und ins Internet gehen können."
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Die Ausbaustufen"
+          },
+          {
+            "type": "text",
+            "content": "<b>1988 / 1989</b> <br/> Die ersten ISDN-Vermittlungsstellen in den wichtigsten Wirtschaftszentren"
+          },
+          {
+            "type": "text",
+            "content": "<b>Ende 1993</b> <br/> Flächendeckendes Angebot in den alten Bundesländern"
+          },
+          {
+            "type": "text",
+            "content": "<b>Jahreswende 1993 / 1994</b> <br/> Angebot von Euro-ISDN-Anschlüssen"
+          },
+          {
+            "type": "text",
+            "content": "<b>Ende 1995</b> <br/> Flächendeckendes Angebot in den neuen Bundesländern"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffc8494e3bc33038ff5f15d"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Die Anschlussarten"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffca01fe3bc33038ff5f161"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Installationsmöglichkeiten"
+          },
+          {
+            "type": "subtitle",
+            "content": "Mehrgeräteanschluss"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffca03fe3bc33038ff5f163"
+          },
+          {
+            "type": "subtitle",
+            "content": "Anlagenanschluss"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffca050e3bc33038ff5f166"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Wie werden die Dienste unterschieden?"
+          },
+          {
+            "type": "list",
+            "content": "",
+            "list": [
+              {
+                "content": "Teledienste",
+                "sublist": [
+                  "Telefonie mit 3,1 kHz Bandbreite (300-3400 Hz)",
+                  "Telefonie mit 7 kHz Bandbreite",
+                  "Telefax Gruppe 4",
+                  "T-Online 64 kBit/s oder 128 kBit/s bei Kanalbündelung",
+                  "Bildtelefonie"
+                ]
+              },
+              {
+                "content": "Teledienste",
+                "sublist": [
+                  "64-kBit/s-Übermittlung",
+                  "3,1-kHz-a/b-Übermittlung",
+                  "Sprachübermittlung"
+                ]
+              },
+              {
+                "content": "Paketvermittelnde Übermittlungsdienste",
+                "sublist": [
+                  "D-Kanal-Zugang",
+                  "B-Kanal-Zugang"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Vergleich zur analogen Technik"
+          },
+          {
+            "type": "list",
+            "content": "",
+            "list": [
+              {
+                "content": "<b>Telefonie</b> Verbindungsaufbau (MWV)",
+                "sublist": [
+                  "Bessere Sprachqualität",
+                  "Neue, komfortable Leistungsmerkmale"
+                ]
+              },
+              {
+                "content": "<b>Telefax</b> Übertragungsdauer bei einer DIN-A4-Seite",
+                "sublist": [
+                  "Verbesserte Qualität der Fernkopie (höhere Auflösung)"
+                ]
+              },
+              {
+                "content": "<b>Datenübertragung</b> 1 MByte mit ISDN oder Modem",
+                "sublist": [
+                  "Kostenersparnis durch schnellere Übertragung",
+                  "Höhere Datensicherheit"
+                ]
+              },
+              {
+                "content": "<b>T-Online</b> Übertragung einer Online-Text-Seite",
+                "sublist": [
+                  "Schnellerer Verbindungsaufbau",
+                  "Beschleunigter Bildaufbau"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "list",
+            "content": "Analog/Digital zu Digital/Analog Nachteile:",
+            "list": [
+              "Digitalisierung der Sprache/Daten erst im Vermittlungssystem",
+              "Übertragung mit max. 56kbit/s (variable Rate)",
+              "Viele Schritte (A/D…D/A) bei der Wandlung mit hoher Fehlerrate"
+            ]
+          },
+          {
+            "type": "list",
+            "content": "Vorteile ergeben sich aus:",
+            "list": [
+              "Digitalisierung der Sprache/Daten im Endgerät",
+              "Übertragung mit 64kbit/s (feste Rate)"
+            ]
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffca067e3bc33038ff5f168"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "list",
+            "content": "Leistungsmerkmale beim Standardanschluss",
+            "list": [
+              "Übermittlung der Rufnummer des Anrufers",
+              "Rückfrage und Makeln",
+              "Dreierkonferenz",
+              "Umstecken am Bus",
+              "Drei Mehrfachrufnummern (Mehrgeräteanschluss)",
+              "Durchwahl mit Regelrufnummernblock (Anlagenanschluss)",
+              "Dauerüberwachung (Anlagenanschluss)",
+              "Rückruf bei Besetzt",
+              "Anklopfen"
+            ]
+          },
+          {
+            "type": "list",
+            "content": "Leistungsmerkmale beim Standardanschluss",
+            "list": [
+              {
+                "content": "Leistungsmerkmale des Standardanschlusses zuzüglich",
+                "sublist": [
+                  "Übermittlung der Tarif-information am Ende einer Verbindung",
+                  "Anrufweiterschaltung Ständig, bei Besetzt und bei Nichtmelden"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Rückfrage/Makeln/Dreierkonferenz"
+          },
+          {
+            "type": "list",
+            "content": "Leistungsmerkmale beim Standardanschluss",
+            "list": [
+              {
+                "content": "Rückfrage",
+                "sublist": [
+                  "Wechsel von einer Verbindung A - B nach A - C und zurück (Voraussetzung ist \"Halten\")"
+                ]
+              },
+              {
+                "content": "Makeln",
+                "sublist": [
+                  "Hin- und Herschalten zwischen zwei Verbindungen A - B und A - C"
+                ]
+              },
+              {
+                "content": "Dreierkonferenz",
+                "sublist": [
+                  "Zusammenschalten der Teilnehmer A, B und C"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "title",
+            "content": "Mehrfachrufnummer (engl. <i>Multiple Subscriber Number</i> kurz MSN)"
+          },
+          {
+            "type": "subtitle",
+            "content": "PMP (Point to Multipoint)"
+          },
+          {
+            "type": "text",
+            "content": "Bis zu zehn Rufnummern pro Mehrgeräteanschluss"
+          },
+          {
+            "type": "text",
+            "content": "Rufnummernbezogene Zuordnung der Leistungsmerkmale"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffca07ce3bc33038ff5f16a"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Der automatische Rückruf bei Besetzt"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffd4ed2e3bc33038ff5f17c"
+          },
+          {
+            "type": "list",
+            "content": "",
+            "list": [
+              "Rückwärtige D-Kanal-Signalisierung zum Anrufer (A) sobald der Angerufene (B) das Gespräch beendet",
+              "ISDN-Einrichtung des Anrufers (A) muss das Leistungsmerkmal unterstützen",
+              "Der Angerufene (B) muss an einer digitalen Vermittlungsstelle angeschlossen sein"
+            ]
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Der automatische Rückruf bei Nichtmelden"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffd509fe3bc33038ff5f183"
+          },
+          {
+            "type": "list",
+            "content": "",
+            "list": [
+              "Rückwärtige D-Kanal-Signalisierung zum Anrufer (A) sobald der Angerufene (B) ein Gespräch geführt hat",
+              "ISDN-Einrichtung des Anrufers (A) muss das Leistungsmerkmal unterstützen",
+              "Der Angerufene (B) muss an einer digitalen Vermittlungsstelle angeschlossen sein"
+            ]
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Das Anklopfen"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffd50b0e3bc33038ff5f186"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Die Anrufweiterschaltung"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffd50bee3bc33038ff5f189"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Das Identifizieren/Fangen (zusätzliche Leistungen)"
+          },
+          {
+            "type": "list",
+            "content": "",
+            "list": [
+              "Speicherung der Rufnummer des Rufenden und Gerufenen sowie Datum und Uhrzeit der Verbindung",
+              "Aktivierung des Leistungsmerkmals während oder kurz nach der Verbindung",
+              "Registrierung von Klingelstörern durch \"Fangen„ oder bei Verdacht krimineller Handlungen",
+              "Kostenpflichtig"
+            ]
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffd50d1e3bc33038ff5f18c"
+          },
+          {
+            "type": "list",
+            "content": "",
+            "list": [
+              "Zusätzlich zu den jeweiligen Verbindungskosten wird ein Konferenzzuschlag von einer Tarifeinheit je 20 Sekunden erhoben",
+              "Die Steuerung der Konferenz erfolgt durch das Endgerät des Initiators"
+            ]
+          },
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/isdn_arbeitsblatt",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2021-01-11",
+        "lastUpdate": "2021-01-11",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Ausgangssituation"
+          },
+          {
+            "type": "text",
+            "content": "Im Lernfeld 9 soll das Thema ISDN nicht wegfallen, deshalb sollen Sie die wesentlichen Begriffe und Schnittstellen für diese Technologie hier sammeln."
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Aufgaben"
+          },
+          {
+            "type": "text",
+            "content": "Welche Arten der ISDN-Anschlüsse gibt es, ergänzen Sie das Schema:"
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffc841fe3bc33038ff5f159"
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Leistungsmerkmale"
+          },
+          {
+            "type": "list",
+            "content": "<span class='list-number'>1</span> Welche Teledienste nutzt ISDN? Welche Eigenschaften hat der Anschluss?",
+            "list": [
+              "Telefonie mit  ____ kHz Bandbreite (300-3400 Hz)",
+              "________ mit 7 kHz Bandbreite",
+              "Telefax Gruppe ___",
+              "B-Kanal mit _____ kBit/s ",
+              "D-Kanal mit _____ kBit/s (Basis) / _____kBit/s PMX",
+              "__________-telefonie"
+            ]
+          },
+          {
+            "type": "text",
+            "content": "<span class='list-number'>2</span> Was ist eine MSN und was ist mit einer Durchwahl gemeint?"
+          },
+          {
+            "type": "subtitle",
+            "content": "MSN"
+          },
+          {
+            "type": "text",
+            "content": "..."
+          },
+          {
+            "type": "subtitle",
+            "content": "Durchwahl"
+          },
+          {
+            "type": "text",
+            "content": "..."
+          },
+          {
+            "type": "list",
+            "content": "<span class='list-number'>3</span> Nennen Sie die 4 Hauptaufgaben eines NTBA",
+            "list": [
+              "...",
+              "...",
+              "...",
+              "..."
+            ]
+          },
+          {
+            "type": "list",
+            "content": "<span class='list-number'>4</span> Wohin gehören die nachfolgenden Schnittstellenbezeichnungen?",
+            "list": [
+              "U<sub>k0</sub> ...",
+              "U<sub>2M</sub> ...",
+              "S<sub>0</sub> ...",
+              "S<sub>2M</sub> ..."
+            ]
+          },
+          {
+            "type": "list",
+            "content": "<span class='list-number'>5</span> S<sub>0</sub>-Bus – Verkabelung am Mehrgeräte oder als interner/externer Bus bei TK-Anlagen",
+            "list": [
+              "bis maximal 12 IAE’s",
+              "Terminierung in der letzten IAE mit 100 Ohm je Adernpaar",
+              "max. 150-180 m Länge"
+            ]
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffc8456e3bc33038ff5f15b"
+          },
+          {
+            "type": "list",
+            "content": "Aufgaben:",
+            "list": [
+              "Verbinden Sie die IAE mit dem NTBA zu einem S0-Bus",
+              "Wie viele Adern sind nötig, wo befinden sich Terminatoren?",
+              "Kennzeichnen Sie U<sub>k0</sub> und S<sub>0</sub>"
+            ]
+          },
+          {
+            "type": "image",
+            "content": "http://159.65.105.150:3000/images/5ffc8494e3bc33038ff5f15d"
+          }
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/broadcast_dienste_und_netze",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2021-01-11",
+        "lastUpdate": "2021-01-11",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "..."
+          }
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/glasfaser_und_lichtwellen",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2021-02-08",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "21",
         "elements": [
             {
                 "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
+                "content": "Definition"
             },
             {
                 "type": "text",
-                "content": "test"
+                "content": "Schüler Präsi..."
+            }
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/modulation_in_der_nachrichtentechnik",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2021-03-01",
+        "lastUpdate": "2021-03-01",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Modulation spricht man von einem Vorgang der Signalübertragung, bei dem die Signalparameter verändert bzw. \"moduliert\" werden. Dadurch wird eine hochfrequente Übertragung eines niederfrequenten Signals ermöglicht, dieses Signal wird vom Empfänger durch einen Demodulator wieder ins Ursprungssignal zurückgewandelt."
             },
             {
                 "type": "hint",
-                "content": "test"
+                "content": "<b>Modulation</b> beschreibt die Veränderung von Signalparametern (eine oder mehrere) eines Trägersignals in Abhängigkeit von einem Nutzsignal"
+            },
+            {
+                "type": "text",
+                "content": "Jedes elektrische Signal hat drei Merkmale (Signalparameter): Amplitude, Frequenz und Phase (Polung). Es gibt verschiedene Modulationsverfahren, grundsätzlich unterscheidet man zwischen zeitkontinuierlichen und zeitdiskreten Trägersignalen. Außerdem gibt es noch die Einteilung in analoge und digitale Modulationssignale (Informationssignal)."
+            },
+            {
+                "type": "subtitle",
+                "content": "Analoge Amplitudenmodulation und Frequenzmodulation eines niederfrequenten Signals"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/603ccd5db0c00c20f201d0f2"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
+                "type": "text",
+                "content": "Unterschieden wird also zwischen <b>Amplituden</b>-, <b>Frequenz</b>- und <b>Phasenmodulation</b>."
+            },
+            {
+                "type": "text",
+                "content": "Modulationsarten können für <u>analoge</u> Signale / <u>digtale</u> Signale eingesetzt werden. Analoge Signale werden kontinuierlich mit allen analogen Signalwerten im Nutzsignals moduliert. Digitale Signale sid nicht wertekontinuierlich, sondern von einem Kennzustand in einen anderen springend (man spricht hierbei nicht von Modulation, sondern von Umtastung). Alle Umtastverfahren basieren auf den drei genannten Modulationsverfahren."
+            },
+            {
+                "type": "text",
+                "content": "Die verschiedenen Modulationsverfahren haben bestimmte Nachteile, weswegen weitere Verfahren entwickelt wurden. So ist beispielsweise die Amplitudenmodulation sehr störanfällig, weil die Störsignale die Modulationssignale überlagern. Die Frequenzmodulation hingegen ist unempfindlich gegenüber Störsignalen, benötigt aber mindestens die doppelte Bandbreite. Die Phasenmodulation, die diesen Nachteil behebt, hat dagegen mit Verzerrungen und Änderungen der Trägerfrequenz zu kämpfen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Sinn und Zweck der Modulation"
+            },
+            {
+                "type": "text",
+                "content": "Elektrische Signale werden moduliert um Informationen möglichst verlustfrei zu übertragen. Dafür bedarf es einer Signalaufbereitung, sowie einer Demodulierung seitens des Empfängers wie oben bereits erwähnt. Eine Auftrennung der Einzelinformationen am Empfangsort ohne eine vorhergehende Signalaufbereitung ist meist nicht möglich."
+            },
+            {
+                "type": "hint",
+                "content": "Modulationsverfahren werden eingesetzt, um Informationen und Daten in elektrische Signale umzuwandeln, so dass sie für die Übertragung geeignet sind"
+            },
+            {
+                "type": "text",
+                "content": "Ein Modulationsverfahren beschreibt somit wie die Daten abgebildet werden müssen, damit sie über einen Kabel oder über die Luft übertragen werden können. Häufig geht es auch darum unterschiedliche Signale auf demselben Übertragungsweg oder Übertragungsmedium <b>gleichzeitig</b> zu senden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Signalübertragung ohne Modulation"
+            },
+            {
+                "type": "text",
+                "content": "Wenn 2 Nachrichten über eine Leitung übertragen werden, würden diese sich am Einspeisepunkt additiv überlagern. Das dabei entstehende Summensignal erlaubt dem Empfänger nicht mehr die ursprüngliche Nachricht zurück zu gewinnen. Beide Nachrichten vermischen sich und werden gleichzeitig übertragen, dabei gehen wichtige Informationen verloren.."
             },
             {
                 "type": "list",
-                "content": "test",
+                "content": "Um die Bedeutung der Signalaufbereitung weiter zu verdeutlichen, hier einige praktische Beispiele:",
                 "list": [
-                    "test",
-                    "test",
+                    "Musik - Die gleichzeitige Übertragung an mehrere Stereokanäle (links und rechts) wäre ohne Modulation unmöglich",
+                    "TV - Bei einer Fernbedienung lassen sich durch Modulation der Infrarotstrahlung unterschiedliche Befehle wie Kanal wechseln, Änderung der Lautstärke sowie Ein-/Ausschalten drathlos übertragen",
+                    "DSL - Bei DSL kann man gleichzeitig und unabhängig voneinander digitale Daten senden und empfangen, nebenbei kann man auch noch telefonieren",
+                    "Telefonie - Die Vielfachausnutzung einer Kabel- oder Funkverbindung für einige Hundert gleichzeitig geführte Telefongespräche wäre ohne raffinierte Modulationsverfahren undenkbar"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Wenn 2 Nachrichten über eine Leitung übertragen werden, würden diese sich am Einspeisepunkt additiv überlagern. Das dabei entstehende Summensignal erlaubt dem Empfänger nicht mehr die ursprüngliche Nachricht zurück zu gewinnen. Beide Nachrichten vermischen sich und werden gleichzeitig übertragen, dabei gehen wichtige Informationen verloren."
+            },
+            {
+                "type": "list",
+                "content": "<u>Zusammengefasst lässt sich sagen ...</u>",
+                "list": [
+                    "Modulation dient einer frequenzmäßigen Anpassung am verwendeten Übertragungskanal mit verschiedenen Pässen",
+                    "Modulation ermöglicht die Mehrfachausnutzung eines Übertragungsmediums",
+                    "Modulation verbessert die Störsicherheit"
+              ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Modulationsverfahren"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zeitmultiplexverfahren"
+            },
+            {
+                "type": "text",
+                "content": "Verschachtelt mehrere Signale / Impulsträger ineinander durch kurze Pausen, sogenannte Schutzbänder. Der Empfänger führt die zeitliche Trennung der jeweiligen Einzelnachricht durch. Dieses Verfahren wird z. B. im Telefonverkehr und Stereorundfunk eingesetzt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/603cf530b0c00c20f201d0f8"
+            },
+            {
+                "type": "subtitle",
+                "content": "Frequenzmultiplexverfahren"
+            },
+            {
+                "type": "text",
+                "content": "Verschiedene Signale werden in nebeneinanderliegenden Frequenzbereichen gestaffelt. Empfänger filtert diese anschließend auseinander. Beispiel: Rundfunk- und Fernsehsender im Funk- und Kabelnetz."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/603cf5d6b0c00c20f201d0fa"
+            },
+            {
+                "type": "subtitle",
+                "content": "Pulsmodulation"
+            },
+            {
+                "type": "text",
+                "content": "Erreicht bei vergrößerter Bandbreite eine hohe Sicherheit gegenüber Fremdstörungen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/603cf627b0c00c20f201d0fc"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Grundlagen der Modulation"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Ein oder mehrere Signalparameter wie Amplitude, Frequenz oder Phase eines Trägersignals durch das Informationssignal verändert oder moduliert.",
+                    "Dem Träger wird dabei das Informationssignal, das auch als Modulationssignal bezeichnet wird, \"aufgeprägt\"",
+                    "..."
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                  "<a href='https://de.wikipedia.org/wiki/Modulation_(Technik)'>https://de.wikipedia.org/wiki/Modulation_(Technik)</a>",
+                  "<a href='https://www.itwissen.info/Modulation-modulation.html'>https://www.itwissen.info/Modulation-modulation.html</a>",
+                  "<a href='https://www.elektronik-kompendium.de/sites/kom/0211195.htm'>https://www.elektronik-kompendium.de/sites/kom/0211195.htm - Modulation / Modulationsverfahren</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/dsl_technik_und_xdsl_familie",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2021-03-01",
+        "lastUpdate": "2021-03-09",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "xDSL-Familie oder \"Wie schnell ist eigentlich schnell?\""
+            },
+            {
+                "type": "text",
+                "content": "DSL (engl. <i>Digital Subscriber Line</i>) bezeichnet eine Reihe von Übertragungsstandards, in Deutschland ist DSL das Synonym für einen Breitband-Internet-Zugang mit der ADSL-Technik. Hierbei werden Daten mit hohen Übertragungsraten über einfache Kupferleitungen wie die Teilnehmeranschlussleitung gesendet und empfangen. Gelegentlich stößt man auf den Begriff xDSL."
+            },
+            {
+                "type": "text",
+                "content": "Es handelt sich dabei um einen Oberbegriff für verschiedene DSL-Technologien. In den Jahren 1982 bis 1988 wurde das erste DSL-System entwickelt. Es hat sich zum Standard entwickelt und wurde unter der Bezeichnung ISDN bekannt. Historisch gesehen ist ISDN das erste DSL, das sich weltweit durchgesetzt hat."
+            },
+            {
+                "type": "list",
+                "content": "es wird eine Vielzahl von DSL-Verfahren angeboten",
+                "list": [
+                    "Symmetrische DSL-Verfahren",
+                    "asymmetrische DSL-Verfahren",
+                    "DSL-Techniken für 2-Draht-Betrieb",
+                    "DSL-Techniken für 4-Draht-Betrieb"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Ziel ist die Erhöhung der übertragbaren Bitrate von der Ortsvermittlungsstelle (OVSt) und dem Teilnehmer, wobei als Übertragungsmedium (bereits verlegte) verdrillte symmetrische Kupferkabel dienen."
+            },
+            {
+                "type": "text",
+                "content": "xDSL ist eine der möglichen Alternativen für den Ausbau des Teilnehmeranschlussnetzes (auch Tln.-Zugangsnetz; Ortsanschlussnetz; Access-Netz oder \"Last Mile\" oder Local Loop genannt)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Bandbreite"
+            },
+            {
+                "type": "list",
+                "content": "In der Literatur kann man unterschiedliche Definitionen zum Thema \"Breitband\" finden ...",
+                "list": [
+                    "Laut ITU*-T-Empfehlung l.113 alle Dienste/Systeme, deren Bitrate über der Primärmultiplexdatenrate liegen",
+                    "d. h. in Europa größer als 2,048 MBit/s",
+                    "in Nordamerika größer als 1,544 MBit/s"
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
                     {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Bezeichnung" },
+                            { "align": "middle", "content": "Bitrate" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "Schmalband (Narrowband)" },
+                            { "align": "middle", "content": "< 1,544 MBit/s bzw. 2,048 MBit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "Weitband (Wideband)" },
+                            { "align": "middle", "content": "> 2,048 MBit/s und < 45 MBit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "Breitband (Broadband)" },
+                            { "align": "middle", "content": "> 45 MBit/s" }
                         ]
                     }
                 ]
             },
             {
+                "type": "subtitle",
+                "content": "Analoge Modems - Überlastung der OVSt"
+            },
+            {
+                "type": "text",
+                "content": "Verbindungen zwischen analogen Modems werden genauso hergestellt wie auch bei herkömmlichen Telefongesprächen, d. h. über die Ortsvermittlungsstelle, kurz OVSt. OVSt wurden ursprünglich für eine mittlere Gesprächsdauer von wenigen Minuten konzipiert - die mittlere Telefongesprächsdauer beträgt 3,5 Minuten."
+            },
+            {
+                "type": "text",
+                "content": "Bei einer Internet-Session beträgt die mittlere Dauer 34 Minuten, laut dem Ergebnis einer Forschung vom Mai 1999. Im Ergebnis kommt es beim weitverbreiteten Einsatz von analogen Modems zur Überlastung der OVSt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/604725a1b0c00c20f201d1c7"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/604725cfb0c00c20f201d1ca"
+            },
+            {
+                "type": "list",
+                "content": "Alternative Teilnehmerzugangsmöglichkeiten",
+                "list": [
+                    "Analoge Modems (max. 56 kbit/s)",
+                    "Breitbandkabelverteilnetze (Kabelmodems)",
+                    "FTTH (Glasfaser bis zum Teilnehmer; (\"Fiber-to-the-Home\")",
+                    "Funk (mobil oder fest) (GSM, DECT, CDMA, WLL)",
+                    "Satelliten",
+                    "Power Lines (Netzwerk über Stromleitung aufbauen)"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Triebkräfte für höheren Bandbreitenbedarf"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Internetzugang",
+                    "Telearbeit",
+                    "Video-on-Demand",
+                    "Videokonferenz und -spiele",
+                    "Sicherungstechnik",
+                    "Remote LAN-Zugriff",
+                    "PABX-Kopplung"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Zu beachten ist, die unterschiedlichen Anwendungen bedingen unterschiedliche Anforderungen an die Bitraten in Upstream- und Downstreamrichtung."
+            },
+            {
                 "type": "table",
-                "content": "test",
+                "content": "",
                 "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Bandbreite", "colSpan": 4 },
+                            { "align": "middle", "content": "Datenübertragungsrate" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Verfahren" },
+                            { "align": "middle", "content": "von" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "" }
+                        ]
+                    },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "test" }
+                            { "align": "left", "content": "POTS" },
+                            { "align": "middle", "content": "300 Hz" },
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "3,4 kHz" },
+                            { "align": "left", "content": "bis ca. 56 kbit/s, typisch 3 kByte/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "ISDN" },
+                            { "align": "middle", "content": "0 Hz" },
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "120 kHz" },
+                            { "align": "left", "content": "2x64 kbit/s, typisch 144 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "ADSL" },
+                            { "align": "middle", "content": "138 kHz" },
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "1,1 MHz" },
+                            { "align": "left", "content": "z. B. 1 MBit/s Downstream, 0,1 MBit/s Upstream" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "VDSL" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "12 MHz" },
+                            { "align": "left", "content": "" }
                         ]
                     }
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Faktoren, die die Datenübertragungsrate beeinflussen, sind:",
+                "list": [
+                    "Leitungsdämpfung (abhängig unter anderem von Länge und Durchmesser der Kupferleitungen und dem Frequenzspektrum des Signals)",
+                    "Modulationsverfahren",
+                    "Leitungscode"
+                ]
+            },
+            {
+                "type": "hint",
+                "content": "Dämpfung stellt die Minderung der übertragenen Energie eines Signals im Verlauf einer Übertragungsstrecke dar und ist somit ein entscheidender Wert für DSL."
+            },
+            {
+                "type": "text",
+                "content": "Ist die Dämpfung zu hoch, kann kein oder nur ein langsameres DSL geschaltet werden. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://www.elektronik-kompendium.de/sites/kom/0305232.htm'>https://www.elektronik-kompendium.de/sites/kom/0305232.htm</a>"
                 ]
             }
         ]

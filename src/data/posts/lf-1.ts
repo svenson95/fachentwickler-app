@@ -123,8 +123,8 @@ export const LF1_POSTS: Post[] = [
         "url": "der_betrieb_und_sein_umfeld/testartikel_url",
         "topic": "Der Betrieb und sein Umfeld",
         "subject": "lf-1",
-        "lessonDate": "01-00-0000",
-        "lastUpdate": "2020-09-20",
+        "lessonDate": "2000-01-01",
+        "lastUpdate": "2020-12-20",
         "schoolWeek": "0",
         "elements": [
             {
@@ -153,8 +153,8 @@ export const LF1_POSTS: Post[] = [
         "url": "der_betrieb_und_sein_umfeld/zweiter-test-artikel",
         "topic": "Der Betrieb und sein Umfeld",
         "subject": "lf-1",
-        "lessonDate": "0000-00-00",
-        "lastUpdate": "2020-05-27",
+        "lessonDate": "2000-01-01",
+        "lastUpdate": "2020-12-20",
         "schoolWeek": "0",
         "elements": [
             {
@@ -319,16 +319,32 @@ export const LF1_POSTS: Post[] = [
         "topic": "Bedürfnisse & Güter",
         "subject": "lf-1",
         "lessonDate": "2019-10-28",
-        "lastUpdate": "2020-09-09",
+        "lastUpdate": "2021-01-06",
         "schoolWeek": "4",
         "elements": [
             {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
                 "type": "text",
-                "content": "Bedürfnisse sind Wünsche, die durch Mangelempfindungen hervorgerufen werden.  Daraus lässt sich ein Geschäft machen, sofern das Verlangen noch nicht gestillt wurde."
+                "content": "Menschliche Bedürfnisse wie Hunger oder Durst zu stillen ist für den Menschen lebensnotwendig. Solche essentiellen Bedürfnisse werden als Existenzbedürfnisse bezeichnet. Kulturell bedingt gibt es noch weitere Bedürfnisse wie Entspannung, Unterhaltung zum Beispiel im Kino, Sport, Materielle Dinge wie Autos und Handys, welche in der Gesellschaft als selbstverständlich betrachtet werden. Diese Bedürfnisse werden Kulturbedürfnisse genannt. Mehr zu diesem Thema findest du unter <a href='https://www.mubk.de/bildungsgaenge/bs/pk/faecher/bw/kap2/bw02_1.htm'>Wirtschaftliche Grundbegriffe Teil 1 - Bedürfnisse, Bedarf, Nachfrage</a>"
             },
             {
                 "type": "hint",
-                "content": "Güter lassen sich unterteilen in <u>Wirtschaftsgüter</u> (knappe Güter) und <u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
+                "content": "Bedürfnisse sind Wünsche, die durch Mangelempfindungen hervorgerufen werden. Daraus lässt sich ein Geschäft machen, sofern das Verlangen noch nicht gestillt wurde."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed10a582053a17208e0a5ac"
+            },
+            {
+                "type": "text",
+                "content": "Güter lassen sich unterteilen in ..."
+            },
+            {
+                "type": "text",
+                "content": "<u>Wirtschaftsgüter</u> (knappe Güter) und <u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
             },
             {
                 "type": "line",
@@ -408,8 +424,11 @@ export const LF1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed10a582053a17208e0a5ac"
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                  "<a href='https://www.mubk.de/bildungsgaenge/bs/pk/faecher/bw/kap2/bw02_1.htm'>Wirtschaftliche Grundbegriffe Teil 1 - Bedürfnisse, Bedarf, Nachfrage</a>"
+                ]
             }
         ]
     },
@@ -418,7 +437,7 @@ export const LF1_POSTS: Post[] = [
         "topic": "Bedürfnisse & Güter",
         "subject": "lf-1",
         "lessonDate": "2019-10-28",
-        "lastUpdate": "2020-03-17",
+        "lastUpdate": "2020-12-15",
         "schoolWeek": "4",
         "elements": [
             {
@@ -429,8 +448,8 @@ export const LF1_POSTS: Post[] = [
                 "type": "list",
                 "content": "",
                 "list": [
-                    "Soziookönomisches System (<u>Arbeitsplätze schaffen</u>)",
-                    "<u>Bedürfnisse der Menschen realisieren </u> (Güter)"
+                    "Soziookönomisches System (<b>Arbeitsplätze schaffen</b>)",
+                    "<b>Bedürfnisse der Menschen realisieren </b> (Güter)"
                 ]
             },
             {
@@ -623,7 +642,7 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Demgegenüber steht die Wirtschaftlichkeit, <u>die Relation zwischen Input und Output gemessen in monetären Werten (finanziell)</u>. Sie misst, in wie fern die geplanten <u>Ziele tatsächlich erreicht</u> worden sind. Bei Werten größer als 1 spricht man von wirtschaftlichem Handeln, in diesem Bereich fängt das Unternehmen an schwarze Zahlen zu schreiben."
+                "content": "Demgegenüber steht die Wirtschaftlichkeit, <u>die Relation zwischen Input und Output gemessen in monetären Werten (finanziell)</u>. Sie misst, in wie fern die geplanten Ziele tatsächlich erreicht worden sind. Bei Werten größer als 1 spricht man von wirtschaftlichem Handeln, in diesem Bereich fängt das Unternehmen an schwarze Zahlen zu schreiben."
             },
             {
                 "type": "image",
@@ -631,11 +650,7 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Mit Hilfe der Wirtschaftlichkeits und Produktivitäts Kennzahlen lassen sich <u>Geschäftsjahre vergleichen</u>. Ein Unternehmen <u>kann trotz hoher Produktivität unwirtschaftlich</u> sein. Zudem kann die Produktivität eines Unternehmens steigen … <br/> → durch verbesserte Fertigungsverfahren"
-            },
-            {
-                "type": "text",
-                "content": "… und die Wirtschaftlichkeit zur gleichen Zeit sinken <br/> → durch steigende Gehälter."
+                "content": "Mit Hilfe der Wirtschaftlichkeits und Produktivitäts Kennzahlen lassen sich Geschäftsjahre vergleichen. <b>Ein Unternehmen kann trotz hoher Produktivität unwirtschaftlich</b> sein. Zudem kann die Produktivität eines Unternehmens durch verbesserte Fertigungsverfahren steigen, und die Wirtschaftlichkeit durch steigende Gehälter zur gleichen Zeit sinken."
             },
             {
                 "type": "subtitle",
@@ -1395,11 +1410,15 @@ export const LF1_POSTS: Post[] = [
         "topic": "test",
         "subject": "lf-1",
         "lessonDate": "2019-12-11",
-        "lastUpdate": "2020-11-04",
+        "lastUpdate": "2020-12-22",
         "schoolWeek": "6",
         "elements": [
             {
                 "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
                 "content": "<span class='ddu-list-number'>1</span> Definieren Sie den Begriff Bedürfnis"
             },
             {
@@ -1411,7 +1430,7 @@ export const LF1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='ddu-list-number'>2</span> Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
             },
             {
@@ -1423,7 +1442,7 @@ export const LF1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='ddu-list-number'>3</span> Erklären Sie an einem Beispiel das Ökonomische Prinzip"
             },
             {
@@ -1435,7 +1454,7 @@ export const LF1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='ddu-list-number'>4</span> Worin besteht der Unterschied zwischen einem freien und einem wirtschaftlichen Gut?"
             },
             {
@@ -1447,7 +1466,7 @@ export const LF1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='ddu-list-number'>5</span> Was versteht man unter Investitionsgütern?"
             },
             {
@@ -1459,7 +1478,7 @@ export const LF1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='ddu-list-number'>6</span> Was ist ein Gebrauchsgut?"
             },
             {

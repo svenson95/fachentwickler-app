@@ -136,5 +136,52 @@ export const schoolNewsData: SchoolNews[] = [
         "content": "Simone Kühn"
       }
     ]
+  },
+  {
+    "title": "Informationen zum Schulbetrieb vom 11.01.2021 – 15.01.2021",
+    "date": "2021-01-06",
+    "url": "info_2021_01_06",
+    "content": [
+      {
+        "type": "text",
+        "content": "Für alle Schülerinnen und Schüler besteht weiterhin Berufsschulpflicht."
+      },
+      {
+        "type": "text",
+        "content": "Klassen, die sich im letzten Ausbildungsjahr befinden, kommen zum Präsenzunterricht in das Oberstufenzentrum."
+      },
+      {
+        "type": "list",
+        "content": "Hierbei handelt es sich um folgende Klassen:",
+        "list": [
+          "Abteilung 1: FIS81, SEL81, MGE81",
+          "Abteilung 2: SHK71, KFP71"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Aufgrund der Prüfungen im Kfz-Gewerbe sind die Schülerinnen und Schüler der KFP71 Montag, Mittwoch und Donnerstag im Ausbildungsbetrieb (Dienstag und Freitag im OSZ)."
+      },
+      {
+        "type": "text",
+        "content": "Sport wird mit sporttheoretischen Inhalten im Klassenraum unterrichtet. Bitte beachten Sie das auf dem gesamten Schulgelände geltende Abstandsgebot und die Maskenpflicht."
+      },
+      {
+        "type": "text",
+        "content": "Alle anderen Klassen erhalten ab dem 11.01.2021 Distanzunterricht gemäß dem Stunden- und Vertretungsplan zu den üblichen Unterrichtszeiten."
+      },
+      {
+        "type": "list",
+        "content": "Bitte beachten Sie als Schülerin oder Schüler:",
+        "list": [
+          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
+          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Henri Danker <br/> Schulleiter"
+      }
+    ]
   }
 ];

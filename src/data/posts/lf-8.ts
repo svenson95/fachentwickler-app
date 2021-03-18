@@ -262,76 +262,187 @@ export const LF8_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-
-
-
-
     {
-        "url": "test",
-        "topic": "test",
+        "url": "uebertragungstechnik/produktpolitik_und_marketing_1",
+        "topic": "Übertragungstechnik",
         "subject": "lf-8",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
+        "lessonDate": "2020-12-09",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "19",
         "elements": [
             {
                 "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
+                "content": "Definition"
             },
             {
                 "type": "text",
-                "content": "test"
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/produktpolitik_und_marketing_2",
+        "topic": "Übertragungstechnik",
+        "subject": "lf-8",
+        "lessonDate": "2021-01-12",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
             },
             {
-                "type": "hint",
-                "content": "test"
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/kommunikationspolitk",
+        "topic": "Übertragungstechnik",
+        "subject": "lf-8",
+        "lessonDate": "2021-02-09",
+        "lastUpdate": "2021-02-26",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_werbung",
+        "topic": "Übertragungstechnik",
+        "subject": "lf-8",
+        "lessonDate": "2021-02-10",
+        "lastUpdate": "2021-02-26",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_oeffentlichkeitsarbeit",
+        "topic": "Übertragungstechnik",
+        "subject": "lf-8",
+        "lessonDate": "2021-03-04",
+        "lastUpdate": "2021-03-13",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Eine andere Bezeichnung für Öffentlichkeitsarbeit ist Public Relations, kurz PR. Dazu gehört das Management aller Prozesse zur Kommunikation eines Unternehmens, das Pflegen von Beziehungen zwischen Unternehmen und der Zielgruppe, sowie Geschäftspartner und Journalisten. Ein Unternehmen, welches sich das gewünschte Image in der Öffentlichkeit aufgebaut hat, profitiert von der Glaubwürdigkeit. Ein in der Öffentlichkeit angesehenes und gut platziertes Unternehmen kann in der Regel einen besseren Absatz vorweisen."
+            },
+            {
+                "type": "text",
+                "content": "Da die Kommunikationspolitik eine Marktstrategie ist, und Öffentlichkeitsarbeit wiederum ein Teil der Kommunikationspolitik, gehört die Öffentlichkeitsarbeit im Grunde zum Marketing eines Unternehmens. Werbung und Öffentlichkeitsarbeit wird häufig miteinander in Verbindung gebracht, da sie ähnliche Methoden der Kommunikation und die gleichen Medien nutzen. Dennoch sind es zwei unterschiedliche Bereiche, nicht nur im Bezug auf die zu erreichenden Ziele unterscheiden sie sich."
+            },
+            {
+                "type": "subtitle",
+                "content": "Unterschiede - Öffentlichkeitsarbeit & Werbung"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/604c97aab0c00c20f201d224"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://sevdesk.de/blog/oeffentlichkeitsarbeit/'>Öffentlichkeitsarbeit – warum und wie du sie betreiben solltest | https://sevdesk.de/blog/oeffentlichkeitsarbeit/ | 13.03.2021</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_produktplatzierung",
+        "topic": "Übertragungstechnik",
+        "subject": "lf-8",
+        "lessonDate": "2021-03-04",
+        "lastUpdate": "2021-03-13",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Produktplatzierung (engl. <i>Product Placement</i>) werden Vereinbarungen mit Film- oder Fernsehproduzenten getroffen, um Produkte eines Unternehmens in Filmen, Serien oder Shows zu platzieren. Für das Unternehmen hat das den Vorteil, dass gerade bei international ausgerichteten Kinofilmen eine weltweite Präsenz des produkts erreicht wird. Während klassische Werbung teilweise als störend empfunden wird und nicht sehr aufmerksam verfolgt, wenn man zum Beispiel an Fernsehwerbung oder Werbebanner auf Internetseiten denkt."
+            },
+            {
+                "type": "hint",
+                "content": "Beim <b>Product Placement</b> platzieren Unternehmen ihre Produkte in Filmen, Fernsehsendungen und Printmedien. Diese subtile Art des Marketings ist für Konsumenten nicht auf den ersten Blick erkennbar, und unterliegt gesetzlichen Regeln."
+            },
+            {
+                "type": "text",
+                "content": "Die Vergütung sind von der Popularität und der Zielgruppen-Reichweite abhängig, es kommt auch vor, dass sich das Product Placement darauf beschränkt, dass die Produkte wie z. B. ein Auto kostenlos zur Verfügung gestellt wird. Als Beispiel der Autohersteller Audi, dieser ist Sponsor von einigen Fußballvereinen, weshalb die Profis kostenlos Autos als Dienstwagen bereitgestellt bekommen, um damit in der Öffentlichkeit Werbung für die Automarke zu machen. Bei Fernsehsendungen und -shows ist der Umfang vom Produktplatzierungen rechtlich eingeschränkt."
+            },
+            {
+                "type": "text",
+                "content": "Die Abwicklung erfolgt meist über spezialisierte Agenturen für Product Placement. Grundsätzlich lassen sich hinsichtlich der Kosten zwei Formen unterscheiden."
             },
             {
                 "type": "list",
-                "content": "test",
+                "content": "",
                 "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
+                    "Kostenlose Produktplatzierung - Unternehmen stellt Produkt zur Verfügung",
+                    "Produktplatzierung gegen Entgelt - Unternehmen zahlt Geld für die Produktplatzierung"
                 ]
             },
             {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
+                "type": "subtitle",
+                "content": "Effekte"
+            },
+            {
+                "type": "text",
+                "content": "Die Unternehmen welche auf Product Placements setzen, erhoffen sich dadurch ihr Image zu verbessern. Wenn ein Autohersteller Marketing in einem Actionfilm betreibt, will er die Leistungsstärke seiner Modelle vermitteln. Neue Marken können ihre Bekanntheit steigern und im besten Fall Neukunden gewinnen. Um dies zu erreichen erfordert es Fingerspitzengefühl im Bezug auf die Kommunikation mit dem Kunden - zu aufdringliche Werbung kann den gegenteiligen Effekt verursachen, wodurch sich potentielle Kunden genervt fühlen könnten."
+            },
+            {
+                "type": "subtitle",
+                "content": "Arten der Produktplatzierung"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Creative Placement - Produkt ist integraler Bestandteil der Handlung. Actionheld fährt bestimmte Automarke.",
+                    "On Set Placement - Das Produkt kommt nur nebenbei als Requisite vor. Werbeplakat im Hintergrund einer Szene.",
+                    "Generic Placement - Produktkategorie steht im Vordergrund. Milchlobby investiert in positive Darstellung von Milch.",
+                    "Information Placement - Unternehmen stellen Redaktionen Inhalte zur Verfügung. Medien nehmen Informationen in Berichterstattung auf oder verbreiten den Beitrag."
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>",
+                    "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"
                 ]
             }
         ]

@@ -283,11 +283,11 @@ export const DEUTSCH_POSTS: Post[] = [
         ]
     },
     {
-        "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise",
+        "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise_1",
         "topic": "Grammatik",
         "subject": "deutsch",
         "lessonDate": "2020-03-24",
-        "lastUpdate": "2020-06-25",
+        "lastUpdate": "2021-02-08",
         "schoolWeek": "10",
         "elements": [
             {
@@ -355,10 +355,9 @@ export const DEUTSCH_POSTS: Post[] = [
                 "rows": [
                     {
                         "type": "default",
-                        "rowSpan": 3,
                         "columns": [
                             { "align": "middle", "content": "gelingen, glücken, misslingen, missglücken, passieren, sich ereignen, geschehen, widerfahren" },
-                            { "align": "middle", "content": "das Essen ist gelungen" }
+                            { "align": "middle", "content": "das Essen ist gelungen", "rowSpan": 3 }
                         ]
                     },
                     {
@@ -691,6 +690,211 @@ export const DEUTSCH_POSTS: Post[] = [
             {
                 "type": "text",
                 "content": "<a href='http://www.osz-teltow.de/fachliches/doku/it_projekt_doku.pdf'>Anlage und Bewertung einer Dokumentation für IT-Berufe</a> - Quelle: OSZ Teltow - Fachliches"
+            }
+        ]
+    },
+    {
+        "url": "grammatik/dokumentationsaufbau_technische_dokumentation",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2020-11-16",
+        "lastUpdate": "2021-01-11",
+        "schoolWeek": "18",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Technische Dokumentationen dienen der Einarbeitung in neue Systeme, sie werden auch gerne Benutzeranleitung oder Handbücher genannt. Eine Technische Dokumentation ist ein Sammelbegriff für alle Dokumente, die ein technisches Produkt begleiten - von der Entwicklung und Produktion über die Verwendung und Wartung bis hin zur Entsorgung."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Berücksichtigen Sie die Zielgruppe",
+                        "sublist": [
+                            "Der Nutzer des jeweiligen Produkts sollte die Dokumentation verstehen können. Eine Bedienungsanleitung für eine Mikrowelle sollte daher auch für Laien leicht verständlich aufgebaut sein, wohingegen ein Programmier-Handbuch mehr Fachbegriffe enthalten kann."
+                        ]
+                    },
+                    {
+                        "content": "Wählen Sie aussagekräftige Titel und Untertitel",
+                        "sublist": [
+                            "Die Gliederung ist ein wichtiger Orientierungspunkt für den Nutzer. Geben sie zunächst einen groben Überblick über ein Thema, um sich anschließend in den Unterkapiteln einzeln damit zu befassen. Am besten sollten die Kapitel aufeinander aufbauen, damit sich der Inhalt nahtlos mit den bisher gelernten Kapiteln verknüpfen lässt."
+                        ]
+                    },
+                    {
+                        "content": "Achten sie auf eine übersichtliche Präsentation",
+                        "sublist": [
+                           "Mithilfe des Inhaltsverzeichnisses sollten bestimmte Informationen auf Anhieb zu finden sein. Um die Gestaltung und Lesbarkeit der Dokumentation zu verbessern können zB. Infokästchen und kurze Zusammenfassungen hilfreich sein."
+                        ]
+                    },
+                    {
+                        "content": "Integrieren Sie Beispiele",
+                        "sublist": [
+                           "Durch praktische Beispiele und ggf. Screenshots lassen sich Resultate von bestimmten Vorgängen besser darstellen. Sie geben den Anwendern Gewissheit, dass sie Ihre Anweisungen richtig umgesetzt haben."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                   "<a href='https://www.techsmith.de/blog/gute-technische-dokumentation-erstellen'>https://www.techsmith.de/blog/gute-technische-dokumentation-erstellen</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "grammatik/sachliches_schreiben_und_sprachstile",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2020-12-10",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "19",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurf"
+            }
+        ]
+    },
+    {
+        "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise_2",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2021-01-14",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurf"
+            }
+        ]
+    },
+    {
+        "url": "grammatik/zitiertechniken_und_literaturverzeichnis",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2021-02-08",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Grundstruktur der Literaturangabe"
+            },
+            {
+                "type": "text",
+                "content": "<b>Form der Literaturangabe</b> <br/> Verfasser: Titel des Werkes. Untertitel. Ort des Erscheinens <sup>Auflage ab 2</sup> Jahr"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiele für Literaturangaben"
+            },
+            {
+                "type": "text",
+                "content": "<u>Ein Verfasser (hier als Herausgeber)</u> <br/> Müller, Karl [Hrsg.]: Das Leben im 21.Jahrhundert. Köln 2009."
+            },
+            {
+                "type": "text",
+                "content": "<u>Zwei Verfasser (alphabetisch nach Namen Sortiert)</u> <br/> Bär, K. und Hofmeister, R.:1979. Eine Reise in die Vergangenheit. Berlin 2017."
+            },
+            {
+                "type": "text",
+                "content": "<u>3 verfasser (alphabetisch…):</u> <br/> Gerner Dr., T./ v.Körner, N. und Wagemuth, G.: Lehrbuch der Analytik. Grundlagen der Forschung. Bern <sup>7</sup>1998."
+            },
+            {
+                "type": "text",
+                "content": "<u>Mehr als drei Verfasser (alphabetisch…):</u> <br/> Holz, P. / Korf, W. / Lüder, R. u.a.: Das war’s. Stuttgart, Mannheim 2020."
+            }
+        ]
+    },
+    {
+        "url": "grammatik/regeln_des_zitierens",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2021-03-01",
+        "lastUpdate": "2021-03-01",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "list",
+                "content": "Stellen Sie in einer PowerPoint-Präsentation die verschiedenen Arten und Techniken des Zitierens an Beispielen dar!",
+                "list": [
+                    "Merkmale und Funktion",
+                    "Möglichkeiten der Kennzeichnung im Text, z. B. Zeichensetzung",
+                    "Form der Quellenangabe",
+                    "Besonderheiten der Sprache"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Geben Sie die verwendeten Quellen an!"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Regeln des Zitierens"
+            },
+            {
+                "type": "subtitle",
+                "content": "Was ist ein Zitat?"
+            },
+            {
+                "type": "text",
+                "content": "Passend zum Thema suchen wir nach einer Definition für Zitate, laut dem von Google verwendeten Wörterbuch ist ein Zitat eine ..."
+            },
+            {
+                "type": "text",
+                "content": "<b>\"wörtlich zitierte Textstelle\"</b> <sup>1</sup>"
+            },
+            {
+                "type": "text",
+                "content": "Grundsätzlich gilt: jeder Gedanke, der nicht vom Autor des Textes selbst sondern von einem anderen stammt, muss kenntlich gemacht werden. Dabei wird zwischen wörtlichen und sinngemäßen Zitaten unterschieden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<sup>1</sup> Definition laut Oxford Languages - <a href='https://languages.oup.com/google-dictionary-de/'>https://languages.oup.com/google-dictionary-de/</a>"
+                    "<a href='https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html'>https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html</a>"
+                ]
             }
         ]
     },

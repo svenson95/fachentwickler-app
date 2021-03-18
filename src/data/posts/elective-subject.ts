@@ -2,11 +2,11 @@ import {Post} from '../../app/models/post';
 
 export const WP_POSTS: Post[] = [
   {
-    "url": "vernetzte_steuerungssysteme/grundlagen",
+    "url": "vernetzte_steuerungssysteme/grundlagen_speicherprogrammierte_steuerungen",
     "topic": "Vernetzte Steuerungssysteme",
     "subject": "wp",
     "lessonDate": "2020-08-11",
-    "lastUpdate": "2020-10-29",
+    "lastUpdate": "2020-12-16",
     "schoolWeek": "5",
     "elements": [
       {
@@ -414,7 +414,7 @@ export const WP_POSTS: Post[] = [
     "topic": "Vernetzte Steuerungssysteme",
     "subject": "wp",
     "lessonDate": "2020-10-28",
-    "lastUpdate": "2020-11-03",
+    "lastUpdate": "2020-12-07",
     "schoolWeek": "17",
     "elements": [
       {
@@ -422,10 +422,835 @@ export const WP_POSTS: Post[] = [
         "content": "Definition"
       },
       {
+        "type": "subtitle",
+        "content": "GRAFCET Ablaufsteuerung"
+      },
+      {
         "type": "text",
-        "content": "GRAFCET Ablaufsteuerung Entwurfstext"
+        "content": "Pfeil nach oben -> Vorgang wird ausgeführt wenn der Schritt anfängt <br/> Pfeil nach unten -> Vorgang wird ausgeführt wenn der Schritt fertig ist"
+      },
+      {
+        "type": "text",
+        "content": "M0.1 (M = Merker) <br/> Q (Q = Ausgang)"
+      },
+      {
+        "type": "line",
+        "content": "<hr/>"
+      },
+      {
+        "type": "subtitle",
+        "content": "Rührbehälter SPS"
+      },
+      {
+        "type": "image",
+        "content": "http://159.65.105.150:3000/images/"
+      },
+      {
+        "type": "line",
+        "content": "<hr/>"
+      },
+      {
+        "type": "subtitle",
+        "content": "Rührbehälter L"
+      },
+      {
+        "type": "image",
+        "content": "http://159.65.105.150:3000/images/"
+      },
+      {
+        "type": "line",
+        "content": "<hr/>"
+      },
+      {
+        "type": "subtitle",
+        "content": "Autowaschanlage"
+      },
+      {
+        "type": "image",
+        "content": "http://159.65.105.150:3000/images/"
+      },
+      {
+        "type": "list",
+        "content": "Ablaufbeschreibung",
+        "ordered": true,
+        "list": [
+          "Grundstellung: P1 =1, M1 = 0",
+          "S1: M1 = 1 (gespeichert)",
+          "B1: M2 = 1",
+          "B2: M3 = 1, M4 =1, M5 = 1, M6 =1",
+          "B3: M7 = 1 für die Dauer von 20s"
+        ]
+      },
+      {
+        "type": "list",
+        "content": "Aufgaben",
+        "ordered": true,
+        "list": [
+          "Erstellen Sie die Ablaufbeschreibung mit GRAFCET",
+          "Entwickeln Sie aus der Ablaufbeschreibung den Funktionsplan"
+        ]
       }
     ]
+  },
+  {
+    "url": "vernetzte_steuerungssysteme/behaeltersteuerung_uebung",
+    "topic": "Vernetzte Steuerungssysteme",
+    "subject": "wp",
+    "lessonDate": "2021-01-13",
+    "lastUpdate": "2021-02-08",
+    "schoolWeek": "20",
+    "elements": [
+      {
+        "type": "title",
+        "content": "Definition"
+      },
+      {
+        "type": "subtitle",
+        "content": "Entwurfstext"
+      }
+    ]
+  },
+  {
+    "url": "vernetzte_steuerungssysteme/digitaltechnik",
+    "topic": "Vernetzte Steuerungssysteme",
+    "subject": "wp",
+    "lessonDate": "2021-02-10",
+    "lastUpdate": "2021-02-26",
+    "schoolWeek": "21",
+    "elements": [
+      {
+        "type": "title",
+        "content": "Definition"
+      },
+      {
+        "type": "subtitle",
+        "content": "Entwurfstext"
+      }
+    ]
+  },
+  {
+      "url": "vernetzte_steuerungssysteme/digitaltechnik_aufgaben",
+      "topic": "Vernetzte Steuerungssysteme",
+      "subject": "wp",
+      "lessonDate": "2021-03-02",
+      "lastUpdate": "2021-03-14",
+      "schoolWeek": "22",
+      "elements": [
+          {
+              "type": "title",
+              "content": "Aufgaben"
+          },
+          {
+              "type": "subtitle",
+              "content": "<span class='list-number'>1</span>Aufgabe"
+          },
+          {
+              "type": "text",
+              "content": "Folgende Meldung wird auf der zweistelligen 7-Segment-Anzeige des Motherboards angezeigt:"
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604deca3ec849e7897841831"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>1a</span>Nennen Sie das Zahlensystem, das der Meldungsanzeige zugrunde liegt."
+          },
+          {
+              "type": "text",
+              "content": "Antwort: Hexadezimalsystem"
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>1b</span>In der Beschreibung des Motherboards sind die Ereignismeldungen in dezimaler Schreibweise aufgelistet."
+          },
+          {
+              "type": "text",
+              "content": "Antwort: Hex: <sub>c</sub>5<sub>h</sub> | binär: 1100 0101<sub>b</sub> | dezimal: 197<sub>d</sub> <br/> oder 12 x 16<sup>1</sup> + 5 x 16<sup>0</sup> = 197<sub>d</sub>"
+          },
+          {
+              "type": "text",
+              "content": "Wandeln Sie den angezeigten Wert von LED1 in das dezimale Zahlensystem um. Der Rechenweg ist anzugeben."
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "subtitle",
+              "content": "<span class='list-number'>2</span>Aufgabe"
+          },
+          {
+              "type": "text",
+              "content": "Die IT-System GmbH soll im Eingangsbereich des PC-Shops einen Kundenzähler installieren, der die Kundenzahl auf einer elektronischen Anzeige mit vier LED-Zahlendisplays anzeigt."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604dee87ec849e7897841833"
+          },
+          {
+              "type": "text",
+              "content": "Jedes LED-Zahlendisplay hat sieben Segmente, mit denen die Dezimalziffern 0 bis 9 dargestellt werden können. Die Zähler-Baugruppe gibt für jedes LED-Zahlendisplay ein BCD-codiertes Signal aus, welches im BCD-Decoder Code (engl. <i>Binary Coded Decimal Code</i>) in einen 7-Segment-Code zur Steuerung der Anzeigen-Segmente a bis g übersetzt wird."
+          },
+          {
+              "type": "text",
+              "content": "Beispiel: Ansteuerung eines LED-Zahlendisplays zur Darstellung der Ziffer 1"
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604def52ec849e7897841835"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>2a</span>Zur Überprüfung der fehlerfreien Arbeitsweise des Decoders sollen Sie die an den Schnittstellen anliegenden Signale analysieren. Geben Sie in die folgende Wahrheitstabelle für die Ziffern 0 bis 9 den jeweiligen BCD Code an."
+          },
+          {
+              "type": "table",
+              "content": "",
+              "rows": [
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "Bit-Nr.", "colSpan": 4 }
+                      ]
+                  },
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "middle", "content": "Dezimal-<br/>ziffer" },
+                          { "align": "middle", "content": "4<br/>(D)" },
+                          { "align": "middle", "content": "2<br/>(C)" },
+                          { "align": "middle", "content": "3<br/>(B)" },
+                          { "align": "middle", "content": "1<br/>(A)" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "0" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "1" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "2" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "3" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "4" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "5" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "6" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "7" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "8" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "9" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>2b</span>Auf dem Display sollen die Dezimalziffern 0, 2, 5 un 8 dargestellt werden. Geben Sie in folgender Tabelle den jeweiligen 7-Segment-Code an."
+          },
+          {
+              "type": "table",
+              "content": "",
+              "rows": [
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "7-Segmente-Code", "colSpan": 7 }
+                      ]
+                  },
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "middle", "content": "Dezimal-<br/>ziffer" },
+                          { "align": "middle", "content": "g" },
+                          { "align": "middle", "content": "f" },
+                          { "align": "middle", "content": "e" },
+                          { "align": "middle", "content": "d" },
+                          { "align": "middle", "content": "c" },
+                          { "align": "middle", "content": "b" },
+                          { "align": "middle", "content": "a" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "0" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "2" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "5" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "8" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "text",
+              "content": "Die booleschen Gleichungen für jedes Segment können aus KV-Diagrammen (Karnaugh-Veitch-Diagrammen) abgeleitet werden. Die BCD-Codes, die nicht zur Darstellung der Ziffern 0 bis 9 verwendet werden, sind mit X gekennzeichnet."
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>2c</span>Beispiel: Segment a <br/> Das Segment a einer LED-Anzeige wird zur Darstellung der Ziffern 0, 2, 3, 5, 7, 8 und 9 benötigt."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604df2b1ec849e7897841837"
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>2d</span>Leiten Sie aus folgendem KV-Diagramm die vereinfachte boolesche Gleichung für das Segment f ab."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604df336ec849e7897841839"
+          },
+          {
+              "type": "text",
+              "content": "Antwort: Boolesche Gleichung ..."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604df58bec849e789784183e"
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "<span class='list-number'>2e</span>Folgendes Diagramm und folgende boolesche Gleichung stehen für ein Segment der 7-Segment-Anzeige. Ermitteln Sie mithife der BCD-Code-Tabelle die vier Dezimalziffern, zu deren Anzeige dieses Segment angesteuert wird."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/604df39dec849e789784183b"
+          },
+          {
+              "type": "text",
+              "content": "Antwort: 0, 2, 6, 8"
+          }
+      ]
+  },
+  {
+      "url": "vernetzte_steuerungssysteme/logische_schaltungen_und_steuerlogik",
+      "topic": "Vernetzte Steuerungssysteme",
+      "subject": "wp",
+      "lessonDate": "2021-03-03",
+      "lastUpdate": "2021-03-14",
+      "schoolWeek": "22",
+      "elements": [
+          {
+              "type": "title",
+              "content": "Definition"
+          },
+          {
+              "type": "text",
+              "content": "Das Thema Logische Schaltungen/Steuerlogik, wie das KV-Diagramm oder das Vereinfachen von Funktionsgleichungen mittels Schaltalgebra gehört zum Lernfeld 4 (Informationsverarbeitung/Digitaltechnik) und dient dem Anwendungsentwickler zur eindeutigen Beschreibung des umzusetzenden Programms (IST-Analyse). Ein weiteres Verfahren dazu ist die Entscheidungstabelle. Sie hat dieselbe Funktion wie die Funktionsgleichung mit Vereinfachung durch das KV-Diagramm."
+          }
+      ]
+  },
+  {
+      "url": "vernetzte_steuerungssysteme/steuerlogik_aufgabe_ersatzstromversorgung",
+      "topic": "Vernetzte Steuerungssysteme",
+      "subject": "wp",
+      "lessonDate": "2021-03-03",
+      "lastUpdate": "2021-03-18",
+      "schoolWeek": "22",
+      "elements": [
+          {
+              "type": "title",
+              "content": "Aufgaben"
+          },
+          {
+              "type": "text",
+              "content": "An einer Ersatzstromversorung mit einer Leistung <i>P</i> = 8 kW sind die Antriebsmotoren M1 mit 7 kW, M2 mit 5 kW und M3 mit 2 kW angeschlossen (Bild 3). Der Motor M1 wird durch den Steuerschalter S1, Motor M2 durch S2 und Motor M3 durch S3 eingeschaltet."
+          },
+          {
+              "type": "text",
+              "content": "Eine Steuerlogik soll die Eingangssignale A, B und C der Steuerschalter überwachen und eine Überlastung des Aggregats verhindern. Zusätzlich soll eine Schalterstellung, die eine Überlastung hervorrufen würde, durch eine Meldeleuchte P1 angezeigt werden."
+          },
+          {
+              "type": "text",
+              "content": "a) Erstellen Sie die Wertetabellen für ungestörten und für gestörten Betrieb."
+          },
+          {
+              "type": "text",
+              "content": "Antwort: <b>Ungestörter Betrieb</b>"
+          },
+          {
+              "type": "table",
+              "content": "Antwort",
+              "rows": [
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "middle", "content": "M1" },
+                          { "align": "middle", "content": "M2" },
+                          { "align": "middle", "content": "M3" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Aus" },
+                          { "align": "middle", "content": "Aus" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Aus" },
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Aus" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Aus" },
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Ein" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Aus" },
+                          { "align": "middle", "content": "Aus" },
+                          { "align": "middle", "content": "Ein" }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "text",
+              "content": "Antwort: <b>Gestörter Betrieb</b>"
+          },
+          {
+              "type": "table",
+              "content": "Antwort",
+              "rows": [
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "middle", "content": "M1" },
+                          { "align": "middle", "content": "M2" },
+                          { "align": "middle", "content": "M3" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Ein" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Aus" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "middle", "content": "Ein" },
+                          { "align": "middle", "content": "Aus" },
+                          { "align": "middle", "content": "Ein" }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "b) Zeichnen Sie den Funktionsplan der Steuerlogik. Verwenden Sie für die Eingänge und Ausgänge der Steuerlogik die in Bild 3 angegebenen Variablen."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/6053a1b3ec849e78978418a8"
+          },
+          {
+              "type": "text",
+              "content": "Antwort ..."
+          },
+          {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/6053a38dec849e78978418aa"
+          },
+          {
+              "type": "text",
+              "content": "c) Erstellen Sie eine vollständige und eine konsolidierte Entscheidungstabelle mit den Bedingungen A, B, C und den Aktionen X, Y, Z, U."
+          },
+          {
+              "type": "table",
+              "content": "Antwort: Entscheidungstabelle vollständig",
+              "rows": [
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "left", "content": "A" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "B" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "C" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "Z (M1)" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "Y (M2)" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "X (M3)" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "U (Störung P1)" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "table",
+              "content": "Antwort: konsolidiert",
+              "rows": [
+                  {
+                      "type": "header",
+                      "columns": [
+                          { "align": "left", "content": "A" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "n" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "B" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "n" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "C" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "j" },
+                          { "align": "middle", "content": "n" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "Z (M1)" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "Y (M2)" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "X (M3)" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  },
+                  {
+                      "type": "default",
+                      "columns": [
+                          { "align": "left", "content": "U (Störung P1)" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "x" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" },
+                          { "align": "middle", "content": "" }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "d) Entwickeln Sie aus der konsolidierten Entscheidungstabelle ein Struktogramm für die Funktion Ersatzstromversorgung()."
+          },
+          {
+              "type": "text",
+              "content": "Eingabe: binär - A, B, C <br/> Verarbeitung: entwickelte Steuerlogik <br/> Ausgabe: binär - X, Y, Z, U"
+          },
+          {
+              "type": "line",
+              "content": "<hr/>"
+          },
+          {
+              "type": "text",
+              "content": "e) Programmieren und testen Sie die Funktion Ersatzstromversorgung()."
+          }
+      ]
   },
 
 

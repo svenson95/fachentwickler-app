@@ -1322,8 +1322,350 @@ export const WISO_POSTS: Post[] = [
             }
         ]
     },
-
-
+    {
+        "url": "berufsbildung_und_arbeitswelt/vertragsaufhebung",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2020-11-16",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+            {
+              "type": "title",
+              "content": "Definition"
+            },
+            {
+              "type": "text",
+              "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "berufsbildung_und_arbeitswelt/kündigungsarten",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2020-11-17",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+            {
+              "type": "title",
+              "content": "Definition"
+            },
+            {
+              "type": "text",
+              "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_1",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2020-11-19",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_2",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2020-12-07",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "19",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "arbeitsrecht/test",
+        "topic": "test",
+        "subject": "wiso",
+        "lessonDate": "2020-12-08",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "19",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+      "url": "versicherungen_und_sozialabgaben/produktpolitik",
+      "topic": "Versicherungen & Sozialabgaben",
+      "subject": "wiso",
+      "lessonDate": "2021-01-11",
+      "lastUpdate": "2021-01-12",
+      "schoolWeek": "20",
+      "elements": [
+        {
+          "type": "title",
+          "content": "Ausgangssituation"
+        },
+        {
+          "type": "text",
+          "content": "Die Geschäftsführung der Firma erhält Ende 2014 die Verkaufszahlen ihrer Produkte. Einige Programme verkaufen sich gleichbleibend gut, andere weisen sinkende Absatzzahlen auf. Das im Jahr 2011 auf den Markt gebrachte Logistikprogramm LOGSOFT weist folgenden Lebenszyklus auf:"
+        },
+        {
+          "type": "image",
+          "content": "http://159.65.105.150:3000/images/"
+        },
+        {
+          "type": "line",
+          "content": "<hr/>"
+        },
+        {
+          "type": "title",
+          "content": "Aufgaben"
+        },
+        {
+          "type": "text",
+          "content": "a) In welcher Lebenszyklusphase befindet sich das dargestellte Produkt im Jahr 2014? Beschreiben Sie die Phase genauer."
+        },
+        {
+          "type": "text",
+          "content": "..."
+        },
+        {
+          "type": "text",
+          "content": "b) Die Produkte des Kunden wurden im Portfolio der Boston Consulting Group abgebildet. Die Produkte werden jeweils mit Nummern angegeben. Das Portfolio stellt sich wie folgt dar:"
+        },
+        {
+          "type": "image",
+          "content": "http://159.65.105.150:3000/images/"
+        },
+        {
+          "type": "text",
+          "content": "In der Darstellung fehlt lediglich das Logistikprogramm LOGSOFT."
+        },
+        {
+          "type": "text",
+          "content": "..."
+        },
+      ]
+    },
+    {
+      "url": "berufsbildung_und_arbeitswelt/lohnarten",
+      "topic": "Berufsbildung und Arbeitswelt",
+      "subject": "wiso",
+      "lessonDate": "2021-02-08",
+      "lastUpdate": "2021-02-08",
+      "schoolWeek": "21",
+      "elements": [
+        {
+          "type": "title",
+          "content": "Definition"
+        },
+        {
+          "type": "text",
+          "content": "Zeitlohn, Leistungslohn und Akkordlohn ..."
+        }
+      ]
+    },
+    {
+        "url": "berufsbildung_und_arbeitswelt/lohnberechnung",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2021-02-11",
+        "lastUpdate": "2021-02-11",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Zeitlohn, Leistungslohn und Akkordlohn ..."
+            }
+        ]
+    },
+    {
+        "url": "berufsbildung_und_arbeitswelt/lohnberechnung_und_sozialversicherungen",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2021-03-04",
+        "lastUpdate": "2021-03-06",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Leistungen, Beiträge und Träger der jeweiligen Sozialversicherungen."
+            },
+            {
+                "type": "list",
+                "content": "Krankenversicherung (KV)",
+                "list": [
+                    {
+                        "content": "Leistung",
+                        "sublist": [
+                            "Zahnarzt-, Arztbehandlung, Medikamente, Krankenhausaufenthalt, etc."
+                        ]
+                    },
+                    {
+                        "content": "Beiträge",
+                        "sublist": [
+                            "14,6% des Bruttogehalts",
+                            "AG zahlt die Hälfte",
+                            "AN zahlt die Hälfte + Zusatzbeitragssatz 7,3% + X = ca. 8,2%"
+                        ]
+                    },
+                    {
+                        "content": "Träger",
+                        "sublist": [
+                            "Krankenkassen"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Pflegeversicherung (PV)",
+                "list": [
+                    {
+                        "content": "Leistung",
+                        "sublist": [
+                            "Häusliche und stationäre Pflege wird bezahlt",
+                            "Bis zu max. 1550€/Monat etc."
+                        ]
+                    },
+                    {
+                        "content": "Beiträge",
+                        "sublist": [
+                            "2,35 % des Bruttogehalts",
+                            "AG zahlt die Hälfte",
+                            "AN zahlt die Hälfte + 0,25 % wenn über 23 Jahre & kinderlos"
+                        ]
+                    },
+                    {
+                        "content": "Träger",
+                        "sublist": [
+                            "Krankenkasse"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Unfallversicherung (UV)",
+                "list": [
+                    {
+                        "content": "Leistung",
+                        "sublist": [
+                            "Heilbehandlung",
+                            "Unfallverhütung",
+                            "Verletztengeld",
+                            "Renten"
+                        ]
+                    },
+                    {
+                        "content": "Beiträge",
+                        "sublist": [
+                            "Beitrag wird zu 100 % vom AG getragen",
+                            "Richtet sich nach Gefahrenklasse und Betriebsgröße"
+                        ]
+                    },
+                    {
+                        "content": "Träger",
+                        "sublist": [
+                            "Berufsgenossenschaften"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Rentenversicherung (RV)",
+                "list": [
+                    {
+                        "content": "Leistung",
+                        "sublist": [
+                            "Altersrente",
+                            "Rehabilitationsmaßnahmen",
+                            "Fördermaßnahmen für Behinderte"
+                        ]
+                    },
+                    {
+                        "content": "Beiträge",
+                        "sublist": [
+                            "18,7 % des Bruttogehaltes",
+                            "AG zahlt die Hälfte (9,35 %)",
+                            "AN zahlt die Hälfte (9,35 %)"
+                        ]
+                    },
+                    {
+                        "content": "Träger",
+                        "sublist": [
+                            "Deutsche Rentenversicherung"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Arbeitslosenversicherung (AV)",
+                "list": [
+                    {
+                        "content": "Leistung",
+                        "sublist": [
+                            "Berufsberatung",
+                            "Weiterbildungen",
+                            "Arbeitsvermittlung",
+                            "Arbeitslosengeld I + II"
+                        ]
+                    },
+                    {
+                        "content": "Beiträge",
+                        "sublist": [
+                            "3 % des Bruttogehaltes",
+                            "AG zahlt die Hälfte (1,5 %)",
+                            "AN zahlt die Hälfte (1,5 %)"
+                        ]
+                    },
+                    {
+                        "content": "Träger",
+                        "sublist": [
+                            "Bundesagentur für Arbeit (BA)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6043cef2b0c00c20f201d172"
+            },
+            {
+                "type": "text",
+                "content": "<a href='https://wordwall.net/play/10497/555/642'>https://wordwall.net/play/10497/555/642</a>"
+            }
+        ]
+    },
 
 
 

@@ -24,11 +24,15 @@ export const LF4_1_POSTS: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "lessonDate": "2019-09-05",
-        "lastUpdate": "2020-05-10",
+        "lastUpdate": "2020-12-13",
         "schoolWeek": "2",
         "elements": [
             {
-                "type": "title",
+              "type": "title",
+              "content": "Definition"
+            },
+            {
+                "type": "subtitle",
                 "content": "Elektrische Ladung"
             },
             {
@@ -69,7 +73,7 @@ export const LF4_1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "Elektrizitätslehre"
             },
             {
@@ -203,7 +207,7 @@ export const LF4_1_POSTS: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "lessonDate": "2019-09-26",
-        "lastUpdate": "2020-10-03",
+        "lastUpdate": "2020-12-21",
         "schoolWeek": "3",
         "elements": [
             {
@@ -395,7 +399,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "hint",
-                "content": "1879 erfand <b>Thomas Alva Edison</b> die erste Elektro-Glühlampe, konnte sich mit seiner Gleichstrom-Technologie aber nicht langfristig durchsetzen. Sein späterer Konkurrent <b>George Westinghouse</b>, Unternehmer & Vertreter des Wechselstroms, konnte den kostengünstigeren Strom bieten."
+                "content": "1879 erfand <b>Thomas Alva Edison</b> die erste Elektro-Glühlampe betrieben mit Gleichstrom. Damals waren die Betriebskosten jedoch zu hoch, weshalb erst die später entwickelte Wechselstrom-Technologie auch im privaten Haushalt ihren Einsatz fand."
             },
             {
                 "type": "list",
@@ -1126,7 +1130,7 @@ export const LF4_1_POSTS: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "lessonDate": "2019-09-26",
-        "lastUpdate": "2020-05-13",
+        "lastUpdate": "2020-12-22",
         "schoolWeek": "3",
         "elements": [
             {
@@ -1135,7 +1139,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "1. Ladung"
+                "content": "<span class='list-number'>1</span> Ladung"
             },
             {
                 "type": "text",
@@ -1175,7 +1179,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "2. Elektrisches Potenzial"
+                "content": "<span class='list-number'>2</span> Elektrisches Potenzial"
             },
             {
                 "type": "text",
@@ -1191,7 +1195,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "3. Elektrisches Potenzial"
+                "content": "<span class='list-number'>3</span> Elektrisches Potenzial"
             },
             {
                 "type": "text",
@@ -1223,7 +1227,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "4. Elektrischer Strom"
+                "content": "<span class='list-number'>4</span> Elektrischer Strom"
             },
             {
                 "type": "text",
@@ -1255,7 +1259,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "5. Stromrichtungen"
+                "content": "<span class='list-number'>5</span> Stromrichtungen"
             },
             {
                 "type": "text",
@@ -1279,7 +1283,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "6. Spannungsarten identifizieren"
+                "content": "<span class='list-number'>6</span> Spannungsarten identifizieren"
             },
             {
                 "type": "image",
@@ -1291,7 +1295,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "7. Ohm'scher Widerstand"
+                "content": "<span class='list-number'>7</span> Ohm'scher Widerstand"
             },
             {
                 "type": "text",
@@ -1315,7 +1319,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "8. Kirchhoff'sche Regeln"
+                "content": "<span class='list-number'>8</span> Kirchhoff'sche Regeln"
             },
             {
                 "type": "text",
@@ -1657,8 +1661,8 @@ export const LF4_1_POSTS: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_2",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
-        "lessonDate": "2020-03-03",
-        "lastUpdate": "2020-10-29",
+        "lessonDate": "2020-03-06",
+        "lastUpdate": "2020-12-14",
         "schoolWeek": "9",
         "elements": [
             {

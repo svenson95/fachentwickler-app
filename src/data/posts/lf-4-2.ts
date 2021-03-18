@@ -114,7 +114,7 @@ export const LF4_2_POSTS: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
         "lessonDate": "2019-09-23",
-        "lastUpdate": "2020-10-29",
+        "lastUpdate": "2020-12-20",
         "schoolWeek": "3",
         "elements": [
             {
@@ -166,6 +166,10 @@ export const LF4_2_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5ed3f7d63e558d35d3d9023d"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "title",
@@ -1057,7 +1061,7 @@ export const LF4_2_POSTS: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
         "lessonDate": "2020-02-13",
-        "lastUpdate": "2020-10-29",
+        "lastUpdate": "2020-12-20",
         "schoolWeek": "8",
         "elements": [
             {
@@ -1074,7 +1078,7 @@ export const LF4_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Bei der Spiegelung (engl. Mirroring) wird ein Datensatz «AB» komplett auf zwei verschiedenen Festplatten abgespeichert. Beim Ausfall einer Platte gehen keine Informationen verloren, da der ganze Datensatz auch auf der zweiten Platte vorhanden ist."
+                "content": "Bei der Spiegelung (engl. <i>Mirroring</i>) wird ein Datensatz «AB» komplett auf zwei verschiedenen Festplatten abgespeichert. Beim Ausfall einer Platte gehen keine Informationen verloren, da der ganze Datensatz auch auf der zweiten Platte vorhanden ist."
             },
             {
                 "type": "image",
@@ -1086,7 +1090,7 @@ export const LF4_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Beim Streifen (engl. Striping) wird ein Datensatz «AB» aufgeteilt und auf mehrere aufeinanderfolgende Festplatten gespeichert. Beim Ausfall einer Platte sind alle Informationen verloren, da sämtliche Platten benötigt werden um den Datensatz vollständig lesen zu können."
+                "content": "Beim Streifen (engl. <i>Striping</i>) wird ein Datensatz «AB» aufgeteilt und auf mehrere aufeinanderfolgende Festplatten gespeichert. Beim Ausfall einer Platte sind alle Informationen verloren, da sämtliche Platten benötigt werden um den Datensatz vollständig lesen zu können."
             },
             {
                 "type": "text",
@@ -1102,7 +1106,7 @@ export const LF4_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Parität (engl. Parity) ergänzt jeden Streifen mit der Möglichkeit in einen Datensatz verlorene Informationen wiederherzustellen. Ein Datensatz «AB» wird mit Streifen auf mehrere Platten verteilt. Auf einer zusätzlichen Platte wird für jeden Streifen ein Paritätswert «P» errechnet. Fällt eine Platte aus, kann mit Hilfe der Parität die fehlende Information errechnet werden."
+                "content": "Parität (engl. <i>Parity</i>) ergänzt jeden Streifen mit der Möglichkeit in einen Datensatz verlorene Informationen wiederherzustellen. Ein Datensatz «AB» wird mit Streifen auf mehrere Platten verteilt. Auf einer zusätzlichen Platte wird für jeden Streifen ein Paritätswert «P» errechnet. Fällt eine Platte aus, kann mit Hilfe der Parität die fehlende Information errechnet werden."
             },
             {
                 "type": "text",

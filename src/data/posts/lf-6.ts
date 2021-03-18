@@ -6,7 +6,7 @@ export const LF6_POSTS: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2019-09-03",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2021-01-06",
         "schoolWeek": "2",
         "elements": [
             {
@@ -31,7 +31,7 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "→ <u>Ganzzahlige Werte</u> - <code>byte short int long</code> <br/> → <u>Gleitpunktwerte</u> - <code>float double</code> <br/> → <u>Zeichenwert</u> - <code>char</code> <br/> → <u>Wahrheitswerte</u> - <code>boolean</code>"
+                "content": "→ Ganzzahlige Werte - <code>byte short int long</code> <br/> → Gleitpunktwerte - <code>float double</code> <br/> → Zeichenwert - <code>char</code> <br/> → Wahrheitswerte - <code>boolean</code>"
             },
             {
                 "type": "line",
@@ -54,7 +54,7 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "list",
-                "content": "Eine Konstante ist eine nicht veränderbare Variable (engl. <i>immutable</i>), was bedeutet, dass <u>der bei der Deklaration zugewiesene Wert nicht geändert werden</u> kann. In Java werden Konstanten mit dem Schlüsselwort final gekennzeichnet. Ein Literal ist ein konstanter Wert oder Ausdruck, der sich zur Laufzeit eines Programms nicht ändert. Allgemein bezeichnet ein Literal eine Zeichenfolge, die die direkte Darstellung der Werte von Basistypen definiert.",
+                "content": "Eine <b>Konstante</b> ist eine nicht veränderbare Variable (engl. <i>immutable</i>), was bedeutet, dass <b>der bei der Deklaration zugewiesene Wert nicht geändert werden</b> kann. In Java werden Konstanten mit dem Schlüsselwort final gekennzeichnet. Ein Literal ist ein konstanter Wert oder Ausdruck, der sich zur Laufzeit eines Programms nicht ändert. Allgemein bezeichnet ein Literal eine Zeichenfolge, die die direkte Darstellung der Werte von Basistypen definiert.",
                 "list": [
                     "die Ziffern 123 sind ein Literal, denn sie repräsentieren den Wert einhundertdreiundzwanzig"
                 ]
@@ -74,7 +74,7 @@ export const LF6_POSTS: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "<u>Dezimal</u>" },
+                            { "align": "middle", "content": "<b>Dezimal</b>" },
                             { "align": "middle", "content": "ohne" },
                             { "align": "middle", "content": "23872323 ⇒ 23_872_323" }
                         ]
@@ -82,7 +82,7 @@ export const LF6_POSTS: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "<u>Oktal</u>" },
+                            { "align": "middle", "content": "<b>Oktal</b>" },
                             { "align": "middle", "content": "0 (Null)" },
                             { "align": "middle", "content": "0133041503 ⇒ 01_3304_1503" }
                         ]
@@ -90,7 +90,7 @@ export const LF6_POSTS: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "<u>Hexadezimal</u>" },
+                            { "align": "middle", "content": "<b>Hexadezimal</b>" },
                             { "align": "middle", "content": "0x / 0X (Null / NullX)" },
                             { "align": "middle", "content": "0x16C4343 ⇒ 0x16C_4343" }
                         ]
@@ -98,7 +98,7 @@ export const LF6_POSTS: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "<u>Binär</u>" },
+                            { "align": "middle", "content": "<b>Binär</b>" },
                             { "align": "middle", "content": "0b / 0B (Nullb / NullB)" },
                             { "align": "middle", "content": "0b10101111 ⇒ 0b1010_1111" }
                         ]
@@ -2271,7 +2271,7 @@ export const LF6_POSTS: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-03-24",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2021-01-06",
         "schoolWeek": "10",
         "elements": [
             {
@@ -2391,7 +2391,7 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "→ Implementieren Sie zum obigen Problem einen <strong>rekurisven</strong> Algorithmus, der nach dem Prinzip Divide and Conquer (Teile und Herrsche) arbeitet. <br/> → Messen Sie auch hier wieder die Laufzeit beider Algorithmen und vergleichen Sie die Werte."
+                "content": "→ Implementieren Sie zum obigen Problem einen <strong>rekursiven</strong> Algorithmus, der nach dem Prinzip Divide and Conquer (Teile und Herrsche) arbeitet. <br/> → Messen Sie auch hier wieder die Laufzeit beider Algorithmen und vergleichen Sie die Werte."
             },
             {
                 "type": "code",
@@ -2433,7 +2433,7 @@ export const LF6_POSTS: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-03-24",
-        "lastUpdate": "2020-05-28",
+        "lastUpdate": "2021-01-06",
         "schoolWeek": "10",
         "elements": [
             {
@@ -2553,7 +2553,7 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "→ Implementieren Sie zum obigen Problem einen <strong>rekurisven</strong> Algorithmus, der nach dem Prinzip Divide and Conquer (Teile und Herrsche) arbeitet. <br/> → Messen Sie auch hier wieder die Laufzeit beider Algorithmen und vergleichen Sie die Werte."
+                "content": "→ Implementieren Sie zum obigen Problem einen <strong>rekursiven</strong> Algorithmus, der nach dem Prinzip Divide and Conquer (Teile und Herrsche) arbeitet. <br/> → Messen Sie auch hier wieder die Laufzeit beider Algorithmen und vergleichen Sie die Werte."
             },
             {
                 "type": "code",
@@ -3530,11 +3530,11 @@ export const LF6_POSTS: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_mysql",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_und_datentypen_mysql",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-08-31",
-        "lastUpdate": "2020-09-26",
+        "lastUpdate": "2020-12-15",
         "schoolWeek": "15",
         "elements": [
             {
@@ -3543,11 +3543,15 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "MySQL steht für My - My Widenius, Tochter des Mitbegründers Michael Widenius - SQL - Structured Query Language. SQL, früher noch SEQUEL (Structured English Query Language) genannt, wurde in den 1970er Jahren entworfen. MySQL wurde 1994 entworfen und ist eines der am verbreitetesten Datenbanksysteme weltweit, es gehört zu den relationalen Datenbankverwaltungssystemen."
+                "content": "MySQL steht für ...<br/> <u>My</u> - My Widenius, Tochter des Mitbegründers Michael Widenius<br/> <u>SQL</u> - Structured Query Language"
             },
             {
                 "type": "text",
-                "content": "Eine relationale Datenbank (auch RDBMS - Relational Database Management System genannt) zeichnet sich durch die Relation zwischen Objekten aus. Als Beispiel könnte man sich einen Online-Shop für Bücher vorstellen, welcher die Datenbanken"
+                "content": "Es ist eines der am verbreitetesten Datenbanksysteme weltweit und gehört zu den relationalen Datenbankverwaltungssystemen. SQL ist eine Datenbank-Abfrage-Sprache, früher noch SEQUEL - <i>Structured English Query Language</i> - genannt. Diese wurde bereits in den 1970er Jahren entworfen."
+            },
+            {
+                "type": "text",
+                "content": "Eine relationale Datenbank (auch RDBMS - Relational Database Management System genannt) zeichnet sich durch die Relation zwischen Objekten aus. "
             },
             {
                 "type": "line",
@@ -3617,7 +3621,7 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Integer Datentypen"
+                "content": "Boolean Datentypen"
             },
             {
                 "type": "text",
@@ -3630,7 +3634,7 @@ export const LF6_POSTS: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-09-02",
-        "lastUpdate": "2020-10-04",
+        "lastUpdate": "2020-12-15",
         "schoolWeek": "15",
         "elements": [
             {
@@ -3650,20 +3654,22 @@ export const LF6_POSTS: Post[] = [
                 "content": "http://159.65.105.150:3000/images/5f79ff54a40070503d0a75f7"
             },
             {
-                "type": "subtitle",
-                "content": "Projektion - Auswahl spezieller Spalten"
+                "type": "text",
+                "content": "<b>Projektion - Auswahl spezieller Spalten</b> <br/> <code>spalte1</code> & <code>spalte2</code> sind die Tabellen in der Datenbank"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT spalte1, spalte2 FROM datenbank;"
             },
             {
                 "type": "text",
-                "content": "<code>SELECT spalte1, spalte2 FROM datenbank</code>"
+                "content": "<b>Selektion - Auswahl von Zeilen nach Bedingungen</b> <br/> Gibt alle Elemente zurück die den Wert 2 oder höher haben"
             },
             {
-                "type": "subtitle",
-                "content": "Selektion - Auswahl von Zeilen nach Bedingungen"
-            },
-            {
-                "type": "text",
-                "content": "<code>SELECT * FROM WHERE spalte1 > 1</code>"
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT * FROM WHERE spalte1 > 1;"
             },
             {
                 "type": "line",
@@ -3695,11 +3701,21 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "<b>Vergleichsausdrücke</b> <br/> <code>Gehalt >= 2000 AND Geschlecht = 'male'</code> <br/> <code>YEAR(Geburtstag) < 1980</code>"
+                "content": "<b>Vergleichsausdrücke</b>"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "Gehalt >= 2000 AND Geschlecht = 'male' \nYEAR(Geburtstag) < 1980;"
             },
             {
                 "type": "text",
-                "content": "<b>Standardprädikate</b> <br/> <code>Name LIKE '%nn%' </code> <br/> <code>Ort IN ('Bautzen', 'Dresden')</code> <br/> <code>Telefon IS NULL</code>"
+                "content": "<b>Standardprädikate</b>"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "Name LIKE '%nn%'; \nOrt IN ('Bautzen', 'Dresden') \nTelefon IS NULL"
             },
             {
                 "type": "line",
@@ -4183,6 +4199,567 @@ export const LF6_POSTS: Post[] = [
             {
                 "type": "text",
                 "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "sql_grundlagen/test",
+        "topic": "test",
+        "subject": "lf-6",
+        "lessonDate": "2020-11-18",
+        "lastUpdate": "2020-12-21",
+        "schoolWeek": "18",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbank_relationstheorie",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-11-19",
+        "lastUpdate": "2020-12-21",
+        "schoolWeek": "18",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Entwurfstext"
+          }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/planung_von_relationalen_datenbanken",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-12-09",
+        "lastUpdate": "2020-12-21",
+        "schoolWeek": "19",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/hashfunktionen",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2021-01-11",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Eine Hashfunktion (im kryptographischen Sinn) ist eine Einwegfunktion, die eine Datenmenge variabler Größe auf eine Datenmenge fester Größe abbildet. Sie wird zum Signieren von Nachrichten verwendet, um die Integrität dieser sicherzustellen. Der Hashwert einer Hashfunktion kann mit einem Fingerabdruck verglichen werden. Jeder Hashwert (Fingerabdruck) bestimmt eindeutig einen Datensatz (Kollisionen vernachlässigt; dazu später im Unterricht mehr)."
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Aufgaben"
+          },
+          {
+            "type": "text",
+            "content": "Bilden Sie den SHA3-256 Hashwert zur Zeichenkette OSZ Technik Teltow. (ohne Punkt) Der Hashwert wird später das Passwort für die Aufgaben sein."
+          },
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/hashfunktion_uebung",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2021-01-14",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "20",
+        "elements": [
+          {
+            "type": "title",
+            "content": "Definition"
+          },
+          {
+            "type": "text",
+            "content": "Eine Hashfunktion (im kryptographischen Sinn) ist eine Einwegfunktion, die eine Datenmenge variabler Größe auf eine Datenmenge fester Größe abbildet. Sie wird zum Signieren von Nachrichten verwendet, um die Integrität dieser sicherzustellen. Der Hashwert einer Hashfunktion kann mit einem Fingerabdruck verglichen werden. Jeder Hashwert (Fingerabdruck) bestimmt eindeutig einen Datensatz (Kollisionen vernachlässigt; dazu später im Unterricht mehr)."
+          },
+          {
+            "type": "line",
+            "content": "<hr/>"
+          },
+          {
+            "type": "title",
+            "content": "Aufgaben"
+          },
+          {
+            "type": "text",
+            "content": "Bilden Sie den SHA3-256 Hashwert zur Zeichenkette OSZ Technik Teltow. (ohne Punkt) Der Hashwert wird später das Passwort für die Aufgaben sein."
+          },
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_statements_abfragen_über_mehrere_tabellen",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2021-02-08",
+        "lastUpdate": "2021-02-27",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Equi-Join - Inner-Join - Left- und Right-Join"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> VII.1"
+            },
+            {
+                "type": "text",
+                "content": "Arbeiten Sie im Buch „Datenbanken – Relationale Datenbanken entwerfen und realisieren“ die Seiten 117 bis 122 (Kapitel 10.6, 10.6.1 und 10.6.2) durch."
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_server_einrichten_und_uebungsaufgaben",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2021-02-12",
+        "lastUpdate": "2021-02-27",
+        "schoolWeek": "21",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Loggen Sie sich auf Ihren SQL Server ein. Verbinden Sie sich mit der Schuldatenbank. Lösen sie die Aufgaben 12.10.5 (5-1 bis 5-9) auf Seite 178 f. Die Aufgabe 5-6 (Self-Join) können Sie vernachlässigen. Eine Übersicht der Schul-Datenbank (ER-Modell) finden Sie auf Seite 173."
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_1",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2021-03-03",
+        "lastUpdate": "2021-03-05",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Es soll jeweils ein ER-Modell erstellt werden"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span>Lufttransport"
+            },
+            {
+                "type": "list",
+                "content": "Für die Entwicklung des Datenbanksystems liegt folgende Beschreibung vor:",
+                "list": [
+                    "Auf einem Frachtflug werden Frachten, die von einem oder mehreren Kunden stammen, transportiert",
+                    "Die Fracht eines Kunden kann auf einen oder mehrere Flüge verteilt werden",
+                    "Ein Flug wird mit einem Flugzeug ausgeführt",
+                    "Ein Flugzeug wird für viele Flüge eingesetzt",
+                    "Ein Flugzeug wird von verschiedenen Piloten geflogen",
+                    "Piloten können auf verschiedenen Flugzeugen eingesetzt werden",
+                    "Ein Pilot führt viele Flüge durch",
+                    "Ein Flug wird von zwei Piloten ausgeführt"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Erstellen Sie ein enstsprechendes ER-Diagramm ohne Attribute"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span>Lieferservice"
+            },
+            {
+                "type": "text",
+                "content": "Die durchgeführten Lieferfahrten sollen in einem relatonalen Datenbanksystem erfasst werden"
+            },
+            {
+                "type": "text",
+                "content": "a) Im ersten Entwicklungsschritt werden Sie beauftragt, für diesen Zweck ein ER-Modell zu erstellen"
+            },
+            {
+                "type": "list",
+                "content": "Vervollständigen Sie dazu auf der gegenüberliegenden Seite das ER-Diagramm anhand folgender Vorgaben",
+                "list": [
+                    "Auf einer Lieferfahrt werden Frachten von einem oder mehreren Kunden transportiert",
+                    "Die Fracht eines Kunden kann auf eine oder mehrere Lieferfahrten verteilt werden",
+                    "Eine Lieferfahrt wird mit einem LKW ausgeführt",
+                    "Ein LKW wird für viele Lieferfahrten auf unterschiedlichen Routen eingesetzt",
+                    "Ein LKW wird von verschiedenen Fahreren gefahren",
+                    "Fahrer können auf verschiedenen LKW's eingesetzt werden",
+                    "Ein Fahrer führt viele Lieferfahrten durch",
+                    "Eine Lieferfahrt wird von einem Fahrer ausgeführt",
+                    "Eine Lieferfahrt führt über eine Route, die sich aus mehreren Strecken zusammensetzt",
+                    "Eine Strecke verbindet zwei Lager und kann zu verschiedenen Routen gehören"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>3</span>Elektro-IT-Artikel"
+            },
+            {
+                "type": "text",
+                "content": "Die Fachzeitschrift \"El-I.te\" für Elektro- und Informationstechnologie erscheint einmal im Quartal und enthält fundierte Artikel zu aktuellen Themen. Jede Ausgabe enthält eine Heft-CD, auf der unter anderem auch die Artikel der jeweiligen Ausgabe im PDF-Format gespeichert sind."
+            },
+            {
+                "type": "text",
+                "content": "Die Schüler der Technik-AG nutzen diese PDF-Dateien, um die Artikel auf einer Dateiablage zu archivieren. Für jedes Jahr wird ein eigenes Verzeichnis angelegt. Für jede, in diesem Jahr erschienene Ausgabe wird wiederum ein Unterverzeichnis erstellt, in dem alle Artikel dieser Ausgabe zu finden sind."
+            },
+            {
+                "type": "list",
+                "content": "Anforderungsliste:",
+                "ordered": true,
+                "list": [
+                    "Welche Artikel gibt es?",
+                    "Um die Position des Artikels im Verzeichnisbaum bestimmen zu können, muss das Jahr, die Ausgabe und der Dateiname gespeichert werden",
+                    "Zusätzlich muss zu jedem Artikel ein Thema angegeben werden",
+                    "Welche Autoren gibt es?",
+                    "Ein Autor wird über den Vor- und Nachnamen oder das Autorenkürzel eindeutig bestimmt",
+                    "Ein oder mehrere Autoren schreiben einen Artikel",
+                    "Welche Schlüsselwörter gibt es?",
+                    "Das Schlüsselwort selbst wird gespeichert",
+                    "Ein Schlüsselwort kommt in mehreren Artikeln vor",
+                    "In einem Artikel können mehrere Schlüsselwörter vorkommen",
+                    "Welche Rubriken gibt es?",
+                    "Eine Rubrik hat eine Bezeichnung",
+                    "Jeder Artikel kann eindeutig einer Rubrik zugeordnet werden"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "<a href='http://159.65.105.150/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_2'>Aufgabe gelöst? Zur Musterlösung</a>"
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_2",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2021-03-05",
+        "lastUpdate": "2021-03-09",
+        "schoolWeek": "22",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Datenanalyse ist die Darstellung der gefundenen Zusammenhänge als ER-Modell (engl. 'Entity-Relationship') sehr hilfreich. Dieses Datenmodell wird parallel zur Datenanalyse eingesetzt bzw. dient als Hilfsmittel zur Datenanalyse. Bereits wenn Entitäten und Beziehungen aus der Anforderungsliste ermittelt worden sind, kann ein vorläufiges ER-Modell erstellt werden."
+            },
+            {
+                "type": "subtitle",
+                "content": "Vorläufiges ER-Modell"
+            },
+            {
+                "type": "text",
+                "content": "In einem ER-Modell werden Entitäten als Rechtecke dargestellt. Beziehungen zwischen Entitäten werden durch Rauten symbolisiert. Die Beziehung wird durch einfache Linien mit den zugehörigen Entitäten verbunden."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/604713d5b0c00c20f201d1bb"
+            },
+            {
+                "type": "text",
+                "content": "Der Zusammenhang „ist-Mitschüler“ zwischen den Entitäten „Schüler“ und „Klasse“ wird im ER-Modell wie folgt dargestellt:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60471403b0c00c20f201d1bd"
+            },
+            {
+                "type": "list",
+                "content": "Bereits mit diesen wenigen Elementen lässt sich ein vorläufiges ER-Modell zur Schuldatenbank aufstellen. Für dieses ER-Modell müssen lediglich die Entitäten und die Beziehungen betrachtet werden, die den Unterpunkten 1. und 2. der Anforderungslistenanalyse aus dem Thema Datenanalyse (verlinkung).",
+                "ordered": true,
+                "list": [
+                    "Entitäten → \"Schüler\", \"Klasse\", \"Lehrer\"",
+                    "Beziehungen → \"ist-Mitschüler\", \"ist-Klassensprecher\", \"ist-Klassenlehrer\", \"unterrichtet\""
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60471493b0c00c20f201d1bf"
+            },
+            {
+                "type": "subtitle",
+                "content": "Anzahlangaben im ER-Modell"
+            },
+            {
+                "type": "list",
+                "content": "Das ER-Modell wird um die Anzahlangagben erweitert. Zu jeder Beziehung müssen zwei Anzahlangaben bestimmt werden. Für die Beziehung „ist-Mitschüler“ können die folgenden beiden Fragen betrachtet werden:",
+                "ordered": true,
+                "list": [
+                    "Ein Schüler ist Mitscühler in wie vielen Klassen?",
+                    "Eine Klasse hat wie viele (Mit-)Schüler?"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Dabei wird also untersucht, wie viele Objekte der einen Entität durch die Beziehung von genau einem Objekt der anderen Entität beeinflusst werden."
+            },
+            {
+                "type": "subtitle",
+                "content": "Ermittlung der Anzahlangabe (bei Klasse):"
+            },
+            {
+                "type": "text",
+                "content": "\"Ein Schüler ist Mitschüler in wie vielen Klassen?\""
+            },
+            {
+                "type": "text",
+                "content": "Da ein Schüler immer nur Schüler einer Klasse sein kann, wird in dem ER-Modell an der Position des Fragezeichens eine \"1\" eingetragen."
+            },
+            {
+                "type": "subtitle",
+                "content": "Ermittlung der Anzahlangabe (bei Schüler):"
+            },
+            {
+                "type": "text",
+                "content": "\"Eine Klasse hat wie viele (Mit-)Schüler)?\""
+            },
+            {
+                "type": "text",
+                "content": "Da eine Klasse immer aus mehreren Schülern besteht, wird in dem ER-Modell an der Position des Fragezeichens ein „m“ eingetragen."
+            },
+            {
+                "type": "subtitle",
+                "content": "ER-Modell mit Anzahlangaben"
+            },
+            {
+                "type": "text",
+                "content": "Das um die Anzahlangaben erweiterte ER-Modell für die Beziehung „ist-Mitschüler“ sieht demnach wie folgt aus:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/604715dbb0c00c20f201d1c1"
+            },
+            {
+                "type": "text",
+                "content": "Auf diese Art und Weise kann das gesamte ER-Modell der Schuldatenbank um die Anzahlangaben erweitert werden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Merkmale im ER-Modell"
+            },
+            {
+                "type": "text",
+                "content": "Erst nachdem die Anzahlangaben im ER-Modell eingefügt worden sind, werden auch die Merkmale der Entitäten und Beziehungen aufgenommen. Diese werden als runde Kästchen dargestellt. Für jede Entität muss ein einzigartiges Identitätsmerkmal (ID) festgelegt werden – auch <u>Schlüsselmerkmal</u> genannt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60471652b0c00c20f201d1c4"
+            },
+            {
+                "type": "text",
+                "content": "Damit lassen sich alle noch fehlenden Informationen zum ER-Modell hinzufügen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Einsatz des ER-Modells bei der Datenanalyse"
+            },
+            {
+                "type": "list",
+                "content": "Für die Entwicklung des Datenbanksystems liegt folgende Beschreibung vor:",
+                "ordered": true,
+                "list": [
+                    "Ermitteln der Entitäten",
+                    "Ermitteln der Beziehungen in der Anforderungsliste",
+                    "Erstellen eines vorläufigen ER-Modells (nur Entitäten und Beziehungen)",
+                    "Ermitteln aller Anzahlangaben aus der Anforderungsliste",
+                    "Erweitern des ER-Modells um die Anzahlangaben",
+                    "Ermitteln aller Merkmale zu den Entitäten und Beziehungen",
+                    "Erweitern des ER-Modells um die Merkmale. Dabei für jede Entität eine einzigartige ID festlegen!"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiel-Lösungen"
+            },
+            {
+                "type": "text",
+                "content": "Es soll jeweils ein ER-Modell erstellt werden"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span>Lufttransport"
+            },
+            {
+                "type": "list",
+                "content": "Für die Entwicklung des Datenbanksystems liegt folgende Beschreibung vor:",
+                "list": [
+                    "Auf einem Frachtflug werden Frachten, die von einem oder mehreren Kunden stammen, transportiert",
+                    "Die Fracht eines Kunden kann auf einen oder mehrere Flüge verteilt werden",
+                    "Ein Flug wird mit einem Flugzeug ausgeführt",
+                    "Ein Flugzeug wird für viele Flüge eingesetzt",
+                    "Ein Flugzeug wird von verschiedenen Piloten geflogen",
+                    "Piloten können auf verschiedenen Flugzeugen eingesetzt werden",
+                    "Ein Pilot führt viele Flüge durch",
+                    "Ein Flug wird von zwei Piloten ausgeführt"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Erstellen Sie ein enstsprechendes ER-Diagramm ohne Attribute"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6043d019b0c00c20f201d175"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span>Lieferservice"
+            },
+            {
+                "type": "text",
+                "content": "Die durchgeführten Lieferfahrten sollen in einem relatonalen Datenbanksystem erfasst werden"
+            },
+            {
+                "type": "text",
+                "content": "a) Im ersten Entwicklungsschritt werden Sie beauftragt, für diesen Zweck ein ER-Modell zu erstellen"
+            },
+            {
+                "type": "list",
+                "content": "Vervollständigen Sie dazu auf der gegenüberliegenden Seite das ER-Diagramm anhand folgender Vorgaben",
+                "list": [
+                    "Auf einer Lieferfahrt werden Frachten von einem oder mehreren Kunden transportiert",
+                    "Die Fracht eines Kunden kann auf eine oder mehrere Lieferfahrten verteilt werden",
+                    "Eine Lieferfahrt wird mit einem LKW ausgeführt",
+                    "Ein LKW wird für viele Lieferfahrten auf unterschiedlichen Routen eingesetzt",
+                    "Ein LKW wird von verschiedenen Fahreren gefahren",
+                    "Fahrer können auf verschiedenen LKW's eingesetzt werden",
+                    "Ein Fahrer führt viele Lieferfahrten durch",
+                    "Eine Lieferfahrt wird von einem Fahrer ausgeführt",
+                    "Eine Lieferfahrt führt über eine Route, die sich aus mehreren Strecken zusammensetzt",
+                    "Eine Strecke verbindet zwei Lager und kann zu verschiedenen Routen gehören"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6043d046b0c00c20f201d178"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>3</span>Elektro-IT-Artikel"
+            },
+            {
+                "type": "text",
+                "content": "Die Fachzeitschrift \"El-I.te\" für Elektro- und Informationstechnologie erscheint einmal im Quartal und enthält fundierte Artikel zu aktuellen Themen. Jede Ausgabe enthält eine Heft-CD, auf der unter anderem auch die Artikel der jeweiligen Ausgabe im PDF-Format gespeichert sind."
+            },
+            {
+                "type": "text",
+                "content": "Die Schüler der Technik-AG nutzen diese PDF-Dateien, um die Artikel auf einer Dateiablage zu archivieren. Für jedes Jahr wird ein eigenes Verzeichnis angelegt. Für jede, in diesem Jahr erschienene Ausgabe wird wiederum ein Unterverzeichnis erstellt, in dem alle Artikel dieser Ausgabe zu finden sind."
+            },
+            {
+                "type": "list",
+                "content": "Anforderungsliste:",
+                "ordered": true,
+                "list": [
+                    "Welche Artikel gibt es?",
+                    "Um die Position des Artikels im Verzeichnisbaum bestimmen zu können, muss das Jahr, die Ausgabe und der Dateiname gespeichert werden",
+                    "Zusätzlich muss zu jedem Artikel ein Thema angegeben werden",
+                    "Welche Autoren gibt es?",
+                    "Ein Autor wird über den Vor- und Nachnamen oder das Autorenkürzel eindeutig bestimmt",
+                    "Ein oder mehrere Autoren schreiben einen Artikel",
+                    "Welche Schlüsselwörter gibt es?",
+                    "Das Schlüsselwort selbst wird gespeichert",
+                    "Ein Schlüsselwort kommt in mehreren Artikeln vor",
+                    "In einem Artikel können mehrere Schlüsselwörter vorkommen",
+                    "Welche Rubriken gibt es?",
+                    "Eine Rubrik hat eine Bezeichnung",
+                    "Jeder Artikel kann eindeutig einer Rubrik zugeordnet werden"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6043d055b0c00c20f201d17b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://www.westermann.de/artikel/978-3-14-222492-3/Datenbanken-Relationale-Datenbanken-entwerfen-und-realisieren'>Relationale Datenbanken entwerfen und realisieren. Schülerband 2. Auflage 2017.</a>"
+                ]
             }
         ]
     },
