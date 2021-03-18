@@ -109,13 +109,7 @@ export const subjects: MenuItem[] = [
   },
 ];
 
-export const areas: MenuItem[] = [
-  {
-    title: 'Syntax',
-    shortTitle: 'Syntax',
-    url: '/syntax',
-    icon: codeSlashOutline,
-  },
+export const study: MenuItem[] = [
   {
     title: 'Angewandte Informatik',
     shortTitle: 'Ang. Inf.',
@@ -139,6 +133,15 @@ export const areas: MenuItem[] = [
     shortTitle: 'Theo. Inf.',
     url: '/theoretische-informatik',
     icon: libraryOutline,
+  }
+];
+
+export const languages: MenuItem[] = [
+  {
+    title: 'Syntax',
+    shortTitle: 'Syntax',
+    url: '/syntax',
+    icon: codeSlashOutline,
   }
 ];
 
@@ -187,4 +190,4 @@ export const myClass: MenuItem[] = [
   },
 ];
 
-export const pages = [...subjects, ...areas, ...myClass];
+export const pages = [...subjects, ...study, ...languages, ...myClass];
