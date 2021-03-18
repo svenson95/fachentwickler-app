@@ -1,0 +1,61 @@
+@import 'src/theme/styles';
+@import 'src/theme/mixins';
+
+.fia-image-manager {
+  color: white;
+
+  .fia-im-header {
+    .fia-card-title {
+      margin-bottom: 2px;
+    }
+
+    .fia-card-description {
+      color: #989898 !important;
+    }
+  }
+
+  .title {
+    display: block;
+    width: 100%;
+    color: $fia-grey-1;
+    font-size: 1.2em;
+    font-family: Nunito-Light, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .fia-add-image-form {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+    .image-picker {
+      display: flex;
+
+      .fia-file-input {
+        color: black;
+        outline: none;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    margin: 20px 0;
+  }
+
+  .fia-im-recent-images {
+    .image {
+      max-height: 100px;
+      max-width: 200px;
+      padding: 10px;
+    }
+  }
+}
+
+::ng-deep .mat-dialog-container {
+  background: black;
+  border-radius: 0;
+}
