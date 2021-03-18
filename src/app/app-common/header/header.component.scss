@@ -297,24 +297,37 @@
         }
 
         .fia-header-login-btn {
-          background-color: $fia-dark-card-color;
+          background-color: $fia-third-color;
           height: fit-content;
-          padding: 3px 10px;
+          padding: 6px 14px;
           margin-left: 12px;
           margin-right: 12px;
 
           outline: none;
+          border-radius: $fia-button-radius;
+          box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
-          color: $fia-third-color;
-          font-size: .5em;
+          color: black;
+          font-size: .6em;
           font-family: Nunito-ExtraBold, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
           line-height: 14px;
 
+          &:link, &:visited {
+            transition: all 200ms ease-in-out;
+            position: relative;
+          }
+
           &:hover {
-            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(160,160,160, .3);
+          }
+
+          &:active {
+            transform: translateY(0px);
+            box-shadow: 0 0 2px rgba(160,160,160, .3);
           }
 
           @include to-md {
@@ -426,10 +439,10 @@
 
 ::ng-deep .light-theme {
   .fia-header-login-btn {
-    background-color: $fia-light-background-color !important;
+    color: white !important;
 
     &:hover {
-      color: black;
+      color: white !important;
     }
   }
 

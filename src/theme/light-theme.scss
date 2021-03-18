@@ -351,9 +351,18 @@
 
   .fia-button {
     color: white !important;
+    box-shadow: 0 4px 5px rgba(160,160,160, 0) !important;
 
     &:hover {
       color: white !important;
+
+      transform: translateY(-1px);
+      box-shadow: 0 3px 6px rgba(160,160,160, .3) !important;
+    }
+
+    &:active {
+      transform: translateY(0px);
+      box-shadow: 0 0 2px rgba(160,160,160, .3) !important;
     }
   }
 
