@@ -26,5 +26,6 @@
       <hr class="fia-vertical-line-2">
       <app-post-link [post]="lesson"></app-post-link>
     </div>
+    <mat-spinner class="fia-loading-spinner" *ngIf="lessonsVisible && examLessons === undefined"></mat-spinner>
   </div>
 </div>
