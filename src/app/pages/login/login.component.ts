@@ -6,6 +6,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { AuthUser } from '../../models/user';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-login',
@@ -22,9 +23,16 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private authService: AuthService,
               private headerService: HeaderService,
+              private loadService: LoadingService,
               private snackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
+    if (authService.isAuthenticated) {
+      this.loadService.startLoading();
+      this.loading = true;
+      router.navigate(['dashboard']);
+    }
+
     this.headerService.setPageTitle('Login');
     this.username = new FormControl('test', {
       validators: [Validators.required, Validators.minLength(4)],
