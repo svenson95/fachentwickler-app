@@ -32,10 +32,24 @@
         cursor: pointer;
         line-height: initial;
 
+        box-shadow: 0 4px 5px rgba(0,0,0, 0);
+        transition: all 200ms ease-in-out;
+        position: relative;
+
         &:not(.disabled) {
           &:hover {
             color: $fia-secondary-color;
           }
+        }
+
+        &:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 3px 6px rgba(0,0,0, .4);
+        }
+
+        &:active {
+          transform: translateY(0px);
+          box-shadow: 0 0 2px rgba(0,0,0, .4);
         }
       }
 
@@ -80,5 +94,30 @@
         }
       }
     }
+  }
+}
+
+/* LIGHT THEME */
+::ng-deep .light-theme {
+
+  .fia-button-wrapper {
+
+    .fia-previous-week-btn,
+    .fia-next-week-btn {
+      box-shadow: 0 4px 5px rgba(160,160,160, 0) !important;
+
+      &:hover {
+        color: $fia-primary-color !important;
+
+        transform: translateY(-1px);
+        box-shadow: 0 3px 6px rgba(160,160,160, .3) !important;
+      }
+
+      &:active {
+        transform: translateY(0px);
+        box-shadow: 0 0 2px rgba(160,160,160, .3) !important;
+      }
+    }
+
   }
 }

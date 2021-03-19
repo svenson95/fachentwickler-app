@@ -20,28 +20,35 @@
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
-    height: 100px;
     position: relative;
     overflow: hidden;
 
+    @include from-xs {
+      height: 100px;
+    }
+
     .fia-app-icon {
-      width: 300px;
-      height: 300px;
+      width: 256px;
+      height: 256px;
       flex-shrink: 0;
       position: absolute;
       top: 10px;
 
       @include to-xs {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         top: 0;
-        left: 10px;
+        left: -50px;
       }
 
       &::ng-deep path {
         fill: $fia-secondary-color;
         stroke: $fia-secondary-color;
-        opacity: 0.2;
+        opacity: .2;
+
+        @include to-xs {
+          opacity: .1;
+        }
       }
     }
 
@@ -72,7 +79,11 @@
       }
 
       @include to-xs {
+        font-size: .8em;
+        letter-spacing: 1px;
         line-height: 15px;
+
+        margin: 0;
       }
 
       .grey-1 {
