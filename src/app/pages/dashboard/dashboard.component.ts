@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../services/header.service';
-import { LF1_POSTS } from '../../../data/posts/lf-1';
-import { subjectsData } from '../../../data/data-subjects';
 import { AuthService } from '../../services/auth/auth.service';
 import { User } from '../../models/user';
 import { DataService } from '../../services/data/data.service';
@@ -21,12 +19,14 @@ export class DashboardComponent implements OnInit {
   scheduleSubstitutions = false;
 
   examplePost = {
-    description: subjectsData[0].topics[0].links[0].description,
-    postId: subjectsData[0].topics[0].links[0].postId,
-    subject: LF1_POSTS[1].subject,
-    title: subjectsData[0].topics[0].links[0].title,
-    type: subjectsData[0].topics[0].links[0].type,
-    url: LF1_POSTS[1].url
+    "url": "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
+    "title": "Wie entsteht aus einem Bedürfnis der Bedarf?",
+    "description": "Mitschrift vom 28.10.2019",
+    "subject": "lf-1",
+    "type": "article",
+    "lessonDate": "2019-10-28",
+    "lastUpdate": "2021-01-06",
+    "schoolWeek": "4"
   };
 
   constructor(private headerService: HeaderService,

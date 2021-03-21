@@ -1,17 +1,16 @@
 import { ElementType } from './element-type';
 
 export interface Post {
+  _id?: string;
+  url: string;
   title?: string;
   description?: string;
-  url: string;
-  topic: string;
   subject: string;
+  type: 'article' | 'tasks' | 'index-cards' | 'quiz' | 'test';
   lessonDate: string;
   lastUpdate: string;
   schoolWeek: string;
   elements: PostElement[];
-  postId?: string;
-  _id?: string;
 }
 
 export interface PostElement {

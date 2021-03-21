@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const LF4_2_POSTS: Post[] = [
     {
         "url": "einfache_it_systeme/potentielle_energie",
-        "topic": "Einfache IT-Systeme",
+        "title": "Potentielle Energie (ENTWURF)",
+        "description": "Aufgaben vom 13.08.2019",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2019-08-13",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "1",
@@ -21,8 +23,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/maßeinheiten_in_der_elektrotechnik",
-        "topic": "Einfache IT-Systeme",
+        "title": "Maßeinheiten in der Elektrotechnik (ENTWURF)",
+        "description": "Aufgaben vom 14.08.2019",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2019-08-14",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "1",
@@ -39,8 +43,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/aufbau_und_funktionsweise_eines_stromkreises",
-        "topic": "Einfache IT-Systeme",
+        "title": "Aufbau und Funktionsweise eines Stromkreises (ENTWURF)",
+        "description": "Aufgaben vom 15.08.2019",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2019-08-15",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "1",
@@ -57,8 +63,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/pc_technik",
-        "topic": "Einfache IT-Systeme",
+        "title": "PC-Technik",
+        "description": "Aufgaben vom 05.09.2019",
         "subject": "lf-4-2",
+        "type": "tasks",
         "lessonDate": "2019-09-05",
         "lastUpdate": "2020-05-14",
         "schoolWeek": "2",
@@ -111,8 +119,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/begriffe_der_informationstechnik",
-        "topic": "Einfache IT-Systeme",
+        "title": "Begriffe der Informationstechnik",
+        "description": "Mitschrift vom 19.09.2019",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2019-09-23",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "3",
@@ -319,8 +329,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/zahlensysteme",
-        "topic": "Einfache IT-Systeme",
+        "title": "Zahlensysteme",
+        "description": "Mitschrift vom 28.10.2019",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2019-10-28",
         "lastUpdate": "2020-09-03",
         "schoolWeek": "4",
@@ -1058,8 +1070,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/raid_grundlagen",
-        "topic": "Einfache IT-Systeme",
+        "title": "RAID Grundlagen",
+        "description": "Mitschrift vom 13.02.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-02-13",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "8",
@@ -1382,8 +1396,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "boolsche_algebra/informationen_und_funktionen",
-        "topic": "Boolsche Algebra",
+        "title": "Informationen & Funktionen",
+        "description": "Mitschrift vom 12.02.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-02-12",
         "lastUpdate": "2020-05-14",
         "schoolWeek": "8",
@@ -1619,8 +1635,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra",
-        "topic": "Boolsche Algebra",
+        "title": "Aufgaben Gesetze der Boolschen Algebra",
+        "description": "Aufgaben vom 12.02.2020",
         "subject": "lf-4-2",
+        "type": "tasks",
         "lessonDate": "2020-02-12",
         "lastUpdate": "2020-05-15",
         "schoolWeek": "8",
@@ -1741,8 +1759,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "zahlensysteme_informationstechnische_begriffe_und_hardware_basics/test",
-        "topic": "test",
+        "title": "Zahlensysteme, Informationstechnische Begriffe & Hardware Basics",
+        "description": "Test vom 30.10.2019",
         "subject": "lf-4-2",
+        "type": "test",
         "lessonDate": "2019-10-30",
         "lastUpdate": "2020-05-15",
         "schoolWeek": "4",
@@ -1763,8 +1783,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/aufloesungsberechnung",
-        "topic": "Einfache IT-Systeme",
+        "title": "Auflösungsberechnung",
+        "description": "Mitschrift vom 18.05.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-05-18",
         "lastUpdate": "2020-08-15",
         "schoolWeek": "12",
@@ -1982,8 +2004,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/flash_speicher",
-        "topic": "Einfache IT-Systeme",
+        "title": "Flash-Speicher",
+        "description": "Mitschrift vom 18.05.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-05-18",
         "lastUpdate": "2020-08-17",
         "schoolWeek": "12",
@@ -2289,8 +2313,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/dateisysteme",
-        "topic": "Einfache IT-Systeme",
+        "title": "Dateisysteme",
+        "description": "Mitschrift vom 19.05.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-05-19",
         "lastUpdate": "2020-08-17",
         "schoolWeek": "12",
@@ -2513,8 +2539,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/fat_file_allocation_table",
-        "topic": "Einfache IT-Systeme",
+        "title": "FAT - File Allocation Table",
+        "description": "Mitschrift vom 19.05.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-05-19",
         "lastUpdate": "2020-08-17",
         "schoolWeek": "12",
@@ -2844,8 +2872,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/ergonomie_am_arbeitsplatz",
-        "topic": "Einfache IT-Systeme",
+        "title": "Ergonomie am Arbeitsplatz",
+        "description": "Mitschrift vom 20.05.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-05-20",
         "lastUpdate": "2020-08-17",
         "schoolWeek": "12",
@@ -3251,8 +3281,10 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/lan_grundlagen",
-        "topic": "Einfache IT-Systeme",
+        "title": "LAN Grundlagen",
+        "description": "Mitschrift vom 21.05.2020",
         "subject": "lf-4-2",
+        "type": "article",
         "lessonDate": "2020-05-21",
         "lastUpdate": "2020-08-18",
         "schoolWeek": "12",
@@ -3471,77 +3503,4 @@ export const LF4_2_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "lf-4-2",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

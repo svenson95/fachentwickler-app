@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const LF2_POSTS: Post[] = [
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
-        "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "title": "Aufgaben des Projektmanagements",
+        "description": "Mitschrift vom 03.09.2019",
         "subject": "lf-2",
+        "type": "article",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2020-10-29",
         "schoolWeek": "2",
@@ -61,8 +63,10 @@ export const LF2_POSTS: Post[] = [
     },
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
-        "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "title": "Projektbegriff",
+        "description": "Mitschrift vom 03.09.2019",
         "subject": "lf-2",
+        "type": "article",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2020-05-07",
         "schoolWeek": "2",
@@ -119,7 +123,10 @@ export const LF2_POSTS: Post[] = [
     },
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/management_systeme",
-        "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "title": "Management-Systeme",
+        "description": "Mitschrift vom 22.09.2019",
+        "subject": "lf-2",
+        "type": "article",
         "subject": "lf-2",
         "lessonDate": "2020-09-22",
         "lastUpdate": "2020-11-04",
@@ -381,7 +388,10 @@ export const LF2_POSTS: Post[] = [
     },
     {
         "url": "geschaeftsprozesse_und_organigramm/test",
-        "topic": "test",
+        "title": "Leistungskontrolle - Geschäftsprozesse & Organigramm",
+        "description": "Test vom 02.09.2020",
+        "subject": "lf-2",
+        "type": "test",
         "subject": "lf-2",
         "lessonDate": "2020-09-02",
         "lastUpdate": "2020-10-29",
@@ -496,74 +506,4 @@ export const LF2_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "lf-2",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

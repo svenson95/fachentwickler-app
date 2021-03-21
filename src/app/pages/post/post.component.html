@@ -18,5 +18,5 @@
     </p>
   </mat-card>
 
-  <app-lesson-footer [post]="post" *ngIf="authService.isAuthenticated && post && post.elements !== undefined"></app-lesson-footer>
+  <app-lesson-footer [postId]="post._id" *ngIf="authService.isAuthenticated && post"></app-lesson-footer>
 </div>

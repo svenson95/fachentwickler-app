@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const WISO_POSTS: Post[] = [
     {
         "url": "berufsbildung_und_arbeitswelt/geschichte_der_beruflichen_ausbildung",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Geschichte der beruflichen Ausbildung (ENTWURF)",
+        "description": "Thema vom 16.08.2019",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2019-08-16",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "1",
@@ -21,8 +23,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Ausbildungsvertrag & Pflichten während der Ausbildung",
+        "description": "Thema vom 19.11.2019",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2019-11-19",
         "lastUpdate": "2020-05-28",
         "schoolWeek": "5",
@@ -147,8 +151,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/formen_der_berufsausbildung",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Formen der Berufsbildung",
+        "description": "Thema vom 11.01.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-01-16",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "7",
@@ -254,8 +260,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Lebenslanges Lernen & Einflüsse auf die Arbeitsleistung",
+        "description": "Aufgaben vom 13.01.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-01-13",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "7",
@@ -365,8 +373,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_blaetter",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Testvorbereitung - Zusammenfassung (Blätter)",
+        "description": "Vorbereitung vom 13.01.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-01-13",
         "lastUpdate": "2020-06-20",
         "schoolWeek": "7",
@@ -389,8 +399,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_und_arbeitsvertraege",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Arbeitsrecht & Arbeitsverträge",
+        "description": "Mitschrift vom 21.09.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-09-21",
         "lastUpdate": "2020-10-03",
         "schoolWeek": "3",
@@ -435,8 +447,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/arbeitsvertrag_vorraussetzungen_form_und_inhalt",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Arbeitsvertrag - Vorraussetzungen, Form und Inhalt",
+        "description": "Mitschrift vom 28.10.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-10-28",
         "lastUpdate": "2020-11-05",
         "schoolWeek": "17",
@@ -502,8 +516,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem",
-        "topic": "Versicherungen & Sozialabgaben",
+        "title": "Sozialversicherungssystem",
+        "description": "Mitschrift vom 16.01.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-01-16",
         "lastUpdate": "2020-11-04",
         "schoolWeek": "7",
@@ -560,8 +576,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/zweige_der_gesetzlichen_krankenversicherung",
-        "topic": "Versicherungen & Sozialabgaben",
+        "title": "Zweige der Gesetzlichen Krankenversicherung (Entwurf)",
+        "description": "Mitschrift vom 13.02.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-02-13",
         "lastUpdate": "2020-10-19",
         "schoolWeek": "8",
@@ -578,8 +596,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/rentenversicherung_uebungen",
-        "topic": "Versicherungen & Sozialabgaben",
+        "title": "Rentenversicherung - Übungen",
+        "description": "Mitschrift vom 25.03.2020",
         "subject": "wiso",
+        "type": "tasks",
         "lessonDate": "2020-03-25",
         "lastUpdate": "2020-03-28",
         "schoolWeek": "10",
@@ -735,8 +755,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/wirtschaftliche_aspekte_und_grundsaetze_der_lohnberechnung",
-        "topic": "Versicherungen & Sozialabgaben",
+        "title": "Wirtschaftliche Aspekte & Grundsätze der Lohnberechnung",
+        "description": "Aufgaben vom 18.05.2020",
         "subject": "wiso",
+        "type": "tasks",
         "lessonDate": "2020-05-18",
         "lastUpdate": "2020-06-25",
         "schoolWeek": "12",
@@ -909,8 +931,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/lohnberechnung_uebung",
-        "topic": "Versicherungen & Sozialabgaben",
+        "title": "Lohnberechnung - Übung",
+        "description": "Aufgaben vom 01.09.2020",
         "subject": "wiso",
+        "type": "tasks",
         "lessonDate": "2020-09-01",
         "lastUpdate": "2020-09-26",
         "schoolWeek": "15",
@@ -1046,8 +1070,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/test",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Berufsbildung und Arbeitswelt",
+        "description": "Test vom 14.01.2020",
         "subject": "wiso",
+        "type": "test",
         "lessonDate": "2020-01-14",
         "lastUpdate": "2020-11-01",
         "schoolWeek": "7",
@@ -1160,8 +1186,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/test",
-        "topic": "Versicherungen & Sozialabgaben",
+        "title": "Versicherungen und Sozialabgaben",
+        "description": "Test vom 28.10.2020",
         "subject": "wiso",
+        "type": "test",
         "lessonDate": "2020-10-28",
         "lastUpdate": "2020-11-01",
         "schoolWeek": "17",
@@ -1324,8 +1352,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/vertragsaufhebung",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Vertragsaufhebung (ENTWURF)",
+        "description": "Mitschrift vom 16.11.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-11-16",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "18",
@@ -1342,8 +1372,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/kündigungsarten",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Kündigungsarten (ENTWURF)",
+        "description": "Mitschrift vom 17.11.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-11-17",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "18",
@@ -1360,8 +1392,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_1",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Arbeitsrecht (1) (ENTWURF)",
+        "description": "Mitschrift vom 19.11.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-11-19",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "18",
@@ -1378,8 +1412,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_2",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Arbeitsrecht (2) (ENTWURF)",
+        "description": "Mitschrift vom 07.12.2020",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2020-12-07",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "19",
@@ -1396,8 +1432,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "arbeitsrecht/test",
-        "topic": "test",
+        "title": "Leistungskontrolle - Arbeitsrecht (Entwurf)",
+        "description": "Test vom 08.12.2020",
         "subject": "wiso",
+        "type": "test",
         "lessonDate": "2020-12-08",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "19",
@@ -1413,81 +1451,87 @@ export const WISO_POSTS: Post[] = [
         ]
     },
     {
-      "url": "versicherungen_und_sozialabgaben/produktpolitik",
-      "topic": "Versicherungen & Sozialabgaben",
-      "subject": "wiso",
-      "lessonDate": "2021-01-11",
-      "lastUpdate": "2021-01-12",
-      "schoolWeek": "20",
-      "elements": [
-        {
-          "type": "title",
-          "content": "Ausgangssituation"
-        },
-        {
-          "type": "text",
-          "content": "Die Geschäftsführung der Firma erhält Ende 2014 die Verkaufszahlen ihrer Produkte. Einige Programme verkaufen sich gleichbleibend gut, andere weisen sinkende Absatzzahlen auf. Das im Jahr 2011 auf den Markt gebrachte Logistikprogramm LOGSOFT weist folgenden Lebenszyklus auf:"
-        },
-        {
-          "type": "image",
-          "content": "http://159.65.105.150:3000/images/"
-        },
-        {
-          "type": "line",
-          "content": "<hr/>"
-        },
-        {
-          "type": "title",
-          "content": "Aufgaben"
-        },
-        {
-          "type": "text",
-          "content": "a) In welcher Lebenszyklusphase befindet sich das dargestellte Produkt im Jahr 2014? Beschreiben Sie die Phase genauer."
-        },
-        {
-          "type": "text",
-          "content": "..."
-        },
-        {
-          "type": "text",
-          "content": "b) Die Produkte des Kunden wurden im Portfolio der Boston Consulting Group abgebildet. Die Produkte werden jeweils mit Nummern angegeben. Das Portfolio stellt sich wie folgt dar:"
-        },
-        {
-          "type": "image",
-          "content": "http://159.65.105.150:3000/images/"
-        },
-        {
-          "type": "text",
-          "content": "In der Darstellung fehlt lediglich das Logistikprogramm LOGSOFT."
-        },
-        {
-          "type": "text",
-          "content": "..."
-        },
-      ]
+        "url": "versicherungen_und_sozialabgaben/produktpolitik",
+        "title": "Produktpolitik (ENTWURF)",
+        "description": "Aufgaben vom 11.01.2021",
+        "subject": "wiso",
+        "type": "tasks",
+        "lessonDate": "2021-01-11",
+        "lastUpdate": "2021-01-12",
+        "schoolWeek": "20",
+        "elements": [
+            {
+              "type": "title",
+              "content": "Ausgangssituation"
+            },
+            {
+              "type": "text",
+              "content": "Die Geschäftsführung der Firma erhält Ende 2014 die Verkaufszahlen ihrer Produkte. Einige Programme verkaufen sich gleichbleibend gut, andere weisen sinkende Absatzzahlen auf. Das im Jahr 2011 auf den Markt gebrachte Logistikprogramm LOGSOFT weist folgenden Lebenszyklus auf:"
+            },
+            {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+              "type": "line",
+              "content": "<hr/>"
+            },
+            {
+              "type": "title",
+              "content": "Aufgaben"
+            },
+            {
+              "type": "text",
+              "content": "a) In welcher Lebenszyklusphase befindet sich das dargestellte Produkt im Jahr 2014? Beschreiben Sie die Phase genauer."
+            },
+            {
+              "type": "text",
+              "content": "..."
+            },
+            {
+              "type": "text",
+              "content": "b) Die Produkte des Kunden wurden im Portfolio der Boston Consulting Group abgebildet. Die Produkte werden jeweils mit Nummern angegeben. Das Portfolio stellt sich wie folgt dar:"
+            },
+            {
+              "type": "image",
+              "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+              "type": "text",
+              "content": "In der Darstellung fehlt lediglich das Logistikprogramm LOGSOFT."
+            },
+            {
+              "type": "text",
+              "content": "..."
+            }
+        ]
     },
     {
-      "url": "berufsbildung_und_arbeitswelt/lohnarten",
-      "topic": "Berufsbildung und Arbeitswelt",
-      "subject": "wiso",
-      "lessonDate": "2021-02-08",
-      "lastUpdate": "2021-02-08",
-      "schoolWeek": "21",
-      "elements": [
-        {
-          "type": "title",
-          "content": "Definition"
-        },
-        {
-          "type": "text",
-          "content": "Zeitlohn, Leistungslohn und Akkordlohn ..."
-        }
-      ]
+        "url": "berufsbildung_und_arbeitswelt/lohnarten",
+        "title": "Lohnarten (ENTWURF)",
+        "description": "Aufgaben vom 08.02.2021",
+        "subject": "wiso",
+        "type": "article",
+        "lessonDate": "2021-02-08",
+        "lastUpdate": "2021-02-08",
+        "schoolWeek": "21",
+        "elements": [
+            {
+              "type": "title",
+              "content": "Definition"
+            },
+            {
+              "type": "text",
+              "content": "Zeitlohn, Leistungslohn und Akkordlohn ..."
+            }
+        ]
     },
     {
         "url": "berufsbildung_und_arbeitswelt/lohnberechnung",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Lohnberechnung (ENTWURF)",
+        "description": "Aufgaben vom 11.02.2021",
         "subject": "wiso",
+        "type": "article",
         "lessonDate": "2021-02-11",
         "lastUpdate": "2021-02-11",
         "schoolWeek": "21",
@@ -1504,8 +1548,10 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/lohnberechnung_und_sozialversicherungen",
-        "topic": "Berufsbildung und Arbeitswelt",
+        "title": "Lohnberechnung & Sozialversicherungen",
+        "description": "Aufgaben vom 04.03.2021",
         "subject": "wiso",
+        "type": "tasks",
         "lessonDate": "2021-03-04",
         "lastUpdate": "2021-03-06",
         "schoolWeek": "22",

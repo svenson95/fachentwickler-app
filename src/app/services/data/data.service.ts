@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Subject, SubjectPost } from '../../models/subject';
+import { Subject } from '../../models/subject';
 import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 
 import { Post } from '../../models/post';
-import { IndexCardsData } from '../../models/index-cards';
-import { QuizData } from '../../models/quiz';
+import { IndexCards } from '../../models/index-cards';
+import { Quiz } from '../../models/quiz';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 import { ExamDate } from '../../models/exam-date';
@@ -29,7 +29,7 @@ export class DataService {
 
   // Subject component - GET subject
   getSubject(subjectUrl: string): Observable<Subject> {
-    return this.httpClient.get<Subject>(`${environment.baseUrl}/subjects/${subjectUrl}`)
+    return this.httpClient.get<Subject>(`${environment.baseUrl}/subjects/${subjectUrl}/populated`)
       .pipe(map((response) => {
         // console.log('response GET subject', response);
         return response;
@@ -37,8 +37,8 @@ export class DataService {
   }
 
   // Subject component - GET subject-post
-  getSubjectPost(postId: string): Observable<SubjectPost> {
-    return this.httpClient.get<SubjectPost>(`${environment.baseUrl}/subjects/post/${postId}`)
+  getSubjectPost(postId: string): Observable<Post> {
+    return this.httpClient.get<Post>(`${environment.baseUrl}/posts/${postId}`)
       .pipe(map((response) => {
         // console.log('response GET subjects/post', response);
         return response;
@@ -46,8 +46,8 @@ export class DataService {
   }
 
   // Exam-Item component - GET subject-posts
-  getSubjectPosts(postIdsString: string): Observable<SubjectPost[]> {
-    return this.httpClient.get<SubjectPost[]>(`${environment.baseUrl}/subjects/posts/${postIdsString}`)
+  getSubjectPosts(postIdsString: string): Observable<Post[]> {
+    return this.httpClient.get<Post[]>(`${environment.baseUrl}/posts/multiple/${postIdsString}`)
       .pipe(map((response) => {
         // console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
         return response;
@@ -58,7 +58,7 @@ export class DataService {
   getPost(postUrl: string): Observable<Post> {
     return this.httpClient.get<Post>(`${environment.baseUrl}/posts/${postUrl}`)
       .pipe(map((response) => {
-        console.log('response GET post', response);
+        // console.log('response GET post', response);
         return response;
       }));
   }
@@ -86,8 +86,8 @@ export class DataService {
   }
 
   // Quiz component - GET quiz
-  getQuiz(postUrl: string): Observable<QuizData> {
-    return this.httpClient.get<QuizData>(`${environment.baseUrl}/quiz/${postUrl}`)
+  getQuiz(url: string): Observable<Quiz> {
+    return this.httpClient.get<Quiz>(`${environment.baseUrl}/quiz/${url}`)
       .pipe(map((response) => {
         // console.log('response GET quiz', response);
         return response;
@@ -95,8 +95,8 @@ export class DataService {
   }
 
   // Index Cards component - GET index-cards
-  getIndexCards(postUrl: string): Observable<IndexCardsData> {
-    return this.httpClient.get<IndexCardsData>(`${environment.baseUrl}/index-cards/${postUrl}`)
+  getIndexCards(url: string): Observable<IndexCards> {
+    return this.httpClient.get<IndexCards>(`${environment.baseUrl}/index-cards/${url}`)
       .pipe(map((response) => {
         // console.log('response GET index-cards', response);
         return response;
@@ -114,7 +114,7 @@ export class DataService {
 
   // Dashboard component - GET posts/school-week/:number
   getSchoolWeek(week: number): Observable<SchoolWeek> {
-    return this.httpClient.get<SchoolWeek>(`${environment.baseUrl}/posts/school-week/` + week)
+    return this.httpClient.get<SchoolWeek>(`${environment.baseUrl}/school-week/number/` + week)
       .pipe(map((response) => {
         // console.log('response GET posts/school-week/:number', response);
         return response;
@@ -123,7 +123,7 @@ export class DataService {
 
   // Curriculum component - GET all school-week cards
   getAllWeeks(): Observable<SchoolWeek[]> {
-    return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/posts/all-school-weeks`)
+    return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/school-week/all`)
       .pipe(map((response) => {
         // console.log('response GET posts/all-school-weeks', response);
         return response;

@@ -1,9 +1,11 @@
-import {SubjectPost} from './subject';
 
 export interface Quiz {
+  _id?: string;
   url: string;
-  topic: string;
+  title: string;
+  description: string;
   subject: string;
+  type: string;
   lessonDate: string;
   lastUpdate: string;
   schoolWeek: string;
@@ -15,9 +17,4 @@ interface Question {
   answer: number;
   choice1: string;
   choice2: string;
-}
-
-export interface QuizData {
-  content: Quiz;
-  details: SubjectPost;
 }

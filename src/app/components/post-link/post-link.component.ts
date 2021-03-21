@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
-import { SubjectPost } from '../../models/subject';
+import { Quiz } from '../../models/quiz';
+import { IndexCards } from '../../models/index-cards';
 import { SchoolWeekPost } from '../../models/school-week';
 
 @Component({
@@ -13,7 +14,7 @@ import { SchoolWeekPost } from '../../models/school-week';
 })
 export class PostLinkComponent implements OnInit {
 
-  @Input('post') post: Post | SubjectPost | SchoolWeekPost;
+  @Input('post') post: Post | Quiz | IndexCards | SchoolWeekPost;
   @Input('title') title;
 
   constructor(private authService: AuthService,

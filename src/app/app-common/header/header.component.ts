@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent, Subscription } from 'rxjs';
 import { debounceTime, delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
@@ -27,6 +28,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() isMobile;
   @Input('sidenav') sidenav;
   @ViewChild('searchInput') searchInput: ElementRef;
+  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   constructor(public router: Router,
               public headerService: HeaderService,

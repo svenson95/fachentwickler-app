@@ -1,7 +1,7 @@
 <div class="fia-page">
 
-  <mat-spinner class="fia-loading-spinner" *ngIf="indexCardsContent === undefined"></mat-spinner>
-  <app-indexcards-card [indexCardsContent]="indexCardsContent" [indexCardsDetails]="indexCardsDetails" *ngIf="indexCardsContent !== undefined"></app-indexcards-card>
-  <app-lesson-footer [post]="indexCardsDetails" *ngIf="indexCardsDetails !== undefined"></app-lesson-footer>
+  <mat-spinner class="fia-loading-spinner" *ngIf="indexCards === undefined"></mat-spinner>
+  <app-indexcards-card [indexCards]="indexCards" *ngIf="indexCards !== undefined"></app-indexcards-card>
+  <app-lesson-footer [postId]="indexCards._id" *ngIf="indexCards !== undefined"></app-lesson-footer>
 
 </div>

@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const WP_POSTS: Post[] = [
   {
     "url": "vernetzte_steuerungssysteme/grundlagen_speicherprogrammierte_steuerungen",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "Grundlagen - Speicherprogrammierte Steuerungen",
+    "description": "Mitschrift vom 11.08.2020",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2020-08-11",
     "lastUpdate": "2020-12-16",
     "schoolWeek": "5",
@@ -147,8 +149,10 @@ export const WP_POSTS: Post[] = [
   },
   {
     "url": "vernetzte_steuerungssysteme/aufbau_sps_programm_und_grafcet",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "Aufbau SPS-Programm & GRAFCET",
+    "description": "Mitschrift vom 12.08.2020",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2020-08-12",
     "lastUpdate": "2020-10-31",
     "schoolWeek": "6",
@@ -313,8 +317,10 @@ export const WP_POSTS: Post[] = [
   },
   {
     "url": "vernetzte_steuerungssysteme/sensoren_und_schrittketten_aufbau_und_befehle",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "Sensoren & Schrittketten - Aufbau und Befehle",
+    "description": "Mitschrift vom 02.09.2020",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2020-09-02",
     "lastUpdate": "2020-09-27",
     "schoolWeek": "2",
@@ -360,8 +366,10 @@ export const WP_POSTS: Post[] = [
   },
   {
     "url": "vernetzte_steuerungssysteme/grafcet_ablaufsteuerungen_erstellen",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "GRAFCET Ablaufsteuerungen erstellen",
+    "description": "Mitschrift vom 23.09.2020",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2020-09-23",
     "lastUpdate": "2020-10-16",
     "schoolWeek": "16",
@@ -411,8 +419,10 @@ export const WP_POSTS: Post[] = [
   },
   {
     "url": "vernetzte_steuerungssysteme/grafcet_ablaufsteuerung_uebung",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "GRAFCET Ablaufsteuerung - Übung",
+    "description": "Mitschrift vom 28.10.2020",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2020-10-28",
     "lastUpdate": "2020-12-07",
     "schoolWeek": "17",
@@ -494,8 +504,10 @@ export const WP_POSTS: Post[] = [
   },
   {
     "url": "vernetzte_steuerungssysteme/behaeltersteuerung_uebung",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "Behältersteuerung - Übung",
+    "description": "Mitschrift vom 13.01.2021",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2021-01-13",
     "lastUpdate": "2021-02-08",
     "schoolWeek": "20",
@@ -512,8 +524,10 @@ export const WP_POSTS: Post[] = [
   },
   {
     "url": "vernetzte_steuerungssysteme/digitaltechnik",
-    "topic": "Vernetzte Steuerungssysteme",
+    "title": "Digitaltechnik (ENTWURF)",
+    "description": "Mitschrift vom 10.02.2021",
     "subject": "wp",
+    "type": "article",
     "lessonDate": "2021-02-10",
     "lastUpdate": "2021-02-26",
     "schoolWeek": "21",
@@ -530,8 +544,10 @@ export const WP_POSTS: Post[] = [
   },
   {
       "url": "vernetzte_steuerungssysteme/digitaltechnik_aufgaben",
-      "topic": "Vernetzte Steuerungssysteme",
+      "title": "Digitaltechnik - Aufgaben",
+      "description": "Mitschrift vom 02.03.2021",
       "subject": "wp",
+      "type": "tasks",
       "lessonDate": "2021-03-02",
       "lastUpdate": "2021-03-14",
       "schoolWeek": "22",
@@ -873,8 +889,10 @@ export const WP_POSTS: Post[] = [
   },
   {
       "url": "vernetzte_steuerungssysteme/logische_schaltungen_und_steuerlogik",
-      "topic": "Vernetzte Steuerungssysteme",
+      "title": "Logische Schaltungen und Steuerlogik (ENTWURF)",
+      "description": "Mitschrift vom 03.03.2021",
       "subject": "wp",
+      "type": "article",
       "lessonDate": "2021-03-03",
       "lastUpdate": "2021-03-14",
       "schoolWeek": "22",
@@ -891,8 +909,10 @@ export const WP_POSTS: Post[] = [
   },
   {
       "url": "vernetzte_steuerungssysteme/steuerlogik_aufgabe_ersatzstromversorgung",
-      "topic": "Vernetzte Steuerungssysteme",
+      "title": "Steuerlogik Aufgabe - Ersatzstromversorgung",
+      "description": "Aufgabe vom 03.03.2021",
       "subject": "wp",
+      "type": "tasks",
       "lessonDate": "2021-03-03",
       "lastUpdate": "2021-03-18",
       "schoolWeek": "22",
@@ -1252,78 +1272,4 @@ export const WP_POSTS: Post[] = [
           }
       ]
   },
-
-
-
-
-
-
-
-
-  {
-    "url": "test",
-    "topic": "test",
-    "subject": "wp",
-    "lessonDate": "2020-01-01",
-    "lastUpdate": "2020-01-01",
-    "schoolWeek": "15",
-    "elements": [
-      {
-        "type": "title",
-        "content": "test"
-      },
-      {
-        "type": "subtitle",
-        "content": "test"
-      },
-      {
-        "type": "text",
-        "content": "test"
-      },
-      {
-        "type": "hint",
-        "content": "test"
-      },
-      {
-        "type": "image",
-        "content": "http://159.65.105.150:3000/images/"
-      },
-      {
-        "type": "line",
-        "content": "<hr/>"
-      },
-      {
-        "type": "code",
-        "language": "javascript",
-        "content": "test"
-      },
-      {
-        "type": "list",
-        "content": "test",
-        "list": [
-          "test",
-          "test",
-          {
-            "content": "test",
-            "sublist": [
-              "test",
-              "test"
-            ]
-          }
-        ]
-      },
-      {
-        "type": "table",
-        "content": "test",
-        "rows": [
-          {
-            "type": "default",
-            "columns": [
-              { "align": "middle", "content": "test" }
-            ]
-          }
-        ]
-      }
-    ]
-  }
 ];

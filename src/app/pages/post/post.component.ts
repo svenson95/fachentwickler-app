@@ -25,7 +25,8 @@ export class PostComponent implements OnInit {
       subjects.find(sub => sub.url === this.router.url.substring(0, this.router.url.indexOf('/', 2))
     )?.title);
 
-    this.dataService.getPost(router.url).subscribe(
+    const postUrl = router.url.substr(router.url.indexOf('/', 2) + 1, router.url.length);
+    this.dataService.getPost(postUrl).subscribe(
       (data) => {
         this.post = data;
       },

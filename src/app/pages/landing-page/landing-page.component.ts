@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
 import { Quiz } from '../../models/quiz';
-import { SubjectPost } from '../../models/subject';
 import { IndexCards } from '../../models/index-cards';
 
 @Component({
@@ -30,7 +29,7 @@ export class LandingPageComponent implements OnInit {
       lessonDate: '2020-12-09',
       postId: '5fdfdbb88c8c2a5e54a4a40e',
       subject: 'lf-6',
-      title: 'Planung von Relationalen Datenbanken (ENTWURF)',
+      title: 'Planung von Relationalen Datenbanken',
       type: 'article',
       url: 'entwickeln_und_bereitstellen_von_anwendungssystemen/planung_von_relationalen_datenbanken'
     }
@@ -48,11 +47,8 @@ export class LandingPageComponent implements OnInit {
     ]
   };
 
-  testQuizContent: Quiz;
-  testQuizDetails: SubjectPost;
-
-  testIndexcardsContent: IndexCards;
-  testIndexcardsDetails: SubjectPost;
+  testQuiz: Quiz;
+  testIndexcards: IndexCards;
 
   constructor(private headerService: HeaderService,
               private dataService: DataService
@@ -65,20 +61,18 @@ export class LandingPageComponent implements OnInit {
   }
 
   loadTestData(): void {
-    this.dataService.getQuiz('lf-9/oeffentliche_netze_und_dienste/quiz-fuer-test/quiz').subscribe(
+    this.dataService.getQuiz('oeffentliche_netze_und_dienste/quiz-fuer-test').subscribe(
       (data) => {
-        this.testQuizContent = data.content;
-        this.testQuizDetails = data.details;
+        this.testQuiz = data;
       },
       (error) => {
         console.log('Error while GET quiz', error);
       }
     );
 
-    this.dataService.getIndexCards('lf-7/e_technik/kollisionsdomaene_duplexing/index-cards').subscribe(
+    this.dataService.getIndexCards('kollisionsdomaene_duplexing/karteikarten-fuer-test').subscribe(
       (data) => {
-        this.testIndexcardsContent = data.content;
-        this.testIndexcardsDetails = data.details;
+        this.testIndexcards = data;
       },
       (error) => {
         console.log('Error while GET index-cards', error);

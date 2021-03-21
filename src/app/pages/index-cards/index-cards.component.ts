@@ -4,7 +4,6 @@ import { subjects } from '../../../data/menu-items';
 import { DataService } from '../../services/data/data.service';
 import { Router } from '@angular/router';
 import { IndexCards } from '../../models/index-cards';
-import { SubjectPost } from '../../models/subject';
 
 @Component({
   selector: 'app-index-cards',
@@ -13,8 +12,7 @@ import { SubjectPost } from '../../models/subject';
 })
 export class IndexCardsComponent implements OnInit {
 
-  indexCardsContent: IndexCards;
-  indexCardsDetails: SubjectPost;
+  indexCards: IndexCards;
 
   constructor(private headerService: HeaderService,
               private dataService: DataService,
@@ -27,8 +25,7 @@ export class IndexCardsComponent implements OnInit {
     );
     this.dataService.getIndexCards(router.url).subscribe(
       (data) => {
-        this.indexCardsContent = data.content;
-        this.indexCardsDetails = data.details;
+        this.indexCards = data;
       },
       (error) => {
         console.log('Error while GET index-cards', error);

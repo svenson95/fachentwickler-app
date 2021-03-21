@@ -1,15 +1,15 @@
 <mat-card class="fia-card">
-  <p class="fia-card-title" *ngIf="quizContent !== undefined"
-     [innerHTML]="quizDetails.title"></p>
-  <p class="fia-card-description" *ngIf="quizContent !== undefined"
-     [innerHTML]="quizDetails.description"></p>
-  <mat-card-content class="fia-card-content" *ngIf="quizContent !== undefined">
+  <p class="fia-card-title" *ngIf="quiz !== undefined"
+     [innerHTML]="quiz.title"></p>
+  <p class="fia-card-description" *ngIf="quiz !== undefined"
+     [innerHTML]="quiz.description"></p>
+  <mat-card-content class="fia-card-content" *ngIf="quiz !== undefined">
     <div class="fia-quiz">
       <div class="fia-content-wrapper">
         <div class="quiz-details">
           <div class="quiz-level">
             <p class="key">Frage</p>
-            <p class="value">{{level+1}} von {{quizContent.questions.length}}</p>
+            <p class="value">{{level+1}} von {{quiz.questions.length}}</p>
           </div>
           <div class="quiz-wrong-answers">
             <p class="key">Fehler</p>
@@ -17,15 +17,15 @@
           </div>
         </div>
         <div class="quiz-question" *ngIf="!end">
-          <p class="label" [innerHTML]="quizContent.questions[level].question"></p>
+          <p class="label" [innerHTML]="quiz.questions[level].question"></p>
           <div class="fia-quiz-answers-wrapper" [class.is-checking-answer]="answer !== undefined">
-            <p class="fia-quiz-answer answer-1" [innerHTML]="quizContent.questions[level].choice1" (click)="checkAnswer(1)"
-               [class.correct]="answer === 1 && quizContent.questions[level].answer === 1"
-               [class.wrong]="answer === 1 && quizContent.questions[level].answer === 2"
+            <p class="fia-quiz-answer answer-1" [innerHTML]="quiz.questions[level].choice1" (click)="checkAnswer(1)"
+               [class.correct]="answer === 1 && quiz.questions[level].answer === 1"
+               [class.wrong]="answer === 1 && quiz.questions[level].answer === 2"
             ></p>
-            <p class="fia-quiz-answer answer-2" [innerHTML]="quizContent.questions[level].choice2" (click)="checkAnswer(2)"
-               [class.correct]="answer === 2 && quizContent.questions[level].answer === 2"
-               [class.wrong]="answer === 2 && quizContent.questions[level].answer === 1"
+            <p class="fia-quiz-answer answer-2" [innerHTML]="quiz.questions[level].choice2" (click)="checkAnswer(2)"
+               [class.correct]="answer === 2 && quiz.questions[level].answer === 2"
+               [class.wrong]="answer === 2 && quiz.questions[level].answer === 1"
             ></p>
           </div>
         </div>
@@ -50,7 +50,7 @@
       </div>
     </div>
   </mat-card-content>
-  <p class="fia-post-last-update" *ngIf="quizContent !== undefined">
-    Letzte Aktualisierung: {{quizContent.lastUpdate | date:'dd.MM.yyyy'}}
+  <p class="fia-post-last-update" *ngIf="quiz !== undefined">
+    Letzte Aktualisierung: {{quiz.lastUpdate | date:'dd.MM.yyyy'}}
   </p>
 </mat-card>

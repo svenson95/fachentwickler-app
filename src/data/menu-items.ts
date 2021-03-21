@@ -66,9 +66,15 @@ export const subjects: MenuItem[] = [
     icon: codeSlashOutline,
   },
   {
-    title: 'Lernfeld 7',
-    shortTitle: 'LF-7',
-    url: '/lf-7',
+    title: 'Lernfeld 7-1',
+    shortTitle: 'LF-7-1',
+    url: '/lf-7-1',
+    icon: gitNetworkOutline,
+  },
+  {
+    title: 'Lernfeld 7-2',
+    shortTitle: 'LF-7-2',
+    url: '/lf-7-2',
     icon: gitNetworkOutline,
   },
   {

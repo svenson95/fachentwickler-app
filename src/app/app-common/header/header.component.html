@@ -48,7 +48,7 @@
         <a class="fia-header-login-btn unselectable" [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'">
           {{authService.isAuthenticated ? 'Dashboard' : 'Login'}}
         </a>
-        <button class="fia-action-btn fia-header-hover-label" mat-icon-button [matMenuTriggerFor]="menu">
+        <button class="fia-action-btn fia-header-hover-label" mat-icon-button [matMenuTriggerFor]="menu" (click)="trigger.openMenu()">
           <mat-icon>more_vert</mat-icon>
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>

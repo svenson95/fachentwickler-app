@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const LF4_1_POSTS: Post[] = [
     {
         "url": "einfache_it_systeme/grundbegriffe_der_elektronen",
-        "topic": "Einfache IT-Systeme",
+        "title": "Grundbegriffe der Elektronen - ENTWURF",
+        "description": "Mitschrift vom 12.08.2019",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2019-08-12",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "1",
@@ -21,8 +23,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/ladung_und_potential",
-        "topic": "Einfache IT-Systeme",
+        "title": "Ladung & Potential",
+        "description": "Mitschrift vom 05.09.2019",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2019-09-05",
         "lastUpdate": "2020-12-13",
         "schoolWeek": "2",
@@ -204,8 +208,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/spannung_und_strom",
-        "topic": "Einfache IT-Systeme",
+        "title": "Spannung & Strom",
+        "description": "Mitschrift vom 26.09.2019",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2019-09-26",
         "lastUpdate": "2020-12-21",
         "schoolWeek": "3",
@@ -597,8 +603,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/widerstand_ohmsches_und_kirchhoffsches_gesetz",
-        "topic": "Einfache IT-Systeme",
+        "title": "Widerstand, Ohmsches- & Kirchhoffsches Gesetz",
+        "description": "Mitschrift vom 26.09.2019",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2019-09-26",
         "lastUpdate": "2020-05-12",
         "schoolWeek": "3",
@@ -971,8 +979,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung",
-        "topic": "Einfache IT-Systeme",
+        "title": "Widerstände berechnen - Reihen- und Parallelschaltung",
+        "description": "Mitschrift vom 15.01.2020",
         "subject": "lf-4-1",
+        "type": "tasks",
         "lessonDate": "2020-01-15",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "7",
@@ -1049,8 +1059,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/akkuschaltung_und_berechnungen",
-        "topic": "Einfache IT-Systeme",
+        "title": "Akkuschaltung und Berechnungen",
+        "description": "Mitschrift vom 04.03.2020",
         "subject": "lf-4-1",
+        "type": "tasks",
         "lessonDate": "2020-03-04",
         "lastUpdate": "2020-05-12",
         "schoolWeek": "9",
@@ -1127,8 +1139,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "grundlagen_e_technik/test",
-        "topic": "Einfache IT-Systeme",
+        "title": "Leistungskontrolle - Grundlagen E-Technik",
+        "description": "Test vom 26.09.2019",
         "subject": "lf-4-1",
+        "type": "test",
         "lessonDate": "2019-09-26",
         "lastUpdate": "2020-12-22",
         "schoolWeek": "3",
@@ -1341,8 +1355,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "reihen_und_parallelschaltung_von_widerstaenden/test",
-        "topic": "Einfache IT-Systeme",
+        "title": "Leistungskontrolle - Reihen- und Parallelschaltung von Widerständen",
+        "description": "Test vom 21.11.2019",
         "subject": "lf-4-1",
+        "type": "test",
         "lessonDate": "2019-11-21",
         "lastUpdate": "2020-05-13",
         "schoolWeek": "5",
@@ -1443,8 +1459,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_1",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "title": "Aufgaben USV (1)",
+        "description": "Mitschrift vom 05.03.2020",
         "subject": "lf-4-1",
+        "type": "tasks",
         "lessonDate": "2020-03-05",
         "lastUpdate": "2020-11-05",
         "schoolWeek": "9",
@@ -1659,8 +1677,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_2",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "title": "Aufgaben USV (2)",
+        "description": "Mitschrift vom 06.03.2020",
         "subject": "lf-4-1",
+        "type": "tasks",
         "lessonDate": "2020-03-06",
         "lastUpdate": "2020-12-14",
         "schoolWeek": "9",
@@ -1753,8 +1773,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/halbleiterdioden",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "title": "Halbleiterdioden",
+        "description": "Mitschrift vom 27.04.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-04-27",
         "lastUpdate": "2020-09-03",
         "schoolWeek": "11",
@@ -1975,8 +1997,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/gleichrichtung_von_wechselspannungen",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "title": "Gleichrichtung von Wechselspannungen",
+        "description": "Mitschrift vom 28.04.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-04-28",
         "lastUpdate": "2020-08-15",
         "schoolWeek": "11",
@@ -2101,8 +2125,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/netzteile",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "title": "Netzteile",
+        "description": "Mitschrift vom 29.04.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-04-29",
         "lastUpdate": "2020-08-15",
         "schoolWeek": "11",
@@ -2312,8 +2338,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/schaltnetzteile",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "title": "Schaltnetzteile",
+        "description": "Mitschrift vom 30.04.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-04-30",
         "lastUpdate": "2020-08-15",
         "schoolWeek": "11",
@@ -2725,8 +2753,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/pwm_pulsweitenmodulation",
-        "topic": "Einfache IT-Systeme",
+        "title": "PWM - Pulsweitenmodulation",
+        "description": "Mitschrift vom 08.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-08",
         "lastUpdate": "2020-08-19",
         "schoolWeek": "13",
@@ -2843,8 +2873,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/opv_operationsverstaerker",
-        "topic": "Einfache IT-Systeme",
+        "title": "OPV - Operationsverstärker",
+        "description": "Mitschrift vom 08.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-08",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -3111,8 +3143,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/nichtlineare_bauelemente",
-        "topic": "Einfache IT-Systeme",
+        "title": "Nichtlineare Bauelemente",
+        "description": "Mitschrift vom 09.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-09",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -3466,8 +3500,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/optoelektronische_bauelemente",
-        "topic": "Einfache IT-Systeme",
+        "title": "Optoelektronische Bauelemente",
+        "description": "Mitschrift vom 09.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-09",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -3748,8 +3784,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/halbaddierer_volladdierer_ripple_carry_addierer",
-        "topic": "Einfache IT-Systeme",
+        "title": "Halbaddierer, Volladdierer, Ripple-Carry-Addierer",
+        "description": "Mitschrift vom 10.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-10",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -4028,8 +4066,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/flip_flops",
-        "topic": "Einfache IT-Systeme",
+        "title": "Flip-Flops",
+        "description": "Mitschrift vom 11.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-11",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -4541,8 +4581,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/zaehler_frequenzteiler_und_kodierer",
-        "topic": "Einfache IT-Systeme",
+        "title": "Zähler, Frequenzteiler & Kodierer",
+        "description": "Mitschrift vom 11.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-11",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -5434,8 +5476,10 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/daempfung_und_db_begriffe",
-        "topic": "Einfache IT-Systeme",
+        "title": "Dämpfung und dB-Begriffe",
+        "description": "Mitschrift vom 12.06.2020",
         "subject": "lf-4-1",
+        "type": "article",
         "lessonDate": "2020-06-12",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "13",
@@ -5700,83 +5744,5 @@ export const LF4_1_POSTS: Post[] = [
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5f5f9c18471abd6e76d8cbdd"
             }
-        ]
-    },
-
-
-
-
-
-
-
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "lf-4-1",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+        ],,
 ];

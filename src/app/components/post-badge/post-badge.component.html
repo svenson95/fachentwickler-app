@@ -3,7 +3,7 @@
                 'tasks': post?.type === PostType.TASKS,
                 'index-cards': post?.type === PostType.INDEX_CARDS,
                 'quiz': post?.type === PostType.QUIZ,
-                'test': post?.type === undefined
+                'test': post?.type === PostType.TEST
               }">
   {{badgeTranslator(post?.type)}}
 </div>

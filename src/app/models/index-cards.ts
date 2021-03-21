@@ -1,22 +1,18 @@
-import {SubjectPost} from './subject';
 
 export interface IndexCards {
+  _id?: string;
   url: string;
-  topic: string;
+  title: string;
+  description: string;
   subject: string;
+  type: string;
   lessonDate: string;
   lastUpdate: string;
   schoolWeek: string;
   questions: Question[];
-  _id?: string;
 }
 
 interface Question {
   question: string;
   answer: string;
-}
-
-export interface IndexCardsData {
-  content: IndexCards;
-  details: SubjectPost;
 }

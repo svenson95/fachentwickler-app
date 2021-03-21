@@ -1,8 +1,8 @@
-import { SubjectPost } from './subject';
+import { Post } from './post';
 
 export interface ExamDate {
   date: string;
   subject: string;
   title: string;
-  lessons?: string[] | SubjectPost[];
+  lessons?: string[] | Post[];
 }

@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const LF3_POSTS: Post[] = [
     {
         "url": "netzplantechnik/regeln_der_netzplantechnik",
-        "topic": "Netzplantechnik",
+        "title": "Regeln der Netzplantechnik",
+        "description": "Mitschrift vom 05.09.2019",
         "subject": "lf-3",
+        "type": "article",
         "lessonDate": "2019-09-05",
         "lastUpdate": "2020-05-07",
         "schoolWeek": "2",
@@ -91,8 +93,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "netzplantechnik/netzplan_und_gantt_diagramm",
-        "topic": "Netzplantechnik",
+        "title": "Netzplan & Gantt-Diagramm",
+        "description": "Aufgaben vom 05.09.2019",
         "subject": "lf-3",
+        "type": "tasks",
         "lessonDate": "2019-09-05",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "2",
@@ -294,8 +298,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "netzplantechnik/netzplan_übungsaufgabe",
-        "topic": "Netzplantechnik",
+        "title": "Netzplan - Übungsaufgabe",
+        "description": "Aufgaben vom 25.09.2019",
         "subject": "lf-3",
+        "type": "tasks",
         "lessonDate": "2019-09-25",
         "lastUpdate": "2020-05-08",
         "schoolWeek": "3",
@@ -394,8 +400,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "netzplantechnik/vergleich_netzplan_vs_gantt_diagramm",
-        "topic": "Netzplantechnik",
+        "title": "Vergleich Netzplan vs Gantt-Diagramm",
+        "description": "Mitschrift vom 27.09.2019",
         "subject": "lf-3",
+        "type": "article",
         "lessonDate": "2019-09-27",
         "lastUpdate": "2020-10-03",
         "schoolWeek": "3",
@@ -434,8 +442,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "netzplantechnik/netzplan_und_gantt_diagramm_übungsaufgabe",
-        "topic": "Netzplantechnik",
+        "title": "Netzplan und Gantt-Diagramm - Übungsaufgabe",
+        "description": "Aufgaben vom 08.06.2020",
         "subject": "lf-3",
+        "type": "tasks",
         "lessonDate": "2020-06-08",
         "lastUpdate": "2020-10-03",
         "schoolWeek": "13",
@@ -592,8 +602,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "netzplantechnik/netzplan_und_gantt_diagramm_wiederholung",
-        "topic": "Netzplantechnik",
+        "title": "Netzplan und Gantt Diagramm - Wiederholung",
+        "description": "Mitschrift vom 11.02.2021",
         "subject": "lf-3",
+        "type": "article",
         "lessonDate": "2021-02-11",
         "lastUpdate": "2021-02-26",
         "schoolWeek": "21",
@@ -712,8 +724,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "visualisierung/visualisierungs_regeln",
-        "topic": "Visualisierung",
+        "title": "Visualisierungs-Regeln",
+        "description": "Mitschrift vom 02.03.2020",
         "subject": "lf-3",
+        "type": "article",
         "lessonDate": "2020-03-02",
         "lastUpdate": "2020-05-08",
         "schoolWeek": "9",
@@ -730,8 +744,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "visualisierung/wirkung_von_farben",
-        "topic": "Visualisierung",
+        "title": "Wirkung von Farben",
+        "description": "Mitschrift vom 02.03.2020",
         "subject": "lf-3",
+        "type": "article",
         "lessonDate": "2020-03-02",
         "lastUpdate": "2020-05-09",
         "schoolWeek": "9",
@@ -869,8 +885,10 @@ export const LF3_POSTS: Post[] = [
     },
     {
         "url": "visualisierung/diagramme",
-        "topic": "Visualisierung",
+        "title": "Diagramme",
+        "description": "Mitschrift vom 02.03.2020",
         "subject": "lf-3",
+        "type": "article",
         "lessonDate": "2020-03-02",
         "lastUpdate": "2020-05-10",
         "schoolWeek": "9",
@@ -981,74 +999,4 @@ export const LF3_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "lf-3",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

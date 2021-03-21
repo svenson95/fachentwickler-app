@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const DEUTSCH_POSTS: Post[] = [
     {
         "url": "kommunikation_und_informationsquellen/sender_empfänger_modell",
-        "topic": "Kommunikation",
+        "title": "Sender-Empfänger-Modell",
+        "description": "Mitschrift vom 10.12.2019",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2019-12-10",
         "lastUpdate": "2020-06-23",
         "schoolWeek": "6",
@@ -107,8 +109,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "kommunikation_und_informationsquellen/ebenen_der_kommunikation",
-        "topic": "Kommunikation und Informationsquellen",
+        "title": "Ebenen der Kommunikation",
+        "description": "Mitschrift vom 15.01.2020",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-01-15",
         "lastUpdate": "2020-06-28",
         "schoolWeek": "7",
@@ -203,33 +207,11 @@ export const DEUTSCH_POSTS: Post[] = [
         ]
     },
     {
-        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_blaetter",
-        "topic": "Kommunikation und Informationsquellen",
-        "subject": "deutsch",
-        "lessonDate": "2020-02-11",
-        "lastUpdate": "2020-07-01",
-        "schoolWeek": "8",
-        "elements": [
-            {
-                "type": "title",
-                "content": "Download"
-            },
-            {
-                "type": "file",
-                "content": "Zusammenfassung als DIN A4",
-                "object": {
-                    "fileType": "application/pdf",
-                    "fileName": "deutsch_-_kommunikation.pdf",
-                    "fileSize": "39 KB",
-                    "fileLink": "http://5.45.101.7/fia93/wiki/lib/exe/fetch.php?media=deutsch_-_kommunikation.pdf"
-                }
-            }
-        ]
-    },
-    {
         "url": "kommunikation_und_informationsquellen/praesentieren_einleitung",
-        "topic": "Kommunikation und Informationsquellen",
+        "title": "Präsentieren - Einleitung",
+        "description": "Mitschrift vom 10.02.2020",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-02-10",
         "lastUpdate": "2020-06-29",
         "schoolWeek": "8",
@@ -256,9 +238,37 @@ export const DEUTSCH_POSTS: Post[] = [
         ]
     },
     {
-        "url": "grammatik/foliengesetz_bullet_chart",
-        "topic": "Grammatik",
+        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_blaetter",
+        "title": "Testvorbereitung - Zusammenfassung (Blätter)",
+        "description": "Mitschrift vom 11.02.2020",
         "subject": "deutsch",
+        "type": "article",
+        "lessonDate": "2020-02-11",
+        "lastUpdate": "2020-07-01",
+        "schoolWeek": "8",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Download"
+            },
+            {
+                "type": "file",
+                "content": "Zusammenfassung als DIN A4",
+                "object": {
+                    "fileType": "application/pdf",
+                    "fileName": "deutsch_-_kommunikation.pdf",
+                    "fileSize": "39 KB",
+                    "fileLink": "http://5.45.101.7/fia93/wiki/lib/exe/fetch.php?media=deutsch_-_kommunikation.pdf"
+                }
+            }
+        ]
+    },
+    {
+        "url": "grammatik/foliengesetz_bullet_chart",
+        "title": "Foliengesetz (Bullet-Chart)",
+        "description": "Mitschrift vom 12.02.2020",
+        "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-02-12",
         "lastUpdate": "2020-06-27",
         "schoolWeek": "8",
@@ -284,8 +294,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise_1",
-        "topic": "Grammatik",
+        "title": "Nominalstil und unpersönliche Ausdrucksweise (1)",
+        "description": "Mitschrift vom 24.03.2020",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-03-24",
         "lastUpdate": "2021-02-08",
         "schoolWeek": "10",
@@ -395,9 +407,11 @@ export const DEUTSCH_POSTS: Post[] = [
         ]
     },
     {
-        "url": "grammatik/die_schreibung_des_s_lautes_dass_dass",
-        "topic": "Grammatik",
+        "url": "grammatik/schreibung_des_s_lautes_dass_dass",
+        "title": "Schreibung s-Laut, dass-das",
+        "description": "Mitschrift vom 28.04.2020",
         "subject": "deutsch",
+        "type": "tasks",
         "lessonDate": "2020-04-28",
         "lastUpdate": "2020-06-27",
         "schoolWeek": "11",
@@ -498,8 +512,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/grundbegriffe_der_sprachtheorie",
-        "topic": "Grammatik",
+        "title": "Grundbegriffe der Sprachtheorie",
+        "description": "Aufgaben vom 01.09.2020",
         "subject": "deutsch",
+        "type": "tasks",
         "lessonDate": "2020-09-01",
         "lastUpdate": "2020-09-26",
         "schoolWeek": "15",
@@ -654,8 +670,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/projektdokumentation",
-        "topic": "Grammatik",
+        "title": "Projektdokumentation",
+        "description": "Mitschrift vom 24.09.2020",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-09-24",
         "lastUpdate": "2020-10-16",
         "schoolWeek": "16",
@@ -695,8 +713,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/dokumentationsaufbau_technische_dokumentation",
-        "topic": "Grammatik",
+        "title": "Dokumentationsaufbau - Technische Dokumentation",
+        "description": "Mitschrift vom 16.11.2020",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-11-16",
         "lastUpdate": "2021-01-11",
         "schoolWeek": "18",
@@ -754,8 +774,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/sachliches_schreiben_und_sprachstile",
-        "topic": "Grammatik",
+        "title": "Sachliches Schreiben und Sprachstile (ENTWURF)",
+        "description": "Mitschrift vom 10.12.2020",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2020-12-10",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "19",
@@ -772,8 +794,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise_2",
-        "topic": "Grammatik",
+        "title": "Nominalstil und unpersönliche Ausdrucksweise (2)",
+        "description": "Mitschrift vom 14.01.2021",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2021-01-14",
         "lastUpdate": "2021-02-08",
         "schoolWeek": "20",
@@ -790,8 +814,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/zitiertechniken_und_literaturverzeichnis",
-        "topic": "Grammatik",
+        "title": "Zitiertechniken und Literaturverzeichnis",
+        "description": "Mitschrift vom 08.02.2021",
         "subject": "deutsch",
+        "type": "article",
         "lessonDate": "2021-02-08",
         "lastUpdate": "2021-02-08",
         "schoolWeek": "21",
@@ -836,8 +862,10 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/regeln_des_zitierens",
-        "topic": "Grammatik",
+        "title": "Regeln des Zitierens - Präsentation erarbeiten",
+        "description": "Mitschrift vom 01.03.2021",
         "subject": "deutsch",
+        "type": "tasks",
         "lessonDate": "2021-03-01",
         "lastUpdate": "2021-03-01",
         "schoolWeek": "22",
@@ -892,81 +920,10 @@ export const DEUTSCH_POSTS: Post[] = [
                 "type": "list",
                 "content": "Quellen:",
                 "list": [
-                    "<sup>1</sup> Definition laut Oxford Languages - <a href='https://languages.oup.com/google-dictionary-de/'>https://languages.oup.com/google-dictionary-de/</a>"
+                    "<sup>1</sup> Definition laut Oxford Languages - <a href='https://languages.oup.com/google-dictionary-de/'>https://languages.oup.com/google-dictionary-de/</a>",
                     "<a href='https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html'>https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html</a>"
                 ]
             }
         ]
     },
-
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "deutsch",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

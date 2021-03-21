@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../../services/data/data.service';
+import { Quiz } from '../../models/quiz';
 
 @Component({
   selector: 'app-quiz-card',
@@ -8,8 +9,7 @@ import { DataService } from '../../services/data/data.service';
 })
 export class QuizCardComponent implements OnInit {
 
-  @Input() quizContent;
-  @Input() quizDetails;
+  @Input() quiz: Quiz;
 
   level = 0;
   wrongAnswers = 0;
@@ -49,16 +49,16 @@ export class QuizCardComponent implements OnInit {
     setTimeout(() => {
       this.answer = undefined;
       this.isCorrectAnswer = null;
-      if (this.quizContent.questions[this.level + 1] !== undefined) {
+      if (this.quiz.questions[this.level + 1] !== undefined) {
         this.level++;
-      } else if (this.quizContent.questions[this.level + 1] === undefined) {
+      } else if (this.quiz.questions[this.level + 1] === undefined) {
         this.end = true;
       }
     }, 2000);
   }
 
   isCorrect(answer): boolean {
-    return this.quizContent.questions[this.level].answer === answer;
+    return this.quiz.questions[this.level].answer === answer;
   }
 
   resetLevel(): void {

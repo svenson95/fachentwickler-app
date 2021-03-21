@@ -41,7 +41,7 @@ const indexCardsPaths = (): Array<Route> => {
   const indexCards: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
     indexCards.push({
-      path: sub + '/:topic/:post/index-cards',
+      path: sub + '/:topic/:title',
       loadChildren: () => import('src/app/pages/index-cards/index-cards.module').then(m => m.IndexCardsModule)
     });
   });
@@ -52,7 +52,7 @@ const quizPaths = (): Array<Route> => {
   const quizzes: Route[] = [];
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
     quizzes.push({
-      path: sub + '/:topic/:post/quiz',
+      path: sub + '/:topic/:title',
       loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizModule)
     });
   });

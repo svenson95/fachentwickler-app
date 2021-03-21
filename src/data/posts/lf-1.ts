@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const LF1_POSTS: Post[] = [
     {
         "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
-        "topic": "Der Betrieb und sein Umfeld",
+        "title": "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
+        "description": "Aufgaben vom 03.09.2019",
         "subject": "lf-1",
+        "type": "tasks",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2020-10-29",
         "schoolWeek": "2",
@@ -121,8 +123,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "der_betrieb_und_sein_umfeld/testartikel_url",
-        "topic": "Der Betrieb und sein Umfeld",
+        "title": "Testartikel",
+        "description": "Aufgaben vom 01.01.2000",
         "subject": "lf-1",
+        "type": "article",
         "lessonDate": "2000-01-01",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "0",
@@ -151,8 +155,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "der_betrieb_und_sein_umfeld/zweiter-test-artikel",
-        "topic": "Der Betrieb und sein Umfeld",
+        "title": "Zweiter Testartikel",
+        "description": "Aufgaben vom 01.01.2000",
         "subject": "lf-1",
+        "type": "tasks",
         "lessonDate": "2000-01-01",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "0",
@@ -316,8 +322,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
-        "topic": "Bedürfnisse & Güter",
+        "title": "Wie entsteht aus einem Bedürfnis der Bedarf?",
+        "description": "Mitschrift vom 28.10.2019",
         "subject": "lf-1",
+        "type": "article",
         "lessonDate": "2019-10-28",
         "lastUpdate": "2021-01-06",
         "schoolWeek": "4",
@@ -434,8 +442,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
-        "topic": "Bedürfnisse & Güter",
+        "title": "Aufgaben der Betriebe & Unternehmen",
+        "description": "Mitschrift vom 28.10.2019",
         "subject": "lf-1",
+        "type": "article",
         "lessonDate": "2019-10-28",
         "lastUpdate": "2020-12-15",
         "schoolWeek": "4",
@@ -493,8 +503,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "wirtschaftskennziffern/grundlagen_und_berechnung_von_wirtschaftskennziffern",
-        "topic": "Wirtschaftskennziffern",
+        "title": "Grundlagen & Berechnung von Wirtschaftskennziffern",
+        "description": "Mitschrift vom 13.02.2020",
         "subject": "lf-1",
+        "type": "article",
         "lessonDate": "2020-02-13",
         "lastUpdate": "2020-04-28",
         "schoolWeek": "8",
@@ -564,8 +576,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_1",
-        "topic": "Wirtschaftskennziffern",
+        "title": "Übung zur Berechnung der Wirtschaftlichkeit (1/2)",
+        "description": "Aufgaben vom 14.02.2020",
         "subject": "lf-1",
+        "type": "tasks",
         "lessonDate": "2020-02-14",
         "lastUpdate": "2020-05-12",
         "schoolWeek": "8",
@@ -738,8 +752,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_2",
-        "topic": "Wirtschaftskennziffern",
+        "title": "Übung zur Berechnung der Wirtschaftlichkeit (2/2)",
+        "description": "Aufgaben vom 05.03.2020",
         "subject": "lf-1",
+        "type": "tasks",
         "lessonDate": "2020-03-05",
         "lastUpdate": "2020-05-12",
         "schoolWeek": "9",
@@ -912,8 +928,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet",
-        "topic": "Wirtschaftskennziffern",
+        "title": "Unternehmensziel Gewinn / Rentabilität",
+        "description": "Aufgaben vom 06.03.2020",
         "subject": "lf-1",
+        "type": "tasks",
         "lessonDate": "2020-03-06",
         "lastUpdate": "2020-05-12",
         "schoolWeek": "9",
@@ -1177,8 +1195,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
-        "topic": "Wirtschaftskennziffern",
+        "title": "Berechnung Rentabilität von Eigenkapital & Gesamtkapital",
+        "description": "Aufgaben vom 25.03.2020",
         "subject": "lf-1",
+        "type": "tasks",
         "lessonDate": "2020-03-25",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "10",
@@ -1407,8 +1427,10 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "beduerfnisse_und_gueter/test",
-        "topic": "test",
+        "title": "Leistungskontrolle - Bedürfnisse und Güter",
+        "description": "Test vom 11.12.2019",
         "subject": "lf-1",
+        "type": "test",
         "lessonDate": "2019-12-11",
         "lastUpdate": "2020-12-22",
         "schoolWeek": "6",
@@ -1487,78 +1509,4 @@ export const LF1_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "lf-1",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "<span class='ddu-list-number'>1</span> | "
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

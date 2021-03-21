@@ -1,8 +1,8 @@
 <div class="fia-page">
 
-  <mat-spinner class="fia-loading-spinner" *ngIf="quizContent === undefined"></mat-spinner>
+  <mat-spinner class="fia-loading-spinner" *ngIf="quiz === undefined"></mat-spinner>
 
-  <app-quiz-card [quizContent]="quizContent" [quizDetails]="quizDetails" *ngIf="quizContent !== undefined && quizDetails !== undefined"></app-quiz-card>
+  <app-quiz-card [quiz]="quiz" *ngIf="quiz !== undefined"></app-quiz-card>
 
-  <app-lesson-footer [post]="quizDetails" *ngIf="quizDetails !== undefined"></app-lesson-footer>
+  <app-lesson-footer [postId]="quiz._id" *ngIf="quiz !== undefined"></app-lesson-footer>
 </div>

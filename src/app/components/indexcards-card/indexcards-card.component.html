@@ -1,9 +1,9 @@
 <mat-card class="fia-card">
-  <p class="fia-card-title" *ngIf="indexCardsContent !== undefined"
-     [innerHTML]="indexCardsDetails.title"></p>
-  <p class="fia-card-description" *ngIf="indexCardsContent !== undefined"
-     [innerHTML]="indexCardsDetails.description"></p>
-  <mat-card-content class="fia-card-content" *ngIf="indexCardsContent !== undefined">
+  <p class="fia-card-title" *ngIf="indexCards !== undefined"
+     [innerHTML]="indexCards.title"></p>
+  <p class="fia-card-description" *ngIf="indexCards !== undefined"
+     [innerHTML]="indexCards.description"></p>
+  <mat-card-content class="fia-card-content" *ngIf="indexCards !== undefined">
     <div class="fia-index-card">
       <div class="fia-content-wrapper">
         <div class="index-card-title">
@@ -11,12 +11,12 @@
             <p class="label">{{isAnswerVisible ? 'Antwort' : 'Frage'}}</p>
           </div>
           <div class="index-card-level">
-            <p class="label">{{level+1}} von {{indexCardsContent.questions.length}}</p>
+            <p class="label">{{level+1}} von {{indexCards.questions.length}}</p>
           </div>
         </div>
         <div class="index-card-content">
-          <p class="content" [innerHTML]="answerVisible(indexCardsContent)"
-             [ngClass]="{'shortAnswer': stripHtml(answerVisible(indexCardsContent)).length < 400}">
+          <p class="content" [innerHTML]="answerVisible(indexCards)"
+             [ngClass]="{'shortAnswer': stripHtml(answerVisible(indexCards)).length < 400}">
             <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
             <!--              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
             <!--              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in-->
@@ -70,7 +70,7 @@
       </button>
     </div>
   </mat-card-content>
-  <p class="fia-post-last-update" *ngIf="indexCardsContent !== undefined">
-    Letzte Aktualisierung: {{indexCardsContent.lastUpdate | date:'dd.MM.yyyy'}}
+  <p class="fia-post-last-update" *ngIf="indexCards !== undefined">
+    Letzte Aktualisierung: {{indexCards.lastUpdate | date:'dd.MM.yyyy'}}
   </p>
 </mat-card>

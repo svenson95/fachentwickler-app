@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { subjects } from '../../../data/menu-items';
 import { DataService } from '../../services/data/data.service';
 import { ExamDate } from '../../models/exam-date';
-import { SubjectPost } from '../../models/subject';
+import { Post } from '../../models/post';
 
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
@@ -32,7 +32,7 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 export class ExamItemComponent implements OnInit {
 
   @Input() exam: ExamDate;
-  examLessons: SubjectPost[] = [];
+  examLessons: Post[] = [];
   lessonsVisible: boolean;
 
   constructor(private dataService: DataService) { }
@@ -57,7 +57,7 @@ export class ExamItemComponent implements OnInit {
     }
   }
 
-  async getExamLessons(): Promise<SubjectPost[]> {
+  async getExamLessons(): Promise<Post[]> {
     const postIdsArray = '_' + this.exam.lessons.join();
     this.dataService.getSubjectPosts(postIdsArray).subscribe(
       (posts) => {
@@ -68,7 +68,7 @@ export class ExamItemComponent implements OnInit {
           if (a.lessonDate < b.lessonDate) { return -1; }
           return 0;
         });
-        return this.examLessons as SubjectPost[];
+        return this.examLessons as Post[];
       }, (error) => {
         console.log('error while GET subject-posts (exam lessons)', error);
       }

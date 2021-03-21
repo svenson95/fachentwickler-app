@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../../services/data/data.service';
+import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'app-indexcards-card',
@@ -8,8 +9,7 @@ import { DataService } from '../../services/data/data.service';
 })
 export class IndexcardsCardComponent implements OnInit {
 
-  @Input() indexCardsContent;
-  @Input() indexCardsDetails;
+  @Input() indexCards: IndexCards;
 
   level = 0;
   isAnswerVisible = false;
@@ -33,7 +33,7 @@ export class IndexcardsCardComponent implements OnInit {
 
   increaseLevel(): void {
     this.isAnswerVisible = false;
-    if (this.indexCardsContent.questions[this.level + 1] !== undefined) {
+    if (this.indexCards.questions[this.level + 1] !== undefined) {
       this.level++;
     }
   }
@@ -45,7 +45,7 @@ export class IndexcardsCardComponent implements OnInit {
   }
 
   isLastQuestion(): boolean {
-    return this.indexCardsContent.questions[this.level + 1] === undefined;
+    return this.indexCards.questions[this.level + 1] === undefined;
   }
 
   stripHtml(html): string {

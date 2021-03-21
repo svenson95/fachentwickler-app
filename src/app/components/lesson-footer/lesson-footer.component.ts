@@ -4,8 +4,6 @@ import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component'
 
 import { AuthService } from '../../services/auth/auth.service';
 import { UserProgress, UserRole } from '../../models/user';
-import { SubjectPost } from '../../models/subject';
-import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-lesson-footer',
@@ -14,9 +12,8 @@ import { Post } from '../../models/post';
 })
 export class LessonFooterComponent implements OnInit {
 
-  @Input() post: Post | SubjectPost;
+  @Input() postId: string;
   alreadyRead: boolean;
-  POST_ID: string;
 
   UserRole = UserRole;
 
@@ -25,19 +22,14 @@ export class LessonFooterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (this.post.postId) {
-      this.POST_ID = this.post.postId;
-    } else if ('_id' in this.post) {
-      this.POST_ID = this.post._id;
-    }
-    this.alreadyRead = this.authService.user.progress.includes(this.POST_ID);
+    this.alreadyRead = this.authService.user.progress.includes(this.postId);
   }
 
   /* -- Component functions -- */
   addUserProgress(): void {
     const lesson = {
       "userId": this.authService.user._id,
-      "postId": this.POST_ID
+      "postId": this.postId
     } as UserProgress;
 
     this.authService.addProgress(lesson).subscribe(

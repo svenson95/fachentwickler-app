@@ -2,9 +2,11 @@ import {Post} from '../../app/models/post';
 
 export const LF6_POSTS: Post[] = [
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen_in_java",
+        "title": "Datentypen (in Java)",
+        "description": "Thema vom 03.09.2019",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2021-01-06",
         "schoolWeek": "2",
@@ -464,9 +466,11 @@ export const LF6_POSTS: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren_in_java",
+        "title": "Operatoren (in Java)",
+        "description": "Thema vom 27.09.2019",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2019-09-27",
         "lastUpdate": "2020-10-31",
         "schoolWeek": "3",
@@ -1041,8 +1045,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Kontrollstrukturen (in Java)",
+        "description": "Thema vom 28.10.2019",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2019-10-28",
         "lastUpdate": "2020-10-18",
         "schoolWeek": "4",
@@ -1425,8 +1431,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/schleifen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Schleifen (in Java)",
+        "description": "Thema vom 09.12.2019",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2019-12-09",
         "lastUpdate": "2020-10-18",
         "schoolWeek": "6",
@@ -1701,8 +1709,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen_und_arrays",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Datenstrukuturen und Arrays (in Java)",
+        "description": "Mitschrift vom 17.01.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-01-17",
         "lastUpdate": "2020-05-16",
         "schoolWeek": "7",
@@ -1943,8 +1953,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Statische Methoden (in Java)",
+        "description": "Mitschrift vom 11.02.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-02-11",
         "lastUpdate": "2020-09-03",
         "schoolWeek": "8",
@@ -2149,8 +2161,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Eulersche Phi-Funktion",
+        "description": "Thema vom 02.03.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-03-02",
         "lastUpdate": "2020-09-03",
         "schoolWeek": "9",
@@ -2268,8 +2282,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Aktienkurs Berechnung (in PHP)",
+        "description": "Aufgaben vom 24.03.2020",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2020-03-24",
         "lastUpdate": "2021-01-06",
         "schoolWeek": "10",
@@ -2430,8 +2446,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Aktienkurs Berechnung (in JavaScript)",
+        "description": "Aufgaben vom 24.03.2020",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2020-03-24",
         "lastUpdate": "2021-01-06",
         "schoolWeek": "10",
@@ -2592,8 +2610,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eigene_java_bibliothek_bauen_myarray",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Eigene Java Bibliothek bauen - MyArray",
+        "description": "Aufgaben vom 24.03.2020",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2020-06-10",
         "lastUpdate": "2020-10-16",
         "schoolWeek": "13",
@@ -2929,8 +2949,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "kontrollstrukturen_datentypen_und_ausdruecke/test",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Leistungskontrolle - Kontrollstrukturen, Datentypen & Ausdrücke",
+        "description": "Kurztest vom 22.11.2019",
         "subject": "lf-6",
+        "type": "test",
         "lessonDate": "2019-11-22",
         "lastUpdate": "2020-05-28",
         "schoolWeek": "5",
@@ -3206,8 +3228,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_und_uebungen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Rekursion - Definition & Übungen",
+        "description": "Thema vom 14.08.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-08-14",
         "lastUpdate": "2020-11-04",
         "schoolWeek": "14",
@@ -3393,8 +3417,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Datenbanken und Datenbanksysteme",
+        "description": "Thema vom 31.08.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-08-31",
         "lastUpdate": "2020-09-20",
         "schoolWeek": "15",
@@ -3531,8 +3557,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_und_datentypen_mysql",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Relationale Datenbanken und Datentypen - MySQL",
+        "description": "Thema vom 31.08.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-08-31",
         "lastUpdate": "2020-12-15",
         "schoolWeek": "15",
@@ -3631,8 +3659,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_algebra_projektion_selektion_und_join_in_sql",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Relationale Algebra & SQL - Projektion, Selektion und Join",
+        "description": "Aufgaben vom 02.09.2020",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2020-09-02",
         "lastUpdate": "2020-12-15",
         "schoolWeek": "15",
@@ -3877,8 +3907,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_und_aggregatfunktionen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "SQL Funktionen - Daten zusammenfassen & Aggregatfunktionen",
+        "description": "Mitschrift vom 21.09.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-09-21",
         "lastUpdate": "2020-10-15",
         "schoolWeek": "16",
@@ -4022,8 +4054,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_uebungen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "SQL Funktionen - Daten zusammenfassen - Übungen",
+        "description": "Aufgaben vom 23.09.2020",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2020-09-23",
         "lastUpdate": "2020-10-15",
         "schoolWeek": "16",
@@ -4168,8 +4202,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_joins",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "SQL Übung - Joins (ENTWURF)",
+        "description": "Mitschrift vom 26.10.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-10-26",
         "lastUpdate": "2020-11-03",
         "schoolWeek": "17",
@@ -4186,8 +4222,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_uebung_anweisungen_schachteln",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "SQL Übung - Anweisungen schachteln (ENTWURF)",
+        "description": "Aufgaben vom 28.10.2020",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2020-10-28",
         "lastUpdate": "2020-11-03",
         "schoolWeek": "17",
@@ -4204,8 +4242,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "sql_grundlagen/test",
-        "topic": "test",
+        "title": "SQL Grundlagen",
+        "description": "Kurztest vom 18.11.2020",
         "subject": "lf-6",
+        "type": "test",
         "lessonDate": "2020-11-18",
         "lastUpdate": "2020-12-21",
         "schoolWeek": "18",
@@ -4222,8 +4262,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbank_relationstheorie",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Datenbank Relationstheorie (ENTWURF)",
+        "description": "Aufgaben vom 19.11.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-11-19",
         "lastUpdate": "2020-12-21",
         "schoolWeek": "18",
@@ -4240,8 +4282,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/planung_von_relationalen_datenbanken",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Planung von Relationalen Datenbanken (ENTWURF)",
+        "description": "Aufgaben vom 09.12.2020",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2020-12-09",
         "lastUpdate": "2020-12-21",
         "schoolWeek": "19",
@@ -4258,8 +4302,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/hashfunktionen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Hashfunktionen (ENTWURF)",
+        "description": "Aufgaben vom 11.01.2021",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2021-01-11",
         "lastUpdate": "2021-02-08",
         "schoolWeek": "20",
@@ -4283,13 +4329,15 @@ export const LF6_POSTS: Post[] = [
           {
             "type": "text",
             "content": "Bilden Sie den SHA3-256 Hashwert zur Zeichenkette OSZ Technik Teltow. (ohne Punkt) Der Hashwert wird später das Passwort für die Aufgaben sein."
-          },
+          }
         ]
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/hashfunktion_uebung",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Hashfunktion - Übung (ENTWURF)",
+        "description": "Aufgaben vom 14.01.2021",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2021-01-14",
         "lastUpdate": "2021-02-08",
         "schoolWeek": "20",
@@ -4313,13 +4361,15 @@ export const LF6_POSTS: Post[] = [
           {
             "type": "text",
             "content": "Bilden Sie den SHA3-256 Hashwert zur Zeichenkette OSZ Technik Teltow. (ohne Punkt) Der Hashwert wird später das Passwort für die Aufgaben sein."
-          },
+          }
         ]
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_statements_abfragen_über_mehrere_tabellen",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "SQL-Statements - Abfragen über mehrere Tabellen (ENTWURF)",
+        "description": "Aufgaben vom 08.02.2021",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2021-02-08",
         "lastUpdate": "2021-02-27",
         "schoolWeek": "21",
@@ -4352,8 +4402,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_server_einrichten_und_uebungsaufgaben",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "SQL-Server einrichten und Übungsaufgaben (ENTWURF)",
+        "description": "Aufgaben vom 12.02.2021",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2021-02-12",
         "lastUpdate": "2021-02-27",
         "schoolWeek": "21",
@@ -4378,8 +4430,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_1",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Aufgaben - Grundkonzepte des ER-Modells",
+        "description": "Aufgaben vom 03.03.2021",
         "subject": "lf-6",
+        "type": "tasks",
         "lessonDate": "2021-03-03",
         "lastUpdate": "2021-03-05",
         "schoolWeek": "22",
@@ -4490,8 +4544,10 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_2",
-        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "title": "Grundkonzepte des ER-Modells",
+        "description": "Thema vom 05.03.2021",
         "subject": "lf-6",
+        "type": "article",
         "lessonDate": "2021-03-05",
         "lastUpdate": "2021-03-09",
         "schoolWeek": "22",
@@ -4763,84 +4819,4 @@ export const LF6_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "lf-6",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "<span class='ddu-list-number'>1</span> | "
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

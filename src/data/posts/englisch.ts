@@ -3,8 +3,10 @@ import {Post} from '../../app/models/post';
 export const ENGLISCH_POSTS: Post[] = [
     {
         "url": "basics/introductions",
-        "topic": "Basics",
+        "title": "Introductions",
+        "description": "Aufgabe vom 02.09.2019",
         "subject": "englisch",
+        "type": "tasks",
         "lessonDate": "2019-09-02",
         "lastUpdate": "2020-06-14",
         "schoolWeek": "2",
@@ -37,8 +39,10 @@ export const ENGLISCH_POSTS: Post[] = [
     },
     {
         "url": "basics/summaries",
-        "topic": "Basics",
+        "title": "Summaries",
+        "description": "Aufgabe 26.09.2019",
         "subject": "englisch",
+        "type": "tasks",
         "lessonDate": "2019-09-26",
         "lastUpdate": "2020-06-14",
         "schoolWeek": "3",
@@ -90,8 +94,10 @@ export const ENGLISCH_POSTS: Post[] = [
     },
     {
         "url": "basics/short_presentation_mariadb_mongodb_difference_between_sql_and_nosql",
-        "topic": "Basics",
+        "title": "Short-Presentation - MariaDB / MongoDB, Difference between SQL and NoSQL",
+        "description": "Aufgabe 29.10.2020",
         "subject": "englisch",
+        "type": "tasks",
         "lessonDate": "2020-10-29",
         "lastUpdate": "2020-12-15",
         "schoolWeek": "17",
@@ -177,76 +183,4 @@ export const ENGLISCH_POSTS: Post[] = [
             }
         ]
     },
-
-
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "englisch",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
-                "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test →"
-            },
-            {
-                "type": "hint",
-                "content": "test"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
-            },
-            {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
 ];

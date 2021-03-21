@@ -3,8 +3,10 @@ import { Post } from '../../app/models/post';
 export const LF9_POSTS: Post[] = [
     {
         "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einstieg_in_das_lernfeld",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Kommunikationstechnik - Einstieg in das Lernfeld",
+        "description": "Mitschrift vom 10.08.2020",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2020-08-10",
         "lastUpdate": "2020-09-27",
         "schoolWeek": "14",
@@ -87,8 +89,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/oeffentliches_netzwerk_und_telekommunikations_netzbetreiber",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Öffentliches Netzwerk & Telekommunikations-Netzbetreiber",
+        "description": "Mitschrift vom 03.09.2020",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2020-09-03",
         "lastUpdate": "2020-09-27",
         "schoolWeek": "15",
@@ -341,8 +345,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/digitale_vermittlungsstelle_des_ortsnetzes",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Digitale Vermittlungsstelle des Ortsnetzes",
+        "description": "Mitschrift vom 21.09.2020",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2020-09-21",
         "lastUpdate": "2020-10-03",
         "schoolWeek": "16",
@@ -897,8 +903,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/analoge_telefonie",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Analoge Telefonie",
+        "description": "Mitschrift vom 24.09.2020",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2020-09-24",
         "lastUpdate": "2020-10-04",
         "schoolWeek": "16",
@@ -1433,8 +1441,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/was_ist_isdn",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Was ist ISDN?",
+        "description": "Mitschrift vom 18.11.2020",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2020-11-18",
         "lastUpdate": "2021-01-12",
         "schoolWeek": "18",
@@ -1795,13 +1805,15 @@ export const LF9_POSTS: Post[] = [
               "Zusätzlich zu den jeweiligen Verbindungskosten wird ein Konferenzzuschlag von einer Tarifeinheit je 20 Sekunden erhoben",
               "Die Steuerung der Konferenz erfolgt durch das Endgerät des Initiators"
             ]
-          },
+          }
         ]
     },
     {
         "url": "oeffentliche_netze_und_dienste/isdn_arbeitsblatt",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "ISDN Aufgabenblatt",
+        "description": "Aufgaben vom 11.01.2021",
         "subject": "lf-9",
+        "type": "tasks",
         "lessonDate": "2021-01-11",
         "lastUpdate": "2021-01-11",
         "schoolWeek": "20",
@@ -1920,8 +1932,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/broadcast_dienste_und_netze",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Broadcast-Dienste und Netze (Entwurf)",
+        "description": "Mitschrift vom 11.01.2021",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2021-01-11",
         "lastUpdate": "2021-01-11",
         "schoolWeek": "20",
@@ -1938,8 +1952,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/glasfaser_und_lichtwellen",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Glasfaser und Lichtwellen (Entwurf)",
+        "description": "Mitschrift vom 08.02.2021",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2021-02-08",
         "lastUpdate": "2021-02-08",
         "schoolWeek": "21",
@@ -1956,8 +1972,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/modulation_in_der_nachrichtentechnik",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "Modulation in der Nachrichtentechnik",
+        "description": "Mitschrift vom 01.03.2021",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2021-03-01",
         "lastUpdate": "2021-03-01",
         "schoolWeek": "22",
@@ -2135,8 +2153,10 @@ export const LF9_POSTS: Post[] = [
     },
     {
         "url": "oeffentliche_netze_und_dienste/dsl_technik_und_xdsl_familie",
-        "topic": "Öffentliche Netze und Dienste",
+        "title": "DSL-Technik und xDSL Familie",
+        "description": "Mitschrift vom 01.03.2021",
         "subject": "lf-9",
+        "type": "article",
         "lessonDate": "2021-03-01",
         "lastUpdate": "2021-03-09",
         "schoolWeek": "22",
