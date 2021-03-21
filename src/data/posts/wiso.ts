@@ -1553,7 +1553,7 @@ export const WISO_POSTS: Post[] = [
         "subject": "wiso",
         "type": "tasks",
         "lessonDate": "2021-03-04",
-        "lastUpdate": "2021-03-06",
+        "lastUpdate": "2021-03-19",
         "schoolWeek": "22",
         "elements": [
             {
@@ -1703,83 +1703,32 @@ export const WISO_POSTS: Post[] = [
                 ]
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/6043cef2b0c00c20f201d172"
+                "type": "line",
+                "content": "<hr/>"
             },
             {
-                "type": "text",
-                "content": "<a href='https://wordwall.net/play/10497/555/642'>https://wordwall.net/play/10497/555/642</a>"
-            }
-        ]
-    },
-
-
-
-
-
-    {
-        "url": "test",
-        "topic": "test",
-        "subject": "wiso",
-        "lessonDate": "2020-01-01",
-        "lastUpdate": "2020-01-01",
-        "schoolWeek": "15",
-        "elements": [
-            {
                 "type": "title",
-                "content": "test"
+                "content": "Definition"
             },
             {
                 "type": "subtitle",
-                "content": "test"
-            },
-            {
-                "type": "text",
-                "content": "test"
-            },
-            {
-                "type": "hint",
-                "content": "test"
+                "content": "Bundesrepublik Deutschland = Sozialstaat"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/6053e08aec849e78978418b1"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
-                "type": "code",
-                "language": "javascript",
-                "content": "test"
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6043cef2b0c00c20f201d172"
             },
             {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "test",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "test" }
-                        ]
-                    }
-                ]
+                "type": "text",
+                "content": "<a href='https://wordwall.net/play/10497/555/642'>https://wordwall.net/play/10497/555/642</a>"
             }
         ]
     }

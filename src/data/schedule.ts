@@ -5,8 +5,8 @@ export const schedule: Schedule[] = [
     day: 0,
     lessons: [
       {
-        subject: 'lf-9',
-        teacher: 'anders',
+        subject: 'lf-7-1',
+        teacher: 'pofahl',
         block: 1
       },
       {
@@ -15,14 +15,9 @@ export const schedule: Schedule[] = [
         block: 2
       },
       {
-        subject: 'sport',
-        teacher: 'dekarz',
+        subject: 'wiso',
+        teacher: 'trosin',
         block: 3
-      },
-      {
-        subject: 'deutsch',
-        teacher: 'nehls',
-        block: 4
       }
     ]
   },
@@ -35,8 +30,8 @@ export const schedule: Schedule[] = [
         block: 1
       },
       {
-        subject: 'englisch',
-        teacher: 'vogler',
+        subject: 'lf-8',
+        teacher: 'kirmis',
         block: 2
       },
       {
@@ -55,8 +50,8 @@ export const schedule: Schedule[] = [
     day: 2,
     lessons: [
       {
-        subject: 'wp',
-        teacher: 'schneider',
+        subject: 'deutsch',
+        teacher: 'nehls',
         block: 1
       },
       {
@@ -68,11 +63,6 @@ export const schedule: Schedule[] = [
         subject: 'wp',
         teacher: 'schneider',
         block: 3
-      },
-      {
-        subject: 'englisch',
-        teacher: 'vogler',
-        block: 4
       }
     ]
   },

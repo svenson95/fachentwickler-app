@@ -1977,7 +1977,7 @@ export const LF9_POSTS: Post[] = [
         "subject": "lf-9",
         "type": "article",
         "lessonDate": "2021-03-01",
-        "lastUpdate": "2021-03-01",
+        "lastUpdate": "2021-03-19",
         "schoolWeek": "22",
         "elements": [
             {
@@ -2133,8 +2133,143 @@ export const LF9_POSTS: Post[] = [
                 "list": [
                     "Ein oder mehrere Signalparameter wie Amplitude, Frequenz oder Phase eines Trägersignals durch das Informationssignal verändert oder moduliert.",
                     "Dem Träger wird dabei das Informationssignal, das auch als Modulationssignal bezeichnet wird, \"aufgeprägt\"",
-                    "..."
+                    "Danach besitzt die Information eine andere Signalform / befindet sich im neuen Frequenzband",
+                    "Jede Signalart kann als Trägersignal dienen",
+                    {
+                        "content": "Praktische Bedeutung haben harmonisch sinusförmige Trägersignale",
+                        "sublist": [
+                            "Als zeitkontinuierlichen Träger",
+                            "Periodische, rechteckförmige Impulse als zeitdiskrete Träger"
+                        ]
+                    },
+                    "Wird mathematisch durch Multiplikation des Trägers mit der Information beschrieben",
+                    "Dabei entstehen neue Frequenzen im Ausgangssignal, die in den Anfangssignalen nicht enthalten sind und Frequenzen können ganz verschwinden",
+                    "Im Gegensatz zur additiven Signalüberlagerung an Baugruppen mit linearer Kennlinie, beispielsweise einer Widerstandsmatrix, findet die Modulation an einer nichtlinearen Kennlinie statt, wie sie eine Diode oder eine Eingangsstrecke eines Transistors aufweist"
                 ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Amplituden-Modulation"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Amplitudenmodulation wird ein hochfrequentes Trägersignal erzeugt und mit der Amplitude (Lautstärkeinformation) des Audiosignals verändert. Die Frequenz des Informationssignals ist nicht mehr unmittelbar im Träger enthalten, sondern wirkt sich als Amplitudenschwankungen des Trägersignals aus."
+            },
+            {
+                "type": "list",
+                "content": "Eigenschaften der Amplitudenmodulation",
+                "list": [
+                    "Die AM ist störanfällig, weil die Information in der Amplitude steckt",
+                    "Wird sie beeinflusst, so ist die Information weg oder verfälscht",
+                    "Es kann nicht jede beliebige Amplitude übertragen werden",
+                    "Die Bandbreite (Δf) liegt bei 10 kHz"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546c43ec849e78978418be"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Störungen bei Amplitudenmodulation"
+            },
+            {
+                "type": "list",
+                "content": "Gegen atmosphärischen und technischen Störungen anfällig",
+                "list": [
+                    "Störungen im hochfrequenten Bereich werden zum Nutzsignal hinzuaddiert und sind, sofern ausreichend stark, zum Beispiel als Knackser aus einem Lautsprecher zu hören",
+                    "Wettererscheinungen",
+                    "Schaltvorgänge im Stromnetz (ein- und ausschalten von Geräten)",
+                    "Hochfrequente Übertragungen im Stromnetz (hochfrequente Abstrahlung)",
+                    "Die Folge sind Verzerrungen, schlechte Übertragungsqualität",
+                    "Sie ist weniger störanfällig als Amplitudenmodulation",
+                    "Gehört zur Gruppe der Winkelmodulationen",
+                    "Ist der Phasenmodulation sehr ähnlich"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Was läuft prinzipiell ab ..."
+            },
+            {
+                "type": "text",
+                "content": "Es wird ein hochfrequentes Trägersignal erzeugt und damit die Sendefrequenz um einen kleinen Betrag verändert. Die Amplitude des Signals bleibt unverändert."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Frequenz-Modulation"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546d6aec849e78978418c0"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Phasen-Modulation"
+            },
+            {
+                "type": "text",
+                "content": "(PM) zählt wie die Frequenzmodulation zu den Winkelmodulationen. Bei Wertewechsel von „0“ auf „1“ wird Phasenlage des Trägersignals um 180° gedreht. Nach Wechsel von „1“ auf „0“ kehrt Trägersignal in „normale“ Phasenlage zurück."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546e45ec849e78978418c2"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Modulationen im Vergleich"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546e74ec849e78978418c4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Puls-Code-Modulation"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Ursprünglich zur mehrfachen Ausnutzung eines Verbindungsweges entwickelt",
+                    "Materialeinsparung und Sicherheit gleichermaßen wichtig"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546eeeec849e78978418c7"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546f40ec849e78978418ca"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60546fb0ec849e78978418cc"
             },
             {
                 "type": "line",
@@ -2158,7 +2293,7 @@ export const LF9_POSTS: Post[] = [
         "subject": "lf-9",
         "type": "article",
         "lessonDate": "2021-03-01",
-        "lastUpdate": "2021-03-09",
+        "lastUpdate": "2021-03-19",
         "schoolWeek": "22",
         "elements": [
             {
@@ -2247,6 +2382,10 @@ export const LF9_POSTS: Post[] = [
                 ]
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "subtitle",
                 "content": "Analoge Modems - Überlastung der OVSt"
             },
@@ -2277,6 +2416,10 @@ export const LF9_POSTS: Post[] = [
                     "Satelliten",
                     "Power Lines (Netzwerk über Stromleitung aufbauen)"
                 ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "subtitle",
@@ -2377,7 +2520,547 @@ export const LF9_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ist die Dämpfung zu hoch, kann kein oder nur ein langsameres DSL geschaltet werden. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann."
+                "content": "Ist die Dämpfung zu hoch, kann kein oder nur ein langsameres DSL geschaltet werden. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann."
+            },
+            {
+                "type": "table",
+                "content": "Dämpfungsgrenzen bei T-DSL:",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "384 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "50 dB (55 dB in Bayern)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "768 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "46 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "1024 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "43 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "1536 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "39,5 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "2048 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "36,5 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "2304 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "35 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "3072 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "32 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "6016 kbit/s" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "18 dB*" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "* Für FastPath je 4 dB weniger beziehungsweise 3 dB weniger bei 6016 kbit/s"
+            },
+            {
+                "type": "table",
+                "content": "Dämpfungsgrenzen ehemals Arcor:",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "DSL 1000" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "60 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "DSL 2000" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "46 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "DSL 6000" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "41 dB" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "DSL 16000 (ADSL2+)" },
+                            { "align": "middle", "content": "bis" },
+                            { "align": "left", "content": "25 dB (Entstörung nur bis 10 dB)" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Wird dem Teilnehmer eine DSL-Leitung trotz überschreiten der Dämpfungsgrenzen zur Verfügung gestellt und in diesem technischen Grenzbereich betrieben, kann dies zu Problemen bei der Benutzung führen - zum Beispiel ungewollte Verbindungsabbrüche."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Geschwindigkeiten"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Produktname" },
+                            { "align": "right", "content": "Downstream" },
+                            { "align": "left", "content": "Upstream (kbit/s)" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "ab 1. Juli 1999 - <sup>1</sup> als Ausnahme bei großen Leitungslängen (= großer Dämpfung)", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 384<sup>1</sup>" },
+                            { "align": "right", "content": "384 kbit/s" },
+                            { "align": "left", "content": "64 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 768" },
+                            { "align": "right", "content": "768 kbit/s" },
+                            { "align": "left", "content": "128 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "ab Mai 2002<sup>2</sup> / September 2002<sup>3</sup> - <sup>2</sup> in bestimmten Städten | <sup>3</sup> bundesweit", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 768" },
+                            { "align": "right", "content": "768 kbit/s" },
+                            { "align": "left", "content": "128 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 1500" },
+                            { "align": "right", "content": "1536 kbit/s" },
+                            { "align": "left", "content": "192 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "ab 1. April 2004", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 1000" },
+                            { "align": "right", "content": "1024 kbit/s" },
+                            { "align": "left", "content": "128 kbit/s (256 gegen Aufpreis)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 2000" },
+                            { "align": "right", "content": "2048 kbit/s" },
+                            { "align": "left", "content": "192 kbit/s (384 gegen Aufpreis)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 3000" },
+                            { "align": "right", "content": "3072 kbit/s" },
+                            { "align": "left", "content": "384 kbit/s (512 gegen Aufpreis)" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "ab 1. Juli 2005", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 1000" },
+                            { "align": "right", "content": "1024 kbit/s" },
+                            { "align": "left", "content": "128 kbit/s (256 gegen Aufpreis)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 2000" },
+                            { "align": "right", "content": "2048 kbit/s" },
+                            { "align": "left", "content": "192 kbit/s (384 gegen Aufpreis)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 6000" },
+                            { "align": "right", "content": "6016 kbit/s" },
+                            { "align": "left", "content": "576 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Pilotprojekt / ab Mitte Mai 2006", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 16000 (ADSL2+)" },
+                            { "align": "right", "content": "16000 kbit/s" },
+                            { "align": "left", "content": "1024 kbit/s" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Pilotprojekt", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "T-DSL 25000 (VDSL)" },
+                            { "align": "right", "content": "~25000 kbit/s" },
+                            { "align": "left", "content": "~5000 kbit/s" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Gesamtübersicht"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "DSL-Variante", "rowSpan": 2 },
+                            { "align": "left", "content": "Übertragung (möglich)", "rowSpan": 2 },
+                            { "align": "middle", "content": "Doppel-<br/>-adern", "rowSpan": 2 },
+                            { "align": "middle", "content": "Datenrate", "colSpan": 2 },
+                            { "align": "middle", "content": "Reichweite", "rowSpan": 2 },
+                            { "align": "middle", "content": "POTS/<br/>ISDN", "rowSpan": 2 },
+                            { "align": "middle", "content": "Anwendung", "rowSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Downstream" },
+                            { "align": "middle", "content": "Upstream" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "ADSL" },
+                            { "align": "left", "content": "asymmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "8 MBit/s" },
+                            { "align": "right", "content": "640 kBit/s" },
+                            { "align": "right", "content": "ca. 5 km" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "ADSL2" },
+                            { "align": "left", "content": "asymmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "12 MBit/s" },
+                            { "align": "right", "content": "1 MBit/s" },
+                            { "align": "right", "content": "" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "ADSL2+" },
+                            { "align": "left", "content": "asymmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "25 MBit/s" },
+                            { "align": "right", "content": "3,5 MBit/s" },
+                            { "align": "right", "content": "" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "G.lite-ADSL" },
+                            { "align": "left", "content": "asymmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "1,5 MBit/s" },
+                            { "align": "right", "content": "500 kBit/s" },
+                            { "align": "right", "content": "ca. 8 km" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "HDSL" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "25 MBit/s" },
+                            { "align": "right", "content": "3,5 MBit/s" },
+                            { "align": "right", "content": "" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "HDSL", "rowSpan": 2 },
+                            { "align": "left", "content": "symmetrisch", "rowSpan": 2 },
+                            { "align": "middle", "content": "2" },
+                            { "align": "right", "content": "1,544 MBit/s" },
+                            { "align": "right", "content": "1,544 MBit/s" },
+                            { "align": "right", "content": "ca. 4,5 km", "rowSpan": 2 },
+                            { "align": "middle", "content": "nein", "rowSpan": 2 },
+                            { "align": "left", "content": "WAN", "rowSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "right", "content": "2,048 MBit/s" },
+                            { "align": "right", "content": "2,048 MBit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "HDSL2" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "2 MBit/s" },
+                            { "align": "right", "content": "2 MBit/s" },
+                            { "align": "right", "content": "ca. 3,6 km" },
+                            { "align": "middle", "content": "nein" },
+                            { "align": "left", "content": "WAN" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SDSL" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "ca. 2,5 km" },
+                            { "align": "middle", "content": "nein" },
+                            { "align": "left", "content": "WAN" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SHDSL" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "ca. 4 km" },
+                            { "align": "middle", "content": "nein" },
+                            { "align": "left", "content": "WAN" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "G.SHDSL", "rowSpan": 2 },
+                            { "align": "left", "content": "symmetrisch", "rowSpan": 2 },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "1,2 MBit/s" },
+                            { "align": "right", "content": "1,2 MBit/s" },
+                            { "align": "right", "content": "ca. 6 km", "rowSpan": 2 },
+                            { "align": "middle", "content": "nein", "rowSpan": 2 },
+                            { "align": "left", "content": "WAN", "rowSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "2,36 MBit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "VDSL(2)" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "100 MBit/s" },
+                            { "align": "right", "content": "100 MBit/s" },
+                            { "align": "right", "content": "ca. 1 km" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Es gilt: <u>Je weiter ein Teilnehmer von der Vermittlungsstelle entfernt ist, desto niedriger ist die maximal erzielbare Datenübertragungsrate.</u>"
+            },
+            {
+                "type": "text",
+                "content": "Die Bedingung für die Verfügbarkeit von DSL ist eine geringe Dämpfung der Teilnehmeranschlussleitung (gemessen in dB) - je niedriger diese ist, desto höher die maximale Datenübertragungsrate."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60548ec3ec849e78978418d0"
+            },
+            {
+                "type": "list",
+                "content": "Es gibt verschiedene Arten von DSL-Techniken, die unter der Bezeichnung »DSL« oder »xDSL« (x als Platzhalter für das spezifische Verfahren) zusammengefasst werden:",
+                "list": [
+                    {
+                        "content": "<b>ADSL</b>",
+                        "sublist": [
+                            "<i>Asymmetric Digital Subscriber Line</i>",
+                            "16 MBit/s Downstream",
+                            "1 MBit/s Upstream"
+                        ]
+                    },
+                    {
+                        "content": "<b>ADSL2</b>",
+                        "sublist": [
+                            "Erweitere Form von ADSL",
+                            "25 MBit/s Downstream",
+                            "1 MBit/s Upstream"
+                        ]
+                    },
+                    {
+                        "content": "<b>HDSL</b>",
+                        "sublist": [
+                            "<i>High Data Rate Digital Subscriber Line</i>",
+                            "symmetrische Datenübertragungstechnologie",
+                            "1,54 ~ 2,04 Mbit/s Downstream",
+                            "1,54 ~ 2,04 Mbit/s Upstream"
+                        ]
+                    },
+                    {
+                        "content": "<b>SDSL (G.SHDSL)</b>",
+                        "sublist": [
+                            "<i>Symmetrical Digital Subscriber Line</i>",
+                            "symmetrische Datenübertragungstechnologie",
+                            "3 Mbit/s symmetrisch (Up- & Downstream)",
+                            "bei vieradriger Anschaltung (2 Kupfer-Doppeladern) können maximal 4 Mbit/s übertragen werden",
+                            "Alternativ kann auch die Reichweite auf Kosten der Bandbreite erhöht werden"
+                        ]
+                    },
+                    {
+                        "content": "<b>VDSL</b>",
+                        "sublist": [
+                            "<i>Very High Data Rate Digital Subscriber Line</i>",
+                            "asymmetrische Datenübertragungstechnologie",
+                            "12,9 ~ 51,8 Mbit/s Downstream",
+                            "1,6 ~ 2,3 Mbit/s Upstream",
+                            "symmetrische Datenübertragungstechnologie",
+                            "Up- & Downstream gleich schnell"
+                        ]
+                    },
+                    {
+                        "content": "<b>UADSL, UDSL</b>",
+                        "sublist": [
+                            "<i>Universal (Asymmetric) Digital Subscriber Line</i>"
+                        ]
+                    },
+                    {
+                        "content": "<b>IDSL</b>",
+                        "sublist": [
+                            "<i>ISDN Digital Subscriber Line</i>",
+                            "verwendet vorhandene ISDN-Technik",
+                            "Datenraten bis zu 160 kbit/s"
+                        ]
+                    }
+                ]
             },
             {
                 "type": "line",
