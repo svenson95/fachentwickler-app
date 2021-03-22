@@ -44,7 +44,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: $fia-dark-background-color;
+    color: black;
+    background: $fia-light-background-color;
     padding: 8px 12px;
     border-radius: $fia-border-radius;
     cursor: pointer;
@@ -73,13 +74,15 @@
         border-color: $fia-primary-color;
       }
 
-      &:hover {
-        .fia-title {
-          letter-spacing: 0.25px;
-          text-decoration: underline;
-          text-decoration-color: $fia-secondary-color;
-          transition: letter-spacing 500ms ease-in-out;
-        }
+      &:hover .fia-title {
+        letter-spacing: 0.25px;
+        text-decoration: underline;
+        text-decoration-color: $fia-secondary-color;
+        transition: letter-spacing 500ms ease-in-out;
+      }
+
+      &:active .fia-title {
+        letter-spacing: 0.1px;
       }
     }
 

@@ -2,7 +2,6 @@
 @import 'src/theme/mixins';
 
 .fia-school-week-card {
-  color: white;
 
   .fia-header-wrapper {
     display: flex;
@@ -23,12 +22,11 @@
 
       .fia-previous-week-btn,
       .fia-next-week-btn {
-        background: $fia-dark-background-color;
+        background: $fia-light-background-color;
         width: 40px;
         height: 40px;
         border: none;
         outline: none;
-        color: $fia-third-color;
         cursor: pointer;
         line-height: initial;
 
@@ -44,12 +42,20 @@
 
         &:hover {
           transform: translateY(-1px);
-          box-shadow: 0 3px 6px rgba(0,0,0, .4);
+          box-shadow: 0 3px 6px rgba(160,160,160, .3);
+
+          mat-icon {
+            color: $fia-primary-color;
+          }
         }
 
         &:active {
           transform: translateY(0px);
-          box-shadow: 0 0 2px rgba(0,0,0, .4);
+          box-shadow: 0 0 2px rgba(160,160,160, .3);
+        }
+
+        mat-icon {
+          color: $fia-third-color;
         }
       }
 
@@ -97,27 +103,3 @@
   }
 }
 
-/* LIGHT THEME */
-::ng-deep .light-theme {
-
-  .fia-button-wrapper {
-
-    .fia-previous-week-btn,
-    .fia-next-week-btn {
-      box-shadow: 0 4px 5px rgba(160,160,160, 0) !important;
-
-      &:hover {
-        color: $fia-primary-color !important;
-
-        transform: translateY(-1px);
-        box-shadow: 0 3px 6px rgba(160,160,160, .3) !important;
-      }
-
-      &:active {
-        transform: translateY(0px);
-        box-shadow: 0 0 2px rgba(160,160,160, .3) !important;
-      }
-    }
-
-  }
-}

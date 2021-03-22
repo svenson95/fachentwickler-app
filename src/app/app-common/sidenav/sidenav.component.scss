@@ -50,7 +50,6 @@
   }
 
   .section-title {
-    color: white;
     font-size: 1em;
     font-family: Nunito-Light, sans-serif;
     padding: 8px 10px 8px 10px;
@@ -69,7 +68,7 @@
   }
 
   .fia-nav-item {
-    color: white;
+    color: black;
     font-size: .9em;
     letter-spacing: 1px;
     height: fit-content;
@@ -100,11 +99,10 @@
     }
 
     &:hover, &:focus {
-      background-color: $fia-dark-background-color;
 
       @include from-md {
         .fia-nav-item-icon {
-          color: white;
+          color: black;
           transition: $fia-nav-item-icon-fade-duration;
         }
       }
@@ -114,7 +112,7 @@
       color: $fia-secondary-color;
 
       .fia-nav-item-icon {
-        color: white;
+        color: black;
       }
     }
 

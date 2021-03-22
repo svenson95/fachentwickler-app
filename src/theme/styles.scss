@@ -21,7 +21,6 @@
 
 @import 'src/theme/mixins';
 @import 'src/theme/variables';
-@import 'src/theme/light-theme';
 
 
 .unselectable {
@@ -49,7 +48,15 @@ u {
 }
 
 hr {
-  background: $fia-grey-1;
+  background: $fia-grey-3;
+}
+
+p {
+  color: black;
+}
+
+mat-card {
+  color: black;
 }
 
 button {
@@ -66,7 +73,7 @@ button {
   font-size: 1em;
   justify-content: center;
   color: $fia-secondary-color;
-  background: $fia-dark-background-color;
+  background: $fia-light-background-color;
   border-radius: 50%;
   margin-right: 5px;
   flex-shrink: 0;
@@ -80,8 +87,8 @@ button {
 }
 
 .mat-app-background {
-  background-color: $fia-dark-header-color;
-  color: white;
+  //background-color: $fia-light-background-color;
+  //color: black;
 }
 
 .fia-title, .fia-link-title {
@@ -92,7 +99,7 @@ button {
 
 /* FIAPPY - PAGE */
 .fia-page {
-  background: $fia-dark-background-color;
+  background: $fia-light-background-color;
   padding: 20px 20px 20px 0;
 
   @include to-xs {
@@ -111,7 +118,7 @@ a {
   color: $fia-secondary-color;
 
   &:hover, &:focus {
-    color: white;
+    color: black;
     text-decoration-color: $fia-secondary-color;
   }
 }
@@ -126,9 +133,9 @@ a {
 /* FIAPPY - CARDS */
 .fia-card {
   max-width: 1070px;
-  background: $fia-dark-card-color;
+  background: $fia-light-card-color;
   padding: 20px;
-  box-shadow: $fia-dark-shadow;
+  box-shadow: $fia-light-shadow;
   border-radius: $fia-border-radius;
   margin-bottom: 20px;
   margin-right: 0;
@@ -144,20 +151,16 @@ a {
 
   .fia-post-last-update {
     font-size: .9em;
-    color: $fia-grey-1;
+    color: $fia-grey-2;
     text-align: right;
     margin-top: 40px;
-  }
-
-  p, li {
-    color: white;
   }
 }
 
 .fia-card-title {
   font-size: 1.5em;
   font-family: Nunito-Light, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   line-height: 26px;
   text-decoration: underline;
   text-decoration-color: $fia-secondary-color;
@@ -167,9 +170,10 @@ a {
   }
 }
 
-.fia-card-description {
+p.fia-card-description {
   font-size: 1.1em;
-  color: $fia-grey-1;
+  letter-spacing: 1px;
+  color: $fia-grey-2 !important;
 
   @include to-xs {
     font-size: 1em;
@@ -250,7 +254,7 @@ a {
   padding: 5px 10px;
 
   border-radius: $fia-button-radius;
-  box-shadow: 0 4px 5px rgba(0,0,0, 0);
+  box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
   color: black;
   font-size: .8em;
@@ -263,12 +267,12 @@ a {
 
   &:hover {
     transform: translateY(-1px);
-    box-shadow: 0 3px 6px rgba(0,0,0, .4);
+    box-shadow: 0 3px 6px rgba(160,160,160, .3);
   }
 
   &:active {
     transform: translateY(0px);
-    box-shadow: 0 0 2px rgba(0,0,0, .4);
+    box-shadow: 0 0 2px rgba(160,160,160, .3) !important;
   }
 
   &:hover {
@@ -311,7 +315,7 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 .fia-text-button {
-  background-color: $fia-dark-background-color;
+  background-color: $fia-light-background-color;
   color: $fia-third-color;
   text-transform: uppercase;
   font-family: Nunito-ExtraBold, sans-serif;
@@ -328,15 +332,15 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   }
 
   &.second-color {
-    background-color: black;
+    background-color: white;
   }
 
   &:disabled {
-    background: black;
     border: none;
+    background: rgba($fia-dark-card-color, 0.2);
 
     span {
-      color: #36393c;
+      color: white;
     }
   }
 

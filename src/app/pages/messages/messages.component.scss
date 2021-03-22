@@ -47,11 +47,3 @@
   }
 }
 
-::ng-deep {
-  .light-theme {
-    .fia-teacher,
-    .fia-teacher .value {
-      border-color: $fia-grey-3 !important;
-    }
-  }
-}

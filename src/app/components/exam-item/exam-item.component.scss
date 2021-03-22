@@ -95,19 +95,22 @@
         outline: none;
         align-items: center;
 
-        &:hover {
-          span {
-            letter-spacing: 2px;
-            transition: letter-spacing 400ms ease-out;
-          }
+        &:hover span {
+          letter-spacing: 2px;
+          transition: letter-spacing 400ms ease-out;
+        }
+
+        &:active span {
+          letter-spacing: 1px;
         }
 
         span {
           font-family: Nunito-ExtraBold, sans-serif;
           font-size: .9em;
+          color: white;
           text-transform: uppercase;
-          background-color: rgba($fia-third-color, .5);
-          border: 1px solid rgba($fia-third-color, .5);
+          background-color: $fia-third-color;
+          border: 1px solid $fia-third-color;
           border-radius: 16px;
           padding: 3px 10px;
           flex-shrink: 0;
@@ -116,7 +119,7 @@
         }
 
         &.is-open span {
-          font-family: Nunito-Regular, sans-serif;
+          color: $fia-grey-4;
         }
 
         hr {

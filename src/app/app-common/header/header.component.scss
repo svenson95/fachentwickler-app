@@ -3,7 +3,7 @@
 
 .fia-header {
   justify-content: space-between;
-  background: $fia-dark-header-color;
+  background: white;
   height: 80px;
   max-width: 1370px;
   transition: height 300ms ease-out;
@@ -64,7 +64,6 @@
     }
 
     h1.fia-app-name {
-      color: white;
       margin-bottom: 4px;
       font-size: 1.2em;
       font-family: Nunito-Light, sans-serif;
@@ -130,7 +129,7 @@
 
       .fia-search-bar {
         height: 40px;
-        background: $fia-dark-card-color;
+        background: $fia-light-background-color;
         border-radius: $fia-border-radius;
         width: 220px;
 
@@ -188,7 +187,7 @@
       margin-right: 12px;
       padding: 6px 10px;
 
-      color: white;
+      color: black;
       font-weight: 200;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -277,7 +276,7 @@
         .fia-action-btn {
           margin-left: 8px;
           margin-right: 0;
-          background: $fia-dark-card-color;
+          background: $fia-light-background-color;
 
           @include to-xs {
             margin-left: 0;
@@ -286,7 +285,7 @@
 
           &:hover {
             :not(.fia-hover-label) {
-              color: white;
+              color: $fia-primary-color;
             }
           }
 
@@ -307,7 +306,7 @@
           border-radius: $fia-button-radius;
           box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
-          color: black;
+          color: white;
           font-size: .6em;
           font-family: Nunito-ExtraBold, sans-serif;
           text-transform: uppercase;
@@ -428,7 +427,7 @@
   z-index: 999;
 
   ::ng-deep .mat-progress-bar-buffer {
-    background: $fia-dark-background-color;
+    background: $fia-light-background-color
   }
 
   @include to-xs {
@@ -437,32 +436,9 @@
   }
 }
 
-::ng-deep .light-theme {
-  .fia-header-login-btn {
-    color: white !important;
-
-    &:hover {
-      color: white !important;
-    }
-  }
-
-  .fia-button-container .fia-action-btn:hover {
-    .mat-icon {
-      color: black !important;
-    }
-  }
-
-  .scrolled  {
-    .fia-search-bar {
-      background: rgba($fia-light-card-color, .5) !important;
-      //transition: background-color 300ms ease-in;
-    }
-  }
-}
-
 ::ng-deep .scrolled  {
   .fia-search-bar {
-    background: rgba($fia-dark-card-color, .5) !important;
+    background: rgba($fia-light-card-color, .4) !important;
     //transition: background-color 300ms ease-in;
   }
 }

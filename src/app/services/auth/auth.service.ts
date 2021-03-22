@@ -208,9 +208,9 @@ export class AuthService {
     this.theme === 'dark' ? this.theme = 'light' : this.theme = 'dark';
     this.themeChange.next(this.theme);
     if (this.theme === 'dark') {
-      document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
+      // document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
     } else {
-      document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
+      // document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
     }
   }
 

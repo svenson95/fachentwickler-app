@@ -4,7 +4,7 @@
 .fia-page-container {
   display: flex;
   flex-direction: column;
-  background-color: $fia-dark-header-color;
+  background-color: white;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -16,15 +16,15 @@
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
-  background-color: $fia-dark-header-color;
+  //background-color: $fia-light-background-color;
 
   ::ng-deep {
     .fia-page-content {
-      background: $fia-dark-header-color;
+      //background: $fia-light-background-color;
     }
 
     .mat-drawer-content {
-      background-color: $fia-dark-header-color;
+      background-color: white;
 
       // Scrollbar
       &::-webkit-scrollbar {
@@ -54,7 +54,7 @@
 }
 
 .fia-sidenav {
-  background: $fia-dark-background-color;
+  background: $fia-light-background-color;
 }
 
 .mat-drawer-container {

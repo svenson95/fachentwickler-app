@@ -13,12 +13,12 @@
       flex-direction: column;
 
       &:not(:last-of-type) {
-        border-right: 1px solid $fia-grey-1;
+        border-right: 1px solid $fia-grey-4;
       }
 
       th {
         min-height: 20px;
-        border-bottom: 1px solid $fia-grey-1;
+        border-bottom: 1px solid $fia-grey-4;
 
         @include to-md {
           font-size: .8em;
@@ -49,7 +49,6 @@
         }
 
         .fia-hour-subject {
-          color: white;
 
           @include from-sm {
             min-width: 50px;
@@ -61,7 +60,7 @@
         }
 
         .fia-hour-teacher {
-          color: $fia-grey-1 !important;
+          color: $fia-grey-2;
           font-size: .9em;
           line-height: 12px;
 
@@ -72,7 +71,7 @@
       }
 
       .fia-schedule-header {
-        color: $fia-grey-1;
+        color: $fia-grey-2;
       }
 
       .fia-schedule-header,
@@ -81,7 +80,7 @@
 
       .fia-schedule-time {
         text-align: left;
-        color: white;
+        color: black;
 
         @include from-xs {
           min-width: 50px;
@@ -92,15 +91,5 @@
         }
       }
     }
-  }
-}
-
-::ng-deep .light-theme .fia-schedule-table {
-  tr, th {
-    border-color: $fia-grey-4 !important;
-  }
-
-  td, span {
-    color: black !important;
   }
 }

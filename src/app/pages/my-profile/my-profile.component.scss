@@ -127,19 +127,3 @@
   }
 }
 
-::ng-deep {
-  .light-theme {
-    .fia-card .fia-view-wrapper {
-      .fia-input ::ng-deep {
-        .mat-form-field-outline {
-          color: $fia-grey-3 !important;
-          opacity: 1;
-        }
-
-        .mat-form-field-label {
-          color: $fia-grey-2 !important;
-        }
-      }
-    }
-  }
-}

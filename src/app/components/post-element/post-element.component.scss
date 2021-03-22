@@ -5,7 +5,6 @@
 @import '~highlight.js/styles/github.css';
 
 .fia-post-item {
-  color: white;
   overflow: auto;
 
   .post-title {
@@ -20,7 +19,8 @@
 
   .post-subtitle {
     font-size: 1.3em;
-    font-family: Nunito-Light, sans-serif;
+    font-family: Nunito-Regular, sans-serif;
+    letter-spacing: .5px;
     margin-top: 20px;
 
     @include to-xs {
@@ -40,9 +40,8 @@
   }
 
   .post-hint {
-    background: $fia-dark-background-color;
+    background: $fia-light-background-color;
     font-size: 1.1em;
-    color: white !important;
     padding: 15px;
     margin: 30px 0;
     border-left: 4px solid $fia-primary-color;
@@ -88,7 +87,7 @@
       width: var(--size);
       height: var(--size);
       //top: 0;
-      background: $fia-dark-background-color;
+      background: $fia-light-background-color;
       border-radius: 50%;
       text-align: center;
       flex-shrink: 0;
@@ -128,7 +127,7 @@
       list-style-type: none;
 
       &::before {
-        color: white;
+        color: black;
         font-size: 1em;
         content: "→";
         margin-right: 5px;

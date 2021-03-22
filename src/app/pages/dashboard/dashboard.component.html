@@ -1,5 +1,6 @@
 <div class="fia-page">
 
+  <app-user-progress-card [user]="user" [dashboard]="dashboard"></app-user-progress-card>
   <app-news-card [onlyLastOne]="true"></app-news-card>
   <app-next-exams-card></app-next-exams-card>
 
@@ -20,7 +21,6 @@
     </mat-card-content>
   </mat-card>
 
-  <app-user-progress-card [user]="user" [dashboard]="dashboard" *ngIf="dashboard !== undefined"></app-user-progress-card>
   <app-school-week-card *ngIf="schoolWeek !== undefined" [week]="schoolWeek" [is-dashboard-page]="true"></app-school-week-card>
 
 </div>

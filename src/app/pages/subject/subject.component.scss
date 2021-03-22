@@ -9,7 +9,8 @@
 }
 
 .topic-description {
-  letter-spacing: 1px;
+  color: $fia-grey-1;
+  letter-spacing: 1.5px;
 }
 
 .fia-topic {
@@ -19,7 +20,6 @@
 
   .fia-topic-title {
     display: flex;
-    color: white;
     font-size: 1.2em;
     line-height: 20px;
     margin-bottom: 15px;
@@ -57,7 +57,7 @@
       height: 1px;
       align-self: center;
       border: none;
-      background-color: $fia-grey-1;
+      background-color: $fia-grey-4;
 
       @include to-md {
         display: none;

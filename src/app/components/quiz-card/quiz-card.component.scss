@@ -52,7 +52,7 @@
       text-align: center;
 
       .quiz-level, .quiz-wrong-answers {
-        background: $fia-dark-background-color;
+        background: $fia-light-background-color;
         border-radius: $fia-border-radius;
         padding: 8px 20px;
       }
@@ -179,16 +179,5 @@
     }
   }
 
-}
-
-::ng-deep {
-  .light-theme {
-    .quiz-question .label {
-
-    }
-    .quiz-level, .quiz-wrong-answers {
-      background: $fia-light-background-color !important;
-    }
-  }
 }
 

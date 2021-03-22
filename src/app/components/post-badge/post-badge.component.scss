@@ -7,11 +7,9 @@
   width: fit-content;
   height: 15px;
   flex-shrink: 0;
-  border: white;
   margin-top: 1px;
   margin-left: 10px;
 
-  color: white;
   font-size: .7em;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -61,6 +59,7 @@
   }
   &.test {
     background: $fia-third-color;
-    color: $fia-dark-background-color;
+    color: white;
+    font-family: Nunito-ExtraBold, sans-serif;
   }
 }

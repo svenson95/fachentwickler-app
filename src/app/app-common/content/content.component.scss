@@ -4,7 +4,7 @@
 .fia-page-footer {
   height: fit-content;
   position: relative;
-  background: $fia-dark-header-color;
+  background: white;
   padding: 35px 20px;
 
   @include to-xs {
@@ -16,7 +16,6 @@
     width: 100%;
     max-width: 1050px;
     justify-content: space-between;
-    color: white;
     z-index: 3;
     padding: 0 5px;
 
@@ -30,6 +29,7 @@
     display: flex;
     font-size: .9em;
     height: fit-content;
+    color: black;
 
     .first, .second, .third {
       font-family: Nunito-Light, sans-serif;

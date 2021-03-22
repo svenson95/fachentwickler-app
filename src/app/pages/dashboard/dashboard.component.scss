@@ -34,7 +34,7 @@
 
       @include from-sm {
         min-width: 150px;
-        border-left: 1px solid $fia-grey-1;
+        border-left: 1px solid $fia-grey-4;
         padding: 8px;
         margin-left: 20px;
       }
@@ -48,9 +48,8 @@
       }
 
       .fia-substitution-label {
-        color: white;
         padding-bottom: 8px;
-        border-bottom: 1px solid $fia-grey-1;
+        border-bottom: 1px solid $fia-grey-4;
 
         @include to-sm {
           margin-top: 20px;
@@ -65,11 +64,3 @@
   }
 }
 
-::ng-deep .light-theme {
-  .fia-schedule-time, .fia-hour-subject, .fia-substitution-label {
-    color: black !important;
-  }
-  .fia-substitution-label, .fia-substitions-schedule {
-    border-color: $fia-grey-4 !important;
-  }
-}

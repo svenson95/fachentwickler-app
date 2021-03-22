@@ -39,10 +39,9 @@
     }
 
     ::ng-deep .mat-form-field-flex {
-      background-color: $fia-dark-contrast-color;
+      background-color: $fia-light-background-color;
 
       input {
-        color: white;
       }
     }
   }
@@ -88,17 +87,6 @@
   .fia-text-button:hover {
     span {
       color: $fia-third-color;
-    }
-  }
-}
-
-/* LIGHT-THEME */
-::ng-deep {
-  .light-theme {
-    .fia-register-column {
-      .fia-no-account-hint {
-        color: black !important;
-      }
     }
   }
 }

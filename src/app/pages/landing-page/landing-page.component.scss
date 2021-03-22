@@ -7,13 +7,12 @@
     font-size: 1.6em;
     letter-spacing: 1px;
     line-height: 30px;
-    color: white;
     margin-top: 20px;
     margin-bottom: 0;
   }
 
   .fia-description {
-    color: $fia-grey-1 !important;
+    color: $fia-grey-1;
   }
 
   .fia-welcome-banner {
@@ -86,15 +85,9 @@
         margin: 0;
       }
 
-      .grey-1 {
-        color: $fia-grey-3;
-      }
-      .grey-2 {
-        color: $fia-grey-2;
-      }
-      .grey-3 {
-        color: $fia-grey-1;
-      }
+      .grey-1 { color: $fia-grey-1; }
+      .grey-2 { color: $fia-grey-2; }
+      .grey-3 { color: $fia-grey-3; }
     }
   }
 
@@ -347,21 +340,3 @@
   }
 }
 
-/* LIGHT-THEME */
-::ng-deep {
-  .light-theme {
-    .fia-welcome-banner {
-      .fia-labels {
-        .grey-1 {
-          color: $fia-grey-1 !important;
-        }
-        .grey-2 {
-          color: $fia-grey-2 !important;
-        }
-        .grey-3 {
-          color: $fia-grey-3 !important;
-        }
-      }
-    }
-  }
-}

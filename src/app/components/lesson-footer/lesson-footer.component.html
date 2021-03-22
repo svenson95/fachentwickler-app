@@ -1,6 +1,6 @@
 <mat-card class="fia-card" *ngIf="authService.user !== null">
   <div class="fia-button-container">
-    <button class="fia-text-button" (click)="addUserProgress()" *ngIf="post !== undefined" [disabled]="alreadyRead">
+    <button class="fia-text-button" (click)="addUserProgress()" *ngIf="postId !== undefined" [disabled]="alreadyRead">
       <span>Als gelesen markieren</span>
     </button>
     <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" routerLink="edit">

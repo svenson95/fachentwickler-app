@@ -91,25 +91,12 @@
     }
 
     .fia-button {
-      color: black;
+      color: white;
       font-size: .7em;
       line-height: 11px;
       text-decoration: none;
       align-self: center;
       flex-shrink: 0;
-    }
-  }
-}
-
-::ng-deep .light-theme {
-  .fia-card-header .fia-button.show-more {
-    color: $fia-grey-2 !important;
-    border-color: $fia-grey-2 !important;
-  }
-
-  .fia-news-container {
-    .fia-news-item:not(:last-of-type) {
-      border-color: $fia-grey-4 !important;
     }
   }
 }
