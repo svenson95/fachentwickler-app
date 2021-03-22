@@ -119,6 +119,15 @@ export const topics: Topic[] = [
         ]
     },
     {
+        "title": "Fachliches Englisch",
+        "subject": "lf-5",
+        "links": [
+            "5f429ff8165d0ab470bc5802",
+            "5f42a001165d0ab470bc5803",
+            "5fa416f62821ae28382ab27a"
+        ]
+    },
+    {
         "title": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "links": [
@@ -162,13 +171,15 @@ export const topics: Topic[] = [
             "5fdfd5248c8c2a5e54a4a406",
             "6020f7a865dbdf479177a4bc",
             "603eb6efb0c00c20f201d122",
-            "60428445b0c00c20f201d168"
+            "60428445b0c00c20f201d168",
+            "605855a237cdbc38e21c701c"
         ]
     },
     {
         "title": "Netze und Dienste",
         "subject": "lf-7-2",
         "links": [
+            "5f429dd7165d0ab470bc57ee",
             "5f9594c94363ea1e064c8d53",
             "5f88cd98a0d0cb421f136a50",
             "5f88ce2ca0d0cb421f136a51",
@@ -189,11 +200,10 @@ export const topics: Topic[] = [
         ]
     },
     {
-        "title": "Übertragungstechnik",
+        "title": "Markt und Kundenbeziehungen",
         "subject": "lf-8",
         "links": [
             "5f6fe46a539ea9f7ca3856ef",
-            "5f429dd7165d0ab470bc57ee",
             "5fdfda778c8c2a5e54a4a40d",
             "6020fe0e65dbdf479177a4bf",
             "6021041865dbdf479177a4c2",
@@ -216,7 +226,8 @@ export const topics: Topic[] = [
             "5ffca13ae3bc33038ff5f16d",
             "6021366d65dbdf479177a4cc",
             "603cc763b791dc7b6076e1ac",
-            "603cf9deb0c00c20f201d0fe"
+            "603cf9deb0c00c20f201d0fe",
+            "60585dfe4756c974afde617a"
         ]
     },
     {
@@ -266,15 +277,6 @@ export const topics: Topic[] = [
             "5f429eb6165d0ab470bc57f7",
             "5f6f7e2c539ea9f7ca3856ea",
             "5ffca3e0e3bc33038ff5f16f"
-        ]
-    }
-    {
-        "title": "Basics",
-        "subject": "englisch",
-        "links": [
-            "5f429ff8165d0ab470bc5802",
-            "5f42a001165d0ab470bc5803",
-            "5fa416f62821ae28382ab27a"
         ]
     },
     {

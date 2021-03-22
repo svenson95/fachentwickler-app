@@ -15,6 +15,7 @@ import {
   mailOutline,
   pencilOutline,
   pieChartOutline,
+  radioOutline,
   schoolOutline,
   serverOutline,
   swapHorizontalOutline,
@@ -57,7 +58,7 @@ export const subjects: MenuItem[] = [
     title: 'Lernfeld 5',
     shortTitle: 'LF-5',
     url: '/lf-5',
-    icon: codeSlashOutline,
+    icon: languageOutline,
   },
   {
     title: 'Lernfeld 6',
@@ -75,7 +76,7 @@ export const subjects: MenuItem[] = [
     title: 'Lernfeld 7-2',
     shortTitle: 'LF-7-2',
     url: '/lf-7-2',
-    icon: gitNetworkOutline,
+    icon: radioOutline,
   },
   {
     title: 'Lernfeld 8',
@@ -100,12 +101,6 @@ export const subjects: MenuItem[] = [
     shortTitle: 'WiSo',
     url: '/wiso',
     icon: bodyOutline,
-  },
-  {
-    title: 'Englisch',
-    shortTitle: 'Eng',
-    url: '/englisch',
-    icon: languageOutline,
   },
   {
     title: 'Deutsch',
