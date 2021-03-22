@@ -41,7 +41,9 @@
   </ol>
   <!-- IMAGE -->
   <div class="post-image-wrapper" *ngSwitchCase="ElementType.IMAGE">
-    <img class="post-image" *ngIf="image" [src]="image" alt="image"/>
+      <img class="post-image" *ngIf="image" [src]="image" alt="image"
+           [class.small]="element.size === 's'" [class.medium]="element.size === 'm'" [class.large]="element.size === 'l'"
+      />
     <mat-spinner class="fia-loading-spinner" *ngIf="image === false"></mat-spinner>
     <p style="color: grey !important;" *ngIf="image === null">no image found</p>
   </div>

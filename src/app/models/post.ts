@@ -22,6 +22,7 @@ export interface PostElement {
   ordered?: boolean;
   rows?: TableRow[];
   object?: object;
+  size?: string;
 }
 
 interface SublistItem {
