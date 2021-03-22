@@ -11,6 +11,7 @@ export interface Post {
   lastUpdate: string;
   schoolWeek: string;
   elements: PostElement[];
+  topicId?: string;
 }
 
 export interface PostElement {

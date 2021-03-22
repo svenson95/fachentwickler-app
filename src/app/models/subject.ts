@@ -1,7 +1,8 @@
 
 export interface Subject {
   subject: string;
-  topics: string[];
+  description: string;
+  topics: string[] | Topic[];
   tests?: string[];
 }
 

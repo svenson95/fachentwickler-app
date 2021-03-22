@@ -3,6 +3,7 @@
     <p class="fia-card-title">Themen</p>
     <mat-spinner class="fia-loading-spinner" *ngIf="subject === undefined"></mat-spinner>
     <mat-card-content *ngIf="subject !== undefined">
+      <p class="topic-description" *ngIf="subject.description !== undefined">{{subject.description}}</p>
       <div class="fia-topic" *ngFor="let topic of subject.topics">
         <h2 class="fia-topic-title">
           <hr class="fia-topic-divider"/>

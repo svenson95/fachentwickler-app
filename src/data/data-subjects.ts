@@ -3,6 +3,7 @@ import { Subject } from '../app/models/subject';
 export const subjectsData: Subject[] = [
     {
         "subject": "lf-1",
+        "description": "Stellung eines Betriebes in Wirtschaft und Gesellschaft Marktstrukturen und ihre Auswirkungen, Kooperation und Konzentration Grundzüge staatlicher Wettbewerbspolitik.",
         "topics": [
             "6056185736ac2b24829ca2f4",
             "6056185f36ac2b24829ca2f5",
@@ -14,6 +15,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-2",
+        "description": "Analyse von Geschäftsprozessen Geschäftsprozesse gestalten Geschäftsprozesse kontrollieren.",
         "topics": [
             "6055f8b52622d7163ca40885"
         ],
@@ -23,6 +25,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-3",
+        "description": "Arbeitstechniken Informationsbeschaffung und -verwertung, Fachtexte mit einem Textverarbeitungssystem erstellen, Präsentationen mit einer Präsentationsoftware erstellen und vortragen.",
         "topics": [
             "60564a93b0623029d4a68f65",
             "60564c11b0623029d4a68f66"
@@ -30,6 +33,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-4-1",
+        "description": "Zahlensysteme, Grundlagen der Digitaltechnik, Elektrotechnische Grundlagen.",
         "topics": [
             "605650dbb0623029d4a68f67",
             "605650f5b0623029d4a68f68"
@@ -41,6 +45,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-4-2",
+        "description": "PC-Hardwareaufbau und -konfiguration, Konzeption eines IT-Systems, Inbetriebnahme und Übergabe, Cisco Kurs IT-Essentials.",
         "topics": [
             "60565cbeb0623029d4a68f69",
             "60565cdcb0623029d4a68f6a"
@@ -51,10 +56,14 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-5",
-        "topics": []
+        "description": "Lesen und übersetzen von Beschreibungen von IT-Systemen und Einbau- und Bedienungsanleitungen (Hardware) Benutzeroberflächen, Bedienerführungen und Anweisungen (Software) Informationsaustausch.",
+        "topics": [
+            "6056973007c61731b8d162f5"
+        ]
     },
     {
         "subject": "lf-6",
+        "description": "Einführung in eine Programmiersprache, Kontrollstrukturen, Struktogramme, Einführung in die Objektorientierung, statische und dynamische Diagramme der UML, Projektierung von Anwendungssystemen, Normalisierung von Datenbanken, Datenbankentwurf mit ER-Diagrammen, SQL.",
         "topics": [
             "6056629db0623029d4a68f6b"
         ],
@@ -65,6 +74,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-7-1",
+        "description": "Zugriffsverfahren, Strukturierte Verkabelung.",
         "topics": [
             "6056854807c61731b8d162ec"
         ],
@@ -72,6 +82,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-7-2",
+        "description": "OSI-Schichtenmodell, Informationsübertragung in vernetzten IT-Systemen, Protokolle am Beispiel des TCP/IP Protokollstapels, Konzeption von Netzwerken.",
         "topics": [
             "6056856207c61731b8d162ed"
         ],
@@ -79,6 +90,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-8",
+        "description": "Mitwirkung bei Marktbeobachtung und Marktforschung Mitwirkung bei Marketing- und Verkaufsförderungsmaßnahmen Kundenberatung, Angebots- und Vertragsgestaltung Dienstleistungen Beschaffung von Fremdleistungen.",
         "topics": [
             "60568ab607c61731b8d162ef"
         ],
@@ -86,6 +98,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-9",
+        "description": "Beurteilung von aktuellen Informationsdiensten Architektur verschiedener Kommunikationsnetze und deren Dienstmerkmale Zugang zu Informations- und Kommunikationsdiensten.",
         "topics": [
             "60568d0407c61731b8d162f0"
         ],
@@ -93,6 +106,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "wp",
+        "description": "foo",
         "topics": [
             "6056906307c61731b8d162f1"
         ],
@@ -100,6 +114,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "wiso",
+        "description": "foo",
         "topics": [
             "6056968e07c61731b8d162f3",
             "6056969907c61731b8d162f4"
@@ -111,14 +126,8 @@ export const subjectsData: Subject[] = [
         ]
     },
     {
-        "subject": "englisch",
-        "topics": [
-            "6056973007c61731b8d162f5"
-        ],
-        "tests": []
-    },
-    {
         "subject": "deutsch",
+        "description": "foo",
         "topics": [
             "60569a7207c61731b8d162f6",
             "60569a7d07c61731b8d162f7"
