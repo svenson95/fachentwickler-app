@@ -1,6 +1,7 @@
 <div class="fia-post-link-wrapper" *ngIf="post !== undefined">
   <p class="label" [innerHTML]="title" *ngIf="title"></p>
-  <a class="fia-post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url" [ngClass]="{isCompleted: isAlreadyCompleted(post.postId)}">
+  <a class="fia-post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url"
+     [ngClass]="{isCompleted: isAlreadyCompleted(post._id)}">
     <div class="fia-title-wrapper">
       <p class="fia-title" [ngClass]="{exam: post.url?.includes('test')}">
         {{post.title}}
