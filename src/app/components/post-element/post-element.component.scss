@@ -8,18 +8,20 @@
   overflow: auto;
 
   .post-title {
-    font-size: 1.6em;
+    font-size: 1.5em;
+    font-weight: 600;
     font-family: Nunito-Light, sans-serif;
     margin-top: 10px;
 
     @include to-xs {
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
   }
 
   .post-subtitle {
     font-size: 1.3em;
-    font-family: Nunito-Regular, sans-serif;
+    font-weight: 600;
+    font-family: Nunito-Light, sans-serif;
     letter-spacing: .5px;
     margin-top: 20px;
 
@@ -28,29 +30,26 @@
     }
   }
 
-  .post-text {
+  .post-text,
+  .post-hint,
+  .post-list,
+  .post-table {
     font-size: 1.1em;
+  }
+
+  .post-text {
     margin-top: 12px;
     margin-bottom: 12px;
     line-height: 22px;
-
-    @include to-xs {
-      font-size: .9em;
-    }
   }
 
   .post-hint {
-    background: $fia-light-background-color;
-    font-size: 1.1em;
+    background: var(--background-secondary);
     padding: 15px;
     margin: 30px 0;
-    border-left: 4px solid $fia-primary-color;
-    border-top-right-radius: $fia-border-radius;
-    border-bottom-right-radius: $fia-border-radius;
-
-    @include to-xs {
-      font-size: .9em;
-    }
+    border-left: 4px solid var(--primary-color);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
   }
 
   hr {
@@ -79,7 +78,7 @@
 
     li::before {
       content: counter(ordered-list-counter);
-      color: $fia-secondary-color;
+      color: var(--secondary-color);
       font-size: 1.1em;
       --size: 32px;
       left: calc(-1 * var(--size) - 10px);
@@ -87,7 +86,7 @@
       width: var(--size);
       height: var(--size);
       //top: 0;
-      background: $fia-light-background-color;
+      background: var(--background-secondary);
       border-radius: 50%;
       text-align: center;
       flex-shrink: 0;
@@ -106,10 +105,7 @@
 
   .post-ol-list p,
   .post-ul-list p {
-    margin-bottom: 0;
-    @include to-xs {
-      font-size: .9em;
-    }
+    margin: 0;
   }
 
   .post-ol-list:not(:last-of-type),
@@ -127,7 +123,7 @@
       list-style-type: none;
 
       &::before {
-        color: black;
+        color: var(--text-color-1);
         font-size: 1em;
         content: "→";
         margin-right: 5px;
@@ -139,7 +135,7 @@
     margin: 10px 0;
 
     .post-image {
-      border-radius: $fia-border-radius;
+      border-radius: var(--border-radius);
       max-width: 100%;
     }
 
@@ -151,7 +147,7 @@
       width: 70%;
     }
 
-    .medium {
+    .large {
       width: 90%;
     }
   }
@@ -167,16 +163,17 @@
     margin-bottom: 20px;
 
     .table-row {
+      color: var(--text-color-1);
 
       th {
         font-family: Nunito-ExtraBold, sans-serif;
-        background: $fia-light-background-color;
+        background: var(--background-secondary);
       }
 
       th, td {
         text-align: left;
         padding: 8px;
-        border: 1px solid $fia-grey-4;
+        border: 1px solid var(--grey-1);
       }
 
       .left { text-align: left; }
@@ -188,10 +185,11 @@
   .post-code {
     code {
       padding: 20px;
-      background: $fia-light-background-color;
+      color: var(--text-color-1);
+      background: var(--background-secondary);
 
       @include to-xs {
-        font-size: .8em;
+        font-size: .9em;
       }
     }
   }

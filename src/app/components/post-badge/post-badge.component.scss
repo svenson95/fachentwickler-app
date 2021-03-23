@@ -42,24 +42,24 @@
   }
 
   &.article {
-    border: 1px solid $fia-third-color;
-    color: $fia-third-color;
+    border: 1px solid var(--tertiary-color);
+    color: var(--tertiary-color);
   }
   &.tasks {
-    border: 1px solid $fia-grey-1;
-    color: $fia-grey-1;
+    border: 1px solid var(--grey-4);
+    color: var(--grey-4);
   }
   &.index-cards {
-    border: 1px solid $fia-secondary-color;
-    color: $fia-secondary-color;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
   }
   &.quiz {
-    border: 1px solid $fia-primary-color;
-    color: $fia-primary-color;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
   }
   &.test {
-    background: $fia-third-color;
-    color: white;
+    background: var(--tertiary-color);
+    color: var(--background-primary);
     font-family: Nunito-ExtraBold, sans-serif;
   }
 }

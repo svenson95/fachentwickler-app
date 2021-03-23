@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { AngularMaterialModule } from './app-common/angular-material.module';
+import { ThemeModule } from './services/theme.module';
 import { PageComponentModule } from './app-common/page/page.module';
 import { SnackbarModule } from './app-common/snackbar/snackbar.module';
 
@@ -29,16 +30,17 @@ registerLocaleData(localeDe);
     HttpClientModule,
     AngularMaterialModule,
     ReactiveFormsModule,
+    ThemeModule,
     PageComponentModule,
     SnackbarModule,
     HighlightModule,
     MatNativeDateModule
   ],
   providers: [
-    { provide: LOCALE_ID,  useValue: 'de-DE' },
-    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
-    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
-    { provide: HIGHLIGHT_OPTIONS, useValue: { fullLibraryLoader: () => import('highlight.js') } },
+    {provide: LOCALE_ID, useValue: 'de-DE'},
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+    {provide: HIGHLIGHT_OPTIONS, useValue: {fullLibraryLoader: () => import('highlight.js')}},
   ],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]

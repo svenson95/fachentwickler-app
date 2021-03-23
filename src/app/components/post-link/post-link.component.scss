@@ -1,5 +1,4 @@
 @import 'src/theme/styles';
-@import 'src/theme/mixins';
 
 .fia-post-link-wrapper {
   display: flex;
@@ -22,12 +21,13 @@
     @include from-md {
       width: 100px;
       font-size: 1.1em;
+      margin-top: 0;
       margin-right: 20px;
       flex-shrink: 0;
     }
 
     @include to-md {
-      border: 2px solid $fia-dark-background-color;
+      border: 2px solid var(--background-secondary);
       border-bottom: none;
       align-self: start;
       padding-left: 5px;
@@ -35,7 +35,7 @@
       margin-left: 12px;
 
       font-size: .8em;
-      color: $fia-grey-2;
+      color: var(--grey-3);
       letter-spacing: 1px;
     }
   }
@@ -44,16 +44,16 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    color: black;
-    background: $fia-light-background-color;
+    color: var(--text-color-1);
+    background: var(--background-secondary);
     padding: 8px 12px;
-    border-radius: $fia-border-radius;
+    border-radius: var(--border-radius);
     cursor: pointer;
     text-decoration: none;
-    border-right: 4px solid $fia-third-color;
+    border-right: 4px solid var(--tertiary-color);
 
     &.isCompleted {
-      border-color: $fia-secondary-color;
+      border-color: var(--secondary-color);
     }
 
     &:focus {
@@ -71,13 +71,13 @@
 
     @media screen and (min-width: 1000px) {
       &:hover, &:focus {
-        border-color: $fia-primary-color;
+        border-color: var(--primary-color);
       }
 
       &:hover .fia-title {
         letter-spacing: 0.25px;
         text-decoration: underline;
-        text-decoration-color: $fia-secondary-color;
+        text-decoration-color: var(--secondary-color);
         transition: letter-spacing 500ms ease-in-out;
       }
 
@@ -101,7 +101,7 @@
         transition: letter-spacing 400ms ease-out;
 
         @include from-md {
-          margin-bottom: 0;
+          margin: 0;
         }
 
         @include to-md {
@@ -130,9 +130,9 @@
       }
 
       .fia-description {
-        color: $fia-grey-1;
+        color: var(--grey-4);
         font-size: .9em;
-        margin-bottom: 0;
+        margin: 0;
         text-align: right;
         line-height: 17px;
 

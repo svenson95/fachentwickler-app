@@ -15,7 +15,7 @@
 
     @include from-sm {
       padding-right: 20px;
-      border-right: 1px solid $fia-grey-4;
+      border-right: 1px solid var(--grey-1);
     }
 
     @include to-sm {
@@ -23,40 +23,49 @@
     }
 
     .mat-calendar ::ng-deep {
+      font-size: .9em;
+
+      .mat-calendar-period-button,
+      .mat-calendar-previous-button,
+      .mat-calendar-next-button {
+        color: var(--text-color-1);
+        background-color: var(--background-secondary);
+      }
 
       .highlighted {
         .mat-calendar-body-cell-content {
-          background: rgba($fia-secondary-color-rgb, 0.5);
+          background: rgba(var(--secondary-color), 0.5);
         }
       }
 
       .mat-calendar-table-header, .mat-calendar-body-label {
-        color: $fia-grey-2;
+        color: var(--grey-3);
       }
 
       .mat-calendar-body-active .mat-calendar-body-cell-content {
-        border-color: $fia-grey-2;
+        border-color: var(--grey-3);
       }
 
       .mat-calendar-previous-button.mat-button-disabled,
       .mat-calendar-next-button.mat-button-disabled {
-        color: $fia-grey-2;
+        color: var(--grey-3);
       }
 
       .mat-calendar-body-cell-content, .mat-date-range-input-separator {
-        color: black;
+        color: var(--text-color-1);
+        border-color: var(--grey-1);
       }
 
       .mat-calendar-body-disabled > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-        color: $fia-grey-4;
+        color: var(--grey-1);
       }
 
       .mat-calendar-table-header-divider::after {
-        background: $fia-grey-4;
+        background: var(--grey-1);
       }
 
       .mat-calendar-arrow {
-        border-top-color: black;
+        border-top-color: var(--text-color-1);
       }
     }
   }

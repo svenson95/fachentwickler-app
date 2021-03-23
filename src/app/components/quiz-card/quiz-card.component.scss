@@ -7,7 +7,6 @@
 
 .fia-card {
   .fia-card-title {
-    margin-bottom: 5px;
   }
   .fia-card-description {
   }
@@ -52,8 +51,8 @@
       text-align: center;
 
       .quiz-level, .quiz-wrong-answers {
-        background: $fia-light-background-color;
-        border-radius: $fia-border-radius;
+        background: var(--background-secondary);
+        border-radius: var(--border-radius);
         padding: 8px 20px;
       }
 
@@ -82,8 +81,8 @@
 
       .label {
         padding: 10px 15px;
-        border: 1px solid $fia-secondary-color;
-        border-radius: $fia-border-radius;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius);
         font-family: Nunito-ExtraBold, sans-serif;
       }
 
@@ -92,8 +91,8 @@
 
         .fia-quiz-answer {
           padding: 12px 15px;
-          background: rgba($fia-grey-3, 0.2);
-          border-radius: $fia-border-radius;
+          background: rgba(var(--tertiary-color-rgb), 0.2);
+          border-radius: var(--border-radius);
           cursor: pointer;
           transition: background 200ms ease-in-out;
 
@@ -106,7 +105,7 @@
           .fia-quiz-answer {
             @include from-sm {
               &:hover {
-                background: rgba($fia-grey-3, 0.4);
+                background: rgba(var(--tertiary-color-rgb), 0.3);
                 transition: background 200ms ease-in-out;
               }
             }
@@ -144,7 +143,7 @@
           border-radius: 50%;
           display: block;
           stroke-width: 4;
-          stroke: $fia-secondary-color;
+          stroke: var(--secondary-color);
           position: relative;
           margin: 0 auto;
 

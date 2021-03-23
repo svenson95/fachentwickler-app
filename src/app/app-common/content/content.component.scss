@@ -4,7 +4,7 @@
 .fia-page-footer {
   height: fit-content;
   position: relative;
-  background: white;
+  background: var(--background-primary);
   padding: 35px 20px;
 
   @include to-xs {
@@ -14,7 +14,7 @@
   .fia-labels-wrapper {
     display: flex;
     width: 100%;
-    max-width: 1050px;
+    max-width: 1080px;
     justify-content: space-between;
     z-index: 3;
     padding: 0 5px;
@@ -27,41 +27,35 @@
 
   .fia-branding {
     display: flex;
-    font-size: .9em;
     height: fit-content;
-    color: black;
+    color: var(--text-color-1);
+    align-items: center;
 
     .first, .second, .third {
-      font-family: Nunito-Light, sans-serif;
+      text-transform: uppercase;
       text-decoration: underline double;
-      letter-spacing: -1px;
+      letter-spacing: -.5px;
     }
-    .first { text-decoration-color: $fia-third-color; }
-    .second { text-decoration-color: $fia-secondary-color; }
-    .third { text-decoration-color: $fia-primary-color; }
+    .first { text-decoration-color: var(--tertiary-color); }
+    .second { text-decoration-color: var(--secondary-color); }
+    .third { text-decoration-color: var(--primary-color); }
 
     .fia-icon-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 18px;
-      margin-right: 4px;
-      fill: $fia-secondary-color;
+      width: 32px;
+      margin-right: 2px;
+      fill: var(--secondary-color);
 
       svg {
-        height: 20px;
+        height: 24px;
       }
-    }
-
-    .copyright {
-      font-family: Nunito-Regular, sans-serif;
-      font-size: .8em;
-      margin-left: 5px;
     }
   }
 
   .buttons {
-    font-size: .7em;
+    font-size: .8em;
 
     @include to-md {
       display: flex;
@@ -76,7 +70,6 @@
     }
 
     @include to-xs {
-      font-size: .6em;
     }
 
     .legal, .about, .feedback, .start {

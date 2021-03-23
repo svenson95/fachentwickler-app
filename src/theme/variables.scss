@@ -1,29 +1,33 @@
 
+:root {
+  /* Colors */
+  --background-primary: #ffffff;
+  --background-secondary: #f3f3f3;
+  --background-tertiary: #d4d4d4;
+  --primary-color: #eb6a1e;
+  --secondary-color: #f4ac31;
+  --tertiary-color: #94aac5;
+  --tertiary-color-rgb: 148, 170, 197;
+  --error-default: #800600;
 
-$fia-primary-color: #eb6a1e;
-$fia-primary-color-rgb: rgb(235, 106, 30);
-$fia-secondary-color: #f4ac31;
-$fia-secondary-color-rgb: rgb(244, 172, 49);
-$fia-third-color: #94aac5;
-$fia-third-color-rgb: rgb(148, 170, 197);
+  --text-color-1: black;
+  --text-color-2: #b4b4b4;
 
-$fia-dark-header-color: #141619;
-$fia-dark-background-color: #1e2023;
-$fia-dark-card-color: #393b3f;
-$fia-dark-card-color-rgb: rgb(57, 59, 63);
-$fia-dark-contrast-color: #1e2023;
-$fia-light-background-color: #f3f3f3;
-$fia-light-card-color: white;
-$fia-light-contrast-color: #d4d4d4;
+  --grey-1: #e6e6e6;
+  --grey-2: #d4d4d4;
+  --grey-3: #b4b4b4;
+  --grey-4: #989898;
+  --grey-4-rgb: 152,152,152;
 
-$fia-grey-1: #989898;
-$fia-grey-2: #b4b4b4;
-$fia-grey-3: #d4d4d4;
-$fia-grey-4: #e6e6e6;
+  /* Shadows */
+  --box-shadow: rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px;
+  --border-radius: 0;
+  --button-radius: 16px;
 
-$fia-dark-shadow: rgba(15, 15, 15, 0.1) 0px 4px 4px, rgba(20, 20, 20, 0.2) 0px 4px 4px;
-$fia-light-shadow: rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px;
+  --exam-background: rgba(148, 170, 197, 0.15);
+}
 
-$fia-border-radius: 0;
-$fia-button-radius: 16px;
-$fia-nav-item-icon-fade-duration: color 200ms ease-in-out;    // header app icon (dashboard / login btn)
+html,
+body {
+  font-family: Nunito-Regular, sans-serif;
+}

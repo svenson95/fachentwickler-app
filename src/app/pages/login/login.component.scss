@@ -24,7 +24,7 @@
       margin-bottom: 8px;
 
       ::placeholder {
-        color: $fia-grey-1;
+        color: var(--grey-4);
       }
     }
 
@@ -39,7 +39,7 @@
     }
 
     ::ng-deep .mat-form-field-flex {
-      background-color: $fia-light-background-color;
+      background-color: var(--background-secondary);
 
       input {
       }
@@ -86,7 +86,7 @@
 
   .fia-text-button:hover {
     span {
-      color: $fia-third-color;
+      color: var(--tertiary-color);
     }
   }
 }

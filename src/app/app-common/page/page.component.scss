@@ -4,7 +4,7 @@
 .fia-page-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--background-primary);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20,22 +20,21 @@
 
   ::ng-deep {
     .fia-page-content {
-      //background: $fia-light-background-color;
+      background: var(--background-primary);
     }
 
     .mat-drawer-content {
-      background-color: white;
+      background-color: var(--background-primary);
 
       // Scrollbar
       &::-webkit-scrollbar {
         width: 5px;
         overflow-y: scroll;
         background: transparent;
-        //box-shadow: inset 0 0 4px $fia-secondary-color;
       }
 
       &::-webkit-scrollbar-thumb {
-        background: $fia-secondary-color;
+        background: var(--secondary-color);
         border-radius: 0;
       }
     }
@@ -54,7 +53,7 @@
 }
 
 .fia-sidenav {
-  background: $fia-light-background-color;
+  background: var(--background-secondary);
 }
 
 .mat-drawer-container {

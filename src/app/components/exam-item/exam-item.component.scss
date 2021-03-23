@@ -17,7 +17,7 @@
     .fia-icon-details {
       display: flex;
       align-items: center;
-      background: rgba($fia-third-color-rgb, 0.15);
+      background: var(--exam-background);
       padding: 10px 10px 10px 25px;
       margin-left: -30px;
 
@@ -27,8 +27,8 @@
 
       .fia-exam-item-icon {
         align-self: center;
-        color: $fia-third-color;
-        $size: 60px;
+        color: var(--tertiary-color);
+        $size: 50px;
         font-size: $size;
         width: $size;
         height: $size;
@@ -38,7 +38,7 @@
         }
 
         @include to-xs {
-          $size: 50px;
+          $size: 40px;
         }
       }
     }
@@ -60,6 +60,7 @@
         .date,
         .days-left {
           letter-spacing: 1px;
+          margin-top: 3px;
           margin-bottom: 3px;
           line-height: 16px;
 
@@ -71,14 +72,14 @@
         }
 
         .date {
-          width: 160px;
+          width: 180px;
 
           @include to-xs {
             width: 150px;
           }
 
           .bracket {
-            color: $fia-grey-1;
+            color: var(--grey-1);
           }
         }
 
@@ -90,6 +91,7 @@
 
       .btn-show-lessons {
         display: flex;
+        background: transparent;
         border: none;
         cursor: pointer;
         outline: none;
@@ -101,16 +103,16 @@
         }
 
         &:active span {
-          letter-spacing: 1px;
+          letter-spacing: 1.2px;
         }
 
         span {
           font-family: Nunito-ExtraBold, sans-serif;
           font-size: .9em;
-          color: white;
+          color: var(--background-primary);
           text-transform: uppercase;
-          background-color: $fia-third-color;
-          border: 1px solid $fia-third-color;
+          background-color: var(--tertiary-color);
+          border: 1px solid var(--tertiary-color);
           border-radius: 16px;
           padding: 3px 10px;
           flex-shrink: 0;
@@ -119,7 +121,7 @@
         }
 
         &.is-open span {
-          color: $fia-grey-4;
+          color: var(--grey-1);
         }
 
         hr {
@@ -133,7 +135,7 @@
     .fia-exam-title-wrapper {
 
       .fia-exam-subject {
-        color: $fia-grey-1;
+        color: var(--grey-4);
         letter-spacing: 1px;
         margin-bottom: 0;
 
@@ -149,6 +151,7 @@
       .fia-exam-subject, .fia-exam-title {
 
         @include from-sm {
+          margin-top: 0;
           margin-left: 20px;
         }
 
@@ -162,11 +165,14 @@
         flex-grow: 1;
 
         @include from-sm {
+          margin-top: 0;
           margin-bottom: 0;
         }
 
         @include to-xs {
           font-size: .9em;
+          margin-top: 0;
+          margin-bottom: 3px;
         }
       }
     }
@@ -174,7 +180,7 @@
   }
 
   .fia-lessons-container {
-    padding-top: 15px;
+    padding-top: 16px;
     margin-left: 50px;
     position: relative;
 
@@ -188,7 +194,7 @@
       .fia-horizontal-line, .fia-vertical-line-1, .fia-vertical-line-2 {
         border: none;
         position: absolute;
-        background: rgba($fia-third-color-rgb, 0.25) !important;
+        background: var(--exam-background);
 
         @include from-xs {
           left: -38px;
@@ -215,13 +221,13 @@
       .fia-vertical-line-1 {
         width: 3px;
         top: 13px;
-        bottom: -2px;
+        bottom: 0;
       }
 
       .fia-vertical-line-2 {
         width: 3px;
-        height: 32px;
-        top: -22px;
+        height: 34px;
+        top: -24px;
       }
     }
   }

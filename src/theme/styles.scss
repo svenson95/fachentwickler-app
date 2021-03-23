@@ -22,6 +22,13 @@
 @import 'src/theme/mixins';
 @import 'src/theme/variables';
 
+body {
+  background: var(--background-primary);
+
+  &.scroll-locked {
+    overflow: hidden;
+  }
+}
 
 .unselectable {
   -webkit-touch-callout: none;
@@ -42,21 +49,21 @@ i {
 u {
   text-decoration: none;
   border-radius: 2px;
-  background: rgba($fia-secondary-color-rgb, 0.4);
+  background: rgba(var(--secondary-color), 0.4);
   padding: 2px 2px;
   margin: -2px;
 }
 
 hr {
-  background: $fia-grey-3;
+  background: var(--grey-1);
 }
 
 p {
-  color: black;
+  color: var(--text-color-1);
 }
 
 mat-card {
-  color: black;
+  color: var(--text-color-1);
 }
 
 button {
@@ -72,8 +79,8 @@ button {
   height: $size;
   font-size: 1em;
   justify-content: center;
-  color: $fia-secondary-color;
-  background: $fia-light-background-color;
+  color: var(--secondary-color);
+  background: var(--background-secondary);
   border-radius: 50%;
   margin-right: 5px;
   flex-shrink: 0;
@@ -99,7 +106,7 @@ button {
 
 /* FIAPPY - PAGE */
 .fia-page {
-  background: $fia-light-background-color;
+  background: var(--background-secondary);
   padding: 20px 20px 20px 0;
 
   @include to-xs {
@@ -109,17 +116,19 @@ button {
   }
 
   .fia-no-data {
+    display: flex;
     font-size: 1.1em;
-    color: $fia-grey-1 !important;
+    color: var(--grey-3);
+    margin-top: 10px;
   }
 }
 
 a {
-  color: $fia-secondary-color;
+  color: var(--secondary-color);
 
   &:hover, &:focus {
-    color: black;
-    text-decoration-color: $fia-secondary-color;
+    color: var(--text-color-1);
+    text-decoration-color: var(--secondary-color);
   }
 }
 
@@ -133,10 +142,10 @@ a {
 /* FIAPPY - CARDS */
 .fia-card {
   max-width: 1070px;
-  background: $fia-light-card-color;
+  background: var(--background-primary);
   padding: 20px;
-  box-shadow: $fia-light-shadow;
-  border-radius: $fia-border-radius;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   margin-bottom: 20px;
   margin-right: 0;
   transition: none;
@@ -151,7 +160,7 @@ a {
 
   .fia-post-last-update {
     font-size: .9em;
-    color: $fia-grey-2;
+    color: var(--grey-3);
     text-align: right;
     margin-top: 40px;
   }
@@ -159,21 +168,27 @@ a {
 
 .fia-card-title {
   font-size: 1.5em;
-  font-family: Nunito-Light, sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   letter-spacing: 1.5px;
-  line-height: 26px;
   text-decoration: underline;
-  text-decoration-color: $fia-secondary-color;
+  text-decoration-color: var(--secondary-color);
+
+  @include from-sm {
+    margin-bottom: 4px;
+  }
 
   @include to-xs {
-    font-size: 1.4em;
+    margin-bottom: 2px;
+    font-size: 1.3em;
+    letter-spacing: 1.3px;
   }
 }
 
 p.fia-card-description {
   font-size: 1.1em;
-  letter-spacing: 1px;
-  color: $fia-grey-2 !important;
+  letter-spacing: .5px;
+  margin: 0;
+  color: var(--grey-3);
 
   @include to-xs {
     font-size: 1em;
@@ -233,6 +248,10 @@ p.fia-card-description {
 
     .mat-slide-toggle-label {
       font-size: 12px;
+
+      input {
+        display: none;
+      }
     }
   }
 
@@ -247,13 +266,13 @@ p.fia-card-description {
 
 /* FIAPPY - BUTTON */
 .fia-button {
-  background: $fia-third-color;
+  background: var(--tertiary-color);
   cursor: pointer;
   border: none;
   outline: none;
   padding: 5px 10px;
 
-  border-radius: $fia-button-radius;
+  border-radius: var(--button-radius);
   box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
   color: black;
@@ -262,7 +281,7 @@ p.fia-card-description {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  transition: all 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
   position: relative;
 
   &:hover {
@@ -289,14 +308,14 @@ p.fia-card-description {
   }
 
   .mat-form-field-label {
-    color: $fia-grey-1;
+    color: var(--grey-4);
   }
   &.mat-form-field-invalid .mat-form-field-label,
   &.mat-form-field-should-float .mat-form-field-label {
-    color: $fia-primary-color;
+    color: var(--primary-color);
   }
   .mat-form-field-ripple {
-    background-color: $fia-primary-color !important;
+    background-color: var(--primary-color) !important;
   }
   .mat-error {
     margin-bottom: 5px;
@@ -304,10 +323,10 @@ p.fia-card-description {
 }
 
 /* FIAPPY - MENU - <mat-menu> */
-::ng-deep .mat-menu-panel {
-  background-color: white;
-  border-radius: 0;
-}
+//::ng-deep .mat-menu-panel {
+//  background-color: white;
+//  border-radius: 0;
+//}
 
 /* FIAPPY - UNDERLINE BUTTON ANIMATION */
 $duration: .2s;
@@ -315,15 +334,15 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 .fia-text-button {
-  background-color: $fia-light-background-color;
-  color: $fia-third-color;
+  background-color: var(--background-secondary);
+  color: var(--tertiary-color);
   text-transform: uppercase;
   font-family: Nunito-ExtraBold, sans-serif;
   font-size: 1em;
   padding: 10px 20px;
   border: none;
   outline: none;
-  border-radius: $fia-button-radius;
+  border-radius: var(--button-radius);
   letter-spacing: 1px;
   text-decoration: none;
 
@@ -332,15 +351,13 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   }
 
   &.second-color {
-    background-color: white;
+    background-color: var(--background-primary);
   }
 
   &:disabled {
-    border: none;
-    background: rgba($fia-dark-card-color, 0.2);
 
     span {
-      color: white;
+      color: rgba(var(--grey-4-rgb), .5);
     }
   }
 
@@ -357,7 +374,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         bottom: 1px;
         left: 0; right: 0;
         height: 1px;
-        background-color: $fia-third-color;
+        background-color: var(--tertiary-color);
       }
       &:before {
         opacity: 0;
@@ -394,7 +411,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 /* FIAPPY - SNACKBAR */
 .mat-snack-bar-container {
-  background: $fia-secondary-color;
+  background: var(--secondary-color);
   color: black;
 }
 
@@ -404,7 +421,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
   ::ng-deep {
     .mat-slide-toggle-thumb {
-      background-color: $fia-third-color;
+      background-color: var(--tertiary-color);
     }
     .mat-slide-toggle-bar {
       background-color: black;
@@ -437,7 +454,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     height: $fia-spinner-size !important;
 
     circle {
-      stroke: $fia-third-color;
+      stroke: var(--tertiary-color);
       stroke-width: 5px !important;
     }
   }

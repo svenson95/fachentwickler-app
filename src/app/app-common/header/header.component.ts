@@ -13,6 +13,7 @@ import { SearchPostService } from '../../services/data/search-post.service';
 
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -33,6 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(public router: Router,
               public headerService: HeaderService,
               public authService: AuthService,
+              public themeService: ThemeService,
               public loadingService: LoadingService,
               private sidenavService: SidenavService,
               public searchPostService: SearchPostService,

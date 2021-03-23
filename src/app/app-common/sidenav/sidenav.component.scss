@@ -58,7 +58,7 @@
     margin-bottom: 5px;
     letter-spacing: 2px;
     width: fit-content;
-    border-bottom: 4px double $fia-primary-color;
+    border-bottom: 4px double var(--primary-color);
     text-transform: uppercase;
 
     @include to-xs {
@@ -68,11 +68,14 @@
   }
 
   .fia-nav-item {
-    color: black;
+    color: var(--text-color-1);
+    background: transparent;
     font-size: .9em;
     letter-spacing: 1px;
     height: fit-content;
     margin-left: 25px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     width: fit-content;
     max-width: 170px;
 
@@ -88,12 +91,14 @@
       }
     }
 
+    $fia-nav-item-icon-fade-duration: color 200ms ease-in-out;
+
     .fia-nav-item-icon {
       margin-right: 10px;
       $size: 1.3em;
       width: $size;
       height: $size;
-      color: $fia-third-color;
+      color: var(--tertiary-color);
       transition: hover $fia-nav-item-icon-fade-duration;
       flex-shrink: 0;
     }
@@ -102,17 +107,17 @@
 
       @include from-md {
         .fia-nav-item-icon {
-          color: black;
+          color: var(--text-color-1);
           transition: $fia-nav-item-icon-fade-duration;
         }
       }
     }
 
     &.active-route {
-      color: $fia-secondary-color;
+      color: var(--secondary-color);
 
       .fia-nav-item-icon {
-        color: black;
+        color: var(--text-color-1);
       }
     }
 
@@ -161,7 +166,7 @@
         bottom: 1px;
         left: 0; right: 0;
         height: 1px;
-        background-color: $fia-secondary-color;
+        background-color: var(--secondary-color);
       }
       &:before {
         opacity: 0;
@@ -177,7 +182,7 @@
 
     &:focus,
     &:hover {
-      color: black;
+      color: var(--text-color-1);
 
       span {
         &:before,

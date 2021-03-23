@@ -14,7 +14,7 @@
       </svg>
     </div>
     <h1 class="fia-app-name unselectable">
-      <span class="first">Fia</span><span class="second">de</span><span class="third">m</span>y
+      <span class="first">Fia</span><span class="second">de</span><span class="third">my</span>
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
@@ -41,7 +41,7 @@
 <!--          <mat-label class="fia-hover-label fade-in unselectable">Einstellungen</mat-label>-->
 <!--        </button>-->
         <div class="fia-theme-toggle-wrapper fia-header-hover-label" *ngIf="!isMobile.matches">
-          <mat-slide-toggle class="fia-theme-toggle" [checked]="authService.theme === 'dark'" (change)="authService.toggleTheme()">
+          <mat-slide-toggle class="fia-theme-toggle" [checked]="themeService.isDarkTheme()" (change)="themeService.toggleTheme()">
           </mat-slide-toggle>
           <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
         </div>
@@ -78,9 +78,9 @@
             <mat-icon>perm_media</mat-icon>
             <span class="label">Image-Manager</span>
           </button>
-          <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="authService.toggleTheme()">
+          <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="themeService.toggleTheme()">
             <mat-icon>invert_colors</mat-icon>
-            <span class="label">{{authService.theme === 'dark' ? 'Light': 'Dark'}} Theme aktivieren</span>
+            <span class="label">{{themeService.isDarkTheme() ? 'Light': 'Dark'}} Theme aktivieren</span>
           </a>
           <button class="fia-menu-button" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
             <mat-icon>logout</mat-icon>

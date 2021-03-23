@@ -2,14 +2,13 @@
 @import 'src/theme/mixins';
 
 .fia-card-title {
-  margin-bottom: 20px;
 }
 
 .fia-page {
 }
 
 .topic-description {
-  color: $fia-grey-1;
+  color: var(--grey-4);
   letter-spacing: 1.5px;
 }
 
@@ -21,6 +20,7 @@
   .fia-topic-title {
     display: flex;
     font-size: 1.2em;
+    font-family: Nunito-Light, sans-serif;
     line-height: 20px;
     margin-bottom: 15px;
     padding-top: 15px;
@@ -57,7 +57,7 @@
       height: 1px;
       align-self: center;
       border: none;
-      background-color: $fia-grey-4;
+      background-color: var(--grey-1);
 
       @include to-md {
         display: none;

@@ -18,8 +18,8 @@
 
   .fia-element-button {
     background: transparent;
-    border: 1px solid $fia-third-color;
-    color: $fia-third-color;
+    border: 1px solid var(--tertiary-color);
+    color: var(--tertiary-color);
     text-transform: uppercase;
     cursor: pointer;
 
@@ -33,11 +33,6 @@
 
 .fia-card {
   .fia-card-title {
-    margin-bottom: 0;
-
-    @include from-xs {
-      margin-bottom: 5px;
-    }
   }
   .fia-card-description {
   }

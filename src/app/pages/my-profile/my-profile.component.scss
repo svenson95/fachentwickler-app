@@ -33,19 +33,19 @@
     }
 
     .fia-start-change-btn {
-      background: $fia-grey-3;
+      background: var(--grey-2);
 
       &:hover:not([disabled]) {
-        background: $fia-secondary-color;
+        background: var(--secondary-color);
       }
     }
 
     .fia-discard-change-btn {
-      background: $fia-third-color;
+      background: var(--tertiary-color);
     }
 
     .fia-save-change-btn {
-      background: $fia-primary-color;
+      background: var(--primary-color);
 
       color: white;
     }
@@ -61,7 +61,7 @@
       }
 
       .mat-input-element {
-        color: white;
+        color: var(--text-color-1);
 
         &:disabled {
           opacity: 1;
@@ -89,16 +89,16 @@
 
     .fia-input ::ng-deep {
       .mat-form-field-outline {
-        color: $fia-grey-1;
+        color: var(--grey-4);
         opacity: 1;
       }
 
       .mat-form-field-label {
-        color: $fia-grey-1;
+        color: var(--grey-4);
       }
 
       .mat-form-field-underline {
-        background-image: linear-gradient(to right, rgba($fia-grey-1, 0.25) 0%, rgba($fia-grey-1, 0.25) 0%);
+        background-image: linear-gradient(to right, rgba(var(--grey-4), 0.25) 0%, rgba(var(--grey-4), 0.25) 0%);
       }
     }
 

@@ -7,7 +7,6 @@
 
 .fia-card {
   .fia-card-title {
-    margin-bottom: 5px;
   }
   .fia-card-description {
   }
@@ -46,10 +45,15 @@
     }
 
     .index-card-title .index-card-type .label,
+    .index-card-title .index-card-level .label {
+      font-family: Nunito-ExtraBold, sans-serif;
+    }
+
+    .index-card-title .index-card-type .label,
     .index-card-title .index-card-level .label,
     .index-card-content .content {
       color: black;
-      margin-block-end: 0;
+      margin: 0;
       font-size: 1.1em;
       line-height: 25px;
 
@@ -105,7 +109,7 @@
     right: 0;
     height: 1px;
     border: none;
-    background-color: #e0e0e0;
+    background-color: #e6e6e6;
   }
 
   .h-line-1 { top: 50px; }
@@ -127,7 +131,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: $fia-border-radius;
+  border-radius: var(--border-radius);
   margin: 20px;
 
   @include to-sm {

@@ -7,18 +7,19 @@
 
   tbody {
     display: flex;
+    font-size: .9em;
 
     tr {
       display: flex;
       flex-direction: column;
 
       &:not(:last-of-type) {
-        border-right: 1px solid $fia-grey-4;
+        border-right: 1px solid var(--grey-1);
       }
 
       th {
         min-height: 20px;
-        border-bottom: 1px solid $fia-grey-4;
+        border-bottom: 1px solid var(--grey-1);
 
         @include to-md {
           font-size: .8em;
@@ -49,6 +50,7 @@
         }
 
         .fia-hour-subject {
+          color: var(--text-color-1);
 
           @include from-sm {
             min-width: 50px;
@@ -60,7 +62,7 @@
         }
 
         .fia-hour-teacher {
-          color: $fia-grey-2;
+          color: var(--grey-3);
           font-size: .9em;
           line-height: 12px;
 
@@ -71,7 +73,7 @@
       }
 
       .fia-schedule-header {
-        color: $fia-grey-2;
+        color: var(--grey-3);
       }
 
       .fia-schedule-header,
@@ -80,7 +82,7 @@
 
       .fia-schedule-time {
         text-align: left;
-        color: black;
+        color: var(--text-color-1);
 
         @include from-xs {
           min-width: 50px;

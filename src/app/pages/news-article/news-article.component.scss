@@ -10,11 +10,4 @@
 }
 
 .fia-card-title {
-  @include from-xs {
-    margin-bottom: 5px;
-  }
-
-  @include to-xs {
-    margin-bottom: 0;
-  }
 }

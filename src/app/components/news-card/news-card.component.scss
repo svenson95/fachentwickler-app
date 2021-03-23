@@ -6,13 +6,12 @@
   justify-content: space-between;
 
   .fia-card-title {
-    margin-bottom: 0;
   }
 
   .fia-button.show-more {
     align-self: start;
-    color: $fia-grey-1;
-    border: 1px solid $fia-grey-1;
+    color: var(--grey-4);
+    border: 1px solid var(--grey-4);
     background: transparent;
     margin-left: 10px;
     font-size: .7em;
@@ -40,7 +39,7 @@
     &:not(:last-of-type) {
       margin-bottom: 10px;
       padding-bottom: 10px;
-      border-bottom: 1px solid $fia-grey-1;
+      border-bottom: 1px solid var(--grey-1);
     }
 
     .fia-news-header {
@@ -49,8 +48,9 @@
       .date {
         padding-right: 10px;
         margin-right: 10px;
-        border-right: 1px solid $fia-third-color;
+        border-right: 1px solid var(--tertiary-color);
         align-self: center;
+        flex-shrink: 0;
 
         @include from-xs {
           min-width: 70px;
@@ -68,6 +68,7 @@
       }
 
       .date, .title {
+        margin-top: 0;
         margin-bottom: 0;
 
         @include from-sm {
@@ -80,19 +81,9 @@
       }
     }
 
-    .fia-divider-line {
-      //border: none;
-      //height: 1px;
-      //width: 2%;
-      //max-width: 100%;
-      //flex-grow: 1;
-      //margin-left: 10px;
-      //margin-right: 10px;
-    }
-
     .fia-button {
-      color: white;
-      font-size: .7em;
+      color: var(--background-primary);
+      font-size: .8em;
       line-height: 11px;
       text-decoration: none;
       align-self: center;

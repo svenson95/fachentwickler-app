@@ -17,7 +17,6 @@
 
 .fia-schedule {
   .fia-card-title {
-    margin-bottom: 2px;
   }
 
   .fia-view-wrapper {
@@ -34,7 +33,7 @@
 
       @include from-sm {
         min-width: 150px;
-        border-left: 1px solid $fia-grey-4;
+        border-left: 1px solid var(--grey-1);
         padding: 8px;
         margin-left: 20px;
       }
@@ -49,7 +48,7 @@
 
       .fia-substitution-label {
         padding-bottom: 8px;
-        border-bottom: 1px solid $fia-grey-4;
+        border-bottom: 1px solid var(--grey-1);
 
         @include to-sm {
           margin-top: 20px;

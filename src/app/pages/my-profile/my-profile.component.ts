@@ -8,6 +8,7 @@ import { EditUser, User } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-my-profile',
@@ -35,6 +36,7 @@ export class MyProfileComponent implements OnInit {
 
   constructor(private headerService: HeaderService,
               public authService: AuthService,
+              public themeService: ThemeService,
               private dataService: DataService,
               private matSnackBar: MatSnackBar,
               private formBuilder: FormBuilder

@@ -1,9 +1,8 @@
 @import 'src/theme/styles';
-@import 'src/theme/mixins';
 
 .fia-header {
   justify-content: space-between;
-  background: white;
+  background: var(--background-primary);
   height: 80px;
   max-width: 1370px;
   transition: height 300ms ease-out;
@@ -19,16 +18,17 @@
 
   .fia-logo-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     cursor: pointer;
     border: 2px solid transparent;
     background: transparent;
     font-size: 1em;
     padding: 8px 13px;
     flex-shrink: 0;
+    align-items: center;
 
     @include from-sm {
-      width: 162px;
+      width: 176px;
     }
 
     @include to-sm {
@@ -46,32 +46,44 @@
       margin-left: 10px;
       margin-right: 10px;
 
-      fill: $fia-third-color;
-      border: 1px solid $fia-third-color;
+      fill: var(--tertiary-color);
+      border: 1px solid var(--tertiary-color);
       border-radius: 6px;
     }
 
     &.active-route {
-      fill: $fia-secondary-color;
+      fill: var(--secondary-color);
 
       .fia-icon-wrapper {
-        fill: $fia-secondary-color;
+        fill: var(--secondary-color);
       }
 
       @include to-xs {
-        border-color: $fia-secondary-color !important;
+        border-color: var(--secondary-color) !important;
       }
     }
 
     h1.fia-app-name {
-      margin-bottom: 4px;
-      font-size: 1.2em;
-      font-family: Nunito-Light, sans-serif;
+      color: var(--text-color-1);
+      margin: 4px 0;
+      font-size: 1em;
+      font-family: Nunito-Regular, sans-serif;
+      font-weight: 100;
+      text-transform: uppercase;
       line-height: 24px;
-      letter-spacing: -1px;
+      letter-spacing: -.5px;
+      transition: letter-spacing 600ms ease;
 
       @include from-xs {
         display: flex;
+      }
+
+      &:hover {
+        letter-spacing: 1.5px;
+        transition: letter-spacing 500ms ease-out;
+      }
+      &:active {
+        letter-spacing: .5px;
       }
     }
 
@@ -80,14 +92,14 @@
       align-items: center;
       justify-content: center;
       width: 24px;
-      margin-bottom: -5px;
+      margin-bottom: 3px;
 
       svg {
         height: 24px;
       }
 
       @include from-xs {
-        fill: $fia-third-color;
+        fill: var(--tertiary-color);
         margin-right: 6px;
       }
     }
@@ -100,9 +112,9 @@
         text-decoration-style: double;
       }
 
-      .first { text-decoration-color: $fia-third-color; }
-      .second { text-decoration-color: $fia-secondary-color; }
-      .third { text-decoration-color: $fia-primary-color; }
+      .first { text-decoration-color: var(--tertiary-color); }
+      .second { text-decoration-color: var(--secondary-color); }
+      .third { text-decoration-color: var(--primary-color); }
 
       @include to-xs {
         display: none;
@@ -116,10 +128,6 @@
     width: 100%;
     justify-content: space-between;
 
-    @include from-xs {
-      padding-left: 13px;
-    }
-
     .fia-header-searchbar {
       margin-left: 20px;
 
@@ -129,8 +137,8 @@
 
       .fia-search-bar {
         height: 40px;
-        background: $fia-light-background-color;
-        border-radius: $fia-border-radius;
+        background: var(--background-primary);
+        border-radius: var(--border-radius);
         width: 220px;
 
         @include to-md {
@@ -138,20 +146,20 @@
         }
 
         ::placeholder {
-          color: $fia-grey-2;
+          color: var(--grey-3);
         }
 
         ::ng-deep {
           .mat-form-field-outline {
             opacity: 1;
-            color: $fia-grey-2;
+            color: var(--grey-3);
           }
           .mat-form-field-wrapper {
             .mat-form-field-flex {
               flex-direction: row-reverse;
-              align-items: center;
               padding: 0 .75em 0 .75em;
               height: 40px;
+              align-items: center;
             }
             .mat-form-field-infix {
               padding-left: 0.5em;
@@ -161,7 +169,7 @@
               border-top: 0;
 
               input {
-                margin-bottom: 2px;
+                color: var(--text-color-1);
                 font-size: .8em;
               }
             }
@@ -169,7 +177,7 @@
 
               .mat-icon {
                 font-size: 110%;
-                color: $fia-third-color;
+                color: var(--tertiary-color);
               }
             }
             .mat-form-field-underline {
@@ -187,10 +195,10 @@
       margin-right: 12px;
       padding: 6px 10px;
 
-      color: black;
+      color: var(--text-color-1);
       font-weight: 200;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
 
       @include to-sm {
         margin-left: 0;
@@ -208,30 +216,28 @@
       }
 
       @include to-tiny {
-        font-size: .8em;
+        font-size: .9em;
       }
 
       .title {
-        font-size: 1.1em;
+        font-size: 1em;
         margin-top: 2px;
         margin-bottom: 0;
         white-space: pre-line;
         line-height: 20px;
-        font-family: Nunito-Light, sans-serif;
 
         @include from-xs {
           padding: 0 5px;
         }
 
         @include to-xs {
-          font-size: .9em;
           padding: 0 3px;
         }
       }
 
       .bracket {
         font-size: 1.3em;
-        color: $fia-primary-color !important;
+        color: var(--primary-color);
 
         @include to-xs {
           font-size: 1.2em;
@@ -255,7 +261,8 @@
 
       .fia-button-container {
         display: flex;
-        color: $fia-third-color;
+        line-height: normal;
+        color: var(--tertiary-color);
         align-items: center;
 
         .fia-header-hover-label {
@@ -274,9 +281,10 @@
         }
 
         .fia-action-btn {
+          color: var(--tertiary-color);
           margin-left: 8px;
           margin-right: 0;
-          background: $fia-light-background-color;
+          background: var(--background-secondary);
 
           @include to-xs {
             margin-left: 0;
@@ -285,34 +293,33 @@
 
           &:hover {
             :not(.fia-hover-label) {
-              color: $fia-primary-color;
+              color: var(--primary-color);
             }
           }
 
           .fia-hover-label {
+            color: var(--tertiary-color);
             position: absolute;
             top: 39px;
           }
         }
 
         .fia-header-login-btn {
-          background-color: $fia-third-color;
-          height: fit-content;
+          background-color: var(--tertiary-color);
           padding: 6px 14px;
           margin-left: 12px;
           margin-right: 12px;
 
           outline: none;
-          border-radius: $fia-button-radius;
+          border-radius: var(--button-radius);
           box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
-          color: white;
-          font-size: .6em;
+          color: var(--background-primary);
+          font-size: .7em;
           font-family: Nunito-ExtraBold, sans-serif;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
-          line-height: 14px;
 
           &:link, &:visited {
             transition: all 200ms ease-in-out;
@@ -393,7 +400,7 @@
   &:hover, &:focus {
     .fia-icon-wrapper:not(.active-route) {
       @include from-md {
-        fill: $fia-secondary-color;
+        fill: var(--secondary-color);
         transition: 150ms;
       }
     }
@@ -406,10 +413,10 @@
 
 ::ng-deep .cdk-overlay-container {
   .fia-more-menu {
-    background-color: $fia-third-color;
+    background-color: var(--tertiary-color);
 
     .fia-menu-button .label, .fia-menu-button mat-icon {
-      color: white;
+      color: var(--background-primary);
     }
 
     .fia-menu-button .label {
@@ -417,7 +424,7 @@
     }
 
     .mat-menu-item:hover:not([disabled]), .mat-menu-item.cdk-program-focused:not([disabled]), .mat-menu-item.cdk-keyboard-focused:not([disabled]), .mat-menu-item-highlighted:not([disabled]) {
-      background: rgba($fia-secondary-color-rgb, 0.6);
+      background: rgba(var(--secondary-color), 0.6);
     }
   }
 }
@@ -426,8 +433,16 @@
   height: 5px;
   z-index: 999;
 
-  ::ng-deep .mat-progress-bar-buffer {
-    background: $fia-light-background-color
+  ::ng-deep {
+    .mat-progress-bar-background {
+      //fill: $fia-primary-color;
+    }
+    ::ng-deep .mat-progress-bar-fill::after {
+      background-color: var(--primary-color) !important;
+    }
+    .mat-progress-bar-buffer {
+      background: var(--background-secondary);
+    }
   }
 
   @include to-xs {
@@ -438,7 +453,7 @@
 
 ::ng-deep .scrolled  {
   .fia-search-bar {
-    background: rgba($fia-light-card-color, .4) !important;
+    background: rgba(var(--background-secondary), .4) !important;
     //transition: background-color 300ms ease-in;
   }
 }
