@@ -2,112 +2,112 @@ import { Schedule } from '../app/models/schedule';
 
 export const schedule: Schedule[] = [
   {
-    day: 0,
+    day: '0',
     lessons: [
       {
         subject: 'lf-7-1',
         teacher: 'pofahl',
-        block: 1
+        block: '1'
       },
       {
         subject: 'lf-9',
         teacher: 'anders',
-        block: 2
+        block: '2'
       },
       {
         subject: 'wiso',
         teacher: 'trosin',
-        block: 3
+        block: '3'
       }
     ]
   },
   {
-    day: 1,
+    day: '1',
     lessons: [
       {
         subject: null,
         teacher: null,
-        block: 1
+        block: '1'
       },
       {
         subject: 'lf-8',
         teacher: 'kirmis',
-        block: 2
+        block: '2'
       },
       {
         subject: 'lf-7-2',
         teacher: 'lütge',
-        block: 3
+        block: '3'
       },
       {
         subject: 'lf-7-1',
         teacher: 'pofahl',
-        block: 4
+        block: '4'
       }
     ]
   },
   {
-    day: 2,
+    day: '2',
     lessons: [
       {
         subject: 'deutsch',
         teacher: 'nehls',
-        block: 1
+        block: '1'
       },
       {
         subject: 'lf-6',
         teacher: 'ritter',
-        block: 2
+        block: '2'
       },
       {
         subject: 'wp',
         teacher: 'schneider',
-        block: 3
+        block: '3'
       }
     ]
   },
   {
-    day: 3,
+    day: '3',
     lessons: [
       {
         subject: 'wiso',
         teacher: 'trosin',
-        block: 1
+        block: '1'
       },
       {
         subject: 'lf-8',
         teacher: 'kirmis',
-        block: 2
+        block: '2'
       },
       {
         subject: 'lf-6',
         teacher: 'ritter',
-        block: 3
+        block: '3'
       },
       {
         subject: 'sport',
         teacher: 'dekarz',
-        block: 4
+        block: '4'
       }
     ]
   },
   {
-    day: 4,
+    day: '4',
     lessons: [
       {
         subject: 'lf-7-2',
         teacher: 'lütge',
-        block: 1
+        block: '1'
       },
       {
         subject: 'lf-7-2',
         teacher: 'lütge',
-        block: 2
+        block: '2'
       },
       {
         subject: 'lf-6',
         teacher: 'ritter',
-        block: 3
+        block: '3'
       }
     ]
   }

@@ -455,12 +455,6 @@ app-post-link:not(:last-of-type),
 .post-code {
   margin: 0;
 
-  code.sql{
-    .hljs-keyword {
-      color: white;
-    }
-  }
-
   code {
 
     .hljs-meta {

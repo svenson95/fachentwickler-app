@@ -3,7 +3,7 @@ import { Subject } from '../app/models/subject';
 export const subjectsData: Subject[] = [
     {
         "subject": "lf-1",
-        "description": "Stellung eines Betriebes in Wirtschaft und Gesellschaft Marktstrukturen und ihre Auswirkungen, Kooperation und Konzentration Grundzüge staatlicher Wettbewerbspolitik.",
+        "description": "Stellung eines Betriebes in Wirtschaft und Gesellschaft sowie Ziele und Aufgaben. Produktionsfaktoren und Faktorkombinationen. Kooperation und Konzentration Grundzüge staatlicher Wettbewerbspolitik. Arbeitsteilung in der Wirtschaft. Marktstrukturen und ihre Auswirkungen, Marktarten und Marktformen. Anbieter- und Nachfrageverhalten sowie Preisbildung.",
         "topics": [
             "6056185736ac2b24829ca2f4",
             "6056185f36ac2b24829ca2f5",
@@ -15,7 +15,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-2",
-        "description": "Analyse von Geschäftsprozessen Geschäftsprozesse gestalten Geschäftsprozesse kontrollieren.",
+        "description": "Analyse von Geschäftsprozessen, Projektmanagement und Management-Systeme. Geschäftsprozesse gestalten - Prozessorientierte Ablauforganisation - Prozessgebundene betriebliche Grundfunktionen - Prozessunabhängige betriebliche Querschnittsfunktionen. Geschäftsprozesse kontrollieren und Erfolgsindikatoren.",
         "topics": [
             "6055f8b52622d7163ca40885"
         ],
@@ -25,7 +25,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-3",
-        "description": "Arbeitstechniken Informationsbeschaffung und -verwertung, Fachtexte mit einem Textverarbeitungssystem erstellen, Präsentationen mit einer Präsentationsoftware erstellen und vortragen.",
+        "description": "Arbeitstechniken und Selbstorganisation. Informationsbeschaffung und -verwertung. Weitergabe von aufbereiteten Informationen in Teamarbeit, Kommunikationsregeln und Kreativitätstechniken. Fachtexte mit einem Textverarbeitungssystem erstellen. Präsentationen mit einer Präsentationsoftware erstellen und vortragen.",
         "topics": [
             "60564a93b0623029d4a68f65",
             "60564c11b0623029d4a68f66"
@@ -33,7 +33,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-4-1",
-        "description": "Zahlensysteme, Grundlagen der Digitaltechnik, Elektrotechnische Grundlagen.",
+        "description": "Analoge und digitale Signale. Grundlagen und Logische Grundfunktionen der Digitaltechnik. Informationsverarbeitung in IT-Systemen - Bedeutung und Darstellungsformen von Informationen. Elektromagnetische Verträglichkeit und Baugruppen.",
         "topics": [
             "605650dbb0623029d4a68f67",
             "605650f5b0623029d4a68f68"
@@ -45,7 +45,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-4-2",
-        "description": "PC-Hardwareaufbau und -konfiguration, Konzeption eines IT-Systems, Inbetriebnahme und Übergabe, Cisco Kurs IT-Essentials.",
+        "description": "PC-Hardwareaufbau und -konfiguration. Zahlensysteme. Konzeption eines IT-Systems - Zusammenwirken von Hardwarekomponenten. Inbetriebnahme und Übergabe. Boolsche Algebra. Ergonomie und Umweltverträglichkeit.",
         "topics": [
             "60565cbeb0623029d4a68f69",
             "60565cdcb0623029d4a68f6a"
@@ -56,7 +56,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-5",
-        "description": "Lesen und übersetzen von Beschreibungen von IT-Systemen und Einbau- und Bedienungsanleitungen (Hardware) Benutzeroberflächen, Bedienerführungen und Anweisungen (Software) Informationsaustausch.",
+        "description": "Lesen und übersetzen von Beschreibungen für IT-Systemen, Einbau- und Bedienungsanleitungen (Hardware), Benutzeroberflächen, Bedienerführungen und Anweisungen (Software) Informationsaustausch.",
         "topics": [
             "6056973007c61731b8d162f5"
         ]

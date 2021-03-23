@@ -1,10 +1,11 @@
 export interface Schedule {
-  day: number;
+  day: string;
   lessons: Lesson[];
 }
 
 interface Lesson {
   subject: string;
   teacher: string;
-  block: number;
+  block: string;
 }
+

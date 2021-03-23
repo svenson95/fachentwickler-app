@@ -85,6 +85,20 @@ export class DataService {
       }));
   }
 
+  // Edit-Post page - POST image
+  async uploadImage(file: any): Promise<Observable<any>> {
+    console.log('file', file);
+    // const headers = new HttpHeaders()
+    //   .set('Content-Type', 'image/png');
+    const formData = new FormData();
+    formData.append('file', file);
+    return this.httpClient.post<any>(`${environment.baseUrl}/images/upload`, {formData})
+      .pipe(map((response) => {
+        // console.log('response POST image', response);
+        return response;
+      }));
+  }
+
   // Quiz component - GET quiz
   getQuiz(url: string): Observable<Quiz> {
     return this.httpClient.get<Quiz>(`${environment.baseUrl}/quiz/${url}`)

@@ -170,13 +170,13 @@
 
       th {
         font-family: Nunito-ExtraBold, sans-serif;
-        background: $fia-dark-background-color;
+        background: $fia-light-background-color;
       }
 
       th, td {
         text-align: left;
         padding: 8px;
-        border: 1px solid $fia-grey-1;
+        border: 1px solid $fia-grey-4;
       }
 
       .left { text-align: left; }
@@ -188,8 +188,7 @@
   .post-code {
     code {
       padding: 20px;
-      color: white;
-      background: black;
+      background: $fia-light-background-color;
 
       @include to-xs {
         font-size: .8em;

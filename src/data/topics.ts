@@ -262,13 +262,11 @@ export const topics: Topic[] = [
             "5fdfd82b8c8c2a5e54a4a409",
             "5fdfd83a8c8c2a5e54a4a40a",
             "5fdfd8478c8c2a5e54a4a40b",
-            "60212ecb65dbdf479177a4c8",
-            "603948e84bb78f077e58b419",
-            "6042c788b0c00c20f201d171"
+            "60212ecb65dbdf479177a4c8"
         ]
     },
     {
-        "title": "Versicherungen & Sozialabgaben",
+        "title": "Steuern & Sozialversicherungen",
         "subject": "wiso",
         "links": [
             "5f429e8b165d0ab470bc57f5",
@@ -276,7 +274,10 @@ export const topics: Topic[] = [
             "5f429ea6165d0ab470bc57f6",
             "5f429eb6165d0ab470bc57f7",
             "5f6f7e2c539ea9f7ca3856ea",
-            "5ffca3e0e3bc33038ff5f16f"
+            "5ffca3e0e3bc33038ff5f16f",
+            "603948e84bb78f077e58b419",
+            "6042c788b0c00c20f201d171",
+            "605905de1197a87e0b452a38"
         ]
     },
     {

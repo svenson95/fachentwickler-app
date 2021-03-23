@@ -25,10 +25,6 @@ export class ScheduleComponent implements OnInit {
       return sub.shortTitle;
     } else if (subject === 'sp') {
       return 'Sport';
-    } else if (subject === 'lf-7-1') {
-      return 'LF-7-1';
-    } else if (subject === 'lf-7-2') {
-      return 'LF-7-2';
     } else {
       return subject;
     }
