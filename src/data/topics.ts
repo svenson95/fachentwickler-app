@@ -13,9 +13,7 @@ export const topics: Topic[] = [
         "subject": "lf-1",
         "links": [
             "5f42929e165d0ab470bc57cb",
-            "5f429451165d0ab470bc57cf",
-            "5f083a88757f87cdceba18be",
-            "5fcb0032248e32ecd46ac13c"
+            "5f429451165d0ab470bc57cf"
         ]
     },
     {
@@ -184,7 +182,6 @@ export const topics: Topic[] = [
             "5f88cd98a0d0cb421f136a50",
             "5f88ce2ca0d0cb421f136a51",
             "5f88ce3ea0d0cb421f136a52",
-            "5f917a9b99d66f66e8a9b053",
             "5fa1137afb7df8ef19c6439c",
             "5fa1141dfb7df8ef19c6439e",
             "5fdfd00a8c8c2a5e54a4a3ff",
@@ -209,7 +206,9 @@ export const topics: Topic[] = [
             "6021041865dbdf479177a4c2",
             "603945b34bb78f077e58b415",
             "6042c221b0c00c20f201d16f",
-            "604c985bb0c00c20f201d226"
+            "604c985bb0c00c20f201d226",
+            "6059d3be1197a87e0b452a48",
+            "6059d3d51197a87e0b452a49"
         ]
     },
     {
@@ -220,7 +219,6 @@ export const topics: Topic[] = [
             "5f6771ed099124b4435ab146",
             "5f6ffbd6423653727ec87b9b",
             "5f6ff02dcff7fce41d0e4bb8",
-            "5fa1173ffb7df8ef19c6439f",
             "5fdfdd128c8c2a5e54a4a40f",
             "5ffc82b6e3bc33038ff5f154",
             "5ffca13ae3bc33038ff5f16d",

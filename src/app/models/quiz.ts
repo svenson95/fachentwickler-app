@@ -6,6 +6,7 @@ export interface Quiz {
   description: string;
   subject: string;
   type: string;
+  topicId: string;
   lessonDate: string;
   lastUpdate: string;
   schoolWeek: string;

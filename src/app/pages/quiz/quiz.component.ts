@@ -23,7 +23,7 @@ export class QuizComponent implements OnInit {
         0, router.url.indexOf('/', 1)
       ))?.title
     );
-    this.dataService.getQuiz(router.url).subscribe(
+    this.dataService.getQuiz(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
       (data) => {
         this.quiz = data;
       },

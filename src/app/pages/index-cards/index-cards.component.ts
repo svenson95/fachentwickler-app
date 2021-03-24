@@ -23,7 +23,7 @@ export class IndexCardsComponent implements OnInit {
         0, router.url.indexOf('/', 1)
       ))?.title
     );
-    this.dataService.getIndexCards(router.url).subscribe(
+    this.dataService.getIndexCards(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
       (data) => {
         this.indexCards = data;
       },

@@ -2,7 +2,7 @@ import { IndexCards } from '../app/models/index-cards';
 
 const cards: IndexCards[] = [
     {
-        "url": "beduerfnisse_und_gueter/karteikarten-fuer-test",
+        "url": "beduerfnisse_und_gueter/vorbereitung_fuer_test/karteikarten",
         "title": "Bedürfnisse und Güter - Karteikarten für Test",
         "description": "Vorbereitung vom 22.11.2019",
         "subject": "lf-1",
@@ -10,6 +10,7 @@ const cards: IndexCards[] = [
         "lessonDate": "2019-11-22",
         "lastUpdate": "2020-12-05",
         "schoolWeek": "5",
+        "topicId": "5fcb0032248e32ecd46ac13c",
         "questions": [
             {
                 "question": "Wie kann man den Begriff Bedürfnis definieren?",
@@ -38,14 +39,15 @@ const cards: IndexCards[] = [
         ]
     },
     {
-        "url": "kollisionsdomaene_duplexing/karteikarten-fuer-test",
+        "url": "kollisionsdomaene_duplexing/vorbereitung_fuer_test/karteikarten",
         "title": "Kollisionsdomäne / Duplexing - Karteikarten für Test",
         "description": "Vorbereitung vom 25.09.2020",
         "subject": "lf-7-2",
         "type": "index-cards",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2021-03-24",
         "schoolWeek": "16",
+        "topicId": "5f917a9b99d66f66e8a9b053",
         "questions": [
             {
                 "question": "Was ist eine Kollisionsdomäne?",

@@ -9,6 +9,12 @@ export const subjectsData: Subject[] = [
             "6056185f36ac2b24829ca2f5",
             "6056186736ac2b24829ca2f6"
         ],
+        "quizzes": [
+            "5f083a88757f87cdceba18be"
+        ],
+        "indexcards": [
+            "5fcb0032248e32ecd46ac13c"
+        ],
         "tests": [
             "5f429521220657ed697dc56a"
         ]
@@ -86,6 +92,12 @@ export const subjectsData: Subject[] = [
         "topics": [
             "6056856207c61731b8d162ed"
         ],
+        "quizzes": [
+            "5fa1173ffb7df8ef19c6439f"
+        ],
+        "indexcards": [
+            "5f917a9b99d66f66e8a9b053"
+        ],
         "tests": ["5fdfd2d78c8c2a5e54a4a403"]
     },
     {
@@ -119,6 +131,10 @@ export const subjectsData: Subject[] = [
             "6056968e07c61731b8d162f3",
             "6056969907c61731b8d162f4"
         ],
+        "quizzes": [
+            "5f085932286ad9151bdd46b3"
+        ],
+        "indexcards": [],
         "tests": [
             "5f429ebf165d0ab470bc57f8",
             "5f9e9023cdb75d208eba17ee",
