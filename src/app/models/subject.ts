@@ -12,5 +12,6 @@ export interface Subject {
 
 export interface Topic {
   title: string;
+  subject: string;
   links: string[];
 }

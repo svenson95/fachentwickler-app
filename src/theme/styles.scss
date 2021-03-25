@@ -158,6 +158,12 @@ a {
     padding: 30px;
   }
 
+  .fia-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .fia-post-last-update {
     font-size: .9em;
     color: var(--grey-3);

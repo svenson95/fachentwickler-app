@@ -1,10 +1,7 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
-.fia-card-header {
-  display: flex;
-  justify-content: space-between;
-
+.news-card .fia-card-header {
   .fia-card-title {
   }
 

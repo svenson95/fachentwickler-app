@@ -75,10 +75,10 @@ export class DataService {
   }
 
   // Image Manager component - GET images
-  getAllImages(): Observable<any> {
+  getImages(page = 0, imagesPerPage = 10): Observable<any> {
     const headers = new HttpHeaders()
       .set('Content-Type', 'image/png');
-    return this.httpClient.get<any>(`${environment.baseUrl}/images/all`, {headers})
+    return this.httpClient.get<any>(`${environment.baseUrl}/images/all?page=${page}&page_size=${imagesPerPage}`, {headers})
       .pipe(map((response) => {
         // console.log('response GET images', response);
         return response;
