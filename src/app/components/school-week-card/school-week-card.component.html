@@ -12,8 +12,9 @@
         </span>
       </p>
     </div>
+    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading"></mat-spinner>
     <div class="fia-button-wrapper" *ngIf="isDashboardPage">
-      <button class="fia-previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined" mat-icon-button>
+      <button class="fia-previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || currentWeek === 1" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
       <button class="fia-next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined" mat-icon-button>

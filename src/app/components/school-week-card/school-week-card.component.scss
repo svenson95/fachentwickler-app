@@ -11,6 +11,10 @@
     .fia-card-title {
     }
 
+    .fia-loading-spinner {
+      margin: 0 20px 0 auto !important;
+    }
+
     .fia-button-wrapper {
       height: fit-content;
       align-self: end;
@@ -29,18 +33,14 @@
         transition: all 200ms ease-in-out;
         position: relative;
 
-        &:not(.disabled) {
+        &:not(&:disabled) {
           &:hover {
-            color: var(--secondary-color);
-          }
-        }
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(160,160,160, .3);
 
-        &:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 3px 6px rgba(160,160,160, .3);
-
-          mat-icon {
-            color: var(--primary-color);
+            mat-icon {
+              color: var(--primary-color);
+            }
           }
         }
 
@@ -49,13 +49,17 @@
           box-shadow: 0 0 2px rgba(160,160,160, .3);
         }
 
+        &:disabled mat-icon {
+          color: var(--background-tertiary);
+        }
+
         mat-icon {
           color: var(--tertiary-color);
         }
       }
 
       .fia-previous-week-btn {
-        margin-right: 8px;
+        margin-right: 10px;
       }
 
       .fia-next-week-btn {
