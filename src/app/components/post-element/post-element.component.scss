@@ -41,6 +41,12 @@
     margin-top: 12px;
     margin-bottom: 12px;
     line-height: 22px;
+
+    ::ng-deep code {
+      background: var(--grey-1);
+      padding: 2px 5px;
+      border-radius: 6px;
+    }
   }
 
   .post-hint {
@@ -141,19 +147,18 @@
 
     @include from-xs {
       .small {
-        width: 50%;
+        max-width: 40%;
       }
 
       .medium {
-        width: 70%;
+        max-width: 60%;
       }
 
       .large {
-        width: 90%;
+        max-width: 80%;
       }
     }
   }
-
 
   .post-table-title {
     font-size: 1.1em;

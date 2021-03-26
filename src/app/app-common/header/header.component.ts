@@ -57,7 +57,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     if (this.searchInput) {
       fromEvent(this.searchInput.nativeElement, 'keyup')
         .pipe(
-          filter((e: KeyboardEvent) => e.code === 'Enter'),
+          filter((e: KeyboardEvent) => e.code === 'Enter' || e.code === 'NumpadEnter'),
           distinctUntilChanged(),
           tap(ev => {
             this.searchForPost();

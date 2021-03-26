@@ -109,19 +109,20 @@
         span {
           font-family: Nunito-ExtraBold, sans-serif;
           font-size: .9em;
-          color: white;
+          color: var(--tertiary-color);
           text-transform: uppercase;
-          background-color: var(--tertiary-color);
-          border: 1px solid var(--tertiary-color);
-          border-radius: 16px;
           padding: 3px 10px;
           flex-shrink: 0;
           letter-spacing: 1px;
           transition: letter-spacing 600ms ease;
         }
 
+        &:not(.is-open) span {
+          text-decoration: underline;
+        }
+
         &.is-open span {
-          color: rgba(255,255,255,.4);
+          color: var(--text-color-2);
         }
 
         hr {

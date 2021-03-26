@@ -1,8 +1,8 @@
 <div class="fia-page">
 
-  <app-user-progress-card [user]="user" [dashboard]="dashboard"></app-user-progress-card>
-  <app-news-card [onlyLastOne]="true"></app-news-card>
-  <app-next-exams-card></app-next-exams-card>
+  <app-user-progress-card [user]="user" [dashboard]="dataService.dashboard"></app-user-progress-card>
+  <app-news-card [news]="dataService.dashboard.schoolNews" [onlyLastOne]="true"></app-news-card>
+  <app-next-exams-card [nextExams]="dataService.dashboard.nextExams"></app-next-exams-card>
 
   <mat-card class="fia-card fia-schedule">
     <p class="fia-card-title">Stundenplan</p>

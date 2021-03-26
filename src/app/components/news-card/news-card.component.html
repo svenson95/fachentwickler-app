@@ -5,23 +5,23 @@
   </div>
   <mat-card-content class="fia-view-wrapper">
     <div class="fia-news-container">
-      <mat-spinner class="fia-loading-spinner" *ngIf="newsList === undefined"></mat-spinner>
-      <ng-container *ngIf="onlyLastOne === true && newsList !== undefined && newsList.length !== undefined">
+      <mat-spinner class="fia-loading-spinner" *ngIf="news === undefined"></mat-spinner>
+      <ng-container *ngIf="onlyLastOne === true && news !== undefined && news.length !== undefined">
         <div class="fia-news-item">
           <div class="fia-news-header">
-            <p class="date">{{newsList[0].date | date:'dd.MM.yyyy'}}</p>
-            <p class="title">{{newsList[0].title}}</p>
+            <p class="date">{{news[0].date | date:'dd.MM.yyyy'}}</p>
+            <p class="title">{{news[0].title}}</p>
           </div>
-          <a class="fia-button" [routerLink]="'/mitteilungen/' + newsList[0]?.url">Lesen</a>
+          <a class="fia-button" [routerLink]="'/mitteilungen/' + news[0]?.url">Lesen</a>
         </div>
       </ng-container>
       <ng-container *ngIf="onlyLastOne === undefined">
-        <div class="fia-news-item" *ngFor="let news of newsList">
+        <div class="fia-news-item" *ngFor="let post of news">
           <div class="fia-news-header">
-            <p class="date">{{news.date | date:'dd.MM.yyyy'}}</p>
-            <p class="title">{{news.title}}</p>
+            <p class="date">{{post.date | date:'dd.MM.yyyy'}}</p>
+            <p class="title">{{post.title}}</p>
           </div>
-          <a class="fia-button" [routerLink]="'/mitteilungen/' + news.url">Lesen</a>
+          <a class="fia-button" [routerLink]="'/mitteilungen/' + post.url">Lesen</a>
         </div>
       </ng-container>
     </div>

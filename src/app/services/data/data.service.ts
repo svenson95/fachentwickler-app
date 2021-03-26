@@ -23,7 +23,6 @@ export class DataService {
 
   public dashboard: DashboardData;
   public schoolWeek: SchoolWeek;
-  public openExams: ExamDate[] = [];
 
   constructor(private httpClient: HttpClient) { }
 

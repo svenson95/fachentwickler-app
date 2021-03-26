@@ -87,6 +87,7 @@
     }
 
     .fia-title-wrapper {
+      margin: auto 0;
       margin-right: 5px;
 
       @include from-xs {
@@ -99,14 +100,7 @@
 
       .fia-title {
         transition: letter-spacing 400ms ease-out;
-
-        @include from-md {
-          margin: 0;
-        }
-
-        @include to-md {
-          margin-bottom: 5px;
-        }
+        margin: 0;
       }
     }
 

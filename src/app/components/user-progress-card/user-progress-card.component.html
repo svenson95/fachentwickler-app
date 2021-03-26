@@ -4,19 +4,19 @@
 
     <div class="fia-progress-lesson">
       <p class="label">
-        Lektion {{user?.progress.length !== undefined ? user?.progress.length : '...'}} von {{dashboard !== undefined && dashboard.allLessons.length || '...'}}
+        Lektion {{user?.progress.length !== undefined ? user?.progress.length : '...'}} von {{dashboard?.allLessons !== undefined && dashboard?.allLessons.length || '...'}}
       </p>
       <mat-progress-bar class="progress-bar" [value]="dashboard !== null && dashboard?.lessonsPercentage"></mat-progress-bar>
     </div>
 
     <div class="fia-progress-week">
       <p class="label">Woche {{dataService.schoolWeekValue}} von 40</p>
-      <mat-progress-bar class="progress-bar" [value]="(dataService.schoolWeekValue / 40) * 100"></mat-progress-bar>
+      <mat-progress-bar class="progress-bar" [value]="(dataService?.schoolWeekValue / 40) * 100"></mat-progress-bar>
     </div>
 
-    <app-post-link class="fia-next-lesson" *ngIf="dashboard !== undefined" [post]="dashboard.nextLesson" [title]="'Nächste Lektion'"
+    <app-post-link class="fia-next-lesson" *ngIf="dashboard !== undefined" [post]="dashboard?.nextLesson" [title]="'Nächste Lektion'"
     ></app-post-link>
-    <mat-spinner class="fia-loading-spinner" *ngIf="loading && !dashboard"></mat-spinner>
+    <mat-spinner class="fia-loading-spinner" *ngIf="loading && !dashboard.nextLesson"></mat-spinner>
 
   </mat-card-content>
 </mat-card>

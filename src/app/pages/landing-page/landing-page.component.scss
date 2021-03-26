@@ -66,16 +66,12 @@
       text-transform: uppercase;
 
       :not(:last-of-type) {
-        @include from-sm {
-        }
-
-        @include to-sm {
-          margin-bottom: 4px;
-        }
+        margin-bottom: 4px;
       }
 
       @include to-sm {
         font-size: 1.1em;
+        line-height: 16px;
       }
 
       @include to-xs {

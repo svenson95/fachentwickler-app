@@ -3,7 +3,6 @@ import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { User } from '../../models/user';
 import { DataService } from '../../services/data/data.service';
-import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 
 @Component({
@@ -14,20 +13,8 @@ import { SchoolWeek } from '../../models/school-week';
 export class DashboardComponent implements OnInit {
 
   user: User;
-  dashboard: DashboardData;
   schoolWeek: SchoolWeek;
   scheduleSubstitutions = false;
-
-  examplePost = {
-    "url": "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
-    "title": "Wie entsteht aus einem Bedürfnis der Bedarf?",
-    "description": "Mitschrift vom 28.10.2019",
-    "subject": "lf-1",
-    "type": "article",
-    "lessonDate": "2019-10-28",
-    "lastUpdate": "2021-01-06",
-    "schoolWeek": "4"
-  };
 
   constructor(private headerService: HeaderService,
               private authService: AuthService,
@@ -43,9 +30,21 @@ export class DashboardComponent implements OnInit {
 
   /* -- Component functions -- */
   setupComponent(): void {
-    this.fetchAllLessons();
 
-    if (!this.dataService.schoolWeek) {
+    if (!this.dataService.dashboard) {
+      this.dataService.dashboard = {
+        allLessons: undefined,
+        lessonsPercentage: undefined,
+        nextLesson: undefined,
+        nextExams: undefined,
+        schoolNews: undefined,
+      };
+
+      this.dataService.getNewsList().subscribe(response => {
+        this.dataService.dashboard.schoolNews = response;
+      });
+      this.fetchAllLessons();
+      this.fetchNextExams();
       this.fetchSchoolWeek();
     } else {
       this.schoolWeek = this.dataService.schoolWeek;
@@ -53,9 +52,11 @@ export class DashboardComponent implements OnInit {
   }
 
   /* -- Get all lessons for calculating user progress -- */
-  async fetchAllLessons(): Promise<void> {
+  fetchAllLessons(): void {
     this.dataService.getAllLessons().subscribe(
       (lessons) => {
+        this.dataService.dashboard.allLessons = lessons;
+        this.dataService.dashboard.lessonsPercentage = (this.authService.user.progress.length / lessons.length) * 100;
         this.fetchNextLesson(lessons);
       }, (error) => {
         console.log('error while GET all-lessons', error);
@@ -67,15 +68,34 @@ export class DashboardComponent implements OnInit {
   fetchNextLesson(lessons): void {
     this.dataService.getSubjectPost(lessons[this.authService.user.progress.length]).subscribe(
       (nextLesson) => {
-        this.dashboard = {
-          allLessons: lessons,
-          lessonsPercentage: (this.authService.user.progress.length / lessons.length) * 100,
-          nextLesson
-        };
-        this.dataService.dashboard = this.dashboard;
+        this.dataService.dashboard.nextLesson = nextLesson;
       }, (error) => {
         console.log('error while GET next-lesson', error);
       }
+    );
+  }
+
+  fetchNextExams(): void {
+    this.dataService.getExamDates().subscribe(
+        (exams) => {
+          const openExams = [];
+          exams.forEach(exam => {
+            const today = new Date();
+            const examDate = new Date(exam.date);
+
+            if (today < examDate) {
+              openExams.push(exam);
+            }
+          });
+          openExams.sort((a, b) => {
+            if (a.date > b.date) { return 1; }
+            if (a.date < b.date) { return -1; }
+            return 0;
+          });
+          this.dataService.dashboard.nextExams = openExams;
+        }, (error) => {
+          console.log('error while GET exam-dates', error);
+        }
     );
   }
 

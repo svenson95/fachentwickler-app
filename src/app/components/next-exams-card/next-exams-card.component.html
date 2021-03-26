@@ -4,10 +4,10 @@
     <button class="fia-button show-more" routerLink="/klausuren">Klausuren</button>
   </div>
   <mat-card-content class="fia-view-wrapper">
-    <div class="fia-exam-item-wrapper" *ngFor="let exam of openExams">
+    <div class="fia-exam-item-wrapper" *ngFor="let exam of nextExams">
       <app-exam-item [exam]="exam"></app-exam-item>
     </div>
-    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading && openExams.length === 0"></mat-spinner>
-    <p class="fia-no-data" *ngIf="!isLoading && openExams.length === 0">Keine anstehenden Klausuren</p>
+    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading && nextExams?.length === 0"></mat-spinner>
+    <p class="fia-no-data" *ngIf="!isLoading && nextExams?.length === 0">Keine anstehenden Klausuren</p>
   </mat-card-content>
 </mat-card>

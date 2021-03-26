@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ExamDate } from '../../models/exam-date';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
@@ -11,8 +11,7 @@ import { delay } from 'rxjs/operators';
 })
 export class NextExamsCardComponent implements OnInit {
 
-  allExams: ExamDate[];
-  openExams: ExamDate[] = [];
+  @Input() nextExams: ExamDate[];
   isLoading: boolean;
 
   constructor(private dataService: DataService,
@@ -21,28 +20,6 @@ export class NextExamsCardComponent implements OnInit {
     this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
         this.isLoading = status;
-      }
-    );
-
-    this.dataService.getExamDates().subscribe(
-      (exams) => {
-        this.allExams = exams;
-        exams.forEach(exam => {
-          const today = new Date();
-          const examDate = new Date(exam.date);
-
-          if (today < examDate) {
-            this.openExams = [...this.openExams, exam];
-          }
-        });
-        this.openExams.sort((a, b) => {
-          if (a.date > b.date) { return 1; }
-          if (a.date < b.date) { return -1; }
-          return 0;
-        });
-        this.dataService.openExams = this.openExams;
-      }, (error) => {
-        console.log('error while GET exam-dates', error);
       }
     );
   }

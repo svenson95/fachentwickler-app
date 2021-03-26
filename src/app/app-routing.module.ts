@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route, PreloadAllModules } from '@angular/router';
 
-import { subjectsData } from '../data/data-subjects';
+import { subjectsData } from '../data/subjects';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 
 const subjectsPaths = (): Array<Route> => {

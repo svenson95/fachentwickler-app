@@ -48,8 +48,8 @@
       </div>
     </div>
     <div class="fia-components-wrapper">
-      <app-news-card [onlyLastOne]="true"></app-news-card>
-      <app-next-exams-card></app-next-exams-card>
+      <app-news-card [news]="exampleNews" [onlyLastOne]="true"></app-news-card>
+      <app-next-exams-card [nextExams]="testExam"></app-next-exams-card>
       <app-user-progress-card [user]="testUser" [dashboard]="testDashboard"></app-user-progress-card>
     </div>
   </div>

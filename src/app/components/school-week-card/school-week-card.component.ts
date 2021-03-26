@@ -62,6 +62,7 @@ export class SchoolWeekCardComponent implements OnInit {
     this.currentWeek--;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
       this.week = response;
+      this.dataService.schoolWeek = response;
     });
   }
 
@@ -70,6 +71,7 @@ export class SchoolWeekCardComponent implements OnInit {
     this.currentWeek++;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
       this.week = response;
+      this.dataService.schoolWeek = response;
     });
   }
 

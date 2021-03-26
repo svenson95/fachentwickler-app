@@ -37,6 +37,33 @@ export class LandingPageComponent implements OnInit {
     }
   };
 
+  exampleNews = [{
+    title: 'Lorem ipsum',
+    date: '2020-11-42',
+    url: 'info_2020_11_42',
+    content: [
+      {
+        type: 'text',
+        content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+      },
+      {
+        type: 'text',
+        content: ' Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+      },
+      {
+        type: 'text',
+        content: 'Max Mustermann'
+      }
+    ]
+  }];
+
+  testExam = [{
+    date: '2021-03-30',
+    subject: 'wp',
+    title: 'Test - Ablaufsteuerungen, GRAFCET',
+    lessons: ['5f429fa0165d0ab470bc5800', '5f429fb1165d0ab470bc5801', '5f6fcb16539ea9f7ca3856ed', '5f7a5afe26fca377f7ed4e6a', '5fa12b89641a40621c5ff725']
+  }];
+
   testSchoolWeek = {
     schoolWeek: '8',
     posts: [

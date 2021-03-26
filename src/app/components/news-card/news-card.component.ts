@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {SchoolNews} from '../../models/school-news';
-import {DataService} from '../../services/data/data.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { SchoolNews } from '../../models/school-news';
 
 @Component({
   selector: 'app-news-card',
@@ -9,16 +8,12 @@ import {DataService} from '../../services/data/data.service';
 })
 export class NewsCardComponent implements OnInit {
 
+  @Input() news: SchoolNews[];
   @Input() onlyLastOne: boolean;
 
-  newsList: SchoolNews[];
-
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.dataService.getNewsList().subscribe(response => {
-      this.newsList = response;
-    });
   }
 
 }
