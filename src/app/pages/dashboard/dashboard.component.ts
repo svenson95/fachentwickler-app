@@ -48,6 +48,10 @@ export class DashboardComponent implements OnInit {
       this.fetchSchoolWeek();
     } else {
       this.schoolWeek = this.dataService.schoolWeek;
+
+      if (!this.dataService.dashboard.nextLesson && !this.dataService.dashboard.lessonsPercentage) {
+        this.fetchNextLesson(this.dataService.dashboard.allLessons);
+      }
     }
   }
 
@@ -56,7 +60,6 @@ export class DashboardComponent implements OnInit {
     this.dataService.getAllLessons().subscribe(
       (lessons) => {
         this.dataService.dashboard.allLessons = lessons;
-        this.dataService.dashboard.lessonsPercentage = (this.authService.user.progress.length / lessons.length) * 100;
         this.fetchNextLesson(lessons);
       }, (error) => {
         console.log('error while GET all-lessons', error);
@@ -64,11 +67,12 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  /* -- Get next lesson for user progress module -- */
+  /* -- Get next lesson & lessons percentage for user progress module -- */
   fetchNextLesson(lessons): void {
     this.dataService.getSubjectPost(lessons[this.authService.user.progress.length]).subscribe(
       (nextLesson) => {
         this.dataService.dashboard.nextLesson = nextLesson;
+        this.dataService.dashboard.lessonsPercentage = (this.authService.user.progress.length / lessons.length) * 100;
       }, (error) => {
         console.log('error while GET next-lesson', error);
       }

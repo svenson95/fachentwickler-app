@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
 import { AuthService } from '../../services/auth/auth.service';
+import { DataService } from '../../services/data/data.service';
 import { UserProgress, UserRole } from '../../models/user';
 
 @Component({
@@ -18,6 +19,7 @@ export class LessonFooterComponent implements OnInit {
   UserRole = UserRole;
 
   constructor(public authService: AuthService,
+              public dataService: DataService,
               private matSnackBar: MatSnackBar,
   ) { }
 
@@ -31,6 +33,9 @@ export class LessonFooterComponent implements OnInit {
       "userId": this.authService.user._id,
       "postId": this.postId
     } as UserProgress;
+
+    this.dataService.dashboard.nextLesson = undefined;
+    this.dataService.dashboard.lessonsPercentage = undefined;
 
     this.authService.addProgress(lesson).subscribe(
       (response) => {

@@ -5,7 +5,6 @@ import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
 import { Quiz } from '../../models/quiz';
 import { IndexCards } from '../../models/index-cards';
-import { SchoolWeekPost } from '../../models/school-week';
 
 @Component({
   selector: 'app-post-link',
@@ -14,7 +13,7 @@ import { SchoolWeekPost } from '../../models/school-week';
 })
 export class PostLinkComponent implements OnInit {
 
-  @Input('post') post: Post | Quiz | IndexCards | SchoolWeekPost;
+  @Input('post') post: Post | Quiz | IndexCards;
   @Input('title') title;
 
   constructor(private authService: AuthService,
