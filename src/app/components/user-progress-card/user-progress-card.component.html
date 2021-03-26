@@ -14,8 +14,9 @@
       <mat-progress-bar class="progress-bar" [value]="(dataService.schoolWeekValue / 40) * 100"></mat-progress-bar>
     </div>
 
-    <app-post-link class="fia-next-lesson" [post]="dashboard !== undefined && dashboard.nextLesson" [title]="'Nächste Lektion'"
+    <app-post-link class="fia-next-lesson" *ngIf="dashboard !== undefined" [post]="dashboard.nextLesson" [title]="'Nächste Lektion'"
     ></app-post-link>
+    <mat-spinner class="fia-loading-spinner" *ngIf="loading && !dashboard"></mat-spinner>
 
   </mat-card-content>
 </mat-card>

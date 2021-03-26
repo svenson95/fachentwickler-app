@@ -14,7 +14,7 @@
       </svg>
     </div>
     <h1 class="fia-app-name unselectable">
-      <span class="first">Fia</span><span class="second">de</span><span class="third">my</span>
+      <span class="first">FiA</span><span class="second">DE</span><span class="third">MY</span>
     </h1>
   </button>
   <div class="fia-header-details-wrapper">
@@ -27,9 +27,7 @@
       <div class="fia-header-searchbar" *ngIf="!isMobile.matches">
         <mat-form-field class="fia-search-bar" appearance="fill" (click)="openSearchView()">
           <mat-icon matSuffix>search</mat-icon>
-          <input matInput type="text" [(ngModel)]="searchPostService.searchValue"
-                 (keyup)="openSearchView()" (keyup.enter)="searchForPost()"
-                 placeholder="Suche" #searchInput>
+          <input matInput type="text" [(ngModel)]="searchPostService.searchValue" placeholder="Suche" #searchInput>
         </mat-form-field>
       </div>
       <div class="fia-button-container">

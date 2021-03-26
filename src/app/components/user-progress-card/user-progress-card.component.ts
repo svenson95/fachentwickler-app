@@ -1,5 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { delay } from 'rxjs/operators';
+
 import { DataService } from '../../services/data/data.service';
+import { LoadingService } from '../../services/loading.service';
+import { DashboardData } from '../../models/dashboard-data';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-user-progress-card',
@@ -8,10 +13,20 @@ import { DataService } from '../../services/data/data.service';
 })
 export class UserProgressCardComponent implements OnInit {
 
-  @Input() user;
-  @Input() dashboard;
+  @Input() user: User;
+  @Input() dashboard: DashboardData;
 
-  constructor(public dataService: DataService) {}
+  loading: boolean;
+
+  constructor(public dataService: DataService,
+              private loadingService: LoadingService
+  ) {
+    this.loadingService.loading$.pipe(delay(0)).subscribe(
+        (status: boolean) => {
+          this.loading = status;
+        }
+    );
+  }
 
   ngOnInit(): void {
   }

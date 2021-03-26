@@ -139,16 +139,18 @@
       max-width: 100%;
     }
 
-    .small {
-      width: 50%;
-    }
+    @include from-xs {
+      .small {
+        width: 50%;
+      }
 
-    .medium {
-      width: 70%;
-    }
+      .medium {
+        width: 70%;
+      }
 
-    .large {
-      width: 90%;
+      .large {
+        width: 90%;
+      }
     }
   }
 

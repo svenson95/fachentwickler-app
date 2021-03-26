@@ -12,6 +12,10 @@
       font-size: 1em;
     }
 
+    ::ng-deep .mat-form-field-flex {
+      border-bottom: 1px solid var(--grey-1);
+    }
+
     .fia-start-change-btn,
     .fia-discard-change-btn,
     .fia-save-change-btn {

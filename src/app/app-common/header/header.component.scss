@@ -69,7 +69,6 @@
       font-size: 1em;
       font-family: Nunito-Regular, sans-serif;
       font-weight: 100;
-      text-transform: uppercase;
       line-height: 24px;
       letter-spacing: -.5px;
       transition: letter-spacing 600ms ease;
@@ -77,14 +76,14 @@
       @include from-xs {
         display: flex;
       }
+    }
 
-      &:hover {
-        letter-spacing: 1.5px;
-        transition: letter-spacing 500ms ease-out;
-      }
-      &:active {
-        letter-spacing: .5px;
-      }
+    &:hover h1.fia-app-name {
+      letter-spacing: 1.5px;
+      transition: letter-spacing 500ms ease-out;
+    }
+    &:active h1.fia-app-name {
+      letter-spacing: .5px;
     }
 
     .fia-icon-wrapper {

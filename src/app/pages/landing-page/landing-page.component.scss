@@ -70,7 +70,7 @@
         }
 
         @include to-sm {
-          margin-bottom: 2px;
+          margin-bottom: 4px;
         }
       }
 
@@ -81,7 +81,7 @@
       @include to-xs {
         font-size: .8em;
         letter-spacing: 1px;
-        line-height: 15px;
+        line-height: 10px;
 
         margin: 0;
       }
