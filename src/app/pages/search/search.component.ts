@@ -42,7 +42,7 @@ export class SearchComponent implements OnInit, OnDestroy {
     );
 
     if (this.searchResults.length === 0) {
-      const searchValue = this.router.url.substring(8, this.router.url.length);
+      const searchValue = this.router.url.substring(14, this.router.url.length);
       if (searchValue !== '') {
         this.searchPostService.searchValue = searchValue;
         this.searchPostService.searchPosts(searchValue).subscribe((response) => {
@@ -55,6 +55,10 @@ export class SearchComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.resultsSubscription.unsubscribe();
     this.loadingSubscription.unsubscribe();
+  }
+
+  closeSearchView(): void {
+    this.router.navigateByUrl(this.searchPostService.redirectUrl);
   }
 
 }

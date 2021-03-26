@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { fromEvent, Subscription } from 'rxjs';
-import { debounceTime, delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
+import { fromEvent } from 'rxjs';
+import { delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
@@ -20,9 +20,8 @@ import { ThemeService } from '../../services/theme.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
-  loadingSubscription: Subscription;
   isLoading: boolean;
   isScrolled: boolean;
 
@@ -40,7 +39,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
               public searchPostService: SearchPostService,
               public dialog: MatDialog,
   ) {
-    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(
+    this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
         this.isLoading = status;
       }
@@ -54,16 +53,11 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     this.debounceSearchInput();
   }
 
-  ngOnDestroy(): void {
-    this.loadingSubscription.unsubscribe();
-  }
-
   debounceSearchInput(): void {
     if (this.searchInput) {
       fromEvent(this.searchInput.nativeElement, 'keyup')
         .pipe(
-          filter(Boolean),
-          debounceTime(500),
+          filter((e: KeyboardEvent) => e.code === 'Enter'),
           distinctUntilChanged(),
           tap(ev => {
             this.searchForPost();
@@ -101,18 +95,24 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   openSearchView(): void {
+    if (!this.router.url.startsWith('/search')) {
+      this.searchPostService.setRedirectUrl(this.router.url);
+    }
+
     if (this.searchInput.nativeElement.value !== '' && this.searchInput.nativeElement.value !== undefined) {
-      this.router.navigateByUrl('search/' + this.searchInput.nativeElement.value);
-    } else {
-      this.router.navigateByUrl('search');
+      this.router.navigateByUrl('search?query=' + this.searchInput.nativeElement.value);
     }
   }
 
   searchForPost(): void {
     if (this.searchInput.nativeElement.value !== '') {
+      this.searchPostService.setRedirectUrl(this.router.url);
+      this.openSearchView();
       this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
         this.searchPostService.searchResults$.next(response);
       });
+    } else if (this.searchPostService.redirectUrl) {
+      this.router.navigateByUrl(this.searchPostService.redirectUrl);
     }
   }
 

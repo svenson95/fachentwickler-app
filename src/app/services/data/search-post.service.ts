@@ -12,15 +12,20 @@ export class SearchPostService {
 
   searchValue = '';
   searchResults$: Subject<Post[]> = new Subject();
+  redirectUrl: string;
 
   constructor(private httpClient: HttpClient) { }
 
   // Search component - GET post
   searchPosts(text: string): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search/${text}`)
+    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search?query=${text}`)
       .pipe(map((response) => {
-        console.log('response GET search post', response);
+        // console.log('response GET search post', response);
         return response;
       }));
+  }
+
+  setRedirectUrl(url): void {
+      this.redirectUrl = url;
   }
 }
