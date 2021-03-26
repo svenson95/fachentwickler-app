@@ -4,3 +4,23 @@
 .fia-search-results {
   margin-top: 20px !important;
 }
+
+.search-page {
+  .card-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .close-search-btn {
+    &:hover {
+      mat-icon {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
