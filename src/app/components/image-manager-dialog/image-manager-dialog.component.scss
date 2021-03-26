@@ -2,7 +2,9 @@
 @import 'src/theme/mixins';
 
 .fia-image-manager {
-  color: white;
+  color: var(--text-color-1);
+  background: var(--background-secondary);
+  text-align: center;
 
   .fia-im-header {
     .fia-card-title {
@@ -10,14 +12,13 @@
     }
 
     .fia-card-description {
-      color: #989898 !important;
     }
   }
 
   .title {
     display: block;
     width: 100%;
-    color: $fia-grey-1;
+    color: var(--grey-4);
     font-size: 1.2em;
     font-family: Nunito-Light, sans-serif;
     text-transform: uppercase;
@@ -34,7 +35,7 @@
       display: flex;
 
       .fia-file-input {
-        color: black;
+        color: var(--text-color-1);
         outline: none;
       }
     }
@@ -47,15 +48,34 @@
   }
 
   .fia-im-recent-images {
+    overflow-y: scroll;
+    max-height: 400px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      overflow-y: scroll;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--secondary-color);
+      border-radius: 0;
+    }
+
     .image {
       max-height: 100px;
       max-width: 200px;
       padding: 10px;
     }
+
+    .fia-text-button {
+      display: block;
+      margin: auto;
+    }
   }
 }
 
 ::ng-deep .mat-dialog-container {
-  background: black;
+  background: var(--background-secondary);
   border-radius: 0;
 }

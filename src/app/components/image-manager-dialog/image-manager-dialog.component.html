@@ -1,8 +1,8 @@
 <mat-dialog-content class="fia-image-manager">
   <div class="fia-im-header">
     <p class="fia-card-title">Image-Manager</p>
-    <p class="fia-card-description" *ngIf="images.length === 0 && isLoading">Bilder werden geladen ...</p>
-    <p class="fia-card-description" *ngIf="images.length !== 0">{{images.length}} Bilder</p>
+    <p class="fia-card-description" *ngIf="imagesCount === undefined">Bilder werden geladen ...</p>
+    <p class="fia-card-description" *ngIf="imagesCount !== undefined">{{imagesCount}} Bilder</p>
   </div>
   <hr class="fia-divider-line"/>
   <p class="title">Neues Bild hochladen</p>
@@ -15,11 +15,14 @@
     </button>
   </form>
   <hr class="fia-divider-line"/>
-  <p class="title">Galerie</p>
+  <p class="title">Zuletzt hochgeladen</p>
   <div class="fia-im-recent-images">
     <div class="fia-spinner-wrapper" *ngIf="images.length === 0 && isLoading">
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
-    <img class="image" *ngFor="let image of images" [src]="loadImage(image)" alt="image"/>
+    <img class="image" *ngFor="let image of images" [src]="encode(image)" alt="image"/>
+    <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
+      <span>Mehr laden</span>
+    </button>
   </div>
 </mat-dialog-content>

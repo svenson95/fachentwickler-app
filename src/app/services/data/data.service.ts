@@ -78,11 +78,20 @@ export class DataService {
   getImages(page = 0, imagesPerPage = 10): Observable<any> {
     const headers = new HttpHeaders()
       .set('Content-Type', 'image/png');
-    return this.httpClient.get<any>(`${environment.baseUrl}/images/all?page=${page}&page_size=${imagesPerPage}`, {headers})
+    return this.httpClient.get<any>(`${environment.baseUrl}/images/all?page=${page}&size=${imagesPerPage}`, {headers})
       .pipe(map((response) => {
         // console.log('response GET images', response);
         return response;
       }));
+  }
+
+  // Image Manager component - GET images count
+  getImagesCount(): Observable<any> {
+    return this.httpClient.get<any>(`${environment.baseUrl}/images/count`)
+        .pipe(map((response) => {
+          // console.log('response GET images count', response);
+          return response;
+        }));
   }
 
   // Edit-Post page - POST image

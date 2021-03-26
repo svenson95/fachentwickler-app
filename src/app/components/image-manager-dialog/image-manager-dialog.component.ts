@@ -11,32 +11,37 @@ import {Subscription} from 'rxjs';
   templateUrl: './image-manager-dialog.component.html',
   styleUrls: ['./image-manager-dialog.component.scss']
 })
-export class ImageManagerDialogComponent implements OnInit, OnDestroy, AfterViewInit {
+export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
 
   images = [];
+  imagesCount: number;
+  page = 0;
   isLoading: boolean;
-  loadingSubscription: Subscription;
 
   @ViewChild('fileInput') fileInput;
 
   constructor(public authService: AuthService,
               private dataService: DataService,
-              private loadingService: LoadingService,
-              private elementRef: ElementRef,
+              private loadingService: LoadingService
   ) {
-    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(
+    this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
         this.isLoading = status;
       }
     );
+
+    this.dataService.getImagesCount().subscribe(
+        (data) => {
+          this.imagesCount = data;
+        },
+        (error) => {
+          console.log('Error while GET images count', error);
+        }
+    );
   }
 
   ngOnInit(): void {
-    this.getImages();
-  }
-
-  ngOnDestroy(): void {
-    this.loadingSubscription.unsubscribe();
+    this.initialImages();
   }
 
   ngAfterViewInit(): void {
@@ -47,23 +52,10 @@ export class ImageManagerDialogComponent implements OnInit, OnDestroy, AfterView
     return event.files.length <= 0;
   }
 
-  getImages(): void {
-    this.dataService.getAllImages().subscribe(
+  initialImages(): void {
+    this.dataService.getImages().subscribe(
       (data) => {
-        console.log('RESPONSE', data);
-        data.forEach(chunk => {
-          if (this.images.includes(el => el.files_id === chunk.files_id)) {
-            this.images.find(el => el.files_id === chunk.files_id).chunks.push(chunk);
-          } else {
-            this.images.push({ files_id: chunk.files_id, chunks: [chunk] });
-          }
-        });
-
-        this.images.forEach(image => {
-          if (image.chunks.length === 0) {
-            console.log('EMPTY IMAGE FILE', image);
-          }
-        });
+        this.images = data;
       },
       (error) => {
         console.log('Error while GET post', error);
@@ -71,14 +63,13 @@ export class ImageManagerDialogComponent implements OnInit, OnDestroy, AfterView
     );
   }
 
-  loadImage(image): string {
+  encode(image): string {
     const dataStrings = image.chunks.map((chunk: any) => chunk.data);
     return 'data:image/png;base64,' + dataStrings.join('');
   }
 
   sendImage(event): void {
     event.preventDefault();
-    console.log(event);
 
     this.dataService.uploadImage(event.target[0].files[0]).then(async response => {
       if (response) {
@@ -86,6 +77,13 @@ export class ImageManagerDialogComponent implements OnInit, OnDestroy, AfterView
       } else {
         console.log('Error while uploading new image');
       }
+    });
+  }
+
+  loadMore(): void {
+    this.page++;
+    this.dataService.getImages(this.page).subscribe(data => {
+      this.images = [...this.images, ...data];
     });
   }
 
