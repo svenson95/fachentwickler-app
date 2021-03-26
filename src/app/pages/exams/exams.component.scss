@@ -25,6 +25,10 @@
     .mat-calendar ::ng-deep {
       font-size: .9em;
 
+      .mat-calendar-previous-button {
+        margin-right: 10px;
+      }
+
       .mat-calendar-period-button,
       .mat-calendar-previous-button,
       .mat-calendar-next-button {

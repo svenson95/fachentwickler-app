@@ -35,7 +35,7 @@ export const dark: Theme = {
     properties: {
         "--background-primary": "#000000",
         "--background-secondary": "#282828",
-        "--background-tertiary": "#373737",
+        "--background-tertiary": "#323232",
         "--primary-color": "#eb6a1e",
         "--secondary-color": "#f4ac31",
         "--tertiary-color": "#94aac5",

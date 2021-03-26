@@ -55,9 +55,9 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);
 
-    if (this.isMobile.matches) {
-      this.elementRef.nativeElement.querySelector('.fia-body')
-        .addEventListener('scroll', this.onScroll.bind(this), true);
+    const body = this.elementRef.nativeElement.querySelector('.fia-body');
+    if (this.isMobile.matches && body) {
+      body.addEventListener('scroll', this.onScroll.bind(this), true);
     } else {
       this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
         .addEventListener('scroll', this.onScroll.bind(this), true);
@@ -67,7 +67,6 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   onScroll(event: any): any {
     if (this.isMobile.matches) {
       const mobileScrollableContent = this.elementRef.nativeElement.querySelector('.fia-body');
-      console.log(mobileScrollableContent);
       if (mobileScrollableContent.scrollTop > 150) {
         mobileScrollableContent.classList.add('scrolled');
       } else if (mobileScrollableContent.scrollTop < 10) {

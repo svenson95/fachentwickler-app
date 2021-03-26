@@ -8,9 +8,9 @@ export interface Post {
   subject: string;
   type: 'article' | 'tasks' | 'index-cards' | 'quiz' | 'test';
   lessonDate: string;
-  lastUpdate: string;
+  lastUpdate?: string;
   schoolWeek: string;
-  elements: PostElement[];
+  elements?: PostElement[];
   topicId?: string;
 }
 
