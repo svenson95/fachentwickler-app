@@ -33,9 +33,18 @@ export class LandingPageComponent implements OnInit {
   }
 
   inTwoDays = () => {
-    const day = new Date().getDate() + 3;
-    const month = new Date().getMonth() + 1;
+    let day: string | number = new Date().getDate() + 3;
+    let month: string | number = new Date().getMonth() + 1;
     const year = new Date().getFullYear();
+
+    if (day < 10) {
+      day = '0' + day;
+    }
+
+    if (month < 10) {
+      month = '0' + month;
+    }
+
     return `${year}-${month}-${day}`;
   }
 
