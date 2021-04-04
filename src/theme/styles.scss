@@ -460,8 +460,8 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     height: $fia-spinner-size !important;
 
     circle {
-      stroke: var(--tertiary-color);
-      stroke-width: 5px !important;
+      stroke: var(--secondary-color);
+      stroke-width: 6px !important;
     }
   }
 }
