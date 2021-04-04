@@ -59,8 +59,8 @@ export class SchoolWeekCardComponent implements OnInit {
   /* -- Calendar buttons --*/
   getPreviousWeek(): void {
     this.isLoading = true;
-    this.currentWeek--;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
+      this.currentWeek--;
       this.week = response;
       this.dataService.schoolWeek = response;
       this.isLoading = false;
@@ -69,8 +69,8 @@ export class SchoolWeekCardComponent implements OnInit {
 
   getNextWeek(): void {
     this.isLoading = true;
-    this.currentWeek++;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
+      this.currentWeek++;
       this.week = response;
       this.dataService.schoolWeek = response;
       this.isLoading = false;
