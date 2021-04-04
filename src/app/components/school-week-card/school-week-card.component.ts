@@ -3,7 +3,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { subjects } from '../../../data/menu-items';
 import { DataService } from '../../services/data/data.service';
 import { SchoolWeek, Weekdays } from '../../models/school-week';
-import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-school-week-card',
@@ -18,13 +17,7 @@ export class SchoolWeekCardComponent implements OnInit {
   isLoading: boolean;
   currentWeek: number;
 
-  constructor(private dataService: DataService,
-              private loadingService: LoadingService
-  ) {
-    this.loadingService.loading$.subscribe(response => {
-      this.isLoading = response;
-    });
-  }
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.currentWeek = Number(this.week.schoolWeek);
@@ -65,18 +58,22 @@ export class SchoolWeekCardComponent implements OnInit {
 
   /* -- Calendar buttons --*/
   getPreviousWeek(): void {
+    this.isLoading = true;
     this.currentWeek--;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
       this.week = response;
       this.dataService.schoolWeek = response;
+      this.isLoading = false;
     });
   }
 
   getNextWeek(): void {
+    this.isLoading = true;
     this.currentWeek++;
     this.dataService.getSchoolWeek(this.currentWeek).subscribe(response => {
       this.week = response;
       this.dataService.schoolWeek = response;
+      this.isLoading = false;
     });
   }
 

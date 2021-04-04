@@ -28,8 +28,6 @@ export class LoginComponent implements OnInit {
               private formBuilder: FormBuilder
   ) {
     if (authService.isAuthenticated) {
-      this.loadService.startLoading();
-      this.loading = true;
       router.navigate(['dashboard']);
     }
 
