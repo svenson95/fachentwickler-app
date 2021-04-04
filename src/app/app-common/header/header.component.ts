@@ -108,7 +108,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   searchForPost(): void {
     if (this.searchInput.nativeElement.value !== '') {
       this.searchPostService.setRedirectUrl(this.router.url);
-      this.openSearchView();
       this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
         this.searchPostService.searchResults$.next(response);
       });
