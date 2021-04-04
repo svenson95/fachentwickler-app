@@ -91,7 +91,6 @@
       align-items: center;
       justify-content: center;
       width: 24px;
-      margin-bottom: 3px;
 
       svg {
         height: 24px;
@@ -100,6 +99,7 @@
       @include from-xs {
         fill: var(--tertiary-color);
         margin-right: 6px;
+        margin-bottom: 3px;
       }
     }
 

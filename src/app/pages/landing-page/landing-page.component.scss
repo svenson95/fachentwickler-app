@@ -36,8 +36,8 @@
       top: 10px;
 
       @include to-xs {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
         top: 0;
         left: -50px;
       }
@@ -75,9 +75,8 @@
       }
 
       @include to-xs {
-        font-size: .8em;
         letter-spacing: 1px;
-        line-height: 10px;
+        line-height: 14px;
 
         margin: 0;
       }
