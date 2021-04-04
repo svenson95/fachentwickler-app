@@ -135,6 +135,7 @@ export const subjectsData: Subject[] = [
             "5f085932286ad9151bdd46b3"
         ],
         "indexcards": [],
+        "matchings": ["6066f38840e2d4160425a70e"],
         "tests": [
             "5f429ebf165d0ab470bc57f8",
             "5f9e9023cdb75d208eba17ee",

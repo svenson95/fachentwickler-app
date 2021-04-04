@@ -59,12 +59,24 @@ const quizPaths = (): Array<Route> => {
   return quizzes;
 };
 
+const matchingPaths = (): Array<Route> => {
+  const matchings: Route[] = [];
+  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+    matchings.push({
+      path: sub + '/:topic/:title/matching',
+      loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingModule)
+    });
+  });
+  return matchings;
+};
+
 const routes: Routes = [
   ...subjectsPaths(),
   ...postPaths(),
   ...editPostPaths(),
   ...indexCardsPaths(),
   ...quizPaths(),
+  ...matchingPaths(),
   {
     path: '',
     loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),

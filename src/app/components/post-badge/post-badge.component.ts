@@ -25,6 +25,8 @@ export class PostBadgeComponent implements OnInit {
       return 'Karteikarten';
     } else if (text === PostType.QUIZ) {
       return 'Quiz';
+    } else if (text === PostType.MATCHING) {
+      return 'Matchings';
     } else if (text === PostType.TEST) {
       return 'Test';
     }

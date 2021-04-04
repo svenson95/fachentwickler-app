@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 import { Post } from '../../models/post';
 import { IndexCards } from '../../models/index-cards';
 import { Quiz } from '../../models/quiz';
+import { Matching } from '../../models/matching-piece';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 import { ExamDate } from '../../models/exam-date';
@@ -125,7 +126,16 @@ export class DataService {
       }));
   }
 
-  // Dashboard component - GET posts/all-ids          // TODO: rename backend-route
+  // Matching component - GET matching
+  getMatching(url: string): Observable<Matching> {
+    return this.httpClient.get<Matching>(`${environment.baseUrl}/matching/${url}`)
+        .pipe(map((response) => {
+          // console.log('response GET matchings', response);
+          return response;
+        }));
+  }
+
+  // Dashboard component - GET posts/all-ids
   getAllLessons(): Observable<string[]> {
     return this.httpClient.get<string[]>(`${environment.baseUrl}/posts/all-lessons`)
       .pipe(map((response) => {

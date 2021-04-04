@@ -1,5 +1,6 @@
 import { Quiz } from './quiz';
 import { IndexCards } from './index-cards';
+import { Matching } from './matching-piece';
 
 export interface Subject {
   subject: string;
@@ -7,6 +8,7 @@ export interface Subject {
   topics: string[] | Topic[];
   quizzes?: string[] | Quiz[];
   indexcards?: string[] | IndexCards[];
+  matchings?: string[] | Matching[];
   tests?: string[];
 }
 

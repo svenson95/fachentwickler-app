@@ -1,0 +1,61 @@
+<mat-card class="fia-card">
+    <p class="fia-card-title" *ngIf="matching !== undefined" [innerHTML]="matching.title"></p>
+    <p class="fia-card-description" *ngIf="matching !== undefined" [innerHTML]="matching.description"></p>
+    <mat-card-content class="fia-card-content" *ngIf="matching !== undefined">
+        <div class="fia-quiz">
+            <div class="fia-content-wrapper">
+                <div id="game">
+                    <div class="container unsolved" *ngIf="unsolvedPairs.length > 0">
+                        <div class="pair_items left">
+                            <button class="item" [class.selected]="leftpartSelected === pair.pairNumber"
+                                    *ngFor="let pair of leftSidePairs"
+                                    (mousedown)="setLeft(pair.pairNumber)"
+                                    (click)="selectItem({pair: pair, side: 'left'})"
+                                    [disabled]="isCorrect !== undefined"
+                            >
+                                {{pair.leftpart}}
+                                <div class="left-connector"></div>
+                            </button>
+                        </div>
+                        <div class="answer-indicator">
+                            <svg class="correct" *ngIf="isCorrect === true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                <circle class="path circle" fill="none" stroke-width="8" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                                <polyline class="path check" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+                            </svg>
+                            <svg class="wrong" *ngIf="isCorrect === false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                <circle class="path circle" fill="none" stroke-width="8" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                                <line class="path line first" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
+                                <line class="path line second" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
+                            </svg>
+                        </div>
+                        <div class="pair_items right">
+                            <button class="item" [class.selected]="rightpartSelected === pair.pairNumber"
+                                    *ngFor="let pair of rightSidePairs"
+                                    (mousedown)="setRight(pair.pairNumber)"
+                                    (click)="selectItem({pair: pair, side: 'right'})"
+                                    [disabled]="isCorrect !== undefined"
+                            >
+                                {{pair.rightpart}}
+                                <div class="right-connector top-bar"></div>
+                                <div class="right-connector bottom-bar"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="fia-text-button" *ngIf="unsolvedPairs.length === 0" (click)="startNextRound()">Nächste Runde</button>
+                    <hr/>
+                    <h2>Lösungen</h2>
+                    <div class="container solved" *ngIf="solvedPairs.length > 0">
+                        <div *ngFor="let pair of solvedPairs" class="pair">
+                            <div class="item solved" [innerHTML]="pair.leftpart"></div>
+                            <div class="connector"></div>
+                            <div class="item solved" [innerHTML]="pair.rightpart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <p class="fia-post-last-update" *ngIf="matching !== undefined">
+        Letzte Aktualisierung: {{matching.lastUpdate | date:'dd.MM.yyyy'}}
+    </p>
+</mat-card>
