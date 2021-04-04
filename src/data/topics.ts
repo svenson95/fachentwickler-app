@@ -141,6 +141,14 @@ export const topics: Topic[] = [
             "5f429d16165d0ab470bc57ea",
             "5f43d3dcf067639a259359c6",
             "5f67ad91257ec895e489e34c",
+            "5ffca2c6e3bc33038ff5f16e",
+            "602101bc65dbdf479177a4c1",
+        ]
+    },
+    {
+        "title": "SQL (Structured Query Language)",
+        "subject": "lf-6",
+        "links": [
             "5f6f5d29819cd4bad66c53fa",
             "5f6fb787539ea9f7ca3856ec",
             "5f7a5a1d26fca377f7ed4e68",
@@ -149,12 +157,12 @@ export const topics: Topic[] = [
             "5fa110d8fb7df8ef19c6439a",
             "5fdfde7b8c8c2a5e54a4a412",
             "5fdfdbb88c8c2a5e54a4a40e",
-            "5ffca2c6e3bc33038ff5f16e",
-            "602101bc65dbdf479177a4c1",
             "6021192e65dbdf479177a4c6",
             "60398d01b791dc7b6076e187",
             "604285ecb0c00c20f201d169",
-            "60428604b0c00c20f201d16a"
+            "60428604b0c00c20f201d16a",
+            "605c875e23779759b9bb2903",
+            "605c880823779759b9bb2904"
         ]
     },
     {
@@ -170,7 +178,8 @@ export const topics: Topic[] = [
             "6020f7a865dbdf479177a4bc",
             "603eb6efb0c00c20f201d122",
             "60428445b0c00c20f201d168",
-            "605855a237cdbc38e21c701c"
+            "605855a237cdbc38e21c701c",
+            "605c84de23779759b9bb2901"
         ]
     },
     {
@@ -193,7 +202,8 @@ export const topics: Topic[] = [
             "603947774bb78f077e58b416",
             "603947b14bb78f077e58b417",
             "603eb62eb0c00c20f201d120",
-            "603eb640b0c00c20f201d121"
+            "603eb640b0c00c20f201d121",
+            "605c866f23779759b9bb2902"
         ]
     },
     {
@@ -208,7 +218,8 @@ export const topics: Topic[] = [
             "6042c221b0c00c20f201d16f",
             "604c985bb0c00c20f201d226",
             "6059d3be1197a87e0b452a48",
-            "6059d3d51197a87e0b452a49"
+            "6059d3d51197a87e0b452a49",
+            "605c9a8f23779759b9bb2912"
         ]
     },
     {
@@ -241,7 +252,8 @@ export const topics: Topic[] = [
             "6039484e4bb78f077e58b418",
             "604df60bec849e7897841840",
             "6042c569b0c00c20f201d170",
-            "6053a521ec849e78978418ac"
+            "6053a521ec849e78978418ac",
+            "605c92c923779759b9bb290a"
         ]
     },
     {
@@ -260,7 +272,8 @@ export const topics: Topic[] = [
             "5fdfd82b8c8c2a5e54a4a409",
             "5fdfd83a8c8c2a5e54a4a40a",
             "5fdfd8478c8c2a5e54a4a40b",
-            "60212ecb65dbdf479177a4c8"
+            "60212ecb65dbdf479177a4c8",
+            "605c934d23779759b9bb290c"
         ]
     },
     {
@@ -275,7 +288,8 @@ export const topics: Topic[] = [
             "5ffca3e0e3bc33038ff5f16f",
             "603948e84bb78f077e58b419",
             "6042c788b0c00c20f201d171",
-            "605905de1197a87e0b452a38"
+            "605905de1197a87e0b452a38",
+            "605c934d23779759b9bb290c"
         ]
     },
     {

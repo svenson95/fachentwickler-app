@@ -71,7 +71,8 @@ export const subjectsData: Subject[] = [
         "subject": "lf-6",
         "description": "Einführung in eine Programmiersprache, Kontrollstrukturen, Struktogramme, Einführung in die Objektorientierung, statische und dynamische Diagramme der UML, Projektierung von Anwendungssystemen, Normalisierung von Datenbanken, Datenbankentwurf mit ER-Diagrammen, SQL.",
         "topics": [
-            "6056629db0623029d4a68f6b"
+            "6056629db0623029d4a68f6b",
+            "605c90fe23779759b9bb2907"
         ],
         "tests": [
             "5f429d2e165d0ab470bc57eb",
@@ -126,7 +127,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "wiso",
-        "description": "foo",
+        "description": "Wirtschaft- und Sozialkunde - Allgemeine Wirtschaftslehre. Allgemeine wirtschaftliche und gesellschaftliche Zusammenhänge der Berufs- und Arbeitswelt. Grundlagen des Wirtschaftens. Arbeiten im Betrieb. Unternehmerisches Handeln. Volkswirtschaftliche Gesamtrechnung. Wirtschaftsordnung.",
         "topics": [
             "6056968e07c61731b8d162f3",
             "6056969907c61731b8d162f4"

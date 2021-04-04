@@ -804,13 +804,15 @@ export const LF7_2_POSTS: Post[] = [
         ]
     },
     {
-        "url": "e_technik/ipv4",
-        "title": "IPv4 (ENTWURF)",
+        "url": "netze_und_dienste/ipv4",
+        "_id": "5fdfd39c8c8c2a5e54a4a405",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "IPv4",
         "description": "Mitschrift vom 11.12.2020",
         "subject": "lf-7-2",
         "type": "article",
         "lessonDate": "2020-12-11",
-        "lastUpdate": "2020-12-20",
+        "lastUpdate": "2021-03-27",
         "schoolWeek": "19",
         "elements": [
             {
@@ -819,7 +821,182 @@ export const LF7_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Entwurfstext"
+                "content": "IPv4 ist ein Netzwerkprotokoll (IP, engl. <i>Internet Protocol</i>) welches für die Adressierung im Netzwerk verantwortlich ist. Es ist die erste Version die sich weltweit verbreitet hat. IPv4 wurde im September 1981 als RFC 791 veröffentlicht, die Version 6 (IPv6) wurde im Dezember 1998 als RFC 2460 veröffentlicht. Die IP bildet eine wichtige technische Grundlage des Internets, eine IP-Adresse muss weltweit einmalig sein. IPv4-Adressen bestehen aus 4 Oktetten / binären Adressblöcken je maximal 2^8 (=256), z.B. <code>192.168.2.1</code>."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605f9f8559bf2574740034f0"
+            },
+            {
+                "type": "text",
+                "content": "Da die Anzahl an möglichen Adressen relativ begrenzt war - was angesichts der steigenden Popularität des Internets zum Problem wurde - kam mit IPv6 ein neues Adressierungsschema, welches deutlich länger ist und mit einer hexadezimalen Schreibweise arbeitet. Dabei wird eine Zahl in 8 Blöcke zu je 16 Bit unterteilt, diese Blöcke werden durch Doppelpunkte getrennt. Eine IPv6 Adresse könnte z.B. so aussehen <code>2001:0db4:84a3:28b3:1319:5a2e:0370:7344</code>. Führende Nullen dürfen ausgelassen werden, z.B. <code>2001:db8:85a3:8d3:1319:8a2e:370:7344</code>."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Allgemeine Grundlagen",
+                "list": [
+                    "TCP/IP ist der Name für eine Protokollfamilie, die für mehr als 100 Kommunikationsprotokolle steht",
+                    "TCP/IP wird im Internet genutzt und hat dadurch eine enorme Verbreitung erfahren",
+                    {
+                        "content": "Transmission Control Protocol (TCP)",
+                        "sublist": [
+                            "Transportprotokoll (Schicht 4)",
+                            "erbringt den gesicherten (zuverlässigen) Datentransport",
+                            "Zuverlässigkeit bedeutet eine positive Bestätigung des Empfanges mit Neuübertragung bei aufgetretenen Fehlern"
+                        ]
+                    },
+                    {
+                        "content": "Internet Protokoll (IP)",
+                        "sublist": [
+                            "Netzprotokoll (Schicht 3)",
+                            "stellt den ungesicherten Transport von Daten zur Verfügung",
+                            "IPv4",
+                            "IPv6"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "Boolesche Verknüfung",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Position" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Dual" },
+                            { "align": "middle", "content": "2^7" },
+                            { "align": "middle", "content": "2^6" },
+                            { "align": "middle", "content": "2^5" },
+                            { "align": "middle", "content": "2^4" },
+                            { "align": "middle", "content": "2^3" },
+                            { "align": "middle", "content": "2^2" },
+                            { "align": "middle", "content": "2^1" },
+                            { "align": "middle", "content": "2^0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Dezimal" },
+                            { "align": "middle", "content": "128" },
+                            { "align": "middle", "content": "64" },
+                            { "align": "middle", "content": "32" },
+                            { "align": "middle", "content": "16" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Byte" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Dual" },
+                            { "align": "middle", "content": "2^7" },
+                            { "align": "middle", "content": "2^6" },
+                            { "align": "middle", "content": "2^5" },
+                            { "align": "middle", "content": "2^4" },
+                            { "align": "middle", "content": "2^3" },
+                            { "align": "middle", "content": "2^2" },
+                            { "align": "middle", "content": "2^1" },
+                            { "align": "middle", "content": "2^0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Summe" },
+                            { "align": "middle", "content": "255" },
+                            { "align": "middle", "content": "127" },
+                            { "align": "middle", "content": "63" },
+                            { "align": "middle", "content": "31" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Regeln für die IP-Adressierung",
+                "list": [
+                    "4 Byte Binärzahlen <br/> (xxxx xxxx . xxxx xxxx . xxxx xxxx . xxxx xxxx)",
+                    "Beinhaltet Netzwerk- und Hostadresse",
+                    "Darstellung in dezimaler Punktnotation <br/> (192.168.100.20)",
+                    "Jede Adresse darf nur einmal in einem autonomen System vergeben werden"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Autonomes System"
+            },
+            {
+                "type": "list",
+                "content": "Autonom (= <i>unabhängig, eigenständig</i>)",
+                "list": [
+                    "Ein autonomes System wird durch eine Schnittstelle zu einem WAN begrenzt",
+                    "Router innerhalb eines autonomen Systems verwenden interne Routingprotokolle (z. B. RIP, IGRP, OSPF, EIGRP)"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d9fd159bf2574740034c3"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "MAC Adresse"
+            },
+            {
+                "type": "text",
+                "content": "Jedes internetfähige Gerät hat auf seiner Netzwerkschnittstelle eine eindeutige MAC-Adresse (engl. <i>Media-Access-Control Address</i>). Diese identifiziert ein Gerät bei einer Datenverbindung. Sofern ein Gerät (PC, Server, Switch) mehr als ein physisches Interface hat, besitzt jedes Netzwerk-Interface eine eigene MAC-Adresse. Bei Microsoft wird diese auch \"<b>physikalische Adresse</b>\" genannt. Format einer MAC-Adresse: <code>00-11-22-33-44-55</code> - es können alle hexadezimalen Zeichen vorkommen (0 bis 9, A bis F)."
             }
         ]
     },
@@ -1441,5 +1618,82 @@ export const LF7_2_POSTS: Post[] = [
                 ]
             }
         ]
-    }
+    },
+    {
+        "url": "netze_und_dienste/netzwerkgeraete",
+        "_id": "605c866f23779759b9bb2902",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "Netzwerkgeräte",
+        "description": "Mitschrift vom 23.03.2021",
+        "subject": "lf-7-2",
+        "type": "article",
+        "lessonDate": "2021-03-23",
+        "lastUpdate": "2021-03-28",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "In einem Netzwerk gibt es meist mehrere Netzwerkgeräte, die auf mehreren Ebenen eine Rolle spielen, wie Hubs, Switches und Router. Oft sind diese 3 Komponenten in einem einzigen Gerät integriert."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Hub"
+            },
+            {
+                "type": "text",
+                "content": "Ein Hub wird häufig zur Verbindung von Segmenten eines LAN (Local Area Network) verwendet. Ein Hub enthält mehrere Ports. Wenn ein Paket an einem Port eintrifft, wird es auf die anderen Ports kopiert, so dass alle Segmente des LANs alle Pakete sehen können. Ein Hub fungiert als gemeinsamer Verbindungspunkt für Geräte in einem Netzwerk."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605fd88e59bf2574740034f4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Switch"
+            },
+            {
+                "type": "text",
+                "content": "Ein Switch arbeitet auf der Datenverbindungsschicht (Layer 2) und manchmal auf der Netzwerkschicht (Layer 3) des OSI (Open Systems Interconnection)-Referenzmodells und unterstützt daher jedes beliebige Paketprotokoll. LANs, die zur Verbindung von Segmenten Switches verwenden, werden als geswitchte LANs oder, im Falle von Ethernet-Netzwerken, als geswitchte Ethernet-LANs bezeichnet. In Netzwerken ist der Switch das Gerät, das Pakete zwischen LAN-Segmenten filtert und weiterleitet."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605fd89b59bf2574740034f6"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Router"
+            },
+            {
+                "type": "text",
+                "content": "Ein Router ist mit mindestens zwei Netzwerken verbunden, in der Regel zwei LANs oder WANs (Wide Area Networks) oder ein LAN und sein ISP (Internet Service Provider) Netzwerk. Der Router befindet sich in der Regel an Gateways, den Stellen, an denen zwei oder mehr Netzwerke miteinander verbunden sind. Anhand von Headern und Weiterleitungstabellen bestimmt der Router den besten Weg zur Weiterleitung der Pakete. Darüber hinaus verwendet der Router Protokolle wie ICMP (Internet Control Message Protocol), um miteinander zu kommunizieren, und konfiguriert die beste Route zwischen zwei beliebigen Hosts. Mit einem Wort: Der Router leitet Datenpakete weiter."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html'>Was ist der Unterschied zwischen Hub, Switch und Router? | https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html</a>"
+                ]
+            }
+        ]
+    },
 ];

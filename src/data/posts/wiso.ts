@@ -1507,13 +1507,13 @@ export const WISO_POSTS: Post[] = [
         ]
     },
     {
-        "url": "berufsbildung_und_arbeitswelt/lohnarten",
-        "title": "Lohnarten (ENTWURF)",
+        "url": "berufsbildung_und_arbeitswelt/lohnformen",
+        "title": "Lohnformen (ENTWURF)",
         "description": "Aufgaben vom 08.02.2021",
         "subject": "wiso",
         "type": "article",
         "lessonDate": "2021-02-08",
-        "lastUpdate": "2021-02-08",
+        "lastUpdate": "2021-02-25",
         "schoolWeek": "21",
         "elements": [
             {
@@ -1559,6 +1559,118 @@ export const WISO_POSTS: Post[] = [
             {
                 "type": "title",
                 "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>1</span>"
+            },
+            {
+                "type": "text",
+                "content": "Für welche Tätigkeiten bietet sich eine Entlohnung nach Zeitlohn besonders an?"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: Lagerarbeiter, Handwerk"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>2</span>"
+            },
+            {
+                "type": "text",
+                "content": "Welchen Hauptnachteil hat der Zeitlohn jeweils für den Arbeitnehmer und den Arbeitgeber?"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: Leistungsanreiz geringer (Nachteil für AG) & unzufriedenheit bei fleißigen Mitarbeitern (Nachteil für AN)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>3</span>"
+            },
+            {
+                "type": "text",
+                "content": "Welche Vorteile sehen Sie in einer Bezahlung nach Zeitlohn?"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: Weniger Zeitdruck & Bewahrung vor Überforderung und Stress, weniger Arbeitsunfälle"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>4</span>"
+            },
+            {
+                "type": "text",
+                "content": "Unterscheiden Sie zwischen Bruttolohn und Nettolohn"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: Brutto ist vor Abzügen von Steuern und Sozialversicherungsbeiträgen, Netto ist nach Abzug von Steuern und Sozialversicherungsbeiträgen"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>5</span>"
+            },
+            {
+                "type": "text",
+                "content": "Unterscheiden Sie zwischen Nettolohn und ausbezahltem Lohn"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: ..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>6</span>"
+            },
+            {
+                "type": "text",
+                "content": "Welche Lohnbezüge sind gesetzlich vorgeschrieben?"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: Steuern (Lohnsteuer, Solidaritätszuschlag & Kirchensteuer) sowie die Beiträge zur Sozialversicherung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>7</span>"
+            },
+            {
+                "type": "text",
+                "content": "Neben den gesetzlichen Abzügen öknnen auch sonstige Abzüge anfallen. Geben Sie hierzu drei Beispiele an"
+            },
+            {
+                "type": "text",
+                "content": "Antwort: Mietzahlungen für Betriebswohnungen, Sparbeiträge (Vermögenswirksame Leistungen) oder Einbehaltung von ausgezahlten Vorschüssen"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1731,5 +1843,124 @@ export const WISO_POSTS: Post[] = [
                 "content": "<a href='https://wordwall.net/play/10497/555/642'>https://wordwall.net/play/10497/555/642</a>"
             }
         ]
-    }
+    },
+    {
+        "url": "steuern_und_sozialversicherungen/einkommenssteuer_erklaerung",
+        "title": "Einkommenssteuer (-erklärung)",
+        "description": "Thema vom 22.03.2021",
+        "subject": "wiso",
+        "type": "article",
+        "lessonDate": "2021-03-22",
+        "lastUpdate": "2021-03-26",
+        "schoolWeek": "23",
+        "topicId": "6056969907c61731b8d162f4",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Pflichten der Einkommenssteuerpflichtigen"
+            },
+            {
+                "type": "text",
+                "content": "Die Einkommenssteuerpflichtigen müssen die Einkommenssteuer an das Finanzamt abführen. Spätestens bis zum 31. Juli für das abgelaufene Kalenderjahr muss die Einkommenssteuererklärung abgegeben werden - Verlängerung auf Antrag möglich. Bei Verstreichung können Strafen drohen, sofern man zur Abgabe verpflichtet ist, z. B. als selbstständiger."
+            },
+            {
+                "type": "list",
+                "content": "Jeder, der Einnahmen aus den folgenden sieben Einkunftsarten bezieht, ist einkommenssteuerpflichtig.",
+                "list": [
+                    {
+                        "content": "Land- und Forstwirtschaft",
+                        "sublist": [
+                            "Weinbauern, Gärtnereien, Forstbetriebe"
+                        ]
+                    },
+                    {
+                        "content": "Gewerbebetrieb",
+                        "sublist": [
+                            "Handwerks-, Handels- und Industriebetriebe"
+                        ]
+                    },
+                    {
+                        "content": "selbstständige Arbeit",
+                        "sublist": [
+                            "Ärzte, Rechtsanwälte, Steuerberater, Architekten"
+                        ]
+                    },
+                    {
+                        "content": "nichtselbstständige Arbeit",
+                        "sublist": [
+                            "Löhne, Gehälter, Ausbildungsvergütungen"
+                        ]
+                    },
+                    {
+                        "content": "Kapitalvermögen",
+                        "sublist": [
+                            "Zinsen, Dividenden"
+                        ]
+                    },
+                    {
+                        "content": "Vermietung und Verpachtung",
+                        "sublist": [
+                            "Mieteinnahmen, Pachteinnahmen"
+                        ]
+                    },
+                    {
+                        "content": "sonstige Einkünfte",
+                        "sublist": [
+                            "Rentenbezüge, Spekulationsgewinne"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Höhe der Einkommenssteuer: Steuertarif"
+            },
+            {
+                "type": "text",
+                "content": "Durch den Steuertarif wird die Steuerschuld ermittelt, die sich aus dem zu versteuernden Einkommen ergibt. Die Steuersätze sind unterschiedlich hoch. Grundsätzlich gilt: Je höher das Einkommen, desto höher die Steuerschuld."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6059048c1197a87e0b452a28",
+                "size": "m"
+            }
+        ]
+    },
+    {
+        "url": "berufsbildung_und_arbeitswelt/gerechte_entlohnung",
+        "title": "Gerechte Entlohnung",
+        "description": "Thema vom 25.03.2021",
+        "subject": "wiso",
+        "type": "article",
+        "lessonDate": "2021-03-25",
+        "lastUpdate": "2021-03-25",
+        "schoolWeek": "23",
+        "topicId": "6056969907c61731b8d162f4",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            }
+        ]
+    },
 ];

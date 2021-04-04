@@ -4538,7 +4538,7 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "<a href='http://159.65.105.150/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_2'>Aufgabe gelöst? Zur Musterlösung</a>"
+                "content": "<a routerLink='http://159.65.105.150/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_2'>Aufgabe gelöst? Zur Musterlösung</a>"
             }
         ]
     },
@@ -4815,6 +4815,68 @@ export const LF6_POSTS: Post[] = [
                 "content": "Quellen:",
                 "list": [
                     "<a href='https://www.westermann.de/artikel/978-3-14-222492-3/Datenbanken-Relationale-Datenbanken-entwerfen-und-realisieren'>Relationale Datenbanken entwerfen und realisieren. Schülerband 2. Auflage 2017.</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbank_einrichten_und_abfragen_bereitstellen_aufgabe",
+        "title": "Datenbank einrichten und Abfragen bereitstellen - Aufgabe",
+        "description": "Thema vom 24.03.2021",
+        "subject": "lf-6",
+        "type": "tasks",
+        "lessonDate": "2021-03-24",
+        "lastUpdate": "2021-03-25",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href=''></a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/mariadb_datenbank_und_abfragen",
+        "title": "MariaDB Datenbank und Abfragen",
+        "description": "Thema vom 25.03.2021",
+        "subject": "lf-6",
+        "type": "article",
+        "lessonDate": "2021-03-25",
+        "lastUpdate": "2021-03-25",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href=''></a>"
                 ]
             }
         ]

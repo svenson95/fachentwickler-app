@@ -151,13 +151,13 @@ export const LF8_POSTS: Post[] = [
         ]
     },
     {
-        "url": "uebertragungstechnik/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
+        "url": "netze_und_dienste/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
         "title": "Duplex und Duplexing - Simplex, Halbduplex und Vollduplex",
         "description": "Mitschrift vom 13.08.2020",
-        "subject": "lf-8",
+        "subject": "lf-7-2",
         "type": "article",
         "lessonDate": "2020-08-13",
-        "lastUpdate": "2020-09-03",
+        "lastUpdate": "2021-03-25",
         "schoolWeek": "14",
         "elements": [
             {
@@ -374,7 +374,8 @@ export const LF8_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/604c97aab0c00c20f201d224"
+                "content": "http://159.65.105.150:3000/images/604c97aab0c00c20f201d224",
+                "size": "s"
             },
             {
                 "type": "line",
@@ -462,5 +463,107 @@ export const LF8_POSTS: Post[] = [
                 ]
             }
         ]
-    }
+    },
+    {
+        "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_verkaufsfoerderung",
+        "title": "Instrumente der Kommunikationspolitk - Verkaufsförderung",
+        "description": "Mitschrift vom 23.03.2021",
+        "subject": "lf-8",
+        "type": "article",
+        "lessonDate": "2021-03-23",
+        "lastUpdate": "2021-03-23",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Verkaufsförderung ..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>",
+                    "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_sponsoring",
+        "_id": "6059d3d51197a87e0b452a49",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Instrumente der Kommunikationspolitk - Sponsoring",
+        "description": "Mitschrift vom 26.03.2021",
+        "subject": "lf-8",
+        "type": "article",
+        "lessonDate": "2021-03-26",
+        "lastUpdate": "2021-03-26",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Beim Sponsoring ..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>",
+                    "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "uebertragungstechnik/distributionspolitik",
+        "title": "Distributionspolitik",
+        "description": "Mitschrift vom 25.03.2021",
+        "subject": "lf-8",
+        "type": "article",
+        "lessonDate": "2021-03-25",
+        "lastUpdate": "2021-03-25",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605c9a6c23779759b9bb2910",
+                "size": "m"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href=''></a>"
+                ]
+            }
+        ]
+    },
 ];

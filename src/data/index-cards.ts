@@ -1,6 +1,6 @@
 import { IndexCards } from '../app/models/index-cards';
 
-const cards: IndexCards[] = [
+export const indexCards: IndexCards[] = [
     {
         "url": "beduerfnisse_und_gueter/vorbereitung_fuer_test/karteikarten",
         "title": "Bedürfnisse und Güter - Karteikarten für Test",

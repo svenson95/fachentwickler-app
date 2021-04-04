@@ -1272,4 +1272,24 @@ export const WP_POSTS: Post[] = [
           }
       ]
   },
+  {
+      "url": "vernetzte_steuerungssysteme/pseudocode",
+      "title": "Pseudocode",
+      "description": "Aufgabe vom 24.03.2021",
+      "subject": "wp",
+      "type": "tasks",
+      "lessonDate": "2021-03-24",
+      "lastUpdate": "2021-03-25",
+      "schoolWeek": "23",
+      "elements": [
+          {
+              "type": "title",
+              "content": "Aufgaben"
+          },
+          {
+              "type": "text",
+              "content": "..."
+          }
+      ]
+  },
 ];

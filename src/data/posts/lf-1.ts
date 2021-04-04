@@ -128,20 +128,24 @@ export const LF1_POSTS: Post[] = [
         "subject": "lf-1",
         "type": "article",
         "lessonDate": "2000-01-01",
-        "lastUpdate": "2020-12-20",
+        "lastUpdate": "2021-03-23",
         "schoolWeek": "0",
         "elements": [
             {
-                "type": "text",
-                "content": "Das ist der zweite Test!"
-            },
-            {
                 "type": "title",
-                "content": "1. Test"
+                "content": "Definition"
             },
             {
                 "type": "subtitle",
-                "content": "Untertitel222223"
+                "content": "Untertitel"
+            },
+            {
+                "type": "text",
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            },
+            {
+                "type": "hint",
+                "content": "test"
             },
             {
                 "type": "image",
@@ -149,174 +153,188 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Test Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.test"
-            }
-        ]
-    },
-    {
-        "url": "der_betrieb_und_sein_umfeld/zweiter-test-artikel",
-        "title": "Zweiter Testartikel",
-        "description": "Aufgaben vom 01.01.2000",
-        "subject": "lf-1",
-        "type": "tasks",
-        "lessonDate": "2000-01-01",
-        "lastUpdate": "2020-12-20",
-        "schoolWeek": "0",
-        "elements": [
-            {
-                "type": "text",
-                "content": "Das ist der zweite Test!"
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
             },
             {
-                "type": "title",
-                "content": "3. Test"
-            },
-            {
-                "type": "subtitle",
-                "content": "Untertitel222223"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ef8e9424ec54c25305a5066"
+                "type": "code",
+                "language": "javascript",
+                "content": "console.log(\"Hello World!\");"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Untertitel222223"
+            },
+            {
+                "type": "text",
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
             },
             {
                 "type": "list",
-                "content": "Testliste",
-                "list": ["Listenelement 1", "Listenelement 2", "Listenelement 3"]
-            },
-            {
-                "type": "text",
-                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-            },
-            {
-                "type": "title",
-                "content": "Title"
-            },
-            {
-                "type": "title",
-                "content": "Title"
-            },
-            {
-                "type": "text",
-                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ef8eb364ec54c25305a5070"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "text",
-                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 2eeee"
-            },
-            {
-                "type": "text",
-                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ef8ea884ec54c25305a506e"
+                "content": "Liste",
+                "list": [
+                    "test",
+                    "test",
+                    {
+                        "content": "test",
+                        "sublist": [
+                            "test",
+                            "test"
+                        ]
+                    }
+                ]
             },
             {
                 "type": "table",
-                "content": "TabelleTest",
+                "content": "",
                 "rows": [
                     {
                         "type": "header",
                         "columns": [
-                            {
-                                "align": "middle",
-                                "content": "Element Column 1a1"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 12"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 13"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 14"
-                            }
+                            { "align": "left", "content": "DSL-Variante", "rowSpan": 2 },
+                            { "align": "left", "content": "Übertragung (möglich)", "rowSpan": 2 },
+                            { "align": "middle", "content": "Doppel-<br/>-adern", "rowSpan": 2 },
+                            { "align": "middle", "content": "Datenrate", "colSpan": 2 },
+                            { "align": "middle", "content": "Reichweite", "rowSpan": 2 },
+                            { "align": "middle", "content": "POTS/<br/>ISDN", "rowSpan": 2 },
+                            { "align": "middle", "content": "Anwendung", "rowSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Downstream" },
+                            { "align": "middle", "content": "Upstream" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            {
-                                "align": "middle",
-                                "content": "Element Column 21"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 2b2"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 23"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 24"
-                            }
+                            { "align": "left", "content": "ADSL" },
+                            { "align": "left", "content": "asymmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "8 MBit/s" },
+                            { "align": "right", "content": "640 kBit/s" },
+                            { "align": "right", "content": "ca. 5 km" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            {
-                                "align": "middle",
-                                "content": "Element Column 31"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 32"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 3c3"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 34"
-                            }
+                            { "align": "left", "content": "ADSL2" },
+                            { "align": "left", "content": "asymmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "12 MBit/s" },
+                            { "align": "right", "content": "1 MBit/s" },
+                            { "align": "right", "content": "" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            {
-                                "align": "middle",
-                                "content": "Element Column 4e1"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 42"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 43"
-                            },
-                            {
-                                "align": "middle",
-                                "content": "Element Column 4d4"
-                            }
+                            { "align": "left", "content": "HDSL" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "25 MBit/s" },
+                            { "align": "right", "content": "3,5 MBit/s" },
+                            { "align": "right", "content": "" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "HDSL", "rowSpan": 2 },
+                            { "align": "left", "content": "symmetrisch", "rowSpan": 2 },
+                            { "align": "middle", "content": "2" },
+                            { "align": "right", "content": "1,544 MBit/s" },
+                            { "align": "right", "content": "1,544 MBit/s" },
+                            { "align": "right", "content": "ca. 4,5 km", "rowSpan": 2 },
+                            { "align": "middle", "content": "nein", "rowSpan": 2 },
+                            { "align": "left", "content": "WAN", "rowSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "right", "content": "2,048 MBit/s" },
+                            { "align": "right", "content": "2,048 MBit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SDSL" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "ca. 2,5 km" },
+                            { "align": "middle", "content": "nein" },
+                            { "align": "left", "content": "WAN" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SHDSL" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "ca. 4 km" },
+                            { "align": "middle", "content": "nein" },
+                            { "align": "left", "content": "WAN" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "G.SHDSL", "rowSpan": 2 },
+                            { "align": "left", "content": "symmetrisch", "rowSpan": 2 },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "1,2 MBit/s" },
+                            { "align": "right", "content": "1,2 MBit/s" },
+                            { "align": "right", "content": "ca. 6 km", "rowSpan": 2 },
+                            { "align": "middle", "content": "nein", "rowSpan": 2 },
+                            { "align": "left", "content": "WAN", "rowSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "right", "content": "2,36 MBit/s" },
+                            { "align": "right", "content": "2,36 MBit/s" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "VDSL(2)" },
+                            { "align": "left", "content": "symmetrisch" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "right", "content": "100 MBit/s" },
+                            { "align": "right", "content": "100 MBit/s" },
+                            { "align": "right", "content": "ca. 1 km" },
+                            { "align": "middle", "content": "ja" },
+                            { "align": "left", "content": "Internet-Zugang" }
                         ]
                     }
                 ]
             },
             {
                 "type": "text",
-                "content": "Aaaaa ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero test et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                "content": "Test Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.test"
             }
         ]
     },

@@ -1446,7 +1446,7 @@ export const LF9_POSTS: Post[] = [
         "subject": "lf-9",
         "type": "article",
         "lessonDate": "2020-11-18",
-        "lastUpdate": "2021-01-12",
+        "lastUpdate": "2021-03-26",
         "schoolWeek": "18",
         "elements": [
           {
@@ -1495,7 +1495,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffca01fe3bc33038ff5f161"
+            "content": "http://159.65.105.150:3000/images/5ffca01fe3bc33038ff5f161",
+            "size": "m"
           },
           {
             "type": "line",
@@ -1511,7 +1512,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffca03fe3bc33038ff5f163"
+            "content": "http://159.65.105.150:3000/images/5ffca03fe3bc33038ff5f163",
+              "size": "m"
           },
           {
             "type": "subtitle",
@@ -1519,7 +1521,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffca050e3bc33038ff5f166"
+            "content": "http://159.65.105.150:3000/images/5ffca050e3bc33038ff5f166",
+              "size": "m"
           },
           {
             "type": "line",
@@ -1624,7 +1627,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffca067e3bc33038ff5f168"
+            "content": "http://159.65.105.150:3000/images/5ffca067e3bc33038ff5f168",
+              "size": "m"
           },
           {
             "type": "line",
@@ -1708,7 +1712,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffca07ce3bc33038ff5f16a"
+            "content": "http://159.65.105.150:3000/images/5ffca07ce3bc33038ff5f16a",
+            "size": "m"
           },
           {
             "type": "line",
@@ -1720,7 +1725,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffd4ed2e3bc33038ff5f17c"
+            "content": "http://159.65.105.150:3000/images/605d48e759bf257474003488",
+              "size": "m"
           },
           {
             "type": "list",
@@ -1741,7 +1747,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffd509fe3bc33038ff5f183"
+            "content": "http://159.65.105.150:3000/images/5ffd509fe3bc33038ff5f183",
+              "size": "m"
           },
           {
             "type": "list",
@@ -1762,7 +1769,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffd50b0e3bc33038ff5f186"
+            "content": "http://159.65.105.150:3000/images/5ffd50b0e3bc33038ff5f186",
+              "size": "m"
           },
           {
             "type": "line",
@@ -1774,7 +1782,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffd50bee3bc33038ff5f189"
+            "content": "http://159.65.105.150:3000/images/5ffd50bee3bc33038ff5f189",
+              "size": "m"
           },
           {
             "type": "line",
@@ -1796,7 +1805,8 @@ export const LF9_POSTS: Post[] = [
           },
           {
             "type": "image",
-            "content": "http://159.65.105.150:3000/images/5ffd50d1e3bc33038ff5f18c"
+            "content": "http://159.65.105.150:3000/images/5ffd50d1e3bc33038ff5f18c",
+              "size": "m"
           },
           {
             "type": "list",
@@ -1977,7 +1987,7 @@ export const LF9_POSTS: Post[] = [
         "subject": "lf-9",
         "type": "article",
         "lessonDate": "2021-03-01",
-        "lastUpdate": "2021-03-19",
+        "lastUpdate": "2021-03-23",
         "schoolWeek": "22",
         "elements": [
             {
@@ -2171,7 +2181,8 @@ export const LF9_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/60546c43ec849e78978418be"
+                "content": "http://159.65.105.150:3000/images/60546c43ec849e78978418be",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -2213,7 +2224,8 @@ export const LF9_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/60546d6aec849e78978418c0"
+                "content": "http://159.65.105.150:3000/images/60546d6aec849e78978418c0",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -2293,7 +2305,7 @@ export const LF9_POSTS: Post[] = [
         "subject": "lf-9",
         "type": "article",
         "lessonDate": "2021-03-01",
-        "lastUpdate": "2021-03-19",
+        "lastUpdate": "2021-03-23",
         "schoolWeek": "22",
         "elements": [
             {
@@ -2399,11 +2411,13 @@ export const LF9_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/604725a1b0c00c20f201d1c7"
+                "content": "http://159.65.105.150:3000/images/604725a1b0c00c20f201d1c7",
+                "size": "m"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/604725cfb0c00c20f201d1ca"
+                "content": "http://159.65.105.150:3000/images/604725cfb0c00c20f201d1ca",
+                "size": "m"
             },
             {
                 "type": "list",
@@ -2520,7 +2534,7 @@ export const LF9_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ist die Dämpfung zu hoch, kann kein oder nur ein langsameres DSL geschaltet werden. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann."
+                "content": "Ist die Dämpfung zu hoch, kann kein oder nur ein langsameres DSL geschaltet werden. Daraus resultieren verschiedene Dämpfungsgrenzen, bis zu welcher Dämpfung eine gewisse DSL-Geschwindigkeit geschaltet werden kann."
             },
             {
                 "type": "table",
@@ -3074,5 +3088,108 @@ export const LF9_POSTS: Post[] = [
                 ]
             }
         ]
-    }
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/vectoring",
+        "_id": "60585dfe4756c974afde617a",
+        "title": "Vectoring",
+        "description": "Mitschrift vom 22.03.2021",
+        "subject": "lf-9",
+        "type": "article",
+        "lessonDate": "2021-03-22",
+        "lastUpdate": "2021-03-26",
+        "schoolWeek": "23",
+        "topicId": "60568d0407c61731b8d162f0",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Beim Vectoring handelt es sich um ein Verfahren, das eine Erweiterung zum schon bestehenden VDSL-Netzes (<b>V</b>ery High Speed <b>D</b>igital <b>S</b>ubscriber <b>L</b>ine) darstellt. Diese Technik wird genutzt, um die Datenraten zu erhöhen und um Störungen auf den Kupferdoppeladern zu reduzieren bzw. zu kompensieren, die durch Übersprechen entstehen. Damit sollen Download-Raten von bis zu 100 Megabit pro Sekunde und Upload-Raten von bis zu 40 Megabit pro Sekunde möglich sein. Mit dem sogenannten Super-Vectoring lassen sich noch höhere Datenraten erzielen."
+            },
+            {
+                "type": "hint",
+                "content": "Intelligente Steuerung / Elimination des \"Nebensprechens\" auf Kupfer zur Erhöhung der Bandbreite."
+            },
+            {
+                "type": "list",
+                "content": "Voraussetzungen",
+                "list": [
+                    "alle Leitungen in einem KVz-Bereich gehören dem selben Vectoring- System an und müssen von einem Anbieter gemanaged werden – es darf nur einen DSLAM/MSAN geben",
+                    "regulatorische Anpassungen notwendig – keine KVz TAL mehr – Layer 2 BSA als neue Standardvorleistung"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d70ba59bf2574740034a6"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Flächendeckung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d71ba59bf2574740034a9"
+            },
+            {
+                "type": "text",
+                "content": "In den lilanen Bereichen sieht man dass Vectoring in vielen Gebieten eine deutlich bessere Übertragungsrate bietet."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d71c559bf2574740034ac"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Störungen eines VDSL Signals",
+                "list": [
+                    {
+                        "content": "Die Qualität im Sinne von Dämpfung einer Leitung wird durch folgende Parameter bestimmt:",
+                        "sublist": [
+                            "Kupferwiderstand der Leitung (Kabeldurchmesser)",
+                            "elektrische Isolierung der benachbarten Doppeladern zueinander."
+                        ]
+                    },
+                    "Bei der Übertragung elektrischer Signale wird mit steigenden Frequenzen ein Störsignal auf die benachbarten Doppeladern übertragen, sog. Crosstalk oder Nebensprechen.",
+                    {
+                        "content": "Die VDSL2 Performance wird hauptsächlich durch den Crosstalk limitiert, da VDSL  sehr hohe Trägerfrequenzen auf kurzen Leitungen nutzt.",
+                        "sublist": [
+                            "Kompensierbar durch Vectoring"
+                        ]
+                    },
+                    "Bei längeren Leitungen z.B. ADSL überwiegt der Verlust durch den Kupferwiderstand, daher ist der Gewinn durch Vectoring nicht so groß."
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Zusammenfassung",
+                "list": [
+                    "Über <b>alle</b> Leitungen eines Kabelbündels werden definierteTestsignale gesendet",
+                    "Gestörte Testsignale werden durch Kundenmodems empfangen und Differenz zu Testsignal ermittelt",
+                    "Messwerte der Modems werden an Vector-DSLAM zur Abschätzung des Crosstalk gesendet",
+                    "Ermittlung der notwendigen Precodierung für die Nutzsignale im Vectoring DSLAM zur Kompensation der Leitungsstörungen",
+                    "Precodierte Nutzsignale werden gesendet (Downstream). In Upstream Richtung wird der Crosstalk durch die <sup>1</sup>CPE-Informationen abgeschätzt und „gecanceld“",
+                    "Nahezu ungestörtes Nutzsignal wird an den Modems empfangen"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "<sup>1</sup> Dies bedingt, dass alle VDSL-Vectoring-Anschlüsse in einem Kabel von einem einzigen VDSL2-Vectoring-MSAN/DSLAM versorgt werden! <br/> <i>CPE = Customer Premises Equipment</i>"
+            }
+        ]
+    },
 ];

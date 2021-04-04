@@ -612,6 +612,7 @@ export const LF7_1_POSTS: Post[] = [
     },
     {
         "url": "e_technik/grundlagen_der_uebertragungstechnik_2",
+        "_id": "60428445b0c00c20f201d168",
         "title": "Grundlagen der Übertragungstechnik",
         "description": "Mitschrift vom 02.03.2021",
         "subject": "lf-7-1",
@@ -654,6 +655,329 @@ export const LF7_1_POSTS: Post[] = [
                     "Text",
                     "Daten"
                 ]
+            }
+        ]
+    },
+    {
+        "url": "e_technik/gebundene_uebertragung_leitungsgebundene_uebertragungstechnik",
+        "_id": "605855a237cdbc38e21c701c",
+        "title": "Gebundene Übertragung - Leitungsgebundene Übertragungstechnik",
+        "description": "Mitschrift vom 22.03.2021",
+        "subject": "lf-7-1",
+        "type": "article",
+        "lessonDate": "2021-03-22",
+        "lastUpdate": "2021-03-26",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Leitungsaufbau / prinz. Unterschied?",
+                    "Grundgrößen einer Leitung?",
+                    "Skineffekt?",
+                    "Ersatzschaltbild einer Leitung?",
+                    "Bedeutung der Leitungskennwerte?",
+                    "Wirkung der Leitungsgrößen?"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Je nach der zu überbrückenden Entfernung und den zu übertragenden Datenmengen werden unterschiedliche Übertragungsleitungen benötigt. In VDE-Bestimmungen, IEC-Richtlinien, DIN-Normen sowie den EMV-Vorschriften innerhalb der EG werden Grenzwerte elektromagnetischer Strahlung festgelegt. Das CE-Kennzeichen ist beispielsweise ein Zeichen für die Einhaltung bestimmter Grenzwerte."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Symmetrische/Asymmetrische Leitungen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6058502037cdbc38e21c700a",
+                "size": "s"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6058502b37cdbc38e21c700e",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Grundgrößen einer Leitung"
+            },
+            {
+                "type": "list",
+                "content": "Der Leitungswiderstand R<sub>L</sub> ist abhängig von ...",
+                "list": [
+                    "Leiterlänge l",
+                    "Material / Leiterwerkstoff (Leitfähigkeit) x / y",
+                    "Leiterquerschnitt A"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605850f437cdbc38e21c7014",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Skineffekt"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Der Skineffekt tritt durch Wirbelströme innerhalb des Leiters auf, welche durch hohe Frequenzen entstehen (ab 20kHz).",
+                    "Dadurch löschen sich die Ströme in der Mitte des Leiters aus und drängen nach außen.",
+                    {
+                        "content": "Es wird somit eine geringe Fläche zur Stromübertragung nutzbar, was umgekehrt bedeutet, das der Leitungswiderstand zunimmt!",
+                        "sublist": [
+                            "bei der Übertragung von sehr hohen Frequenzen werden Hohlleiter verwendet"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leitungskapazität"
+            },
+            {
+                "type": "text",
+                "content": "Die Adern einer zweiadrigen Leitung bilden mit der dazwischen liegenden Isolation einen Kondensator"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605851b537cdbc38e21c7016",
+                "size": "s"
+            },
+            {
+                "type": "text",
+                "content": "Der Blindwiderstand X<sub>C</sub> wirkt quer zwischen den Leitungsadern."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d677a59bf25747400349a",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leitungsinduktivität"
+            },
+            {
+                "type": "text",
+                "content": "Der durch die Leitung fließende Strom erzeugt ein magnetisches Feld, das die Leiter umgibt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d687459bf25747400349c",
+                "size": "m"
+            },
+            {
+                "type": "text",
+                "content": "Der Blindwiderstand X<sub>L</sub> wirkt in Längsrichtung der Leiter."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d68b159bf25747400349e",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Isolationswiderstand"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d6a4359bf2574740034a0"
+            },
+            {
+                "type": "text",
+                "content": "Formel"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d6a6a59bf2574740034a2",
+                "size": "m"
+            },
+            {
+                "type": "hint",
+                "content": "Der Leitwert G ist der Kehrwert des Isolationswiderstandswertes."
+            },
+            {
+                "type": "text",
+                "content": "Er wird auch Ableitung genannt, weil er einen Querstrom I<sub>is</sub> \"ableitet\". Die Maßeinheit ist Siemens (S)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605d6b6759bf2574740034a4",
+                "size": "m"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leitungskennwerte"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            }
+        ]
+    },
+    {
+        "url": "e_technik/begriffe_der_uebertragungstechnik",
+        "_id": "605c84de23779759b9bb2901",
+        "title": "Begriffe der Übertragungstechnik",
+        "description": "Mitschrift vom 23.03.2021",
+        "subject": "lf-7-1",
+        "type": "article",
+        "lessonDate": "2021-03-23",
+        "lastUpdate": "2021-03-26",
+        "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Die Übertragungstechnik (ÜT) umfasst die unterschiedlichen Verfahren, welche beschreiben wie Informationen über ein definiertes Übertragungsmedium übermittelt werden. Es ist ein Teilgebiet der Nachrichten- und Kommunikationstechnik und berücksichtigt analoge und digitale Eigenscahften von Übertragungsmedien."
+            },
+            {
+                "type": "subtitle",
+                "content": "Begriffe"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Zweipole / Vierpole",
+                    "Resonanz",
+                    "Hochpaß / Tiefpaß",
+                    "Wellenwiderstand"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zweipole"
+            },
+            {
+                "type": "text",
+                "content": "Ein passiver Zweipol nimmt nur elektrische Energie auf.<br/>Ein aktiver Zweipol kann elektrische Energie abgeben."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605c825523779759b9bb28f8",
+                "size": "s"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605c825e23779759b9bb28fa",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "list",
+                "content": "Der Leitungswiderstand R<sub>L</sub> ist abhängig von ...",
+                "ordered": true,
+                "list": [
+                    "Begründen Sie ob eine Batterie als aktiver Zweipol betrachtet werden kann oder nicht",
+                    "Welche Aussagen sind bei einem passiven Zweipol über die Leerlaufspannung und den Kurzschlussstrom möglich?"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Vierpole"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605c835023779759b9bb28fc",
+                "size": "s"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Aktive Vierpole",
+                        "sublist": [
+                            "Wirkleistung am Ausgang > Wirkleistung am Eingang, d.h. P<sub>2</sub> > P<sub>1</sub>"
+                        ]
+                    },
+                    {
+                        "content": "Passive Vierpole",
+                        "sublist": [
+                            "Wirkleistung am Ausgang < Wirkleistung am Eingang, d.h. P<sub>2</sub> < P<sub>1</sub>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Resonanz"
+            },
+            {
+                "type": "text",
+                "content": "Resonanz = <br/>Spule <i>L</i> und Kondensator <i>C</i> weisen gleiche Blindwiderstandswerte auf."
+            },
+            {
+                "type": "text",
+                "content": "Resonanzbedingung:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605c843923779759b9bb28ff",
+                "size": "m"
             }
         ]
     },

@@ -1,6 +1,6 @@
 import { Quiz } from '../app/models/quiz';
 
-const quizzes: Quiz[] = [
+export const quizzes: Quiz[] = [
     {
         "url": "beduerfnisse_und_gueter/vorbereitung_fuer_test/quiz",
         "title": "Bedürfnisse und Güter - Quiz für Test",
