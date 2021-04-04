@@ -10,6 +10,7 @@ import { UserProgressCardModule } from '../../components/user-progress-card/user
 import { SchoolWeekCardModule } from '../../components/school-week-card/school-week-card.module';
 import { QuizCardModule } from '../../components/quiz-card/quiz-card.module';
 import { IndexcardsCardModule } from '../../components/indexcards-card/indexcards-card.module';
+import { MatchingGameModule } from '../../components/matching-game/matching-game.module';
 
 
 
@@ -24,7 +25,8 @@ import { IndexcardsCardModule } from '../../components/indexcards-card/indexcard
     UserProgressCardModule,
     SchoolWeekCardModule,
     QuizCardModule,
-    IndexcardsCardModule
+    IndexcardsCardModule,
+    MatchingGameModule
   ]
 })
 export class LandingPageModule { }

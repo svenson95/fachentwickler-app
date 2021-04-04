@@ -24,10 +24,6 @@
     position: relative;
     overflow: hidden;
 
-    @include from-xs {
-      height: 100px;
-    }
-
     .fia-app-icon {
       width: 256px;
       height: 256px;
@@ -59,14 +55,13 @@
       width: 100%;
       align-self: center;
       margin: 0;
-      font-family: Nunito-ExtraBold, sans-serif;
-      font-size: 1.4em;
+      font-size: 1.2em;
       letter-spacing: 2px;
       text-align: right;
       text-transform: uppercase;
 
       :not(:last-of-type) {
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
 
       @include to-sm {
@@ -76,7 +71,6 @@
 
       @include to-xs {
         letter-spacing: 1px;
-        line-height: 14px;
 
         margin: 0;
       }
@@ -215,7 +209,7 @@
       align-items: center;
       width: 100%;
 
-      @include from-xs {
+      @include from-md {
         min-width: 500px;
       }
 
@@ -229,6 +223,10 @@
         @include to-xs {
           width: 100%;
         }
+      }
+
+      app-matching-game {
+        margin-top: 20px;
       }
     }
   }
@@ -339,3 +337,18 @@
   }
 }
 
+::ng-deep {
+  .fia-weekday-group {
+    .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
+      .fia-post-link-wrapper .fia-post-link.isCompleted {
+        border-color: var(--secondary-color);
+      }
+    }
+
+    .fia-weekday-item:nth-child(3), .fia-weekday-item:nth-child(4) {
+      .fia-post-link-wrapper .fia-post-link.isCompleted {
+        border-color: var(--tertiary-color);
+      }
+    }
+  }
+}

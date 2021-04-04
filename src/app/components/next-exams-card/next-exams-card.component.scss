@@ -20,10 +20,7 @@
   }
 
   .fia-view-wrapper {
-
-    @include from-xs {
-      margin-top: 20px;
-    }
+    margin-top: 15px;
 
     .fia-exam-item-wrapper:not(:last-of-type) {
       margin-bottom: 20px;

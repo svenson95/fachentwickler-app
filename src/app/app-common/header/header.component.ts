@@ -60,7 +60,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
           filter((e: KeyboardEvent) => e.code === 'Enter' || e.code === 'NumpadEnter'),
           distinctUntilChanged(),
           tap(ev => {
-            this.searchForPost();
+            this.openSearchView();
           })
         )
         .subscribe();

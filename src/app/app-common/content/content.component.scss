@@ -59,8 +59,8 @@
     @include to-md {
       display: flex;
       flex-direction: column;
-      width: 100%;
       margin-left: 30px;
+      margin-right: auto;
       letter-spacing: 1px;
 
       a {

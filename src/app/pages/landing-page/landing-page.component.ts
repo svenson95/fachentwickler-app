@@ -3,12 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../services/header.service';
 import { Quiz } from '../../models/quiz';
 import { IndexCards } from '../../models/index-cards';
+import { Matching } from '../../models/matching-piece';
 import { User, UserRole } from '../../models/user';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 
 import { quizzes } from '../../../data/quizzes';
 import { indexCards } from '../../../data/index-cards';
+import { matchings } from '../../../data/matchings';
 
 @Component({
   selector: 'app-landing-page',
@@ -22,6 +24,7 @@ export class LandingPageComponent implements OnInit {
   testSchoolWeek: SchoolWeek;
   testQuiz: Quiz = quizzes[2];
   testIndexcards: IndexCards = indexCards[1];
+  testMatching: Matching = matchings[0];
 
   constructor(private headerService: HeaderService
   ) {
