@@ -10,7 +10,8 @@ import { ElementType } from '../../models/element-type';
 })
 export class PostElementComponent implements OnInit {
 
-  @Input('element') element: PostElement;
+  @Input() element: PostElement;
+
   image: boolean | string = false;
   ElementType = ElementType;
 
