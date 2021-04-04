@@ -101,6 +101,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
     if (this.searchInput.nativeElement.value !== '' && this.searchInput.nativeElement.value !== undefined) {
       this.router.navigateByUrl('search?query=' + this.searchInput.nativeElement.value);
+      this.searchForPost();
     }
   }
 
