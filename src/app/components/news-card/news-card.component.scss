@@ -42,19 +42,26 @@
     .fia-news-header {
       display: flex;
 
+      @include to-xs {
+        flex-direction: column;
+      }
+
       .date {
-        padding-right: 10px;
-        margin-right: 10px;
-        border-right: 1px solid var(--grey-1);
         align-self: center;
         flex-shrink: 0;
 
         @include from-xs {
           min-width: 70px;
+
+          padding-right: 10px;
+          margin-right: 10px;
+          border-right: 1px solid var(--grey-1);
         }
 
         @include to-xs {
           min-width: 55px;
+          margin-right: auto;
+          color: var(--text-color-2);
         }
       }
 
