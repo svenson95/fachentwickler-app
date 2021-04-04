@@ -272,32 +272,37 @@ p.fia-card-description {
 
 /* FIAPPY - BUTTON */
 .fia-button {
-  background: var(--tertiary-color);
   cursor: pointer;
-  border: none;
   outline: none;
   padding: 5px 10px;
 
+  border: 2px solid rgba(var(--tertiary-color-rgb), .3);
   border-radius: var(--button-radius);
   box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
-  color: black;
+  color: var(--tertiary-color);
   font-size: .8em;
   font-family: Nunito-ExtraBold, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
   position: relative;
 
+  @include to-xs {
+    font-size: .6em;
+    padding: 3px 8px;
+  }
+
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 6px rgba(160,160,160, .3);
+    color: var(--background-primary);
+    background: var(--tertiary-color);
+    box-shadow: var(--button-shadow);
   }
 
   &:active {
-    transform: translateY(0px);
-    box-shadow: 0 0 2px rgba(160,160,160, .3) !important;
+    transform: translateY(1px);
+    box-shadow: var(--box-shadow) !important;
   }
 
   &:hover {

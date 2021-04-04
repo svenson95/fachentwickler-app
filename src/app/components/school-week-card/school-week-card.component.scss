@@ -21,32 +21,32 @@
 
       .fia-previous-week-btn,
       .fia-next-week-btn {
-        background: var(--background-secondary);
         width: 40px;
         height: 40px;
-        border: none;
+        border: 2px solid rgba(var(--tertiary-color-rgb), .3);
         outline: none;
         cursor: pointer;
         line-height: initial;
 
-        box-shadow: 0 4px 5px rgba(0,0,0, 0);
-        transition: all 200ms ease-in-out;
+        transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
         position: relative;
 
         &:not(&:disabled) {
           &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 3px 6px rgba(160,160,160, .3);
+            background-color: var(--tertiary-color);
+            box-shadow: var(--button-shadow);
+            transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
 
             mat-icon {
-              color: var(--primary-color);
+              color: var(--background-primary);
             }
           }
         }
 
         &:active {
-          transform: translateY(0px);
-          box-shadow: 0 0 2px rgba(160,160,160, .3);
+          transform: translateY(1px);
+          box-shadow: var(--box-shadow) !important;
+          transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
         }
 
         &:disabled mat-icon {

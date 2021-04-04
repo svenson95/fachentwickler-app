@@ -114,9 +114,9 @@ export class ExamsComponent implements OnInit, AfterViewInit {
     };
   }
 
-  disableWeekend(d: Date): Date {
+  disableWeekend(d: Date): boolean {
     if (d.getDay() !== 0 && d.getDay() !== 6) {
-      return d;
+      return true;
     }
   }
 
