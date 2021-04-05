@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { AuthUser } from '../../models/user';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoadingService } from '../../services/loading.service';
+import { ThemeService } from '../../services/theme.service';
+
+import { AuthUser } from '../../models/user';
 
 @Component({
   selector: 'app-login',
@@ -23,6 +26,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private authService: AuthService,
               private headerService: HeaderService,
+              private themeService: ThemeService,
               private loadService: LoadingService,
               private snackBar: MatSnackBar,
               private formBuilder: FormBuilder
@@ -60,9 +64,10 @@ export class LoginComponent implements OnInit {
     const password = this.formGroup.get('password').value.toLowerCase();
 
     this.authService.login({username, password} as AuthUser).subscribe(
-      (value) => {
-        // console.log('response login');
-        // console.log(value);
+      (response) => {
+        if (this.themeService.getActiveTheme().name !== response.user.theme) {
+          this.themeService.toggleTheme();
+        }
         this.router.navigateByUrl('/dashboard');
         this.loading = false;
       }, (error) => {

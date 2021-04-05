@@ -8,6 +8,7 @@ import { environment } from '../../../environments/environment';
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
 import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse, AddProgressResponse } from '../../models/fetch-response';
 import { DashboardData } from '../../models/dashboard-data';
+import { ThemeService } from '../theme.service';
 
 const AUTH_STORAGE_KEY = 'fiappy_auth';
 
@@ -28,13 +29,13 @@ export class AuthService {
   public data: DashboardData | undefined;
   public user: User;
   public token = 'jwt';
-  public theme: 'dark' | 'light' = 'dark';
   public isAuthenticated = false;
   public redirectUrl: string;
 
   public themeChange: Subject<string> = new Subject<string>();
 
   constructor(private httpClient: HttpClient,
+              private themeService: ThemeService,
               private router: Router
   ) {
     this.checkAuthentication();
@@ -58,9 +59,6 @@ export class AuthService {
           if (response.isAuthenticated) {
             this.user = response.user;
             this.token = response.token;
-            if (this.theme !== this.user.theme) {
-              this.toggleTheme();
-            }
             this.storeData();
           }
           return response;
@@ -161,9 +159,6 @@ export class AuthService {
           this.isAuthenticated = response.isAuthenticated;
           if (response.isAuthenticated) {
             this.user = response.user;
-            if (this.theme !== this.user.theme) {
-              this.toggleTheme();
-            }
             this.storeData();
           }
           return response;
@@ -183,8 +178,8 @@ export class AuthService {
       console.log('stored auth data found', data);
       this.user = data.user;
       this.token = data.token;
-      if (this.theme !== this.user.theme) {
-        this.toggleTheme();
+      if (this.themeService.getActiveTheme().name !== this.user.theme) {
+        this.themeService.toggleTheme();
       }
       this.isAuthenticated = true;
       return data;
@@ -204,22 +199,12 @@ export class AuthService {
     }
   }
 
-  toggleTheme(): void {
-    this.theme === 'dark' ? this.theme = 'light' : this.theme = 'dark';
-    this.themeChange.next(this.theme);
-    if (this.theme === 'dark') {
-      // document.getElementsByClassName('mat-typography')[0].classList.remove('light-theme');
-    } else {
-      // document.getElementsByClassName('mat-typography')[0].classList.add('light-theme');
-    }
-  }
-
   storeData(): void {
     localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify({
       data: this.data,
       user: this.user,
       token: this.token,
-      theme: this.theme,
+      theme: this.themeService.getActiveTheme().name,
       isAuthenticated: this.isAuthenticated
     }));
   }
