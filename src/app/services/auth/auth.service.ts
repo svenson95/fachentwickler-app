@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
@@ -17,7 +17,7 @@ const AUTH_STORAGE_KEY = 'fiappy_auth';
 })
 export class AuthService {
 
-  /* -- Auth Rest API links -- */
+  /* -- Auth API links -- */
   private loginUrl = `${environment.baseUrl}/user/login`;
   private registerUrl = `${environment.baseUrl}/user/register`;
   private editUserUrl = `${environment.baseUrl}/user/edit-user`;
@@ -25,14 +25,12 @@ export class AuthService {
   private logoutUrl = `${environment.baseUrl}/user/logout`;
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
-  /* -- Auth Rest API links -- */
+  /* -- Auth Service  -- */
   public data: DashboardData | undefined;
   public user: User;
   public token = 'jwt';
   public isAuthenticated = false;
   public redirectUrl: string;
-
-  public themeChange: Subject<string> = new Subject<string>();
 
   constructor(private httpClient: HttpClient,
               private themeService: ThemeService,
@@ -41,7 +39,7 @@ export class AuthService {
     this.checkAuthentication();
   }
 
-  /* -- Auth Rest API requests -- */
+  /* -- Auth API requests -- */
   login(user: AuthUser): Observable<LoginResponse> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -51,9 +49,8 @@ export class AuthService {
     };
 
     return this.httpClient.post<LoginResponse>(this.loginUrl, JSON.stringify(user), httpOptions)
-      .pipe(
-        map(response => {
-          console.log('response POST login', response);
+      .pipe(map(response => {
+          // console.log('response POST login', response);
           this.isAuthenticated = response.isAuthenticated;
 
           if (response.isAuthenticated) {
@@ -62,8 +59,7 @@ export class AuthService {
             this.storeData();
           }
           return response;
-        })
-      );
+      }));
   }
 
   register(user: RegisterUser): Observable<RegisterResponse> {
@@ -75,8 +71,8 @@ export class AuthService {
     };
 
     return this.httpClient.post<RegisterResponse>(this.registerUrl, JSON.stringify(user), httpOptions)
-      .pipe(
-        map(response => {
+      .pipe(map(response => {
+          // console.log('response POST register', response);
           this.isAuthenticated = response.success;
           if (response.success) {
             this.user = response.user;
@@ -84,8 +80,7 @@ export class AuthService {
             this.storeData();
           }
           return response;
-        })
-      );
+      }));
   }
 
   editUser(updatedUser: EditUser): Observable<EditUserResponse> {
@@ -98,7 +93,7 @@ export class AuthService {
 
     return this.httpClient.patch<EditUserResponse>(this.editUserUrl, JSON.stringify(updatedUser), httpOptions)
       .pipe(map(response => {
-        console.log('response PATCH edit-user', response);
+        // console.log('response PATCH edit-user', response);
         if (response.success) {
           this.user = response.user;
           this.storeData();
@@ -117,7 +112,7 @@ export class AuthService {
 
     return this.httpClient.post<AddProgressResponse>(this.addProgressUrl, JSON.stringify(progress), httpOptions)
       .pipe(map(response => {
-        console.log('response POST user/add-progress');
+        // console.log('response POST user/add-progress');
         if (response.success) {
           this.user = response.user;
           this.storeData();
@@ -133,15 +128,13 @@ export class AuthService {
     this.isAuthenticated = false;
     localStorage.removeItem(AUTH_STORAGE_KEY);
     return this.httpClient.get<LogoutResponse>(this.logoutUrl, httpOptions)
-      .pipe(
-        map(response => {
+      .pipe(map(response => {
           this.data = null;
           this.user = null;
           this.token = null;
           this.isAuthenticated = false;
           return response;
-        })
-      );
+      }));
   }
 
   authenticated(): Observable<AuthenticatedResponse> {
@@ -154,16 +147,15 @@ export class AuthService {
     };
 
     return this.httpClient.get<AuthenticatedResponse>(this.authenticatedUrl, httpOptions)
-      .pipe(
-        map(response => {
+      .pipe(map(response => {
+          // console.log('response POST authenticated', response);
           this.isAuthenticated = response.isAuthenticated;
           if (response.isAuthenticated) {
             this.user = response.user;
             this.storeData();
           }
           return response;
-        })
-      );
+      }));
   }
 
   /* -- Service functions -- */

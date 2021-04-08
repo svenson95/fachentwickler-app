@@ -43,9 +43,6 @@ export class MyProfileComponent implements OnInit {
   ) {
     this.headerService.setPageTitle('Mein Profil');
     this.user = this.authService.user;
-    this.authService.themeChange.subscribe((theme) => {
-      this.theme.setValue(theme);
-    });
     this.initializeForms();
   }
 
@@ -91,7 +88,7 @@ export class MyProfileComponent implements OnInit {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.theme = new FormControl({ value: this.authService.theme, disabled: true }, {
+    this.theme = new FormControl({ value: this.themeService.getActiveTheme().name, disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'change'
     });
@@ -242,7 +239,7 @@ export class MyProfileComponent implements OnInit {
   saveChangeTheme(event): void {
     const updatedUser = {
       name: this.authService.user.name,
-      theme: this.authService.theme
+      theme: this.themeService.getActiveTheme().name
     } as EditUser;
 
     this.authService.editUser(updatedUser).subscribe(
