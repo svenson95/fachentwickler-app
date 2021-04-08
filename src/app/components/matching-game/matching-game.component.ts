@@ -67,17 +67,19 @@ export class MatchingGameComponent implements OnInit {
     this.isCorrect = true;
     setTimeout(() => {
       this.solvedPairs.push(pair);
-      this.remove(pair);
+      this.remove(pair, this.unsolvedPairs);
+      this.remove(pair, this.leftSidePairs);
+      this.remove(pair, this.rightSidePairs);
       this.leftpartSelected = null;
       this.rightpartSelected = null;
       this.isCorrect = undefined;
     }, 1000);
   }
 
-  remove(pair): void {
-    for (let i = 0; i < this.unsolvedPairs.length; i++) {
-      if (this.unsolvedPairs[i].pairNumber === pair.pairNumber) {
-        this.unsolvedPairs.splice(i, 1);
+  remove(pair, array): void {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].pairNumber === pair.pairNumber) {
+        array.splice(i, 1);
       }
     }
   }
@@ -94,13 +96,14 @@ export class MatchingGameComponent implements OnInit {
   startNextRound(): void {
     this.round++;
     this.setupMatchings();
+    this.solvedPairs = [];
   }
 
   setupMatchings(): void {
     this.matching.pairs[this.round].forEach(pair => {
       this.unsolvedPairs.push(pair);
     });
-    this.leftSidePairs = this.unsolvedPairs.sort(() => Math.random() - 0.5);
-    this.rightSidePairs = this.unsolvedPairs.sort(() => Math.random() - 0.5);
+    this.leftSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
+    this.rightSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
   }
 }
