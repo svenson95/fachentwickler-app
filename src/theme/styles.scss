@@ -274,14 +274,14 @@ p.fia-card-description {
 .fia-button {
   cursor: pointer;
   outline: none;
-  padding: 5px 10px;
+  padding: 3px 10px;
 
-  border: 2px solid rgba(var(--tertiary-color-rgb), .3);
+  border: 1px solid rgba(var(--tertiary-color-rgb), .3);
   border-radius: var(--button-radius);
   box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
   color: var(--tertiary-color);
-  font-size: .8em;
+  font-size: .75em;
   letter-spacing: 1px;
   text-transform: uppercase;
 

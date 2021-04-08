@@ -27,7 +27,7 @@
     }
 
     @include to-md {
-      border: 2px solid var(--background-secondary);
+      border: 1px solid var(--background-secondary);
       border-bottom: none;
       align-self: start;
       padding-left: 5px;
