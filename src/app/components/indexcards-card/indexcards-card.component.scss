@@ -17,113 +17,110 @@
     flex-shrink: 1;
 
     @include to-sm {
+      align-items: center;
       flex-direction: column;
     }
   }
 }
 
-
 .fia-index-card {
-  background-color: #fdfdfd;
-  min-height: 350px;
-  padding-top: 35px;
-  overflow: hidden;
+  background-color: transparent;
+  width: 530px;
+  height: 380px;
+  perspective: 1000px;
   position: relative;
 
-  @include from-sm {
-    width: 550px;
-    min-width: 450px;
-    margin-right: 10px;
+  @include to-md {
+    width: 350px;
+    height: 250px;
+    font-size: .75em;
   }
 
-  .fia-content-wrapper {
-    padding-left: 80px;
-    padding-right: 40px;
+  .fia-index-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: var(--box-shadow);
+  }
 
-    @include to-xs {
-      padding-left: 60px;
-    }
+  &.show-back .fia-index-card-inner {
+    transform: rotateY(180deg);
+  }
 
-    .index-card-title .index-card-type .label,
-    .index-card-title .index-card-level .label {
+  .fia-index-card--front, .fia-index-card--back {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    .card-header {
+      display: flex;
+      margin-top: 35px;
+      justify-content: space-between;
       font-family: Nunito-ExtraBold, sans-serif;
-    }
 
-    .index-card-title .index-card-type .label,
-    .index-card-title .index-card-level .label,
-    .index-card-content .content {
-      color: black;
-      margin: 0;
-      font-size: 1.1em;
-      line-height: 25px;
+      @include to-md {
+        margin-top: 20px;
+      }
 
-      @include to-xs {
-        font-size: 1em;
+      p {
+        margin-bottom: 5px;
+
+        @include to-md {
+          margin-bottom: 0;
+          line-height: 19px;
+        }
       }
     }
 
+    .card-header, .content {
+      width: 75%;
+    }
+
+    .card-header .label, .content {
+      color: black;
+    }
+
     .content {
-      padding-bottom: 10px;
-    }
+      text-align: left;
+      line-height: 25px;
 
-    .content.shortAnswer {
-      margin-top: 25px;
-    }
-
-    .index-card-title {
-      display:  flex;
-      justify-content: space-between;
-    }
-
-    .index-card-content {
+      @include to-md {
+        line-height: 17px;
+      }
     }
   }
 
-  .v-line-1, .v-line-2 {
-    position: absolute;
-    top: -10px;
-    bottom: -10px;
-    width: 2px;
-    border: none;
-    background-color: #fdeaea;
-    z-index: 0;
-  }
+  .fia-index-card--front {
+    background-image: url("../../../assets/images/indexcard-background.png");
 
-  .v-line-1 {
-    left: 62px;
-    @include to-xs {
-      left: 40px;
-    }
-  }
-  .v-line-2 {
-    left: 68px;
-    @include to-xs {
-      left: 46px;
+    .card-header, .content {
+      margin-left: 80px;
+
+      @include to-md {
+        margin-left: 60px;
+      }
     }
   }
 
-  .h-line-1, .h-line-2, .h-line-3, .h-line-4, .h-line-5, .h-line-6,
-  .h-line-7, .h-line-8, .h-line-9, .h-line-10, .h-line-11, .h-line-12 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    border: none;
-    background-color: #e6e6e6;
-  }
+  .fia-index-card--back {
+    background-image: url("../../../assets/images/indexcard-background-flipped.png");
+    transform: rotateY(180deg);
 
-  .h-line-1 { top: 50px; }
-  .h-line-2 { top: 75px; }
-  .h-line-3 { top: 100px; }
-  .h-line-4 { top: 125px; }
-  .h-line-5 { top: 150px; }
-  .h-line-6 { top: 175px; }
-  .h-line-7 { top: 200px; }
-  .h-line-8 { top: 225px; }
-  .h-line-9 { top: 250px; }
-  .h-line-10 { top: 275px; }
-  .h-line-11 { top: 300px; }
-  .h-line-12 { top: 325px; }
+    .card-header, .content {
+      margin-left: 40px;
+
+      @include to-md {
+        margin-left: 30px;
+      }
+    }
+  }
 
 }
 
@@ -131,7 +128,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: var(--border-radius);
   margin: 20px;
 
   @include to-sm {

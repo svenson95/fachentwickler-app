@@ -34,7 +34,7 @@ export class IndexcardsCardComponent implements OnInit {
   increaseLevel(): void {
     this.isAnswerVisible = false;
     if (this.indexCards.questions[this.level + 1] !== undefined) {
-      this.level++;
+      setTimeout(() => this.level++, 200);
     }
   }
 
