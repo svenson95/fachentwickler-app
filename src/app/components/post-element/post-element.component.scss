@@ -34,7 +34,6 @@
   .post-hint,
   .post-list,
   .post-table {
-    font-size: 1.1em;
   }
 
   .post-text {
@@ -85,7 +84,6 @@
     li::before {
       content: counter(ordered-list-counter);
       color: var(--secondary-color);
-      font-size: 1.1em;
       --size: 32px;
       left: calc(-1 * var(--size) - 10px);
       line-height: calc(var(--size) - 1px);
@@ -102,7 +100,6 @@
 
   .post-list {
     padding-inline-start: 30px;
-    font-size: 1.1em;
   }
 
   .post-ul-content {
@@ -161,7 +158,6 @@
   }
 
   .post-table-title {
-    font-size: 1.1em;
   }
   .post-table {
     border-collapse: collapse;

@@ -117,9 +117,12 @@ button {
 
   .fia-no-data {
     display: flex;
-    font-size: 1.1em;
     color: var(--grey-3);
     margin-top: 10px;
+
+    @include to-md {
+      font-size: .9em;
+    }
   }
 }
 
@@ -265,49 +268,8 @@ p.fia-card-description {
     margin-top: 5px;
   }
 
-  .fia-action-btn .fia-hover-label {
+  .fia-menu-btn .fia-hover-label {
     margin-top: 3px;
-  }
-}
-
-/* FIAPPY - BUTTON */
-.fia-button {
-  cursor: pointer;
-  outline: none;
-  padding: 3px 10px;
-
-  border: 1px solid rgba(var(--tertiary-color-rgb), .3);
-  border-radius: var(--button-radius);
-  box-shadow: 0 4px 5px rgba(160,160,160, 0);
-
-  color: var(--tertiary-color);
-  font-size: .75em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
-  position: relative;
-
-  @include to-xs {
-    font-size: .6em;
-    padding: 3px 8px;
-  }
-
-  &:hover {
-    color: var(--background-primary);
-    background: var(--tertiary-color);
-    box-shadow: var(--button-shadow);
-  }
-
-  &:active {
-    transform: translateY(1px);
-    box-shadow: var(--box-shadow) !important;
-  }
-
-  &:hover {
-    @include from-md {
-      //color: white;
-    }
   }
 }
 
@@ -344,30 +306,46 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 .fia-text-button {
-  background-color: var(--background-secondary);
+  background-color: rgba(var(--tertiary-color-rgb),.1);
   color: var(--tertiary-color);
   text-transform: uppercase;
   font-size: 1em;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid rgba(var(--tertiary-color-rgb), .3);
   outline: none;
-  border-radius: var(--button-radius);
   letter-spacing: 1px;
   text-decoration: none;
+  transition: transform 200ms ease, color 200ms ease;
+
+  &.secondary {
+    padding: 2px 10px;
+    font-size: .8em;
+  }
+
+  &.show-more {
+    color: var(--grey-4);
+    border-color: rgba(var(--grey-4-rgb), .3);
+    background-color: rgba(var(--grey-4-rgb), .1);
+    margin-left: 10px;
+
+    &:hover {
+      color: var(--text-color-1);
+      background-color: rgba(var(--grey-4-rgb), .1);
+    }
+  }
 
   @include to-xs {
     font-size: .9em;
   }
 
-  &.second-color {
-    background-color: var(--background-primary);
-  }
-
   &:disabled {
-
     span {
       color: rgba(var(--grey-4-rgb), .5);
     }
+  }
+
+  &:active:not(.active-route) {
+    transform: translateY(1px);
   }
 
   &:not(:disabled) {
@@ -383,7 +361,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
         bottom: 1px;
         left: 0; right: 0;
         height: 1px;
-        background-color: var(--tertiary-color);
+        background-color: rgba(var(--grey-4-rgb), .3);
       }
       &:before {
         opacity: 0;
@@ -398,13 +376,14 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
 
     &:hover {
+      color: var(--text-color-1);
 
       //&:focus {       // TODO: show underline on focus (tab navigation) but remove underlines after click
       h1, span {
         &:before,
         &:after {
           opacity: 1;
-          transform: translateY(3px);
+          transform: translateY(2px);
         }
         &:before {
           transition: transform $duration $easeOutBack, opacity $duration;

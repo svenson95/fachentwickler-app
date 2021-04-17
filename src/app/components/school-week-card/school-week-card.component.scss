@@ -28,25 +28,17 @@
         cursor: pointer;
         line-height: initial;
 
-        transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+        transition: background-color 200ms ease-in-out;
         position: relative;
 
         &:not(&:disabled) {
           &:hover {
-            background-color: var(--tertiary-color);
-            box-shadow: var(--button-shadow);
-            transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
-
-            mat-icon {
-              color: var(--background-primary);
-            }
+            background-color: rgba(var(--tertiary-color-rgb), .1);
+            transition: background-color 200ms ease-in-out;
           }
         }
 
         &:active {
-          transform: translateY(1px);
-          box-shadow: var(--box-shadow) !important;
-          transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
         }
 
         &:disabled mat-icon {

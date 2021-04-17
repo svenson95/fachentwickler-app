@@ -4,19 +4,6 @@
 .news-card .fia-card-header {
   .fia-card-title {
   }
-
-  .fia-button.show-more {
-    align-self: start;
-    color: var(--grey-4);
-    border-color: rgba(var(--grey-4-rgb), .3);
-    background-color: transparent;
-    margin-left: 10px;
-
-    &:hover {
-      background-color: var(--grey-4);
-      color: var(--background-primary);
-    }
-  }
 }
 
 .fia-news-container {
@@ -42,7 +29,7 @@
     .fia-news-header {
       display: flex;
 
-      @include to-xs {
+      @include to-md {
         flex-direction: column;
       }
 
@@ -50,7 +37,7 @@
         align-self: center;
         flex-shrink: 0;
 
-        @include from-xs {
+        @include from-md {
           min-width: 70px;
 
           padding-right: 10px;
@@ -58,7 +45,7 @@
           border-right: 1px solid var(--grey-1);
         }
 
-        @include to-xs {
+        @include to-md {
           min-width: 55px;
           margin-right: auto;
           color: var(--text-color-2);
@@ -79,17 +66,10 @@
           flex-shrink: 0;
         }
 
-        @include to-xs {
+        @include to-md {
           font-size: .8em;
         }
       }
-    }
-
-    .fia-button {
-      line-height: normal;
-      text-decoration: none;
-      align-self: center;
-      flex-shrink: 0;
     }
   }
 }

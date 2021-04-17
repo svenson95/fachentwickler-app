@@ -3,20 +3,6 @@
 
 .fia-next-exams {
   .fia-card-header {
-
-    .fia-button.show-more {
-      align-self: start;
-      color: var(--grey-4);
-      border-color: rgba(var(--grey-4-rgb), .3);
-      background: transparent;
-      flex-shrink: 0;
-      margin-left: 10px;
-
-      &:hover {
-        background-color: var(--grey-4);
-        color: var(--background-primary);
-      }
-    }
   }
 
   .fia-view-wrapper {

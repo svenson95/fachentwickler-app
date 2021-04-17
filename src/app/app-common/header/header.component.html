@@ -43,10 +43,13 @@
           </mat-slide-toggle>
           <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
         </div>
-        <a class="fia-header-login-btn unselectable" [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'">
-          {{authService.isAuthenticated ? 'Dashboard' : 'Login'}}
+        <a class="fia-dashboard-login-btn fia-text-button"
+           [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
+           [ngClass]="{'active-route': router.url.startsWith('/dashboard') || router.url.startsWith('/login')}"
+        >
+          <span>{{authService.isAuthenticated ? 'Dashboard' : 'Login'}}</span>
         </a>
-        <button class="fia-action-btn fia-header-hover-label" mat-icon-button [matMenuTriggerFor]="menu" (click)="trigger.openMenu()">
+        <button class="fia-menu-btn fia-header-hover-label" mat-icon-button [matMenuTriggerFor]="menu" (click)="trigger.openMenu()">
           <mat-icon>more_vert</mat-icon>
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>

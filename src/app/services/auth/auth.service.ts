@@ -167,7 +167,6 @@ export class AuthService {
 
     try {
       const data = JSON.parse(stored);
-      console.log('stored auth data found', data);
       this.user = data.user;
       this.token = data.token;
       if (this.themeService.getActiveTheme().name !== this.user.theme) {

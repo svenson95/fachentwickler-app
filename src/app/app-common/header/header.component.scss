@@ -48,7 +48,6 @@
 
       fill: var(--tertiary-color);
       border: 1px solid var(--tertiary-color);
-      border-radius: 6px;
     }
 
     &.active-route {
@@ -70,7 +69,6 @@
       font-family: Nunito-Regular, sans-serif;
       font-weight: 100;
       line-height: 24px;
-      letter-spacing: -.5px;
       transition: letter-spacing 600ms ease;
 
       @include from-xs {
@@ -137,10 +135,11 @@
       $searchbar-height: 33px;
 
       .fia-search-bar {
+        background-color: rgba(var(--tertiary-color-rgb), .1);
         height: $searchbar-height;
         border: 1px solid rgba(var(--tertiary-color-rgb), .3);
-        border-radius: var(--button-radius);
         width: 220px;
+        transition: background-color 250ms ease;
 
         @include to-md {
           display: none;
@@ -148,6 +147,10 @@
 
         ::placeholder {
           color: var(--grey-3);
+        }
+
+        &:hover {
+          background-color: rgba(var(--tertiary-color-rgb), .1);
         }
 
         ::ng-deep {
@@ -161,7 +164,6 @@
               padding: 0 .6em 0 .8em;
               height: $searchbar-height;
               align-items: center;
-              border-radius: var(--border-radius);
             }
             .mat-form-field-infix {
               padding: 0;
@@ -171,6 +173,7 @@
                 vertical-align: middle;
                 color: var(--text-color-1);
                 font-size: .7em;
+                margin-bottom: 1px;
               }
             }
             .mat-form-field-suffix {
@@ -222,17 +225,18 @@
       }
 
       .title {
-        font-size: 1em;
         margin-top: 2px;
         margin-bottom: 0;
         white-space: pre-line;
         line-height: 20px;
 
         @include from-xs {
+          font-size: 1em;
           padding: 0 5px;
         }
 
         @include to-xs {
+          font-size: .9em;
           padding: 0 3px;
         }
       }
@@ -282,10 +286,15 @@
           }
         }
 
-        .fia-action-btn {
+        .fia-menu-btn {
+          background-color: rgba(var(--tertiary-color-rgb), .1);
           margin-left: 0;
           margin-right: 0;
           transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+          @include from-xs {
+            border: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
+          }
 
           @include to-xs {
             margin-left: 0;
@@ -293,12 +302,6 @@
           }
 
           &:hover {
-            background-color: var(--tertiary-color);
-            transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
-
-            :not(.fia-hover-label) {
-              color: var(--background-primary);
-            }
           }
 
           .fia-hover-label {
@@ -308,39 +311,37 @@
           }
         }
 
-        .fia-header-login-btn {
+        $btn-color: #19bc8b;
+        $btn-shadow: #{adjust-hue($btn-color, 45deg)};
+
+        .fia-dashboard-login-btn {
           border: 1px solid rgba(var(--tertiary-color-rgb), .3);
           padding: 6px 14px;
           margin-left: 12px;
           margin-right: 12px;
 
           outline: none;
-          border-radius: var(--button-radius);
-          box-shadow: 0 4px 5px rgba(160,160,160, 0);
 
-          color: var(--tertiary-color);
           font-size: .7em;
+          text-align: center;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
 
-          &:link, &:visited {
-            transition: all 200ms ease-in-out;
-          }
-
           &:hover {
-            background-color: var(--tertiary-color);
-            color: var(--background-primary);
-            box-shadow: var(--button-shadow);
           }
 
-          &:active {
-            box-shadow: var(--box-shadow);
-            transform: translateY(1px);
+          &.active-route {
+            h1, span {
+              &:before,
+              &:after {
+                opacity: 1;
+                transform: translateY(2px);
+              }
+            }
           }
 
           @include to-md {
-            font-size: .45em;
             padding: 5px 8px;
           }
 
@@ -426,8 +427,8 @@
       padding-right: 10px;
     }
 
-    .mat-menu-item:hover:not([disabled]), .mat-menu-item.cdk-program-focused:not([disabled]), .mat-menu-item.cdk-keyboard-focused:not([disabled]), .mat-menu-item-highlighted:not([disabled]) {
-      background: rgba(var(--secondary-color), 0.6);
+    .mat-menu-item:hover {
+      background: rgba(var(--secondary-color-rgb), 0.6);
     }
   }
 }
@@ -455,8 +456,8 @@
 }
 
 ::ng-deep .scrolled  {
-  .fia-search-bar {
-    background: rgba(var(--background-secondary), .4) !important;
-    //transition: background-color 300ms ease-in;
+  .fia-header-login-btn, .fia-menu-btn, .fia-search-bar {
+    //background-color: transparent !important;
+    //transition: all 300ms ease-in;
   }
 }

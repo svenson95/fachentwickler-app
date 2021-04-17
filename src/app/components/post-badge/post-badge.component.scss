@@ -5,23 +5,16 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  height: 15px;
   flex-shrink: 0;
-  margin-top: 1px;
   margin-left: 10px;
 
-  font-size: .7em;
+  font-size: .65em;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 
   @include to-md {
     padding: 0 8px;
     float: right;
-  }
-
-  @include to-xs {
-    font-size: .55em;
-    font-family: Nunito-ExtraBold, sans-serif;
   }
 
   @include to-tiny {
@@ -42,23 +35,23 @@
   }
 
   &.article {
-    border: 1px solid var(--tertiary-color);
+    border: 1px solid rgba(var(--tertiary-color-rgb), .3);
     color: var(--tertiary-color);
   }
   &.tasks {
-    border: 1px solid var(--grey-4);
+    border: 1px solid rgba(var(--grey-4-rgb), .3);
     color: var(--grey-4);
   }
   &.index-cards {
-    border: 1px solid var(--secondary-color);
+    border: 1px solid rgba(var(--secondary-color-rgb), .3);
     color: var(--secondary-color);
   }
   &.quiz {
-    border: 1px solid var(--primary-color);
+    border: 1px solid rgba(var(--primary-color-rgb), .3);
     color: var(--primary-color);
   }
   &.matching {
-    border: 1px solid limegreen;
+    border: 1px solid rgba(limegreen, .3);
     color: limegreen;
   }
   &.test {
