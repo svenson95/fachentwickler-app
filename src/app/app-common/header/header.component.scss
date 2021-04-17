@@ -134,6 +134,23 @@
 
       $searchbar-height: 33px;
 
+      .fia-loading-spinner {
+        $size: 16px;
+        width: $size !important;
+        height: $size !important;
+        margin-right: 6px !important;
+
+        ::ng-deep svg {
+          width: $size !important;
+          height: $size !important;
+
+          circle {
+            stroke: var(--tertiary-color);
+            stroke-width: 8px !important;
+          }
+        }
+      }
+
       .fia-search-bar {
         background-color: rgba(var(--tertiary-color-rgb), .1);
         height: $searchbar-height;
