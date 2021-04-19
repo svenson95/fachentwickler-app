@@ -50,6 +50,15 @@
       justify-content: space-between;
       text-align: center;
 
+      .fia-answer-indicator {
+        //flex-shrink: 0;
+        align-self: center;
+
+        svg {
+          width: 48px;
+        }
+      }
+
       .quiz-level, .quiz-wrong-answers {
         background: var(--background-secondary);
         border-radius: var(--border-radius);
@@ -90,9 +99,13 @@
         margin-top: 10px;
 
         .fia-quiz-answer {
+          width: 100%;
+          text-align: left;
+          color: var(--text-color-1);
           padding: 12px 15px;
           background: rgba(var(--tertiary-color-rgb), 0.2);
           border-radius: var(--border-radius);
+          border: none;
           cursor: pointer;
           transition: background 200ms ease-in-out;
 

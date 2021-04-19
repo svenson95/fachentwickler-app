@@ -498,3 +498,103 @@ app-post-link:not(:last-of-type),
     }
   }
 }
+
+/* FIAPPY - ANSWER INDICATOR */
+.fia-answer-indicator {
+  opacity: 0;
+  transition: opacity 200ms ease;
+  &.correct, &.wrong {
+    opacity: 1;
+  }
+
+  svg {
+    display: block;
+    margin: auto;
+
+    @include from-md {
+      width: 48px;
+    }
+
+    @include to-md {
+      width: 30px;
+    }
+
+    .path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+
+      &.line {
+        stroke-dashoffset: 1000;
+
+        &.first {
+          animation: dash .8s .1s ease-in-out forwards;
+          -webkit-animation: dash .8s .1s ease-in-out forwards;
+        }
+
+        &.second {
+          animation: dash .8s .4s ease-in-out forwards;
+          -webkit-animation: dash .8s .4s ease-in-out forwards;
+        }
+      }
+      &.check {
+        stroke-dashoffset: -100;
+        -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+        animation: dash-check .9s .35s ease-in-out forwards;
+      }
+    }
+
+    @-webkit-keyframes dash {
+      0% {
+        stroke-dashoffset: 1000;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dashoffset: 1000;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @-webkit-keyframes dash-check {
+      0% {
+        stroke-dashoffset: -100;
+      }
+      100% {
+        stroke-dashoffset: 900;
+      }
+    }
+
+    @keyframes dash-check {
+      0% {
+        stroke-dashoffset: -100;
+      }
+      100% {
+        stroke-dashoffset: 900;
+      }
+    }
+  }
+
+  .correct {
+    stroke: #73AF55;
+
+    .circle {
+      -webkit-animation: dash 1.5s normal;
+      animation: dash 1.5s normal;
+    }
+  }
+
+  .wrong{
+    stroke: #D06079;
+
+    .circle {
+      -webkit-animation: dash 2s normal;
+      animation: dash 2s normal;
+    }
+  }
+}

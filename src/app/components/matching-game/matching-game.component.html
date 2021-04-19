@@ -10,9 +10,9 @@
                 <div id="game">
                     <div class="container unsolved" *ngIf="unsolvedPairs.length > 0">
                         <div class="pair_items left">
-                            <button class="item" [class.selected]="leftpartSelected === pair.pairNumber"
+                            <button class="item unselectable" [class.selected]="leftpartSelected === pair.pairNumber"
                                     *ngFor="let pair of leftSidePairs"
-                                    (mousedown)="setLeft(pair.pairNumber)"
+                                    (mouseup)="setLeft(pair.pairNumber)"
                                     (click)="selectItem({pair: pair, side: 'left'})"
                                     [disabled]="isCorrect !== undefined"
                             >
@@ -20,7 +20,7 @@
                                 <div class="left-connector"></div>
                             </button>
                         </div>
-                        <div class="answer-indicator">
+                        <div class="fia-answer-indicator" [class.correct]="isCorrect === true" [class.wrong]="isCorrect === false">
                             <svg class="correct" *ngIf="isCorrect === true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                                 <circle class="path circle" fill="none" stroke-width="8" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
                                 <polyline class="path check" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
@@ -32,9 +32,9 @@
                             </svg>
                         </div>
                         <div class="pair_items right">
-                            <button class="item" [class.selected]="rightpartSelected === pair.pairNumber"
+                            <button class="item unselectable" [class.selected]="rightpartSelected === pair.pairNumber"
                                     *ngFor="let pair of rightSidePairs"
-                                    (mousedown)="setRight(pair.pairNumber)"
+                                    (mouseup)="setRight(pair.pairNumber)"
                                     (click)="selectItem({pair: pair, side: 'right'})"
                                     [disabled]="isCorrect !== undefined"
                             >
@@ -44,14 +44,22 @@
                             </button>
                         </div>
                     </div>
-                    <button class="fia-text-button" *ngIf="unsolvedPairs.length === 0" (click)="startNextRound()">Nächste Runde</button>
-                    <hr/>
-                    <h2>Lösungen</h2>
-                    <div class="container solved" *ngIf="solvedPairs.length > 0">
-                        <div *ngFor="let pair of solvedPairs" class="pair">
-                            <div class="item solved" [innerHTML]="pair.leftpart"></div>
-                            <div class="connector"></div>
-                            <div class="item solved" [innerHTML]="pair.rightpart"></div>
+                    <button class="fia-text-button" *ngIf="state === 'play'" (click)="startNextRound()" [disabled]="unsolvedPairs.length > 0">
+                        <span>Weiter</span>
+                    </button>
+                    <ng-container *ngIf="state === 'end'">
+                        <h1 class="finish-label">Fertig</h1>
+                        <button class="fia-text-button" (click)="restartGame()">
+                            <span>Neustarten</span>
+                        </button>
+                    </ng-container>
+                    <div class="solved-pairs" *ngIf="solvedPairs.length > 0">
+                        <hr/>
+                        <h2>Antworten</h2>
+                        <div class="container solved">
+                            <div *ngFor="let pair of solvedPairs" class="pair">
+                                <div class="item solved" [innerHTML]="pair.leftpart + '<br/> ... <br/>' + pair.rightpart"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

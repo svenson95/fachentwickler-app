@@ -5,7 +5,7 @@ $item-background: rgba(var(--tertiary-color-rgb), .3);
 $item-hover-background: rgba(var(--tertiary-color-rgb), .5);
 $item-selected-background: rgba(var(--secondary-color-rgb), .3);
 
-$collector-width: 7px;
+$connector-width: 7px;
 
 #game {
   margin-top: 20px;
@@ -20,9 +20,20 @@ $collector-width: 7px;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(var(--grey-4-rgb), .2);
 
     &.left, &.right {
       display: flex;
+    }
+
+    &.left {
+      border-right: 0;
+    }
+
+    &.right {
+      border-left: 0;
     }
   }
 
@@ -40,7 +51,7 @@ $collector-width: 7px;
     font-family: Nunito-Light, sans-serif;
   }
 
-  .answer-indicator {
+  .fia-answer-indicator {
     flex-shrink: 0;
 
     @include from-md {
@@ -48,7 +59,7 @@ $collector-width: 7px;
     }
 
     @include to-md {
-      width: 30px;
+      width: 40px;
     }
   }
 
@@ -65,6 +76,7 @@ $collector-width: 7px;
     @include to-xs {
       font-size: .7em;
       padding: 4px;
+      max-width: 120px;
     }
 
     &:disabled {
@@ -94,20 +106,16 @@ $collector-width: 7px;
     .left-connector {
       position: absolute;
       top: 30%;
-      right: -$collector-width;
-      height: 20px;
-      width: $collector-width;
+      right: -$connector-width;
+      height: 15px;
+      width: $connector-width;
       background: $item-background;
-
-      @include to-xs {
-        height: 15px;
-      }
     }
 
     .right-connector {
       position: absolute;
-      left: -$collector-width;
-      width: $collector-width;
+      left: -$connector-width;
+      width: $connector-width;
       background: $item-background;
 
       &.top-bar {
@@ -118,10 +126,6 @@ $collector-width: 7px;
       &.bottom-bar {
         top: 60%;
         bottom: 0%;
-
-        @include to-xs {
-          top: 40%;
-        }
       }
     }
   }
@@ -129,7 +133,7 @@ $collector-width: 7px;
   .solved {
     display: inline-flex;
     flex-wrap: wrap;
-    width: fit-content;
+    width: 100%;
     text-align: center;
     margin: 0;
     margin-right: auto;
@@ -144,111 +148,15 @@ $collector-width: 7px;
       .item {
         margin: auto;
       }
-
-      .connector {
-        background: $item-background;
-        height: 5px;
-        width: 20px;
-        margin: auto;
-      }
     }
   }
 
   .fia-text-button {
     display: flex;
-    margin: auto;
-  }
-}
-
-.answer-indicator {
-  svg {
-    display: block;
-    margin: auto;
-
-    @include from-md {
-      width: 48px;
-    }
-
-    @include to-md {
-      width: 20px;
-    }
-
-    .path {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 0;
-
-      &.line {
-        stroke-dashoffset: 1000;
-
-        &.first {
-          animation: dash .8s .1s ease-in-out forwards;
-          -webkit-animation: dash .8s .1s ease-in-out forwards;
-        }
-
-        &.second {
-          animation: dash .8s .4s ease-in-out forwards;
-          -webkit-animation: dash .8s .4s ease-in-out forwards;
-        }
-      }
-      &.check {
-        stroke-dashoffset: -100;
-        -webkit-animation: dash-check .9s .35s ease-in-out forwards;
-        animation: dash-check .9s .35s ease-in-out forwards;
-      }
-    }
-
-    @-webkit-keyframes dash {
-      0% {
-        stroke-dashoffset: 1000;
-      }
-      100% {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @keyframes dash {
-      0% {
-        stroke-dashoffset: 1000;
-      }
-      100% {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @-webkit-keyframes dash-check {
-      0% {
-        stroke-dashoffset: -100;
-      }
-      100% {
-        stroke-dashoffset: 900;
-      }
-    }
-
-    @keyframes dash-check {
-      0% {
-        stroke-dashoffset: -100;
-      }
-      100% {
-        stroke-dashoffset: 900;
-      }
-    }
+    margin: 20px auto auto;
   }
 
-  .correct {
-    stroke: #73AF55;
-
-    .circle {
-      -webkit-animation: dash 1.5s normal;
-      animation: dash 1.5s normal;
-    }
-  }
-
-  .wrong{
-    stroke: #D06079;
-
-    .circle {
-      -webkit-animation: dash 3s normal;
-      animation: dash 3s normal;
-    }
+  .finish-label {
+    text-align: center;
   }
 }

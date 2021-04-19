@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+import { delay } from 'rxjs/operators';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
-import { UserProgress, UserRole } from '../../models/user';
+import { UserRole } from '../../models/user';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-lesson-footer',
@@ -14,44 +14,24 @@ import { UserProgress, UserRole } from '../../models/user';
 export class LessonFooterComponent implements OnInit {
 
   @Input() postId: string;
-  alreadyRead: boolean;
+  isLoading: boolean;
 
   UserRole = UserRole;
 
   constructor(public authService: AuthService,
               public dataService: DataService,
-              private matSnackBar: MatSnackBar,
-  ) { }
-
-  ngOnInit(): void {
-    this.alreadyRead = this.authService.user.progress.includes(this.postId);
+              private loadService: LoadingService,
+  ) {
+    this.loadService.loading$.pipe(delay(0)).subscribe((status: boolean) => {
+      this.isLoading = status;
+    });
   }
 
-  /* -- Component functions -- */
-  addUserProgress(): void {
-    const lesson = {
-      "userId": this.authService.user._id,
-      "postId": this.postId
-    } as UserProgress;
+  ngOnInit(): void {
+  }
 
-    this.dataService.dashboard.nextLesson = undefined;
-    this.dataService.dashboard.lessonsPercentage = undefined;
-
-    this.authService.addProgress(lesson).subscribe(
-      (response) => {
-        this.alreadyRead = true;
-        this.matSnackBar.openFromComponent(SnackbarComponent, {
-          duration: 3000,
-          data: 'Lektion als gelesen markiert'
-        });
-      }, (error) => {
-        console.log('error while POST user/add-progress', error);
-        this.matSnackBar.openFromComponent(SnackbarComponent, {
-          duration: 3000,
-          data: 'Fehler: ' + (typeof error === 'string' ? error : error.message)
-        });
-      }
-    );
+  alreadyRead(): boolean {
+    return this.authService.user.progress.includes(this.postId);
   }
 
 }

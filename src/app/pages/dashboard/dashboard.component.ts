@@ -40,43 +40,19 @@ export class DashboardComponent implements OnInit {
         schoolNews: undefined,
       };
 
+      this.authService.fetchUserProgressData();
       this.dataService.getNewsList().subscribe(response => {
         this.dataService.dashboard.schoolNews = response;
       });
-      this.fetchAllLessons();
       this.fetchNextExams();
       this.fetchSchoolWeek();
     } else {
       this.schoolWeek = this.dataService.schoolWeek;
 
       if (!this.dataService.dashboard.nextLesson && !this.dataService.dashboard.lessonsPercentage) {
-        this.fetchNextLesson(this.dataService.dashboard.allLessons);
+        this.authService.fetchNextLesson(this.dataService.dashboard.allLessons);
       }
     }
-  }
-
-  /* -- Get all lessons for calculating user progress -- */
-  fetchAllLessons(): void {
-    this.dataService.getAllLessons().subscribe(
-      (lessons) => {
-        this.dataService.dashboard.allLessons = lessons;
-        this.fetchNextLesson(lessons);
-      }, (error) => {
-        console.log('error while GET all-lessons', error);
-      }
-    );
-  }
-
-  /* -- Get next lesson & lessons percentage for user progress module -- */
-  fetchNextLesson(lessons): void {
-    this.dataService.getSubjectPost(lessons[this.authService.user.progress.length]).subscribe(
-      (nextLesson) => {
-        this.dataService.dashboard.nextLesson = nextLesson;
-        this.dataService.dashboard.lessonsPercentage = (this.authService.user.progress.length / lessons.length) * 100;
-      }, (error) => {
-        console.log('error while GET next-lesson', error);
-      }
-    );
   }
 
   fetchNextExams(): void {

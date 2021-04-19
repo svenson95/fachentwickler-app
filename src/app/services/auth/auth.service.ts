@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+
 import { environment } from '../../../environments/environment';
 
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
 import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse, AddProgressResponse } from '../../models/fetch-response';
-import { DashboardData } from '../../models/dashboard-data';
 import { ThemeService } from '../theme.service';
+import { DataService } from '../data/data.service';
 
 const AUTH_STORAGE_KEY = 'fiappy_auth';
 
@@ -26,7 +29,6 @@ export class AuthService {
   private authenticatedUrl = `${environment.baseUrl}/user/authenticated`;
 
   /* -- Auth Service  -- */
-  public data: DashboardData | undefined;
   public user: User;
   public token = 'jwt';
   public isAuthenticated = false;
@@ -34,7 +36,9 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient,
               private themeService: ThemeService,
-              private router: Router
+              private dataService: DataService,
+              private router: Router,
+              private matSnackBar: MatSnackBar,
   ) {
     this.checkAuthentication();
   }
@@ -83,6 +87,32 @@ export class AuthService {
       }));
   }
 
+  /* -- Get all lessons for user progress analysis (lesson progress & next lesson) -- */
+  fetchUserProgressData(): void {
+    this.dataService.getAllLessons().subscribe(
+        (lessons) => {
+          this.dataService.dashboard.allLessons = lessons;
+          this.fetchNextLesson(lessons);
+        }, (error) => {
+          console.log('error while GET all-lessons', error);
+        }
+    );
+  }
+
+  /* -- Get next lesson & lessons percentage for user progress module -- */
+  fetchNextLesson(lessons): void {
+    // '605a469942f5481a20c97627' is a test article
+    const nextLessonId = lessons.find(lessonId => lessonId !== '605a469942f5481a20c97627' && !this.user.progress.includes(lessonId));
+    this.dataService.getSubjectPost(nextLessonId).subscribe(
+        (nextLesson) => {
+          this.dataService.dashboard.nextLesson = nextLesson;
+          this.dataService.dashboard.lessonsPercentage = (this.user.progress.length / lessons.length) * 100;
+        }, (error) => {
+          console.log('error while GET next-lesson', error);
+        }
+    );
+  }
+
   editUser(updatedUser: EditUser): Observable<EditUserResponse> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -90,6 +120,7 @@ export class AuthService {
       }),
       withCredentials: true
     };
+    this.storeData();
 
     return this.httpClient.patch<EditUserResponse>(this.editUserUrl, JSON.stringify(updatedUser), httpOptions)
       .pipe(map(response => {
@@ -115,7 +146,7 @@ export class AuthService {
         // console.log('response POST user/add-progress');
         if (response.success) {
           this.user = response.user;
-          this.storeData();
+          this.fetchUserProgressData();
         }
         return response;
       }));
@@ -129,7 +160,6 @@ export class AuthService {
     localStorage.removeItem(AUTH_STORAGE_KEY);
     return this.httpClient.get<LogoutResponse>(this.logoutUrl, httpOptions)
       .pipe(map(response => {
-          this.data = null;
           this.user = null;
           this.token = null;
           this.isAuthenticated = false;
@@ -192,7 +222,6 @@ export class AuthService {
 
   storeData(): void {
     localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify({
-      data: this.data,
       user: this.user,
       token: this.token,
       theme: this.themeService.getActiveTheme().name,
@@ -202,5 +231,29 @@ export class AuthService {
 
   alreadyRead(lesson: string): boolean {
     return this.user.progress.includes(lesson);
+  }
+
+  /* -- Component functions -- */
+  setLessonSolved(id): void {
+    const lesson = {
+      userId: this.user._id,
+      postId: id
+    } as UserProgress;
+
+    this.addProgress(lesson).subscribe(
+        (response) => {
+            this.user = response.user;
+            this.storeData();
+            this.matSnackBar.openFromComponent(SnackbarComponent, {
+                duration: 3000,
+                data: 'Lektion als gelesen markiert'
+            });
+        }, (error) => {
+            this.matSnackBar.openFromComponent(SnackbarComponent, {
+                duration: 3000,
+                data: 'Fehler: ' + (typeof error === 'string' ? error : error.message)
+            });
+        }
+    );
   }
 }

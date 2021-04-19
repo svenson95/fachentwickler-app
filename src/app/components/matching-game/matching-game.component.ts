@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Matching, MatchingPair } from '../../models/matching-piece';
 import { Subject } from 'rxjs';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-matching-game',
@@ -17,6 +18,8 @@ export class MatchingGameComponent implements OnInit {
   round = 0;
   isCorrect: boolean;
 
+  state: 'play' | 'end' = 'play';
+
   solvedPairs: MatchingPair[] = [];
   unsolvedPairs: MatchingPair[] = [];
 
@@ -25,7 +28,7 @@ export class MatchingGameComponent implements OnInit {
 
   assignmentStream = new Subject<{pair: MatchingPair, side: string}>();
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
     this.setupMatchings();
@@ -94,9 +97,28 @@ export class MatchingGameComponent implements OnInit {
   }
 
   startNextRound(): void {
+    if (this.state === 'play' && this.matching.pairs[this.round + 1] === undefined) {
+      this.state = 'end';
+    }
+
     this.round++;
+    this.solvedPairs = [];
+    this.unsolvedPairs = [];
+
+    if (this.matching.pairs[this.round] !== undefined) {
+      this.setupMatchings();
+    }
+
+    if (this.state === 'end') {
+      this.setSolvedState();
+    }
+  }
+
+  restartGame(): void {
+    this.round = 0;
     this.setupMatchings();
     this.solvedPairs = [];
+    this.state = 'play';
   }
 
   setupMatchings(): void {
@@ -105,5 +127,12 @@ export class MatchingGameComponent implements OnInit {
     });
     this.leftSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
     this.rightSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
+  }
+
+  setSolvedState(): void {
+    console.log('solved', this.matching._id);
+    if (!this.auth.user.progress.includes(this.matching._id)) {
+      this.auth.setLessonSolved(this.matching._id);
+    }
   }
 }
