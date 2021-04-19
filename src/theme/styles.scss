@@ -47,9 +47,8 @@ i {
 }
 
 u {
-  text-decoration: none;
+  text-decoration-color: var(--secondary-color);
   border-radius: 2px;
-  background: rgba(var(--secondary-color), 0.4);
   padding: 2px 2px;
   margin: -2px;
 }
@@ -133,7 +132,7 @@ button {
 a {
   color: var(--secondary-color);
 
-  &:hover, &:focus {
+  &:hover {
     color: var(--text-color-1);
     text-decoration-color: var(--secondary-color);
   }
@@ -180,20 +179,20 @@ a {
 }
 
 .fia-card-title {
-  font-size: 1.5em;
   font-family: Nunito-Regular, sans-serif;
   letter-spacing: 1.5px;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
+  margin-bottom: 10px;
 
-  @include from-sm {
-    margin-bottom: 4px;
+  @include from-xs {
+    font-size: 1.5em;
+    line-height: 24px;
   }
 
   @include to-xs {
-    margin-bottom: 2px;
     font-size: 1.3em;
-    letter-spacing: 1.3px;
+    line-height: 20px;
   }
 }
 
@@ -325,6 +324,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   &.secondary {
     padding: 2px 10px;
     font-size: .8em;
+
+    @include to-xs {
+      font-size: .6em;
+    }
   }
 
   &.show-more {
@@ -340,7 +343,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   }
 
   @include to-xs {
-    font-size: .9em;
+    font-size: .8em;
   }
 
   &:disabled {

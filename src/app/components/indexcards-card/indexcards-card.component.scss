@@ -13,7 +13,8 @@
 
   .fia-card-content {
     display: flex;
-    margin-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     flex-shrink: 1;
 
     @include to-sm {
@@ -29,6 +30,7 @@
   height: 380px;
   perspective: 1000px;
   position: relative;
+  flex-shrink: 0;
 
   @include to-md {
     width: 350px;
@@ -128,11 +130,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px;
+  margin: 30px;
 
   @include to-sm {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  @include to-sm {
+    margin-top: 60px;
   }
 
   button {

@@ -25,17 +25,17 @@
     overflow: hidden;
 
     .fia-app-icon {
-      width: 256px;
-      height: 256px;
+      width: 220px;
+      height: 220px;
       flex-shrink: 0;
       position: absolute;
       top: 10px;
 
       @include to-xs {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
         top: 0;
-        left: -50px;
+        left: -20px;
       }
 
       &::ng-deep path {
@@ -337,7 +337,7 @@
   }
 }
 
-::ng-deep {
+::ng-deep .fia-landing-row.school {
   .fia-weekday-group {
     .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
       .fia-post-link-wrapper .fia-post-link.isCompleted {

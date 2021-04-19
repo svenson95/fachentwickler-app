@@ -66,8 +66,8 @@
           flex-shrink: 0;
         }
 
-        @include to-md {
-          font-size: .8em;
+        @include to-xs {
+          font-size: .9em;
         }
       }
     }
