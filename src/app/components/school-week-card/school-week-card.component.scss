@@ -25,13 +25,13 @@
         height: 40px;
         border: 1px solid rgba(var(--tertiary-color-rgb), .3);
         outline: none;
-        cursor: pointer;
         line-height: initial;
 
         transition: background-color 200ms ease-in-out;
         position: relative;
 
         &:not(&:disabled) {
+          cursor: pointer;
           &:hover {
             background-color: rgba(var(--tertiary-color-rgb), .1);
             transition: background-color 200ms ease-in-out;

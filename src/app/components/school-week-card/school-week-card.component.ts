@@ -17,7 +17,7 @@ export class SchoolWeekCardComponent implements OnInit {
   isLoading: boolean;
   currentWeek: number;
 
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
     this.currentWeek = Number(this.week.schoolWeek);
