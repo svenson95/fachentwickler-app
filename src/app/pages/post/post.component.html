@@ -8,6 +8,7 @@
     </p>
     <p class="fia-card-description" *ngIf="post !== undefined">
       {{post.description}}
+      <app-post-badge [post]="post"></app-post-badge>
     </p>
     <mat-spinner class="fia-loading-spinner" *ngIf="post === undefined"></mat-spinner>
     <mat-card-content class="fia-post-content" *ngIf="post !== undefined">

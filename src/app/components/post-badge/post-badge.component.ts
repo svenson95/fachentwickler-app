@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { PostType } from '../../models/post-type';
+import { Post } from '../../models/post';
+import { IndexCards } from '../../models/index-cards';
+import { Matching } from '../../models/matching-piece';
 
 @Component({
   selector: 'app-post-badge',
@@ -8,7 +12,7 @@ import { PostType } from '../../models/post-type';
 })
 export class PostBadgeComponent implements OnInit {
 
-  @Input('post') post;
+  @Input('post') post: Post | IndexCards | Matching;
   PostType = PostType;
 
   constructor() { }

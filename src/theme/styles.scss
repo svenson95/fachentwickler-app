@@ -194,6 +194,7 @@ a {
 }
 
 p.fia-card-description {
+  display: flex;
   font-size: 1.1em;
   color: var(--grey-3);
   letter-spacing: .5px;

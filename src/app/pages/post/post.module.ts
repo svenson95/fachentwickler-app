@@ -6,6 +6,7 @@ import { PostComponent } from './post.component';
 import { PostPageRoutingModule } from './post-routing.module';
 import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
+import { PostBadgeModule } from '../../components/post-badge/post-badge.module';
 
 
 
@@ -14,12 +15,13 @@ import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer
     exports: [
         PostComponent
     ],
-  imports: [
-    CommonModule,
-    PostPageRoutingModule,
-    AngularMaterialModule,
-    PostElementModule,
-    LessonFooterModule
-  ]
+    imports: [
+        CommonModule,
+        PostPageRoutingModule,
+        AngularMaterialModule,
+        PostElementModule,
+        LessonFooterModule,
+        PostBadgeModule
+    ]
 })
 export class PostModule { }

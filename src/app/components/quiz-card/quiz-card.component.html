@@ -1,8 +1,10 @@
 <mat-card class="fia-card">
   <p class="fia-card-title" *ngIf="quiz !== undefined"
      [innerHTML]="quiz.title"></p>
-  <p class="fia-card-description" *ngIf="quiz !== undefined"
-     [innerHTML]="quiz.description"></p>
+  <p class="fia-card-description" *ngIf="quiz !== undefined">
+    <span [innerHTML]="quiz.description"></span>
+    <app-post-badge [post]="quiz"></app-post-badge>
+  </p>
   <mat-card-content class="fia-card-content" *ngIf="quiz !== undefined">
     <div class="fia-quiz">
       <div class="fia-content-wrapper">

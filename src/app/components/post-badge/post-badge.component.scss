@@ -8,6 +8,7 @@
   flex-shrink: 0;
   margin-left: 10px;
 
+  font-family: Nunito-Light, sans-serif;
   font-size: .65em;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -22,10 +23,6 @@
     line-height: 15px;
   }
 
-  @include from-xs {
-    font-family: Nunito-Regular, sans-serif;
-  }
-
   @include from-md {
     padding: 0 8px;
   }
@@ -35,27 +32,27 @@
   }
 
   &.article {
-    border: 1px solid rgba(var(--tertiary-color-rgb), .3);
+    background-color: rgba(var(--tertiary-color-rgb), .1);
     color: var(--tertiary-color);
   }
   &.tasks {
-    border: 1px solid rgba(var(--grey-4-rgb), .3);
+    background-color: rgba(var(--grey-4-rgb), .1);
     color: var(--grey-4);
   }
   &.index-cards {
-    border: 1px solid rgba(var(--secondary-color-rgb), .3);
+    background-color: rgba(var(--secondary-color-rgb), .1);
     color: var(--secondary-color);
   }
   &.quiz {
-    border: 1px solid rgba(var(--primary-color-rgb), .3);
+    background-color: rgba(var(--primary-color-rgb), .1);
     color: var(--primary-color);
   }
   &.matching {
-    border: 1px solid rgba(limegreen, .3);
+    background-color: rgba(limegreen, .1);
     color: limegreen;
   }
   &.test {
-    background: var(--tertiary-color);
+    background: rgba(var(--tertiary-color-rgb), .4);
     color: var(--background-primary);
     font-family: Nunito-ExtraBold, sans-serif;
   }

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 import { MatchingGameComponent } from './matching-game.component';
+import { PostBadgeModule } from '../post-badge/post-badge.module';
 
 @NgModule({
     declarations: [MatchingGameComponent],
@@ -11,7 +12,8 @@ import { MatchingGameComponent } from './matching-game.component';
     imports: [
         CommonModule,
         AngularMaterialModule,
-        RouterModule
+        RouterModule,
+        PostBadgeModule
     ]
 })
 export class MatchingGameModule { }
