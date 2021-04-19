@@ -62,9 +62,10 @@ export class QuizCardComponent implements OnInit {
   }
 
   resetLevel(): void {
-    this.answer = null;
+    this.answer = undefined;
     this.isCorrectAnswer = null;
     this.level = 0;
+    this.wrongAnswers = 0;
     this.end = false;
   }
 
