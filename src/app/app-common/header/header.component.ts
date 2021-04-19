@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
@@ -28,7 +27,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @Input() isMobile;
   @Input('sidenav') sidenav;
   @ViewChild('searchInput') searchInput: ElementRef;
-  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   constructor(public router: Router,
               public headerService: HeaderService,
@@ -107,7 +105,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   searchForPost(): void {
     if (this.searchInput.nativeElement.value !== '') {
-      this.searchPostService.setRedirectUrl(this.router.url);
       this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
         this.searchPostService.searchResults$.next(response);
       });

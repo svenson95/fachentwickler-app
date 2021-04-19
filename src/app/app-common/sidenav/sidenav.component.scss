@@ -59,7 +59,6 @@
     letter-spacing: 2px;
     width: fit-content;
     border-bottom: 4px double var(--primary-color);
-    text-transform: uppercase;
 
     @include to-xs {
       margin-left: 15px;

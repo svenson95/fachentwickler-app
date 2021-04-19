@@ -87,7 +87,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
       hideRequired: this.searchbarHideRequiredControl,
       floatLabel: this.searchbarFloatLabelControl
     });
-    this.isMobile = this.media.matchMedia('(max-width: 600px)');
+    this.isMobile = this.media.matchMedia('(max-width: 820px)');
     this.tinyDisplay = this.media.matchMedia('(max-width: 350px)');
 
     this.IS_MOBILE_LISTENER = () => this.changeDetectorRef.detectChanges();

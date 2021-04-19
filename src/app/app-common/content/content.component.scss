@@ -31,25 +31,23 @@
     color: var(--text-color-1);
     align-items: center;
 
-    .first, .second, .third {
-      text-decoration: underline double;
-      letter-spacing: -.5px;
-    }
-    .first { text-decoration-color: var(--tertiary-color); }
-    .second { text-decoration-color: var(--secondary-color); }
-    .third { text-decoration-color: var(--primary-color); }
-
     .fia-icon-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
       margin-right: 2px;
-      fill: var(--secondary-color);
+      fill: var(--grey-2);
 
       svg {
-        height: 24px;
+        height: 32px;
       }
+    }
+
+    .unselectable {
+      font-size: .9em;
+      color: var(--grey-2);
+      line-height: 14px;
+      margin-left: 5px;
     }
   }
 
