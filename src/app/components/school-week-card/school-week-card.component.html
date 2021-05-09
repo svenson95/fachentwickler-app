@@ -17,7 +17,7 @@
       <button class="fia-previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || currentWeek === 1" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
-      <button class="fia-next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || currentWeek === dataService.schoolWeekValue" mat-icon-button>
+      <button class="fia-next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || currentWeek === dataService.currentSchoolWeek" mat-icon-button>
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>

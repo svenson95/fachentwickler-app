@@ -29,12 +29,12 @@
       height: 220px;
       flex-shrink: 0;
       position: absolute;
-      top: 10px;
+      top: 20px;
 
       @include to-xs {
-        width: 200px;
-        height: 200px;
-        top: 0;
+        width: 150px;
+        height: 150px;
+        top: 40px;
         left: -20px;
       }
 
@@ -138,7 +138,7 @@
       align-self: center;
 
       @include from-xs {
-        max-width: 800px;
+        width: 90%;
       }
 
       @include to-xs {
@@ -180,6 +180,10 @@
     .fia-text-row {
       margin-top: 30px;
       margin-bottom: 20px;
+
+      @include to-xs {
+        flex-direction: column;
+      }
     }
 
     .fia-text-column {
@@ -197,9 +201,22 @@
         }
       }
 
-      .fia-rest-svg {
-        align-self: center;
+      .fia-game-svg {
         width: 100px;
+        margin-left: 20px;
+
+        @include to-sm {
+          margin-right: auto;
+        }
+      }
+
+      .fia-online-course-svg {
+        width: 100px;
+        margin-left: 20px;
+
+        @include to-sm {
+          margin-right: auto;
+        }
       }
     }
 
@@ -213,18 +230,13 @@
         min-width: 500px;
       }
 
-      app-quiz-card {
-        width: fit-content;
+      app-quiz-card,
+      app-indexcards-card,
+      app-matching-game {
+        min-width: 80%;
       }
 
-      app-indexcards-card {
-        margin-top: 20px;
-
-        @include to-xs {
-          width: 100%;
-        }
-      }
-
+      app-indexcards-card,
       app-matching-game {
         margin-top: 20px;
       }
@@ -253,6 +265,12 @@
       max-width: 360px;
       margin-bottom: auto;
 
+      &:last-child {
+        @include to-xs {
+          margin-top: 20px;
+        }
+      }
+
       .fia-nerd-svg {
         vertical-align: top;
         margin-right: 5px;
@@ -271,13 +289,6 @@
       .fia-world-grid-svg {
         margin-left: 5px;
         align-self: flex-end;
-      }
-
-      .fia-sneeze-svg {
-        width: 80px;
-        height: 80px;
-        color: var(--secondary-color);
-        margin-right: 20px;
       }
 
       .fia-question-svg {
@@ -337,18 +348,24 @@
   }
 }
 
-::ng-deep .fia-landing-row.school {
+::ng-deep .fia-landing-row.first {
   .fia-weekday-group {
     .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
-      .fia-post-link-wrapper .fia-post-link.isCompleted {
+      .fia-post-link-wrapper .fia-post-link {
         border-color: var(--secondary-color);
       }
     }
 
     .fia-weekday-item:nth-child(3), .fia-weekday-item:nth-child(4) {
-      .fia-post-link-wrapper .fia-post-link.isCompleted {
+      .fia-post-link-wrapper .fia-post-link {
         border-color: var(--tertiary-color);
       }
+    }
+  }
+
+  .fia-next-lesson {
+    .fia-post-link-wrapper .fia-post-link.isCompleted {
+      border-color: var(--tertiary-color);
     }
   }
 }

@@ -40,12 +40,12 @@ export class DashboardComponent implements OnInit {
         schoolNews: undefined,
       };
 
-      this.authService.fetchUserProgressData();
       this.dataService.getNewsList().subscribe(response => {
         this.dataService.dashboard.schoolNews = response;
       });
       this.fetchNextExams();
       this.fetchSchoolWeek();
+      this.authService.fetchAllLessons();
     } else {
       this.schoolWeek = this.dataService.schoolWeek;
 
@@ -81,7 +81,7 @@ export class DashboardComponent implements OnInit {
 
   /* -- Get current school week card with all lessons -- */
   fetchSchoolWeek(): void {
-    this.dataService.getSchoolWeek(this.dataService.schoolWeekValue).subscribe((response) => {
+    this.dataService.getSchoolWeek(this.dataService.currentSchoolWeek).subscribe((response) => {
       this.schoolWeek = response;
       this.dataService.schoolWeek = response;
     });

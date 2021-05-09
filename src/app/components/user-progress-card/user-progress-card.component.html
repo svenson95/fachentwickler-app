@@ -10,8 +10,8 @@
     </div>
 
     <div class="fia-progress-week">
-      <p class="label">Woche {{dataService.schoolWeekValue}} von 40</p>
-      <mat-progress-bar class="progress-bar" [value]="(dataService?.schoolWeekValue / 40) * 100"></mat-progress-bar>
+      <p class="label">Woche {{dataService.currentSchoolWeek}} von {{dataService.schoolWeeksLength}}</p>
+      <mat-progress-bar class="progress-bar" [value]="(dataService?.currentSchoolWeek / dataService.schoolWeeksLength) * 100"></mat-progress-bar>
     </div>
 
     <app-post-link class="fia-next-lesson" *ngIf="dashboard !== undefined" [post]="dashboard?.nextLesson" [title]="'Nächste Lektion'"

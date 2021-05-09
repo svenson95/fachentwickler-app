@@ -56,16 +56,25 @@
       <app-user-progress-card [user]="testUser" [dashboard]="testDashboard"></app-user-progress-card>
       <app-news-card [news]="testDashboard.schoolNews"></app-news-card>
       <app-next-exams-card [nextExams]="testDashboard.nextExams"></app-next-exams-card>
+      <app-school-week-card [week]="testSchoolWeek"></app-school-week-card>
     </div>
   </div>
   <div class="fia-landing-row second">
     <div class="fia-text-row">
       <div class="fia-text-column">
-        <img class="fia-rest-svg" src="../../../assets/images/rest.svg" alt="rest-svg">
-        <p class="fia-title">Vorbereitung zur Zwischen- und Abschlussprüfung</p>
+        <img class="fia-game-svg" src="../../../assets/images/game.svg" alt="game-svg">
+        <p class="fia-title">Spielend lernen</p>
         <p class="fia-description">
           Lerne mithilfe verschiedener Lernmethoden um die Inhalte besser im Gedächtnis zu behalten.
           Teste dein Wissen in einem Quiz oder mit vorgefertigten Karteikarten.
+        </p>
+      </div>
+      <div class="fia-text-column">
+        <img class="fia-online-course-svg" src="../../../assets/images/online-course.svg" alt="online-course-svg">
+        <p class="fia-title">Fachinformatischer <br/> Online-Kurs</p>
+        <p class="fia-description">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
         </p>
       </div>
     </div>
@@ -79,12 +88,11 @@
     <div class="fia-text-row">
       <div class="fia-text-column">
         <div class="fia-images-container">
-          <img class="fia-sneeze-svg" src="../../../assets/images/sneeze.svg" alt="sneeze-svg">
           <img class="fia-question-svg" src="../../../assets/images/question.svg" alt="question-svg">
         </div>
-        <p class="fia-title">Unterrichtsstoff nachholen</p>
+        <p class="fia-title">Erklärung vom Lehrer nicht verstanden?</p>
         <p class="fia-description">
-          Du hast den Unterricht verpasst oder willst dich auf die Prüfung vorbereiten?
+          Du hast den Unterricht verpasst oder etwas nicht richtig verstanden?
           Unter dem Menüpunkt <a routerLink="/lehrplan">Lehrplan</a> findest du jede Schulwoche mit allen Informationen zum Wiederholen.
         </p>
       </div>
@@ -100,9 +108,6 @@
           Aufbau und Funktionsweise von Stromkreisen. Statische Methoden, Datentypen und Schleifen in der Programmierung ...
         </p>
       </div>
-    </div>
-    <div class="fia-component-wrapper">
-      <app-school-week-card [week]="testSchoolWeek"></app-school-week-card>
     </div>
   </div>
 </div>

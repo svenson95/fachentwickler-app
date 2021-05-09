@@ -88,7 +88,7 @@ export class AuthService {
   }
 
   /* -- Get all lessons for user progress analysis (lesson progress & next lesson) -- */
-  fetchUserProgressData(): void {
+  fetchAllLessons(): void {
     this.dataService.getAllLessons().subscribe(
         (lessons) => {
           this.dataService.dashboard.allLessons = lessons;
@@ -145,7 +145,7 @@ export class AuthService {
         // console.log('response POST user/add-progress');
         if (response.success) {
           this.user = response.user;
-          this.fetchUserProgressData();
+          this.fetchAllLessons();
         }
         return response;
       }));
