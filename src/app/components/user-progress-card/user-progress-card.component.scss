@@ -18,7 +18,8 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: var(--scrollbar-width);
+
       ::ng-deep .mat-progress-bar-buffer  {
         background: var(--background-secondary);
       }

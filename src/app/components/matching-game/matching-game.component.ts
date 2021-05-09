@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Matching, MatchingPair } from '../../models/matching-piece';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Subject } from 'rxjs';
+
 import { AuthService } from '../../services/auth/auth.service';
+import { Matching, MatchingPair } from '../../models/matching-piece';
 
 @Component({
   selector: 'app-matching-game',
@@ -12,21 +14,18 @@ export class MatchingGameComponent implements OnInit {
 
   @Input() matching: Matching;
 
-  leftpartSelected = null;
-  rightpartSelected = null;
-
   round = 0;
   isCorrect: boolean;
 
   state: 'play' | 'end' = 'play';
 
-  solvedPairs: MatchingPair[] = [];
   unsolvedPairs: MatchingPair[] = [];
-
   leftSidePairs: MatchingPair[];
   rightSidePairs: MatchingPair[];
 
   assignmentStream = new Subject<{pair: MatchingPair, side: string}>();
+
+  @ViewChild('gameView') gameView;
 
   constructor(private auth: AuthService) { }
 
@@ -34,49 +33,37 @@ export class MatchingGameComponent implements OnInit {
     this.setupMatchings();
   }
 
-  setLeft(pairNumber): void {
-    if (!this.leftpartSelected || this.leftpartSelected !== pairNumber) {
-      this.leftpartSelected = pairNumber;
-    } else if (this.leftpartSelected === pairNumber) {
-      this.leftpartSelected = null;
-    }
+  drop(event: CdkDragDrop<string[]>, list): void {
+    moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
 
-  setRight(pairNumber): void {
-    if (!this.rightpartSelected || this.rightpartSelected !== pairNumber) {
-      this.rightpartSelected = pairNumber;
-    } else if (this.rightpartSelected === pairNumber) {
-      this.rightpartSelected = null;
-    }
-  }
+  private checkResult(): void {
+    const leftPairs = this.leftSidePairs;
+    const rightPairs = this.rightSidePairs;
 
-  selectItem(item): void {
-    if (item.side === 'left' && this.rightpartSelected) {
-      if (item.pair.pairNumber === this.rightpartSelected && !this.solvedPairs.includes(item.pair)) {
-        this.handleSolvedAssignment(item.pair);
+    let mistakes = 0;
+
+    for (let i = 0; i < this.matching.pairs.length; i++) {
+      if (leftPairs[i].pairNumber === rightPairs[i].pairNumber) {
+
       } else {
-        this.handleFailedAssignment();
-      }
-    } else if (item.side === 'right' && this.leftpartSelected) {
-      if (item.pair.pairNumber === this.leftpartSelected && !this.solvedPairs.includes(item.pair)) {
-        this.handleSolvedAssignment(item.pair);
-      } else {
-        this.handleFailedAssignment();
+        mistakes++;
       }
     }
+
+    if (mistakes > 0) {
+      this.handleFailedAssignment();
+    } else {
+      this.handleSolvedAssignment();
+    }
   }
 
-  private handleSolvedAssignment(pair: MatchingPair): void {
+  private handleSolvedAssignment(): void {
     this.isCorrect = true;
     setTimeout(() => {
-      this.solvedPairs.push(pair);
-      this.remove(pair, this.unsolvedPairs);
-      this.remove(pair, this.leftSidePairs);
-      this.remove(pair, this.rightSidePairs);
-      this.leftpartSelected = null;
-      this.rightpartSelected = null;
       this.isCorrect = undefined;
-    }, 1000);
+      this.startNextRound();
+    }, 2000);
   }
 
   remove(pair, array): void {
@@ -90,20 +77,20 @@ export class MatchingGameComponent implements OnInit {
   private handleFailedAssignment(): void {
     this.isCorrect = false;
     setTimeout(() => {
-      this.leftpartSelected = null;
-      this.rightpartSelected = null;
       this.isCorrect = undefined;
     }, 1500);
   }
 
   startNextRound(): void {
+    if (this.round === 0) {
+      this.gameView.nativeElement.classList.add('game-started');
+    }
+
     if (this.state === 'play' && this.matching.pairs[this.round + 1] === undefined) {
       this.state = 'end';
     }
 
     this.round++;
-    this.solvedPairs = [];
-    this.unsolvedPairs = [];
 
     if (this.matching.pairs[this.round] !== undefined) {
       this.setupMatchings();
@@ -115,13 +102,14 @@ export class MatchingGameComponent implements OnInit {
   }
 
   restartGame(): void {
+    this.gameView.nativeElement.classList.remove('game-started');
     this.round = 0;
     this.setupMatchings();
-    this.solvedPairs = [];
     this.state = 'play';
   }
 
   setupMatchings(): void {
+    this.unsolvedPairs = [];
     this.matching.pairs[this.round].forEach(pair => {
       this.unsolvedPairs.push(pair);
     });
@@ -130,7 +118,6 @@ export class MatchingGameComponent implements OnInit {
   }
 
   setSolvedState(): void {
-    console.log('solved', this.matching._id);
     if (!this.auth.user.progress.includes(this.matching._id)) {
       this.auth.setLessonSolved(this.matching._id);
     }

@@ -3,6 +3,8 @@ import {
   businessOutline,
   calendarOutline,
   codeSlashOutline,
+  colorPaletteOutline,
+  desktopOutline,
   earthOutline,
   fileTrayFullOutline,
   flashOutline,
@@ -14,11 +16,14 @@ import {
   libraryOutline,
   mailOutline,
   pencilOutline,
+  phonePortraitOutline,
   pieChartOutline,
   radioOutline,
+  rocketOutline,
   schoolOutline,
   serverOutline,
   swapHorizontalOutline,
+  terminalOutline,
   todayOutline,
 } from 'ionicons/icons';
 import { MenuItem } from '../app/models/menu-item';
@@ -139,10 +144,40 @@ export const study: MenuItem[] = [
 
 export const languages: MenuItem[] = [
   {
-    title: 'Syntax',
-    shortTitle: 'Syntax',
-    url: '/syntax',
-    icon: codeSlashOutline,
+    title: 'Assembler',
+    shortTitle: 'assembler',
+    url: '/assembler',
+    icon: rocketOutline,
+  },
+  {
+    title: 'Systemsprachen',
+    shortTitle: 'System',
+    url: '/systemsprachen',
+    icon: terminalOutline,
+  },
+  {
+    title: 'Backend',
+    shortTitle: 'Backend',
+    url: '/backend',
+    icon: serverOutline,
+  },
+  {
+    title: 'Frontend',
+    shortTitle: 'Frontend',
+    url: '/frontend',
+    icon: desktopOutline,
+  },
+  {
+    title: 'App',
+    shortTitle: 'App',
+    url: '/app',
+    icon: phonePortraitOutline,
+  },
+  {
+    title: 'Skriptsprachen',
+    shortTitle: 'Skript',
+    url: '/skriptsprachen',
+    icon: colorPaletteOutline,
   }
 ];
 

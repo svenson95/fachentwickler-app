@@ -33,9 +33,9 @@
 
       // Scrollbar
       &::-webkit-scrollbar {
-        width: 3px;
+        width: var(--scrollbar-width);
         overflow-y: scroll;
-        background: transparent;
+        background: var(--background-secondary);
       }
 
       &::-webkit-scrollbar-thumb {
@@ -81,7 +81,7 @@
 
   .fia-header {
     height: 60px;
-    transition: height 300ms ease-out;
+    transition: height 250ms ease;
 
     @include to-xs {
       height: 50px;

@@ -5,63 +5,46 @@
         <app-post-badge [post]="matching"></app-post-badge>
     </p>
     <mat-card-content class="fia-card-content" *ngIf="matching !== undefined">
-        <div class="fia-quiz">
+        <div class="fia-matching">
             <div class="fia-content-wrapper">
-                <div id="game">
-                    <div class="container unsolved" *ngIf="unsolvedPairs.length > 0">
-                        <div class="pair_items left">
-                            <button class="item unselectable" [class.selected]="leftpartSelected === pair.pairNumber"
-                                    *ngFor="let pair of leftSidePairs"
-                                    (mouseup)="setLeft(pair.pairNumber)"
-                                    (click)="selectItem({pair: pair, side: 'left'})"
-                                    [disabled]="isCorrect !== undefined"
-                            >
-                                {{pair.leftpart}}
-                                <div class="left-connector"></div>
-                            </button>
+                <div id="game" #gameView>
+                    <p class="game-introduction">
+                        Setze die Karten in die richtige Reihenfolge und klicke auf Verbinden.
+                    </p>
+                    <div class="container unsolved" *ngIf="unsolvedPairs.length > 0 && state !== 'end'"
+                         [class.correct]="isCorrect === true"
+                         [class.wrong]="isCorrect === false"
+                    >
+                        <div class="pair_items left" (cdkDropListDropped)="drop($event, leftSidePairs)" cdkDropList>
+                            <div class="btn-wrapper" *ngFor="let pair of leftSidePairs">
+                                <button class="item unselectable cdk-drag-animating" [disabled]="isCorrect !== undefined" cdkDrag>
+                                    {{pair.leftpart}}
+                                </button>
+                            </div>
                         </div>
-                        <div class="fia-answer-indicator" [class.correct]="isCorrect === true" [class.wrong]="isCorrect === false">
-                            <svg class="correct" *ngIf="isCorrect === true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                <circle class="path circle" fill="none" stroke-width="8" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                                <polyline class="path check" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
-                            </svg>
-                            <svg class="wrong" *ngIf="isCorrect === false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                                <circle class="path circle" fill="none" stroke-width="8" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                                <line class="path line first" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
-                                <line class="path line second" fill="none" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
-                            </svg>
+                        <div class="connector-container">
+                            <div class="connector-wrapper" *ngFor="let pair of unsolvedPairs">
+                                <div class="horizontal-connector"></div>
+                            </div>
                         </div>
-                        <div class="pair_items right">
-                            <button class="item unselectable" [class.selected]="rightpartSelected === pair.pairNumber"
-                                    *ngFor="let pair of rightSidePairs"
-                                    (mouseup)="setRight(pair.pairNumber)"
-                                    (click)="selectItem({pair: pair, side: 'right'})"
-                                    [disabled]="isCorrect !== undefined"
-                            >
-                                {{pair.rightpart}}
-                                <div class="right-connector top-bar"></div>
-                                <div class="right-connector bottom-bar"></div>
-                            </button>
+                        <div class="vertical-connector"></div>
+                        <div class="pair_items right" (cdkDropListDropped)="drop($event, rightSidePairs)" cdkDropList>
+                            <div class="btn-wrapper" *ngFor="let pair of rightSidePairs">
+                                <button class="item unselectable cdk-drag-animating" [disabled]="isCorrect !== undefined" cdkDrag>
+                                    {{pair.rightpart}}
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <button class="fia-text-button" *ngIf="state === 'play'" (click)="startNextRound()" [disabled]="unsolvedPairs.length > 0">
-                        <span>Weiter</span>
+                    <button class="fia-text-button unselectable" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined">
+                        <span>Verbinden</span>
                     </button>
                     <ng-container *ngIf="state === 'end'">
-                        <h1 class="finish-label">Fertig</h1>
+                        <h1 class="finish-label">Lektion abgeschlossen</h1>
                         <button class="fia-text-button" (click)="restartGame()">
                             <span>Neustarten</span>
                         </button>
                     </ng-container>
-                    <div class="solved-pairs" *ngIf="solvedPairs.length > 0">
-                        <hr/>
-                        <h2>Antworten</h2>
-                        <div class="container solved">
-                            <div *ngFor="let pair of solvedPairs" class="pair">
-                                <div class="item solved" [innerHTML]="pair.leftpart + '<br/> ... <br/>' + pair.rightpart"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

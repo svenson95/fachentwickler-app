@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
     } else {
       this.schoolWeek = this.dataService.schoolWeek;
 
-      if (!this.dataService.dashboard.nextLesson && !this.dataService.dashboard.lessonsPercentage) {
+      if (!this.dataService.dashboard.nextLesson || !this.dataService.dashboard.lessonsPercentage) {
         this.authService.fetchNextLesson(this.dataService.dashboard.allLessons);
       }
     }

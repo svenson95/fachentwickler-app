@@ -35,7 +35,7 @@ export const light: Theme = {
 export const dark: Theme = {
     name: 'dark',
     properties: {
-        "--background-primary": "#141414",
+        "--background-primary": "#000000",
         "--background-secondary": "#1e1e1e",
         "--background-tertiary": "#323232",
         "--primary-color": "#eb6a1e",

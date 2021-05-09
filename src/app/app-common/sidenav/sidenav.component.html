@@ -52,6 +52,7 @@
          [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
+         disabled
       >
         <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>
@@ -60,13 +61,14 @@
   </div>
 
   <div class="fia-areas-section">
-    <p class="section-title">Sprachen</p>
+    <p class="section-title">Bereiche</p>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of languageSection"
          [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
+         disabled
       >
         <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>

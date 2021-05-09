@@ -36,11 +36,11 @@ export class LoginComponent implements OnInit {
     }
 
     this.headerService.setPageTitle('Login');
-    this.username = new FormControl('test', {
+    this.username = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.password = new FormControl('test', {
+    this.password = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });

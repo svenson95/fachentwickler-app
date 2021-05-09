@@ -100,7 +100,7 @@ export class AuthService {
   }
 
   /* -- Get next lesson & lessons percentage for user progress module -- */
-  fetchNextLesson(lessons): void {
+  fetchNextLesson(lessons: string[]): void {
     // '605a469942f5481a20c97627' is a test article
     const nextLessonId = lessons.find(lessonId => lessonId !== '605a469942f5481a20c97627' && !this.user.progress.includes(lessonId));
     this.dataService.getSubjectPost(nextLessonId).subscribe(
@@ -120,7 +120,6 @@ export class AuthService {
       }),
       withCredentials: true
     };
-    this.storeData();
 
     return this.httpClient.patch<EditUserResponse>(this.editUserUrl, JSON.stringify(updatedUser), httpOptions)
       .pipe(map(response => {
@@ -188,37 +187,45 @@ export class AuthService {
       }));
   }
 
-  /* -- Service functions -- */
-  async checkAuthentication(redirectUrl: string = null): Promise<boolean | AuthenticatedResponse> {
-    const stored = localStorage.getItem(AUTH_STORAGE_KEY);
-    if (stored === null) {
-      return;
-    }
-
-    try {
-      const data = JSON.parse(stored);
-      this.user = data.user;
-      this.token = data.token;
-      if (this.themeService.getActiveTheme().name !== this.user.theme) {
-        this.themeService.toggleTheme();
-      }
-      this.isAuthenticated = true;
-      return data;
-    } catch (err) {
-      console.log('checking stored auth cookie ...', err);
-      await this.authenticated().subscribe(
-        (value) => {
-          console.log('response authenticated', value);
-          this.router.navigateByUrl(redirectUrl);
-          return true;
-        }, (error) => {
-          console.log('ERROR authenticated', error);
-          this.router.navigateByUrl('/');
-          return false;
+    /* -- Service functions -- */
+    async checkAuthentication(redirectUrl: string = null): Promise<boolean | AuthenticatedResponse> {
+        const stored = localStorage.getItem(AUTH_STORAGE_KEY);
+        if (stored === null) {
+            return;
         }
-      );
+
+        try {
+            await this.authenticated().subscribe(
+            (response) => {
+                console.log('SUCCESS authenticated', response);
+                if (response.user) {
+                    this.user = response.user;
+                    this.token = response.token;
+                    this.isAuthenticated = true;
+                    if (this.themeService.getActiveTheme().name !== response.user.theme) {
+                        this.themeService.toggleTheme();
+                    }
+                    this.storeData();
+                    return response;
+                }
+            }, (error) => {
+                console.log('ERROR authenticated', error);
+            });
+
+            if (this.user === undefined) {
+                const data = JSON.parse(stored);
+                this.user = data.user;
+                this.token = data.token;
+                this.isAuthenticated = true;
+                if (this.themeService.getActiveTheme().name !== this.user.theme) {
+                    this.themeService.toggleTheme();
+                }
+                return data;
+            }
+        } catch (err) {
+            console.log('error while check authentication cookie ...', err);
+        }
     }
-  }
 
   storeData(): void {
     localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify({

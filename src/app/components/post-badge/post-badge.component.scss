@@ -9,13 +9,17 @@
   margin-left: 10px;
 
   font-family: Nunito-Light, sans-serif;
-  font-size: .65em;
+  font-size: .7em;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 
   @include to-md {
     padding: 0 8px;
     float: right;
+  }
+
+  @include to-xs {
+    font-size: .65em;
   }
 
   @include to-tiny {
@@ -32,27 +36,27 @@
   }
 
   &.article {
-    background-color: rgba(var(--tertiary-color-rgb), .1);
+    background-color: rgba(var(--tertiary-color-rgb), .15);
     color: var(--tertiary-color);
   }
   &.tasks {
-    background-color: rgba(var(--grey-4-rgb), .1);
+    background-color: rgba(var(--grey-4-rgb), .15);
     color: var(--grey-4);
   }
   &.index-cards {
-    background-color: rgba(var(--secondary-color-rgb), .1);
+    background-color: rgba(var(--secondary-color-rgb), .15);
     color: var(--secondary-color);
   }
   &.quiz {
-    background-color: rgba(var(--primary-color-rgb), .1);
+    background-color: rgba(var(--primary-color-rgb), .15);
     color: var(--primary-color);
   }
   &.matching {
-    background-color: rgba(limegreen, .1);
+    background-color: rgba(limegreen, .15);
     color: limegreen;
   }
   &.test {
-    background: rgba(var(--tertiary-color-rgb), .4);
+    background: rgba(var(--tertiary-color-rgb), .8);
     color: var(--background-primary);
     font-family: Nunito-ExtraBold, sans-serif;
   }

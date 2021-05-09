@@ -130,11 +130,11 @@ button {
 }
 
 a {
-  color: var(--secondary-color);
+  color: var(--text-color-1);
+  text-decoration-color: var(--secondary-color);
 
   &:hover {
-    color: var(--text-color-1);
-    text-decoration-color: var(--secondary-color);
+    color: var(--secondary-color);
   }
 }
 
@@ -183,16 +183,17 @@ a {
   letter-spacing: 1.5px;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
-  margin-bottom: 10px;
 
   @include from-xs {
     font-size: 1.5em;
     line-height: 24px;
+    margin-bottom: 10px;
   }
 
   @include to-xs {
     font-size: 1.3em;
     line-height: 20px;
+    margin-bottom: 5px;
   }
 }
 
@@ -326,7 +327,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     font-size: .8em;
 
     @include to-xs {
-      font-size: .6em;
+      font-size: .7em;
     }
   }
 

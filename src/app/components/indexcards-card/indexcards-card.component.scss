@@ -38,6 +38,12 @@
     font-size: .75em;
   }
 
+  @include to-xs {
+    width: 280px;
+    height: 201px;
+    font-size: .58em;
+  }
+
   .fia-index-card-inner {
     position: relative;
     width: 100%;
@@ -71,12 +77,21 @@
         margin-top: 20px;
       }
 
+      @include to-xs {
+        margin-top: 15px;
+      }
+
       p {
         margin-bottom: 5px;
 
         @include to-md {
           margin-bottom: 0;
           line-height: 19px;
+        }
+
+        @include to-xs {
+          margin-bottom: 0;
+          line-height: 15px;
         }
       }
     }
@@ -94,7 +109,7 @@
       line-height: 25px;
 
       @include to-md {
-        line-height: 17px;
+        line-height: 15px;
       }
     }
   }
@@ -108,6 +123,10 @@
       @include to-md {
         margin-left: 60px;
       }
+
+      @include to-xs {
+        margin-left: 50px;
+      }
     }
   }
 
@@ -120,6 +139,10 @@
 
       @include to-md {
         margin-left: 30px;
+      }
+
+      @include to-xs {
+        margin-left: 20px;
       }
     }
   }
