@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+import { User } from '../../models/user';
+import { SchoolWeek } from '../../models/school-week';
+import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { User } from '../../models/user';
-import { DataService } from '../../services/data/data.service';
-import { SchoolWeek } from '../../models/school-week';
 
 @Component({
   selector: 'app-dashboard',
@@ -40,7 +41,7 @@ export class DashboardComponent implements OnInit {
         schoolNews: undefined,
       };
 
-      this.dataService.getNewsList().subscribe(response => {
+      this.dataService.getAllNews().subscribe(response => {
         this.dataService.dashboard.schoolNews = response;
       });
       this.fetchNextExams();
@@ -56,7 +57,7 @@ export class DashboardComponent implements OnInit {
   }
 
   fetchNextExams(): void {
-    this.dataService.getExamDates().subscribe(
+    this.dataService.getAllExamDates().subscribe(
         (exams) => {
           const openExams = [];
           exams.forEach(exam => {

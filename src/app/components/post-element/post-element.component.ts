@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { PostElement } from '../../models/post';
-import { DataService } from '../../services/data/data.service';
 import { ElementType } from '../../models/element-type';
+import { ImageChunk } from '../../models/image-data';
+import { DataService } from '../../services/data/data.service';
 
 @Component({
   selector: 'app-post-element',
@@ -31,7 +33,7 @@ export class PostElementComponent implements OnInit {
   loadImage(url): void {
     this.dataService.getImage(url).subscribe(
       (data) => {
-        const dataStrings = data.map((chunk: any) => chunk.data);
+        const dataStrings = data.chunks.map((chunk: ImageChunk) => chunk.data);
         this.image = 'data:image/png;base64,' + dataStrings.join('');
       },
       (error) => {

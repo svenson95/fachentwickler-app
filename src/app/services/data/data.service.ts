@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Subject } from '../../models/subject';
-import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 
+import { environment } from '../../../environments/environment';
+import { Subject } from '../../models/subject';
 import { Post } from '../../models/post';
+import { ImageData } from '../../models/image-data';
 import { IndexCards } from '../../models/index-cards';
 import { Quiz } from '../../models/quiz';
 import { Matching } from '../../models/matching-piece';
@@ -19,174 +20,160 @@ import { SchoolNews } from '../../models/school-news';
 })
 export class DataService {
 
-  // Settings
-  public currentSchoolWeek = 24;
-  public schoolWeeksLength = 38;
+    private SUBJECTS_ENDPOINT = environment.baseUrl + '/subjects';
+    private POSTS_ENDPOINT = environment.baseUrl + '/posts';
+    private IMAGES_ENDPOINT = environment.baseUrl + '/images';
+    private QUIZ_ENDPOINT = environment.baseUrl + '/quiz';
+    private INDEX_CARDS_ENDPOINT = environment.baseUrl + '/index-cards';
+    private MATCHING_ENDPOINT = environment.baseUrl + '/matching';
+    private SCHOOL_WEEK_ENDPOINT = environment.baseUrl + '/school-week';
+    private EXAM_DATES_ENDPOINT = environment.baseUrl + '/exam-dates';
+    private NEWS_ENDPOINT = environment.baseUrl + '/news';
 
-  public dashboard: DashboardData;
-  public schoolWeek: SchoolWeek;
+    public currentSchoolWeek = 24;
+    public schoolWeeksLength = 38;
 
-  constructor(private httpClient: HttpClient) { }
+    public dashboard: DashboardData;
+    public schoolWeek: SchoolWeek;
 
-  // Subject component - GET subject
-  getSubject(subjectUrl: string): Observable<Subject> {
-    return this.httpClient.get<Subject>(`${environment.baseUrl}/subjects/${subjectUrl}/populated`)
-      .pipe(map((response) => {
-        // console.log('response GET subject', response);
-        return response;
-      }));
-  }
+    constructor(private httpClient: HttpClient) { }
 
-  // Subject component - GET subject-post
-  getSubjectPost(postId: string): Observable<Post> {
-    return this.httpClient.get<Post>(`${environment.baseUrl}/posts/${postId}`)
-      .pipe(map((response) => {
-        // console.log('response GET subjects/post', response);
-        return response;
-      }));
-  }
+    getSubject(subjectUrl: string): Observable<Subject> {
+        return this.httpClient.get<Subject>(`${this.SUBJECTS_ENDPOINT}/${subjectUrl}/populated`)
+            .pipe(map((response) => {
+                // console.log('response GET subject', response);
+                return response;
+            }));
+    }
 
-  // Exam-Item component - GET subject-posts
-  getSubjectPosts(postIdsString: string): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(`${environment.baseUrl}/posts/multiple/${postIdsString}`)
-      .pipe(map((response) => {
-        // console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
-        return response;
-      }));
-  }
+    getPostById(postId: string): Observable<Post> {
+        return this.httpClient.get<Post>(`${this.POSTS_ENDPOINT}/${postId}`)
+            .pipe(map((response) => {
+                // console.log('response GET subjects/post', response);
+                return response;
+            }));
+    }
 
-  // Post component - GET post
-  getPost(postUrl: string): Observable<Post> {
-    return this.httpClient.get<Post>(`${environment.baseUrl}/posts/${postUrl}`)
-      .pipe(map((response) => {
-        // console.log('response GET post', response);
-        return response;
-      }));
-  }
+    getPost(postUrl: string): Observable<Post> {
+        return this.httpClient.get<Post>(`${this.POSTS_ENDPOINT}/${postUrl}`)
+            .pipe(map((response) => {
+                // console.log('response GET post', response);
+                return response;
+            }));
+    }
 
-  // Element component - GET image
-  getImage(imageUrl: string): Observable<any> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'image/png');
-    return this.httpClient.get<any>(imageUrl, {headers})
-      .pipe(map((response) => {
-        // console.log('response GET image', response);
-        return response;
-      }));
-  }
+    getMultiplePosts(postIdsString: string): Observable<Post[]> {
+        return this.httpClient.get<Post[]>(`${this.POSTS_ENDPOINT}/multiple/${postIdsString}`)
+            .pipe(map((response) => {
+                // console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
+                return response;
+            }));
+    }
 
-  // Image Manager component - GET images
-  getImages(page = 0, imagesPerPage = 10): Observable<any> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'image/png');
-    return this.httpClient.get<any>(`${environment.baseUrl}/images/all?page=${page}&size=${imagesPerPage}`, {headers})
-      .pipe(map((response) => {
-        // console.log('response GET images', response);
-        return response;
-      }));
-  }
+    getAllLessons(): Observable<string[]> {
+        return this.httpClient.get<string[]>(`${this.POSTS_ENDPOINT}/all-lessons`)
+            .pipe(map((response) => {
+                // console.log('response GET posts/all-lessons', response);
+                return response;
+            }));
+    }
 
-  // Image Manager component - GET images count
-  getImagesCount(): Observable<any> {
-    return this.httpClient.get<any>(`${environment.baseUrl}/images/count`)
-        .pipe(map((response) => {
-          // console.log('response GET images count', response);
-          return response;
-        }));
-  }
+    getImage(imageUrl: string): Observable<ImageData> {
+        return this.httpClient.get<ImageData>(imageUrl)
+            .pipe(map((response) => {
+                // console.log('response GET image', response);
+                return response;
+            }));
+    }
 
-  // Edit-Post page - POST image
-  async uploadImage(file: any): Promise<Observable<any>> {
-    console.log('file', file);
-    // const headers = new HttpHeaders()
-    //   .set('Content-Type', 'image/png');
-    const formData = new FormData();
-    formData.append('file', file);
-    return this.httpClient.post<any>(`${environment.baseUrl}/images/upload`, {formData})
-      .pipe(map((response) => {
-        // console.log('response POST image', response);
-        return response;
-      }));
-  }
+    getMultipleImages(page = 0, imagesPerPage = 10): Observable<ImageData[]> {
+        return this.httpClient.get<ImageData[]>(`${this.IMAGES_ENDPOINT}/all?page=${page}&size=${imagesPerPage}`)
+            .pipe(map((response) => {
+                // console.log('response GET images', response);
+                return response;
+            }));
+    }
 
-  // Quiz component - GET quiz
-  getQuiz(url: string): Observable<Quiz> {
-    return this.httpClient.get<Quiz>(`${environment.baseUrl}/quiz/${url}`)
-      .pipe(map((response) => {
-        // console.log('response GET quiz', response);
-        return response;
-      }));
-  }
+    getAllImagesLength(): Observable<number> {
+        return this.httpClient.get<number>(`${this.IMAGES_ENDPOINT}/count`)
+            .pipe(map((response) => {
+                // console.log('response GET images count', response);
+                return response;
+            }));
+    }
 
-  // Index Cards component - GET index-cards
-  getIndexCards(url: string): Observable<IndexCards> {
-    return this.httpClient.get<IndexCards>(`${environment.baseUrl}/index-cards/${url}`)
-      .pipe(map((response) => {
-        // console.log('response GET index-cards', response);
-        return response;
-      }));
-  }
+    uploadImage(file: Blob): Observable<Blob> {
+        const formData = new FormData();
+        formData.append('file', file);
 
-  // Matching component - GET matching
-  getMatching(url: string): Observable<Matching> {
-    return this.httpClient.get<Matching>(`${environment.baseUrl}/matching/${url}`)
-        .pipe(map((response) => {
-          // console.log('response GET matchings', response);
-          return response;
-        }));
-  }
+        return this.httpClient.post<Blob>(`${environment.baseUrl}/images/upload`, {formData})
+            .pipe(map((response) => {
+                // console.log('response POST image', response);
+                return response;
+            }));
+    }
 
-  // Dashboard component - GET posts/all-ids
-  getAllLessons(): Observable<string[]> {
-    return this.httpClient.get<string[]>(`${environment.baseUrl}/posts/all-lessons`)
-      .pipe(map((response) => {
-        // console.log('response GET posts/all-lessons', response);
-        return response;
-      }));
-  }
+    getQuiz(url: string): Observable<Quiz> {
+        return this.httpClient.get<Quiz>(`${this.QUIZ_ENDPOINT}/${url}`)
+            .pipe(map((response) => {
+                // console.log('response GET quiz', response);
+                return response;
+            }));
+    }
 
-  // Dashboard component - GET posts/school-week/:number
-  getSchoolWeek(week: number): Observable<SchoolWeek> {
-    return this.httpClient.get<SchoolWeek>(`${environment.baseUrl}/school-week/number/` + week)
-      .pipe(map((response) => {
-        // console.log('response GET posts/school-week/:number', response);
-        return response;
-    }));
-  }
+    getIndexCards(url: string): Observable<IndexCards> {
+        return this.httpClient.get<IndexCards>(`${this.INDEX_CARDS_ENDPOINT}/${url}`)
+            .pipe(map((response) => {
+                // console.log('response GET index-cards', response);
+                return response;
+            }));
+    }
 
-  // Curriculum component - GET all school-week cards
-  getAllWeeks(): Observable<SchoolWeek[]> {
-    return this.httpClient.get<SchoolWeek[]>(`${environment.baseUrl}/school-week/all`)
-      .pipe(map((response) => {
-        // console.log('response GET posts/all-school-weeks', response);
-        return response;
-      }));
-  }
+    getMatching(url: string): Observable<Matching> {
+        return this.httpClient.get<Matching>(`${this.MATCHING_ENDPOINT}/${url}`)
+            .pipe(map((response) => {
+                // console.log('response GET matchings', response);
+                return response;
+            }));
+    }
 
-  // Exams page & Next-exams-card component - GET all exam dates
-  getExamDates(): Observable<ExamDate[]> {
-    return this.httpClient.get<ExamDate[]>(`${environment.baseUrl}/exam-dates`)
-      .pipe(map((response) => {
-        // console.log('response GET exam-dates', response);
-        return response;
-      }));
-  }
+    getSchoolWeek(week: number): Observable<SchoolWeek> {
+        return this.httpClient.get<SchoolWeek>(`${this.SCHOOL_WEEK_ENDPOINT}/number/${week}`)
+            .pipe(map((response) => {
+                // console.log('response GET posts/school-week/:number', response);
+                return response;
+            }));
+    }
 
-  // Messages & Dashboard page - GET all news
-  getNewsList(): Observable<SchoolNews[]> {
-    return this.httpClient.get<SchoolNews[]>(`${environment.baseUrl}/news`)
-      .pipe(map((response) => {
-        // console.log('response GET news', response);
-        return response;
-      }));
-  }
+    getAllWeeks(): Observable<SchoolWeek[]> {
+        return this.httpClient.get<SchoolWeek[]>(`${this.SCHOOL_WEEK_ENDPOINT}/all`)
+            .pipe(map((response) => {
+                // console.log('response GET posts/all-school-weeks', response);
+                return response;
+            }));
+    }
 
-  // Messages & Dashboard page - GET specific news object
-  getNewsObject(url: string): Observable<SchoolNews> {
-    return this.httpClient.get<SchoolNews>(`${environment.baseUrl}/news/${url}`)
-      .pipe(map((response) => {
-        // console.log('response GET news object', response);
-        return response;
-      }));
-  }
+    getAllExamDates(): Observable<ExamDate[]> {
+        return this.httpClient.get<ExamDate[]>(this.EXAM_DATES_ENDPOINT)
+            .pipe(map((response) => {
+                // console.log('response GET exam-dates', response);
+                return response;
+            }));
+    }
+
+    getAllNews(): Observable<SchoolNews[]> {
+        return this.httpClient.get<SchoolNews[]>(this.NEWS_ENDPOINT)
+            .pipe(map((response) => {
+                // console.log('response GET news', response);
+                return response;
+            }));
+    }
+
+    getNewsObject(url: string): Observable<SchoolNews> {
+        return this.httpClient.get<SchoolNews>(`${this.NEWS_ENDPOINT}/${url}`)
+            .pipe(map((response) => {
+                // console.log('response GET news object', response);
+                return response;
+            }));
+    }
 }

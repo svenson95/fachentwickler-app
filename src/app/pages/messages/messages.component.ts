@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+import { SchoolNews } from '../../models/school-news';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
-import { SchoolNews } from '../../models/school-news';
 
 @Component({
   selector: 'app-messages',
@@ -16,7 +17,7 @@ export class MessagesComponent implements OnInit {
               private dataService: DataService
   ) {
     this.headerService.setPageTitle('Mitteilungen');
-    this.dataService.getNewsList().subscribe(res => {
+    this.dataService.getAllNews().subscribe(res => {
       this.news = res;
     });
   }

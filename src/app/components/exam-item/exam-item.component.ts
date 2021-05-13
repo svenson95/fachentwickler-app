@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { subjects } from '../../../data/menu-items';
-import { DataService } from '../../services/data/data.service';
 import { ExamDate } from '../../models/exam-date';
 import { Post } from '../../models/post';
+import { DataService } from '../../services/data/data.service';
 
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
@@ -59,7 +59,7 @@ export class ExamItemComponent implements OnInit {
 
   async getExamLessons(): Promise<Post[]> {
     const postIdsArray = '_' + this.exam.lessons.join();
-    this.dataService.getSubjectPosts(postIdsArray).subscribe(
+    this.dataService.getMultiplePosts(postIdsArray).subscribe(
       (posts) => {
         this.examLessons = posts;
 

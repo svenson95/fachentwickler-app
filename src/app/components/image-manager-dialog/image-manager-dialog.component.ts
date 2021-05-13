@@ -1,10 +1,9 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { delay } from 'rxjs/operators';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
-import {delay} from 'rxjs/operators';
-import {LoadingService} from '../../services/loading.service';
-import {Subscription} from 'rxjs';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-image-manager-dialog',
@@ -30,7 +29,7 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
       }
     );
 
-    this.dataService.getImagesCount().subscribe(
+    this.dataService.getAllImagesLength().subscribe(
         (data) => {
           this.imagesCount = data;
         },
@@ -53,7 +52,7 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
   }
 
   initialImages(): void {
-    this.dataService.getImages().subscribe(
+    this.dataService.getMultipleImages().subscribe(
       (data) => {
         this.images = data;
       },
@@ -69,20 +68,21 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
   }
 
   sendImage(event): void {
-    event.preventDefault();
-
-    this.dataService.uploadImage(event.target[0].files[0]).then(async response => {
-      if (response) {
-        // editImageId(response.id);
-      } else {
-        console.log('Error while uploading new image');
-      }
-    });
+    // this.dataService.uploadImage(event.target[0].files[0]).subscribe(
+    //     (response) => {
+    //       // editImageId(response.id);
+    //       // this.images.push()
+    //     },
+    //     (error) => {
+    //       console.log('Uploading new image failed. Try again');
+    //       console.log(error);
+    //     }
+    // );
   }
 
   loadMore(): void {
     this.page++;
-    this.dataService.getImages(this.page).subscribe(data => {
+    this.dataService.getMultipleImages(this.page).subscribe(data => {
       this.images = [...this.images, ...data];
     });
   }

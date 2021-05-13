@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
 import { environment } from '../../../environments/environment';
-
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
 import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse, AddProgressResponse } from '../../models/fetch-response';
 import { ThemeService } from '../theme.service';
@@ -103,7 +102,7 @@ export class AuthService {
   fetchNextLesson(lessons: string[]): void {
     // '605a469942f5481a20c97627' is a test article
     const nextLessonId = lessons.find(lessonId => lessonId !== '605a469942f5481a20c97627' && !this.user.progress.includes(lessonId));
-    this.dataService.getSubjectPost(nextLessonId).subscribe(
+    this.dataService.getPostById(nextLessonId).subscribe(
         (nextLesson) => {
           this.dataService.dashboard.nextLesson = nextLesson;
           this.dataService.dashboard.lessonsPercentage = (this.user.progress.length / lessons.length) * 100;

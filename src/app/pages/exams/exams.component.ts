@@ -2,9 +2,9 @@ import { AfterViewInit, Component, OnInit, Renderer2, ViewChild } from '@angular
 import { DateAdapter } from '@angular/material/core';
 import { MatCalendar, MatCalendarCellCssClasses } from '@angular/material/datepicker';
 
+import { ExamDate } from '../../models/exam-date';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
-import { ExamDate } from '../../models/exam-date';
 
 @Component({
   selector: 'app-exams',
@@ -48,7 +48,7 @@ export class ExamsComponent implements OnInit, AfterViewInit {
 
   /* -- Initial functions -- */
   fetchData(): void {
-    this.dataService.getExamDates().subscribe(
+    this.dataService.getAllExamDates().subscribe(
       (response) => {
         response.sort((a, b) => {
           if (a.date > b.date) { return 1; }
