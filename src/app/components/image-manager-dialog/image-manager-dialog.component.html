@@ -20,7 +20,9 @@
     <div class="fia-spinner-wrapper" *ngIf="images.length === 0 && isLoading">
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
-    <img class="image" *ngFor="let image of images" [src]="encode(image)" alt="image"/>
+    <img class="image" *ngFor="let image of images" [src]="encode(image)" alt="image"
+         [matTooltip]="imageTooltip(image)" matTooltipClass="image-tooltip" matTooltipPosition="right"
+    />
     <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
       <span>Mehr laden</span>
     </button>

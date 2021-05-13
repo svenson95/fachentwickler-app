@@ -75,6 +75,10 @@
   }
 }
 
+::ng-deep .image-tooltip {
+  background: var(--primary-color);
+}
+
 ::ng-deep .mat-dialog-container {
   background: var(--background-secondary);
   border-radius: 0;

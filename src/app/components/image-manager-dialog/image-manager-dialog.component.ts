@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { delay } from 'rxjs/operators';
 
+import { ImageData } from '../../models/image-data';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
@@ -12,7 +13,7 @@ import { LoadingService } from '../../services/loading.service';
 })
 export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
 
-  images = [];
+  images: ImageData[] = [];
   imagesCount: number;
   page = 0;
   isLoading: boolean;
@@ -85,6 +86,10 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
     this.dataService.getMultipleImages(this.page).subscribe(data => {
       this.images = [...this.images, ...data];
     });
+  }
+
+  imageTooltip(image: ImageData): string {
+    return 'Name: ' + image.file.filename + '\n' + 'ID: ' + image.file._id;
   }
 
 }
