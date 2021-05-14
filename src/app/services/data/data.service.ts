@@ -86,6 +86,14 @@ export class DataService {
             }));
     }
 
+    getImageById(id: string): Observable<ImageData> {
+        return this.httpClient.get<ImageData>(`${this.IMAGES_ENDPOINT}/${id}`)
+            .pipe(map((response) => {
+                // console.log('response GET image', response);
+                return response;
+            }));
+    }
+
     getMultipleImages(page = 0, imagesPerPage = 10): Observable<ImageData[]> {
         return this.httpClient.get<ImageData[]>(`${this.IMAGES_ENDPOINT}/all?page=${page}&size=${imagesPerPage}`)
             .pipe(map((response) => {
@@ -102,13 +110,21 @@ export class DataService {
             }));
     }
 
-    uploadImage(file: Blob): Observable<Blob> {
+    uploadImage(file: any): Observable<any> {
         const formData = new FormData();
         formData.append('file', file);
 
-        return this.httpClient.post<Blob>(`${environment.baseUrl}/images/upload`, {formData})
+        return this.httpClient.post<any>(`${this.IMAGES_ENDPOINT}/upload`, formData)
             .pipe(map((response) => {
                 // console.log('response POST image', response);
+                return response;
+            }));
+    }
+
+    deleteImageById(id: string): Observable<any> {
+        return this.httpClient.delete<any>(`${this.IMAGES_ENDPOINT}/${id}/delete`)
+            .pipe(map((response) => {
+                console.log('response DELETE image', response);
                 return response;
             }));
     }

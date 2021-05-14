@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { delay } from 'rxjs/operators';
 
 import { ImageData } from '../../models/image-data';
+import { UserRole } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
@@ -13,10 +14,13 @@ import { LoadingService } from '../../services/loading.service';
 })
 export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
 
+  UserRole = UserRole;
+
   images: ImageData[] = [];
   imagesCount: number;
   page = 0;
   isLoading: boolean;
+  showImage: ImageData;
 
   @ViewChild('fileInput') fileInput;
 
@@ -69,16 +73,23 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
   }
 
   sendImage(event): void {
-    // this.dataService.uploadImage(event.target[0].files[0]).subscribe(
-    //     (response) => {
-    //       // editImageId(response.id);
-    //       // this.images.push()
-    //     },
-    //     (error) => {
-    //       console.log('Uploading new image failed. Try again');
-    //       console.log(error);
-    //     }
-    // );
+    event.preventDefault();
+    this.dataService.uploadImage(event.target[0].files[0]).subscribe(
+        async (response) => {
+          await this.dataService.getImageById(response.file.id).subscribe(
+              (image) => {
+                this.images.unshift(image);
+              }, (err) => {
+                console.log('Get image by id failed');
+                console.log(err);
+              }
+          );
+        },
+        (error) => {
+          console.log('Uploading new image failed');
+          console.log(error);
+        }
+    );
   }
 
   loadMore(): void {
@@ -88,8 +99,14 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
     });
   }
 
-  imageTooltip(image: ImageData): string {
-    return 'Name: ' + image.file.filename + '\n' + 'ID: ' + image.file._id;
+  deleteImage(id: string): void {
+    this.dataService.deleteImageById(id).subscribe(
+        (response) => {
+            this.images = this.images.filter(el => el.file._id !== id);
+        }, (error) => {
+          console.log('Delete image failed', error);
+        }
+    );
   }
 
 }

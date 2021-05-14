@@ -66,6 +66,13 @@
       max-height: 100px;
       max-width: 200px;
       padding: 10px;
+      outline: 1px solid transparent;
+      transition: outline 200ms ease;
+
+      &.is-selected {
+        transition: outline 200ms ease;
+        outline: 1px solid var(--secondary-color);
+      }
     }
 
     .fia-text-button {

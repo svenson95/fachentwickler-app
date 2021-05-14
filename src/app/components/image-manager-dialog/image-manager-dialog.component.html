@@ -16,12 +16,18 @@
   </form>
   <hr class="fia-divider-line"/>
   <p class="title">Zuletzt hochgeladen</p>
+  <div class="image-preview" *ngIf="showImage">
+    <p>Name: {{showImage.file.filename}}</p>
+    <p>ID: {{showImage.file._id}}</p>
+    <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(showImage.file._id)">Bild löschen</button>
+  </div>
   <div class="fia-im-recent-images">
     <div class="fia-spinner-wrapper" *ngIf="images.length === 0 && isLoading">
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
     <img class="image" *ngFor="let image of images" [src]="encode(image)" alt="image"
-         [matTooltip]="imageTooltip(image)" matTooltipClass="image-tooltip" matTooltipPosition="right"
+         matTooltip="Klicke für Details" matTooltipClass="image-tooltip" matTooltipPosition="right"
+         (click)="showImage = image" [class.is-selected]="image === showImage"
     />
     <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
       <span>Mehr laden</span>
