@@ -7,16 +7,19 @@ export const schedule: Schedule[] = [
       {
         subject: 'lf-7-1',
         teacher: 'pofahl',
+        room: 'A110',
         block: '1'
       },
       {
         subject: 'lf-9',
         teacher: 'anders',
+        room: 'A111',
         block: '2'
       },
       {
-        subject: 'wiso',
-        teacher: 'trosin',
+        subject: 'deutsch',
+        teacher: 'nehls',
+        room: 'A114',
         block: '3'
       }
     ]
@@ -27,22 +30,20 @@ export const schedule: Schedule[] = [
       {
         subject: null,
         teacher: null,
+        room: null,
         block: '1'
       },
       {
         subject: 'lf-8',
         teacher: 'kirmis',
+        room: 'A022',
         block: '2'
-      },
-      {
-        subject: 'lf-7-2',
-        teacher: 'lütge',
-        block: '3'
       },
       {
         subject: 'lf-7-1',
         teacher: 'pofahl',
-        block: '4'
+        room: 'A110',
+        block: '3'
       }
     ]
   },
@@ -52,17 +53,26 @@ export const schedule: Schedule[] = [
       {
         subject: 'deutsch',
         teacher: 'nehls',
+        room: 'A111',
         block: '1'
       },
       {
         subject: 'lf-6',
         teacher: 'ritter',
+        room: 'A213',
         block: '2'
       },
       {
         subject: 'wp',
         teacher: 'schneider',
+        room: 'A212',
         block: '3'
+      },
+      {
+        subject: 'lf-6',
+        teacher: 'ritter',
+        room: 'A114',
+        block: '4'
       }
     ]
   },
@@ -72,21 +82,25 @@ export const schedule: Schedule[] = [
       {
         subject: 'wiso',
         teacher: 'trosin',
+        room: 'A114',
         block: '1'
       },
       {
         subject: 'lf-8',
         teacher: 'kirmis',
+        room: 'A024',
         block: '2'
       },
       {
         subject: 'lf-6',
         teacher: 'ritter',
+        room: 'A213',
         block: '3'
       },
       {
         subject: 'sport',
         teacher: 'dekarz',
+        room: 'A024',
         block: '4'
       }
     ]
@@ -95,18 +109,21 @@ export const schedule: Schedule[] = [
     day: '4',
     lessons: [
       {
-        subject: 'lf-7-2',
-        teacher: 'lütge',
+        subject: null,
+        teacher: null,
+        room: null,
         block: '1'
       },
       {
-        subject: 'lf-7-2',
-        teacher: 'lütge',
+        subject: 'wiso',
+        teacher: 'trosin',
+        room: 'A113',
         block: '2'
       },
       {
         subject: 'lf-6',
         teacher: 'ritter',
+        room: 'A213',
         block: '3'
       }
     ]

@@ -7,5 +7,6 @@ interface Lesson {
   subject: string;
   teacher: string;
   block: string;
+  room: string;
 }
 
