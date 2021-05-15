@@ -2,6 +2,7 @@ import { ElementType } from './element-type';
 
 export interface Post {
   _id?: string;
+  topicId?: string;
   url: string;
   title?: string;
   description?: string;
@@ -11,7 +12,6 @@ export interface Post {
   lastUpdate?: string;
   schoolWeek: string;
   elements?: PostElement[];
-  topicId?: string;
 }
 
 export interface PostElement {

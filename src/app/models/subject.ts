@@ -14,6 +14,8 @@ export interface Subject {
 
 export interface Topic {
   title: string;
+  _id: string;
+  url: string;
   subject: string;
   links: string[];
 }
