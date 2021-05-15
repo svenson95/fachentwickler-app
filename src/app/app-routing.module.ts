@@ -31,7 +31,8 @@ const editPostPaths = (): Array<Route> => {
   subjectsData.map(sub => sub.subject).forEach((sub: string) => {
     posts.push({
       path: sub + '/:topic/:post/edit',
-      loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostModule)
+      loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostModule),
+      canActivate: [AuthGuardService]
     });
   });
   return posts;

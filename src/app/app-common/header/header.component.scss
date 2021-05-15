@@ -2,7 +2,7 @@
 
 .fia-header {
   justify-content: space-between;
-  background: var(--background-primary);
+  background: linear-gradient(to left, var(--background-primary), var(--background-secondary));
   height: 80px;
   max-width: 1365px;
   transition: height 300ms ease-out;
@@ -474,7 +474,7 @@
       background-color: var(--primary-color) !important;
     }
     .mat-progress-bar-buffer {
-      background: var(--background-primary);
+      background: #b3cbe7;
     }
   }
 
