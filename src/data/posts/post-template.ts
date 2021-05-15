@@ -1,10 +1,17 @@
-const test = {
+import { Post } from '../../app/models/post';
+import { PostType } from '../../app/models/post-type';
+
+const test: Post = {
     "url": "test",
-    "topic": "test",
-    "subject": "lf-9",
+    "_id": "5f429107165d0ab470bxxxxx",
+    "topicId": "6056185736ac2b24829xxxxx",
+    "title": "Testartikel",
+    "description": "Thema vom 01.01.2000",
+    "subject": "lf-1",
+    "type": PostType.ARTICLE,
     "lessonDate": "2020-01-01",
     "lastUpdate": "2020-01-01",
-    "schoolWeek": "15",
+    "schoolWeek": "0",
     "elements": [
         {
             "type": "title",

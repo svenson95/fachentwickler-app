@@ -9,10 +9,10 @@ import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
 import { SearchPostService } from '../../services/data/search-post.service';
+import { ThemeService } from '../../services/theme.service';
 
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
-import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +22,6 @@ import { ThemeService } from '../../services/theme.service';
 export class HeaderComponent implements OnInit, AfterViewInit {
 
   isLoading: boolean;
-  isScrolled: boolean;
 
   @Input() isMobile;
   @Input('sidenav') sidenav;
