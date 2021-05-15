@@ -6,7 +6,7 @@
         <span>Zurück zum Login</span>
       </div>
       <hr class="fia-divider-line"/>
-      <form class="fia-register-column" [formGroup]="formGroup" (ngSubmit)="register($event)" #form>
+      <form class="fia-register-column" [formGroup]="formGroup" (ngSubmit)="register($event)" (change)="onFormChange($event)" #form>
         <div class="fia-input-fields">
           <mat-form-field class="fia-input fia-name-input">
             <mat-label>Benutzername</mat-label>

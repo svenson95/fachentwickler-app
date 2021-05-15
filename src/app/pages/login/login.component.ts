@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
+import { AuthUser } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
-
-import { AuthUser } from '../../models/user';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +21,17 @@ export class LoginComponent implements OnInit {
   username: FormControl;
   password: FormControl;
   loading = false;
+
+  @ViewChild('passwordInput') passwordInput;
+
+  invalidPassword: boolean;
+  InvalidPassword: ValidatorFn = (ac): ValidationErrors => {
+    if (this.invalidPassword) {
+      return { invalidPassword: true };
+    } else {
+      return null;
+    }
+  }
 
   constructor(private router: Router,
               private authService: AuthService,
@@ -41,7 +51,7 @@ export class LoginComponent implements OnInit {
       updateOn: 'submit'
     });
     this.password = new FormControl('', {
-      validators: [Validators.required, Validators.minLength(4)],
+      validators: [Validators.required, Validators.minLength(4), this.InvalidPassword],
       updateOn: 'submit'
     });
     this.formGroup = formBuilder.group({
@@ -74,12 +84,26 @@ export class LoginComponent implements OnInit {
         console.log('ERROR login');
         console.log(error);
         this.loading = false;
+        this.invalidPassword = true;
         this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: 'Login fehlgeschlagen'
+          duration: 250000,
+          data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
         });
       }
     );
+  }
+
+  onFormChange(event): void {
+    if (this.invalidPassword) {
+      this.invalidPassword = false;
+    }
+  }
+
+  usernameFieldKeyPress(event): void {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      this.passwordInput.nativeElement.focus();
+    }
   }
 
 }

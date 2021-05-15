@@ -1,11 +1,13 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { HeaderService } from '../../services/header.service';
-import { RegisterUser, UserRole } from '../../models/user';
-import { AuthService } from '../../services/auth/auth.service';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+
+import { RegisterUser, UserRole } from '../../models/user';
+import { HeaderService } from '../../services/header.service';
+import { AuthService } from '../../services/auth/auth.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-register',
@@ -18,10 +20,10 @@ export class RegisterComponent implements OnInit, OnChanges {
   name: FormControl;
   email: FormControl;
   password: FormControl;
+
   nameAlreadyTaken: boolean;
   emailAlreadyTaken: boolean;
 
-  // Validators
   NameAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
     if (this.nameAlreadyTaken) {
       return { alreadyTaken: true };
@@ -29,6 +31,7 @@ export class RegisterComponent implements OnInit, OnChanges {
       return null;
     }
   }
+
   EmailAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
     if (this.emailAlreadyTaken) {
       return { alreadyTaken: true };
@@ -41,7 +44,8 @@ export class RegisterComponent implements OnInit, OnChanges {
               private formBuilder: FormBuilder,
               private headerService: HeaderService,
               private authService: AuthService,
-              private snackBar: MatSnackBar
+              private snackBar: MatSnackBar,
+              private themeService: ThemeService
   ) {
     this.headerService.setPageTitle('Registrieren');
     this.name = new FormControl('', {
@@ -78,26 +82,24 @@ export class RegisterComponent implements OnInit, OnChanges {
     const name = this.name.value.toLowerCase();
     const email = this.email.value.toLowerCase();
     const password = this.password.value.toLowerCase();
+    const user = {
+      name, email, password,
+      theme: this.themeService.getActiveTheme(),
+      role: UserRole.USER
+    } as RegisterUser;
 
-    if (this.nameAlreadyTaken) {
-      this.nameAlreadyTaken = false;
-    }
-    if (this.emailAlreadyTaken) {
-      this.emailAlreadyTaken = false;
-    }
-
-    this.authService.register({name, email, password, role: UserRole.USER} as RegisterUser).subscribe(
+    this.authService.register(user).subscribe(
       (value) => {
         console.log('response register');
         console.log(value);
         this.router.navigateByUrl('/dashboard');
-      }, (response) => {
+      }, (error) => {
         console.log('ERROR register');
-        console.log(response);
+        console.log(error);
 
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
-          data: this.showErrorMessage(response)
+          data: this.showErrorMessage(error)
         });
       }
     );
@@ -120,6 +122,15 @@ export class RegisterComponent implements OnInit, OnChanges {
       return 'Die E-Mail Adresse ist bereits vergeben';
     } else {
       return 'Unbekannter Fehler: ' + response.error.message;
+    }
+  }
+
+  onFormChange(event): void {
+    if (this.nameAlreadyTaken) {
+      this.nameAlreadyTaken = false;
+    }
+    if (this.emailAlreadyTaken) {
+      this.emailAlreadyTaken = false;
     }
   }
 
