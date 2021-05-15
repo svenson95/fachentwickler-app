@@ -52,6 +52,8 @@
     text-decoration: none;
     border-right: 4px solid var(--tertiary-color);
 
+    transition: transform 250ms ease-in-out;
+
     &.isCompleted {
       border-color: var(--secondary-color);
     }
@@ -70,19 +72,21 @@
     }
 
     @media screen and (min-width: 1000px) {
-      &:hover, &:focus {
+      &:hover {
+        background: var(--grey-1);
         border-color: var(--primary-color);
+        transform: translateY(-2px);
+        transition: transform 250ms ease-in-out;
       }
 
       &:hover .fia-title {
-        letter-spacing: 0.25px;
         text-decoration: underline;
         text-decoration-color: var(--secondary-color);
         transition: letter-spacing 500ms ease-in-out;
       }
 
-      &:active .fia-title {
-        letter-spacing: 0.1px;
+      &:active {
+        transform: translateY(0);
       }
     }
 

@@ -74,9 +74,9 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     } else {
       if (event.target.scrollTop > 150) {
-        this.elementRef.nativeElement.querySelector('.fia-header').classList.add('scrolled');
+        this.elementRef.nativeElement.querySelector('.fia-page-container').classList.add('scrolled');
       } else if (event.target.scrollTop < 10) {
-        this.elementRef.nativeElement.querySelector('.fia-header').classList.remove('scrolled');
+        this.elementRef.nativeElement.querySelector('.fia-page-container').classList.remove('scrolled');
       }
     }
   }

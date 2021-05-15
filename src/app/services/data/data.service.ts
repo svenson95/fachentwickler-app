@@ -31,7 +31,7 @@ export class DataService {
     private NEWS_ENDPOINT = environment.baseUrl + '/news';
 
     public currentSchoolWeek = 24;
-    public schoolWeeksLength = 38;
+    public schoolWeeksLength = 39;
 
     public dashboard: DashboardData;
     public schoolWeek: SchoolWeek;
