@@ -156,6 +156,10 @@ a {
   margin-right: 0;
   transition: none;
 
+  animation-name: moveInTop;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+
   @include to-xs {
     border-radius: 0;
   }
@@ -304,6 +308,39 @@ p.fia-card-description {
 //  background-color: white;
 //  border-radius: 0;
 //}
+
+/* ANIMATIONS */
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  40% {
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  40% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 
 /* FIAPPY - UNDERLINE BUTTON ANIMATION */
 $duration: .2s;
