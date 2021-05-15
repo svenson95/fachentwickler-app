@@ -47,7 +47,7 @@ export class DashboardComponent implements OnInit {
       this.fetchNextExams();
       this.fetchSchoolWeek();
       this.authService.fetchAllLessons();
-    } else {
+    } else if (this.dataService) {
       this.schoolWeek = this.dataService.schoolWeek;
 
       if (!this.dataService.dashboard.nextLesson || !this.dataService.dashboard.lessonsPercentage) {

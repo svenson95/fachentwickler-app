@@ -16,14 +16,14 @@ export class UserProgressCardComponent implements OnInit {
   @Input() user: User;
   @Input() dashboard: DashboardData;
 
-  loading: boolean;
+  isLoading: boolean;
 
   constructor(public dataService: DataService,
-              private loadingService: LoadingService
+              public loadingService: LoadingService
   ) {
     this.loadingService.loading$.pipe(delay(0)).subscribe(
         (status: boolean) => {
-          this.loading = status;
+          this.isLoading = status;
         }
     );
   }
