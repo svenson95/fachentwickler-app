@@ -140,6 +140,8 @@ a {
 
 /* FIAPPY - ROUTE ANIMATIONS FIX */
 .fia-content {
+  background-color: var(--background-secondary);
+
   .ng-animating {
     transform: translateY(-5px);
   }
@@ -313,7 +315,7 @@ p.fia-card-description {
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(-10rem);
+    transform: translateY(-7rem);
   }
 
   40% {
