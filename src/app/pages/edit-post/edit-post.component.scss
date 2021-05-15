@@ -5,6 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 20px;
+  z-index: 3;
+  outline: var(--scrollbar-width) solid var(--tertiary-color);
+  outline-offset: calc(var(--scrollbar-width)  * -1);
 
   @include to-sm {
     display: none;
@@ -14,6 +19,8 @@
     font-size: 1.2em;
     margin-bottom: 0;
     margin-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .fia-element-button {

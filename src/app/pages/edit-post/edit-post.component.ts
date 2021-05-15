@@ -25,7 +25,7 @@ export class EditPostComponent implements OnInit {
       subjects.find(sub => sub.url === router.url.substring(0, router.url.indexOf('/', 2))
     )?.title);
 
-    const postUrl = router.url.substring(1, router.url.length - 5);
+    const postUrl = router.url.substr(router.url.indexOf('/', 2) + 1, router.url.length - 11);
     this.dataService.getPost(postUrl).subscribe(
       (data) => {
         this.post = data;
