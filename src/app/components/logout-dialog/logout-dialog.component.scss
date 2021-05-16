@@ -7,8 +7,19 @@
   border-radius: 0;
 
   .fia-no-btn, .fia-logout-btn {
-    background: var(--background-secondary);
+    background: var(--background-primary);
     border-radius: 0;
+
+    &:hover {
+      background: var(--secondary-color);
+    }
+  }
+
+  .fia-logout-btn .mat-icon {
+    height: 20px;
+    width: 20px;
+    line-height: .7;
+    margin-right: 4px;
   }
 }
 
@@ -16,4 +27,18 @@
   animation-name: moveInTop;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
+}
+
+::ng-deep {
+  .mat-button:hover:not(.mat-button-disabled), .mat-stroked-button:hover:not(.mat-button-disabled){
+    //.mat-button-focus-overlay {
+    //  background: var(--secondary-color);
+    //  opacity: .4;
+    //  transition: none;
+    //}
+
+    .mat-ripple-element {
+      background-color: rgba(var(--background-primary-rgb),.2);
+    }
+  }
 }

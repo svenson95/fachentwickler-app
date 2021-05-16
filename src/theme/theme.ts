@@ -46,8 +46,8 @@ export const dark: Theme = {
         "--text-color-1": "#ffffff",
         "--text-color-2": "#b4b4b4",
 
-        "--grey-1": "#474747",
-        "--grey-2": "#888888",
+        "--grey-1": "#393939",
+        "--grey-2": "#727272",
         "--grey-3": "#afafaf",
         "--grey-4": "#c3c3c3",
         "--grey-4-rgb": "190,190,190",
