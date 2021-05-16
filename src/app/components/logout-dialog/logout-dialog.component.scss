@@ -11,3 +11,9 @@
     border-radius: 0;
   }
 }
+
+::ng-deep .logout-modal.cdk-overlay-pane {
+  animation-name: moveInTop;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+}

@@ -59,23 +59,33 @@
           <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>
         <mat-menu class="fia-more-menu" #menu="matMenu">
-          <a class="fia-menu-button" mat-menu-item routerLink="/dashboard" *ngIf="authService.isAuthenticated && isMobile.matches">
+          <a class="fia-menu-button" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile.matches"
+             [disabled]="router.url.startsWith('/dashboard')"
+          >
             <mat-icon>dashboard</mat-icon>
             <span class="label">Dashboard</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="/mein-profil" *ngIf="authService.isAuthenticated">
+          <a class="fia-menu-button" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated"
+             [disabled]="router.url.startsWith('/mein-profil')"
+          >
             <mat-icon>account_circle</mat-icon>
             <span class="label">Mein Profil</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated">
+          <a class="fia-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated"
+             [disabled]="router.url.startsWith('/login')"
+          >
             <mat-icon>login</mat-icon>
             <span class="label">Einloggen</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="feedback">
+          <a class="fia-menu-button" mat-menu-item routerLink="feedback"
+             [disabled]="router.url.startsWith('/feedback')"
+          >
             <mat-icon>feedback</mat-icon>
             <span class="label">Feedback</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="about">
+          <a class="fia-menu-button" mat-menu-item routerLink="about"
+             [disabled]="router.url.startsWith('/about')"
+          >
             <mat-icon>help</mat-icon>
             <span class="label">About</span>
           </a>

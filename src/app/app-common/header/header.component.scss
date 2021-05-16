@@ -446,10 +446,14 @@
 
 ::ng-deep .cdk-overlay-container {
   .fia-more-menu {
-    background-color: var(--tertiary-color);
+    background-color: var(--background-primary);
 
-    .fia-menu-button .label, .fia-menu-button mat-icon {
-      color: var(--background-primary);
+    .fia-menu-button .label {
+      color: var(--text-color-1);
+    }
+
+    .fia-menu-button mat-icon {
+      color: var(--tertiary-color);
     }
 
     .fia-menu-button .label {
@@ -457,7 +461,25 @@
     }
 
     .mat-menu-item:hover {
-      background: rgba(var(--secondary-color-rgb),.6);
+      background: rgba(var(--secondary-color-rgb), .8);
+
+      mat-icon {
+        color : var(--background-primary);
+      }
+    }
+
+    .mat-ripple-element {
+      background-color: rgba(var(--background-primary-rgb),.2);
+    }
+
+    .mat-menu-item[disabled] {
+      mat-icon {
+        color: var(--secondary-color);
+      }
+
+      .label {
+        color: var(--text-color-2);
+      }
     }
   }
 }

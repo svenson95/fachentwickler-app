@@ -27,7 +27,7 @@
     </div>
     <img class="image" *ngFor="let image of images" [src]="encode(image)" alt="image"
          matTooltip="Klicke für Details" matTooltipClass="image-tooltip" matTooltipPosition="right"
-         (click)="showImage = image" [class.is-selected]="image === showImage"
+         [matTooltipDisabled]="showImage === image" (click)="showImage = image" [class.is-selected]="image === showImage"
     />
     <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
       <span>Mehr laden</span>
