@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { fromEvent } from 'rxjs';
 import { delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
+import { UserRole } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
@@ -21,6 +22,7 @@ import { ImageManagerDialogComponent } from '../../components/image-manager-dial
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 
+  UserRole = UserRole;
   isLoading: boolean;
 
   @Input() isMobile;

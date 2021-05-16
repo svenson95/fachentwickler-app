@@ -161,6 +161,9 @@ a {
   animation-name: moveInTop;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
+  -webkit-animation-name: moveInTop;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
 
   @include to-xs {
     border-radius: 0;
@@ -215,75 +218,6 @@ p.fia-card-description {
   }
 }
 
-/* FIAPPY - HEADER BUTTON HOVER HINT LABEL */
-.fia-header-hover-label {
-  .fia-hover-label {
-    align-self: center;
-    opacity: 0;
-    height: fit-content;
-    transition: opacity 250ms ease-in-out;
-
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    @include to-xs {
-      transform: translateY(3px);
-      line-height: 20px;
-    }
-  }
-  &:hover {
-    .fia-hover-label {
-      @include from-xs {
-        opacity: 1;
-        transition: opacity 250ms ease-in-out;
-      }
-    }
-  }
-  ::ng-deep {
-    .mat-button-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-    .mat-icon {
-      align-self: center;
-
-      @include from-sm {
-      }
-    }
-  }
-
-  &.fia-logo-wrapper {
-    .fia-hover-label {
-      left: 3%;
-      top: 48px;
-      font-size: .55em;
-      font-family: Nunito-Regular, sans-serif;
-    }
-  }
-
-  &.fia-theme-toggle-wrapper {
-    display: flex;
-    flex-direction: column;
-
-    .mat-slide-toggle-label {
-      font-size: 12px;
-
-      input {
-        display: none;
-      }
-    }
-  }
-
-  .fia-hover-label {
-    margin-top: 5px;
-  }
-
-  .fia-menu-btn .fia-hover-label {
-    margin-top: 3px;
-  }
-}
-
 /* FIAPPY - INPUT - <mat-form-field> */
 .fia-input {
   &.mat-form-field-appearance-fill .mat-form-field-flex {
@@ -327,8 +261,38 @@ p.fia-card-description {
     transform: translate(0);
   }
 }
+@-webkit-keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-7rem);
+  }
+
+  40% {
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  40% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(10rem);
@@ -625,7 +589,7 @@ app-post-link:not(:last-of-type),
   }
 
   .correct {
-    stroke: #73AF55;
+    stroke: #58b125;
 
     .circle {
       -webkit-animation: dash 1.5s normal;

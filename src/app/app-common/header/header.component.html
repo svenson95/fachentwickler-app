@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="fia-header">
-  <button class="fia-logo-wrapper fia-header-hover-label"
+  <button class="fia-logo-wrapper"
           (click)="closeSidenav()"
           [routerLink]="isMobile.matches ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
           [ngClass]="{'active-route': router.url === '/' || router.url === '/dashboard' || router.url === '/login'}"
@@ -39,24 +39,17 @@
         <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
           <mat-icon>menu</mat-icon>
         </button>
-<!--        <button class="fia-admin-panel-btn fia-header-hover-label" routerLink="einstellungen" mat-icon-button mat-button *ngIf="!mobileQuery.matches">-->
-<!--          <mat-icon>build</mat-icon>-->
-<!--          <mat-label class="fia-hover-label fade-in unselectable">Einstellungen</mat-label>-->
-<!--        </button>-->
-        <div class="fia-theme-toggle-wrapper fia-header-hover-label" *ngIf="!isMobile.matches">
-          <mat-slide-toggle class="fia-theme-toggle" [checked]="themeService.isDarkTheme()" (change)="themeService.toggleTheme()">
-          </mat-slide-toggle>
-          <mat-label class="fia-hover-label fade-in unselectable">Theme</mat-label>
-        </div>
+        <button class="fia-theme-toggle-btn" *ngIf="!isMobile.matches" (click)="themeService.toggleTheme()">
+          <mat-icon>emoji_objects</mat-icon>
+        </button>
         <a class="fia-dashboard-login-btn fia-text-button"
            [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
            [ngClass]="{'active-route': router.url.startsWith('/dashboard') || router.url.startsWith('/login')}"
         >
           <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
         </a>
-        <button class="fia-menu-btn fia-header-hover-label" mat-icon-button [matMenuTriggerFor]="menu">
+        <button class="fia-menu-btn" mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
-          <mat-label class="fia-hover-label fade-in unselectable">Mehr</mat-label>
         </button>
         <mat-menu class="fia-more-menu" #menu="matMenu">
           <a class="fia-menu-button" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile.matches"
@@ -89,7 +82,7 @@
             <mat-icon>help</mat-icon>
             <span class="label">About</span>
           </a>
-          <button class="fia-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches">
+          <button class="fia-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user.role === UserRole.ADMIN">
             <!--            *ngIf="authService.user.role === UserRole.ADMIN"-->
             <mat-icon>perm_media</mat-icon>
             <span class="label">Image-Manager</span>

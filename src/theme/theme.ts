@@ -28,15 +28,16 @@ export const light: Theme = {
         "--box-shadow": "rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px",
         "--button-shadow": "rgba(200, 200, 200, 0.4) 0px 4px 4px, rgba(220, 220, 220, 0.5) 0px 4px 4px",
 
-        "--exam-background": "rgba(148, 170, 197, 0.15)"
+        "--exam-background": "rgba(148, 170, 197, 0.15)",
+        "--theme-toggle-color": "var(--secondary-color)"
     }
 };
 
 export const dark: Theme = {
     name: 'dark',
     properties: {
-        "--background-primary": "#000000",
-        "--background-secondary": "#1e1e1e",
+        "--background-primary": "#1e1e1e",
+        "--background-secondary": "#292929",
         "--background-tertiary": "#323232",
         "--primary-color": "#eb6a1e",
         "--secondary-color": "#f4ac31",
@@ -57,6 +58,7 @@ export const dark: Theme = {
         "--box-shadow": "rgba(15, 15, 15, 0.2) 0px 4px 4px, rgba(20, 20, 20, 0.3) 0px 4px 4px",
         "--button-shadow": "rgba(15, 15, 15, 0.4) 0px 4px 4px, rgba(15, 15, 15, 0.5) 0px 4px 4px",
 
-        "--exam-background": "rgba(148, 170, 197, 0.3)"
+        "--exam-background": "rgba(148, 170, 197, 0.3)",
+        "--theme-toggle-color": "var(--grey-2)"
     }
 };

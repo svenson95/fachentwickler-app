@@ -10,6 +10,9 @@
   animation-name: moveInTop;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
+  -webkit-animation-name: moveInTop;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
 
   @include to-xs {
     padding: 20px 0 60px;

@@ -301,21 +301,6 @@
         color: var(--tertiary-color);
         align-items: center;
 
-        .fia-header-hover-label {
-          margin-right: 5px;
-
-          @include to-md {
-            .fia-hover-label {
-              display: none;
-            }
-          }
-
-          .fia-hover-label {
-            font-size: 9px;
-            line-height: 14px;
-          }
-        }
-
         .fia-menu-btn {
           margin-left: 0;
           margin-right: 0;
@@ -332,12 +317,6 @@
 
           &:hover {
             color: var(--text-color-1);
-          }
-
-          .fia-hover-label {
-            color: var(--tertiary-color);
-            position: absolute;
-            top: 39px;
           }
         }
 
@@ -393,23 +372,19 @@
           }
         }
 
-        .fia-theme-toggle-wrapper {
-          @include from-xs {
-            margin-right: 15px;
-          }
+        .fia-theme-toggle-btn {
+          display: flex;
+          border: none;
+          background-color: transparent;
+          color: var(--theme-toggle-color);
+          cursor: pointer;
 
-          @include from-md {
-            margin-top: 23px;
+          @include from-xs {
+            margin-right: 5px;
           }
 
           @include to-tiny {
             display: none;
-          }
-
-          .fia-hover-label {
-            @include from-md {
-              margin-top: 12px;
-            }
           }
         }
 
@@ -446,7 +421,7 @@
 
 ::ng-deep .cdk-overlay-container {
   .fia-more-menu {
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
 
     .fia-menu-button .label {
       color: var(--text-color-1);
