@@ -7,19 +7,14 @@
   border-radius: 0;
 
   .fia-no-btn, .fia-logout-btn {
-    background: var(--background-primary);
-    border-radius: 0;
-
-    &:hover {
-      background: var(--secondary-color);
-    }
   }
 
-  .fia-logout-btn .mat-icon {
+  .fia-text-button .mat-icon {
     height: 20px;
     width: 20px;
     line-height: .7;
     margin-right: 4px;
+    margin-bottom: 2px;
   }
 }
 

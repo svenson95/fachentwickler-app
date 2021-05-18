@@ -86,7 +86,7 @@ export class LoginComponent implements OnInit {
         this.loading = false;
         this.invalidPassword = true;
         this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 250000,
+          duration: 2500,
           data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
         });
       }

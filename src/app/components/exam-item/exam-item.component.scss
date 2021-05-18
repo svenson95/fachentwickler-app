@@ -96,6 +96,7 @@
         cursor: pointer;
         outline: none;
         align-items: center;
+        align-self: flex-end;
 
         &:hover span {
           letter-spacing: 2px;
@@ -118,17 +119,11 @@
         }
 
         &:not(.is-open) span {
-          text-decoration: underline;
+          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3)
         }
 
         &.is-open span {
           color: var(--text-color-2);
-        }
-
-        hr {
-          height: 2px;
-          width: 100%;
-          border: none;
         }
       }
     }

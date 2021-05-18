@@ -196,7 +196,7 @@ a {
   @include from-xs {
     font-size: 1.5em;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   @include to-xs {
@@ -249,7 +249,7 @@ p.fia-card-description {
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(-7rem);
+    transform: translateY(-5rem);
   }
 
   40% {
@@ -264,7 +264,7 @@ p.fia-card-description {
 @-webkit-keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(-7rem);
+    transform: translateY(-5rem);
   }
 
   40% {
@@ -280,7 +280,7 @@ p.fia-card-description {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(10rem);
+    transform: translateY(5rem);
   }
 
   40% {
@@ -295,7 +295,7 @@ p.fia-card-description {
 @-webkit-keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(10rem);
+    transform: translateY(5rem);
   }
 
   40% {
@@ -314,16 +314,28 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
 .fia-text-button {
-  background-color: rgba(var(--tertiary-color-rgb),.1);
+  background-color: transparent;
   color: var(--tertiary-color);
-  text-transform: uppercase;
   font-size: 1em;
-  padding: 10px 20px;
-  border: 1px solid rgba(var(--tertiary-color-rgb), .3);
-  outline: none;
-  letter-spacing: 1px;
+  font-family: Nunito-Light, sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: transform 200ms ease, color 200ms ease;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: transform 200ms ease, color 200ms ease, background-color 200ms ease-in-out;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(var(--tertiary-color-rgb),.1);
+    cursor: pointer;
+    color: var(--tertiary-color);
+  }
 
   &.secondary {
     padding: 2px 10px;
@@ -337,12 +349,11 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   &.show-more {
     color: var(--grey-4);
     border-color: rgba(var(--grey-4-rgb), .3);
-    background-color: rgba(var(--grey-4-rgb), .1);
     margin-left: 10px;
 
     &:hover {
-      color: var(--text-color-1);
       background-color: rgba(var(--grey-4-rgb), .1);
+      color: var(--grey-4);
     }
   }
 
@@ -356,55 +367,9 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
   }
 
-  &:active:not(.active-route) {
+  &:active {
     transform: translateY(1px);
-  }
-
-  &:not(:disabled) {
-    cursor: pointer;
-
-    h1, span {
-      position: relative;
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 1px;
-        left: 0; right: 0;
-        height: 1px;
-        background-color: rgba(var(--grey-4-rgb), .3);
-      }
-      &:before {
-        opacity: 0;
-        transform: translateY(- $distance);
-        transition: transform 0s $easeOutBack, opacity 0s;
-      }
-      &:after {
-        opacity: 0;
-        transform: translateY($distance/2);
-        transition: transform $duration $easeOutBack, opacity $duration;
-      }
-    }
-
-    &:hover {
-      color: var(--text-color-1);
-
-      //&:focus {       // TODO: show underline on focus (tab navigation) but remove underlines after click
-      h1, span {
-        &:before,
-        &:after {
-          opacity: 1;
-          transform: translateY(2px);
-        }
-        &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-        }
-      }
-    }
+    background-color: rgba(var(--tertiary-color-rgb),.1);
   }
 
 }
@@ -413,7 +378,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 .mat-snack-bar-container {
   background: var(--tertiary-color);
   color: white;
-  max-width: 40vw !important;
+
+  @include from-md {
+    max-width: 40vw !important;
+  }
 }
 
 /* FIAPPY - TOGGLES */
@@ -589,7 +557,7 @@ app-post-link:not(:last-of-type),
   }
 
   .correct {
-    stroke: #58b125;
+    stroke: #6aea2094;
 
     .circle {
       -webkit-animation: dash 1.5s normal;
@@ -598,7 +566,7 @@ app-post-link:not(:last-of-type),
   }
 
   .wrong{
-    stroke: #D06079;
+    stroke: #dc4667c9;
 
     .circle {
       -webkit-animation: dash 2s normal;

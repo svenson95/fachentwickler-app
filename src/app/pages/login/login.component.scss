@@ -39,7 +39,7 @@
     }
 
     ::ng-deep .mat-form-field-flex {
-      background-color: var(--background-secondary);
+      background-color: rgba(var(--tertiary-color-rgb), .1);
 
       input {
       }

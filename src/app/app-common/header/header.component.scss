@@ -5,7 +5,7 @@
   background: linear-gradient(to left, var(--background-primary), var(--background-secondary));
   height: 80px;
   max-width: 1365px;
-  transition: height 300ms ease-out;
+  transition: height 250ms ease-out;
 
   @include from-md {
     padding: 0 20px;
@@ -167,9 +167,8 @@
       }
 
       .fia-search-bar {
-        background-color: rgba(var(--tertiary-color-rgb), .1);
         height: $searchbar-height;
-        border: 1px solid rgba(var(--tertiary-color-rgb), .3);
+        border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
         width: 220px;
         transition: background-color 250ms ease;
 
@@ -181,7 +180,7 @@
           color: var(--grey-3);
         }
 
-        &:hover {
+        &:hover, &.mat-form-field-should-float {
           background-color: rgba(var(--tertiary-color-rgb), .1);
         }
 
@@ -206,6 +205,10 @@
                 color: var(--text-color-1);
                 font-size: .7em;
                 margin-bottom: 1px;
+
+                &::placeholder {
+                  color: var(--grey-2);
+                }
               }
             }
             .mat-form-field-suffix {
@@ -253,7 +256,6 @@
       .title {
         margin-bottom: 0;
         white-space: pre-line;
-        font-family: Nunito-Light, sans-serif;
         line-height: 20px;
 
         @include from-xs {
@@ -269,6 +271,7 @@
 
       .bracket {
         font-size: 1.3em;
+        font-family: Nunito-Light, sans-serif;
         color: var(--primary-color);
 
         @include to-xs {
@@ -307,16 +310,14 @@
           transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 
           @include from-xs {
-            background-color: rgba(var(--tertiary-color-rgb), .1);
-            border: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
+            &:hover {
+              background-color: rgba(var(--tertiary-color-rgb), .1);
+              color: var(--text-color-1);
+            }
           }
 
           @include to-md {
             margin-right: 10px;
-          }
-
-          &:hover {
-            color: var(--text-color-1);
           }
         }
 
@@ -324,7 +325,6 @@
         $btn-shadow: #{adjust-hue($btn-color, 45deg)};
 
         .fia-dashboard-login-btn {
-          border: 1px solid rgba(var(--tertiary-color-rgb), .3);
           padding: 6px 14px;
           margin-left: 10px;
           margin-right: 20px;
@@ -336,9 +336,6 @@
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
-
-          &:hover {
-          }
 
           &.active-route {
             h1, span {
@@ -375,9 +372,21 @@
         .fia-theme-toggle-btn {
           display: flex;
           border: none;
+          outline: none;
           background-color: transparent;
           color: var(--theme-toggle-color);
           cursor: pointer;
+          transition: transform 250ms ease-in-out;
+
+          &:hover {
+            transform: translateY(-2px);
+            transition: transform 250ms ease-in-out;
+          }
+
+          &:active {
+            transform: translateY(1px);
+            transition: transform 250ms ease-in-out;
+          }
 
           @include from-xs {
             margin-right: 5px;
@@ -482,12 +491,5 @@
 
   @include to-xs {
     top: 60px;
-  }
-}
-
-::ng-deep .scrolled  {
-  .fia-header-login-btn, .fia-menu-btn, .fia-search-bar {
-    //background-color: transparent !important;
-    //transition: all 300ms ease-in;
   }
 }

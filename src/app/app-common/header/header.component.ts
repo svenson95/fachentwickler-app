@@ -69,7 +69,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   async openLogoutDialog(): Promise<void> {
     await this.dialog.open(LogoutDialogComponent, {
       restoreFocus: true,
-      panelClass: 'logout-modal'
+      panelClass: 'logout-modal',
+      autoFocus: false
     });
   }
 

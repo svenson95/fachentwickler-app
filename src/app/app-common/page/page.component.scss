@@ -76,7 +76,7 @@
 .scrolled #fia-header ::ng-deep {
   .fia-header {
     height: 60px;
-    transition: height 250ms ease;
+    transition: height 400ms ease-out;
 
     @include to-xs {
       height: 50px;
