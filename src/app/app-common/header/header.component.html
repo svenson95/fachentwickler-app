@@ -82,7 +82,7 @@
             <mat-icon>help</mat-icon>
             <span class="label">About</span>
           </a>
-          <button class="fia-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user.role === UserRole.ADMIN">
+          <button class="fia-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user?.role === UserRole.ADMIN">
             <!--            *ngIf="authService.user.role === UserRole.ADMIN"-->
             <mat-icon>perm_media</mat-icon>
             <span class="label">Image-Manager</span>
