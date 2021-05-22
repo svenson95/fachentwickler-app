@@ -132,9 +132,11 @@ button {
 a {
   color: var(--text-color-1);
   text-decoration-color: var(--secondary-color);
+  transition: color 100ms ease-in-out;
 
   &:hover {
     color: var(--secondary-color);
+    transition: color 100ms ease-in-out;
   }
 }
 
@@ -196,7 +198,7 @@ a {
   @include from-xs {
     font-size: 1.5em;
     line-height: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   @include to-xs {
@@ -325,8 +327,8 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: var(--button-radius);
+  border-top-right-radius: var(--button-radius);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   transition: transform 200ms ease, color 200ms ease, background-color 200ms ease-in-out;
@@ -335,6 +337,8 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     background-color: rgba(var(--tertiary-color-rgb),.1);
     cursor: pointer;
     color: var(--tertiary-color);
+    transform: translateY(-1px);
+    transition: transform 200ms ease-in-out;
   }
 
   &.secondary {
@@ -367,7 +371,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     }
   }
 
-  &:active {
+  &:active:not(:disabled) {
     transform: translateY(1px);
     background-color: rgba(var(--tertiary-color-rgb),.1);
   }
@@ -423,7 +427,7 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
     height: $fia-spinner-size !important;
 
     circle {
-      stroke: var(--secondary-color);
+      stroke: var(--tertiary-color);
       stroke-width: 6px !important;
     }
   }
@@ -503,19 +507,19 @@ app-post-link:not(:last-of-type),
         stroke-dashoffset: 1000;
 
         &.first {
-          animation: dash .8s .1s ease-in-out forwards;
-          -webkit-animation: dash .8s .1s ease-in-out forwards;
+          animation: dash .4s .5s ease-in-out forwards;
+          -webkit-animation: dash .4s .5s ease-in-out forwards;
         }
 
         &.second {
-          animation: dash .8s .4s ease-in-out forwards;
-          -webkit-animation: dash .8s .4s ease-in-out forwards;
+          animation: dash .4s .8s ease-in-out forwards;
+          -webkit-animation: dash .4s .8s ease-in-out forwards;
         }
       }
       &.check {
         stroke-dashoffset: -100;
-        -webkit-animation: dash-check .9s .35s ease-in-out forwards;
-        animation: dash-check .9s .35s ease-in-out forwards;
+        animation: dash-check .9s .5s ease-in-out forwards;
+        -webkit-animation: dash-check .9s .5s ease-in-out forwards;
       }
     }
 
@@ -560,8 +564,8 @@ app-post-link:not(:last-of-type),
     stroke: #6aea2094;
 
     .circle {
-      -webkit-animation: dash 1.5s normal;
       animation: dash 1.5s normal;
+      -webkit-animation: dash 1.5s normal;
     }
   }
 
@@ -569,8 +573,8 @@ app-post-link:not(:last-of-type),
     stroke: #dc4667c9;
 
     .circle {
-      -webkit-animation: dash 2s normal;
-      animation: dash 2s normal;
+      animation: dash 1.5s normal;
+      -webkit-animation: dash 1.5s normal;
     }
   }
 }

@@ -30,26 +30,6 @@ $easeIn-duration: 400ms;
     width: fit-content;
     margin: auto;
     position: relative;
-
-    &.correct, &.wrong {
-      transition: all $easeIn-duration ease-out;
-
-      .pair_items {
-        &.left {
-          padding-right: 0;
-          margin-right: 0;
-        }
-
-        &.right {
-          padding-left: 0;
-          margin-left: 0;
-        }
-      }
-
-      .horizontal-connector {
-        margin: 0;
-      }
-    }
   }
 
   @keyframes easeIn {
@@ -67,36 +47,16 @@ $easeIn-duration: 400ms;
     }
   }
 
-  .horizontal-connector { background: rgba(var(--tertiary-color-rgb), .8); }
+  #horizontal-connector { background: rgba(var(--tertiary-color-rgb), .8); }
   .vertical-connector { background: rgba(var(--tertiary-color-rgb), .3); }
 
-  .horizontal-connector,
+  #horizontal-connector,
   .vertical-connector {
     transition: all $easeIn-duration ease;
   }
 
-  .correct {
-    .horizontal-connector,
-    .vertical-connector {
-      background: limegreen;
-      box-shadow:
-              0 0 2px rgba(limegreen, .8),
-              0 0 10px rgba(limegreen, .4);
-    }
-  }
-
-  .wrong {
-    .horizontal-connector,
-    .vertical-connector {
-      background: red;
-      box-shadow:
-              0 0 2px rgba(red, .8),
-              0 0 10px rgba(red, .4);
-    }
-  }
-
   .connector-container {
-    .horizontal-connector {
+    #horizontal-connector {
       margin: 0 10px;
       height: 2px;
       width: 50px;
@@ -111,7 +71,7 @@ $easeIn-duration: 400ms;
     bottom: -20px;
   }
 
-  &.game-started .connector-container .horizontal-connector {
+  &.game-started .connector-container #horizontal-connector {
     animation: $easeIn-duration ease-out 0s easeIn;
   }
 
@@ -260,10 +220,66 @@ $easeIn-duration: 400ms;
   .fia-text-button {
     display: flex;
     margin: 20px auto auto;
+
+    border: 1px solid rgba(var(--tertiary-color-rgb),.3);
+    border-radius: 0;
+
+    &:hover {
+      transform: none;
+    }
   }
 
   .finish-label {
     text-align: center;
     margin: 50px 0;
+  }
+}
+
+#game {
+  &.correct, &.wrong {
+    transition: all $easeIn-duration ease-out;
+
+    .pair_items {
+      &.left {
+        padding-right: 0;
+        margin-right: 0;
+      }
+
+      &.right {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+
+    #horizontal-connector {
+      margin: 0 !important;
+    }
+  }
+
+  &.correct {
+    #horizontal-connector,
+    .vertical-connector {
+      background: limegreen;
+      box-shadow:
+              0 0 2px rgba(limegreen, .8),
+              0 0 10px rgba(limegreen, .4);
+    }
+
+    .fia-text-button {
+      background-color: rgba(50, 205, 50,.6);
+      span {
+        color: var(--text-color-1);
+      }
+    }
+  }
+
+  &.wrong {
+    #horizontal-connector,
+    .vertical-connector {
+      background: red;
+      box-shadow:
+              0 0 2px rgba(red, .8),
+              0 0 10px rgba(red, .4);
+    }
   }
 }

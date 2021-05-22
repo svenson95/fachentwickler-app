@@ -278,12 +278,12 @@
         }
       }
 
-      .fia-nerd-svg {
+      .fia-hardware-svg {
         vertical-align: top;
         margin-right: 5px;
       }
 
-      .fia-nerd-svg, .fia-world-grid-svg {
+      .fia-hardware-svg, .fia-world-grid-svg {
         width: 64px;
         height: 64px;
       }
@@ -330,6 +330,16 @@
     }
   }
 
+  .fia-rocket-svg,
+  .fia-eduaction-svg,
+  .fia-reading-svg,
+  .fia-game-svg,
+  .fia-online-course-svg,
+  .fia-question-svg,
+  .fia-hardware-svg, .fia-datenbankspeicher-svg, .fia-world-grid-svg {
+    opacity: .5;
+  }
+
   .fia-landing-row.start {
     display: block;
     text-align: center;
@@ -359,20 +369,20 @@
   .fia-weekday-group {
     .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
       .fia-post-link-wrapper .fia-post-link {
-        border-color: var(--secondary-color);
+        border-right: 5px solid var(--secondary-color);
       }
     }
 
     .fia-weekday-item:nth-child(3), .fia-weekday-item:nth-child(4) {
       .fia-post-link-wrapper .fia-post-link {
-        border-color: var(--tertiary-color);
+        border-right: 5px solid var(--tertiary-color);
       }
     }
   }
 
   .fia-next-lesson {
     .fia-post-link-wrapper .fia-post-link.isCompleted {
-      border-color: var(--tertiary-color);
+      border-right: 5px solid var(--tertiary-color);
     }
   }
 }

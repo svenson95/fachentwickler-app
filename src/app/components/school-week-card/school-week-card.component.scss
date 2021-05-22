@@ -17,13 +17,11 @@
 
     .fia-button-wrapper {
       height: fit-content;
-      align-self: end;
 
       .fia-previous-week-btn,
       .fia-next-week-btn {
         width: 40px;
         height: 40px;
-        border: 1px solid rgba(var(--tertiary-color-rgb), .3);
         outline: none;
         line-height: initial;
 

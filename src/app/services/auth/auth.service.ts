@@ -164,6 +164,8 @@ export class AuthService {
                 this.user = null;
                 this.token = null;
                 this.isAuthenticated = false;
+                this.dataService.dashboard = null;
+                this.dataService.schoolWeek = null;
                 return response;
             }));
     }

@@ -58,17 +58,10 @@
       align-self: center;
       border: none;
       background-color: var(--grey-1);
+      margin: 0;
 
       @include to-md {
         display: none;
-      }
-
-      &:first-of-type {
-        min-width: 32px;
-      }
-
-      &:last-of-type {
-        width: 100%;
       }
     }
   }

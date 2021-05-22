@@ -7,6 +7,7 @@
   width: fit-content;
   flex-shrink: 0;
   margin-left: 10px;
+  border-radius: 4px;
 
   font-family: Nunito-Light, sans-serif;
   font-size: .7em;
@@ -58,6 +59,5 @@
   &.test {
     background: rgba(var(--tertiary-color-rgb), .8);
     color: var(--background-primary);
-    font-family: Nunito-ExtraBold, sans-serif;
   }
 }

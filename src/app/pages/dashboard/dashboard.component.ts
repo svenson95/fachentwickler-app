@@ -60,14 +60,19 @@ export class DashboardComponent implements OnInit {
     this.dataService.getAllExamDates().subscribe(
         (exams) => {
           const openExams = [];
-          exams.forEach(exam => {
-            const today = new Date();
-            const examDate = new Date(exam.date);
 
-            if (today < examDate) {
+          const today = new Date();
+          today.setHours(23, 59, 59, 999);
+
+          exams.forEach(exam => {
+            const examDate = new Date(exam.date);
+            examDate.setHours(23, 59, 59, 999);
+
+            if (today <= examDate) {
               openExams.push(exam);
             }
           });
+
           openExams.sort((a, b) => {
             if (a.date > b.date) { return 1; }
             if (a.date < b.date) { return -1; }

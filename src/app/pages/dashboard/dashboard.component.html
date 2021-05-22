@@ -13,14 +13,12 @@
 
       <app-schedule></app-schedule>
 
-      <div class="fia-substitions-schedule">
-        <span class="fia-substitution-label">Ausfälle / Vertretungen</span>
-        <span class="fia-no-data" *ngIf="!scheduleSubstitutions">Keine Vertretungen</span>
-      </div>
-
     </mat-card-content>
   </mat-card>
 
   <app-school-week-card *ngIf="schoolWeek !== undefined" [week]="schoolWeek" [is-dashboard-page]="true"></app-school-week-card>
+  <div class="spinner-wrapper" *ngIf="schoolWeek === undefined">
+    <mat-spinner class="fia-loading-spinner"></mat-spinner>
+  </div>
 
 </div>

@@ -39,7 +39,10 @@
     }
 
     ::ng-deep .mat-form-field-flex {
-      background-color: rgba(var(--tertiary-color-rgb), .1);
+      background-color: var(--background-secondary);
+      border-top-left-radius: var(--button-radius);
+      border-top-right-radius: var(--button-radius);
+      padding: .75em 1em 0 1em;
 
       input {
       }
@@ -52,12 +55,24 @@
     flex-direction: column;
 
     .fia-loading-spinner {
-      margin: 0 auto 11px !important;
+      margin: 0 auto !important;
+      $size: 18px;
+      width: $size !important;
+      height: $size !important;
+
+      ::ng-deep svg {
+        width: $size !important;
+        height: $size !important;
+      }
     }
 
-    .fia-forgot-password-btn {
-      margin-top: 15px;
+    .fia-text-button:first-child {
+      margin-bottom: 20px;
     }
+
+    //.fia-forgot-password-btn {
+    //  margin-top: 15px;
+    //}
   }
 }
 
@@ -65,10 +80,9 @@
   border: none;
 
   @include to-md {
-    width: 100%;
-    height: 1px;
-    margin: 30px 0;
+    display: none;
   }
+
   @include from-md {
     width: 1px;
     margin: 0 50px;
@@ -81,7 +95,7 @@
 
   .fia-no-account-hint {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   .fia-text-button:hover {

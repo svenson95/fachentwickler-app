@@ -58,6 +58,7 @@ export class SearchComponent implements OnInit, OnDestroy {
   }
 
   closeSearchView(): void {
+    this.searchPostService.searchValue = '';
     this.router.navigateByUrl(this.searchPostService.redirectUrl);
   }
 

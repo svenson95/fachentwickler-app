@@ -38,7 +38,11 @@
         }
 
         @include to-xs {
-          $size: 40px;
+          $size: 36px;
+          font-size: $size;
+          width: $size;
+          height: $size;
+          align-self: flex-start;
         }
       }
     }

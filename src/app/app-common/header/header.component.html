@@ -2,7 +2,11 @@
   <button class="fia-logo-wrapper"
           (click)="closeSidenav()"
           [routerLink]="isMobile.matches ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
-          [ngClass]="{'active-route': router.url === '/' || router.url === '/dashboard' || router.url === '/login'}"
+          [ngClass]="{'active-route':
+            router.url === '/' ||
+            router.url === '/login' ||
+            isMobile.matches && router.url === '/dashboard'
+          }"
   >
     <div class="fia-icon-wrapper">
       <svg viewBox="0 -25 424 424" xmlns="http://www.w3.org/2000/svg">
@@ -39,15 +43,12 @@
         <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
           <mat-icon>menu</mat-icon>
         </button>
-        <button class="fia-theme-toggle-btn" *ngIf="!isMobile.matches" (click)="themeService.toggleTheme()">
-          <mat-icon>emoji_objects</mat-icon>
-        </button>
-        <a class="fia-dashboard-login-btn fia-text-button"
+        <button class="fia-dashboard-login-btn fia-text-button"
            [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
            [ngClass]="{'active-route': router.url.startsWith('/dashboard') || router.url.startsWith('/login')}"
         >
           <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
-        </a>
+        </button>
         <button class="fia-menu-btn" mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
         </button>
@@ -87,7 +88,7 @@
             <mat-icon>perm_media</mat-icon>
             <span class="label">Image-Manager</span>
           </button>
-          <a class="fia-menu-button" mat-menu-item *ngIf="isMobile.matches" (click)="themeService.toggleTheme()">
+          <a class="fia-menu-button" mat-menu-item (click)="themeService.toggleTheme()">
             <mat-icon>invert_colors</mat-icon>
             <span class="label">{{themeService.isDarkTheme() ? 'Light': 'Dark'}} Theme aktivieren</span>
           </a>

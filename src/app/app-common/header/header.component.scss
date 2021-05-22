@@ -168,8 +168,10 @@
 
       .fia-search-bar {
         height: $searchbar-height;
-        border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
         width: 220px;
+        border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
+        border-top-left-radius: var(--button-radius);
+        border-top-right-radius: var(--button-radius);
         transition: background-color 250ms ease;
 
         @include to-md {
@@ -212,7 +214,6 @@
               }
             }
             .mat-form-field-suffix {
-
               .mat-icon {
                 font-size: 1em;
                 line-height: 1.3;
@@ -307,12 +308,11 @@
         .fia-menu-btn {
           margin-left: 0;
           margin-right: 0;
-          transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+          transition: background-color 200ms ease-in-out;
 
           @include from-xs {
             &:hover {
               background-color: rgba(var(--tertiary-color-rgb), .1);
-              color: var(--text-color-1);
             }
           }
 
@@ -339,6 +339,8 @@
 
           &.active-route {
             h1, span {
+              color: var(--secondary-color);
+
               &:before,
               &:after {
                 opacity: 1;
@@ -369,44 +371,12 @@
           }
         }
 
-        .fia-theme-toggle-btn {
-          display: flex;
-          border: none;
-          outline: none;
-          background-color: transparent;
-          color: var(--theme-toggle-color);
-          cursor: pointer;
-          transition: transform 250ms ease-in-out;
-
-          &:hover {
-            transform: translateY(-2px);
-            transition: transform 250ms ease-in-out;
-          }
-
-          &:active {
-            transform: translateY(1px);
-            transition: transform 250ms ease-in-out;
-          }
-
-          @include from-xs {
-            margin-right: 5px;
-          }
-
-          @include to-tiny {
-            display: none;
-          }
-        }
-
         .fia-admin-panel-btn {
           margin-top: 0;
         }
 
         .fia-sidenav-hamburger-btn {
           margin-top: 0;
-
-          ::ng-deep .mat-icon {
-            transform: translateY(-2px);
-          }
         }
       }
     }

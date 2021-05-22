@@ -5,6 +5,10 @@
   border-collapse: collapse;
   table-layout: fixed;
 
+  @include to-xs {
+    margin: auto;
+  }
+
   tbody {
     display: flex;
     font-size: .9em;
@@ -29,7 +33,7 @@
       th, td {
         padding: 8px;
 
-        @include to-md {
+        @include to-tiny {
           padding: 6px;
         }
       }
@@ -46,7 +50,16 @@
         }
 
         .fia-hour-subject,
-        .fia-hour-teacher {
+        .fia-hour-teacher,
+        .fia-hour-room {
+        }
+
+        .fia-hour-room {
+          font-size: .8em;
+
+          @include to-md {
+            font-size: .7em;
+          }
         }
 
         .fia-hour-subject {
@@ -62,13 +75,17 @@
         }
 
         .fia-hour-teacher {
-          color: var(--grey-3);
           font-size: .9em;
-          line-height: 12px;
 
           @include to-md {
             font-size: .8em;
           }
+        }
+
+        .fia-hour-room,
+        .fia-hour-teacher {
+          color: var(--grey-3);
+          line-height: 12px;
         }
       }
 

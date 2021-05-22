@@ -33,13 +33,13 @@
           </mat-form-field>
         </div>
         <div class="fia-buttons-wrapper">
-          <mat-spinner class="fia-loading-spinner" *ngIf="loading"></mat-spinner>
-          <button class="fia-text-button" type="submit" *ngIf="!loading">
-            <span>Anmelden</span>
+          <button class="fia-text-button" type="submit">
+            <span *ngIf="!loading">Anmelden</span>
+            <mat-spinner class="fia-loading-spinner" *ngIf="loading"></mat-spinner>
           </button>
-          <a class="fia-forgot-password-btn" routerLink="/forgot-password">
-            Passwort vergessen?
-          </a>
+          <button class="fia-text-button" disabled>
+            <span>Passwort vergessen?</span>
+          </button>
         </div>
       </form>
       <hr class="fia-divider-line"/>

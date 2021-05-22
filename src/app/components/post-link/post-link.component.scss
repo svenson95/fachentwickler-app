@@ -2,6 +2,7 @@
 
 .fia-post-link-wrapper {
   display: flex;
+  flex-direction: row-reverse;
   padding: 0 40px;
   margin-left: -40px;
   margin-right: -40px;
@@ -20,7 +21,7 @@
 
     @include from-md {
       width: 100px;
-      font-size: 1.1em;
+      font-size: 1em;
       margin-top: 0;
       margin-right: 20px;
       flex-shrink: 0;
@@ -28,13 +29,16 @@
 
     @include to-md {
       border: 1px solid var(--background-secondary);
-      border-bottom: none;
+      border-top: none;
+      border-bottom-left-radius: var(--button-radius);
+      border-bottom-right-radius: var(--button-radius);
       align-self: start;
       padding-left: 5px;
       padding-right: 5px;
       margin-left: 12px;
 
-      font-size: .8em;
+      font-size: .7em;
+      font-family: Nunito-Light, sans-serif;
       color: var(--grey-3);
       letter-spacing: 1px;
     }
@@ -45,17 +49,19 @@
     justify-content: space-between;
     width: 100%;
     color: var(--text-color-1);
-    background: var(--background-secondary);
+    border-bottom: 1px solid var(--background-secondary);
     padding: 8px 12px;
     border-radius: var(--border-radius);
     cursor: pointer;
     text-decoration: none;
-    border-right: 4px solid var(--tertiary-color);
+    border-right: 5px solid var(--tertiary-color);
+    border-top-left-radius: var(--button-radius);
+    border-top-right-radius: var(--button-radius);
 
-    transition: transform 250ms ease-in-out;
+    transition: background 200ms ease-in-out;
 
     &.isCompleted {
-      border-color: var(--secondary-color);
+      border-right: 5px solid var(--secondary-color);
     }
 
     &:focus {
@@ -74,19 +80,12 @@
     @media screen and (min-width: 1000px) {
       &:hover {
         background: rgba(var(--tertiary-color-rgb),.2);
-        border-color: var(--primary-color);
-        transform: translateY(-2px);
-        transition: transform 250ms ease-in-out;
+        transition: background 200ms ease-in-out;
       }
 
       &:hover .fia-title {
         text-decoration: underline;
         text-decoration-color: var(--secondary-color);
-        transition: letter-spacing 500ms ease-in-out;
-      }
-
-      &:active {
-        transform: translateY(0);
       }
     }
 
