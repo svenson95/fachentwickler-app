@@ -1,6 +1,27 @@
 <div class="fia-page">
-  <div class="fia-spinner-wrapper">
-    <mat-spinner class="fia-loading-spinner" *ngIf="schoolWeeks === undefined"></mat-spinner>
+  <mat-card class="fia-card school-year">
+    <div class="fia-header-wrapper">
+      <mat-button-toggle-group class="fia-year-toggle" [(ngModel)]="selectedYear" aria-label="School Year" (ngModelChange)="setInitialWeek()">
+        <mat-button-toggle [value]="0">1</mat-button-toggle>
+        <mat-button-toggle [value]="1">2</mat-button-toggle>
+        <mat-button-toggle [value]="2" disabled>3</mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="fia-title-description-wrapper">
+        <p class="fia-card-title">Schuljahr</p>
+      </div>
+    </div>
+  </mat-card>
+  <div class="fia-week-cards-wrapper" *ngIf="schoolYears !== undefined">
+    <mat-button-toggle-group class="fia-week-toggle" [(ngModel)]="selectedWeek" aria-label="School Week" (ngModelChange)="changeWeek(selectedWeek)">
+      <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="toNumber(week.schoolWeek)">
+        {{week.schoolWeek}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="fia-weeks-container" (scroll)="onScroll()">
+      <app-school-week-card [class]="'week-' + week.schoolWeek" *ngFor="let week of schoolYears[selectedYear]?.weeks" [week]="week"></app-school-week-card>
+    </div>
   </div>
-  <app-school-week-card *ngFor="let week of schoolWeeks" [week]="week"></app-school-week-card>
+  <div class="fia-spinner-wrapper">
+    <mat-spinner class="fia-loading-spinner" *ngIf="schoolYears === undefined"></mat-spinner>
+  </div>
 </div>

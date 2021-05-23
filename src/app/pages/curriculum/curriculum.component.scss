@@ -12,6 +12,96 @@
   }
 }
 
+.fia-card.school-year {
+  .fia-header-wrapper {
+    display: flex;
+    align-items: center;
+
+    .fia-year-toggle {
+      margin-right: 20px;
+
+      mat-button-toggle {
+        background-color: var(--background-secondary);
+      }
+
+      .mat-button-toggle-checked {
+        background-color: var(--tertiary-color);
+      }
+    }
+
+    .fia-card-title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+mat-button-toggle-group {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-color: rgba(var(--tertiary-color-rgb), .2);
+  background-color: var(--background-primary);
+
+  mat-button-toggle {
+    background-color: var(--background-primary);
+    color: var(--text-color-1);
+  }
+
+  .mat-button-toggle-disabled {
+    color: var(--text-color-2);
+  }
+}
+
+.fia-week-cards-wrapper {
+  display: flex;
+
+  .fia-week-toggle {
+    flex-direction: column;
+
+    @include from-md {
+      margin-left: 2px;
+    }
+
+    @include to-md {
+      width: 40px;
+      margin-left: 20px;
+
+      .mat-button-toggle ::ng-deep .mat-button-toggle-label-content {
+        padding: 0;
+      }
+    }
+
+    .mat-button-toggle + .mat-button-toggle {
+      border-left: none;
+      border-top: solid 1px rgba(var(--tertiary-color-rgb), .2);
+    }
+  }
+
+  .fia-weeks-container {
+    width: 100%;
+    height: 65vh;
+    margin-left: 20px;
+    padding-right: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include to-md {
+      margin-right: 20px;
+    }
+
+    &::-webkit-scrollbar {
+      width: var(--scrollbar-width);
+      overflow-y: scroll;
+      background: var(--background-secondary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--secondary-color);
+      border-radius: 0;
+    }
+  }
+}
+
 .fia-spinner-wrapper {
   max-width: 1070px;
 
