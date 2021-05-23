@@ -108,7 +108,7 @@
           border-radius: var(--button-radius);
           border: none;
           cursor: pointer;
-          transition: background 200ms ease-in-out;
+          transition: background 100ms ease-in-out;
 
           &:first-of-type {
             margin-bottom: 10px;
@@ -120,7 +120,7 @@
             @include from-sm {
               &:hover {
                 background: rgba(var(--tertiary-color-rgb), 0.3);
-                transition: background 200ms ease-in-out;
+                transition: background 100ms ease-in-out;
               }
             }
           }

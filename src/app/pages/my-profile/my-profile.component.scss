@@ -35,8 +35,16 @@
       }
     }
 
+    .fia-start-change-btn, .fia-discard-change-btn {
+      color: var(--text-color-1);
+
+      &:disabled {
+        color: var(--text-color-2);
+      }
+    }
+
     .fia-start-change-btn {
-      background: var(--grey-2);
+      background: rgba(var(--grey-4-rgb), .2);
 
       &:hover:not([disabled]) {
         background: var(--secondary-color);
@@ -44,12 +52,11 @@
     }
 
     .fia-discard-change-btn {
-      background: var(--tertiary-color);
+      background: rgba(var(--tertiary-color-rgb), .3);
     }
 
     .fia-save-change-btn {
       background: var(--primary-color);
-
       color: white;
     }
 

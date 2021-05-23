@@ -57,7 +57,7 @@
     border-right: 5px solid var(--tertiary-color);
     border-top-left-radius: var(--button-radius);
 
-    transition: background 200ms ease-in-out;
+    transition: background 100ms ease-in-out;
 
     &.isCompleted {
       border-right: 5px solid var(--secondary-color);
@@ -69,8 +69,8 @@
 
     @media screen and (min-width: 1000px) {
       &:hover {
-        background: rgba(var(--tertiary-color-rgb),.2);
-        transition: background 200ms ease-in-out;
+        background: rgba(var(--tertiary-color-rgb), .1);
+        transition: background 100ms ease-in-out;
       }
 
       &:hover .fia-title {

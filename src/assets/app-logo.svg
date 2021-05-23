@@ -1,0 +1,11 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect fill="#94aac5" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" opacity="undefined" x="29.50002" y="188.99998" width="736.99998" height="523.1692" id="svg_3" fill-opacity="0.4" stroke="#000"/>
+  <rect fill="#e2e2e2" stroke-width="0" stroke-dasharray="null" opacity="undefined" x="27.49995" y="75" width="741.00001" height="132.16925" id="svg_13" stroke="#94aac5"/>
+  <text fill="#000000" stroke-width="0" opacity="undefined" x="203.98089" y="512.17836" id="svg_7" font-size="250" font-family="'Nunito ExtraBold'" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal" stroke-dasharray="5,5" transform="matrix(1.407588018149799,0,0,1.3912566254022753,-156.49277472524852,-143.38801501956425) " stroke="#fdbc4c">&lt;/&gt;</text>
+  <ellipse fill="#000000" stroke-width="0" stroke-dasharray="null" opacity="undefined" cx="106.5" cy="135" id="svg_10" rx="35.5" ry="35.5" stroke="#8CD79F"/>
+  <ellipse fill="#eb6a1e" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" opacity="undefined" cx="222.81325" cy="135" id="svg_12" rx="35" ry="35" stroke="#000"/>
+  <ellipse fill="#fdbc4c" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" opacity="undefined" cx="334.81325" cy="135" id="svg_8" rx="35" ry="35" stroke="#000"/>
+  <rect fill="none" opacity="undefined" x="26" y="71.50001" width="744.99997" height="644.99996" id="svg_1" rx="20" stroke-width="30" stroke="#e2e2e2"/>
+ </g>
+</svg>

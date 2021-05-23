@@ -458,12 +458,12 @@ app-post-link:not(:last-of-type),
     }
     .hljs-keyword {
       font-weight: normal;
-      color: #ff922c;
+      color: #1614ff;
     }
     .hljs-function {
       .hljs-title {
         font-weight: normal;
-        color: #ffbe01;
+        color: var(--text-color-1);
       }
     }
     .hljs-string {

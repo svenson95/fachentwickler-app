@@ -338,9 +338,9 @@
           letter-spacing: 1px;
 
           &.active-route {
-            h1, span {
-              color: var(--secondary-color);
+            border-color: var(--secondary-color);
 
+            h1, span {
               &:before,
               &:after {
                 opacity: 1;
