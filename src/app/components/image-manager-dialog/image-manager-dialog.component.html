@@ -7,27 +7,50 @@
   <hr class="fia-divider-line"/>
   <p class="title">Neues Bild hochladen</p>
   <form class="fia-add-image-form" encType="multipart/form-data" (submit)="sendImage($event)">
-    <div class="image-picker form-group">
-      <input class="fia-file-input" type="file" name="file" #fileInput/>
+    <div class="custom-dropzone" id="add-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false" l>
+      <ngx-dropzone-label>
+        <div class="drop-image">
+          <ion-icon class="drop-icon" name="download-outline"></ion-icon>
+          <h2>Datei hierher ziehen</h2>
+        </div>
+        <p>oder</p>
+        <div class="choose-image">
+          <ion-icon class="choose-icon" name="folder-outline"></ion-icon>
+          <h2>Datei auswählen</h2>
+        </div>
+      </ngx-dropzone-label>
+      <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of dropzoneFile" [file]="f" [removable]="true" (removed)="onRemove(f)">
+        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+      </ngx-dropzone-image-preview>
     </div>
-    <button class="fia-text-button" type="submit" [disabled]="isEmpty(fileInput)">
-      <span>Hochladen</span>
+    <button class="fia-text-button" type="submit" [disabled]="isEmpty(dropzoneFile)">
+      <span *ngIf="!isUploadingImage">Hochladen</span>
+      <mat-spinner class="fia-loading-spinner" *ngIf="isUploadingImage"></mat-spinner>
     </button>
   </form>
+  <ng-container *ngIf="selectedImage">
+    <hr class="fia-divider-line"/>
+    <p class="title">Details</p>
+    <div class="image-preview">
+      <div class="details">
+        <p>Name: {{selectedImage.file.filename}}</p>
+        <p>ID: {{selectedImage.file._id}}</p>
+      </div>
+      <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)">
+        Bild löschen
+        <ion-icon class="drop-icon" name="backspace"></ion-icon>
+      </button>
+    </div>
+  </ng-container>
   <hr class="fia-divider-line"/>
   <p class="title">Zuletzt hochgeladen</p>
-  <div class="image-preview" *ngIf="showImage">
-    <p>Name: {{showImage.file.filename}}</p>
-    <p>ID: {{showImage.file._id}}</p>
-    <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(showImage.file._id)">Bild löschen</button>
-  </div>
   <div class="fia-im-recent-images">
-    <div class="fia-spinner-wrapper" *ngIf="images.length === 0 && isLoading">
+    <div class="fia-spinner-wrapper" *ngIf="lastImages.length === 0 && isLoading">
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
-    <img class="image" *ngFor="let image of images" [src]="encode(image)" alt="image"
+    <img class="image" *ngFor="let image of lastImages" [src]="encode(image)" alt="image"
          matTooltip="Klicke für Details" matTooltipClass="image-tooltip" matTooltipPosition="right"
-         [matTooltipDisabled]="showImage === image" (click)="showImage = image" [class.is-selected]="image === showImage"
+         [matTooltipDisabled]="selectedImage === image" (click)="selectedImage = image" [class.is-selected]="image === selectedImage"
     />
     <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
       <span>Mehr laden</span>

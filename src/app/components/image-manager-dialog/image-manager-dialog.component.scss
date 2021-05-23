@@ -4,7 +4,18 @@
 .fia-image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
-  text-align: center;
+  max-height: 80vh;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    overflow-y: scroll;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 0;
+  }
 
   .fia-im-header {
     .fia-card-title {
@@ -16,10 +27,10 @@
   }
 
   .title {
-    display: block;
+    display: flex;
     width: 100%;
     color: var(--grey-4);
-    font-size: 1.2em;
+    //font-size: 1em;
     font-family: Nunito-Light, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -30,6 +41,7 @@
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    margin: 20px;
 
     .image-picker {
       display: flex;
@@ -37,6 +49,22 @@
       .fia-file-input {
         color: var(--text-color-1);
         outline: none;
+      }
+    }
+
+    .fia-text-button {
+      width: 200px;
+
+      .fia-loading-spinner {
+        margin: 0 auto !important;
+        $size: 18px;
+        width: $size !important;
+        height: $size !important;
+
+        ::ng-deep svg {
+          width: $size !important;
+          height: $size !important;
+        }
       }
     }
   }
@@ -49,7 +77,7 @@
 
   .fia-im-recent-images {
     overflow-y: scroll;
-    max-height: 400px;
+    max-height: 380px;
 
     &::-webkit-scrollbar {
       width: 3px;
@@ -63,8 +91,8 @@
     }
 
     .image {
-      max-height: 100px;
-      max-width: 200px;
+      max-height: 80px;
+      max-width: 180px;
       padding: 10px;
       outline: 0 solid transparent;
       transition: outline 200ms ease;
@@ -78,7 +106,7 @@
 
     .fia-text-button {
       display: block;
-      margin: auto;
+      margin: 20px auto;
     }
   }
 }
@@ -99,4 +127,96 @@
   -webkit-animation-name: moveInTop;
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
+  min-width: 80vw;
+  min-height: 80vh;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .details {
+    text-align: left;
+  }
+
+  .fia-text-button {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+
+    ion-icon {
+      font-size: 1.5em;
+      margin-left: 5px;
+    }
+  }
+}
+
+ngx-dropzone,
+.custom-dropzone {
+  margin-right: 20px;
+}
+
+.custom-dropzone {
+  min-width: 200px;
+  height: 160px;
+  background: rgba(var(--tertiary-color-rgb), .1);
+  border: 1px solid var(--tertiary-color);
+  border-radius: 5px;
+  width: 100%;
+  transition: all 250ms ease-in-out;
+
+  ::ng-deep input:focus + ngx-dropzone-label {
+    outline: none !important;
+  }
+
+  ::ng-deep img {
+    opacity: 1 !important;
+  }
+}
+
+.custom-dropzone.ngx-dz-hovered {
+  background: rgba(var(--secondary-color-rgb), .1);
+  border: 1px solid var(--secondary-color);
+  transition: all 250ms ease-in-out;
+}
+
+ngx-dropzone-image-preview ngx-dropzone-label {
+  margin-left: 5px !important;
+}
+
+ngx-dropzone-label {
+  position: unset !important;
+  overflow-wrap: anywhere !important;
+  font-size: .9em;
+
+  h2, p {
+    font-family: Nunito-Light, sans-serif;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: grey;
+    font-size: .8em;
+    margin: 8px 0;
+  }
+
+  .drop-image, .choose-image {
+    display: flex;
+    align-items: center;
+
+    ion-icon {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+}
+
+::ng-deep ngx-dropzone-remove-badge {
+  opacity: .4 !important;
 }

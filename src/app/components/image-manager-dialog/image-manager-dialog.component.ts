@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { delay } from 'rxjs/operators';
 
 import { ImageData } from '../../models/image-data';
@@ -6,27 +7,31 @@ import { UserRole } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
+import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-dialog.component';
 
 @Component({
   selector: 'app-image-manager-dialog',
   templateUrl: './image-manager-dialog.component.html',
   styleUrls: ['./image-manager-dialog.component.scss']
 })
-export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
+export class ImageManagerDialogComponent implements OnInit {
 
   UserRole = UserRole;
 
-  images: ImageData[] = [];
   imagesCount: number;
   page = 0;
+  selectedImage: ImageData;
+  dropzoneFile: File[] = [];
+  lastImages: ImageData[] = [];
   isLoading: boolean;
-  showImage: ImageData;
+  isUploadingImage: boolean;
 
   @ViewChild('fileInput') fileInput;
 
   constructor(public authService: AuthService,
               private dataService: DataService,
-              private loadingService: LoadingService
+              private loadingService: LoadingService,
+              private dialog: MatDialog
   ) {
     this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
@@ -48,18 +53,22 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
     this.initialImages();
   }
 
-  ngAfterViewInit(): void {
-    this.fileInput.nativeElement.blur();
+  onSelect(event): void {
+    this.dropzoneFile = [...event.addedFiles];
   }
 
-  isEmpty(event): boolean {
-    return event.files.length <= 0;
+  onRemove(event): void {
+    this.dropzoneFile.splice(this.dropzoneFile.indexOf(event), 1);
+  }
+
+  isEmpty(files): boolean {
+    return files.length === 0;
   }
 
   initialImages(): void {
     this.dataService.getMultipleImages().subscribe(
       (data) => {
-        this.images = data;
+        this.lastImages = data;
       },
       (error) => {
         console.log('Error while GET post', error);
@@ -74,14 +83,18 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
 
   sendImage(event): void {
     event.preventDefault();
-    this.dataService.uploadImage(event.target[0].files[0]).subscribe(
+    this.isUploadingImage = true;
+    this.dataService.uploadImage(this.dropzoneFile[0]).subscribe(
         async (response) => {
           await this.dataService.getImageById(response.file.id).subscribe(
               (image) => {
-                this.images.unshift(image);
+                this.lastImages.unshift(image);
+                this.dropzoneFile = [];
               }, (err) => {
                 console.log('Get image by id failed');
                 console.log(err);
+              }, () => {
+                this.isUploadingImage = false;
               }
           );
         },
@@ -95,18 +108,23 @@ export class ImageManagerDialogComponent implements OnInit, AfterViewInit {
   loadMore(): void {
     this.page++;
     this.dataService.getMultipleImages(this.page).subscribe(data => {
-      this.images = [...this.images, ...data];
+      this.lastImages = [...this.lastImages, ...data];
     });
   }
 
   deleteImage(id: string): void {
-    this.dataService.deleteImageById(id).subscribe(
-        (response) => {
-            this.images = this.images.filter(el => el.file._id !== id);
-        }, (error) => {
-          console.log('Delete image failed', error);
-        }
-    );
+    const dialogRef = this.dialog.open(DeleteImageDialogComponent, {
+      restoreFocus: true,
+      panelClass: 'delete-image-modal',
+      autoFocus: false,
+      data: { postId: id }
+    });
+    dialogRef.afterClosed().subscribe((confirmed: any) => {
+      if (confirmed) {
+        this.lastImages = this.lastImages.filter(el => el.file._id !== id);
+        this.selectedImage = undefined;
+      }
+    });
   }
 
 }

@@ -1,0 +1,10 @@
+<mat-dialog-content>
+  Bist du sicher, dass du das Bild löschen möchtest?
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="fia-text-button" mat-button mat-dialog-close>Nein</button>
+  <button class="fia-text-button" mat-button (click)="deleteRequest()">
+    Ja
+    <ion-icon class="delete-icon" name="backspace"></ion-icon>
+  </button>
+</mat-dialog-actions>

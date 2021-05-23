@@ -6,14 +6,12 @@ import { EditPostComponent } from './edit-post.component';
 import { EditPostRoutingModule } from './edit-post-routing.module';
 import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
-import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
 
 
 
 @NgModule({
   declarations: [
     EditPostComponent,
-    ImageManagerDialogComponent
   ],
   exports: [
     EditPostComponent
