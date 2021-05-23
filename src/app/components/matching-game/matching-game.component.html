@@ -11,6 +11,7 @@
                     <p class="game-introduction">
                         Setze die Karten in die richtige Reihenfolge und klicke auf Verbinden.
                     </p>
+                    <h2 class="round-label">{{round+1}}/{{matching.pairs.length}}</h2>
                     <div class="container unsolved" *ngIf="unsolvedPairs.length > 0 && state !== 'end'">
                         <div class="pair_items left" (cdkDropListDropped)="drop($event, leftSidePairs)" cdkDropList>
                             <div class="btn-wrapper" *ngFor="let pair of leftSidePairs">

@@ -14,8 +14,8 @@
       <th *ngIf="i === 3" class="fia-schedule-header">Do</th>
       <th *ngIf="i === 4" class="fia-schedule-header">Fr</th>
       <td *ngFor="let hour of day.lessons">
-        <span class="fia-hour-room">{{subjectName(hour.room)}}</span>
         <span class="fia-hour-subject">{{subjectName(hour.subject)}}</span>
+        <span class="fia-hour-room">{{subjectName(hour.room)}}</span>
         <span class="fia-hour-teacher">{{hour.teacher}}</span>
       </td>
     </tr>

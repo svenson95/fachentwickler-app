@@ -52,13 +52,13 @@
   .section-title {
     font-size: 1em;
     font-family: Nunito-Light, sans-serif;
-    padding: 8px 10px 8px 10px;
+    padding: 8px 5px 0 5px;
     margin-left: 30px;
     margin-right: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     letter-spacing: 2px;
     width: fit-content;
-    border-bottom: 4px double var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 
     @include to-xs {
       margin-left: 15px;
@@ -113,7 +113,8 @@
     }
 
     &.active-route {
-      color: var(--secondary-color);
+      color: var(--text-color-1);
+      text-shadow: 0 0 2px var(--secondary-color);
 
       .fia-nav-item-icon {
         color: var(--text-color-1);

@@ -58,10 +58,6 @@ mat-button-toggle-group {
   .fia-week-toggle {
     flex-direction: column;
 
-    @include from-md {
-      margin-left: 2px;
-    }
-
     @include to-md {
       width: 40px;
       margin-left: 20px;

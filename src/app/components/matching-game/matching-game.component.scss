@@ -25,6 +25,10 @@ $easeIn-duration: 400ms;
 #game {
   margin-top: 20px;
 
+  .round-label {
+    margin-bottom: 0;
+  }
+
   .container {
     display: flex;
     width: fit-content;
@@ -266,7 +270,7 @@ $easeIn-duration: 400ms;
     }
 
     .fia-text-button {
-      background-color: rgba(50, 205, 50,.6);
+      background-color: rgba(50, 205, 50, .6);
       span {
         color: var(--text-color-1);
       }
@@ -280,6 +284,13 @@ $easeIn-duration: 400ms;
       box-shadow:
               0 0 2px rgba(red, .8),
               0 0 10px rgba(red, .4);
+    }
+
+    .fia-text-button {
+      background-color: rgba(255, 0, 0, .6);
+      span {
+        color: var(--text-color-1);
+      }
     }
   }
 }

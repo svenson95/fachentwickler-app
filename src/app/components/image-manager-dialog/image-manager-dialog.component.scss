@@ -18,6 +18,8 @@
   }
 
   .fia-im-header {
+    margin-top: 24px;
+
     .fia-card-title {
       margin-bottom: 2px;
     }
@@ -118,6 +120,7 @@
 ::ng-deep .mat-dialog-container {
   background: var(--background-secondary);
   border-radius: 0;
+  padding: 0 24px;
 }
 
 ::ng-deep .image-manager-modal.cdk-overlay-pane {
@@ -128,7 +131,7 @@
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
   min-width: 80vw;
-  min-height: 80vh;
+  max-height: 80vh;
 }
 
 .image-preview {

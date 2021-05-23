@@ -18,6 +18,7 @@ export const light: Theme = {
         "--text-color-2": "#b4b4b4",
 
         "--grey-1": "#e6e6e6",
+        "--grey-1-rgb": "230,230,230",
         "--grey-2": "#d4d4d4",
         "--grey-3": "#b4b4b4",
         "--grey-4": "#989898",
@@ -36,9 +37,9 @@ export const light: Theme = {
 export const dark: Theme = {
     name: 'dark',
     properties: {
-        "--background-primary": "#1e1e1e",
-        "--background-secondary": "#292929",
-        "--background-tertiary": "#323232",
+        "--background-primary": "#292929",
+        "--background-secondary": "#373737",
+        "--background-tertiary": "#464646",
         "--primary-color": "#eb6a1e",
         "--secondary-color": "#f4ac31",
         "--tertiary-color": "#94aac5",
@@ -48,6 +49,7 @@ export const dark: Theme = {
         "--text-color-2": "#b4b4b4",
 
         "--grey-1": "#393939",
+        "--grey-1-rgb": "57,57,57",
         "--grey-2": "#727272",
         "--grey-3": "#afafaf",
         "--grey-4": "#c3c3c3",
@@ -55,8 +57,8 @@ export const dark: Theme = {
         "--grey-5": "#d2d2d2",
         "--grey-5-rgb": "200,200,200",
 
-        "--box-shadow": "rgba(15, 15, 15, 0.2) 0px 4px 4px, rgba(20, 20, 20, 0.3) 0px 4px 4px",
-        "--button-shadow": "rgba(15, 15, 15, 0.4) 0px 4px 4px, rgba(15, 15, 15, 0.5) 0px 4px 4px",
+        "--box-shadow": "rgba(0, 0, 0, 0.1) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 4px 4px",
+        "--button-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 4px, rgba(0, 0, 0, 0.3) 0px 4px 4px",
 
         "--exam-background": "rgba(148, 170, 197, 0.3)",
         "--theme-toggle-color": "var(--grey-2)"

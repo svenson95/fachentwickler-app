@@ -34,12 +34,11 @@
       }
 
       .value {
-        color: var(--primary-color);
         border-left: 1px solid var(--grey-1);
         outline: none;
 
         &:hover {
-          color: var(--text-color-1);
+          color: var(--primary-color);
           text-decoration-color: var(--primary-color);
         }
       }

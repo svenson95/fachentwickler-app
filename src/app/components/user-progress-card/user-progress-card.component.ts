@@ -16,17 +16,9 @@ export class UserProgressCardComponent implements OnInit {
   @Input() user: User;
   @Input() dashboard: DashboardData;
 
-  isLoading: boolean;
-
   constructor(public dataService: DataService,
               public loadingService: LoadingService
-  ) {
-    this.loadingService.loading$.pipe(delay(0)).subscribe(
-        (status: boolean) => {
-          this.isLoading = status;
-        }
-    );
-  }
+  ) {}
 
   ngOnInit(): void {
   }

@@ -21,7 +21,7 @@
             [title]="'Nächste Lektion'"
     ></app-post-link>
     <mat-spinner class="fia-loading-spinner"
-                 *ngIf="isLoading || dashboard?.nextLesson === undefined"
+                 *ngIf="dashboard?.nextLesson === undefined"
     ></mat-spinner>
 
   </mat-card-content>

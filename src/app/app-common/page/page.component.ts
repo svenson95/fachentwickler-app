@@ -66,17 +66,18 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   onScroll(event: any): any {
     if (this.isMobile.matches) {
-      const mobileScrollableContent = this.elementRef.nativeElement.querySelector('.fia-body');
-      if (mobileScrollableContent.scrollTop > 100) {
-        mobileScrollableContent.classList.add('scrolled');
-      } else if (mobileScrollableContent.scrollTop < 20) {
-        mobileScrollableContent.classList.remove('scrolled');
+      const container = this.elementRef.nativeElement.querySelector('.fia-body');
+      if (container.scrollTop > 100  && !container.classList.contains('scrolled')) {
+        container.classList.add('scrolled');
+      } else if (container.scrollTop < 20) {
+        container.classList.remove('scrolled');
       }
     } else {
-      if (event.target.scrollTop > 100) {
-        this.elementRef.nativeElement.querySelector('.fia-page-container').classList.add('scrolled');
+      const container = this.elementRef.nativeElement.querySelector('.fia-page-container');
+      if (event.target.scrollTop > 100 && !container.classList.contains('scrolled')) {
+        container.classList.add('scrolled');
       } else if (event.target.scrollTop < 20) {
-        this.elementRef.nativeElement.querySelector('.fia-page-container').classList.remove('scrolled');
+        container.classList.remove('scrolled');
       }
     }
   }

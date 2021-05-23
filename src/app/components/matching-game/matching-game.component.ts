@@ -88,9 +88,9 @@ export class MatchingGameComponent implements OnInit {
 
     if (this.state === 'play' && this.matching.pairs[this.round + 1] === undefined) {
       this.state = 'end';
+    } else {
+      this.round++;
     }
-
-    this.round++;
 
     if (this.matching.pairs[this.round] !== undefined) {
       this.setupMatchings();
