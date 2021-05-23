@@ -3,13 +3,18 @@ import { Topic } from '../app/models/subject';
 export const topics: Topic[] = [
     {
         "title": "Der Betrieb und sein Umfeld",
+        "_id": "6056185736ac2b24829ca2f4",
+        "url": "der_betrieb_und_sein_umfeld",
         "subject": "lf-1",
         "links": [
-            "5f429107165d0ab470bc57ca"
+            "5f429107165d0ab470bc57ca",
+            "605a469942f5481a20c97627"
         ]
     },
     {
         "title": "Bedürfnisse & Güter",
+        "_id": "6056185f36ac2b24829ca2f5",
+        "url": "beduerfnisse_und_gueter",
         "subject": "lf-1",
         "links": [
             "5f42929e165d0ab470bc57cb",
@@ -18,6 +23,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Wirtschaftskennziffern",
+        "_id": "6056186736ac2b24829ca2f6",
+        "url": "wirtschaftskennziffern",
         "subject": "lf-1",
         "links": [
             "5f429469165d0ab470bc57d0",
@@ -29,6 +36,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Geschäftsprozesse und betriebliche Organisation",
+        "_id": "6055f8b52622d7163ca40885",
+        "url": "geschaeftsprozesse_und_betriebliche_organisation",
         "subject": "lf-2",
         "links": [
             "5f4295f6220657ed697dc56b",
@@ -38,6 +47,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Netzplantechnik",
+        "_id": "60564a93b0623029d4a68f65",
+        "url": "netzplantechnik",
         "subject": "lf-3",
         "links": [
             "5f42966b220657ed697dc56d",
@@ -50,6 +61,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Visualisierung",
+        "_id": "60564c11b0623029d4a68f66",
+        "url": "visualisierung",
         "subject": "lf-3",
         "links": [
             "5f429708220657ed697dc572",
@@ -59,6 +72,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Einfache IT-Systeme",
+        "_id": "605650dbb0623029d4a68f67",
+        "url": "einfache_it_systeme",
         "subject": "lf-4-1",
         "links": [
             "5f9d54856ff184d2ed5ed51a",
@@ -78,6 +93,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Unterbrechungsfreie Stromversorgung",
+        "_id": "605650f5b0623029d4a68f68",
+        "url": "unterbrechungsfreie_stromversorgung",
         "subject": "lf-4-1",
         "links": [
             "5f429ac3165d0ab470bc57d5",
@@ -91,6 +108,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Einfache IT-Systeme",
+        "_id": "60565cbeb0623029d4a68f69",
+        "url": "einfache_it_systeme",
         "subject": "lf-4-2",
         "links": [
             "5f9d55fa604cc04f638e4d3a",
@@ -110,6 +129,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Boolsche Algebra",
+        "_id": "60565cdcb0623029d4a68f6a",
+        "url": "boolsche_algebra",
         "subject": "lf-4-2",
         "links": [
             "5f429bfb165d0ab470bc57df",
@@ -118,6 +139,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Fachliches Englisch",
+        "_id": "6056973007c61731b8d162f5",
+        "url": "fachliches_englisch",
         "subject": "lf-5",
         "links": [
             "5f429ff8165d0ab470bc5802",
@@ -127,6 +150,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "_id": "6056629db0623029d4a68f6b",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen",
         "subject": "lf-6",
         "links": [
             "5f429c59165d0ab470bc57e2",
@@ -142,11 +167,13 @@ export const topics: Topic[] = [
             "5f43d3dcf067639a259359c6",
             "5f67ad91257ec895e489e34c",
             "5ffca2c6e3bc33038ff5f16e",
-            "602101bc65dbdf479177a4c1",
+            "602101bc65dbdf479177a4c1"
         ]
     },
     {
         "title": "SQL (Structured Query Language)",
+        "_id": "605c90fe23779759b9bb2907",
+        "url": "sql",
         "subject": "lf-6",
         "links": [
             "5f6f5d29819cd4bad66c53fa",
@@ -162,11 +189,16 @@ export const topics: Topic[] = [
             "604285ecb0c00c20f201d169",
             "60428604b0c00c20f201d16a",
             "605c875e23779759b9bb2903",
-            "605c880823779759b9bb2904"
+            "605c880823779759b9bb2904",
+            "60a5736559a0005b1c634b64",
+            "60aa77286f1e34465948183e",
+            "60aa855a6f1e34465948184c"
         ]
     },
     {
         "title": "E-Technik",
+        "_id": "6056854807c61731b8d162ec",
+        "url": "e_technik",
         "subject": "lf-7-1",
         "links": [
             "5f79fd90322ea57fbdb3b037",
@@ -179,13 +211,17 @@ export const topics: Topic[] = [
             "603eb6efb0c00c20f201d122",
             "60428445b0c00c20f201d168",
             "605855a237cdbc38e21c701c",
-            "605c84de23779759b9bb2901"
+            "605c84de23779759b9bb2901",
+            "60a414ed59a0005b1c634b18"
         ]
     },
     {
         "title": "Netze und Dienste",
+        "_id": "6056856207c61731b8d162ed",
+        "url": "netze_und_dienste",
         "subject": "lf-7-2",
         "links": [
+            "5f6fe46a539ea9f7ca3856ef",
             "5f429dd7165d0ab470bc57ee",
             "5f9594c94363ea1e064c8d53",
             "5f88cd98a0d0cb421f136a50",
@@ -203,14 +239,16 @@ export const topics: Topic[] = [
             "603947b14bb78f077e58b417",
             "603eb62eb0c00c20f201d120",
             "603eb640b0c00c20f201d121",
-            "605c866f23779759b9bb2902"
+            "605c866f23779759b9bb2902",
+            "609e584a7bc55c76643cf50c"
         ]
     },
     {
         "title": "Markt und Kundenbeziehungen",
+        "_id": "60568ab607c61731b8d162ef",
+        "url": "markt_und_kundenbeziehungen",
         "subject": "lf-8",
         "links": [
-            "5f6fe46a539ea9f7ca3856ef",
             "5fdfda778c8c2a5e54a4a40d",
             "6020fe0e65dbdf479177a4bf",
             "6021041865dbdf479177a4c2",
@@ -219,11 +257,15 @@ export const topics: Topic[] = [
             "604c985bb0c00c20f201d226",
             "6059d3be1197a87e0b452a48",
             "6059d3d51197a87e0b452a49",
-            "605c9a8f23779759b9bb2912"
+            "605c9a8f23779759b9bb2912",
+            "60a41b0c59a0005b1c634b22",
+            "60aa84d96f1e34465948184b"
         ]
     },
     {
         "title": "Öffentliche Netze und Dienste",
+        "_id": "60568d0407c61731b8d162f0",
+        "url": "oeffentliche_netze_und_dienste",
         "subject": "lf-9",
         "links": [
             "5f429e00165d0ab470bc57ef",
@@ -236,11 +278,14 @@ export const topics: Topic[] = [
             "6021366d65dbdf479177a4cc",
             "603cc763b791dc7b6076e1ac",
             "603cf9deb0c00c20f201d0fe",
-            "60585dfe4756c974afde617a"
+            "60585dfe4756c974afde617a",
+            "60a2f31359a0005b1c634aaf"
         ]
     },
     {
         "title": "Vernetzte Steuerungssysteme",
+        "_id": "6056906307c61731b8d162f1",
+        "url": "vernetzte_steuerungssysteme",
         "subject": "wp",
         "links": [
             "5f429fa0165d0ab470bc5800",
@@ -253,11 +298,15 @@ export const topics: Topic[] = [
             "604df60bec849e7897841840",
             "6042c569b0c00c20f201d170",
             "6053a521ec849e78978418ac",
-            "605c92c923779759b9bb290a"
+            "605c92c923779759b9bb290a",
+            "609e580f7bc55c76643cf50b",
+            "609e766d6ffc47057f484115"
         ]
     },
     {
         "title": "Berufsbildung und Arbeitswelt",
+        "_id": "6056968e07c61731b8d162f3",
+        "url": "berufsbildung_und_arbeitswelt",
         "subject": "wiso",
         "links": [
             "5f9d5931604cc04f638e4d3d",
@@ -273,11 +322,13 @@ export const topics: Topic[] = [
             "5fdfd83a8c8c2a5e54a4a40a",
             "5fdfd8478c8c2a5e54a4a40b",
             "60212ecb65dbdf479177a4c8",
-            "605c934d23779759b9bb290c"
+            "607b91245aa67865ac188dba"
         ]
     },
     {
         "title": "Steuern & Sozialversicherungen",
+        "_id": "6056969907c61731b8d162f4",
+        "url": "steuern_und_sozialversicherungen",
         "subject": "wiso",
         "links": [
             "5f429e8b165d0ab470bc57f5",
@@ -289,11 +340,15 @@ export const topics: Topic[] = [
             "603948e84bb78f077e58b419",
             "6042c788b0c00c20f201d171",
             "605905de1197a87e0b452a38",
-            "605c934d23779759b9bb290c"
+            "605c934d23779759b9bb290c",
+            "609e76046ffc47057f484114",
+            "60aa82c56f1e344659481845"
         ]
     },
     {
         "title": "Kommunikation und Informationsquellen",
+        "_id": "60569a7207c61731b8d162f6",
+        "url": "kommunikation_und_informationsquellen",
         "subject": "deutsch",
         "links": [
             "5f429efb165d0ab470bc57f9",
@@ -304,6 +359,8 @@ export const topics: Topic[] = [
     },
     {
         "title": "Grammatik",
+        "_id": "60569a7d07c61731b8d162f7",
+        "url": "grammatik",
         "subject": "deutsch",
         "links": [
             "5f429f3d165d0ab470bc57fd",
@@ -315,7 +372,8 @@ export const topics: Topic[] = [
             "5fdfd0bf8c8c2a5e54a4a401",
             "602106a765dbdf479177a4c4",
             "6021399365dbdf479177a4cd",
-            "603cfd6eb0c00c20f201d100"
+            "603cfd6eb0c00c20f201d100",
+            "60a2f6b259a0005b1c634ab0"
         ]
     }
 ];

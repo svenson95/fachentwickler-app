@@ -294,6 +294,8 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise_1",
+        "_id": "5f429f5f165d0ab470bc57fe",
+        "topicId": "60569a7d07c61731b8d162f7",
         "title": "Nominalstil und unpersönliche Ausdrucksweise (1)",
         "description": "Mitschrift vom 24.03.2020",
         "subject": "deutsch",
@@ -794,12 +796,14 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise_2",
+        "_id": "602106a765dbdf479177a4c4",
+        "topicId": "60569a7d07c61731b8d162f7",
         "title": "Nominalstil und unpersönliche Ausdrucksweise (2)",
         "description": "Mitschrift vom 14.01.2021",
         "subject": "deutsch",
         "type": "article",
         "lessonDate": "2021-01-14",
-        "lastUpdate": "2021-02-08",
+        "lastUpdate": "2021-05-18",
         "schoolWeek": "20",
         "elements": [
             {
@@ -814,12 +818,14 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/zitiertechniken_und_literaturverzeichnis",
+        "_id": "6021399365dbdf479177a4cd",
+        "topicId": "60569a7d07c61731b8d162f7",
         "title": "Zitiertechniken und Literaturverzeichnis",
         "description": "Mitschrift vom 08.02.2021",
         "subject": "deutsch",
         "type": "article",
         "lessonDate": "2021-02-08",
-        "lastUpdate": "2021-02-08",
+        "lastUpdate": "2021-05-18",
         "schoolWeek": "21",
         "elements": [
             {
@@ -862,12 +868,14 @@ export const DEUTSCH_POSTS: Post[] = [
     },
     {
         "url": "grammatik/regeln_des_zitierens",
-        "title": "Regeln des Zitierens - Präsentation erarbeiten",
+        "_id": "603cfd6eb0c00c20f201d100",
+        "topicId": "60569a7d07c61731b8d162f7",
+        "title": "Regeln des Zitierens",
         "description": "Mitschrift vom 01.03.2021",
         "subject": "deutsch",
-        "type": "tasks",
+        "type": "article",
         "lessonDate": "2021-03-01",
-        "lastUpdate": "2021-03-01",
+        "lastUpdate": "2021-05-18",
         "schoolWeek": "22",
         "elements": [
             {
@@ -923,6 +931,154 @@ export const DEUTSCH_POSTS: Post[] = [
                     "<sup>1</sup> Definition laut Oxford Languages - <a href='https://languages.oup.com/google-dictionary-de/'>https://languages.oup.com/google-dictionary-de/</a>",
                     "<a href='https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html'>https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html</a>"
                 ]
+            }
+        ]
+    },
+    {
+        "url": "grammatik/nominalformen_und_verbalformen",
+        "_id": "60a2f6b259a0005b1c634ab0",
+        "topicId": "60569a7d07c61731b8d162f7",
+        "title": "Nominalformen und Verbalformen",
+        "description": "Mitschrift vom 17.05.2021",
+        "subject": "deutsch",
+        "type": "tasks",
+        "lessonDate": "2021-05-17",
+        "lastUpdate": "2021-05-18",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Ergänzen Sie die Sätze. Bilden Sie anschließend die Nominalform (b)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>1</span> <b>Indem die Exporte steigen, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Durch den Anstieg der Exporte erhöhen sich die Umsätze"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>2</span> <b>Dadurch, dass wir \"Fair-trade-Produkte\" kaufen, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Infolge des Kaufs von \"Fair-trade-Produkten\" unterstützen wir die Bauern"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>3</span> <b>Als die Wirtschaftskrise begann, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Mit dem Beginn der Weltwirtschaftskrise kam es zur Erhöhung der Arbeitslosenqoute"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>4</span> <b>Während die Menschen für mehr Gerechtigkeit demonstrieren, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Während der Demonstration für mehr Gerechtigkeit kam es zu Ausschreitungen"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>5</span> <b>Seitdem die Küstenregionen für den Tourismus entdeckt wurden, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Seit der Entdeckung der Küstenregionen steigen die Umsätze der Einheimischen"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>6</span> <b>Bis die Menschenrechte überall durchgesetzt werden können, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Bis zur Durchsetzung der Menschenrechte muss noch einiges passieren"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>7</span> <b>Nachdem er sein Geld an der Börse verloren hatte, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Nach dem Verlust seines Geldes an der Börse musste er sein Auto verkaufen"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>8</span> <b>Bevor die Konferenz begann, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Vor dem Beginn der Konferenz wurden Getränke ausgeteilt"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>9</span> <b>Wenn Sie Ihre Reise frühzeitig buchen, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Bei rechtzeitiger Buchung sparen Sie bis zu 50%"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>10</span> <b>Wenn man sich keine Ziele setzt, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Bei fehlender Ziel-Setzung erreicht man auch nichts"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>11</span> <b>Weil er mit seinem Buch großen Erfolg hatte, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "Aufgrund des Buch-Erfolges schrieb er gleich ein zweites Buch"
+            }
+        ]
+    },
+    {
+        "url": "grammatik/test",
+        "_id": "60aa72e06f1e34465948183a",
+        "topicId": "60569a7d07c61731b8d162f7",
+        "title": "Leistungskontrolle - Grammatik, Nominalformen",
+        "description": "Mitschrift vom 19.05.2021",
+        "subject": "deutsch",
+        "type": "test",
+        "lessonDate": "2021-05-19",
+        "lastUpdate": "2021-05-23",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Ergänzen Sie die Sätze. Bilden Sie anschließend die Nominalform."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>1</span> <b>Lorem ipsum dolor sit amet, ...</b>"
+            },
+            {
+                "type": "text",
+                "content": "..."
             }
         ]
     },

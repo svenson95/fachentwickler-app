@@ -2,271 +2,6 @@ import {Post} from '../../app/models/post';
 
 export const LF8_POSTS: Post[] = [
     {
-        "url": "uebertragungstechnik/ports",
-        "title": "Ports",
-        "description": "Mitschrift vom 10.08.2020",
-        "subject": "lf-8",
-        "type": "article",
-        "lessonDate": "2020-08-10",
-        "lastUpdate": "2020-10-31",
-        "schoolWeek": "14",
-        "elements": [
-            {
-                "type": "title",
-                "content": "Definition"
-            },
-            {
-                "type": "text",
-                "content": "Ein Netzwerk-Port ist eine Adresse, mit deren Hilfe sich Verbindungen eindeutig besimmten Anwendungen zuordnen lassen. Insgesamt stehen die Ports der Nummern 0 bis 65536 zur Verfügung. Zusammen mit der IP-Adresse bildet der Netzwerk-Port die vollständige Adresse einer Anwendung auf einem Ziel- oder Absendersystem. Sie werden auf der Kommunikationsebene von den Protokollen TCP und UDP verwendet."
-            },
-            {
-                "type": "text",
-                "content": "Insgesamt stehen die Ports 0 bis 65536 für die Verwendung zur Verfügung. Bestimmte Portnummern sind allerdings fest einzelnen Anwendungen zugeordnet. Zu jeder TCP- oder UDP-Verbindung gehören zwei Ports, ein Netzwerk-Port auf der Client-Seite und einer auf der Server-Seite."
-            },
-            {
-                "type": "text",
-                "content": "Wichtige Protokolle der IP-Welt wie HTTP, Telnet oder FTP besitzen feste zugewiesene Ports, sie sind von der IANA (Internet Assigned Numbers Authority) vergeben und werden auch Standard-Ports genannt."
-            },
-            {
-                "type": "table",
-                "content": "Wichtige und oft benötigte Netzwerkports ...",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "TCP / UDP" },
-                            { "align": "left", "content": "Port" },
-                            { "align": "left", "content": "Beschreibung / Funktion" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "20" },
-                            { "align": "left", "content": "FTP - Daten" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "21" },
-                            { "align": "left", "content": "FTP - Steuerdaten" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "22" },
-                            { "align": "left", "content": "SSH - Secure Shell" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "80" },
-                            { "align": "left", "content": "HTTP Anfragen (Alternativen: 8080 und 8088)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP / UDP" },
-                            { "align": "left", "content": "110" },
-                            { "align": "left", "content": "POP3" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "143" },
-                            { "align": "left", "content": "IMAP" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "443" },
-                            { "align": "left", "content": "HTTPS Anfragen (Alternativ: 8443)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "993" },
-                            { "align": "left", "content": "IMAP over SSL" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "995" },
-                            { "align": "left", "content": "POP3 over SSL" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "1433" },
-                            { "align": "left", "content": "SQL Server-Standardinstanz" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "1434" },
-                            { "align": "left", "content": "SQL Server-Browserdienst" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "8080" },
-                            { "align": "left", "content": "HTTP Proxy" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "list",
-                "content": "Quellen:",
-                "list": [
-                    "<a href='https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/'>https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/</a>"
-                ]
-            }
-        ]
-    },
-    {
-        "url": "netze_und_dienste/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
-        "title": "Duplex und Duplexing - Simplex, Halbduplex und Vollduplex",
-        "description": "Mitschrift vom 13.08.2020",
-        "subject": "lf-7-2",
-        "type": "article",
-        "lessonDate": "2020-08-13",
-        "lastUpdate": "2021-03-25",
-        "schoolWeek": "14",
-        "elements": [
-            {
-                "type": "title",
-                "content": "Definition"
-            },
-            {
-                "type": "text",
-                "content": "In der Übertragungstechnik gibt es zwei Übertragungsrichtungen, vom Empfänger zum Sender und vom Sender zum Empfänger. Bei Datenübertragungen spricht man dabei von Downlink/Downstream und Uplink/Upstream genannt. Ein Duplex ist eine Übertragungsart und bezeichnet, wie Sende- und Empfangsrichtungen zwischen Sender und Empfänger aufgeteilt werden und funktionieren."
-            },
-            {
-                "type": "hint",
-                "content": "Bei Vollduplex-, Halbduplex- und Semi-Duplex-Übertragungsverfahren sind prinzipiell beide Richtungen möglich."
-            },
-            {
-                "type": "text",
-                "content": "Bei einer Asymmetrischen Übertragung ist der Datenverkehr vom Server zum Nutzer höher als umgekehrt - bedeutet es werden mehr Daten heruntergeladen als hochgeladen, wie es bei den meisten Websites der Fall ist. Bei einer Symmetrischen Übertragung wie in Telefonie- und Sprach-Anwendungen ist der Datenverkehr zwischen Sender und Empfänger gleich groß."
-            },
-            {
-                "type": "subtitle",
-                "content": "Simplex"
-            },
-            {
-                "type": "text",
-                "content": "Bei Simplex ist die Übertragung nur in eine Richtung möglich, also entweder Senden <u>oder</u> Empfangen, ein Wechsel der Richtung ist nicht möglich. Typische Beispiele für Simplex-Kommunikationen sind Rundfunk, Fernsehen und die Übertragung von Audiosignalen von einem Verstärker zu einem Lautsprecher - bei Lautsprecher Anlagen mit mehreren Boxen die zum Verstärker führen."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f4088b391ef1048612e0969"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Halbduplex"
-            },
-            {
-                "type": "text",
-                "content": "Beim Halbduplex läuft die Übertragung pro Kanal zeitlich hinteinander, dabei können gleichzeitig mehrere Übertragungen der gleichen Richtung stattfinden - also mehrere Donwloads und anschließend die Uploads. Es können jedoch mehrere Kanäle geschaltet werden, womit auch hier gleichzeitiges up- und downloaden möglich ist. Dafür ist eine Umschaltvorrichtung nötig, die zeitgesteuert immer hin und her schaltet."
-            },
-            {
-                "type": "hint",
-                "content": "Typische Anwendungsbereiche sind Wechselsprechanlagen oder ISDN (engl. 'integrated Services Digital Network') - ein Internationaler Standard für digitale Telekommunkationsnetze für Kanäle wie Telefonie und Internet."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f4088c291ef1048612e096b"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Vollduplex"
-            },
-            {
-                "type": "text",
-                "content": "Nur bei der Vollduplex-Übertragung erfolgt die Datenübertragung gleichzeitig in beide Richtungen auf der gleichen Leitung / dem gleichen Kanal, es hat zwei eigenständige Übertragungskanäle. Es ist auch möglich Vollduplex aus einer Halbduplex-Übertragung zu emulieren, bei diesem Verfahren erfolgt die Umschaltung per Mikroprozessor so schnell, dass man von dem Übertragungsstop der jeweiligen Richtung nichts merkt."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f4088c791ef1048612e096d"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "title",
-                "content": "Duplexverfahren"
-            },
-            {
-                "type": "text",
-                "content": "Wie oben bereits erwähnt, gibt es Übertragungstechniken in denen gepaarte Kanäle/Frequenzblöcke zum Einsatz kommen. Es gibt also einen Kanal zum Upload/Uplink und einen Download/Downlink Kanal, der Abstand zwischen diesen beiden wird als Duplexabstand bezeichnet. Im GSM-Standard ist beispielsweise im 1,8-GHz-Frequenzband ein Duplexabstand von 190 MHz zwischen Hin- und Rückkanal vorgeschrieben. Wenn ein Netzbetreiber den Frequenzbereich von 1,92 GHz bis 1,925 für den Uplink verwendet, muss für den Downlink 2,11 GHz bis 2,115 GHz benutzt werden. Hier unterscheidet man zwischen Zeit- und Frequenz-Duplexverfahren, auch eine Mischform aus FDD und TDD sind als Halbduplex möglich - dabei nutzen Sender und Empfänger je ein Band pro Richtung, wechseln sich aber beim Zeitmultiplex ab. Daraus resultieren geringere Anforderungen an die Endgeräte, lassen sich also günstiger herstellen."
-            },
-            {
-                "type": "subtitle",
-                "content": "Zeitduplexverfahren - TDD / Time Division Duplex"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f4088d591ef1048612e096f"
-            },
-            {
-                "type": "text",
-                "content": "Bei TDD werden Up- und Downlink Kanäle zeitlich versetzt / hintereinander <b>auf einer Frequenz</b> übertragen. Es wird nur ein Frequenzband benutzt und Sender und Empfänger wechseln sich bei der Übertragung ab. Deshalb ist nur eine RF-Einheit (Radio-Frequenz) für Sende- und Empfangsrichtung notwendig, womit die Übertragungssysteme günstiger werden. Eignet sich für asymmetrische, flexible und kostengünstige Systeme, kommen bevorzugt im lizenzfreien Frequenzbereichen zum Einsatz."
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Frequenzduplexverfahren - FDD / Frequency Division Duplex"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f4088da91ef1048612e0971"
-            },
-            {
-                "type": "text",
-                "content": "Bei FFD werden Up- und Downlink Kanäle gleichzeitig <b>auf zwei unterschiedlichen Frequenzen</b> übertragen, das bedeutet für die Sende- und Empfangsrichtung steht ein gepaartes Frequenzspektrum zur Verfügung. Hier benötigt jede Übertragungsrichtung seine eigene RF-Einheit (Radio-Frequenz), die sehr einfach gestaltet sein kann. Eignet sich für symmetrische Systeme und Anwendungen mit geringer Latenzzeit, kommt typischerweise in lizenzbehafteten Frequenzbereichen zum Einsatz."
-            }
-        ]
-    },
-    {
         "url": "uebertragungstechnik/produktpolitik_und_marketing_1",
         "title": "Produktpolitik & Marketing (1) (ENTWURF)",
         "description": "Mitschrift vom 09.12.2020",
@@ -308,7 +43,9 @@ export const LF8_POSTS: Post[] = [
     },
     {
         "url": "uebertragungstechnik/kommunikationspolitk",
-        "title": "Kommunikationspolitk (ENTWURF)",
+        "_id": "5f429f5f165d0ab470bc57fe",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Kommunikationspolitk",
         "description": "Mitschrift vom 09.02.2021",
         "subject": "lf-8",
         "type": "tasks",
@@ -328,6 +65,8 @@ export const LF8_POSTS: Post[] = [
     },
     {
         "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_werbung",
+        "_id": "602106a765dbdf479177a4c4",
+        "topicId": "60568ab607c61731b8d162ef",
         "title": "Instrumente der Kommunikationspolitk - Werbung (ENTWURF)",
         "description": "Mitschrift vom 10.02.2021",
         "subject": "lf-8",
@@ -347,13 +86,15 @@ export const LF8_POSTS: Post[] = [
         ]
     },
     {
-        "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_oeffentlichkeitsarbeit",
+        "url": "markt_und_kundenbeziehungen/instrumente_der_kommunikationspolitik_oeffentlichkeitsarbeit",
+        "_id": "6042c221b0c00c20f201d16f",
+        "topicId": "60568ab607c61731b8d162ef",
         "title": "Instrumente der Kommunikationspolitk - Öffentlichkeitsarbeit",
         "description": "Mitschrift vom 04.03.2021",
         "subject": "lf-8",
         "type": "article",
         "lessonDate": "2021-03-04",
-        "lastUpdate": "2021-03-13",
+        "lastUpdate": "2021-04-04",
         "schoolWeek": "22",
         "elements": [
             {
@@ -392,6 +133,8 @@ export const LF8_POSTS: Post[] = [
     },
     {
         "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_produktplatzierung",
+        "_id": "604c985bb0c00c20f201d226",
+        "topicId": "60568ab607c61731b8d162ef",
         "title": "Instrumente der Kommunikationspolitk - Produktplatzierung",
         "description": "Mitschrift vom 04.03.2021",
         "subject": "lf-8",
@@ -466,6 +209,8 @@ export const LF8_POSTS: Post[] = [
     },
     {
         "url": "uebertragungstechnik/instrumente_der_kommunikationspolitik_verkaufsfoerderung",
+        "_id": "6059d3be1197a87e0b452a48",
+        "topicId": "60568ab607c61731b8d162ef",
         "title": "Instrumente der Kommunikationspolitk - Verkaufsförderung",
         "description": "Mitschrift vom 23.03.2021",
         "subject": "lf-8",
@@ -501,11 +246,11 @@ export const LF8_POSTS: Post[] = [
         "_id": "6059d3d51197a87e0b452a49",
         "topicId": "60568ab607c61731b8d162ef",
         "title": "Instrumente der Kommunikationspolitk - Sponsoring",
-        "description": "Mitschrift vom 26.03.2021",
+        "description": "Mitschrift vom 25.03.2021",
         "subject": "lf-8",
         "type": "article",
-        "lessonDate": "2021-03-26",
-        "lastUpdate": "2021-03-26",
+        "lessonDate": "2021-03-25",
+        "lastUpdate": "2021-05-20",
         "schoolWeek": "23",
         "elements": [
             {
@@ -514,7 +259,31 @@ export const LF8_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Beim Sponsoring ..."
+                "content": "Sponsoring bietet als Kommunikationsinstrument für Unternehmen viel Potential, welches nicht zuletzt darauf zurückzuführen ist, dass Sponsoring sich auf gesellschaftliche Gebiete wie Sport und Kultur bezieht. Doch woran liegt es, dass Sponsoring ein so beliebtes Kommunikationsinstrument bei Unternehmen ist, und was muss berücksichtigt werden damit es erfolgsversprechend werden kann?"
+            },
+            {
+                "type": "text",
+                "content": "Der Begriff Sponsoring stammt aus dem Englischen und bedeutet so viel wie Förderer oder Geldgeber. In der Literatur besteht bis heute keine einheitliche Definition vom Sponsoring, was zu Unstimmigkeiten in der Gesellschaft und zu Begriffsdiskusionen in der Literatur führt."
+            },
+            {
+                "type": "text",
+                "content": "Unter Sponsoring versteht man die Bereitstellung von Finanz, Sach- und/oder Dienstleistungen, durch den Sponsor, für einen von ihm ausgesuchten Gesponserten, mit der Absicht den Gesponserten zu fördern und/oder kommunikationspolitische Ziele zu erreichen, wobei dem Gesponserten das Recht der Kommunikativen Nutzung durch vertragliche Vereinbarungen gewährt wird."
+            },
+            {
+                "type": "subtitle",
+                "content": "Ursprung"
+            },
+            {
+                "type": "text",
+                "content": "Das heutige Sponsoring hat eine weitreichende Vorgeschichte. Um die Jahre 70 v. Chr. förderte der Römer Galius Clinius Maecenas (Freund & Berater des damaligen Römischen Kaiser Augustus) die Entstehung wichtiger Weltliteratur. Aus Maecenas Namen leitet sich der heutige Begriff des Mäzenatentums ab, welcher die Förderung von Kultur und der Gemeinschaft durch Personen und Organisationen ohne Gegenleistung bedeutet."
+            },
+            {
+                "type": "hint",
+                "content": "<b>Mä·zen, Mäzenin</b><br/>Person, die künstlerische, kulturelle oder sportliche Tätigkeiten finanziell fördert"
+            },
+            {
+                "type": "text",
+                "content": "Als aktuelles Beispiel eines Mäzens ist der SAP Mitgründer Hans-Werner Hector zu nennen, dieser untertützt unter anderem soziale Projekte wie Behindertenheime oder Anlaufstellen für Jugendliche in Not. Aus dem Mäzenatentum entwickelte sich später das Spendenwesen heraus, auch Corporate Giving genannt, worunter man die Förderung Gemeinnütziger Organisationen durch Personen oder Unternehmen versteht."
             },
             {
                 "type": "line",
@@ -524,21 +293,245 @@ export const LF8_POSTS: Post[] = [
                 "type": "list",
                 "content": "Quellen:",
                 "list": [
-                    "<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>",
-                    "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"
+                    "Sponsoring als Kommunikationsinstrument, Tom Toerne | 17.04.2021 | <a href='https://www.grin.com/document/190793#:~:text=Betrachtet%20man%20Sponsoring%20aus%20Unternehmenssicht,zu%20unterst%C3%BCtzen%20und%20zu%20erg%C3%A4nzen.'>https://www.grin.com/document/190793#:~:text=Betrachtet%20man%20Sponsoring%20aus%20Unternehmenssicht,zu%20unterst%C3%BCtzen%20und%20zu%20erg%C3%A4nzen.</a>"
                 ]
             }
         ]
     },
     {
-        "url": "uebertragungstechnik/distributionspolitik",
+        "url": "markt_und_kundenbeziehungen/distributionspolitik",
+        "_id": "605c9a8f23779759b9bb2912",
+        "topicId": "60568ab607c61731b8d162ef",
         "title": "Distributionspolitik",
-        "description": "Mitschrift vom 25.03.2021",
+        "description": "Mitschrift vom 26.03.2021",
         "subject": "lf-8",
         "type": "article",
-        "lessonDate": "2021-03-25",
-        "lastUpdate": "2021-03-25",
+        "lessonDate": "2021-03-26",
+        "lastUpdate": "2021-05-18",
         "schoolWeek": "23",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Die Distributionspolitik - auch Vertriebspolitk genannt - bezeichnet alle Entscheidungen und Maßnahmen, welche den Vertrieb und Absatzweg von Produkten oder Dienstleistungen vom Hersteller bis zum Endkunden betreffen."
+            },
+            {
+                "type": "hint",
+                "content": "Ziel ist es, dem Abnehmer das <u>richtige Produkt</u>, in der <u>richtigen Menge</u>, zur <u>richtigen Zeit</u> am <u>richtigen Ort</u> zur Verfügung zu stellen."
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Wahl des Distributionskanals/Vertriebskanals",
+                    "Auswahl der Distributionsorgane (Mitarbeiter des Unternehmens, z. B. Vekaufsstellen)",
+                    "Distributionslogistik (physische Distribution)"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Ziele"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Optimale Verfügbarkeit des Produktes / der Dienstleistung",
+                    "Minimierung der Kosten für Personal, Transport und Lagerung",
+                    "Möglichkeit des Herstellers, die Vermarktung und Präsentation seiner Produkte beeinflussen zu können"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Die Vielzahl der möglichen Vertriebswege muss durch das anbeitende Unternehmen auf eine effiziente Anzahl beschränkt werden. Unabhängig von der spezifischen Wahl existieren zwei Grundstrukturen zur Überwindung der Distanzen zwischen dem Hersteller und den Verbrauchern oder Verwendern:",
+                "list": [
+                    "Ein <b>Direktvertrieb</b> liegt vor, wenn zwischen Produzent und Verbraucher keine unternehmensfremde Institution das Eigentum an der Leistung erwirbt",
+                    "Von <b>indirektem Vertrieb</b> wird gesprochen, wenn zwischen Produzent und Konsument unternehmensfremde Institutionen zwischengeschaltet sind (Händler etc.), die auch zwischenzeitlich Eigentümer der Waren werden"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/605c9a6c23779759b9bb2910",
+                "size": "l"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Vor- und Nachteile direkter und indirekter Vertrieb (Unternehmersicht)"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "<u>Direkter Vertrieb</u>" },
+                            { "align": "left", "content": "<u>Indirekter Vertrieb</u>" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Vorteile" },
+                            { "align": "left", "content": "Vorteile" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Mehr Nähe zum Kunden, Imageverbesserung." },
+                            { "align": "left", "content": "übernehmen Verkauf & Risiko (Wertverlust), Lagerhaltung, Auslieferung, Sortimentgestaltung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Eigene Preisgestaltung und Kosteneinsparung durch fehlenden Zwischenhändler" },
+                            { "align": "left", "content": "Flächendeckender Kundenkontakt - Absatzmittler haben guten Kundenkontakt" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Höhere Qualitätssicherung" },
+                            { "align": "left", "content": "Bei geringen Absatz kostengünstig" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Nachteile" },
+                            { "align": "left", "content": "Nachteile" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Teures Vertriebs- und Servicenetz notwendig" },
+                            { "align": "left", "content": "Geringerer Umsatz pro Stück" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "" },
+                            { "align": "left", "content": "Verlust der KOntrolle über den Absatz (z. B. Handel beeinflusst mitunter negativ, Imageverfälschung)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "" },
+                            { "align": "left", "content": "Keine Erhebung von Daten über Kunden und deren Einkaufsverhalten" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Marketing » Marketingmix » Distributionspolitik | 18.04.2021 | <a href='https://bwl-wissen.net/definition/distributionspolitik'>https://bwl-wissen.net/definition/distributionspolitik</a>",
+                    "Distributionspolitik – Der Weg ist das Ziel | 18.04.2021 | <a href='https://www.marketinginstitut.biz/blog/distributionspolitik/'>https://www.marketinginstitut.biz/blog/distributionspolitik/</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "markt_und_kundenbeziehungen/marketingmix_und_produktlebenszyklus",
+        "_id": "60a41b0c59a0005b1c634b22",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Marketing-Mix und Produktlebenszyklus",
+        "description": "Mitschrift vom 18.05.2021",
+        "subject": "lf-8",
+        "type": "article",
+        "lessonDate": "2021-05-18",
+        "lastUpdate": "2021-05-18",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Die zielgerichtete Koordination der Marketinginstrumente wird als Marketing-Mix bezeichnet. Dabei werden die einzelnen Marketinginstrumente bestmöglich aufeinander abgestimmt, um die Umsatzziele zu erreichen und alle Marktbereiche abzudecken. Unter diesem Begriff werden alle Entscheidungen und Handlungen zusammengefasst, die eine erfolgreiche Vermarktung von Produkten und Dienstleistungen ermöglichen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a41b7159a0005b1c634b23",
+                "size": "l"
+            },
+            {
+                "type": "text",
+                "content": "Der Marketing-Mix setzt sich aus vier verschiedenen Kommunikationsinstrumenten / Teilpolitiken zusammen."
+            },
+            {
+                "type": "list",
+                "content": "Die \"4 P's\" sind:",
+                "list": [
+                    "Produktpolitik (engl. <i>Product</i>)",
+                    "Preispolitik (engl. <i>Price</i>)",
+                    "Distributionspolitik (engl. <i>Place</i>)",
+                    "Kommunikationspolitik (engl. <i>Promotion</i>)"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Der Grundsatz des Marketing-Mix ist folgender:"
+            },
+            {
+                "type": "hint",
+                "content": "Das Ziel der Distributionspolitik ist es dem Abnehmer das richtige <u>Produkt</u> in der richtigen <u>Menge</u>, zur richtigen <u>Zeit</u>, im richtigen <u>Zustand</u> und am richtigen <u>Ort</u> zur Verfügung zu stellen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Marketing-Mix – BWL-Lexikon.de | 18.05.2021 | <a href='https://www.bwl-lexikon.de/wiki/marketing-mix/'>https://www.bwl-lexikon.de/wiki/marketing-mix/</a>",
+                    "Die 4Ps des Marketing-Mix verständlich erklärt – SmartMarketingBreaks | 18.05.2021 | <a href='https://smartmarketingbreaks.eu/was-ist-der-marketing-mix/'>https://smartmarketingbreaks.eu/was-ist-der-marketing-mix/</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "markt_und_kundenbeziehungen/preispolitk",
+        "_id": "60aa84d96f1e34465948184b",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Preispolitk",
+        "description": "Mitschrift vom 20.05.2021",
+        "subject": "lf-8",
+        "type": "article",
+        "lessonDate": "2021-05-20",
+        "lastUpdate": "2021-05-23",
+        "schoolWeek": "25",
         "elements": [
             {
                 "type": "title",
@@ -547,22 +540,6 @@ export const LF8_POSTS: Post[] = [
             {
                 "type": "text",
                 "content": "..."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/605c9a6c23779759b9bb2910",
-                "size": "m"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "list",
-                "content": "Quellen:",
-                "list": [
-                    "<a href=''></a>"
-                ]
             }
         ]
     },

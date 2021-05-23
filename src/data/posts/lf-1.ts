@@ -1,14 +1,17 @@
+import { ArticleData } from '../../app/new-post-models/post-article';
 import {Post} from '../../app/models/post';
 
 export const LF1_POSTS: Post[] = [
     {
-        "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
-        "title": "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
-        "description": "Aufgaben vom 03.09.2019",
+        "url": "der_betrieb_und_sein_umfeld/umsatzrendite_berechnen",
+        "_id": "5f429107165d0ab470bc57ca",
+        "topicId": "6056185736ac2b24829ca2f4",
+        "title": "Umsatzrendite berechnen",
+        "description": "Thema vom 03.09.2019",
         "subject": "lf-1",
         "type": "tasks",
         "lessonDate": "2019-09-03",
-        "lastUpdate": "2020-10-29",
+        "lastUpdate": "2021-05-15",
         "schoolWeek": "2",
         "elements": [
             {
@@ -123,12 +126,14 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "der_betrieb_und_sein_umfeld/testartikel_url",
+        "_id": "605a469942f5481a20c97627",
+        "topicId": "6056185736ac2b24829ca2f4",
         "title": "Testartikel",
-        "description": "Aufgaben vom 01.01.2000",
+        "description": "Thema vom 01.01.2000",
         "subject": "lf-1",
         "type": "article",
         "lessonDate": "2000-01-01",
-        "lastUpdate": "2021-03-23",
+        "lastUpdate": "2021-05-15",
         "schoolWeek": "0",
         "elements": [
             {
@@ -340,12 +345,14 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
+        "_id": "5f42929e165d0ab470bc57cb",
+        "topicId": "6056185f36ac2b24829ca2f5",
         "title": "Wie entsteht aus einem Bedürfnis der Bedarf?",
-        "description": "Mitschrift vom 28.10.2019",
+        "description": "Thema vom 28.10.2019",
         "subject": "lf-1",
         "type": "article",
         "lessonDate": "2019-10-28",
-        "lastUpdate": "2021-01-06",
+        "lastUpdate": "2021-05-15",
         "schoolWeek": "4",
         "elements": [
             {
@@ -361,89 +368,79 @@ export const LF1_POSTS: Post[] = [
                 "content": "Bedürfnisse sind Wünsche, die durch Mangelempfindungen hervorgerufen werden. Daraus lässt sich ein Geschäft machen, sofern das Verlangen noch nicht gestillt wurde."
             },
             {
+                "type": "text",
+                "content": "<b>Güter</b> lassen sich unterteilen in <u>Wirtschaftsgüter</u> (knappe Güter) und <u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
+            },
+            {
+                "type": "list",
+                "content": "<b>Wirtschaftsgüter</b> lassen sich unterteilen in …",
+                "list": [
+                    {
+                        "content": "<u>Dienstleistungsgüter</u>",
+                        "sublist": [
+                            "Spedition",
+                            "Beratung",
+                            "Handel",
+                            "Versicherungen",
+                            "Banken"
+                        ]
+                    },
+                    {
+                        "content": "<u>Informationsgüter</u>",
+                        "sublist": [
+                            "Fernsehübertragungen",
+                            "Bücher",
+                            "Medien wie Filme und Musik"
+                        ]
+                    },
+                    {
+                        "content": "<u>Rechtegüter</u>",
+                        "sublist": [
+                            "Patent",
+                            "Gütezeichen",
+                            "Lizenz",
+                            "Marke",
+                            "Wegerecht"
+                        ]
+                    },
+                    {
+                        "content": "<u>Sachgüter</u>",
+                        "sublist": [
+                            "Materielle Güter"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "<b>Sachgüter</b> lassen sich unterteilen in <u>Produktionsgüter</u> (Investitionsgüter) und <u>Konsumgüter</u>"
+            },
+            {
+                "type": "list",
+                "content": "<b>Investitionsgüter</b> & <b>Konsumgüter</b> lassen sich unterteilen in ...",
+                "list": [
+                    {
+                        "content": "<u>Gebrauchsgüter</u>",
+                        "sublist": [
+                            "LKW (Maschine)",
+                            "Privat PKW",
+                            "Möbel"
+                        ]
+                    },
+                    {
+                        "content": "<u>Verbrauchsgüter</u>",
+                        "sublist": [
+                            "Diesel (LKW)",
+                            "Öl (Maschine)",
+                            "Benzin für privat KPW",
+                            "Lebensmittel"
+                        ]
+                    }
+                ]
+            },
+            {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5ed10a582053a17208e0a5ac"
-            },
-            {
-                "type": "text",
-                "content": "Güter lassen sich unterteilen in ..."
-            },
-            {
-                "type": "text",
-                "content": "<u>Wirtschaftsgüter</u> (knappe Güter) und <u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "text",
-                "content": "Wirtschaftsgüter lassen sich unterteilen in …"
-            },
-            {
-                "type": "list",
-                "content": "<u>Dienstleistungsgüter</u>",
-                "list": [
-                    "Spedition",
-                    "Beratung",
-                    "Handel",
-                    "Versicherungen",
-                    "Banken"
-                ]
-            },
-            {
-                "type": "list",
-                "content": "<u>Rechtegüter</u>",
-                "list": [
-                    "Patent",
-                    "Gütezeichen",
-                    "Lizenz",
-                    "Marke",
-                    "Wegerecht"
-                ]
-            },
-            {
-                "type": "text",
-                "content": "und <u>Sachgüter</u> (materielle Güter)"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "text",
-                "content": "Sachgüter lassen sich unterteilen in …"
-            },
-            {
-                "type": "text",
-                "content": "<u>Produktionsgüter</u> (Investitionsgüter) und <u>Konsumgüter</u>"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "text",
-                "content": "Investitionsgüter & Konsumgüter lassen sich unterteilen in ..."
-            },
-            {
-                "type": "list",
-                "content": "<u>Verbrauchsgüter</u>",
-                "list": [
-                    "Diesel (LKW)",
-                    "Öl (Maschine)",
-                    "Benzin für privat KPW",
-                    "Lebensmittel"
-                ]
-            },
-            {
-                "type": "list",
-                "content": "<u>Gebrauchsgüter</u>",
-                "list": [
-                    "LKW (Maschine)",
-                    "Privat PKW",
-                    "Möbel"
-                ]
             },
             {
                 "type": "line",
@@ -460,6 +457,8 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
+        "_id": "5f429451165d0ab470bc57cf",
+        "topicId": "6056185f36ac2b24829ca2f5",
         "title": "Aufgaben der Betriebe & Unternehmen",
         "description": "Mitschrift vom 28.10.2019",
         "subject": "lf-1",

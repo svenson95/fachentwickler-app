@@ -511,26 +511,6 @@ export const LF7_1_POSTS: Post[] = [
         ]
     },
     {
-        "url": "e_technik/test",
-        "title": "Leistungskontrolle - Topologien (ENTWURF)",
-        "description": "Test vom 20.11.2020",
-        "subject": "lf-7-1",
-        "type": "test",
-        "lessonDate": "2020-11-20",
-        "lastUpdate": "2020-12-20",
-        "schoolWeek": "18",
-        "elements": [
-            {
-                "type": "title",
-                "content": "Definition"
-            },
-            {
-                "type": "text",
-                "content": "Entwurfstext"
-            }
-        ]
-    },
-    {
         "url": "e_technik/widerstandsberechnung_2",
         "title": "Widerstandsberechnung (2) (ENTWURF)",
         "description": "Mitschrift vom 08.12.2020",
@@ -576,6 +556,7 @@ export const LF7_1_POSTS: Post[] = [
     },
     {
         "url": "e_technik/grundlagen_der_uebertragungstechnik_1",
+        "_id": "603eb6efb0c00c20f201d122",
         "title": "Aufgaben - Grundlagen der Übertragungstechnik",
         "description": "Mitschrift vom 02.03.2021",
         "subject": "lf-7-1",
@@ -611,27 +592,23 @@ export const LF7_1_POSTS: Post[] = [
         ]
     },
     {
-        "url": "e_technik/grundlagen_der_uebertragungstechnik_2",
+        "url": "e_technik/grundlagen_der_uebertragungstechnik",
         "_id": "60428445b0c00c20f201d168",
         "title": "Grundlagen der Übertragungstechnik",
         "description": "Mitschrift vom 02.03.2021",
         "subject": "lf-7-1",
         "type": "article",
         "lessonDate": "2021-03-03",
-        "lastUpdate": "2021-03-05",
+        "lastUpdate": "2021-05-18",
         "schoolWeek": "22",
         "elements": [
-            {
-                "type": "title",
-                "content": "LF-7-1"
-            },
             {
                 "type": "title",
                 "content": "Definition"
             },
             {
                 "type": "text",
-                "content": "Übertragung von Wirkungen mit Hilfe elektrischer, magnetischer oder optischer Größen"
+                "content": "Die Übertragung von Wirkungen mit Hilfe elektrischer, magnetischer oder optischer Größen"
             },
             {
                 "type": "list",
@@ -655,6 +632,324 @@ export const LF7_1_POSTS: Post[] = [
                     "Text",
                     "Daten"
                 ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Formen der Information"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Geben Sie eine Darstellung für einen einfachen Fall der Zuordnung von Signal und Information aus dem Alltagsleben",
+                        "sublist": [
+                            "Antwort"
+                        ]
+                    },
+                    {
+                        "content": "Nennen Sie typische Störsignale, die alltäglich bei Radio und Fernsehen möglich sind",
+                        "sublist": [
+                            "Antwort"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Kommunikation"
+            },
+            {
+                "type": "text",
+                "content": "Einseitiger oder wechselseitiger Austausch von Informationen zwischen Menschen, technischen Einrichtungen oder Menschen und technischen Einrichtungen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Prinzip der Nachrichtenübertragung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2dfa463931e24491ca436",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Nutzsignal und Störsignal bei der Nachrichtenübertragung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2dff163931e24491ca438",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Frage: Beschreiben Sie ein einfaches System einer Nachrichtenübertragung anhand eines Telefongespräches."
+            },
+            {
+                "type": "text",
+                "content": "Antwort ..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die drei Formen der Übertragung"
+            },
+            {
+                "type": "subtitle",
+                "content": "Geführte Übertragung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2e09163931e24491ca43b",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Ungeführte Übertragung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2e0a163931e24491ca43d",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Materielle Übertragung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2e09163931e24491ca43b",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Lösungen der Aufgaben",
+                "list": [
+                    {
+                        "content": "Frage: <b>Worin besteht das Prinzip der elektrischen Nachrichtenübertragungstechnik?</b>",
+                        "sublist": [
+                            "Übertragung von Nachrichten über Entfernungen mit Hilfe elektrischer und magnetischer Größen"
+                        ]
+                    },
+                    {
+                        "content": "Frage: <b>Formulieren Sie in Stichworten die Aufgaben der Nachrichtentechnik</b>",
+                        "sublist": [
+                            "<u>Übertragung</u>, <u>Verarbeitung</u> und <u>Speicherung</u> von Signalen."
+                        ]
+                    },
+                    {
+                        "content": "Frage: <b>Welche Aufgabe hat das Signal in der Nachrichtenübertragungstechnik</b>",
+                        "sublist": [
+                            "Das Signal ist die physikalische Repräsentation der Information, welche die Nachrichten beinhaltet"
+                        ]
+                    },
+                    {
+                        "content": "Frage: <b>Warum wird bei jedem Übertragungssystem ein Sender benötigt?</b>",
+                        "sublist": [
+                            "Er dient zur Anpassung des Signals an die Eigenschaften des Übertragungskanals",
+                            "Zur Aufnahme, Umwandlung, Modulation, Codierung und Verarbeitung"
+                        ]
+                    },
+                    {
+                        "content": "Frage: <b>In welchem Verhältnis müssen Nutzsignal und Störsignal stehen, um eine möglichst hohe Qualität einer Übertragung zu bewirken? Begründen Sie Ihre Antwort!</b>",
+                        "sublist": [
+                            "Das Störsignal soll gegenüber dem Nutzsignal möglichst klein sein, da nur das Nutzsignal für die Nachrichtensenke interessante Nachrichten enthält"
+                        ]
+                    },
+                    {
+                        "content": "Frage: <b>Beschreiben Sie die wesentlichen Unterschiede zwischen den verschiedenen Übertragungsarten</b>",
+                        "sublist": [
+                            "Geführte Übertragung",
+                            "Ungeführte Übertragung",
+                            "Materielle Übertragung"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Grundgrößen der Übertragungstechnik"
+            },
+            {
+                "type": "subtitle",
+                "content": "Gleichspannung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2e8b959a0005b1c634a98",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Periodischer Spannungsverlauf"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2e8c459a0005b1c634a9a",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Maximalwert und Minimalwert"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2ea3d59a0005b1c634a9c",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Sinusförmige Zeitfunktion"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2ea4d59a0005b1c634a9e",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zusammenhang zwischen Sinus und Kosinus"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2eab659a0005b1c634aa0",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiel"
+            },
+            {
+                "type": "text",
+                "content": "Für den dargestellten Spannungsverlauf ist der lineare Mittelwert zu ermitteln."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2f0ed59a0005b1c634aad",
+                "size": "s"
+            },
+            {
+                "type": "text",
+                "content": "Aus der Zeichnung entnehmen wir die zu den Zeitpunkten t<sub>1</sub>...t<sub>10</sub> gehörenden Spannugnswerte u<sub>1</sub>...u<sub>10</sub> und setzen diese in folgende Gleichung ein:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2ee1459a0005b1c634aa4",
+                "size": "s"
+            },
+            {
+                "type": "text",
+                "content": "Der lineare Mittelwert beträgt also angenähert 1,6 V."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiel Strom"
+            },
+            {
+                "type": "subtitle",
+                "content": "Stromrichtungen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2ee6459a0005b1c634aa6",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiel Leistung"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leistung bei Kapazität"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2ef2d59a0005b1c634aa9",
+                "size": "m"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leistung bei Induktivität"
+            },
+            {
+                "type": "text",
+                "content": "Wirkleistung <i>P</i> (Einheit: W)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a2ef3859a0005b1c634aab",
+                "size": "m"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fragen zu den Grundgrößen"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "In welcher Weise kann ein beliebiger Punkt P in einem rechtwinkligen Koordinatensystem beschrieben werden?",
+                        "sublist": [
+                            "..."
+                        ]
+                    },
+                    {
+                        "content": "Wie groß ist der lineare Mittelwert eines rechtförmigen Spannungsverlaufes mit Mittelwert û = 5,2 V und Mittelwert û = 5,2 V?",
+                        "sublist": [
+                            "..."
+                        ]
+                    },
+                    {
+                        "content": "Welche Bedeutung hat der Effektivwert der Spannung bzw. des Stromes bezogen auf die umgesetzte Leistung?",
+                        "sublist": [
+                            "..."
+                        ]
+                    },
+                    {
+                        "content": "Wodurch unterscheiden sich die Wirkleistung P und die Blindleistung Q?",
+                        "sublist": [
+                            "..."
+                        ]
+                    },
+                    {
+                        "content": "Unter welchen Umständen nimmt eine Impedanz einen reinen reelen Wert an? Welcher Phasenwinkel tritt dabei auf?",
+                        "sublist": [
+                            "..."
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -666,7 +961,7 @@ export const LF7_1_POSTS: Post[] = [
         "subject": "lf-7-1",
         "type": "article",
         "lessonDate": "2021-03-22",
-        "lastUpdate": "2021-03-26",
+        "lastUpdate": "2021-04-19",
         "schoolWeek": "23",
         "elements": [
             {
@@ -700,12 +995,12 @@ export const LF7_1_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/6058502037cdbc38e21c700a",
-                "size": "s"
+                "size": "m"
             },
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/6058502b37cdbc38e21c700e",
-                "size": "s"
+                "size": "m"
             },
             {
                 "type": "line",
@@ -775,7 +1070,7 @@ export const LF7_1_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/605d677a59bf25747400349a",
-                "size": "s"
+                "size": "m"
             },
             {
                 "type": "line",
@@ -801,7 +1096,7 @@ export const LF7_1_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/605d68b159bf25747400349e",
-                "size": "s"
+                "size": "m"
             },
             {
                 "type": "line",
@@ -813,14 +1108,14 @@ export const LF7_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "..."
+                "content": ""
             },
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/605d6a4359bf2574740034a0"
             },
             {
-                "type": "text",
+                "type": "subtitle",
                 "content": "Formel"
             },
             {
@@ -846,24 +1141,137 @@ export const LF7_1_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "subtitle",
+                "type": "title",
                 "content": "Leitungskennwerte"
             },
             {
+                "type": "subtitle",
+                "content": "Widerstands-Kennwert"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/607de116c89cea0d6cda00f2",
+                "size": "l"
+            },
+            {
                 "type": "text",
-                "content": "..."
+                "content": "Zusammenfassend alle Kennwerte und ihre Maßeinheiten:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/607de287c89cea0d6cda00f4",
+                "size": "m"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "In der Tabelle sind für einige Leitungsarten die Leitungskennwerte bei f = 800 Hz angegeben:"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Leitungsart" },
+                            { "align": "left", "content": "Leiter-Werkstoff" },
+                            { "align": "middle", "content": "Durchmesser <br/> mm" },
+                            { "align": "middle", "content": "R‘ <br/> Ω/km" },
+                            { "align": "middle", "content": "C‘ <br/> nF/km" },
+                            { "align": "middle", "content": "L‘ <br/> mH/km" },
+                            { "align": "middle", "content": "G‘ <br/> μS/km" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Freileitung" },
+                            { "align": "left", "content": "Bronze <br/> Hartkupfer" },
+                            { "align": "middle", "content": "2 <br/> 3" },
+                            { "align": "middle", "content": "17,7 <br/> 5,5" },
+                            { "align": "middle", "content": "5,4 <br/> 6,0" },
+                            { "align": "middle", "content": "2,2 <br/> 2,0" },
+                            { "align": "middle", "content": "1 <br/> 1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kabelleitung, symmetrisch, sternverteilt", "rowSpan": 2 },
+                            { "align": "left", "content": "Kupfer, Isolierung mit Papier oder Zell-Polyethylen", "rowSpan": 2 },
+                            { "align": "middle", "content": "0,4 <br/> 0,6 <br/> 0,8" },
+                            { "align": "middle", "content": "300 <br/> 130 <br/> 73,2" },
+                            { "align": "middle", "content": "36 <br/> 38 <br/> 40" },
+                            { "align": "middle", "content": "0,7 <br/> 0,7 <br/> 0,7" },
+                            { "align": "middle", "content": "0,1 <br/> 0,1 <br/> 0,1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0,9 <br/> 1,2 <br/> 1,4" },
+                            { "align": "middle", "content": "56,6 <br/> 31,8 <br/> 23,4" },
+                            { "align": "middle", "content": "34 <br/> 35 <br/> 36" },
+                            { "align": "middle", "content": "0,7 <br/> 0,7 <br/> 0,7" },
+                            { "align": "middle", "content": "0,1 <br/> 0,1 <br/> 0,1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Nach Umwandlung der Gleichung für R’ lässt sich aus den Kennwerten z. B. die Leitungslänge berechnen."
+            },
+            {
+                "type": "text",
+                "content": "<b>Beispiel: Kabellänge<b/> <br/> Eine Kabelleitung mit Kupferleitern von 0,6 mm Durchmesser hat einen Widerstandswert <i>R</i> = 676 Ω. <br/> Wie lang ist das Kabel?"
+            },
+            {
+                "type": "text",
+                "content": "l = 676 Ω x km / 130 Ω <br/> l = <u>5,2 km</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Ersatzschaltbild einer Leitung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/607de583c89cea0d6cda00f6",
+                "size": "s"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/607de5d2c89cea0d6cda00f8",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wirkung der Leitungsgrößen"
+            },
+            {
+                "type": "text",
+                "content": "Die Leitungsgrößen <i>R</i> und <i>L</i> rufen Spannungsfälle hervor, die die Ausgangsspannung <i>U<sub>2</sub></i> der Leitung herabsetzen. Die Leitungsgrößen <i>C</i> und <i>G</i> lassen Querströme fließen, die die Ausgangsstromstärke <i>I<sub>2</sub></i> herabsetzen."
             }
         ]
     },
     {
         "url": "e_technik/begriffe_der_uebertragungstechnik",
         "_id": "605c84de23779759b9bb2901",
+        "topicId": "6056854807c61731b8d162ec",
         "title": "Begriffe der Übertragungstechnik",
         "description": "Mitschrift vom 23.03.2021",
         "subject": "lf-7-1",
         "type": "article",
         "lessonDate": "2021-03-23",
-        "lastUpdate": "2021-03-26",
+        "lastUpdate": "2021-05-18",
         "schoolWeek": "23",
         "elements": [
             {
@@ -978,6 +1386,450 @@ export const LF7_1_POSTS: Post[] = [
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/605c843923779759b9bb28ff",
                 "size": "m"
+            },
+            {
+                "type": "text",
+                "content": "Resonanzfrequenz:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3428159a0005b1c634aba",
+                "size": "m"
+            },
+            {
+                "type": "text",
+                "content": "Beispiel: Durch die Parallelschaltung von C = 330 pF und L = 47 µH wird ein Resonanzkreis gebildet. Bei welcher Frequenz tritt Resonanz auf?"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Filter"
+            },
+            {
+                "type": "text",
+                "content": "Filter sind aktive oder passive Vierpole"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a342cb59a0005b1c634abe",
+                "size": "s"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "ordered": true,
+                "list": [
+                    "Es werden nur alle Frequenzen <b>unterhalb</b> einer Grenzfrequenz <b>durchgelassen</b> = Tiefpaß (TP) [engl. <i>lowpass</i>]",
+                    "Es werden nur alle Frequenzen <b>oberhalb</b> einer Grenzfrequenz <b>durchgelassen</b> = Hochpaß (HP) [engl. <i>highpass</i>]",
+                    "Es werden nur alle Frequenzen <b>zwischen</b> zwei Grenzfrequenzen <b>durchgelassen</b> = Bandpaß (BP) [engl. <i>bandpass</i>]",
+                    "Es werden nur alle Frequenzen <b>zwischen</b> zwei Grenzfrequenzen <b>gesperrt</b> = Bandsperre (BS) [engl. <i>bandstop</i>]"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Grenzfrequenzen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a343dc59a0005b1c634ac0",
+                "size": "s"
+            },
+            {
+                "type": "text",
+                "content": "Bandbreite = △ƒ = <b/> Differenz zwischen den Grenzfrequenzen ƒ<sub>g</sub>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Spannungs- und Dämpfungsverlauf"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a344c259a0005b1c634ac2",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Tiefpaß"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wirkungsweise des Tiefpaßes"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3457559a0005b1c634ac4",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Passive Tiefpässe"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3458959a0005b1c634ac6",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aktiver Tiefpaß"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3462559a0005b1c634ac8",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Hochpaß"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wirkungsweise des Hochpaßes"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3463059a0005b1c634aca",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Passiver Hochpaß"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3466459a0005b1c634acc",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Bandpaß"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wirkungsweise des Bandpaßes"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3472059a0005b1c634ace",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Durchlaßkurven"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3472e59a0005b1c634ad0",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aktiver Bandpaß"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a34e5b59a0005b1c634ad2",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Bandsperre"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wirkungsweise der Bandsperre"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a34e6859a0005b1c634ad4",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wellenwiderstand"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a34e7459a0005b1c634ad6",
+                "size": "l"
+            },
+            {
+                "type": "text",
+                "content": "Der Eingangsscheinwiderstand der unendlich lang gedachten Leitung heißt <b>Wellenwiderstand Z<sub>w</sub></b>."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3ff1559a0005b1c634b10",
+                "size": "l"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a36c4e59a0005b1c634adc",
+                "size": "s"
+            },
+            {
+                "type": "text",
+                "content": "Die Bezeichnung Wellenwiderstand ist auf den wellenförmig verlaufenden Auf- und Entladevorgang des Kabels zurückzuführen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Berechnung des Wellenwiderstands"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leerlauffall"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b1b759a0005b1c634ae4",
+                "size": "m"
+            },
+            {
+                "type": "text",
+                "content": "Im <i>Leerlauffall</i> wirken die Größen <i>C</i> und <i>G</i> mehr als <i>R</i> und <i>L</i>, denn es fehlt der durch <i>R<sub>a</sub></i> fließende Strom."
+            },
+            {
+                "type": "subtitle",
+                "content": "Kurzschlussfall"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b1cb59a0005b1c634ae9",
+                "size": "m"
+            },
+            {
+                "type": "text",
+                "content": "Im <i>Kurzschlussfall</i> wirken die Größen <i>R</i> und <i>L</i> stärker als <i>C</i> und <i>G</i>, denn die Kurzschlussstromstärke ist höher als die Betriebsstromstärke durch <i>R<sub>a</sub></i>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leitung mit offenem Ausgang"
+            },
+            {
+                "type": "text",
+                "content": "<i>Ergebnis</i>: <br/> geringere Spannungsfälle <i>U<sub>R</sub></i> und <i>U<sub>L</sub></i> <br/> höhere Querströme <i>I<sub>C</sub></i> und <i>I<sub>G</sub></i>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Leitung mit kurzgeschlossenem Ausgang"
+            },
+            {
+                "type": "text",
+                "content": "<i>Ergebnis</i>: <br/> höhere Spannungsfälle <i>U<sub>R</sub></i> und <i>U<sub>L</sub></i> <br/> geringere Querströme <i>I<sub>C</sub></i> und <i>I<sub>G</sub></i>"
+            },
+            {
+                "type": "text",
+                "content": "Zum Ausgleich dieser Unterschiede wird der geometrische Mittelwert gebildet:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b2fd59a0005b1c634aec",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Leitungsgrößen"
+            },
+            {
+                "type": "subtitle",
+                "content": "Niedrige Frequenzen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b4ef59a0005b1c634aef",
+                "size": "s"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b4ef59a0005b1c634aef",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Hohe Frequenzen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b51159a0005b1c634af3",
+                "size": "s"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b51d59a0005b1c634af5",
+                "size": "s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "Der Wellenwiderstand ist ...",
+                "content": "",
+                "list": [
+                    "bei niedrigen Frequenzen frequenzabhängig",
+                    "bei hohen Frequenzen frequenzabhängig"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel <span class='list-number'>1</span>"
+            },
+            {
+                "type": "text",
+                "content": "Gesucht ist der Wellenwiderstand <i>Z<sub>w</sub> bei einer Leitung mit Kupferadern von 0,6 mm Durchmesser für eine Frequenz <i>f</i> = 800 Hz (<i>R</i> > <i>X<sub>L</sub></i>)."
+            },
+            {
+                "type": "text",
+                "content": "Nach der Tabelle Leitungskennwerte ist ..."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b87c59a0005b1c634af9",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel <span class='list-number'>2</span>"
+            },
+            {
+                "type": "text",
+                "content": "Wie groß ist der Wellenwiderstand <i>Z<ub>W</ub></i> für eine Leitung mit Kupferadern von 1,2 mm Durchmesser für eine Frequenz <i>f</i> = 120 kHz (<i>R</i> < <i>X<sub>L</sub></i>)?"
+            },
+            {
+                "type": "text",
+                "content": "Nach der Tabelle Leitungskennwerte ist ..."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60a3b88859a0005b1c634afb",
+                "size": "s"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/pegel_leistungsberechnung",
+        "_id": "60a414ed59a0005b1c634b18",
+        "topicId": "6056854807c61731b8d162ec",
+        "title": "Pegel Leistungsberechnung",
+        "description": "Mitschrift vom 17.05.2021",
+        "subject": "lf-7-1",
+        "type": "tasks",
+        "lessonDate": "2021-05-17",
+        "lastUpdate": "2021-05-18",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Es werden 57,3 V gemessen. <br/> Wie groß ist der Pegel?"
+            },
+            {
+                "type": "text",
+                "content": "L = 20 x log(573 ÷ 0,775 V) = 37,38 dB"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span> Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "An der ersten Stelle werden 48,7 V gemessen. <br/> An der zweiten Stelle 42,8 V <br/> Dämpfung oder Gewinn?"
+            },
+            {
+                "type": "text",
+                "content": "L = 20 x log(48,7 ÷ 0,775) = 35,96 (aufgerundet) <br/> L = 20 x log(42,8 ÷ 0,775) = 34,84 (aufgerundet) <br/> = -1,12 dB (oder) <br/> = 1,12 dB"
+            },
+            {
+                "type": "hint",
+                "content": "Der Wert kann negativ oder positiv sein, je nachdem was man berechnen möchte."
+            },
+            {
+                "type": "text",
+                "content": "Gewinn-Formel: <br/> L = 20 x log (u1 ÷ u0)"
+            },
+            {
+                "type": "text",
+                "content": "Dämpfungs-Formel: <br/> L = 20 x log (u1 ÷ u2)"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/test",
+        "_id": "60a412f459a0005b1c634b17",
+        "topicId": "6056854807c61731b8d162ec",
+        "title": "Leistungskontrolle - Übertragungstechnik Grundlagen",
+        "description": "Test vom 18.05.2021",
+        "subject": "lf-7-1",
+        "type": "test",
+        "lessonDate": "2021-05-18",
+        "lastUpdate": "2021-05-18",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> Welche Formen der Darstellung von Nachrichten gibt es?"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span> Skizziere das Prinzip der Nachrichtenübertragung mit technischen Details"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>3</span> Beschreibe den Skin-Effekt"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>4</span> Was versteht man unter Terminierung?"
+            },
+            {
+                "type": "text",
+                "content": "..."
             }
         ]
     },

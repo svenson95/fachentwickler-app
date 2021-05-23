@@ -4544,12 +4544,14 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/grundkonzepte_des_er_modells_2",
+        "_id": "60428604b0c00c20f201d16a",
+        "topicId": "605c90fe23779759b9bb2907",
         "title": "Grundkonzepte des ER-Modells",
         "description": "Thema vom 05.03.2021",
         "subject": "lf-6",
         "type": "article",
         "lessonDate": "2021-03-05",
-        "lastUpdate": "2021-03-09",
+        "lastUpdate": "2021-04-08",
         "schoolWeek": "22",
         "elements": [
             {
@@ -4728,7 +4730,8 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6043d019b0c00c20f201d175"
+                "content": "http://159.65.105.150:3000/images/6043d019b0c00c20f201d175",
+                "size": "s"
             },
             {
                 "type": "line",
@@ -4764,7 +4767,8 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6043d046b0c00c20f201d178"
+                "content": "http://159.65.105.150:3000/images/6043d046b0c00c20f201d178",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -4804,7 +4808,8 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6043d055b0c00c20f201d17b"
+                "content": "http://159.65.105.150:3000/images/6043d055b0c00c20f201d17b",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -4821,21 +4826,303 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbank_einrichten_und_abfragen_bereitstellen_aufgabe",
+        "_id": "605c875e23779759b9bb2903",
+        "topicId": "605c90fe23779759b9bb2907",
         "title": "Datenbank einrichten und Abfragen bereitstellen - Aufgabe",
         "description": "Thema vom 24.03.2021",
         "subject": "lf-6",
         "type": "tasks",
         "lessonDate": "2021-03-24",
-        "lastUpdate": "2021-03-25",
+        "lastUpdate": "2021-04-18",
         "schoolWeek": "23",
         "elements": [
             {
                 "type": "title",
-                "content": "Aufgabe"
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "Gegeben"
             },
             {
                 "type": "text",
-                "content": "..."
+                "content": "<span class='list-number'>1</span> Sportkurs-Verwaltung"
+            },
+            {
+                "type": "text",
+                "content": "Für einen Sportverein soll eine Datenbank zur Verwaltung von Kursen entwickelt werden. Dafür wurde bereits folgende Vorlage in Form von Tabellen erstellt."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Kunde" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "KundenID (PK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Nachname" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Vorname" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Straße" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "PLZ" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Ort" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "KundeKurs" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "KundenID (FK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "KursID (FK)" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Kurs" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "KursID (PK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "KursartID (FK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TrainerID (FK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SportstätteID (FK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Datum-Uhrzeit-Beginn" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Preis" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Kursart" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "KursartID (PK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Bezeichnung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SportartID (FK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Teilnehmer-Max" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Trainer" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TrainerID (PK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {"align": "left", "content": "Name"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Sportart" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SportartID (PK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {"align": "left", "content": "Bezeichnung"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "TrainerSportart" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TrainerID (FK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {"align": "left", "content": "SportartID (FK)"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Sportstätte" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "SportstaetteID (PK)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {"align": "left", "content": "Bezeichnung"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Für diese Datenbank sollen Sie einige SQL-Anweisungen und Testdaten erstellen."
+            },
+            {
+                "type": "hint",
+                "content": "Die Teilnehmer-Max in der Tabelle Kursart ist immer größer 0."
+            },
+            {
+                "type": "text",
+                "content": "<b>a) Gewünschte Datenänderung: <br/> Reduzierung der Preise um 10% aller Kurse, die vor 16:00 Uhr beginnen. Erstellen Sie die entsprechende SQL-Anweisung.</b>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>b) Gewünschte Ausgabe: <br/> Liste aller Kunden aus dem Postleitzahlbereich 50000 bis 59999. Auflistung aller Kundenattribute. Aufsteigende Sortierung nach Nachname, Vorname. Erstellen Sie die entsprechende SQL-Anweisung.</b>"
             },
             {
                 "type": "line",
@@ -4878,6 +5165,244 @@ export const LF6_POSTS: Post[] = [
                 "list": [
                     "<a href=''></a>"
                 ]
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/normalisierung_und_normalformen",
+        "_id": "60a5736559a0005b1c634b64",
+        "topicId": "605c90fe23779759b9bb2907",
+        "title": "Normalisierung und Normalformen",
+        "description": "Thema vom 19.05.2021",
+        "subject": "lf-6",
+        "type": "article",
+        "lessonDate": "2021-05-19",
+        "lastUpdate": "2021-05-19",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Unter Normalisierung versteht man die Aufteilung von Attributen in mehrere Relationen (Tabellen) mithilfe der Normalisierungsregeln und deren Normalformen, sodass eine relationale Form entsteht, die keine vermeidbaren Redundanzen mehr enthält."
+            },
+            {
+                "type": "text",
+                "content": "Ziel der Normalisierung ist eine redundanzfreie Datenspeicherung zu erstellen. Redundanzfrei bedeutet, dass keine Daten doppelt vorhanden sind. Redundante Datensätze können entfernt werden, ohne dass es zu Informationsverlusten kommt."
+            },
+            {
+                "type": "hint",
+                "content": "Die Normalisierung einer Datenbank bringt funktionale Abhängigkeiten zwischen den Daten mit sich, es ist eine Möglichkeit relationale Datenbanken zu erhalten. Kann eingesetzt werden um Anomalien zu beseitigen oder Redundanzen zu minimieren."
+            },
+            {
+                "type": "text",
+                "content": "In der Datenbankentwicklung ist die Dritte Normalform oft ausreichend, um die perfekte Balance aus Redundanz, Performance und Flexibilität für eine Datenbank zu gewährleisten. Natürlich gibt es auch Sonderfälle, z.B. im wissenschaftlichen Bereich, wo eine Datenbank bis zur 5. Normalform normalisiert werden kann bzw muss."
+            },
+            {
+                "type": "subtitle",
+                "content": "Vorteile"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Beseitigung von Redundanzen",
+                    "Vermeidung von Anomalien (funktionelle und transitive Abhängigkeiten)",
+                    "Erstellung eines klar strukturierten Datenbankmodells"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Funktionale Abhängigkeit"
+            },
+            {
+                "type": "text",
+                "content": "Eine funktionale Abhängigkeit zwischen Attribut Y und Attribut X liegt dann vor, wenn es zu jedem X genau ein Y gibt."
+            },
+            {
+                "type": "subtitle",
+                "content": "Voll funktionale Abhängigkeit"
+            },
+            {
+                "type": "text",
+                "content": "Eine vollständig funktionale Abhängigkeit liegt dann vor, wenn dass Nicht-Schlüsselattribut nicht nur von einem Teil der Attribute eines zusammengesetzten Schlüsselkandidaten funktional abhängig ist, sondern von allen Teilen eines Relationstyps. Die vollständig funktionale Abhängigkeit wird mit der 2. Normalform (2NF) erreicht."
+            },
+            {
+                "type": "subtitle",
+                "content": "Transitive Abhängigkeit"
+            },
+            {
+                "type": "text",
+                "content": "Eine transitive Abhängigkeit liegt dann vor, wenn Y von X funktional abhängig und Z von Y, so ist Z von X funktional abhängig. Diese Abhängigkeit ist transitiv. Die transitive Abhängigkeit wird mit 3. Normalform (3NF) erreicht."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiel Normalisierungsprozess"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Normalform | 1NF"
+            },
+            {
+                "type": "text",
+                "content": "Eine Relation befindet sich in der ersten Normalform, wenn alle Attribute nur einfache Attributwerte aufweisen (Bezeichnung: atomar)."
+            },
+            {
+                "type": "table",
+                "content": "<b>Relation Lernangebotesübersicht</b>",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "<u>SchülerNr</u>" },
+                            { "align": "left", "content": "Name" },
+                            { "align": "left", "content": "Vorname" },
+                            { "align": "left", "content": "Klasse" },
+                            { "align": "left", "content": "Klassenlehrer" },
+                            { "align": "left", "content": "LernangebotsNr" },
+                            { "align": "left", "content": "Beschreibung" },
+                            { "align": "left", "content": "Zeit in h" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "1" },
+                            { "align": "left", "content": "Jürgens" },
+                            { "align": "left", "content": "Ina" },
+                            { "align": "left", "content": "11a" },
+                            { "align": "left", "content": "Lempel" },
+                            { "align": "left", "content": "2" },
+                            { "align": "left", "content": "Tanz" },
+                            { "align": "left", "content": "12" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "2" },
+                            { "align": "left", "content": "Schmidt" },
+                            { "align": "left", "content": "Tom" },
+                            { "align": "left", "content": "12a" },
+                            { "align": "left", "content": "Breier" },
+                            { "align": "left", "content": "3" },
+                            { "align": "left", "content": "Chor" },
+                            { "align": "left", "content": "22" }
+                        ]
+                    },
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Normalisierung von Datenbanken - Datenbanken verstehen | 19.05.2021 | <a href='https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung'>https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung</a>",
+                    "Normalisierung und Abhängigkeiten - Datenbanken verstehen | 19.05.2021 | <a href='https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/abhaengigkeiten-normalisierung'>https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/abhaengigkeiten-normalisierung</a>",
+                    "Normalisierung von Datenbanken - Informatikmaterialien von Tino Hempel | 19.05.2021 | <a href='https://www.tinohempel.de/info/info/datenbank/normalisierung.htm'>https://www.tinohempel.de/info/info/datenbank/normalisierung.htm</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/uebungen_zum_thema_normalisierung",
+        "_id": "60aa77286f1e34465948183e",
+        "topicId": "605c90fe23779759b9bb2907",
+        "title": "Übungen zum Thema Normalisierung",
+        "description": "Thema vom 19.05.2021",
+        "subject": "lf-6",
+        "type": "tasks",
+        "lessonDate": "2021-05-19",
+        "lastUpdate": "2021-05-19",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>1</span> <b>Aufgabe | Leicht | 25 Punkte</b>"
+            },
+            {
+                "type": "text",
+                "content": "Die rapidPack GmbH stellt Maschinen aus verschiedenen Teilen her und will für ein neues Teilebestellsystem eine Datenbank entwickeln. Ein grober, noch unvollständiger Entwurf der Datenbank liegt bereits vor."
+            },
+            {
+                "type": "list",
+                "content": "a) Vervollständigen Sie das Datenmodell.",
+                "list": [
+                    "Ergänzen Sie in den Tabellen <i>Teil</i>, <i>Bestellung</i>, <i>Lieferer</i> und <i>BestellPosition</i> die erforderlichen Attribute",
+                    {
+                        "content": "Ergänzen Sie die leere Tabelle, um die folgende Anforderung zu erfüllen:",
+                        "sublist": [
+                            "Ein Teil kann von verschiedenen Lieferern zu unterschiedlichen Preisen bezogen werden",
+                            "Für jede Bestellung kommen die Teile stets von einem Lieferanten",
+                            "Vergeben Sie einen sinnvollen Tabellennamen und tragen Sie die erforderlichen Atrribute ein"
+                        ]
+                    },
+                    "Kennzeichnen Sie die Primärschlüssel mit (PK) und die Fremdschlüssel mit (FK) ",
+                    "Zeichnen Sie die Beziehungen zwischen den Tabellen mit den Kardinalitäten ein"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60aa770c6f1e34465948183c"
+            },
+            {
+                "type": "text",
+                "content": "Erläutern Sie, warum die Tabelle <i>Lieferer</i> nicht der 3. Normalform entspricht."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>2</span> <b>Aufgabe | Leicht | 25 Punkte</b>"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/uebungen_zum_thema_normalisierung_2",
+        "_id": "60aa855a6f1e34465948184c",
+        "topicId": "605c90fe23779759b9bb2907",
+        "title": "Übungen zum Thema Normalisierung (2)",
+        "description": "Thema vom 20.05.2021",
+        "subject": "lf-6",
+        "type": "tasks",
+        "lessonDate": "2021-05-20",
+        "lastUpdate": "2021-05-23",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>1</span> <b>Aufgabe | Leicht | 25 Punkte</b>"
+            },
+            {
+                "type": "text",
+                "content": "..."
             }
         ]
     },

@@ -3192,4 +3192,48 @@ export const LF9_POSTS: Post[] = [
             }
         ]
     },
+    {
+        "url": "oeffentliche_netze_und_dienste/modulation_in_der_nachrichtentechnik_2",
+        "_id": "",
+        "title": "Modulation in der Nachrichtentechnik (2)",
+        "description": "Mitschrift vom 26.04.2021",
+        "subject": "lf-9",
+        "type": "article",
+        "lessonDate": "2021-04-26",
+        "lastUpdate": "2021-05-13",
+        "schoolWeek": "24",
+        "topicId": "60568d0407c61731b8d162f0",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/rfid_und_nfc",
+        "_id": "60a2f31359a0005b1c634aaf",
+        "topicId": "60568d0407c61731b8d162f0",
+        "title": "RFID und NFC",
+        "description": "Mitschrift vom 17.05.2021",
+        "subject": "lf-9",
+        "type": "article",
+        "lessonDate": "2021-05-17",
+        "lastUpdate": "2021-05-17",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "RFID (Radio-Frequency Identification) ist der kontaktlose Datenaustausch zwischen einem RFID-Transponder und einem RFID-Schreib-/Lesegerät."
+            },
+        ]
+    },
 ];

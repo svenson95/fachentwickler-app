@@ -3,6 +3,8 @@ import { IndexCards } from '../app/models/index-cards';
 export const indexCards: IndexCards[] = [
     {
         "url": "beduerfnisse_und_gueter/vorbereitung_fuer_test/karteikarten",
+        "_id": "5fcb0032248e32ecd46ac13c",
+        "topicId": "6056185f36ac2b24829ca2f5",
         "title": "Bedürfnisse und Güter - Karteikarten für Test",
         "description": "Vorbereitung vom 22.11.2019",
         "subject": "lf-1",
@@ -10,7 +12,6 @@ export const indexCards: IndexCards[] = [
         "lessonDate": "2019-11-22",
         "lastUpdate": "2020-12-05",
         "schoolWeek": "5",
-        "topicId": "5fcb0032248e32ecd46ac13c",
         "questions": [
             {
                 "question": "Wie kann man den Begriff Bedürfnis definieren?",
@@ -39,15 +40,16 @@ export const indexCards: IndexCards[] = [
         ]
     },
     {
-        "url": "kollisionsdomaene_duplexing/vorbereitung_fuer_test/karteikarten",
-        "title": "Kollisionsdomäne / Duplexing - Karteikarten für Test",
-        "description": "Vorbereitung vom 25.09.2020",
+        "url": "netze_und_dienste/kollisionsdomaene_duplexing/karteikarten",
+        "_id": "5f917a9b99d66f66e8a9b053",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "Kollisionsdomäne / Duplexing",
+        "description": "Thema vom 25.09.2020",
         "subject": "lf-7-2",
         "type": "index-cards",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2021-03-24",
+        "lastUpdate": "2021-05-15",
         "schoolWeek": "16",
-        "topicId": "5f917a9b99d66f66e8a9b053",
         "questions": [
             {
                 "question": "Was ist eine Kollisionsdomäne?",

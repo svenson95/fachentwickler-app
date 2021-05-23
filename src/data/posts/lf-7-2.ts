@@ -2,13 +2,284 @@ import {Post} from '../../app/models/post';
 
 export const LF7_2_POSTS: Post[] = [
     {
-        "url": "e_technik/raeumliche_netzwerkbereiche_und_osi_referenzmodell",
+        "url": "netze_und_dienste/ports",
+        "_id": "5f6fe46a539ea9f7ca3856ef",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "Ports",
+        "description": "Mitschrift vom 10.08.2020",
+        "subject": "lf-7-2",
+        "type": "article",
+        "lessonDate": "2020-08-10",
+        "lastUpdate": "2021-05-18",
+        "schoolWeek": "14",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Ein Netzwerk-Port ist eine Adresse, mit deren Hilfe sich Verbindungen eindeutig besimmten Anwendungen zuordnen lassen. Insgesamt stehen die Ports der Nummern 0 bis 65536 zur Verfügung. Zusammen mit der IP-Adresse bildet der Netzwerk-Port die vollständige Adresse einer Anwendung auf einem Ziel- oder Absendersystem. Sie werden auf der Kommunikationsebene von den Protokollen TCP und UDP verwendet."
+            },
+            {
+                "type": "text",
+                "content": "Insgesamt stehen die Ports 0 bis 65536 für die Verwendung zur Verfügung. Bestimmte Portnummern sind allerdings fest einzelnen Anwendungen zugeordnet. Zu jeder TCP- oder UDP-Verbindung gehören zwei Ports, ein Netzwerk-Port auf der Client-Seite und einer auf der Server-Seite."
+            },
+            {
+                "type": "text",
+                "content": "Wichtige Protokolle der IP-Welt wie HTTP, Telnet oder FTP besitzen feste zugewiesene Ports, sie sind von der IANA (Internet Assigned Numbers Authority) vergeben und werden auch Standard-Ports genannt."
+            },
+            {
+                "type": "table",
+                "content": "Wichtige und oft benötigte Netzwerkports ...",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "TCP / UDP" },
+                            { "align": "left", "content": "Port" },
+                            { "align": "left", "content": "Beschreibung / Funktion" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "20" },
+                            { "align": "left", "content": "FTP - Daten" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "21" },
+                            { "align": "left", "content": "FTP - Steuerdaten" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "22" },
+                            { "align": "left", "content": "SSH - Secure Shell" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "80" },
+                            { "align": "left", "content": "HTTP Anfragen (Alternativen: 8080 und 8088)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP / UDP" },
+                            { "align": "left", "content": "110" },
+                            { "align": "left", "content": "POP3" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "143" },
+                            { "align": "left", "content": "IMAP" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "443" },
+                            { "align": "left", "content": "HTTPS Anfragen (Alternativ: 8443)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "993" },
+                            { "align": "left", "content": "IMAP over SSL" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "995" },
+                            { "align": "left", "content": "POP3 over SSL" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "1433" },
+                            { "align": "left", "content": "SQL Server-Standardinstanz" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "1434" },
+                            { "align": "left", "content": "SQL Server-Browserdienst" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "8080" },
+                            { "align": "left", "content": "HTTP Proxy" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/'>https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "netze_und_dienste/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
+        "_id": "5f429dd7165d0ab470bc57ee",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "Duplex und Duplexing - Simplex, Halbduplex und Vollduplex",
+        "description": "Mitschrift vom 13.08.2020",
+        "subject": "lf-7-2",
+        "type": "article",
+        "lessonDate": "2020-08-13",
+        "lastUpdate": "2021-05-13",
+        "schoolWeek": "14",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "In der Übertragungstechnik gibt es zwei Übertragungsrichtungen, vom Empfänger zum Sender und vom Sender zum Empfänger. Bei Datenübertragungen spricht man dabei von Downlink/Downstream und Uplink/Upstream genannt. Ein Duplex ist eine Übertragungsart und bezeichnet, wie Sende- und Empfangsrichtungen zwischen Sender und Empfänger aufgeteilt werden und funktionieren."
+            },
+            {
+                "type": "hint",
+                "content": "Bei Vollduplex-, Halbduplex- und Semi-Duplex-Übertragungsverfahren sind prinzipiell beide Richtungen möglich."
+            },
+            {
+                "type": "text",
+                "content": "Bei einer Asymmetrischen Übertragung ist der Datenverkehr vom Server zum Nutzer höher als umgekehrt - bedeutet es werden mehr Daten heruntergeladen als hochgeladen, wie es bei den meisten Websites der Fall ist. Bei einer Symmetrischen Übertragung wie in Telefonie- und Sprach-Anwendungen ist der Datenverkehr zwischen Sender und Empfänger gleich groß."
+            },
+            {
+                "type": "subtitle",
+                "content": "Simplex"
+            },
+            {
+                "type": "text",
+                "content": "Bei Simplex ist die Übertragung nur in eine Richtung möglich, also entweder Senden <u>oder</u> Empfangen, ein Wechsel der Richtung ist nicht möglich. Typische Beispiele für Simplex-Kommunikationen sind Rundfunk, Fernsehen und die Übertragung von Audiosignalen von einem Verstärker zu einem Lautsprecher - bei Lautsprecher Anlagen mit mehreren Boxen die zum Verstärker führen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f4088b391ef1048612e0969"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Halbduplex"
+            },
+            {
+                "type": "text",
+                "content": "Beim Halbduplex läuft die Übertragung pro Kanal zeitlich hinteinander, dabei können gleichzeitig mehrere Übertragungen der gleichen Richtung stattfinden - also mehrere Donwloads und anschließend die Uploads. Es können jedoch mehrere Kanäle geschaltet werden, womit auch hier gleichzeitiges up- und downloaden möglich ist. Dafür ist eine Umschaltvorrichtung nötig, die zeitgesteuert immer hin und her schaltet."
+            },
+            {
+                "type": "hint",
+                "content": "Typische Anwendungsbereiche sind Wechselsprechanlagen oder ISDN (engl. 'integrated Services Digital Network') - ein Internationaler Standard für digitale Telekommunkationsnetze für Kanäle wie Telefonie und Internet."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f4088c291ef1048612e096b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Vollduplex"
+            },
+            {
+                "type": "text",
+                "content": "Nur bei der Vollduplex-Übertragung erfolgt die Datenübertragung gleichzeitig in beide Richtungen auf der gleichen Leitung / dem gleichen Kanal, es hat zwei eigenständige Übertragungskanäle. Es ist auch möglich Vollduplex aus einer Halbduplex-Übertragung zu emulieren, bei diesem Verfahren erfolgt die Umschaltung per Mikroprozessor so schnell, dass man von dem Übertragungsstop der jeweiligen Richtung nichts merkt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f4088c791ef1048612e096d"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Duplexverfahren"
+            },
+            {
+                "type": "text",
+                "content": "Wie oben bereits erwähnt, gibt es Übertragungstechniken in denen gepaarte Kanäle/Frequenzblöcke zum Einsatz kommen. Es gibt also einen Kanal zum Upload/Uplink und einen Download/Downlink Kanal, der Abstand zwischen diesen beiden wird als Duplexabstand bezeichnet. Im GSM-Standard ist beispielsweise im 1,8-GHz-Frequenzband ein Duplexabstand von 190 MHz zwischen Hin- und Rückkanal vorgeschrieben. Wenn ein Netzbetreiber den Frequenzbereich von 1,92 GHz bis 1,925 für den Uplink verwendet, muss für den Downlink 2,11 GHz bis 2,115 GHz benutzt werden. Hier unterscheidet man zwischen Zeit- und Frequenz-Duplexverfahren, auch eine Mischform aus FDD und TDD sind als Halbduplex möglich - dabei nutzen Sender und Empfänger je ein Band pro Richtung, wechseln sich aber beim Zeitmultiplex ab. Daraus resultieren geringere Anforderungen an die Endgeräte, lassen sich also günstiger herstellen."
+            },
+            {
+                "type": "subtitle",
+                "content": "Zeitduplexverfahren - TDD / Time Division Duplex"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f4088d591ef1048612e096f"
+            },
+            {
+                "type": "text",
+                "content": "Bei TDD werden Up- und Downlink Kanäle zeitlich versetzt / hintereinander <b>auf einer Frequenz</b> übertragen. Es wird nur ein Frequenzband benutzt und Sender und Empfänger wechseln sich bei der Übertragung ab. Deshalb ist nur eine RF-Einheit (Radio-Frequenz) für Sende- und Empfangsrichtung notwendig, womit die Übertragungssysteme günstiger werden. Eignet sich für asymmetrische, flexible und kostengünstige Systeme, kommen bevorzugt im lizenzfreien Frequenzbereichen zum Einsatz."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Frequenzduplexverfahren - FDD / Frequency Division Duplex"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f4088da91ef1048612e0971"
+            },
+            {
+                "type": "text",
+                "content": "Bei FFD werden Up- und Downlink Kanäle gleichzeitig <b>auf zwei unterschiedlichen Frequenzen</b> übertragen, das bedeutet für die Sende- und Empfangsrichtung steht ein gepaartes Frequenzspektrum zur Verfügung. Hier benötigt jede Übertragungsrichtung seine eigene RF-Einheit (Radio-Frequenz), die sehr einfach gestaltet sein kann. Eignet sich für symmetrische Systeme und Anwendungen mit geringer Latenzzeit, kommt typischerweise in lizenzbehafteten Frequenzbereichen zum Einsatz."
+            }
+        ]
+    },
+    {
+        "url": "netze_und_dienste/raeumliche_netzwerkbereiche_und_osi_referenzmodell",
+        "_id": "5f9594c94363ea1e064c8d53",
+        "topicId": "6056856207c61731b8d162ed",
         "title": "Räumliche Netzwerkbereiche und OSI-Referenzmodell",
         "description": "Mitschrift vom 21.09.2020",
         "subject": "lf-7-2",
         "type": "article",
         "lessonDate": "2020-09-21",
-        "lastUpdate": "2020-10-27",
+        "lastUpdate": "2021-05-13",
         "schoolWeek": "16",
         "elements": [
             {
@@ -162,13 +433,15 @@ export const LF7_2_POSTS: Post[] = [
         ]
     },
     {
-        "url": "e_technik/duplexing_topology_und_uebertragungsraten",
+        "url": "netze_und_dienste/duplexing_topology_und_uebertragungsraten",
+        "_id": "5f88cd98a0d0cb421f136a50",
+        "topicId": "6056856207c61731b8d162ed",
         "title": "Duplexing, Topology und Übertragungsraten",
         "description": "Mitschrift vom 22.09.2020",
         "subject": "lf-7-2",
         "type": "article",
         "lessonDate": "2020-09-22",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2021-05-13",
         "schoolWeek": "16",
         "elements": [
             {
@@ -313,13 +586,15 @@ export const LF7_2_POSTS: Post[] = [
         ]
     },
     {
-        "url": "e_technik/kollisionen_kollisionsdomaene_5er_regel_und_abschlusswiderstaende",
+        "url": "netze_und_dienste/kollisionen_kollisionsdomaene_5er_regel_und_abschlusswiderstaende",
+        "_id": "5f88ce2ca0d0cb421f136a51",
+        "topicId": "6056856207c61731b8d162ed",
         "title": "Kollisionen / Kollisionsdomäne, 5er-Regel und Abschlusswiderstände",
         "description": "Mitschrift vom 25.09.2020",
         "subject": "lf-7-2",
         "type": "article",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-12-21",
+        "lastUpdate": "2021-05-13",
         "schoolWeek": "16",
         "elements": [
             {
@@ -769,6 +1044,26 @@ export const LF7_2_POSTS: Post[] = [
         "description": "Mitschrift vom 20.11.2020",
         "subject": "lf-7-2",
         "type": "tasks",
+        "lessonDate": "2020-11-20",
+        "lastUpdate": "2020-12-20",
+        "schoolWeek": "18",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "topologien/test",
+        "title": "Leistungskontrolle - Topologien (ENTWURF)",
+        "description": "Test vom 20.11.2020",
+        "subject": "lf-7-1",
+        "type": "test",
         "lessonDate": "2020-11-20",
         "lastUpdate": "2020-12-20",
         "schoolWeek": "18",
@@ -1628,7 +1923,7 @@ export const LF7_2_POSTS: Post[] = [
         "subject": "lf-7-2",
         "type": "article",
         "lessonDate": "2021-03-23",
-        "lastUpdate": "2021-03-28",
+        "lastUpdate": "2021-04-19",
         "schoolWeek": "23",
         "elements": [
             {
@@ -1637,7 +1932,16 @@ export const LF7_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "In einem Netzwerk gibt es meist mehrere Netzwerkgeräte, die auf mehreren Ebenen eine Rolle spielen, wie Hubs, Switches und Router. Oft sind diese 3 Komponenten in einem einzigen Gerät integriert."
+                "content": "In einem Netzwerk gibt es meist mehrere verschiedene Netzwerkgeräte (Hubs, Switches und Router, ...), die auf mehreren Ebenen eine Rolle spielen. Oft sind diese 3 Komponenten in einem einzigen Gerät integriert."
+            },
+            {
+                "type": "text",
+                "content": "Das \"einfachste\" Netzwerk ist das sogenannte Peer-to-Peer (Crossover) Netzwerk, in welchem die Rechner gleichberechtigt zusammen arbeiten. Die Daten sind dezentral organisiert und verteilt, jeder Rechner kann Anbieter und Konsument von Ressourcen und Funktionen sein. Der genaue Gegensatz dazu ist das Client-Server-Modell, bei dem die Rollen des Servers und der Clients eindeutig verteilt sind. Der Server stellt Dienste bereit und die Clients nutzen diese."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/607dd5ecc89cea0d6cda00ed",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -1649,11 +1953,12 @@ export const LF7_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ein Hub wird häufig zur Verbindung von Segmenten eines LAN (Local Area Network) verwendet. Ein Hub enthält mehrere Ports. Wenn ein Paket an einem Port eintrifft, wird es auf die anderen Ports kopiert, so dass alle Segmente des LANs alle Pakete sehen können. Ein Hub fungiert als gemeinsamer Verbindungspunkt für Geräte in einem Netzwerk."
+                "content": "Ein Hub wird häufig zur Verbindung von Segmenten eines LAN (Local Area Network) verwendet. Ein Hub enthält mehrere Ports und dient als Verteiler zwischen den Geräten die angeschlossen sind. Wenn ein Paket an einem Port eintrifft, wird es auf die anderen Ports kopiert, so dass alle Segmente des LANs alle Pakete sehen können. Ein Hub fungiert als gemeinsamer Verbindungspunkt für Geräte in einem Netzwerk."
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/605fd88e59bf2574740034f4"
+                "content": "http://159.65.105.150:3000/images/605fd88e59bf2574740034f4",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -1668,8 +1973,13 @@ export const LF7_2_POSTS: Post[] = [
                 "content": "Ein Switch arbeitet auf der Datenverbindungsschicht (Layer 2) und manchmal auf der Netzwerkschicht (Layer 3) des OSI (Open Systems Interconnection)-Referenzmodells und unterstützt daher jedes beliebige Paketprotokoll. LANs, die zur Verbindung von Segmenten Switches verwenden, werden als geswitchte LANs oder, im Falle von Ethernet-Netzwerken, als geswitchte Ethernet-LANs bezeichnet. In Netzwerken ist der Switch das Gerät, das Pakete zwischen LAN-Segmenten filtert und weiterleitet."
             },
             {
+                "type": "text",
+                "content": "Hierbei schaut der Switch nach der MAC-Adresse des Geräts, und leitet die Pakete nur an den gewünschten Port."
+            },
+            {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/605fd89b59bf2574740034f6"
+                "content": "http://159.65.105.150:3000/images/605fd89b59bf2574740034f6",
+                "size": "s"
             },
             {
                 "type": "line",
@@ -1681,7 +1991,19 @@ export const LF7_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ein Router ist mit mindestens zwei Netzwerken verbunden, in der Regel zwei LANs oder WANs (Wide Area Networks) oder ein LAN und sein ISP (Internet Service Provider) Netzwerk. Der Router befindet sich in der Regel an Gateways, den Stellen, an denen zwei oder mehr Netzwerke miteinander verbunden sind. Anhand von Headern und Weiterleitungstabellen bestimmt der Router den besten Weg zur Weiterleitung der Pakete. Darüber hinaus verwendet der Router Protokolle wie ICMP (Internet Control Message Protocol), um miteinander zu kommunizieren, und konfiguriert die beste Route zwischen zwei beliebigen Hosts. Mit einem Wort: Der Router leitet Datenpakete weiter."
+                "content": "Ein Router verbindet Netzwerke miteinander, in der Regel zwei LANs oder WANs (Wide Area Networks) oder ein LAN und sein ISP (Internet Service Provider) Netzwerk. Der Router befindet sich in der Regel an Gateways, den Stellen, an denen zwei oder mehr Netzwerke miteinander verbunden sind. Anhand von Headern und Weiterleitungstabellen bestimmt der Router den besten Weg zur Weiterleitung der Pakete. Darüber hinaus verwendet der Router Protokolle wie ICMP (Internet Control Message Protocol), um miteinander zu kommunizieren, und konfiguriert die beste Route zwischen zwei beliebigen Hosts. Mit einem Wort: Der Router leitet Datenpakete weiter."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "IAD (engl. <i>integrated access device</i>)"
+            },
+            {
+                "type": "text",
+                "content": "Der Laie versteht unter Router den heimischen \"Router\" (FritzBox oder Telekom Router). Diese Geräte sind jedoch meist nicht nur Router, sondern \"Integriertes Zugriffsgeräte\" (engl. <i>integrated access device</i>) - darüber hinaus bieten sie etwa USB-Hubs für Drucker oder USB-Sticks, oder Fax- und Telefonanlagen (ISDN). Telefonanschlüsse über ISDN ist jedoch eine veraltete Technik, die heutigen Anschlüsse nennen sich NGN-Anschlüsse, welche über VoiceOverIP laufen. Es sind somit IP-Telefone, welche das Internet zur Verbindung nutzen."
             },
             {
                 "type": "line",
@@ -1691,8 +2013,32 @@ export const LF7_2_POSTS: Post[] = [
                 "type": "list",
                 "content": "Quellen:",
                 "list": [
-                    "<a href='https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html'>Was ist der Unterschied zwischen Hub, Switch und Router? | https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html</a>"
+                    "Was ist der Unterschied zwischen Hub, Switch und Router? | <a href='https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html'>https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html</a>",
+                    "Netzwerkgeräte - Hub, Switch, Router, Modem, AP, IAD, 22.08.2017 | 19.04.2021 <a href='https://www.youtube.com/watch?v=Z7isAafDU2Q'>https://www.youtube.com/watch?v=Z7isAafDU2Q</a>",
+                    "Peer-to-Peer-Netz | 19.04.2021 <a href='https://www.itwissen.info/Peer-to-Peer-Netz-peer-to-peer-network-P2P.html'>https://www.itwissen.info/Peer-to-Peer-Netz-peer-to-peer-network-P2P.html</a>"
                 ]
+            }
+        ]
+    },
+    {
+        "url": "netze_und_dienste/ip_adressierung",
+        "_id": "609e584a7bc55c76643cf50c",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "IP Adressierung",
+        "description": "Mitschrift vom 27.04.2021",
+        "subject": "lf-7-2",
+        "type": "article",
+        "lessonDate": "2021-04-27",
+        "lastUpdate": "2021-05-13",
+        "schoolWeek": "24",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
             }
         ]
     },

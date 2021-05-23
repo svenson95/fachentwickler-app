@@ -1507,6 +1507,70 @@ export const WISO_POSTS: Post[] = [
         ]
     },
     {
+        "url": "berufsbildung_und_arbeitswelt/tarifvertraege_tarifrecht_und_streikarten",
+        "_id": "607b91245aa67865ac188dba",
+        "topicId": "6056968e07c61731b8d162f3",
+        "title": "Tarifverträge, Tarifrecht und Streikarten",
+        "description": "Thema vom 25.03.2021",
+        "subject": "wiso",
+        "type": "tasks",
+        "lessonDate": "2021-01-13",
+        "lastUpdate": "2021-04-18",
+        "schoolWeek": "20",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> Erarbeiten Sie zum Tarifrecht folgende Schwerpunkte:"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Grundsätze des Tarifrechts",
+                    "Tarifpartner",
+                    "Arten von Tarifverträgen",
+                    "Kampfmaßnahmen der Tarifpartner",
+                    "Ablauf von Tarifverhandlungen",
+                    "Streikarten"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Füllen Sie dazu die entsprechenden Seiten im Arbeitsheft aus."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span> Betriebsverfassungsgesetz"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Gründung von Betriebsräten",
+                    "Wahl von Betriebsräten",
+                    "Mitbestimmungsrechte und Mitwirkungsrechte unterscheiden",
+                    "Rechte von Arbeitnehmern nach dem Betriebsverfassungsgesetz"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Nutzen Sie dazu das WiSo Lehrbuch und bearbeiten Sie die dazugehörigen Seiten im Arbeitsheft."
+            }
+        ]
+    },
+    {
         "url": "berufsbildung_und_arbeitswelt/lohnformen",
         "title": "Lohnformen (ENTWURF)",
         "description": "Aufgaben vom 08.02.2021",
@@ -1846,14 +1910,15 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "steuern_und_sozialversicherungen/einkommenssteuer_erklaerung",
+        "_id": "605905de1197a87e0b452a38",
+        "topicId": "6056969907c61731b8d162f4",
         "title": "Einkommenssteuer (-erklärung)",
         "description": "Thema vom 22.03.2021",
         "subject": "wiso",
         "type": "article",
         "lessonDate": "2021-03-22",
-        "lastUpdate": "2021-03-26",
+        "lastUpdate": "2021-04-23",
         "schoolWeek": "23",
-        "topicId": "6056969907c61731b8d162f4",
         "elements": [
             {
                 "type": "title",
@@ -1861,7 +1926,15 @@ export const WISO_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "..."
+                "content": "Die Einkommensteuer ist eine Gemeinschaftsteuer, die auf das Einkommen natürlicher Personen erhoben wird. Grundsätzlich gilt, dass Selbstständige Einkommenssteuer zahlen und Arbeitsnehmer, die angestellt sind, zahlen Lohnsteuer. Der Arbeitgeber, falls du einen hast, führt deine Steuern hierbei automatisch an das Finanzamt ab."
+            },
+            {
+                "type": "text",
+                "content": "Bei einer selbstständigen Arbeit ist dies nicht der Fall. Die Höhe der Einkommenssteuer wird von einem Steuerberater oder dir selbst ausgerechnet. Dann musst du bzw. dein Steuerberater die Summe an das Finanzamt melden. Der Betrag muss dann von dir an das Finanzamt überwiesen werden oder er wird eingezogen."
+            },
+            {
+                "type": "hint",
+                "content": "Die Einkommenssteuer stellt eine der wichtigsten Einnahmequellen des Staates dar."
             },
             {
                 "type": "line",
@@ -1938,24 +2011,503 @@ export const WISO_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/6059048c1197a87e0b452a28",
+                "size": "l"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081eda1c89cea0d6cda01b8",
+                "size": "l"
+            },
+            {
+                "type": "text",
+                "content": "Nennen Sie die Steuerart, die der Arbeitgeber vom Lohn und Gehalt des Arbeitnehmers monatlich an das Finanzamt abführt."
+            },
+            {
+                "type": "subtitle",
+                "content": "Lohnsteuer"
+            },
+            {
+                "type": "text",
+                "content": "Die meisten Berufstätigen zahlen die Lohnsteuer. Obwohl die Lohnsteuer die wichtigste Einnahmequelle des Staates bildet, ist sie <b>keine selbstständige Steuerart</b>, sondern eine besondere <b>Erhebungsform der Einkommensteuer bei Arbeitnehmern</b>."
+            },
+            {
+                "type": "text",
+                "content": "Der Arbeitgeber haftet für die korrekte Einbehaltung und Abführung der Lohnsteuer für seine Arbeitnehmer und kann für zu wenig einbehaltene und abgeführte Lohnsteuer in Anspruch genommen werden (§ 42d EStG)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Steuerklassen"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Grundlage für die Berechnung der Lohnsteuer",
+                    "Zweck: Berücksichtigung der persönlichen Verhältnisse wie Familienstand und Kinderzahl  (daher unterschiedliche hohe Besteuerung bei gleicher Einkommenshöhe)"
+                ]
+            },
+            {
+                "type": "table",
+                "content": "test",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse" },
+                            { "align": "left", "content": "Personengruppen / Beispiele" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse I" },
+                            { "align": "left", "content": "Ledige, getrenntlebende oder alleinstehende Steuerpflichtige" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse II" },
+                            { "align": "left", "content": "Alleinerziehende (Partner lebt nicht im Haushalt)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse III" },
+                            { "align": "left", "content": "Verheiratete / gleichgeschlechtliche Lebensgemeinschaften (wenn Partner Steuerklasse 5)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse IV" },
+                            { "align": "left", "content": "Verheiratete / gleichgeschlechtliche Lebensgemeinschaften (wenn Partner Steuerklasse 4)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse V" },
+                            { "align": "left", "content": "Verheiratete / gleichgeschlechtliche Lebensgemeinschaften (wenn Partner Steuerklasse 3)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Steuerklasse VI" },
+                            { "align": "left", "content": "Zweitjob, Übergangsgebührnisse - DZE" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081efebc89cea0d6cda01bb"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081f06bc89cea0d6cda01bd"
+            },
+            {
+                "type": "subtitle",
+                "content": "Elektronische Lohnsteuerbescheinigung"
+            },
+            {
+                "type": "text",
+                "content": "Am Anfang eines neuen Jahres und/oder beim Ende eines Arbeitsverhältnisses bekommen die AN vom AG die Elektronische Lohnsteuerbescheinigung. Diese enthält ihre ELStAM (= elek-tronischen Lohnsteuerabzugs-merkmale wie Steuerklasse, Zahl der Kinderfreibeträge, Konfession etc.)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Wofür brauche ich die Lohnsteuerbescheinigung?",
+                "list": [
+                    {
+                        "content": "Ausfüllen Ihrer Steuererklärung:",
+                        "sublist": [
+                            "Bruttoarbeitslohn, Lohnsteuer, Solidaritätszuschlag und Kirchensteuer können ablesen",
+                            "Angaben zu den Beiträgen zur Renten-, Pflege-, Kranken- und Arbeitslosenversicherung ablesen"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081f16dc89cea0d6cda01c0"
+            },
+            {
+                "type": "text",
+                "content": "Viele Arbeitnehmer, insbesondere ledige, müssen keine Steuererklärung abgeben, weil ihr Arbeitgeber bereits monatlich Lohnsteuer für sie einbehalten hat. Gehörst Du zu der Gruppe derjenigen, die nicht abgeben müssen, solltest Du genau prüfen, ob es sich für Dich lohnt, freiwillig eine Steuererklärung abzugeben. Oft kannst Du Dir zu viel bezahlte Steuern zurückholen."
+            },
+            {
+                "type": "text",
+                "content": "Im Fall der freiwilligen Abgabe hast Du nur die sogenannte Festsetzungsfrist zu beachten. Das heißt, spätestens vier Jahre nach dem Ende des Steuerjahres musst Du Deine Erklärung beim Finanzamt abgegeben haben. Beispiele: Für die Steu­er­er­klä­rung 2020 hast Du grundsätzlich bis zum 31. Dezember 2024 Zeit. Und noch bis zum Jahresende 2021 kannst Du eine Steu­er­er­klä­rung für 2017 abgeben."
+            },
+            {
+                "type": "list",
+                "content": "Grundlage für die Berechnung der Steuerschuld: <br/> das zu versteuernde Einkommen",
+                "list": [
+                    {
+                        "content": "Jahresbruttoverdienst",
+                        "sublist": [
+                            "Werbungskosten",
+                            "Sonderausgaben",
+                            "Außergewöhnliche Belastungen",
+                            "Freibeträge",
+                            "= zu versteuerndes Einkommen"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Werbungskosten"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081f311c89cea0d6cda01c6"
+            },
+            {
+                "type": "subtitle",
+                "content": "Sonderausgaben"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081f32fc89cea0d6cda01cb"
+            },
+            {
+                "type": "subtitle",
+                "content": "Außergewöhnliche Belastungen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081f36ec89cea0d6cda01ce",
+                "size": "l"
+            },
+            {
+                "type": "subtitle",
+                "content": "Freibeträge"
+            },
+            {
+                "type": "list",
+                "content": "Die wichtigsten Freibeträge:",
+                "list": [
+                    "Kinderfreibetrag",
+                    "Ausbildungsfreibetrag",
+                    "Erziehungsfreibetrag",
+                    "Grundfreibetrag",
+                    "Lohnsteuerfreibetrag"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Beschreiben Sie die Grafik und erklären Sie, warum es sich fast immer lohnt, eine ESt-Erklärung abzugeben."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081f3d9c89cea0d6cda01d2",
                 "size": "m"
+            },
+            {
+                "type": "list",
+                "ordered": true,
+                "content": "Gründe für eine \"freiwillige ESt-Erklärung\" (auch Antragsveranlagung bzw. Antrag auf ESt-Veranlagung)",
+                "list": [
+                    "Werbungskosten und Sonderausgaben sind höher als die Pauschalbeträge",
+                    "Außergewöhnliche Belastungen sind entstanden",
+                    "Die Heirat des Steuerpflichtigen und eine dadurch erfolgte Änderung der Steuerklasse können die Steuerbelastung mindern",
+                    "Vorsorgeaufwendungen übersteigen die in die Tabellen eingearbeiteten Pauschalen",
+                    "Eine Arbeitnehmersparzulage wird beantragt"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Einkommenssteuererklärung: Abgabefrist"
+            },
+            {
+                "type": "text",
+                "content": "31.Juli des Folgejahres (Verlängerung auf Antrag möglich)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Einkommensteuer – Was ist die Einkommensteuer? | 23.04.2021 | <a href='https://debitoor.de/lexikon/einkommensteuer'>https://debitoor.de/lexikon/einkommensteuer</a>",
+                    "Wer eine Steuererklärung einreichen muss, 16.03.2021 | 23.04.2021 <a href='https://www.finanztip.de/steuererklaerung/steuererklaerung-pflicht/'>https://www.finanztip.de/steuererklaerung/steuererklaerung-pflicht/</a>"
+                ]
             }
         ]
     },
     {
-        "url": "berufsbildung_und_arbeitswelt/gerechte_entlohnung",
+        "url": "steuern_und_sozialversicherungen/gerechte_entlohnung",
+        "_id": "605c934d23779759b9bb290c",
+        "topicId": "6056969907c61731b8d162f4",
         "title": "Gerechte Entlohnung",
         "description": "Thema vom 25.03.2021",
         "subject": "wiso",
         "type": "article",
         "lessonDate": "2021-03-25",
-        "lastUpdate": "2021-03-25",
+        "lastUpdate": "2021-04-22",
         "schoolWeek": "23",
-        "topicId": "6056969907c61731b8d162f4",
         "elements": [
             {
                 "type": "title",
                 "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Das Thema gerechte Entlohnung war bereits in der Bibel ein Thema, im Evangelium nach Matthäus 20 (Von den Arbeitern im Weinberg) stellt sich die Problematik des gerechten Lohns dar. Zunächst einmal ist Lohn nichts anderes, als die Bezahlung für geleistete Arbeit. Die Betriebswirtschaftslehre beschäftigt sich damit, den Lohn des einzelnen Arbeitnehmers zu definieren. Beim gerechten Lohn geht es darum, wie Güter und Erträge der Wirtschaft „gerecht“ verteilt werden."
+            },
+            {
+                "type": "hint",
+                "content": "Der Grundsatz der Entlohnung ist die Forderung nach Gerechtigkeit. Leistung und Gegenleistung sollten sich entsprechen."
+            },
+            {
+                "type": "text",
+                "content": "Bei der Problematik des gerechten Lohns aus betrieblicher Sicht geht es vor allem um die Frage, unter welchen Voraussetzungen der Lohn für den Arbeitnehmer einen gerechten Anteil, d.h. eine angemessene Beteiligung am Gewinn für die Mitwirkung an der Erstellung des Produkts (oder der Dienstleistung) des Unternehmens darstellt. Aus betriebswirtschaftlicher Sicht ist der Lohn dann annähernd gerecht, wenn die Arbeitsleistung nach ihrem ökonomischen Wert für das Unternehmen bemessen wird und somit den Anteil erhält, den sie zum Ertrag bzw. Gewinn der Unternehmung beigesteuert hat. Diese Lohngerechtigkeit fordert aber nicht nur dass die Löhne gerecht sind, Lohngerechtigkeit fordert auch, dass die Arbeitnehmerschaft am volkswirtschaftlichen Vermögenszuwachs beteiligt wird."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Arbeitsbewertungsverfahren"
+            },
+            {
+                "type": "text",
+                "content": "Verfahren zur Bewertung der Anforderungen eines Arbeitsplatzes:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081b7dcc89cea0d6cda0188",
+                "size": "m"
+            },
+            {
+                "type": "subtitle",
+                "content": "Summarische Arbeitsbewertung"
+            },
+            {
+                "type": "text",
+                "content": "Vergleich von Tätigkeiten / Arbeitsplätzen als Ganzes (summarisch) und Bildung einer Rangfolge. Umsetzung in der Praxis: Lohngruppenbildung (erforderliche Ausbildung, Berufserfahrung, fachliches Können, Verantwortung)."
+            },
+            {
+                "type": "list",
+                "content": "<b>Lohngruppen</b>",
+                "list": [
+                    "von den Tarifpartnern ausgehandelt",
+                    "Übernahme in Manteltarifverträge"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Ecklohn"
+            },
+            {
+                "type": "text",
+                "content": "<b>Beispiel Baugewerbe<b/>: Tarifgruppe 4 (gemäß § 5 Nr. 1 im Bundesrahmenvertrag für das Baugewerbe). Höhe in Berlin seit 01.01.2021: 19,64€ / Stunde."
+            },
+            {
+                "type": "text",
+                "content": "Lohnhöhe Tarifgruppe 3: <br/> 85% des Ecklohns → 16,69€ / Stunde"
+            },
+            {
+                "type": "subtitle",
+                "content": "Analytische Arbeitsbewertung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081e766c89cea0d6cda018d",
+                "size": "m"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6081e7f1c89cea0d6cda01a4",
+                "size": "m"
+            },
+            {
+                "type": "text",
+                "content": "Vergeben einer Wertzahl für jede Anforderungsart durch den Vergleich mit dem möglichen Höchstwert."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Soziale Aspekte der Entlohnung"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Alter: Alterszuschläge zum Grundlohn",
+                    "Familienstand: Zuschläge für AN mit Familien und Kindern",
+                    "Dauer der Betriebszugehörigkeit: mehr Weihnachts- / Urlaubsgeld, höherer Beteiligungslohn"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Beitrag des Staates zum familiengerechten Lohn",
+                "list": [
+                    "Berücksichtigung des Familienstandes bei der Besteuerung",
+                    "Kindergeld und Wohngeld",
+                    "Förderung des vermögenswirksames Sparens",
+                    "Gewährung von Arbeitnehmersparzulagen"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Entgeltsystem - Wie der \"gerechte Lohn\" festgelegt wird | 23.04.2021 | <a href='https://www.grin.com/document/101518'>https://www.grin.com/document/101518</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "steuern_und_sozialversicherungen/gerechte_entlohnung_2",
+        "_id": "609e76046ffc47057f484114",
+        "topicId": "6056969907c61731b8d162f4",
+        "title": "Gerechte Entlohnung (2)",
+        "description": "Thema vom 29.04.2021",
+        "subject": "wiso",
+        "type": "tasks",
+        "lessonDate": "2021-04-29",
+        "lastUpdate": "2021-05-14",
+        "schoolWeek": "24",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            }
+        ]
+    },
+    {
+        "url": "steuern_und_sozialversicherungen/uebung_zum_thema_aspekte_der_entlohnung",
+        "_id": "60aa82c56f1e344659481845",
+        "topicId": "6056969907c61731b8d162f4",
+        "title": "Übung zum Thema Aspekte der Entlohnung",
+        "description": "Thema vom 20.05.2021",
+        "subject": "wiso",
+        "type": "tasks",
+        "lessonDate": "2021-05-20",
+        "lastUpdate": "2021-05-23",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>1</span> <b>Wie können sich unterschiedliche Lohnkosten in Europa auf den Wirtschaftsstandort Deutschland auswirken?</b>"
+            },
+            {
+                "type": "text",
+                "content": "Arbeitskräfte gehen verloren durch Auswanderung, Produktionsstätten werden ins Ausland ausgelagert (günstigere Fachkräfte)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>2</span> <b>Was ist der sogenannte <i>Nominallohn</i>?</b>"
+            },
+            {
+                "type": "text",
+                "content": "Nettolohn"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>3</span> <b>Was ist der <i>Reallohn</i>?</b>"
+            },
+            {
+                "type": "list",
+                "content": "Beispiel: Ihr habt eine Tastatur und möchtet über die Tasten einen Text in einem Texteditor eingeben.",
+                "ordered": true,
+                "list": [
+                    "Kaufkraft der Arbeitnehmer",
+                    "Was sich die Arbeitnehmer tatsächlich leisten können"
+                ]
+            },
+            {
+                "type": "hint",
+                "content": "Nettolohn kann steigen und die Kaufkraft dabei trotzdem gleich bleiben."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>4</span> <b>Erklären Sie die Stabilität des Reallohns und gehen Sie dabei auf den Ursache-Wirkungs-Zusammenhang zwischen den steigenden Löhnen und den steigenden Preisen.</b>"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            }
+        ]
+    },
+    {
+        "url": "steuern_und_sozialversicherungen/test",
+        "_id": "60aa86566f1e344659481853",
+        "topicId": "6056969907c61731b8d162f4",
+        "title": "Leistungskontrolle - Steuern und Sozialversicherungen, Aspekte der Entlohnung",
+        "description": "Thema vom 21.05.2021",
+        "subject": "wiso",
+        "type": "test",
+        "lessonDate": "2021-05-21",
+        "lastUpdate": "2021-05-23",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> Lorem ipsum dolor sit amet."
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span> Ducimus, minus, sequi."
             },
             {
                 "type": "text",

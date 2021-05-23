@@ -5,13 +5,13 @@ export const matchings: Matching[] = [
         "url": "steuern_und_sozialversicherungen/sozialversicherungssysteme/matching",
         "_id": "6066f38840e2d4160425a70e",
         "topicId": "6056969907c61731b8d162f4",
-        "title": "Sozialversicherungssysteme - Matchings",
+        "title": "Sozialversicherungssysteme",
         "description": "Übung vom 04.03.2021",
         "subject": "wiso",
         "schoolWeek": "22",
         "type": "matching",
         "lessonDate": "2021-03-04",
-        "lastUpdate": "2021-03-29",
+        "lastUpdate": "2021-04-19",
         "pairs": [
             [
                 {
@@ -64,17 +64,17 @@ export const matchings: Matching[] = [
                     "pairNumber": 1
                 },
                 {
-                    "leftpart": "Pflegeversicherungs-Beiträge",
+                    "leftpart": "Pflegeversicherungs-Träger",
                     "rightpart": "Krankenkasse",
                     "pairNumber": 2
                 },
                 {
-                    "leftpart": "Unfallversicherungs-Beiträge",
+                    "leftpart": "Unfallversicherungs-Träger",
                     "rightpart": "Berufsgenossenschaften",
                     "pairNumber": 3
                 },
                 {
-                    "leftpart": "Rentenversicherungs-Beiträge",
+                    "leftpart": "Rentenversicherungs-Träger",
                     "rightpart": "Deutsche Rentenversicherung",
                     "pairNumber": 4
                 }

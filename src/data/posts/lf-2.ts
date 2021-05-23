@@ -3,6 +3,8 @@ import {Post} from '../../app/models/post';
 export const LF2_POSTS: Post[] = [
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
+        "_id": "5f4295f6220657ed697dc56b",
+        "topicId": "6055f8b52622d7163ca40885",
         "title": "Aufgaben des Projektmanagements",
         "description": "Mitschrift vom 03.09.2019",
         "subject": "lf-2",
@@ -63,6 +65,8 @@ export const LF2_POSTS: Post[] = [
     },
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
+        "_id": "5f429610220657ed697dc56c",
+        "topicId": "6055f8b52622d7163ca40885",
         "title": "Projektbegriff",
         "description": "Mitschrift vom 03.09.2019",
         "subject": "lf-2",
@@ -123,6 +127,8 @@ export const LF2_POSTS: Post[] = [
     },
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/management_systeme",
+        "_id": "5f6abb2f10e47777946f0883",
+        "topicId": "6055f8b52622d7163ca40885",
         "title": "Management-Systeme",
         "description": "Mitschrift vom 22.09.2019",
         "subject": "lf-2",
@@ -388,6 +394,8 @@ export const LF2_POSTS: Post[] = [
     },
     {
         "url": "geschaeftsprozesse_und_organigramm/test",
+        "_id": "5f67957b257ec895e489e34b",
+        "topicId": "6055f8b52622d7163ca40885",
         "title": "Leistungskontrolle - Geschäftsprozesse & Organigramm",
         "description": "Test vom 02.09.2020",
         "subject": "lf-2",

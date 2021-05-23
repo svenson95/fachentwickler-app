@@ -329,12 +329,14 @@ export const LF4_2_POSTS: Post[] = [
     },
     {
         "url": "einfache_it_systeme/zahlensysteme",
+        "_id": "5f429bd6165d0ab470bc57dd",
+        "topicId": "60565cbeb0623029d4a68f69",
         "title": "Zahlensysteme",
         "description": "Mitschrift vom 28.10.2019",
         "subject": "lf-4-2",
         "type": "article",
         "lessonDate": "2019-10-28",
-        "lastUpdate": "2020-09-03",
+        "lastUpdate": "2021-05-14",
         "schoolWeek": "4",
         "elements": [
             {
@@ -961,19 +963,19 @@ export const LF4_2_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "<u>212</u> / 16 = 13,25 = 13 als Hexa (<b>D</b>) <br/> 212 - (13 x 16 = 208) = 4 (<b>4</b>)"
+                "content": "<u>212</u> ÷ 16 = 13,25 = 13 als Hexa (<b>D</b>) <br/> 212 - (13 x 16 = 208) = 4 (<b>4</b>)"
             },
             {
                 "type": "text",
-                "content": "<u>204</u> / 16 = 12,75 = 12 als Hexa (<b>C</b>) <br/> 204 - (12 x 16 = 192) = 12 als Hexa (<b>C</b>)"
+                "content": "<u>204</u> ÷ 16 = 12,75 = 12 als Hexa (<b>C</b>) <br/> 204 - (12 x 16 = 192) = 12 als Hexa (<b>C</b>)"
             },
             {
                 "type": "text",
-                "content": "<u>101</u> / 16 = 6,3125 = 6 (<b>6</b>) <br/> 101 - (6 x 16 = 96) = 5 (<b>5</b>)"
+                "content": "<u>101</u> ÷ 16 = 6,3125 = 6 (<b>6</b>) <br/> 101 - (6 x 16 = 96) = 5 (<b>5</b>)"
             },
             {
                 "type": "text",
-                "content": "<u>210</u> / 16 = 13,125 = 13 als Hexa (<b>D</b>) <br/> 210 - (13 x 16 = 208) = 2 (<b>2</b>)"
+                "content": "<u>210</u> ÷ 16 = 13,125 = 13 als Hexa (<b>D</b>) <br/> 210 - (13 x 16 = 208) = 2 (<b>2</b>)"
             },
             {
                 "type": "line",

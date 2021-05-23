@@ -85,7 +85,9 @@ export const subjectsData: Subject[] = [
         "topics": [
             "6056854807c61731b8d162ec"
         ],
-        "tests": []
+        "tests": [
+            "60a412f459a0005b1c634b17"
+        ]
     },
     {
         "subject": "lf-7-2",
@@ -140,7 +142,8 @@ export const subjectsData: Subject[] = [
         "tests": [
             "5f429ebf165d0ab470bc57f8",
             "5f9e9023cdb75d208eba17ee",
-            "5fdfd85a8c8c2a5e54a4a40c"
+            "5fdfd85a8c8c2a5e54a4a40c",
+            "60aa86566f1e344659481853"
         ]
     },
     {
@@ -150,6 +153,8 @@ export const subjectsData: Subject[] = [
             "60569a7207c61731b8d162f6",
             "60569a7d07c61731b8d162f7"
         ],
-        "tests": []
+        "tests": [
+            "60aa72e06f1e34465948183a"
+        ]
     }
 ];

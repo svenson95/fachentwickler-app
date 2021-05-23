@@ -1,15 +1,16 @@
-import { Quiz } from '../app/models/quiz';
+import { QuizData } from '../app/new-post-models/post-quiz';
 
-export const quizzes: Quiz[] = [
+export const quizzes: QuizData[] = [
     {
-        "url": "beduerfnisse_und_gueter/vorbereitung_fuer_test/quiz",
-        "title": "Bedürfnisse und Güter - Quiz für Test",
-        "description": "Vorbereitung vom 22.11.2019",
+        "url": "beduerfnisse_und_gueter/wirtschaftsgueter_bedarf_und_nachfrage/quiz",
+        "_id": "5f083a88757f87cdceba18be",
+        "topicId": "6056185f36ac2b24829ca2f5",
+        "title": "Wirtschaftsgüter, Bedarf & Nachfrage",
+        "description": "Thema vom 22.11.2019",
         "subject": "lf-1",
         "type": "quiz",
-        "topicId": "6056185f36ac2b24829ca2f5",
         "lessonDate": "2019-11-22",
-        "lastUpdate": "2021-03-24",
+        "lastUpdate": "2021-05-15",
         "schoolWeek": "5",
         "questions": [
             {
@@ -51,15 +52,16 @@ export const quizzes: Quiz[] = [
         ]
     },
     {
-        "url": "berufsbildung_und_arbeitswelt/vorbereitung_fuer_test/quiz",
-        "title": "Berufsbildung und Arbeitswelt - Quiz für Test",
+        "url": "berufsbildung_und_arbeitswelt/vertraege_und_vorraussetzungen/quiz",
+        "_id": "5f085932286ad9151bdd46b3",
+        "topicId": "6056968e07c61731b8d162f3",
+        "title": "Verträge und Vorraussetzungen",
         "description": "Vorbereitung vom 12.12.2019",
         "subject": "wiso",
         "type": "quiz",
         "lessonDate": "2019-12-12",
-        "lastUpdate": "2020-05-13",
+        "lastUpdate": "2021-05-14",
         "schoolWeek": "6",
-        "topicId": "6056968e07c61731b8d162f3",
         "questions": [
             {
                 "question": "Wann kommt ein Ausbildungsvertrag zustande?",
@@ -136,15 +138,16 @@ export const quizzes: Quiz[] = [
         ]
     },
     {
-        "url": "oeffentliche_netze_und_dienste/vorbereitung_fuer_test/quiz",
-        "title": "Öffentliche Netze und Dienste - Quiz für Test",
-        "description": "Vorbereitung vom 24.09.2020",
+        "url": "netze_und_dienste/oeffentliche_netze_und_dienste/quiz",
+        "_id": "5fa1173ffb7df8ef19c6439f",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "Öffentliche Netze und Dienste",
+        "description": "Thema vom 24.09.2020",
         "subject": "lf-7-2",
         "type": "quiz",
         "lessonDate": "2020-09-24",
-        "lastUpdate": "2021-03-24",
+        "lastUpdate": "2021-05-14",
         "schoolWeek": "16",
-        "topicId": "6056856207c61731b8d162ed",
         "questions": [
             {
                 "question": "Was ist ein Telekommunikationsnetzbetreiber?",

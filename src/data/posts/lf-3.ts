@@ -415,25 +415,25 @@ export const LF3_POSTS: Post[] = [
                     {
                         "type": "header",
                         "columns": [
-                            { "align": "", "content": "Darstellung" },
-                            { "align": "", "content": "Vorteile" },
-                            { "align": "", "content": "Nachteile" }
+                            { "align": "left", "content": "Darstellung" },
+                            { "align": "left", "content": "Vorteile" },
+                            { "align": "left", "content": "Nachteile" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "", "content": "Gantt-Diagramm" },
-                            { "align": "", "content": "- Übersichtliche Struktur durch visuelle Darstellung der Dauer" },
-                            { "align": "", "content": "- Fehleranfällig beim Zeichnen <br/> - weniger Informationen <br/> - Puffer nicht erkennbar <br/> - Nur für kleinere Projekte geeignet" }
+                            { "align": "left", "content": "Gantt-Diagramm" },
+                            { "align": "left", "content": "- Übersichtliche Struktur durch visuelle Darstellung der Dauer" },
+                            { "align": "left", "content": "- Fehleranfällig beim Zeichnen <br/> - weniger Informationen <br/> - Puffer nicht erkennbar <br/> - Nur für kleinere Projekte geeignet" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "", "content": "Netzplan" },
-                            { "align": "", "content": "- Puffer lassen sich exakt berechnen" },
-                            { "align": "", "content": "- Mehr Informationen (FAZ, SAZ)" }
+                            { "align": "left", "content": "Netzplan" },
+                            { "align": "left", "content": "- Puffer lassen sich exakt berechnen" },
+                            { "align": "left", "content": "- Mehr Informationen (FAZ, SAZ)" }
                         ]
                     }
                 ]
