@@ -235,6 +235,11 @@ export class MyProfileComponent implements OnInit {
     });
   }
 
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+    this.theme.setValue(this.themeService.getActiveTheme().name);
+  }
+
   /* -- Change theme -- */
   saveChangeTheme(event): void {
     const updatedUser = {
