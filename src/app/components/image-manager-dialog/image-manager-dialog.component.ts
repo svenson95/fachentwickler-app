@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { delay } from 'rxjs/operators';
 
 import { ImageData } from '../../models/image-data';
@@ -31,7 +33,8 @@ export class ImageManagerDialogComponent implements OnInit {
   constructor(public authService: AuthService,
               private dataService: DataService,
               private loadingService: LoadingService,
-              private dialog: MatDialog
+              private dialog: MatDialog,
+              private snackBar: MatSnackBar
   ) {
     this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => {
@@ -90,6 +93,7 @@ export class ImageManagerDialogComponent implements OnInit {
               (image) => {
                 this.lastImages.unshift(image);
                 this.dropzoneFile = [];
+                this.selectedImage = image;
               }, (err) => {
                 console.log('Get image by id failed');
                 console.log(err);
@@ -123,6 +127,11 @@ export class ImageManagerDialogComponent implements OnInit {
       if (confirmed) {
         this.lastImages = this.lastImages.filter(el => el.file._id !== id);
         this.selectedImage = undefined;
+
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: 'Bild erfolgreich gelöscht'
+        });
       }
     });
   }

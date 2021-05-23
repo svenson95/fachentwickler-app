@@ -56,7 +56,6 @@
     text-decoration: none;
     border-right: 5px solid var(--tertiary-color);
     border-top-left-radius: var(--button-radius);
-    border-top-right-radius: var(--button-radius);
 
     transition: background 200ms ease-in-out;
 
@@ -66,15 +65,6 @@
 
     &:focus {
       outline: none;
-    }
-
-    @include to-xs {
-      //flex-direction: column;
-    }
-
-    @include to-sm {
-      //display: flex;
-      //flex-direction: column;
     }
 
     @media screen and (min-width: 1000px) {

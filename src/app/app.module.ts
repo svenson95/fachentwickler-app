@@ -6,12 +6,13 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
+import { AngularMaterialModule } from './app-common/angular-material.module';
+
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { AngularMaterialModule } from './app-common/angular-material.module';
 import { ThemeModule } from './services/theme.module';
 import { PageComponentModule } from './app-common/page/page.module';
 import { SnackbarModule } from './app-common/snackbar/snackbar.module';

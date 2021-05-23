@@ -4,7 +4,10 @@
 <mat-dialog-actions>
   <button class="fia-text-button" mat-button mat-dialog-close>Nein</button>
   <button class="fia-text-button" mat-button (click)="deleteRequest()">
-    Ja
-    <ion-icon class="delete-icon" name="backspace"></ion-icon>
+    <ng-container *ngIf="!isLoadingDelete">
+      Ja
+      <ion-icon class="delete-icon" name="backspace"></ion-icon>
+    </ng-container>
+    <mat-spinner class="fia-loading-spinner" *ngIf="isLoadingDelete"></mat-spinner>
   </button>
 </mat-dialog-actions>

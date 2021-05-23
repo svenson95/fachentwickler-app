@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../../models/menu-item';
-import { study, languages, myClass, subjects } from '../../../data/menu-items';
-import { SidenavService } from '../../services/sidenav.service';
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { BreakpointObserver } from '@angular/cdk/layout';
+
+import { MenuItem } from '../../models/menu-item';
+import { SidenavService } from '../../services/sidenav.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { study, languages, myClass, subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-sidenav',
