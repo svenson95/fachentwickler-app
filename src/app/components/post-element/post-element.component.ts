@@ -16,6 +16,7 @@ export class PostElementComponent implements OnInit {
 
   image: boolean | string = false;
   ElementType = ElementType;
+  isVisible = false;
 
   constructor(private dataService: DataService) {
   }

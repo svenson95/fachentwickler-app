@@ -4,6 +4,17 @@
 .fia-post-item {
   overflow: auto;
 
+  .fia-text-button {
+    padding-top: 4px;
+    height: fit-content;
+    align-self: center;
+
+    &.is-open {
+      color: var(--text-color-2);
+      border-color: rgba( var(--grey-1-rgb), .6);
+    }
+  }
+
   .post-title {
     font-size: 1.5em;
     font-weight: 600;

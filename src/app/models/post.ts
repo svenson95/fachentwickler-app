@@ -16,14 +16,15 @@ export interface Post {
 
 export interface PostElement {
   type: ElementType | string;
-  content: string;
-  toggable?: boolean;
+  content?: string;
+  hidden?: boolean;
   language?: 'java' | 'php' | 'javascript' | 'sql';
   list?: Array<string | SublistItem>;
   ordered?: boolean;
   rows?: TableRow[];
   object?: object;
   size?: string;
+  elements?: PostElement[];
 }
 
 interface SublistItem {

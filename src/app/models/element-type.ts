@@ -8,5 +8,6 @@ export enum ElementType {
   TABLE = 'table',
   CODE = 'code',
   FILE = 'file',
-  HINT = 'hint'
+  HINT = 'hint',
+  ANSWER_GROUP = 'answer-group'
 }
