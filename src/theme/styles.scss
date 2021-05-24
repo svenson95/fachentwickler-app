@@ -29,6 +29,7 @@
 
 body {
   background: var(--background-primary);
+  -webkit-font-smoothing: antialiased;
 
   &.scroll-locked {
     overflow: hidden;
@@ -203,7 +204,7 @@ a {
   @include from-xs {
     font-size: 1.5em;
     line-height: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   @include to-xs {
@@ -216,6 +217,7 @@ a {
 p.fia-card-description {
   display: flex;
   font-size: 1.1em;
+  font-family: Nunito-Light, sans-serif;
   color: var(--grey-3);
   letter-spacing: .5px;
   margin: 0;

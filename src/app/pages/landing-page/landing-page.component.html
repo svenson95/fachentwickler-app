@@ -20,9 +20,9 @@
   <div class="fia-landing-row start">
     <div class="fia-text-column">
       <img class="fia-rocket-svg" src="../../../assets/images/rocket.svg" alt="rocket-svg">
-      <p class="fia-title">Registriere dich und starte die Reise</p>
+      <p class="fia-title">Lernplattform für die schulische Ausbildung</p>
       <p class="fia-description">
-        Lernplattform für die schulische Ausbildung zum Fachinformatiker für Anwendungsentwicklung & Systemintegration.
+         Fachinformatiker für Anwendungsentwicklung & Systemintegration.
       </p>
     </div>
     <button class="fia-text-button" routerLink="login">
@@ -36,8 +36,8 @@
         <div class="fia-text-wrapper">
           <p class="fia-title">Unterrichtstool für die Schule</p>
           <p class="fia-description">
-            Unterstützung zum Unterricht für ein besseres Verständnis.
-            Nutze deine Schüler-Mail-Adresse um Ankündigungen und Anstehende Tests einzusehen.
+            Unterstützend zum Unterricht für ein besseres Verständnis.
+            Alle wichtigen Inhalte des Unterrichts zum nochmal nachlesen.
           </p>
         </div>
       </div>
@@ -46,8 +46,8 @@
         <div class="fia-text-wrapper">
           <p class="fia-title">Digitale Schulbibliothek</p>
           <p class="fia-description">
-            Alle Inhalte des Lehrplans in digitaler Form zum nochmal nachlesen.
-            Keine Unklarheiten mehr über die Themen der nächsten Klassenarbeit.
+            Ansicht des Lehrplan's - bestehend aus <b>39</b> Schulwochen.
+            Zum Überblick verschaffen oder Themen recherechieren.
           </p>
         </div>
       </div>
@@ -80,7 +80,9 @@
     </div>
     <div class="fia-component-wrapper">
       <app-quiz-card [quiz]="testQuiz"></app-quiz-card>
+      <hr class="fia-divider-line"/>
       <app-indexcards-card [indexCards]="testIndexcards"></app-indexcards-card>
+      <hr class="fia-divider-line"/>
       <app-matching-game [matching]="testMatching"></app-matching-game>
     </div>
   </div>

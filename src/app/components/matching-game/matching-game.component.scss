@@ -27,6 +27,10 @@ $easeIn-duration: 400ms;
 
   .round-label {
     margin-bottom: 0;
+
+    @include to-md {
+      font-size: 1em;
+    }
   }
 
   .container {

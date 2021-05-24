@@ -243,9 +243,21 @@
         min-width: 80%;
       }
 
+      app-indexcards-card {
+        @include to-md {
+          width: 100%;
+        }
+      }
+
       app-indexcards-card,
       app-matching-game {
         margin-top: 20px;
+      }
+
+      .fia-divider-line {
+        height: 1px;
+        width: 80%;
+        border: none;
       }
     }
   }
@@ -369,20 +381,20 @@
   .fia-weekday-group {
     .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
       .fia-post-link-wrapper .fia-post-link {
-        border-right: 5px solid var(--secondary-color);
+        border-right: 2px solid var(--secondary-color);
       }
     }
 
     .fia-weekday-item:nth-child(3), .fia-weekday-item:nth-child(4) {
       .fia-post-link-wrapper .fia-post-link {
-        border-right: 5px solid var(--tertiary-color);
+        border-right: 2px solid var(--tertiary-color);
       }
     }
   }
 
   .fia-next-lesson {
     .fia-post-link-wrapper .fia-post-link.isCompleted {
-      border-right: 5px solid var(--tertiary-color);
+      border-right: 2px solid var(--tertiary-color);
     }
   }
 }

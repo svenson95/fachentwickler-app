@@ -54,13 +54,17 @@ mat-button-toggle-group {
 
 .fia-week-cards-wrapper {
   display: flex;
+  position: relative;
+  max-width: 1130px;
 
   .fia-week-toggle {
     flex-direction: column;
+    flex-shrink: 0;
 
     @include to-md {
-      width: 40px;
+      width: 32px;
       margin-left: 20px;
+      font-size: .9em;
 
       .mat-button-toggle ::ng-deep .mat-button-toggle-label-content {
         padding: 0;
@@ -74,26 +78,25 @@ mat-button-toggle-group {
   }
 
   .fia-weeks-container {
-    width: 100%;
-    height: 65vh;
-    margin-left: 20px;
-    padding-right: 10px;
-    overflow-y: auto;
+    position: absolute;
+    left: 60px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
     overflow-x: hidden;
 
     @include to-md {
       margin-right: 20px;
+      left: 70px;
     }
+
+    -webkit-appearance: none;
+    scrollbar-width: none;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 
     &::-webkit-scrollbar {
-      width: var(--scrollbar-width);
-      overflow-y: scroll;
-      background: var(--background-secondary);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: var(--secondary-color);
-      border-radius: 0;
+      display: none;
     }
   }
 }

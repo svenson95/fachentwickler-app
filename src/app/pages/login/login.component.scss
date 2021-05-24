@@ -79,13 +79,13 @@
 .fia-divider-line {
   border: none;
 
-  @include to-md {
-    display: none;
-  }
-
   @include from-md {
     width: 1px;
     margin: 0 50px;
+  }
+
+  @include to-md {
+    display: none;
   }
 }
 

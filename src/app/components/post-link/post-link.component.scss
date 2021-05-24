@@ -54,13 +54,13 @@
     border-radius: var(--border-radius);
     cursor: pointer;
     text-decoration: none;
-    border-right: 5px solid var(--tertiary-color);
+    border-right: 2px solid var(--tertiary-color);
     border-top-left-radius: var(--button-radius);
 
     transition: background 100ms ease-in-out;
 
     &.isCompleted {
-      border-right: 5px solid var(--secondary-color);
+      border-right: 2px solid var(--secondary-color);
     }
 
     &:focus {
