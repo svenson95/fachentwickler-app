@@ -87,7 +87,7 @@ export class AuthService {
             }));
     }
 
-    fetchAllLessons(): void {
+    async fetchAllLessons(): Promise<void> {
         this.dataService.getAllLessons().subscribe(
             (lessons) => {
                 this.dataService.dashboard.allLessons = lessons;
@@ -106,6 +106,10 @@ export class AuthService {
             (nextLesson) => {
                 this.dataService.dashboard.nextLesson = nextLesson;
                 this.dataService.dashboard.lessonsPercentage = (this.user.progress.length / lessons.length) * 100;
+
+                this.dataService.getSchoolWeek(Number(nextLesson.schoolWeek)).subscribe((response) => {
+                    this.dataService.schoolWeek = response;
+                });
             }, (error) => {
                 console.log('error while GET next-lesson', error);
             }

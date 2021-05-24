@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../models/user';
-import { SchoolWeek } from '../../models/school-week';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
@@ -15,7 +14,6 @@ import { schedule } from '../../../data/schedule';
 export class DashboardComponent implements OnInit {
 
   user: User;
-  schoolWeek: SchoolWeek;
   schedule = schedule;
 
   constructor(private headerService: HeaderService,
@@ -32,7 +30,6 @@ export class DashboardComponent implements OnInit {
 
   /* -- Component functions -- */
   setupComponent(): void {
-
     if (!this.dataService.dashboard) {
       this.dataService.dashboard = {
         allLessons: undefined,
@@ -46,11 +43,8 @@ export class DashboardComponent implements OnInit {
         this.dataService.dashboard.schoolNews = response;
       });
       this.fetchNextExams();
-      this.fetchSchoolWeek();
       this.authService.fetchAllLessons();
     } else if (this.dataService) {
-      this.schoolWeek = this.dataService.schoolWeek;
-
       if (!this.dataService.dashboard.nextLesson || !this.dataService.dashboard.lessonsPercentage) {
         this.authService.fetchNextLesson(this.dataService.dashboard.allLessons);
       }
@@ -85,13 +79,4 @@ export class DashboardComponent implements OnInit {
         }
     );
   }
-
-  /* -- Get current school week card with all lessons -- */
-  fetchSchoolWeek(): void {
-    this.dataService.getSchoolWeek(this.dataService.currentSchoolWeek).subscribe((response) => {
-      this.schoolWeek = response;
-      this.dataService.schoolWeek = response;
-    });
-  }
-
 }
