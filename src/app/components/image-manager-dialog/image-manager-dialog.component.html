@@ -20,7 +20,7 @@
         </div>
       </ngx-dropzone-label>
       <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of dropzoneFile" [file]="f" [removable]="true" (removed)="onRemove(f)">
-        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+        <ngx-dropzone-label>{{ f.name }} <br/> {{ f.type }} <br/> {{ formatBytes(f.size) }}</ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
     <button class="fia-text-button" type="submit" [disabled]="isEmpty(dropzoneFile)">
@@ -33,12 +33,15 @@
     <p class="title">Details</p>
     <div class="image-preview">
       <div class="details">
-        <p><span class="label">ID</span>: {{selectedImage.file._id}}</p>
-        <p><span class="label">Name</span>: {{selectedImage.file.filename}}</p>
-        <p><span class="label">Content-Type</span>: {{selectedImage.file.contentType}}</p>
-        <p><span class="label">Chunk Size</span>: {{selectedImage.file.chunkSize}}</p>
-        <p><span class="label">Length</span>: {{selectedImage.file.length}}</p>
-        <p><span class="label">Upload Date</span>: {{selectedImage.file.uploadDate}}</p>
+        <p><span class="label">ID: </span> {{selectedImage.file._id}}</p>
+        <p><span class="label">Name: </span> {{selectedImage.file.filename}}</p>
+        <p><span class="label">Content-Type: </span> {{selectedImage.file.contentType}}</p>
+        <p>
+          <span class="label">Length: </span>
+          {{formatBytes(selectedImage.file.length)}}
+          <span class="chunks-length">({{selectedImage.chunks.length}} {{selectedImage.chunks.length > 1 ? 'Chunks' : 'Chunk'}})</span>
+        </p>
+        <p><span class="label">Upload Date: </span> {{selectedImage.file.uploadDate | date: 'dd.MM.yyyy - hh:mm:ss'}}</p>
       </div>
       <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)">
         Bild löschen

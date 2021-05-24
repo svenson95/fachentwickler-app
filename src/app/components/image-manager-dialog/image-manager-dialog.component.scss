@@ -131,7 +131,7 @@
   background: var(--primary-color);
 }
 
-::ng-deep .mat-dialog-container {
+::ng-deep .image-manager-modal .mat-dialog-container {
   background: var(--background-secondary);
   border-radius: 0;
   padding: 0 24px;
@@ -159,12 +159,17 @@
 
     p {
       margin-bottom: 0;
+
+      .chunks-length {
+        color: var(--text-color-2);
+      }
     }
 
     .label {
       color: var(--text-color-2);
       width: 90px;
       display: inline-block;
+      text-align: end;
     }
   }
 
@@ -211,6 +216,7 @@ ngx-dropzone,
 }
 
 ngx-dropzone-image-preview ngx-dropzone-label {
+  text-align: left;
   margin-left: 5px !important;
 }
 
