@@ -159,17 +159,16 @@ export class AuthService {
             withCredentials: true
         };
 
+        this.user = undefined;
+        this.token = 'jwt';
         this.isAuthenticated = false;
+        this.dataService.dashboard = undefined;
+        this.dataService.schoolWeek = undefined;
         localStorage.removeItem(CREDENTIALS_STORAGE_KEY);
 
         return this.httpClient.get<LogoutResponse>(this.LOGOUT_ENDPOINT, httpOptions)
             .pipe(map(response => {
                 // console.log('response GET user/logout', response);
-                this.user = null;
-                this.token = null;
-                this.isAuthenticated = false;
-                this.dataService.dashboard = null;
-                this.dataService.schoolWeek = null;
                 return response;
             }));
     }
