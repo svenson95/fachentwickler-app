@@ -7,7 +7,7 @@
       <td class="fia-schedule-time">11:10 - <br/> 12:40</td>
       <td class="fia-schedule-time">13:10 - <br/> 14:40</td>
     </tr>
-    <tr *ngFor="let day of schedule; let i = index">
+    <tr *ngFor="let day of schedule.days; let i = index">
       <th *ngIf="i === 0" class="fia-schedule-header">Mo</th>
       <th *ngIf="i === 1" class="fia-schedule-header">Di</th>
       <th *ngIf="i === 2" class="fia-schedule-header">Mi</th>
@@ -15,7 +15,7 @@
       <th *ngIf="i === 4" class="fia-schedule-header">Fr</th>
       <td *ngFor="let hour of day.lessons">
         <span class="fia-hour-subject">{{subjectName(hour.subject)}}</span>
-        <span class="fia-hour-room">{{subjectName(hour.room)}}</span>
+        <span class="fia-hour-room">{{hour.room}}</span>
         <span class="fia-hour-teacher">{{hour.teacher}}</span>
       </td>
     </tr>

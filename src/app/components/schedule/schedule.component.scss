@@ -4,6 +4,7 @@
 .fia-schedule-table {
   border-collapse: collapse;
   table-layout: fixed;
+  margin-top: 20px;
 
   @include to-xs {
     margin: auto;

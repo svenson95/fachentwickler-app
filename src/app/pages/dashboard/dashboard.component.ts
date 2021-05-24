@@ -5,6 +5,7 @@ import { SchoolWeek } from '../../models/school-week';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { schedule } from '../../../data/schedule';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +16,7 @@ export class DashboardComponent implements OnInit {
 
   user: User;
   schoolWeek: SchoolWeek;
-  scheduleSubstitutions = false;
+  schedule = schedule;
 
   constructor(private headerService: HeaderService,
               private authService: AuthService,
