@@ -27,6 +27,7 @@ export class ImageManagerDialogComponent implements OnInit {
   lastImages: ImageData[] = [];
   isLoading: boolean;
   isUploadingImage: boolean;
+  isLoadMoreImages: boolean;
 
   @ViewChild('fileInput') fileInput;
 
@@ -111,8 +112,10 @@ export class ImageManagerDialogComponent implements OnInit {
 
   loadMore(): void {
     this.page++;
+    this.isLoadMoreImages = true;
     this.dataService.getMultipleImages(this.page).subscribe(data => {
       this.lastImages = [...this.lastImages, ...data];
+      this.isLoadMoreImages = false;
     });
   }
 

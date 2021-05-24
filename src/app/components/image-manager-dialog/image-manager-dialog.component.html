@@ -7,7 +7,7 @@
   <hr class="fia-divider-line"/>
   <p class="title">Neues Bild hochladen</p>
   <form class="fia-add-image-form" encType="multipart/form-data" (submit)="sendImage($event)">
-    <div class="custom-dropzone" id="add-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false" l>
+    <div class="upload-image-dropzone" id="add-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false" l>
       <ngx-dropzone-label>
         <div class="drop-image">
           <ion-icon class="drop-icon" name="download-outline"></ion-icon>
@@ -33,8 +33,12 @@
     <p class="title">Details</p>
     <div class="image-preview">
       <div class="details">
-        <p>Name: {{selectedImage.file.filename}}</p>
-        <p>ID: {{selectedImage.file._id}}</p>
+        <p><span class="label">ID</span>: {{selectedImage.file._id}}</p>
+        <p><span class="label">Name</span>: {{selectedImage.file.filename}}</p>
+        <p><span class="label">Content-Type</span>: {{selectedImage.file.contentType}}</p>
+        <p><span class="label">Chunk Size</span>: {{selectedImage.file.chunkSize}}</p>
+        <p><span class="label">Length</span>: {{selectedImage.file.length}}</p>
+        <p><span class="label">Upload Date</span>: {{selectedImage.file.uploadDate}}</p>
       </div>
       <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)">
         Bild löschen
@@ -49,11 +53,12 @@
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
     <img class="image" *ngFor="let image of lastImages" [src]="encode(image)" alt="image"
-         matTooltip="Klicke für Details" matTooltipClass="image-tooltip" matTooltipPosition="right"
+         matTooltip="Details anzeigen" matTooltipClass="image-tooltip" matTooltipPosition="right"
          [matTooltipDisabled]="selectedImage === image" (click)="selectedImage = image" [class.is-selected]="image === selectedImage"
     />
     <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
-      <span>Mehr laden</span>
+      <span *ngIf="!isLoadMoreImages">Mehr laden</span>
+      <mat-spinner class="fia-loading-spinner" *ngIf="isLoadMoreImages"></mat-spinner>
     </button>
   </div>
 </mat-dialog-content>
