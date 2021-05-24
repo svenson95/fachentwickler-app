@@ -1,9 +1,6 @@
 @import 'src/theme/styles';
 @import 'src/theme/mixins';
 
-// ngx-highlightjs styling - Code Highlighting
-@import '~highlight.js/styles/github.css';
-
 .fia-post-item {
   overflow: auto;
 
@@ -188,8 +185,6 @@
   .post-code {
     code {
       padding: 20px;
-      color: var(--text-color-1);
-      background: var(--background-secondary);
 
       @include to-xs {
         font-size: .9em;

@@ -6,6 +6,7 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
 
 import { SidenavService } from '../../services/sidenav.service';
+import { ThemeService } from '../../services/theme.service';
 
 /** @title Responsive sidenav */
 @Component({
@@ -36,6 +37,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
               private changeDetectorRef: ChangeDetectorRef,
               private media: MediaMatcher,
               private sidenavService: SidenavService,
+              public themeService: ThemeService,
               public router: Router,
               private elementRef: ElementRef
   ) {

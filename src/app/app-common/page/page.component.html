@@ -1,4 +1,4 @@
-<div class="fia-page-container" [class.is-mobile]="isMobile.matches">
+<div class="fia-page-container" [class.is-mobile]="isMobile.matches" [ngClass]="themeService.getActiveTheme().name">
   <app-header class="fia-header" id="fia-header"
               [isMobile]="isMobile"
               [sidenav]="sidenav"
