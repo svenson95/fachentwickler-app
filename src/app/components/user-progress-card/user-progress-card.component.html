@@ -4,14 +4,14 @@
 
     <div class="fia-progress-lesson">
       <p class="label">
-        Lektion {{user?.progress.length || '...'}} von {{dashboard?.allLessons !== undefined && dashboard?.allLessons.length || '...'}}
+        Lektion {{user?.progress.length !== undefined ? user?.progress.length : '...'}} von {{dashboard?.allLessons !== undefined && dashboard?.allLessons.length || '...'}}
       </p>
       <mat-progress-bar class="progress-bar" [value]="dashboard?.lessonsPercentage"></mat-progress-bar>
     </div>
 
     <div class="fia-progress-week">
-      <p class="label">Woche {{dashboard.nextLesson?.schoolWeek || '...' }} von {{dataService.schoolWeeksLength}}</p>
-      <mat-progress-bar class="progress-bar" [value]="(dashboard.nextLesson?.schoolWeek / dataService.schoolWeeksLength) * 100"></mat-progress-bar>
+      <p class="label">Schulwoche {{dashboard?.nextLesson?.schoolWeek || '...' }} von {{dataService.schoolWeeksLength}}</p>
+      <mat-progress-bar class="progress-bar" [value]="(dashboard?.nextLesson?.schoolWeek / dataService.schoolWeeksLength) * 100"></mat-progress-bar>
     </div>
 
     <app-post-link

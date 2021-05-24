@@ -60,7 +60,7 @@
     width: fit-content;
     border-bottom: 1px solid var(--primary-color);
 
-    @include to-xs {
+    @include to-md {
       margin-left: 15px;
       margin-right: 15px;
     }
@@ -78,7 +78,7 @@
     width: fit-content;
     max-width: 170px;
 
-    @include to-xs {
+    @include to-md {
       font-size: .9em;
       margin-left: 15px;
       margin-right: 15px;
@@ -131,7 +131,7 @@
 
 .fia-sidenav-content:first-child {
   @include to-xs {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   @include from-xs {

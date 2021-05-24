@@ -12,11 +12,13 @@
     </div>
   </mat-card>
   <div class="fia-week-cards-wrapper" *ngIf="schoolYears !== undefined">
-    <mat-button-toggle-group class="fia-week-toggle" [(ngModel)]="selectedWeek" aria-label="School Week" (ngModelChange)="changeWeek(selectedWeek)">
-      <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="toNumber(week.schoolWeek)">
-        {{week.schoolWeek}}
-      </mat-button-toggle>
-    </mat-button-toggle-group>
+    <mat-card class="fia-card week-toggle-card">
+      <mat-button-toggle-group class="fia-week-toggle" [(ngModel)]="selectedWeek" aria-label="School Week" (ngModelChange)="changeWeek(selectedWeek)">
+        <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="toNumber(week.schoolWeek)">
+          {{week.schoolWeek}}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-card>
     <div class="fia-weeks-container" (scroll)="onScroll()">
       <app-school-week-card [class]="'week-' + week.schoolWeek" *ngFor="let week of schoolYears[selectedYear]?.weeks" [week]="week"></app-school-week-card>
     </div>

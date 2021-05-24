@@ -16,6 +16,11 @@
     margin-right: 4px;
     margin-bottom: 2px;
   }
+
+  .mat-dialog-actions {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 ::ng-deep .logout-modal.cdk-overlay-pane {

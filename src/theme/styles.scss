@@ -30,16 +30,15 @@
 // ngx-highlightjs styling - Code Highlighting (https://github.com/highlightjs/highlight.js/tree/main/src/styles)
 
 .light {
-  @import '~highlight.js/styles/googlecode';
+  @import '~highlight.js/styles/atom-one-light';
 }
 
 .dark {
-  @import '~highlight.js/styles/vs2015';
+  @import '~highlight.js/styles/atom-one-dark';
 }
 
 body {
   background: var(--background-primary);
-  -webkit-font-smoothing: antialiased;
 
   &.scroll-locked {
     overflow: hidden;
@@ -420,6 +419,10 @@ $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
   &.mat-checked {
     .mat-slide-toggle-thumb {
       background-color: white;
+    }
+
+    .mat-ripple-element {
+      background-color: var(--primary-color);
     }
 
     .mat-slide-toggle-bar {

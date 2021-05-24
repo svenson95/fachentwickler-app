@@ -34,7 +34,6 @@
     p {
       margin-bottom: 0;
       padding: 8px 12px;
-      text-decoration: underline var(--tertiary-color);
 
       @include from-sm {
         flex-shrink: 0;

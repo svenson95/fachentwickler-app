@@ -47,7 +47,7 @@
       background: rgba(var(--grey-4-rgb), .2);
 
       &:hover:not([disabled]) {
-        background: var(--secondary-color);
+        background: rgba(var(--secondary-color-rgb), .4);
       }
     }
 

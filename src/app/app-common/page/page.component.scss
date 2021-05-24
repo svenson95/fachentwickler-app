@@ -53,12 +53,12 @@
 }
 
 .fia-sidenav {
+  background: var(--background-secondary);
   overflow-x: hidden;
   border-right: 0;
-}
 
-.fia-sidenav {
-  background: var(--background-secondary);
+  @include to-md { top: 80px !important; }
+  @include to-xs { top: 60px !important; }
 }
 
 .mat-drawer-container {

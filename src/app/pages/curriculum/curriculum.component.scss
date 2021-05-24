@@ -21,7 +21,7 @@
       margin-right: 20px;
 
       mat-button-toggle {
-        background-color: var(--background-secondary);
+        background-color: rgba(var(--tertiary-color-rgb), .2);
       }
 
       .mat-button-toggle-checked {
@@ -38,12 +38,11 @@
 mat-button-toggle-group {
   border-radius: var(--border-radius);
   border: none;
-  box-shadow: var(--box-shadow);
   border-color: rgba(var(--tertiary-color-rgb), .2);
   background-color: var(--background-primary);
 
   mat-button-toggle {
-    background-color: var(--background-primary);
+    background-color: rgba(var(--tertiary-color-rgb), .2);
     color: var(--text-color-1);
   }
 
@@ -57,39 +56,37 @@ mat-button-toggle-group {
   position: relative;
   max-width: 1130px;
 
-  .fia-week-toggle {
-    flex-direction: column;
-    flex-shrink: 0;
+  .week-toggle-card {
+    margin-bottom: 0;
 
-    @include to-md {
-      width: 32px;
-      margin-left: 20px;
-      font-size: .9em;
+    .fia-week-toggle {
+      flex-direction: column;
+      flex-shrink: 0;
 
-      .mat-button-toggle ::ng-deep .mat-button-toggle-label-content {
-        padding: 0;
+      @include to-md {
+        width: 32px;
+        font-size: .9em;
+
+        .mat-button-toggle ::ng-deep .mat-button-toggle-label-content {
+          padding: 0;
+        }
       }
-    }
 
-    .mat-button-toggle + .mat-button-toggle {
-      border-left: none;
-      border-top: solid 1px rgba(var(--tertiary-color-rgb), .2);
+      .mat-button-toggle + .mat-button-toggle {
+        border-left: none;
+        border-top: solid 1px rgba(var(--tertiary-color-rgb), .2);
+      }
     }
   }
 
   .fia-weeks-container {
     position: absolute;
-    left: 60px;
+    left: 120px;
     top: 0;
     right: 0;
     bottom: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-
-    @include to-md {
-      margin-right: 20px;
-      left: 70px;
-    }
 
     -webkit-appearance: none;
     scrollbar-width: none;
@@ -97,6 +94,19 @@ mat-button-toggle-group {
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    @include to-md {
+      margin-right: 20px;
+      left: 110px;
+    }
+
+    @include to-md {
+      left: 90px;
+    }
+
+    app-school-week-card:last-of-type ::ng-deep mat-card {
+      margin-bottom: 0 !important;
     }
   }
 }

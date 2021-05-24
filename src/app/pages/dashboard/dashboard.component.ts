@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../models/user';
+import { DashboardData } from '../../models/dashboard-data';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
@@ -31,23 +32,20 @@ export class DashboardComponent implements OnInit {
   /* -- Component functions -- */
   setupComponent(): void {
     if (!this.dataService.dashboard) {
-      this.dataService.dashboard = {
-        allLessons: undefined,
-        lessonsPercentage: undefined,
-        nextLesson: undefined,
-        nextExams: undefined,
-        schoolNews: undefined,
-      };
 
+      this.dataService.dashboard = {} as DashboardData;
       this.dataService.getAllNews().subscribe(response => {
         this.dataService.dashboard.schoolNews = response;
       });
       this.fetchNextExams();
       this.authService.fetchAllLessons();
-    } else if (this.dataService) {
-      if (!this.dataService.dashboard.nextLesson || !this.dataService.dashboard.lessonsPercentage) {
+
+    } else if (this.dataService.dashboard) {
+
+      if (!this.dataService.dashboard.nextLesson) {
         this.authService.fetchNextLesson(this.dataService.dashboard.allLessons);
       }
+
     }
   }
 

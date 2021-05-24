@@ -84,7 +84,7 @@ export class RegisterComponent implements OnInit, OnChanges {
     const password = this.password.value.toLowerCase();
     const user = {
       name, email, password,
-      theme: this.themeService.getActiveTheme(),
+      theme: this.themeService.getActiveTheme().name,
       role: UserRole.USER
     } as RegisterUser;
 

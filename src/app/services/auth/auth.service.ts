@@ -218,6 +218,7 @@ export class AuthService {
                 console.log('ERROR authenticated', error);
             });
 
+            // workaround for localhost
             if (this.user === undefined) {
                 const data = JSON.parse(stored);
                 this.user = data.user;

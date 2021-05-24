@@ -28,6 +28,11 @@
       }
     }
   }
+
+  .mat-dialog-actions {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 ::ng-deep .delete-image-modal.cdk-overlay-pane {

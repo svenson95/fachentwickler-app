@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="fia-quiz-end" *ngIf="end">
-          <p class="fia-quiz-done-label">Fertig</p>
+          <p class="fia-quiz-done-label">Lektion abgeschlossen</p>
           <div class="fia-quiz-end-wrapper">
             <p [innerHTML]="wrongAnswers > 6 ? finishTexts[6] : finishTexts[wrongAnswers]"></p>
             <span class="fia-emoji" *ngIf="wrongAnswers > 0">{{finishEmojis[wrongAnswers > 6 ? 6 : wrongAnswers]}}</span>
