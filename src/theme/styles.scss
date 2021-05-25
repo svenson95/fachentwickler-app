@@ -10,11 +10,6 @@
 }
 
 @font-face {
-  font-family: 'Nunito-Italic';
-  src: url('../assets/fonts/Nunito-Italic.ttf');
-}
-
-@font-face {
   font-family: 'Nunito-Bold';
   src: url('../assets/fonts/Nunito-Bold.ttf');
 }
@@ -56,10 +51,6 @@ body {
 b, strong {
   font-family: Nunito-ExtraBold, sans-serif;
   font-weight: initial; // firefox font-weight too bold without font-weight: initial;
-}
-
-i {
-  font-family: Nunito-Italic, sans-serif;
 }
 
 u {
