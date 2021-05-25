@@ -12,6 +12,7 @@
     &.is-open {
       color: var(--text-color-2);
       border-color: rgba( var(--grey-1-rgb), .6);
+      margin-bottom: 20px;
     }
   }
 
@@ -192,6 +193,19 @@
       .left { text-align: left; }
       .middle { text-align: center; }
       .right { text-align: right; }
+    }
+  }
+
+  .post-table-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    > app-post-element {
+      margin: 6px;
+
+      .post-table {
+        margin: 0;
+      }
     }
   }
 

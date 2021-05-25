@@ -65,12 +65,16 @@
       </tr>
     </tbody>
   </table>
+  <!-- TABLE-GROUP -->
+  <div class="post-table-group" *ngIf="element.type === ElementType.TABLE_GROUP && (element.hidden ? isVisible : true)">
+    <app-post-element *ngFor="let table of element.elements" [element]="table"></app-post-element>
+  </div>
   <!-- CODE -->
   <pre class="post-code" *ngIf="element.type === ElementType.CODE && (element.hidden ? isVisible : true)">
     <code [highlight]="element.content" [ngClass]="'language-' + element.language"></code>
   </pre>
   <!-- ANSWER-GROUP -->
-  <div *ngIf="element.type === ElementType.ANSWER_GROUP && (element.hidden ? isVisible : true)">
+  <div class="post-answer-group" *ngIf="element.type === ElementType.ANSWER_GROUP && (element.hidden ? isVisible : true)">
     <app-post-element *ngFor="let el of element.elements" [element]="el"></app-post-element>
   </div>
 </div>

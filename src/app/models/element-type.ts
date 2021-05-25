@@ -9,5 +9,6 @@ export enum ElementType {
   CODE = 'code',
   FILE = 'file',
   HINT = 'hint',
-  ANSWER_GROUP = 'answer-group'
+  ANSWER_GROUP = 'answer-group',
+  TABLE_GROUP = 'table-group'
 }
