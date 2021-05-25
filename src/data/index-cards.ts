@@ -1,4 +1,5 @@
 import { IndexCards } from '../app/models/index-cards';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const indexCards: IndexCards[] = [
     {

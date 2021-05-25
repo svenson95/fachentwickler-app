@@ -1,4 +1,5 @@
 import { Topic } from '../app/models/subject';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const topics: Topic[] = [
     {
@@ -8,6 +9,7 @@ export const topics: Topic[] = [
         "subject": "lf-1",
         "links": [
             "5f429107165d0ab470bc57ca",
+            "5f429451165d0ab470bc57cf",
             "605a469942f5481a20c97627"
         ]
     },
@@ -17,8 +19,7 @@ export const topics: Topic[] = [
         "url": "beduerfnisse_und_gueter",
         "subject": "lf-1",
         "links": [
-            "5f42929e165d0ab470bc57cb",
-            "5f429451165d0ab470bc57cf"
+            "5f42929e165d0ab470bc57cb"
         ]
     },
     {

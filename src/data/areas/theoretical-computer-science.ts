@@ -1,7 +1,7 @@
-import {Area} from "../../app/models/area";
+// import { Area } from "../../app/models/area";
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const theoretical_computer_science: Area =
-{
+const theoreticalComputerScience = {
     "url": "/angewandte-informatik",
     "description": "Die Theoretische Informatik ist ein Teilgebiet der Informatik, welches hauptsächlich mathematische Grundlagen der Information sowie ihre Darstellung und effiziente Verarbeitung untersucht. Kann ein Problem mit Hilfe eines Algorithmus am Computer gelöst werden, so untersucht die theoretische Informatik auch, wie effizient dies geschehen kann und erfährt damit eine weitere Leistungsgrenze von Computern (<u>Komplexitätstheorie</u>). Die Entwicklung von Programmiersprachen findet ihre Grundlage ebenfalls in der theoretischen Informatik – in der <u>Theorie der formalen Sprachen</u>. Kryptologie und Codierungstechniken sind ebenfalls Bestandteile der Wissenschaft der theoretischen Informatik.",
     "groups": [

@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const LF4_2_POSTS: Post[] = [
     {
@@ -103,7 +104,8 @@ export const LF4_2_POSTS: Post[] = [
             {
                 "type": "subtitle",
                 "content": "3) Wie werden die dargestellten äußeren PC-Schnittstellen bezeichnet? Welche Geräte lassen sich jeweils hier anschließen?"
-            },{
+            },
+            {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5ed3ea453e558d35d3d90239"
             },

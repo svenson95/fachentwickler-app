@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const LF2_POSTS: Post[] = [
     {
@@ -133,7 +134,6 @@ export const LF2_POSTS: Post[] = [
         "description": "Mitschrift vom 22.09.2019",
         "subject": "lf-2",
         "type": "article",
-        "subject": "lf-2",
         "lessonDate": "2020-09-22",
         "lastUpdate": "2020-11-04",
         "schoolWeek": "16",
@@ -400,7 +400,6 @@ export const LF2_POSTS: Post[] = [
         "description": "Test vom 02.09.2020",
         "subject": "lf-2",
         "type": "test",
-        "subject": "lf-2",
         "lessonDate": "2020-09-02",
         "lastUpdate": "2020-10-29",
         "schoolWeek": "15",

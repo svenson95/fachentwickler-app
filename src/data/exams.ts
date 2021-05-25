@@ -1,4 +1,5 @@
 import { ExamDate } from '../app/models/exam-date';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const exams: ExamDate[] = [
     {

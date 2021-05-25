@@ -1,5 +1,6 @@
 import { ArticleData } from '../../app/new-post-models/post-article';
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const LF1_POSTS: Post[] = [
     {
@@ -11,7 +12,7 @@ export const LF1_POSTS: Post[] = [
         "subject": "lf-1",
         "type": "tasks",
         "lessonDate": "2019-09-03",
-        "lastUpdate": "2021-05-15",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "2",
         "elements": [
             {
@@ -32,7 +33,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ 499 x 1,19 = <u>593,81 €</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -40,6 +46,7 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ 119 % = 499,- € <br/> → 1 % = 4,19 € <br/> → 19 % = <u>79,67 €</u>"
             },
             {
@@ -56,7 +63,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Falsch, unter Applications - auf deutsch Anwendungen - versteht man Software für zB. Computer oder Smartphone."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -64,7 +76,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Richtig, jedoch gehören noch mehr Bereiche dazu, bspw. Schulungsmaßnahmen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -72,7 +89,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Falsch, <u>ein Organigramm ist eine Darstellung des Unternehmens inklusive der Organisationsstruktur</u>."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -80,7 +102,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Falsch, es sind Dienstleistungen nach dem Verkauf."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -88,7 +115,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Richtig, evtl. noch den Bestand oder Sortiment."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -96,15 +128,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "→ Falsch, Rendite = Verzinsung des Gewinns"
+                "hidden": true,
+                "content": "→ Falsch, Rendite = Verzinsung des Gewinns <br/> → Umsatz minus Kosten = Gewinn <br/> → Gewinn durch Umsatz mal 100 = x%"
             },
             {
-                "type": "text",
-                "content": "→ Umsatz minus Kosten = Gewinn"
-            },
-            {
-                "type": "text",
-                "content": "→ Gewinn durch Umsatz mal 100 = x%"
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -112,7 +141,12 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Falsch."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -120,6 +154,7 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "→ Falsch."
             }
         ]
@@ -458,7 +493,7 @@ export const LF1_POSTS: Post[] = [
     {
         "url": "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
         "_id": "5f429451165d0ab470bc57cf",
-        "topicId": "6056185f36ac2b24829ca2f5",
+        "topicId": "6056185736ac2b24829ca2f4",
         "title": "Aufgaben der Betriebe & Unternehmen",
         "description": "Mitschrift vom 28.10.2019",
         "subject": "lf-1",
@@ -1444,12 +1479,14 @@ export const LF1_POSTS: Post[] = [
     },
     {
         "url": "beduerfnisse_und_gueter/test",
+        "_id": "5f429521220657ed697dc56a",
+        "topicId": "6056185736ac2b24829ca2f4",
         "title": "Leistungskontrolle - Bedürfnisse und Güter",
-        "description": "Test vom 11.12.2019",
+        "description": "Thema vom 11.12.2019",
         "subject": "lf-1",
         "type": "test",
         "lessonDate": "2019-12-11",
-        "lastUpdate": "2020-12-22",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "6",
         "elements": [
             {
@@ -1458,10 +1495,11 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<span class='ddu-list-number'>1</span> Definieren Sie den Begriff Bedürfnis"
+                "content": "<span class='list-number'>1</span> Definieren Sie den Begriff Bedürfnis"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Ein Bedürfnis ist eine Mangelerscheinung mit dem Ziel diese zu beseitigen. Zum Beispiel Hunger mit Essen."
             },
             {
@@ -1470,10 +1508,11 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<span class='ddu-list-number'>2</span> Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
+                "content": "<span class='list-number'>2</span> Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Ein Bedürfnis entsteht durch eine Mangelerscheinung, wenn dieses Bedürfnis realisierbar ist, d. h. es ist finanzierbar und auf dem Markt verfügbar, ist es ein Bedarf. Durch Kaufentschluss wird der Bedarf zur Nachfrage."
             },
             {
@@ -1482,10 +1521,11 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<span class='ddu-list-number'>3</span> Erklären Sie an einem Beispiel das Ökonomische Prinzip"
+                "content": "<span class='list-number'>3</span> Erklären Sie an einem Beispiel das Ökonomische Prinzip"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Das Ökonomische Prinzip besagt, dass eine vorbestimmte Leistung mit möglichst geringen Mitteln erzielt werden soll, dabei aber die größtmögliche Leistung mit minimalen Mitteln. <br/> Ein gutes Beispiel findet man zB. beim Recycling nimmt man beispielsweise eine Mehrweg Plastifklasche hat man eine Verpackung mit dem Ziel sie möglichst oft erneut zu verwenden."
             },
             {
@@ -1494,10 +1534,11 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<span class='ddu-list-number'>4</span> Worin besteht der Unterschied zwischen einem freien und einem wirtschaftlichen Gut?"
+                "content": "<span class='list-number'>4</span> Worin besteht der Unterschied zwischen einem freien und einem wirtschaftlichen Gut?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Ein freies Gut ist ein unbegrenzt vorhandenes Gut hinter dem keine menschliche Arbeit steckt. <br/> Ein Wirtschaftsgut ist ein begrenzt zur Verfügung stehendes Gut hinter dem menschliche Arbeit steckt."
             },
             {
@@ -1506,10 +1547,11 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<span class='ddu-list-number'>5</span> Was versteht man unter Investitionsgütern?"
+                "content": "<span class='list-number'>5</span> Was versteht man unter Investitionsgütern?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Sie sind Güter die zur Weiterverarbeitung verwendet werden (z. B. Holz) das beliebig weiter verarbeitet werden kann. <br/> Sie sind nicht für den Konsum geeignet, also keine fertigen Endprodukte."
             },
             {
@@ -1518,10 +1560,11 @@ export const LF1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<span class='ddu-list-number'>6</span> Was ist ein Gebrauchsgut?"
+                "content": "<span class='list-number'>6</span> Was ist ein Gebrauchsgut?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Gebrauchsgüter gibt es sowohl bei Produktionsgütern als auch bei Konsumgütern. Sie können öfter genutzt werden, werden also nicht sofort verbraucht sondern verschleißen. Wie zum Beispiel Autos oder Maschinen."
             }
         ]

@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const LF7_1_POSTS: Post[] = [
     {
@@ -1742,7 +1743,7 @@ export const LF7_1_POSTS: Post[] = [
         "subject": "lf-7-1",
         "type": "tasks",
         "lessonDate": "2021-05-17",
-        "lastUpdate": "2021-05-18",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "25",
         "elements": [
             {
@@ -1755,7 +1756,12 @@ export const LF7_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "L = 20 x log(573 ÷ 0,775 V) = 37,38 dB"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "subtitle",
@@ -1767,11 +1773,16 @@ export const LF7_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "L = 20 x log(48,7 ÷ 0,775) = 35,96 (aufgerundet) <br/> L = 20 x log(42,8 ÷ 0,775) = 34,84 (aufgerundet) <br/> = -1,12 dB (oder) <br/> = 1,12 dB"
             },
             {
                 "type": "hint",
                 "content": "Der Wert kann negativ oder positiv sein, je nachdem was man berechnen möchte."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",

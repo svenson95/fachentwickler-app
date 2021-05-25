@@ -1,4 +1,5 @@
 import { SchoolNews } from '../app/models/school-news';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const schoolNewsData: SchoolNews[] = [
   {
@@ -199,6 +200,108 @@ export const schoolNewsData: SchoolNews[] = [
         "list": [
           "Abteilung 1: EEG92, EIT81, SEL81, FIS81, MGE81, VTE81, VEG (VTE91 kein Unterricht)",
           "Abteilung 2: SHK91, SHK81, KFP91, KFP81, VAM, VKF"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Sport wird mit sporttheoretischen Inhalten im Klassenraum unterrichtet."
+      },
+      {
+        "type": "text",
+        "content": "Bitte beachten Sie das auf dem gesamten Schulgelände geltende Abstandsgebot und die Maskenpflicht zum Tragen einer <b>medizinischen oder FFP-2-Maske</b>."
+      },
+      {
+        "type": "text",
+        "content": "Alle anderen Klassen erhalten in der Schulwoche Distanzunterricht gemäß dem Stunden- und Vertretungsplan zu den üblichen Unterrichtszeiten."
+      },
+      {
+        "type": "list",
+        "content": "Bitte beachten Sie als Schülerin oder Schüler:",
+        "list": [
+          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
+          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
+        ]
+      },
+      {
+        "type": "text",
+        "content": "M. Kanitz <br/> Stv. Schulleiterin"
+      }
+    ]
+  },
+  {
+    "title": "Informationen zum Schulbetrieb vom 26.04.–30.04.2021",
+    "date": "2021-04-21",
+    "url": "info_2021_04_21",
+    "content": [
+      {
+        "type": "text",
+        "content": "Für alle Schülerinnen und Schüler besteht weiterhin Berufsschulpflicht."
+      },
+      {
+        "type": "text",
+        "content": "<u>Hinweis für Klassen, die wieder in den Präsenzunterricht zurückkehren</u>"
+      },
+      {
+        "type": "text",
+        "content": "Die Testung auf Covid19 findet für Sie im 1. Unterricht am Montag statt, Informationen und Belehrungen erhalten Sie hierbei gleich mit. Minderjährige SuS müssen die Bestätigung durch den Erziehungsberechtigten vorweisen!"
+      },
+      {
+        "type": "list",
+        "content": "Folgende Klassen haben in der Woche vom 26.04. bis zum 30.04.2021 <b>Präsenzunterricht</b> im Oberstufenzentrum:",
+        "list": [
+          "Abteilung 1: EEG92, FSV02, FIA93, MGE81, VEG",
+          "Abteilung 2: SHK01, SHK91, KFN01, KFP04, KFP91, VAM, WAB2A, WAB2B"
+        ]
+      },
+      {
+        "type": "text",
+        "content": "Sport wird mit sporttheoretischen Inhalten im Klassenraum unterrichtet."
+      },
+      {
+        "type": "text",
+        "content": "Bitte beachten Sie das auf dem gesamten Schulgelände geltende Abstandsgebot und die Maskenpflicht zum Tragen einer <b>medizinischen oder FFP-2-Maske</b>."
+      },
+      {
+        "type": "text",
+        "content": "Alle anderen Klassen erhalten in der Schulwoche Distanzunterricht gemäß dem Stunden- und Vertretungsplan zu den üblichen Unterrichtszeiten."
+      },
+      {
+        "type": "list",
+        "content": "Bitte beachten Sie als Schülerin oder Schüler:",
+        "list": [
+          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
+          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
+        ]
+      },
+      {
+        "type": "text",
+        "content": "M. Kanitz <br/> Stv. Schulleiterin"
+      }
+    ]
+  },
+  {
+    "title": "Informationen zum Schulbetrieb vom 17.–21.05.2021",
+    "date": "2021-05-12",
+    "url": "info_2021_05_12",
+    "content": [
+      {
+        "type": "text",
+        "content": "Für alle Schülerinnen und Schüler besteht weiterhin Berufsschulpflicht."
+      },
+      {
+        "type": "text",
+        "content": "<u>Hinweis für Klassen, die wieder in den Präsenzunterricht zurückkehren</u>"
+      },
+      {
+        "type": "text",
+        "content": "Die Testung auf Covid19 findet für Sie im 1. Unterricht am Montag statt, Informationen und Belehrungen erhalten Sie hierbei gleich mit. Minderjährige SuS müssen die Bestätigung durch den Erziehungsberechtigten vorweisen!"
+      },
+      {
+        "type": "list",
+        "content": "Folgende Klassen haben in der Woche vom 17.05. bis zum 21.05.2021 <b>Präsenzunterricht</b> im Oberstufenzentrum:",
+        "list": [
+          "Abteilung 1: EEG01, EIT81, FSV02, FIA93, VTE91",
+          "Abteilung 2: SHK01, SHK81, VAM, KFN01, KFP04, KFP81, WAB Gr.1A,WAB Gr.1B"
         ]
       },
       {

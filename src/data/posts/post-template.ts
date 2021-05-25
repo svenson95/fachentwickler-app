@@ -1,5 +1,6 @@
 import { Post } from '../../app/models/post';
 import { PostType } from '../../app/models/post-type';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 const test: Post = {
     "url": "test",
@@ -23,7 +24,8 @@ const test: Post = {
         },
         {
             "type": "text",
-            "content": "test"
+            "content": "test",
+            "hidden": false
         },
         {
             "type": "hint",
@@ -73,7 +75,7 @@ const test: Post = {
             "type": "list",
             "content": "Quellen:",
             "list": [
-                "<a href='link'>text</a>"
+                "<a href='link' target=\"_blank\" rel=\"noopener noreferrer\">text</a>"
             ]
         }
     ]

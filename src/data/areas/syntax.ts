@@ -1,5 +1,6 @@
-export const syntax =
-{
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
+
+const syntax = {
     "url": "/syntax",
     "description": "Die Syntax ist die Grundlage einer jeden Sprache, im herkömmlichen Sinn bedeutet Syntax die Lehre vom Satz / korrekten Satzbau. Sie ein Teilgebiet der Grammatik und legt fest, wie aus einzelnen Wörtern sinnvolle Sätze entstehen. Zum Beispiel der <code>return</code> Befehl ist Teil der Syntax einiger Progrmamiersprachen, d. h. diese Zeichenabfolge wird im Code als Befehl erkannt.",
     "groups": [

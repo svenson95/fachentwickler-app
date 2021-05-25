@@ -1,4 +1,5 @@
 import { Matching } from '../app/models/matching-piece';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const matchings: Matching[] = [
     {

@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const WP_POSTS: Post[] = [
     {
@@ -1394,7 +1395,7 @@ export const WP_POSTS: Post[] = [
         "subject": "wp",
         "type": "tasks",
         "lessonDate": "2021-05-19",
-        "lastUpdate": "2021-05-19",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "25",
         "elements": [
             {
@@ -1410,88 +1411,106 @@ export const WP_POSTS: Post[] = [
                 "content": "<b>a) Erstellen Sie die Wertetabellen für den ungestörten und für den gestörten Betrieb</b>"
             },
             {
-                "type": "table",
-                "content": "Ungestörter Betrieb",
-                "rows": [
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
                     {
-                        "type": "header",
-                        "columns": [
-                            { "align": "middle", "content": "M1" },
-                            { "align": "middle", "content": "M2" },
-                            { "align": "middle", "content": "M3" }
+                        "type": "subtitle",
+                        "content": "<u>Ungestörter Betrieb</u>"
+                    },
+                    {
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "middle", "content": "M1" },
+                                    { "align": "middle", "content": "M2" },
+                                    { "align": "middle", "content": "M3" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Aus" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Aus" }
-                        ]
+                        "type": "subtitle",
+                        "content": "<u>Gestörter Betrieb</u>"
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "middle", "content": "M1" },
+                                    { "align": "middle", "content": "M2" },
+                                    { "align": "middle", "content": "M3" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            }
                         ]
                     }
                 ]
             },
             {
-                "type": "table",
-                "content": "Gestörter Betrieb",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "middle", "content": "M1" },
-                            { "align": "middle", "content": "M2" },
-                            { "align": "middle", "content": "M3" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" }
-                        ]
-                    }
-                ]
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1500,31 +1519,36 @@ export const WP_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/60a579ca59a0005b1c634b66",
-                "size": "s"
+                "size": "m"
             },
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/60a57ca859a0005b1c634b69",
-                "size": "m"
+                "size": "m",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
                 "content": "<b>c) Erstellen Sie eine vollständige und eine konsolidierte Entscheidungstabelle mit den Bedingungen A, B, C und den Aktionen X, Y, Z und U</b>"
             },
             {
-                "type": "text",
-                "content": "<b>d) Entwickeln Sie aus der konsolidierten Entscheidungstabelle ein Struktogramm für die Funktion Ersatzstromversorgung()</b>"
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
-                "content": "<b>d) Eingabe: Binär - A, B, C <br/> Verarbeitung: entwickelte Steuerlogik</b>"
+                "content": "<b>d) Entwickeln Sie aus der konsolidierten Entscheidungstabelle ein Struktogramm für die Funktion Ersatzstromversorgung()</b>"
             },
             {
                 "type": "table",
                 "content": "",
                 "rows": [
                     {
-                        "type": "header",
+                        "type": "default",
                         "columns": [
                             { "align": "left", "content": "Eingabe" },
                             { "align": "left", "content": "Binär - A, B, C" }
@@ -1547,6 +1571,10 @@ export const WP_POSTS: Post[] = [
                 ]
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "text",
                 "content": "<b>e) Programmieren und testen Sie die Funktion Ersatzstromversorgung()</b>"
             },
@@ -1555,7 +1583,7 @@ export const WP_POSTS: Post[] = [
                 "content": "",
                 "rows": [
                     {
-                        "type": "header",
+                        "type": "default",
                         "columns": [
                             { "align": "left", "content": "Eingabe" },
                             { "align": "left", "content": "S1, S2, S3" }
@@ -1580,6 +1608,21 @@ export const WP_POSTS: Post[] = [
             {
                 "type": "text",
                 "content": "Überlegung: Unterschied zum SPS Programm und die damit verbundenen Auswirkungen."
+            },
+            {
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
+                    {
+                        "type": "subtitle",
+                        "content": "Beispiellösung in Java"
+                    },
+                    {
+                        "type": "code",
+                        "language": "java",
+                        "content": "package com.company;\n\nimport java.util.Scanner;\n\npublic class Main {\n\n  static boolean m1 = false;\n  static boolean m2 = false;\n  static boolean m3 = false;\n  static boolean p1 = false;\n  static int power = 0;\n\n  // value in kW\n  static int m1_consumption = 7;\n  static int m2_consumption = 5;\n  static int m3_consumption = 2;\n\n  public static void main(String[] args) {\n    start();\n  }\n\n  public static void start() {\n    System.out.println();\n    System.out.println(\"Notstromversorgung\");\n    System.out.println(\"M1 = \" + m1);\n    System.out.println(\"M2 = \" + m2);\n    System.out.println(\"M3 = \" + m3);\n    System.out.println(\"Leistung: \" + power);\n    System.out.println(\"P1: \" + p1);\n\n    Scanner input = new Scanner(Scanner.in);\n    System.out.println();\n    System.out.println(\"Enter s1 / s2 / s3\");\n    String control = input.nextLine().toUpperCase();\n    String[] args = new String[0];\n\n    switch(control) {\n      case \"S1\":\n        m1 = !m1;\n        System.out.println(\"M1 gestartet\");\n        updatePower();\n        main(args);\n      case \"S2\":\n        m2 = !m2;\n        System.out.println(\"M2 gestartet\");\n        updatePower();\n        main(args);\n      case \"S3\":\n        m3 = !m3;\n        System.out.println(\"M3 gestartet\");\n        updatePower();\n        main(args);\n      default:\n        System.out.println(\"Störung\");\n    }\n  }\n\n  public static void updatePower() {\n    int value = 0;\n    if (m1) value = value + m1_consumption;\n    if (m2) value = value + m2_consumption;\n    if (m3) value = value + m3_consumption;\n    power = value;\n\n    if (power > 7) {\n      p1 = true;\n    } else {\n      p1 = false;\n    }\n  }\n\n}"
+                    }
+                ]
             }
         ]
     },

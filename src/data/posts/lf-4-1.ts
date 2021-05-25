@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const LF4_1_POSTS: Post[] = [
     {
@@ -5744,5 +5745,6 @@ export const LF4_1_POSTS: Post[] = [
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5f5f9c18471abd6e76d8cbdd"
             }
-        ],,
+        ],
+    }
 ];

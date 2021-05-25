@@ -1,4 +1,5 @@
 import { QuizData } from '../app/new-post-models/post-quiz';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const quizzes: QuizData[] = [
     {

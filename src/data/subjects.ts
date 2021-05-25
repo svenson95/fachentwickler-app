@@ -1,4 +1,5 @@
 import { Subject } from '../app/models/subject';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const subjectsData: Subject[] = [
     {
@@ -69,7 +70,7 @@ export const subjectsData: Subject[] = [
     },
     {
         "subject": "lf-6",
-        "description": "Einführung in eine Programmiersprache, Kontrollstrukturen, Struktogramme, Einführung in die Objektorientierung, statische und dynamische Diagramme der UML, Projektierung von Anwendungssystemen, Normalisierung von Datenbanken, Datenbankentwurf mit ER-Diagrammen, SQL.",
+        "description": "Einführung in die Programmiersprache Java, Kontrollstrukturen, Struktogramme, Einführung in die Objektorientierung, statische und dynamische Diagramme der UML, Projektierung von Anwendungssystemen, Normalisierung von Datenbanken, Datenbankentwurf mit ER-Diagrammen, SQL.",
         "topics": [
             "6056629db0623029d4a68f6b",
             "605c90fe23779759b9bb2907"

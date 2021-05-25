@@ -1,7 +1,7 @@
-import {Area} from "../../app/models/area";
+// import { Area } from "../../app/models/area";
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const technical_computer_science: Area =
-{
+const technicalComputerScience = {
     "url": "/technische-informatik",
     "description": "Ein Hauptgebiet der Informatik, das sich mit Architektur, Entwurf, Realisierung und Bewertung von IT-Systemen – Computer- und Kommunkationssysteme – in Sachen Hardware als auch der systemnahen Software beschäftigt. Untersuchung des funktionellen Aufbaus von Hardware, logische Entwürfe zur Entwicklung von Rechentechnik, maschinennahe Programmierung.",
     "groups": [

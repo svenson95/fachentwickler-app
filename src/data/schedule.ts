@@ -1,40 +1,41 @@
 import { Schedule } from '../app/models/schedule';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const schedule: Schedule = {
-  weekBegin: '2021-05-17',
-  weekEnd: '2021-05-21',
-  days: [
+  "weekBegin": '2021-05-17',
+  "weekEnd": '2021-05-21',
+  "days": [
     {
-      day: '0',
-      lessons: [
+      "day": '0',
+      "lessons": [
         {
-          subject: 'lf-7-1',
-          teacher: 'pofahl',
-          room: 'A110',
-          block: '1'
+          "subject": 'lf-7-1',
+          "teacher": 'pofahl',
+          "room": 'A110',
+          "block": '1'
         },
         {
-          subject: 'lf-9',
-          teacher: 'anders',
-          room: 'A111',
-          block: '2'
+          "subject": 'lf-9',
+          "teacher": 'anders',
+          "room": 'A111',
+          "block": '2'
         },
         {
-          subject: 'deutsch',
-          teacher: 'nehls',
-          room: 'A114',
-          block: '3'
+          "subject": 'deutsch',
+          "teacher": 'nehls',
+          "room": 'A114',
+          "block": '3'
         }
       ]
     },
     {
-      day: '1',
-      lessons: [
+      "day": '1',
+      "lessons": [
         {
-          subject: null,
-          teacher: null,
-          room: null,
-          block: '1'
+          "subject": null,
+          "teacher": null,
+          "room": null,
+          "block": '1'
         },
         {
           subject: 'lf-8',

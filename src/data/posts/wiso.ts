@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const WISO_POSTS: Post[] = [
     {
@@ -1070,29 +1071,35 @@ export const WISO_POSTS: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/test",
+        "_id": "5f429ebf165d0ab470bc57f8",
+        "topicId": "6056968e07c61731b8d162f3",
         "title": "Berufsbildung und Arbeitswelt",
         "description": "Test vom 14.01.2020",
         "subject": "wiso",
         "type": "test",
         "lessonDate": "2020-01-14",
-        "lastUpdate": "2020-11-01",
+        "lastUpdate": "2021-05-23",
         "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
-                "content": "Fragen"
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> <b>Erläutern Sie, was man unter Ausbildung im dualen System versteht</b>"
             },
             {
                 "type": "text",
-                "content": "<strong>1. Erläutern Sie, was man unter Ausbildung im dualen System versteht.</strong> <br/> → Ausbildung im Betrieb (praktisch) und in Berufsschule (theoretisch), zwei Partner teilen sich die Ausbildungsaufgabe"
+                "content": "Ausbildung im Betrieb (praktisch) und in Berufsschule (theoretisch), zwei Partner teilen sich die Ausbildungsaufgabe"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
-                "type": "text",
-                "content": "<strong>2. Welche Aufgaben haben im dualen Berufsausbildungssystem ...</strong> <br/>"
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span> <b>Welche Aufgaben haben im dualen Berufsausbildungssystem ...</b>"
             },
             {
                 "type": "text",
@@ -1107,12 +1114,12 @@ export const WISO_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "text",
-                "content": "<strong>3. Welche Vorteile und welche Nachteile hat das duale System?</strong>"
+                "type": "subtitle",
+                "content": "<span class='list-number'>3</span> <b>Welche Vorteile und welche Nachteile hat das duale System?</b>"
             },
             {
                 "type": "list",
-                "content": "Vorteile",
+                "content": "<b>Vorteile</b>",
                 "list": [
                     "Abwechslung durch Betrieb und Berufsschule",
                     "Steuerzahler sparen Geld",
@@ -1121,7 +1128,7 @@ export const WISO_POSTS: Post[] = [
             },
             {
                 "type": "list",
-                "content": "Nachteile",
+                "content": "<b>Nachteile</b>",
                 "list": [
                     "Abstimmung zwischen Betrieb und Schule nicht immer optimal",
                     "Genügend Ausbildungsplätze abhängig von Wirtschaftslage",
@@ -1133,32 +1140,48 @@ export const WISO_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
+                "type": "subtitle",
+                "content": "<span class='list-number'>4</span> <b>In welchen Gesetzen ist die berufliche Bildung geregelt?</b>"
+            },
+            {
                 "type": "text",
-                "content": "<strong>4. In welchen Gesetzen ist die berufliche Bildung geregelt?</strong> <br/> → Berufsbildungsgesetz & Bundesausbildungsförderungsgesetz, <s>Jugendarbeitsschutzgesetz</s>, <s>Handwerksordnung</s>, <s>Gewerbeordnung</s>"
+                "content": "Berufsbildungsgesetz & Bundesausbildungsförderungsgesetz, <s>Jugendarbeitsschutzgesetz</s>, <s>Handwerksordnung</s>, <s>Gewerbeordnung</s>"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
+                "type": "subtitle",
+                "content": "<span class='list-number'>5</span> <b>Für welche Bereiche gilt das Berufsbildungsgesetz?</b>"
+            },
+            {
                 "type": "text",
-                "content": "<strong>5. Für welche Bereiche gilt das Berufsbildungsgesetz?</strong> <br/> → Weiterbildung, Berufsausbildung, Umschulung, <s>Allgemeine Schulbildung</s>, <s>Hochschul-/Fachhochschulbildung</s>"
+                "content": "Weiterbildung, Berufsausbildung, Umschulung, <s>Allgemeine Schulbildung</s>, <s>Hochschul-/Fachhochschulbildung</s>"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
+                "type": "subtitle",
+                "content": "<span class='list-number'>6</span> <b>Was versteht man in der Berufsausbildung unter dem dualen System?</b>"
+            },
+            {
                 "type": "text",
-                "content": "<strong>6. Was versteht man in der Berufsausbildung unter dem dualen System?</strong> <br/> → Ausbildung an zwei Lernorten, dem Betrieb und der Berufsschule"
+                "content": "Ausbildung an zwei Lernorten, dem Betrieb und der Berufsschule"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>7</span> <b>Zählen Sie fünf Mindesangaben auf, die ein Berufsausbildungsvertrag enthalten muss:</b>"
             },
             {
                 "type": "list",
-                "content": "<strong>7. Zählen Sie fünf Mindesangaben auf, die ein Berufsausbildungsvertrag enthalten muss:</strong>",
+                "content": "",
                 "list": [
                     "Berufsbezeichnung",
                     "Ausbildungsdauer",
@@ -1174,8 +1197,12 @@ export const WISO_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
+                "type": "subtitle",
+                "content": "<span class='list-number'>8</span> <b>Wie werden die Vertragspartner beim Berufsausbildungsvertrag genannt?</b>"
+            },
+            {
                 "type": "list",
-                "content": "<strong>8. Wie werden die Vertragspartner beim Berufsausbildungsvertrag genannt?</strong>",
+                "content": "",
                 "list": [
                     "Azubi / Auszubildender",
                     "Bei Minderjährigen zusätzlich die Eltern",
@@ -2262,7 +2289,7 @@ export const WISO_POSTS: Post[] = [
         "subject": "wiso",
         "type": "article",
         "lessonDate": "2021-03-25",
-        "lastUpdate": "2021-04-22",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "23",
         "elements": [
             {
@@ -2296,7 +2323,7 @@ export const WISO_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/6081b7dcc89cea0d6cda0188",
-                "size": "m"
+                "size": "s"
             },
             {
                 "type": "subtitle",
@@ -2331,13 +2358,106 @@ export const WISO_POSTS: Post[] = [
                 "content": "Analytische Arbeitsbewertung"
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/6081e766c89cea0d6cda018d",
-                "size": "m"
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Anforderungsarten", "colSpan": 2 },
+                            { "align": "middle", "content": "höchstmögliche <br/> Wertzahlen" },
+                            { "align": "middle", "content": "verteilte <br/> Wertzahlen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<b>Können</b>" },
+                            { "align": "left", "content": "1. Fachkenntnisse, Berufsausbildung, Berufserfahrung" },
+                            { "align": "middle", "content": "16" },
+                            { "align": "middle", "content": "6" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<b>Belastung</b>", "rowSpan": 4 },
+                            { "align": "left", "content": "2. Körperliche Geschicklichkeit" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "7" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "3. Muskelbelastung" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "4" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "4. Aufmerksamkeit, Konzentration" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "3" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "5. Nachdenken" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<b>Verantwortung</b>", "rowSpan": 3 },
+                            { "align": "left", "content": "6. ... für die eigene Arbeit" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "7. ... für die Arbeit anderer" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "8. ... für Arbeitsmittel" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<b>Umgebungs-<br/>einflüsse</b>" },
+                            { "align": "left", "content": "9. z. B. Temperatur, Feuchtigkeit, Schmutz, Gase, Lärm, Unfallgefahr" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "5" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "<b>Summe der Teilarbeitswerte</b>", "colSpan": 2 },
+                            { "align": "middle", "content": "80" },
+                            { "align": "middle", "content": "30" }
+                        ]
+                    }
+                ]
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6081e7f1c89cea0d6cda01a4",
+                "content": "http://159.65.105.150:3000/images/60ab9c31cb24164b6629ff92",
                 "size": "m"
             },
             {
@@ -2415,7 +2535,7 @@ export const WISO_POSTS: Post[] = [
         "subject": "wiso",
         "type": "tasks",
         "lessonDate": "2021-05-20",
-        "lastUpdate": "2021-05-23",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "25",
         "elements": [
             {
@@ -2428,6 +2548,7 @@ export const WISO_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Arbeitskräfte gehen verloren durch Auswanderung, Produktionsstätten werden ins Ausland ausgelagert (günstigere Fachkräfte)"
             },
             {
@@ -2440,6 +2561,7 @@ export const WISO_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Nettolohn"
             },
             {
@@ -2451,17 +2573,23 @@ export const WISO_POSTS: Post[] = [
                 "content": "<span class='list-number'>3</span> <b>Was ist der <i>Reallohn</i>?</b>"
             },
             {
-                "type": "list",
-                "content": "Beispiel: Ihr habt eine Tastatur und möchtet über die Tasten einen Text in einem Texteditor eingeben.",
-                "ordered": true,
-                "list": [
-                    "Kaufkraft der Arbeitnehmer",
-                    "Was sich die Arbeitnehmer tatsächlich leisten können"
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
+                    {
+                        "type": "list",
+                        "content": "",
+                        "ordered": true,
+                        "list": [
+                            "Kaufkraft der Arbeitnehmer",
+                            "Was sich die Arbeitnehmer tatsächlich leisten können"
+                        ]
+                    },
+                    {
+                        "type": "hint",
+                        "content": "Nettolohn kann steigen und die Kaufkraft dabei trotzdem gleich bleiben."
+                    }
                 ]
-            },
-            {
-                "type": "hint",
-                "content": "Nettolohn kann steigen und die Kaufkraft dabei trotzdem gleich bleiben."
             },
             {
                 "type": "line",

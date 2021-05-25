@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const LF6_POSTS: Post[] = [
     {
@@ -4833,7 +4834,7 @@ export const LF6_POSTS: Post[] = [
         "subject": "lf-6",
         "type": "tasks",
         "lessonDate": "2021-03-24",
-        "lastUpdate": "2021-04-18",
+        "lastUpdate": "2021-05-25",
         "schoolWeek": "23",
         "elements": [
             {
@@ -4842,10 +4843,6 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Gegeben"
-            },
-            {
-                "type": "text",
                 "content": "<span class='list-number'>1</span> Sportkurs-Verwaltung"
             },
             {
@@ -4853,253 +4850,259 @@ export const LF6_POSTS: Post[] = [
                 "content": "Für einen Sportverein soll eine Datenbank zur Verwaltung von Kursen entwickelt werden. Dafür wurde bereits folgende Vorlage in Form von Tabellen erstellt."
             },
             {
-                "type": "table",
+                "type": "table-group",
                 "content": "",
-                "rows": [
+                "elements": [
                     {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "Kunde" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "Kunde" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "KundenID (PK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Nachname" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Vorname" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Straße" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "PLZ" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Ort" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "KundenID (PK)" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "KundeKurs" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "KundenID (FK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "KursID (FK)" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Nachname" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "Kurs" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "KursID (PK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "KursartID (FK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "TrainerID (FK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "SportstätteID (FK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Datum-Uhrzeit-Beginn" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Preis" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Vorname" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "Kursart" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "KursartID (PK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Bezeichnung" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "SportartID (FK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Teilnehmer-Max" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Straße" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "Trainer" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "TrainerID (PK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    {"align": "left", "content": "Name"}
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "PLZ" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "Sportart" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "SportartID (PK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    {"align": "left", "content": "Bezeichnung"}
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Ort" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "KundeKurs" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "KundenID (FK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "KursID (FK)" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "Kurs" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "TrainerSportart" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "TrainerID (FK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    {"align": "left", "content": "SportartID (FK)"}
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "KursID (PK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "KursartID (FK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TrainerID (FK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "SportstätteID (FK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Datum-Uhrzeit-Beginn" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Preis" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "Kursart" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "KursartID (PK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Bezeichnung" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "SportartID (FK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Teilnehmer-Max" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "Trainer" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TrainerID (PK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            {"align": "left", "content": "Name"}
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "Sportart" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "SportartID (PK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            {"align": "left", "content": "Bezeichnung"}
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "TrainerSportart" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TrainerID (FK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            {"align": "left", "content": "SportartID (FK)"}
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "Sportstätte" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "SportstaetteID (PK)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            {"align": "left", "content": "Bezeichnung"}
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "Sportstätte" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "SportstaetteID (PK)" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    {"align": "left", "content": "Bezeichnung"}
+                                ]
+                            }
                         ]
                     }
                 ]

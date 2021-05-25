@@ -1,4 +1,5 @@
-import {Post} from '../../app/models/post';
+import { Post } from '../../app/models/post';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const DEUTSCH_POSTS: Post[] = [
     {
@@ -428,7 +429,7 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Tipp: Nutzen Sie den DUDEN oder Internet-Seiten, wie zB <a href='www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele/'>www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele/</a>"
+                "content": "Tipp: Nutzen Sie den DUDEN oder Internet-Seiten, wie zB <a href='https://www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele' target=\"_blank\" rel=\"noopener noreferrer\">https://www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele</a>"
             },
             {
                 "type": "text",
@@ -492,7 +493,7 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "2. Üben Sie im Internet die Schreibweisen, zB auf <a href='www.dass-das.de'>www.dass-das.de</a>"
+                "content": "2. Üben Sie im Internet die Schreibweisen, zB auf <a href='https://www.dass-das.de/' target=\"_blank\" rel=\"noopener noreferrer\">www.dass-das.de</a>"
             },
             {
                 "type": "line",
@@ -943,7 +944,7 @@ export const DEUTSCH_POSTS: Post[] = [
         "subject": "deutsch",
         "type": "tasks",
         "lessonDate": "2021-05-17",
-        "lastUpdate": "2021-05-18",
+        "lastUpdate": "2021-05-24",
         "schoolWeek": "25",
         "elements": [
             {
@@ -964,7 +965,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Durch den Anstieg der Exporte erhöhen sich die Umsätze"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -972,7 +978,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Infolge des Kaufs von \"Fair-trade-Produkten\" unterstützen wir die Bauern"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -980,7 +991,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Mit dem Beginn der Weltwirtschaftskrise kam es zur Erhöhung der Arbeitslosenqoute"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -988,7 +1004,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Während der Demonstration für mehr Gerechtigkeit kam es zu Ausschreitungen"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -996,7 +1017,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Seit der Entdeckung der Küstenregionen steigen die Umsätze der Einheimischen"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1004,7 +1030,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Bis zur Durchsetzung der Menschenrechte muss noch einiges passieren"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1012,7 +1043,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Nach dem Verlust seines Geldes an der Börse musste er sein Auto verkaufen"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1020,7 +1056,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Vor dem Beginn der Konferenz wurden Getränke ausgeteilt"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1028,7 +1069,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Bei rechtzeitiger Buchung sparen Sie bis zu 50%"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1036,7 +1082,12 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Bei fehlender Ziel-Setzung erreicht man auch nichts"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
@@ -1044,6 +1095,7 @@ export const DEUTSCH_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Aufgrund des Buch-Erfolges schrieb er gleich ein zweites Buch"
             }
         ]
