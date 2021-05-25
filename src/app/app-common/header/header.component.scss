@@ -180,10 +180,6 @@
           display: none;
         }
 
-        ::placeholder {
-          color: var(--grey-3);
-        }
-
         &:hover, &.mat-form-field-should-float {
           background-color: rgba(var(--tertiary-color-rgb), .1);
         }
@@ -211,7 +207,8 @@
                 margin-bottom: 1px;
 
                 &::placeholder {
-                  color: var(--grey-2);
+                  color: var(--text-color-2);
+                  opacity: 1; // firefox adds a lower opacity to the placeholder, reset to 1
                 }
               }
             }

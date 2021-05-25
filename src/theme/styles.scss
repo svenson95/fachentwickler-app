@@ -55,6 +55,7 @@ body {
 
 b, strong {
   font-family: Nunito-ExtraBold, sans-serif;
+  font-weight: initial; // firefox font-weight too bold without font-weight: initial;
 }
 
 i {
