@@ -1,10 +1,11 @@
 import { Quiz } from './quiz';
 import { IndexCards } from './index-cards';
 import { Matching } from './matching-piece';
+import { PostElement } from './post';
 
 export interface Subject {
   subject: string;
-  description: string;
+  description: Array<PostElement>;
   topics: string[] | Topic[];
   quizzes?: string[] | Quiz[];
   indexcards?: string[] | IndexCards[];

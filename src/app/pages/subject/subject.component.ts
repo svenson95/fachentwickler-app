@@ -2,12 +2,11 @@ import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { DataService } from '../../services/data/data.service';
-import { AuthService } from '../../services/auth/auth.service';
-import { HeaderService } from '../../services/header.service';
-import { subjects } from '../../../data/menu-items';
 import { Subject } from '../../models/subject';
 import { PostType } from '../../models/post-type';
+import { DataService } from '../../services/data/data.service';
+import { HeaderService } from '../../services/header.service';
+import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-subject',
@@ -25,8 +24,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
   constructor(private router: Router,
               private elRef: ElementRef,
               private dataService: DataService,
-              private headerService: HeaderService,
-              private authService: AuthService
+              private headerService: HeaderService
   ) {
     this.ROUTER_EVENT = this.router.events.subscribe((nav) => {
       if (nav instanceof NavigationEnd) {
@@ -49,14 +47,6 @@ export class SubjectComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.ROUTER_EVENT.unsubscribe();
-  }
-
-  isAlreadyCompleted(postId): boolean {
-    if (this.authService.user && this.authService.user.progress.includes(postId)) {
-      return true;
-    } else {
-      return false;
-    }
   }
 
 }
