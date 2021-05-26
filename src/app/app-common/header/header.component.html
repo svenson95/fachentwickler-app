@@ -28,7 +28,7 @@
   <div class="fia-header-details-wrapper">
     <div class="fia-page-title" (click)="isMobile.matches ? goToSubject() : goToSubject()">
       <span class="bracket">[</span>
-      <p class="title">{{headerService.pageTitle}}</p>
+      <p class="title" [innerHTML]="headerService.pageTitle"></p>
       <span class="bracket">]</span>
     </div>
     <div class="fia-searchbar-buttons-wrapper">

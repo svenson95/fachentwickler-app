@@ -257,7 +257,8 @@
         margin: 0;
         margin-top: 3px;
         white-space: pre-line;
-        line-height: 20px;
+        line-height: 16px;
+        text-align: center;
 
         @include from-xs {
           font-size: 1em;
@@ -265,7 +266,7 @@
         }
 
         @include to-xs {
-          font-size: .9em;
+          font-size: .8em;
           padding: 0 3px;
         }
       }

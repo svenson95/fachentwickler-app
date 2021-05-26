@@ -207,8 +207,8 @@ export const myClass: MenuItem[] = [
     icon: folderOutline,
   },
   {
-    title: 'Vertretungsplan',
-    shortTitle: 'Vertretungsplan',
+    title: 'Vertretungs<wbr/>plan',
+    shortTitle: 'Vertretungs<wbr/>plan',
     url: '/vertretungsplan',
     icon: todayOutline,
   },

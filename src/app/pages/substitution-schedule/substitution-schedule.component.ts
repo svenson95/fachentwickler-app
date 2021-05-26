@@ -13,7 +13,7 @@ export class SubstitutionScheduleComponent implements OnInit {
   schedule = schedule;
 
   constructor(private headerService: HeaderService) {
-    this.headerService.setPageTitle('Vertretungsplan');
+    this.headerService.setPageTitle('Vertretungs<wbr/>plan');
   }
 
   ngOnInit(): void {
