@@ -6,15 +6,15 @@
         <mat-icon>close</mat-icon>
       </button>
     </div>
-    <mat-spinner class="fia-loading-spinner" *ngIf="isLoading"></mat-spinner>
+    <mat-spinner class="fia-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
     <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue === ''">
       Suchbegriff eingeben
     </p>
-    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue !== '' && !isLoading">
+    <p class="fia-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchValue !== '' && !searchPostService.isSearching">
       Nichts gefunden
     </p>
     <mat-card-content>
-      <div class="fia-search-results">
+      <div class="fia-search-results" *ngIf="!searchPostService.isSearching">
         <app-post-link *ngFor="let post of searchResults" [post]="post"></app-post-link>
       </div>
     </mat-card-content>
