@@ -14,10 +14,7 @@
 }
 
 .fia-sidenav-content {
-
-  @include from-sm {
-    margin-right: 20px;
-  }
+  margin-right: 20px;
 
   .fia-areas-section {
     margin-bottom: 50px;

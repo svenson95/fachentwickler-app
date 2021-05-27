@@ -33,10 +33,6 @@
       width: 176px;
     }
 
-    @include to-sm {
-      width: 153px;
-    }
-
     @include to-md {
       width: 158px;
     }
@@ -261,7 +257,7 @@
         text-align: center;
 
         @include from-xs {
-          font-size: 1em;
+          font-size: .9em;
           padding: 0 5px;
         }
 
