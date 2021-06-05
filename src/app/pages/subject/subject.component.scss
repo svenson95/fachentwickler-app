@@ -8,17 +8,28 @@
 .fia-page {
 }
 
-.topic-description app-post-element ::ng-deep {
-  * {
-    color: var(--text-color-2);
+.topic-description {
+  display: inline-flex;
+  flex-flow: wrap;
+  margin-bottom: 10px;
+
+  > app-post-element:not(:first-of-type) {
+    margin-right: 40px;
   }
 
-  ul {
-    margin-top: 0;
-  }
+  app-post-element ::ng-deep {
+    p:first-of-type {
+      margin-top: 0;
+    }
 
-  .post-ul-content {
-    margin-bottom: 2px;
+    ul {
+      margin-top: 0;
+    }
+
+    .post-ul-content {
+      margin-bottom: 2px;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -28,10 +39,10 @@
   }
 
   .fia-topic-title {
-    //display: flex;
     padding: 8px 12px;
     line-height: 20px;
     border-bottom: 1px solid var(--grey-1);
+    font-family: Nunito-Bold, sans-serif;
     background: var(--background-secondary);
     border-top-left-radius: var(--button-radius);
     border-top-right-radius: var(--button-radius);

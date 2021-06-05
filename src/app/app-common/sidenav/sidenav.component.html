@@ -1,5 +1,13 @@
 <div class="fia-sidenav-content">
 
+  <div class="fia-apps-section" *ngIf="authService.isAuthenticated">
+    <button class="fia-text-button fia-pruefungsimulator-btn" routerLink="pruefungsimulator"
+            [class.active-route]="router.url.startsWith('/pruefungsimulator')"
+    >
+      Prüfungsimulator
+    </button>
+  </div>
+
   <div class="fia-my-class-section" *ngIf="authService.isAuthenticated">
     <p class="section-title">Meine Klasse</p>
     <mat-nav-list>

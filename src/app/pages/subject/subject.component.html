@@ -3,9 +3,9 @@
     <p class="fia-card-title">Themen</p>
     <mat-spinner class="fia-loading-spinner" *ngIf="subject === undefined"></mat-spinner>
     <mat-card-content *ngIf="subject !== undefined">
-      <p class="topic-description" *ngIf="subject.description !== undefined">
+      <div class="topic-description" *ngIf="subject.description !== undefined">
         <app-post-element *ngFor="let el of subject.description" [element]="el"></app-post-element>
-      </p>
+      </div>
       <div class="fia-topic" *ngFor="let topic of subject.topics">
         <p class="fia-topic-title">{{topic.title}}</p>
         <div class="fia-links">
