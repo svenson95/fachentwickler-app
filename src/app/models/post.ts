@@ -1,4 +1,5 @@
 import { ElementType } from './element-type';
+import { PostType } from './post-type';
 
 export interface Post {
   _id?: string;
@@ -7,7 +8,7 @@ export interface Post {
   title?: string;
   description?: string;
   subject: string;
-  type: 'article' | 'tasks' | 'index-cards' | 'quiz' | 'test';
+  type: PostType | string;
   lessonDate: string;
   lastUpdate?: string;
   schoolWeek: string;
