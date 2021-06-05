@@ -36,7 +36,7 @@
         <mat-form-field class="fia-search-bar" appearance="fill">
           <mat-icon matSuffix (click)="openSearchView()" *ngIf="!searchPostService.isSearching">search</mat-icon>
           <mat-spinner matSuffix class="fia-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
-          <input matInput type="text" [(ngModel)]="searchPostService.searchValue" placeholder="Suchbegriff" #searchInput>
+          <input matInput type="text" autocomplete="off" [(ngModel)]="searchPostService.searchValue" placeholder="Suchbegriff" #searchInput>
         </mat-form-field>
       </div>
       <div class="fia-button-container">

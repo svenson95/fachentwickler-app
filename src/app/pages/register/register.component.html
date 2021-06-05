@@ -10,7 +10,7 @@
         <div class="fia-input-fields">
           <mat-form-field class="fia-input fia-name-input">
             <mat-label>Benutzername</mat-label>
-            <input matInput type="text" [formControl]="name"/>
+            <input matInput type="text" autocomplete="off" [formControl]="name"/>
             <mat-error *ngIf="name.hasError('name') && !name.hasError('required')">
               Benutzername ungültig
             </mat-error>
@@ -24,7 +24,7 @@
 
           <mat-form-field class="fia-input fia-email-input">
             <mat-label>E-Mail</mat-label>
-            <input matInput type="text" [formControl]="email"/>
+            <input matInput type="email" autocomplete="off" [formControl]="email"/>
             <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
               E-Mail ungültig
             </mat-error>
