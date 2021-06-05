@@ -81,10 +81,10 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/dashboard');
         this.loading = false;
       }, (error) => {
-        console.log('ERROR login');
         console.log(error);
         this.loading = false;
         this.invalidPassword = true;
+        this.passwordInput.nativeElement.blur();
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
           data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
