@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth/auth.service';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { Router } from '@angular/router';
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-logout-dialog',
-  templateUrl: './logout-dialog.component.html',
-  styleUrls: ['./logout-dialog.component.scss']
+  templateUrl: './logout-dialog.component.html'
 })
 export class LogoutDialogComponent implements OnInit {
 

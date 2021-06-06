@@ -10,8 +10,7 @@ import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-subject',
-  templateUrl: './subject.component.html',
-  styleUrls: ['./subject.component.scss']
+  templateUrl: './subject.component.html'
 })
 export class SubjectComponent implements OnInit, OnDestroy {
 

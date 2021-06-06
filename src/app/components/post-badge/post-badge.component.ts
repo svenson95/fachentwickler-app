@@ -7,8 +7,7 @@ import { Matching } from '../../models/matching-piece';
 
 @Component({
   selector: 'app-post-badge',
-  templateUrl: './post-badge.component.html',
-  styleUrls: ['./post-badge.component.scss']
+  templateUrl: './post-badge.component.html'
 })
 export class PostBadgeComponent implements OnInit {
 

@@ -1,10 +1,9 @@
-@import 'src/sass/main';
 
-.fia-card .fia-card-content {
+.fia-card.quiz-card .fia-card-content {
   justify-content: space-evenly;
 }
 
-.fia-card {
+.fia-card.quiz-card {
   .fia-card-title {
   }
   .fia-card-description {
@@ -20,7 +19,7 @@
   }
 }
 
-.fia-quiz {
+.fia-card.quiz-card .fia-quiz {
 
   @include from-sm {
     width: 600px;

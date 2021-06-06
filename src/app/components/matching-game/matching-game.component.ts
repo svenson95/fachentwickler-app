@@ -2,13 +2,12 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Subject } from 'rxjs';
 
-import { AuthService } from '../../services/auth/auth.service';
 import { Matching, MatchingPair } from '../../models/matching-piece';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-matching-game',
-  templateUrl: './matching-game.component.html',
-  styleUrls: ['./matching-game.component.scss']
+  templateUrl: './matching-game.component.html'
 })
 export class MatchingGameComponent implements OnInit {
 

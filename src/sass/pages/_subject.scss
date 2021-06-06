@@ -1,13 +1,8 @@
-@import 'src/sass/main';
-
-.fia-card-title {
+.fia-page.subjects .fia-card-title {
   margin-bottom: 20px;
 }
 
-.fia-page {
-}
-
-.topic-description {
+.fia-page.subjects .topic-description {
   display: inline-flex;
   flex-flow: wrap;
   margin-bottom: 10px;
@@ -46,7 +41,7 @@
   }
 }
 
-.fia-topic {
+.fia-page.subjects .fia-topic {
   &:not(:last-of-type) {
     margin-bottom: 30px;
   }
@@ -68,8 +63,4 @@
   .fia-links {
     margin-top: 10px;
   }
-}
-
-.fia-test-container {
-
 }

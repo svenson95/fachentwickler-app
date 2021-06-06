@@ -6,8 +6,7 @@ import { SchoolWeek, Weekdays } from '../../models/school-week';
 
 @Component({
   selector: 'app-school-week-card',
-  templateUrl: './school-week-card.component.html',
-  styleUrls: ['./school-week-card.component.scss']
+  templateUrl: './school-week-card.component.html'
 })
 export class SchoolWeekCardComponent implements OnInit {
 

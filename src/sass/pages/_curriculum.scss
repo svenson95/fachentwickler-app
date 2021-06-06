@@ -1,6 +1,4 @@
-@import 'src/sass/main';
-
-::ng-deep .fia-school-week-card {
+.fia-page.curriculum .fia-school-week-card {
 
   @include from-sm {
     margin-bottom: 30px !important;
@@ -11,7 +9,7 @@
   }
 }
 
-.fia-card.school-year {
+.fia-page.curriculum .fia-card.school-year {
   .fia-header-wrapper {
     display: flex;
     align-items: center;
@@ -34,7 +32,7 @@
   }
 }
 
-mat-button-toggle-group {
+.fia-page.curriculum mat-button-toggle-group {
   border-radius: var(--border-radius);
   border: none;
   border-color: rgba(var(--tertiary-color-rgb), .2);
@@ -50,7 +48,7 @@ mat-button-toggle-group {
   }
 }
 
-.fia-week-cards-wrapper {
+.fia-page.curriculum .fia-week-cards-wrapper {
   display: flex;
   position: relative;
   max-width: 1130px;
@@ -110,7 +108,7 @@ mat-button-toggle-group {
   }
 }
 
-.fia-spinner-wrapper {
+.fia-page.curriculum .fia-spinner-wrapper {
   max-width: 1070px;
 
   .fia-loading-spinner {

@@ -1,6 +1,5 @@
-@import 'src/sass/main';
 
-::ng-deep .mat-dialog-container {
+.mat-dialog-container .fia-logout-dialog {
   background: var(--background-secondary);
   color: var(--text-color-1);
   border-radius: 0;
@@ -28,7 +27,7 @@
   }
 }
 
-::ng-deep .logout-modal.cdk-overlay-pane {
+.logout-modal.cdk-overlay-pane {
   animation-name: moveInTop;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
@@ -37,14 +36,8 @@
   -webkit-animation-timing-function: ease-in-out;
 }
 
-::ng-deep {
+.fia-logout-dialog {
   .mat-button:hover:not(.mat-button-disabled), .mat-stroked-button:hover:not(.mat-button-disabled){
-    //.mat-button-focus-overlay {
-    //  background: var(--secondary-color);
-    //  opacity: .4;
-    //  transition: none;
-    //}
-
     .mat-ripple-element {
       background-color: rgba(var(--background-primary-rgb),.2);
     }

@@ -4,8 +4,7 @@ import { Quiz } from '../../models/quiz';
 
 @Component({
   selector: 'app-quiz-card',
-  templateUrl: './quiz-card.component.html',
-  styleUrls: ['./quiz-card.component.scss']
+  templateUrl: './quiz-card.component.html'
 })
 export class QuizCardComponent implements OnInit {
 

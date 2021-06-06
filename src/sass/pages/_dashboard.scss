@@ -1,0 +1,33 @@
+.fia-page.dashboard {
+  .fia-card {
+    @include to-xs {
+      margin-bottom: 20px;
+    }
+  }
+
+  .fia-card:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  .fia-view-wrapper {
+    padding-top: 10px;
+  }
+
+  .fia-schedule {
+    .fia-card-title {
+    }
+
+    .fia-view-wrapper {
+      display: flex;
+
+      @include to-sm {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .spinner-wrapper {
+    max-width: 1070px;
+    padding: 30px;
+  }
+}

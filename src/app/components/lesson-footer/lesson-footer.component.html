@@ -1,4 +1,4 @@
-<mat-card class="fia-card" *ngIf="authService.user !== null">
+<mat-card class="fia-card lesson-footer" *ngIf="authService.user !== null">
   <div class="fia-button-container">
     <button class="fia-text-button" (click)="authService.setLessonSolved(postId)" *ngIf="postId !== undefined" [disabled]="alreadyRead() || isLoading">
       <span>Als gelesen markieren</span>

@@ -3,8 +3,7 @@ import { SchoolNews } from '../../models/school-news';
 
 @Component({
   selector: 'app-news-card',
-  templateUrl: './news-card.component.html',
-  styleUrls: ['./news-card.component.scss']
+  templateUrl: './news-card.component.html'
 })
 export class NewsCardComponent implements OnInit {
 

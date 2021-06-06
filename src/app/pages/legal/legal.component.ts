@@ -3,8 +3,7 @@ import {HeaderService} from '../../services/header.service';
 
 @Component({
   selector: 'app-legal',
-  templateUrl: './legal.component.html',
-  styleUrls: ['./legal.component.scss']
+  templateUrl: './legal.component.html'
 })
 export class LegalComponent implements OnInit {
 

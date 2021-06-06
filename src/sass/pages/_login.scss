@@ -1,6 +1,4 @@
-@import 'src/sass/main';
-
-.fia-view-wrapper {
+.fia-page.login-page .fia-view-wrapper {
   display: flex;
   width: fit-content;
   margin: 40px auto;
@@ -11,7 +9,7 @@
   }
 }
 
-.fia-login-column {
+.fia-page.login-page .fia-login-column {
   text-align: center;
 
   .fia-input-fields {
@@ -65,7 +63,7 @@
   }
 }
 
-.fia-divider-line {
+.fia-page.login-page .fia-divider-line {
   border: none;
 
   @include from-md {
@@ -78,7 +76,7 @@
   }
 }
 
-.fia-register-column {
+.fia-page.login-page .fia-register-column {
   text-align: center;
   align-self: center;
 

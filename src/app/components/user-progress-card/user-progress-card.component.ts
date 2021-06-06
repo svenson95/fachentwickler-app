@@ -1,15 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { delay } from 'rxjs/operators';
 
-import { DataService } from '../../services/data/data.service';
-import { LoadingService } from '../../services/loading.service';
 import { DashboardData } from '../../models/dashboard-data';
 import { User } from '../../models/user';
+import { DataService } from '../../services/data/data.service';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-user-progress-card',
-  templateUrl: './user-progress-card.component.html',
-  styleUrls: ['./user-progress-card.component.scss']
+  templateUrl: './user-progress-card.component.html'
 })
 export class UserProgressCardComponent implements OnInit {
 

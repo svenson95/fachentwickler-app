@@ -1,0 +1,113 @@
+
+.fia-page.pruefungssimulator .fia-view-wrapper {
+  margin-top: 20px;
+
+  .fia-text-button.right {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  &.play {
+    .question {
+      font-family: Nunito-Bold, sans-serif;
+    }
+
+    .description {
+      white-space: pre;
+    }
+
+    .question-image {
+      @include to-md {
+        width: 100%;
+      }
+    }
+
+    .choice-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include from-sm {
+        max-width: 400px;
+      }
+
+      .choice-button {
+        cursor: pointer;
+        border: none;
+        border-radius: var(--button-radius);
+        width: 100%;
+        padding: 10px;
+        color: var(--text-color-1);
+        text-align: left;
+        background: rgba(var(--tertiary-color-rgb), .2);
+        transition: background 300ms ease-in-out;
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          background: rgba(var(--tertiary-color-rgb), .3);
+          transition: background 300ms ease-in-out;
+        }
+
+        &.correct {
+          background-color: rgba(50, 205, 50, .4);
+          transition: background 300ms ease-in-out;
+        }
+
+        &.wrong {
+          background-color: rgba(255, 0, 0, .4);
+          transition: background 300ms ease-in-out;
+        }
+      }
+    }
+
+    .input-wrapper {
+      .choice-input {
+        margin-right: auto;
+        color: var(--text-color-1);
+
+        ::ng-deep {
+          .mat-form-field-label {
+            color: var(--text-color-3);
+          }
+
+          .mat-form-field-suffix {
+            color: var(--text-color-1);
+          }
+        }
+
+        // Hide spin-arrow (default in input type=number)
+        /* Chrome, Safari, Edge, Opera */
+        ::-webkit-outer-spin-button,
+        ::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        /* Firefox */
+        [type=number] {
+          -moz-appearance: textfield;
+        }
+
+      }
+
+      .fia-text-button {
+        margin-left: 20px;
+        margin-bottom: 2px;
+        transition: background 300ms ease-in-out;
+
+        &.correct {
+          background-color: rgba(50, 205, 50, .2);
+          transition: background 300ms ease-in-out;
+        }
+
+        &.wrong {
+          background-color: rgba(255, 0, 0, .2);
+          transition: background 300ms ease-in-out;
+        }
+      }
+    }
+  }
+}

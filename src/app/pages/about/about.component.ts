@@ -3,8 +3,7 @@ import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './about.component.html'
 })
 export class AboutComponent implements OnInit {
 

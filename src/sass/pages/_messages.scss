@@ -1,0 +1,47 @@
+
+.fia-page.messages {
+  .fia-card {
+    .fia-view-wrapper {
+      margin-top: 40px;
+      font-size: 1em;
+
+      @include to-xs {
+        font-size: 1em;
+      }
+
+      div:not(:last-of-type) {
+        border-bottom: 1px solid var(--grey-1);
+      }
+
+      .fia-teacher {
+        display: flex;
+
+        .key, .value {
+          margin: 0;
+          padding: 10px;
+        }
+
+        .key {
+          @include from-xs {
+            min-width: 130px;
+          }
+
+          @include to-xs {
+            min-width: 90px;
+          }
+        }
+
+        .value {
+          border-left: 1px solid var(--grey-1);
+          outline: none;
+
+          &:hover {
+            color: var(--primary-color);
+            text-decoration-color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+
+}

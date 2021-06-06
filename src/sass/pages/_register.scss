@@ -38,19 +38,6 @@
     .fia-password-input {
       margin-bottom: 8px;
     }
-
-    ::ng-deep {
-      .mat-form-field-label-wrapper {
-        color: green;
-      }
-    }
-
-    ::ng-deep .mat-form-field-flex {
-      background-color: rgba(var(--tertiary-color-rgb), .1);
-
-      input {
-      }
-    }
   }
 
 

@@ -1,10 +1,8 @@
-@import 'src/sass/main';
-
-.fia-card .fia-card-content {
+.fia-card.fia-card-index-cards .fia-card-content {
   justify-content: space-evenly;
 }
 
-.fia-card {
+.fia-card.fia-card-index-cards {
   .fia-card-title {
   }
   .fia-card-description {
@@ -23,7 +21,7 @@
   }
 }
 
-.fia-index-card {
+.fia-card.fia-card-index-cards .fia-index-card {
   background-color: transparent;
   width: 530px;
   height: 380px;
@@ -121,7 +119,7 @@
   }
 
   .fia-index-card--front {
-    background-image: url("../../../assets/images/indexcard-background.png");
+    background-image: url("../../assets/images/indexcard-background.png");
 
     .card-header, .content {
       margin-left: 80px;
@@ -137,7 +135,7 @@
   }
 
   .fia-index-card--back {
-    background-image: url("../../../assets/images/indexcard-background-flipped.png");
+    background-image: url("../../assets/images/indexcard-background-flipped.png");
     transform: rotateY(180deg);
 
     .card-header, .content {
@@ -155,7 +153,7 @@
 
 }
 
-.fia-buttons-container {
+.fia-card.fia-card-index-cards .fia-buttons-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

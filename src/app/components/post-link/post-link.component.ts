@@ -8,8 +8,7 @@ import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'app-post-link',
-  templateUrl: './post-link.component.html',
-  styleUrls: ['./post-link.component.scss']
+  templateUrl: './post-link.component.html'
 })
 export class PostLinkComponent implements OnInit {
 

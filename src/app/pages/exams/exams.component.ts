@@ -8,8 +8,7 @@ import { DataService } from '../../services/data/data.service';
 
 @Component({
   selector: 'app-exams',
-  templateUrl: './exams.component.html',
-  styleUrls: ['./exams.component.scss']
+  templateUrl: './exams.component.html'
 })
 export class ExamsComponent implements OnInit, AfterViewInit {
 

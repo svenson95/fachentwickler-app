@@ -13,8 +13,7 @@ import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-
 
 @Component({
   selector: 'app-image-manager-dialog',
-  templateUrl: './image-manager-dialog.component.html',
-  styleUrls: ['./image-manager-dialog.component.scss']
+  templateUrl: './image-manager-dialog.component.html'
 })
 export class ImageManagerDialogComponent implements OnInit {
 

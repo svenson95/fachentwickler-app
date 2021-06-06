@@ -7,8 +7,7 @@ import { DataService } from '../../services/data/data.service';
 
 @Component({
   selector: 'app-post-element',
-  templateUrl: './post-element.component.html',
-  styleUrls: ['./post-element.component.scss']
+  templateUrl: './post-element.component.html'
 })
 export class PostElementComponent implements OnInit {
 

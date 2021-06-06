@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../../services/header.service';
-import { subjects } from '../../../data/menu-items';
 import { Router } from '@angular/router';
+
 import { Quiz } from '../../models/quiz';
+import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
+import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.scss']
+  templateUrl: './quiz.component.html'
 })
 export class QuizComponent implements OnInit {
 

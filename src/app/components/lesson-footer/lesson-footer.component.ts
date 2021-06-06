@@ -1,15 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
 
+import { UserRole } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
-import { UserRole } from '../../models/user';
 import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-lesson-footer',
-  templateUrl: './lesson-footer.component.html',
-  styleUrls: ['./lesson-footer.component.scss']
+  templateUrl: './lesson-footer.component.html'
 })
 export class LessonFooterComponent implements OnInit {
 

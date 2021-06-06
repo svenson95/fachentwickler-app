@@ -9,8 +9,7 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 
 @Component({
   selector: 'app-exam-item',
-  templateUrl: './exam-item.component.html',
-  styleUrls: ['./exam-item.component.scss'],
+  templateUrl: './exam-item.component.html'
   // animations: [
   //   trigger('listAnimation', [
   //     transition('* => *', [ // each time the binding value changes

@@ -1,28 +1,59 @@
 
+/* Abstracts */
 @import 'src/sass/abstracts/breakpoints';
 @import 'src/sass/abstracts/functions';
 @import 'src/sass/abstracts/mixins';
 @import 'src/sass/abstracts/variables';
 
+/* Base */
 @import 'src/sass/base/angular_material';
 @import 'src/sass/base/animations';
 @import 'src/sass/base/base';
 @import 'src/sass/base/typography';
 @import 'src/sass/base/utilities';
 
+/* Components */
 @import 'src/sass/components/answer-indicator';
 @import 'src/sass/components/card';
+@import 'src/sass/components/exam-item';
+@import 'src/sass/components/image-manager';
+@import 'src/sass/components/indexcards-card';
+@import 'src/sass/components/lesson-footer';
 @import 'src/sass/components/list-number';
 @import 'src/sass/components/loading-spinner';
+@import 'src/sass/components/logout-dialog';
 @import 'src/sass/components/mat-form-field';
 @import 'src/sass/components/mat-snackbar';
+@import 'src/sass/components/matching-game';
+@import 'src/sass/components/news-card';
+@import 'src/sass/components/next-exams-card';
 @import 'src/sass/components/ngx-highlightjs';
-@import 'src/sass/components/text-button';
+@import 'src/sass/components/post-element';
+@import 'src/sass/components/quiz-card';
+@import 'src/sass/components/schedule';
+@import 'src/sass/components/school-week-card';
+@import 'src/sass/pages/subject';
+@import 'src/sass/layout/text-button';
+@import 'src/sass/components/user-progress-card';
 
+/* Layout */
+@import 'src/sass/layout/content';
 @import 'src/sass/layout/header';
 @import 'src/sass/layout/page';
+@import 'src/sass/layout/post-badge';
+@import 'src/sass/layout/post-link';
+@import 'src/sass/layout/sidenav';
 
+/* Pages */
+@import 'src/sass/pages/curriculum';
+@import 'src/sass/pages/dashboard';
 @import 'src/sass/pages/edit-post';
+@import 'src/sass/pages/exams';
+@import 'src/sass/pages/landing-page';
+@import 'src/sass/pages/login';
+@import 'src/sass/pages/messages';
 @import 'src/sass/pages/my-profile';
+@import 'src/sass/pages/post';
+@import 'src/sass/pages/pruefungssimulator';
 @import 'src/sass/pages/register';
 @import 'src/sass/pages/search';

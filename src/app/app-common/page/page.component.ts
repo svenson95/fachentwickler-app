@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
@@ -11,8 +11,7 @@ import { ThemeService } from '../../services/theme.service';
 /** @title Responsive sidenav */
 @Component({
   selector: 'app-page',
-  templateUrl: 'page.component.html',
-  styleUrls: ['page.component.scss']
+  templateUrl: 'page.component.html'
 })
 export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 

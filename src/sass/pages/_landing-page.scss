@@ -1,14 +1,5 @@
-@import 'src/sass/main';
 
-.fia-page {
-
-  .fia-title {
-    font-size: 1.6em;
-    letter-spacing: 1px;
-    line-height: 30px;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
+.fia-page.landing-page {
 
   .fia-description {
     color: var(--text-color-3);
@@ -37,7 +28,7 @@
         left: -20px;
       }
 
-      &::ng-deep path {
+      path {
         fill: var(--secondary-color);
         stroke: var(--secondary-color);
         opacity: .2;
@@ -114,6 +105,14 @@
     .fia-text-column {
       display: flex;
       flex-direction: column;
+
+      .fia-title {
+        font-size: 1.6em;
+        letter-spacing: 1px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
 
       @include to-sm {
         align-items: center;

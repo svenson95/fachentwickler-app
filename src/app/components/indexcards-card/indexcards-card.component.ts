@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { DataService } from '../../services/data/data.service';
 import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'app-indexcards-card',
-  templateUrl: './indexcards-card.component.html',
-  styleUrls: ['./indexcards-card.component.scss']
+  templateUrl: './indexcards-card.component.html'
 })
 export class IndexcardsCardComponent implements OnInit {
 

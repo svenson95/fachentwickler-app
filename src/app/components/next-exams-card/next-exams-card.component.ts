@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { delay } from 'rxjs/operators';
+
 import { ExamDate } from '../../models/exam-date';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-next-exams-card',
-  templateUrl: './next-exams-card.component.html',
-  styleUrls: ['./next-exams-card.component.scss']
+  templateUrl: './next-exams-card.component.html'
 })
 export class NextExamsCardComponent implements OnInit {
 

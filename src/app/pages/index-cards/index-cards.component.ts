@@ -7,8 +7,7 @@ import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'app-index-cards',
-  templateUrl: './index-cards.component.html',
-  styleUrls: ['./index-cards.component.scss']
+  templateUrl: './index-cards.component.html'
 })
 export class IndexCardsComponent implements OnInit {
 

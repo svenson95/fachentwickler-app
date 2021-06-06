@@ -1,11 +1,9 @@
-@import 'src/sass/main';
-
-.news-card .fia-card-header {
+.fia-card.news-card .fia-card-header {
   .fia-card-title {
   }
 }
 
-.fia-news-container {
+.fia-card.news-card .fia-news-container {
   @include from-xs {
     margin-top: 20px !important;
   }
@@ -27,7 +25,7 @@
   }
 }
 
-.fia-news-item .fia-news-header {
+.fia-card.news-card .fia-news-item .fia-news-header {
   display: flex;
 
   @include to-md {
@@ -73,13 +71,13 @@
   }
 }
 
-.fia-news-item .fia-text-button {
+.fia-card.news-card .fia-news-item .fia-text-button {
   &:hover {
     color: var(--tertiary-color);
   }
 }
 
-.fia-loading-spinner {
+.fia-card.news-card .fia-news-container .fia-loading-spinner {
 
   @include from-xs {
     margin-top: -12px !important;
