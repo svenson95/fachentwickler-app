@@ -32,8 +32,6 @@
 @import 'src/sass/components/quiz-card';
 @import 'src/sass/components/schedule';
 @import 'src/sass/components/school-week-card';
-@import 'src/sass/pages/subject';
-@import 'src/sass/layout/text-button';
 @import 'src/sass/components/user-progress-card';
 
 /* Layout */
@@ -43,6 +41,7 @@
 @import 'src/sass/layout/post-badge';
 @import 'src/sass/layout/post-link';
 @import 'src/sass/layout/sidenav';
+@import 'src/sass/layout/text-button';
 
 /* Pages */
 @import 'src/sass/pages/curriculum';
@@ -57,3 +56,4 @@
 @import 'src/sass/pages/pruefungssimulator';
 @import 'src/sass/pages/register';
 @import 'src/sass/pages/search';
+@import 'src/sass/pages/subject';
