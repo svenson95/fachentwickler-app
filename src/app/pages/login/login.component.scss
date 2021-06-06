@@ -36,16 +36,6 @@
         color: green;
       }
     }
-
-    ::ng-deep .mat-form-field-flex {
-      background-color: var(--background-secondary);
-      border-top-left-radius: var(--button-radius);
-      border-top-right-radius: var(--button-radius);
-      padding: .75em 1em 0 1em;
-
-      input {
-      }
-    }
   }
 
 

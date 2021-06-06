@@ -1,19 +1,42 @@
 /* FIAPPY - INPUT - <mat-form-field> */
-.fia-input {
-  &.mat-form-field-appearance-fill .mat-form-field-flex {
-    border-radius: 0;
+mat-form-field.fia-input.mat-form-field {
+
+  .mat-form-field-flex {
+    background-color: var(--background-secondary);
+    border-top-left-radius: var(--button-radius);
+    border-top-right-radius: var(--button-radius);
+    padding: .75em 1em 0 1em;
+
+    input {
+      color: var(--text-color-1);
+    }
+  }
+
+  &.mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: rgba(var(--tertiary-color-rgb), 0.3);
   }
 
   .mat-form-field-label {
     color: var(--grey-4);
   }
-  &.mat-form-field-invalid .mat-form-field-label,
+
   &.mat-form-field-should-float .mat-form-field-label {
     color: var(--primary-color);
   }
+
   .mat-form-field-ripple {
-    background-color: var(--primary-color) !important;
+    background-color: var(--primary-color);
   }
+
+  &.mat-form-field-invalid {
+    .mat-form-field-label {
+      color: var(--error-default);
+    }
+    .mat-form-field-ripple {
+      background-color: var(--error-default);
+    }
+  }
+
   .mat-error {
     margin-bottom: 5px;
   }

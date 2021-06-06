@@ -1,10 +1,12 @@
-<mat-dialog-content>
-  Möchtest du dich abmelden?
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button class="fia-text-button" mat-button mat-dialog-close>Nein</button>
-  <button class="fia-text-button" mat-button mat-dialog-close (click)="logout()">
-    Ja
-    <mat-icon>meeting_room</mat-icon>
-  </button>
-</mat-dialog-actions>
+<div class="fia-logout-dialog">
+  <mat-dialog-content>
+    Möchtest du dich abmelden?
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button class="fia-text-button" mat-button mat-dialog-close>Nein</button>
+    <button class="fia-text-button" mat-button mat-dialog-close (click)="logout()">
+      Ja
+      <mat-icon>meeting_room</mat-icon>
+    </button>
+  </mat-dialog-actions>
+</div>

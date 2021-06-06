@@ -7,6 +7,10 @@ import { dark, light, Theme } from '../../sass/_themes';
 export class ThemeService {
     private active: Theme = light;
 
+    constructor() {
+        this.setActiveTheme(this.getActiveTheme());
+    }
+
     getActiveTheme(): Theme {
         return this.active;
     }
@@ -26,7 +30,9 @@ export class ThemeService {
     setActiveTheme(theme: Theme): void {
         this.active = theme;
 
-        Object.keys(this.active.properties).forEach(property => {
+        // set css dark/light variables
+        const themeVariables = Object.keys(this.active.properties);
+        themeVariables.forEach(property => {
             document.documentElement.style.setProperty(
                 property,
                 this.active.properties[property]

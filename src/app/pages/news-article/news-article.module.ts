@@ -4,7 +4,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 
 import { NewsArticleComponent } from './news-article.component';
 import { NewsArticleRoutingModule } from './news-article-routing.module';
-import {PostElementModule} from '../../components/post-element/post-element.module';
+import { PostElementModule } from '../../components/post-element/post-element.module';
 
 
 

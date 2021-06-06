@@ -5,20 +5,26 @@
   color: var(--text-color-1);
   border-radius: 0;
 
+  .mat-dialog-content {
+    margin-bottom: 10px;
+  }
+
   .fia-no-btn, .fia-logout-btn {
   }
 
   .fia-text-button .mat-icon {
     height: 20px;
     width: 20px;
-    line-height: .7;
-    margin-right: 4px;
-    margin-bottom: 2px;
+    line-height: 1.3rem;
   }
 
   .mat-dialog-actions {
     padding-bottom: 0;
     margin-bottom: 0;
+
+    button {
+      line-height: 24px;
+    }
   }
 }
 

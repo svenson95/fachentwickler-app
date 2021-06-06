@@ -1,3 +1,5 @@
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
+
 export interface Theme {
     name: string;
     properties: any;
@@ -7,18 +9,14 @@ export const light: Theme = {
     name: 'light',
     properties: {
         "--background-primary": "#FFFFFF",
-        "--background-secondary": "#f3f3f3",
+        "--background-secondary": "#f0f0f0",
         "--background-tertiary": "#d4d4d4",
-        "--primary-color": "#eb6a1e",
-        "--secondary-color": "#f4ac31",
-        "--tertiary-color": "#94aac5",
-        "--error-default": "#800600",
 
         "--text-color-1": "#000000",
         "--text-color-2": "#787878",
         "--text-color-3": "#b4b4b4",
 
-        "--grey-1": "#e6e6e6",
+        "--grey-1": "#dcdcdc",
         "--grey-1-rgb": "230,230,230",
         "--grey-2": "#d4d4d4",
         "--grey-3": "#b4b4b4",
@@ -41,17 +39,13 @@ export const dark: Theme = {
         "--background-primary": "#292929",
         "--background-secondary": "#373737",
         "--background-tertiary": "#464646",
-        "--primary-color": "#eb6a1e",
-        "--secondary-color": "#f4ac31",
-        "--tertiary-color": "#94aac5",
-        "--error-default": "#800600",
 
         "--text-color-1": "#ffffff",
         "--text-color-2": "#d2d2d2",
         "--text-color-3": "#b4b4b4",
 
-        "--grey-1": "#393939",
-        "--grey-1-rgb": "57,57,57",
+        "--grey-1": "#505050",
+        "--grey-1-rgb": "80,80,80",
         "--grey-2": "#727272",
         "--grey-3": "#afafaf",
         "--grey-4": "#c3c3c3",

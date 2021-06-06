@@ -1,6 +1,6 @@
 /* FIAPPY - LOADING SPINNER */
-.fia-loading-spinner {
-  margin: 50px auto !important;
+mat-spinner.fia-loading-spinner.mat-spinner {
+  margin: 50px auto;
 
   $fia-spinner-size: 64px;
   &.fia-login-column {
@@ -10,13 +10,13 @@
   width: $fia-spinner-size !important;
   height: $fia-spinner-size !important;
 
-  ::ng-deep svg {
+  svg {
     width: $fia-spinner-size !important;
     height: $fia-spinner-size !important;
 
     circle {
       stroke: var(--tertiary-color);
-      stroke-width: 6px !important;
+      stroke-width: 4px!important;
     }
   }
 }

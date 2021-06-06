@@ -1,6 +1,4 @@
-@import 'src/sass/main';
-
-.elements-bar {
+.fia-page.edit-post .elements-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +35,7 @@
   }
 }
 
-.fia-card {
+.fia-page.edit-post .fia-card {
   .fia-card-title {
   }
   .fia-card-description {

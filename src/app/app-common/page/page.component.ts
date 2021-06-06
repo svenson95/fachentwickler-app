@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
@@ -39,7 +39,8 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
               private sidenavService: SidenavService,
               public themeService: ThemeService,
               public router: Router,
-              private elementRef: ElementRef
+              private elementRef: ElementRef,
+              private renderer: Renderer2
   ) {
   }
 
@@ -105,6 +106,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   onSideMenuToggled(isOpen: boolean): void {
     if (isOpen) {
+      // this.renderer.addClass(body,'scroll-locked');
       document.getElementsByClassName('mat-typography')[0].classList.add('scroll-locked');
     } else {
       document.getElementsByClassName('mat-typography')[0].classList.remove('scroll-locked');

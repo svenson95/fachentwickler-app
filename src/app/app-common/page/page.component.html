@@ -1,8 +1,5 @@
 <div class="fia-page-container" [class.is-mobile]="isMobile.matches" [ngClass]="themeService.getActiveTheme().name">
-  <app-header class="fia-header" id="fia-header"
-              [isMobile]="isMobile"
-              [sidenav]="sidenav"
-  ></app-header>
+  <app-header class="fia-header" [isMobile]="isMobile" [sidenav]="sidenav"></app-header>
 
   <mat-sidenav-container class="fia-sidenav-content-wrapper"
                          [style.marginTop.px]="isMobile.matches ? 56 : 0"

@@ -8,8 +8,7 @@ import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-quiz',
-  templateUrl: './matching.component.html',
-  styleUrls: ['./matching.component.scss']
+  templateUrl: './matching.component.html'
 })
 export class MatchingComponent implements OnInit {
 

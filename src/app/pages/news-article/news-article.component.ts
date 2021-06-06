@@ -6,8 +6,7 @@ import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'app-news-article',
-  templateUrl: './news-article.component.html',
-  styleUrls: ['./news-article.component.scss']
+  templateUrl: './news-article.component.html'
 })
 export class NewsArticleComponent implements OnInit {
 

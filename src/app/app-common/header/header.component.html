@@ -1,4 +1,4 @@
-<mat-toolbar class="fia-header">
+<mat-toolbar class="fia-header-toolbar">
   <button class="fia-logo-wrapper"
           (click)="closeSidenav()"
           [routerLink]="isMobile.matches ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
@@ -25,14 +25,14 @@
       entwickler
     </h4>
   </button>
-  <div class="fia-header-details-wrapper">
+  <div class="fia-header-content">
     <div class="fia-page-title" (click)="isMobile.matches ? goToSubject() : goToSubject()">
       <span class="bracket">[</span>
       <h4 class="title" [innerHTML]="headerService.pageTitle"></h4>
       <span class="bracket">]</span>
     </div>
-    <div class="fia-searchbar-buttons-wrapper">
-      <div class="fia-header-searchbar" *ngIf="!isMobile.matches">
+    <div class="fia-header-elements-wrapper">
+      <div class="fia-searchbar-wrapper" *ngIf="!isMobile.matches">
         <mat-form-field class="fia-search-bar" appearance="fill">
           <mat-icon matSuffix (click)="openSearchView()" *ngIf="!searchPostService.isSearching">search</mat-icon>
           <mat-spinner matSuffix class="fia-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>

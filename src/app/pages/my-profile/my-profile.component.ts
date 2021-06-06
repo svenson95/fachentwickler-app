@@ -12,8 +12,7 @@ import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-my-profile',
-  templateUrl: './my-profile.component.html',
-  styleUrls: ['./my-profile.component.scss']
+  templateUrl: './my-profile.component.html'
 })
 export class MyProfileComponent implements OnInit {
 

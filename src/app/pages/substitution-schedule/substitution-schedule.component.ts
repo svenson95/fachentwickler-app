@@ -5,8 +5,7 @@ import { schedule } from '../../../data/schedule';
 
 @Component({
   selector: 'app-substitution-schedule',
-  templateUrl: './substitution-schedule.component.html',
-  styleUrls: ['./substitution-schedule.component.scss']
+  templateUrl: './substitution-schedule.component.html'
 })
 export class SubstitutionScheduleComponent implements OnInit {
 

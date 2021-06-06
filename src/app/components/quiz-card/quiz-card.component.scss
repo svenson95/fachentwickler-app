@@ -107,7 +107,7 @@
           border-radius: var(--button-radius);
           border: none;
           cursor: pointer;
-          transition: background 100ms ease-in-out;
+          transition: background 200ms ease-in-out;
 
           &:first-of-type {
             margin-bottom: 10px;
@@ -119,7 +119,7 @@
             @include from-sm {
               &:hover {
                 background: rgba(var(--tertiary-color-rgb), 0.3);
-                transition: background 100ms ease-in-out;
+                transition: background 300ms ease-in-out;
               }
             }
           }
@@ -127,9 +127,11 @@
 
         .fia-quiz-answer.correct {
           background: rgba(10,230,10, 0.2);
+          transition: background 300ms ease-in-out;
         }
         .fia-quiz-answer.wrong {
           background: rgba(red, 0.2);
+          transition: background 300ms ease-in-out;
         }
       }
     }

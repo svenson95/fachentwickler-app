@@ -17,8 +17,7 @@ import { ImageManagerDialogComponent } from '../../components/image-manager-dial
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 

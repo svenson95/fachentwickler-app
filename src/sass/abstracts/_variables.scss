@@ -1,9 +1,6 @@
 
 :root {
   /* Colors */
-  --background-primary: #ffffff;
-  --background-secondary: #f3f3f3;
-  --background-tertiary: #d4d4d4;
   --primary-color: #eb6a1e;
   --primary-color-rgb: 235, 106, 30;
   --secondary-color: #fdb64c;
@@ -12,27 +9,7 @@
   --tertiary-color: #94aac5;
   --tertiary-color-rgb: 148, 170, 197;
   --tertiary-color-light: #b2c8e2;
-  --error-default: #800600;
-
-  --text-color-1: black;
-  --text-color-2: #787878;
-  --text-color-3: #b4b4b4;
-
-  --grey-1: #e6e6e6;
-  --grey-1-rgb: 230,230,230;
-  --grey-2: #d4d4d4;
-  --grey-3: #b4b4b4;
-  --grey-4: #989898;
-  --grey-4-rgb: 152,152,152;
-  --grey-5: #707070;
-  --grey-5-rgb: 112,112,112;
-
-  /* Shadows */
-  --box-shadow: rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px;
-  --button-shadow: rgba(200, 200, 200, 0.4) 0px 4px 4px, rgba(220, 220, 220, 0.5) 0px 4px 4px;
-
-  --exam-background: rgba(148, 170, 197, 0.15);
-  --theme-toggle-color: var(--secondary-color);
+  --error-default: #f44336;
 
   --border-radius: 0;
   --button-radius: 5px;

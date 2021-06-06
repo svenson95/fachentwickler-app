@@ -3,8 +3,7 @@ import {HeaderService} from '../../services/header.service';
 
 @Component({
   selector: 'app-teacher-files',
-  templateUrl: './teacher-files.component.html',
-  styleUrls: ['./teacher-files.component.scss']
+  templateUrl: './teacher-files.component.html'
 })
 export class TeacherFilesComponent implements OnInit {
 

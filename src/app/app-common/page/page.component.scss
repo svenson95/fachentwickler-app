@@ -11,11 +11,6 @@
   right: 0;
 }
 
-.fia-header {
-  box-shadow: var(--box-shadow);
-  z-index: 99;
-}
-
 .fia-sidenav-content-wrapper {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
@@ -63,22 +58,5 @@
 .mat-drawer-container {
   @include to-xs {
     margin-top: 60px !important;
-  }
-}
-
-.is-mobile ::ng-deep .fia-header {
-  position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 2;
-}
-
-.scrolled #fia-header ::ng-deep {
-  .fia-header {
-    height: 60px;
-    transition: height 400ms ease-out;
-
-    @include to-xs {
-      height: 50px;
-    }
   }
 }

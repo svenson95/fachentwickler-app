@@ -1,9 +1,8 @@
 /* FIAPPY - CARDS */
-.fia-card {
+mat-card.mat-card.fia-card {
   max-width: 1130px;
   background: var(--background-primary);
-  padding: 20px;
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   margin-bottom: 20px;
   margin-right: 0;
@@ -16,12 +15,14 @@
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
 
-  @include to-xs {
-    border-radius: 0;
+  &.mat-card {
+    @include from-xs {
+      padding: 30px;
+    }
   }
 
-  @include from-xs {
-    padding: 30px;
+  @include to-xs {
+    border-radius: 0;
   }
 
   .fia-card-header {
@@ -38,7 +39,7 @@
   }
 }
 
-.fia-card-title {
+p.fia-card-title {
   font-family: Nunito-Regular, sans-serif;
   letter-spacing: 1.5px;
   text-decoration: underline;
