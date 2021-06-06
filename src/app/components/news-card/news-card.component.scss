@@ -25,55 +25,58 @@
       padding-bottom: 10px;
       border-bottom: 1px solid var(--grey-1);
     }
+  }
+}
 
-    .fia-news-header {
-      display: flex;
+.fia-news-item .fia-news-header {
+  display: flex;
 
-      @include to-md {
-        flex-direction: column;
-      }
+  @include to-md {
+    flex-direction: column;
+  }
 
-      .date {
-        align-self: center;
-        flex-shrink: 0;
+  .date {
+    align-self: center;
+    flex-shrink: 0;
 
-        @include from-md {
-          min-width: 70px;
+    @include from-md {
+      min-width: 70px;
 
-          padding-right: 10px;
-          margin-right: 10px;
-          border-right: 1px solid var(--grey-1);
-        }
-
-        @include to-md {
-          min-width: 55px;
-          margin-right: auto;
-          color: var(--text-color-2);
-        }
-      }
-
-      .title {
-        margin-right: 10px;
-        align-self: center;
-        line-height: 14px;
-      }
-
-      .date, .title {
-        margin-top: 0;
-        margin-bottom: 0;
-
-        @include from-sm {
-          flex-shrink: 0;
-        }
-
-        @include to-xs {
-          font-size: .9em;
-        }
-      }
-
-      .title {
-      }
+      padding-right: 10px;
+      margin-right: 10px;
+      border-right: 1px solid var(--grey-1);
     }
+
+    @include to-md {
+      min-width: 55px;
+      margin-right: auto;
+      color: var(--text-color-2);
+    }
+  }
+
+  .title {
+    margin-right: 10px;
+    align-self: center;
+    line-height: 14px;
+  }
+
+  .date, .title {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include from-sm {
+      flex-shrink: 0;
+    }
+
+    @include to-xs {
+      font-size: .9em;
+    }
+  }
+}
+
+.fia-news-item .fia-text-button {
+  &:hover {
+    color: var(--tertiary-color);
   }
 }
 
