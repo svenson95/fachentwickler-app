@@ -19,6 +19,10 @@ mat-card.mat-card.fia-card {
     @include from-xs {
       padding: 30px;
     }
+
+    @include to-xs {
+      padding: 20px;
+    }
   }
 
   @include to-xs {

@@ -88,10 +88,8 @@
       margin-top: 20px;
 
       .fia-exam:not(:last-of-type) {
-        ::ng-deep {
-          .fia-exam-item {
-            margin-bottom: 20px;
-          }
+        .fia-exam-item {
+          margin-bottom: 20px;
         }
       }
 

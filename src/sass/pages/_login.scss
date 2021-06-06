@@ -28,12 +28,6 @@
     .fia-password-input {
       margin-bottom: 8px;
     }
-
-    ::ng-deep {
-      .mat-form-field-label-wrapper {
-        color: green;
-      }
-    }
   }
 
 
@@ -47,7 +41,7 @@
       width: $size !important;
       height: $size !important;
 
-      ::ng-deep svg {
+      svg {
         width: $size !important;
         height: $size !important;
       }

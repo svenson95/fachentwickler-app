@@ -66,17 +66,14 @@ mat-card.fia-card.fia-school-week-card {
         margin: 25px 0 20px;
 
         .fia-weekday-label {
-          font-size: .9em;
+          color: var(--grey-4);
+          font-size: .8rem;
           width: fit-content;
           margin: 0;
           border-radius: 8px;
 
           text-transform: uppercase;
           letter-spacing: 1px;
-
-          @include from-xs {
-            color: var(--grey-5);
-          }
         }
         .weekday-spacer {
           width: 100%;

@@ -12,7 +12,7 @@
     margin-bottom: 20px;
   }
 
-  app-post-element ::ng-deep {
+  app-post-element {
     p, ul {
       color: var(--text-color-2);
     }

@@ -130,7 +130,7 @@
     }
 
     .fia-component-wrapper {
-      ::ng-deep .fia-card-title {
+      .fia-card-title {
         line-height: 20px;
       }
     }
@@ -375,7 +375,7 @@
   }
 }
 
-::ng-deep .fia-landing-row.first {
+.fia-landing-row.first {
   .fia-weekday-group {
     .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
       .fia-post-link-wrapper .fia-post-link {

@@ -1,5 +1,5 @@
 
-.mat-dialog-container .fia-logout-dialog {
+::ng-deep .mat-dialog-container .fia-logout-dialog {
   background: var(--background-secondary);
   color: var(--text-color-1);
   border-radius: 0;
@@ -34,12 +34,4 @@
   -webkit-animation-name: moveInTop;
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
-}
-
-.fia-logout-dialog {
-  .mat-button:hover:not(.mat-button-disabled), .mat-stroked-button:hover:not(.mat-button-disabled){
-    .mat-ripple-element {
-      background-color: rgba(var(--background-primary-rgb),.2);
-    }
-  }
 }

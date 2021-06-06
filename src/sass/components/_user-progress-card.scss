@@ -3,21 +3,25 @@ mat-card.fia-card.fia-user-progress {
   padding-bottom: 20px;
 
   .fia-view-wrapper {
-    .label {
-      font-size: 1.1em;
-      margin-top: 20px;
-      margin-bottom: 8px;
+    padding-top: 10px;
 
-      @include to-xs {
-        font-size: .9em;
-        margin-bottom: 3px;
+    .fia-progress-lesson, .fia-progress-week {
+      .label {
+        font-size: 1.1em;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        @include to-xs {
+          font-size: .9em;
+          margin-bottom: 3px;
+        }
       }
     }
 
     .progress-bar {
-      height: var(--scrollbar-width);
+      height: var(--progressbar-height);
 
-      ::ng-deep .mat-progress-bar-buffer  {
+      .mat-progress-bar-buffer  {
         background: var(--background-secondary);
       }
     }
@@ -26,7 +30,7 @@ mat-card.fia-card.fia-user-progress {
       margin-bottom: 20px;
 
       .progress-bar {
-        ::ng-deep .mat-progress-bar-fill::after {
+        .mat-progress-bar-fill::after {
           background-color: var(--secondary-color) !important;
         }
       }
@@ -36,21 +40,15 @@ mat-card.fia-card.fia-user-progress {
       margin-bottom: 30px;
 
       .progress-bar {
-        ::ng-deep .mat-progress-bar-fill::after {
+        .mat-progress-bar-fill::after {
           background-color: var(--primary-color) !important;
         }
       }
     }
 
-    .fia-next-lesson {
-      //::ng-deep .fia-post-link {
-      //  background: $fia-dark-background-color;
-      //}
-    }
-
     .fia-loading-spinner {
-      margin-top: 10px !important;
-      margin-bottom: 10px !important;
+      margin-top: 35px;
+      margin-bottom: 4px;
     }
 
   }

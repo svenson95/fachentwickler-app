@@ -9,7 +9,7 @@
     flex-direction: column;
     padding: 0;
     margin-left: 0;
-    margin-right: 26px;
+    margin-right: 0;
   }
 
   .label {
@@ -136,10 +136,7 @@
         }
       }
 
-      app-post-badge {
-      }
-
-      ::ng-deep .fia-badge {
+      .fia-badge {
         @include to-sm {
           margin-top: 3px;
           margin-left: 0;

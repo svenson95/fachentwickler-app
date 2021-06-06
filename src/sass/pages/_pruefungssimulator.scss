@@ -69,14 +69,12 @@
         margin-right: auto;
         color: var(--text-color-1);
 
-        ::ng-deep {
-          .mat-form-field-label {
-            color: var(--text-color-3);
-          }
+        .mat-form-field-label {
+          color: var(--text-color-3);
+        }
 
-          .mat-form-field-suffix {
-            color: var(--text-color-1);
-          }
+        .mat-form-field-suffix {
+          color: var(--text-color-1);
         }
 
         // Hide spin-arrow (default in input type=number)

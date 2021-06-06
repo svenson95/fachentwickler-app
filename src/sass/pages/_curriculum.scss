@@ -23,6 +23,7 @@
 
       .mat-button-toggle-checked {
         background-color: var(--tertiary-color);
+        color: var(--background-primary);
       }
     }
 
@@ -64,7 +65,7 @@
         width: 32px;
         font-size: .9em;
 
-        .mat-button-toggle ::ng-deep .mat-button-toggle-label-content {
+        .mat-button-toggle .mat-button-toggle-label-content {
           padding: 0;
         }
       }
@@ -102,7 +103,7 @@
       left: 90px;
     }
 
-    app-school-week-card:last-of-type ::ng-deep mat-card {
+    app-school-week-card:last-of-type mat-card {
       margin-bottom: 0 !important;
     }
   }

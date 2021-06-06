@@ -11,9 +11,7 @@
   <div class="fia-my-class-section" *ngIf="authService.isAuthenticated">
     <p class="section-title">Meine Klasse</p>
     <mat-nav-list>
-      <div class="fia-nav-item-wrapper"
-         *ngFor="let navItem of myClassSection"
-      >
+      <div class="fia-nav-item-wrapper" *ngFor="let navItem of myClassSection">
         <a class="fia-nav-item" mat-list-item disableRipple
            *ngIf="navItem.url.startsWith('http://')"
            (click)="closeSidebar()"

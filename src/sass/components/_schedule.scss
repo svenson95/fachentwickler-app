@@ -4,7 +4,8 @@
   margin-top: 20px;
 
   @include to-xs {
-    margin: auto;
+    width: 100%;
+    margin: 10px 0;
   }
 
   tbody {
@@ -21,6 +22,10 @@
 
       &:first-of-type {
         min-width: 44px;
+      }
+
+      &:not(.first-of-type) {
+        width: calc(100% / 6);
       }
 
       th {
@@ -80,6 +85,7 @@
 
           @include to-sm {
             white-space: nowrap;
+            font-size: .7rem;
           }
         }
 
@@ -93,7 +99,7 @@
           color: var(--grey-3);
 
           @include to-md {
-            font-size: .7rem;
+            font-size: .6rem;
           }
         }
 

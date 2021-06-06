@@ -60,7 +60,7 @@
         width: $size !important;
         height: $size !important;
 
-        ::ng-deep svg {
+        svg {
           width: $size !important;
           height: $size !important;
         }
@@ -115,7 +115,7 @@
         width: $size !important;
         height: $size !important;
 
-        ::ng-deep svg {
+        svg {
           width: $size !important;
           height: $size !important;
         }
@@ -124,17 +124,17 @@
   }
 }
 
-::ng-deep .image-tooltip {
+.image-tooltip {
   background: var(--primary-color);
 }
 
-::ng-deep .image-manager-modal .mat-dialog-container {
+.image-manager-modal .mat-dialog-container {
   background: var(--background-secondary);
   border-radius: 0;
   padding: 0;
 }
 
-::ng-deep .image-manager-modal.cdk-overlay-pane {
+.image-manager-modal.cdk-overlay-pane {
   animation-name: moveInTop;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
@@ -196,11 +196,11 @@ ngx-dropzone,
   border-radius: 5px;
   transition: all 250ms ease-in-out;
 
-  ::ng-deep input:focus + ngx-dropzone-label {
+  input:focus + ngx-dropzone-label {
     outline: none !important;
   }
 
-  ::ng-deep img {
+  img {
     opacity: 1 !important;
     max-width: 300px;
   }
@@ -248,7 +248,7 @@ ngx-dropzone-label {
   }
 }
 
-::ng-deep ngx-dropzone-remove-badge {
+ngx-dropzone-remove-badge {
   opacity: 1 !important;
   background-color: transparent !important;
   svg line { stroke: var(--text-color-3) !important; }

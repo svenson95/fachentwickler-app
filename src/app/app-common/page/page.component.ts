@@ -104,11 +104,10 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onSideMenuToggled(isOpen: boolean): void {
-    if (isOpen) {
-      // this.renderer.addClass(body,'scroll-locked');
-      document.getElementsByClassName('mat-typography')[0].classList.add('scroll-locked');
+    if (isOpen && this.isMobile.matches) {
+      this.renderer.addClass(document.body, 'scroll-locked');
     } else {
-      document.getElementsByClassName('mat-typography')[0].classList.remove('scroll-locked');
+      this.renderer.removeClass(document.body, 'scroll-locked');
     }
   }
 }

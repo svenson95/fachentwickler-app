@@ -25,7 +25,7 @@
 
     // Scrollbar
     &::-webkit-scrollbar {
-      width: var(--scrollbar-width);
+      width: 4px;
       overflow-y: scroll;
       background: var(--background-secondary);
     }
@@ -53,7 +53,7 @@
 }
 
 .mat-drawer-container {
-  @include to-xs {
+  @include to-md {
     margin-top: 60px !important;
   }
 }
@@ -63,9 +63,16 @@
   padding: 20px 20px 20px 0;
 
   @include to-md {
-    padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  @include from-xs {
+    padding-top: 40px;
+  }
+
+  @include from-md {
+    padding-top: 20px;
   }
 
   .fia-no-data {

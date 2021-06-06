@@ -1,12 +1,9 @@
 @import 'src/sass/abstracts/variables';
 
-::ng-deep .mat-dialog-container {
+.mat-dialog-container {
   background: var(--background-secondary);
   color: var(--text-color-1);
   border-radius: 0;
-
-  .fia-no-btn, .fia-logout-btn {
-  }
 
   .fia-text-button {
     .delete-icon {
@@ -21,7 +18,7 @@
       width: $size !important;
       height: $size !important;
 
-      ::ng-deep svg {
+      svg {
         width: $size !important;
         height: $size !important;
       }
@@ -41,12 +38,4 @@
   -webkit-animation-name: moveInTop;
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
-}
-
-::ng-deep {
-  .mat-button:hover:not(.mat-button-disabled), .mat-stroked-button:hover:not(.mat-button-disabled){
-    .mat-ripple-element {
-      background-color: rgba(var(--background-primary-rgb),.2);
-    }
-  }
 }

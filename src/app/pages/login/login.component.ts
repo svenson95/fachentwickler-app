@@ -15,13 +15,12 @@ import { ThemeService } from '../../services/theme.service';
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
+  @ViewChild('passwordInput') passwordInput;
 
   formGroup: FormGroup;
   username: FormControl;
   password: FormControl;
   loading = false;
-
-  @ViewChild('passwordInput') passwordInput;
 
   invalidPassword: boolean;
   InvalidPassword: ValidatorFn = (ac): ValidationErrors => {
@@ -93,9 +92,8 @@ export class LoginComponent implements OnInit {
   }
 
   onFormChange(event): void {
-    if (this.invalidPassword) {
-      this.invalidPassword = false;
-    }
+    this.username.setErrors(null);
+    this.password.setErrors(null);
   }
 
   usernameFieldKeyPress(event): void {
