@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-card-title {
   margin-bottom: 20px;
@@ -15,19 +14,33 @@
 
   > app-post-element:not(:first-of-type) {
     margin-right: 40px;
+    margin-bottom: 20px;
   }
 
   app-post-element ::ng-deep {
+    p, ul {
+      color: var(--text-color-2);
+    }
+
     p:first-of-type {
       margin-top: 0;
     }
 
     ul {
       margin-top: 0;
+
+      list-style: none;
+      li::before {
+        content: '\25AA';
+        color: var(--tertiary-color);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
     }
 
     .post-ul-content {
-      margin-bottom: 2px;
       text-decoration: underline;
     }
   }

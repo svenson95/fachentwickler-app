@@ -1,0 +1,22 @@
+/* FIAPPY - LOADING SPINNER */
+.fia-loading-spinner {
+  margin: 50px auto !important;
+
+  $fia-spinner-size: 64px;
+  &.fia-login-column {
+    $fia-spinner-size: 28px;
+  }
+
+  width: $fia-spinner-size !important;
+  height: $fia-spinner-size !important;
+
+  ::ng-deep svg {
+    width: $fia-spinner-size !important;
+    height: $fia-spinner-size !important;
+
+    circle {
+      stroke: var(--tertiary-color);
+      stroke-width: 6px !important;
+    }
+  }
+}

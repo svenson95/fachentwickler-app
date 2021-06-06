@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-card {
   @include to-xs {

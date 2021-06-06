@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-search-results {
   margin-top: 20px !important;
@@ -17,6 +16,10 @@
   }
 
   .close-search-btn {
+    mat-icon {
+      font-size: 1.4rem;
+    }
+
     &:hover {
       mat-icon {
         color: var(--primary-color);

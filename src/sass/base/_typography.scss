@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: 'Nunito-Light';
+  src: url('../../assets/fonts/Nunito-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url('../../assets/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito-Bold';
+  src: url('../../assets/fonts/Nunito-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito-ExtraBold';
+  src: url('../../assets/fonts/Nunito-ExtraBold.ttf');
+}
+
+body {
+  /* Clean set general font, custom font imported in header */
+  font-size: 26px;
+  font-family: Nunito-Regular, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+b, strong {
+  font-family: Nunito-ExtraBold, sans-serif;
+  font-weight: initial; // firefox font-weight too bold without font-weight: initial;
+}
+
+u {
+  text-decoration-color: var(--secondary-color);
+  border-radius: 2px;
+  padding: 2px 2px;
+  margin: -2px;
+}
+
+hr {
+  background: var(--grey-1);
+}
+
+p {
+  color: var(--text-color-1);
+}
+
+mat-card {
+  color: var(--text-color-1);
+}
+
+button {
+  font-family: Nunito-Regular, sans-serif;
+}

@@ -1,4 +1,10 @@
-@import 'src/theme/breakpoints';
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 @mixin from($width) {
   @media screen and (min-width: $width) {

@@ -15,7 +15,8 @@ export const light: Theme = {
         "--error-default": "#800600",
 
         "--text-color-1": "#000000",
-        "--text-color-2": "#b4b4b4",
+        "--text-color-2": "#787878",
+        "--text-color-3": "#b4b4b4",
 
         "--grey-1": "#e6e6e6",
         "--grey-1-rgb": "230,230,230",
@@ -46,7 +47,8 @@ export const dark: Theme = {
         "--error-default": "#800600",
 
         "--text-color-1": "#ffffff",
-        "--text-color-2": "#b4b4b4",
+        "--text-color-2": "#d2d2d2",
+        "--text-color-3": "#b4b4b4",
 
         "--grey-1": "#393939",
         "--grey-1-rgb": "57,57,57",

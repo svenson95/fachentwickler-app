@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-schedule-table {
   border-collapse: collapse;
@@ -22,8 +21,12 @@
         border-right: 1px solid var(--grey-1);
       }
 
+      &:first-of-type {
+        min-width: 44px;
+      }
+
       th {
-        min-height: 20px;
+        min-height: 37px;
         border-bottom: 1px solid var(--grey-1);
 
         @include to-md {
@@ -32,6 +35,8 @@
       }
 
       th, td {
+        height: 25px;
+        overflow: hidden;
         padding: 8px;
 
         @include to-tiny {
@@ -85,17 +90,18 @@
         }
 
         .fia-hour-teacher {
-          font-size: .9em;
+          font-size: .8rem;
+          font-family: Nunito-Light, sans-serif;
           color: var(--grey-3);
 
           @include to-md {
-            font-size: .8em;
+            font-size: .7rem;
           }
         }
 
         .fia-hour-room,
         .fia-hour-teacher {
-          line-height: 12px;
+          line-height: 14px;
         }
       }
 

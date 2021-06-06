@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-page-footer {
   height: fit-content;
@@ -51,15 +50,15 @@
     }
 
     .unselectable {
-      font-size: .9em;
+      font-family: Nunito-Light, sans-serif;
+      font-weight: 100;
       color: var(--grey-2);
-      line-height: 14px;
+      line-height: 13px;
       margin-left: 5px;
     }
   }
 
   .buttons {
-    font-size: .8em;
 
     @include to-md {
       display: flex;

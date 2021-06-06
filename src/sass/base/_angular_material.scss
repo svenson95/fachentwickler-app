@@ -7,7 +7,7 @@
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
-  $font-family: 'Nunito-Regular, sans-serif'
+        $font-family: 'Nunito-Regular, sans-serif'
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -27,11 +27,11 @@ $fiappy-app-warn: mat-palette($mat-red);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $fiappy-light-theme: mat-light-theme((
-  color: (
-    primary: $fiappy-app-primary,
-    accent: $fiappy-app-accent,
-    warn: $fiappy-app-warn,
-  )
+        color: (
+                primary: $fiappy-app-primary,
+                accent: $fiappy-app-accent,
+                warn: $fiappy-app-warn,
+        )
 ));
 
 // Include theme styles for core and each component used in your app.

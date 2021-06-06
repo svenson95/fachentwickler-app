@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-image-manager {
   color: var(--text-color-1);
@@ -160,12 +159,12 @@
       margin-bottom: 0;
 
       .chunks-length {
-        color: var(--text-color-2);
+        color: var(--text-color-3);
       }
     }
 
     .label {
-      color: var(--text-color-2);
+      color: var(--text-color-3);
       width: 90px;
       display: inline-block;
       text-align: end;
@@ -253,7 +252,7 @@ ngx-dropzone-label {
 ::ng-deep ngx-dropzone-remove-badge {
   opacity: 1 !important;
   background-color: transparent !important;
-  svg line { stroke: var(--text-color-2) !important; }
+  svg line { stroke: var(--text-color-3) !important; }
 
   &:hover {
     background-color: var(--background-primary) !important;

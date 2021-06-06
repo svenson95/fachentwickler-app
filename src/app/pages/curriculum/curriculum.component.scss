@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 ::ng-deep .fia-school-week-card {
 
@@ -47,7 +46,7 @@ mat-button-toggle-group {
   }
 
   .mat-button-toggle-disabled {
-    color: var(--text-color-2);
+    color: var(--text-color-3);
   }
 }
 

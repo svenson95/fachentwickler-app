@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .news-card .fia-card-header {
   .fia-card-title {
@@ -50,7 +49,7 @@
     @include to-md {
       min-width: 55px;
       margin-right: auto;
-      color: var(--text-color-2);
+      color: var(--text-color-3);
     }
   }
 

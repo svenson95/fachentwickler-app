@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-exam-item {
   display: flex;
@@ -127,7 +126,7 @@
         }
 
         &.is-open span {
-          color: var(--text-color-2);
+          color: var(--text-color-3);
         }
       }
     }

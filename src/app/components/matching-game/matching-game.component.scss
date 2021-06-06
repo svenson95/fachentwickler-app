@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 $item-background: rgba(var(--tertiary-color-rgb), .3);
 $item-hover-background: rgba(var(--tertiary-color-rgb), .5);

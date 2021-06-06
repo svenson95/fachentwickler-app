@@ -1,5 +1,4 @@
-@import 'src/theme/styles';
-@import 'src/theme/mixins';
+@import 'src/sass/main';
 
 .fia-page {
 
@@ -12,7 +11,7 @@
   }
 
   .fia-description {
-    color: var(--text-color-2);
+    color: var(--text-color-3);
     margin-top: 0;
     margin-bottom: 3px;
   }

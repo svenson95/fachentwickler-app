@@ -1,0 +1,9 @@
+/* FIAPPY - SNACKBAR */
+.mat-snack-bar-container {
+  background: var(--tertiary-color);
+  color: white;
+
+  @include from-md {
+    max-width: 40vw !important;
+  }
+}

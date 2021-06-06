@@ -19,9 +19,9 @@
   <hr class="post-line" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)"/>
   <!-- LIST -->
   <ul class="post-list" *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
-    <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+    <label class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></label>
     <li class="post-ul-list" *ngFor="let item of element.list">
-      <p *ngIf="isString(item)" [innerHTML]="item"></p>
+      <label *ngIf="isString(item)" [innerHTML]="item"></label>
       <p *ngIf="item.content" [innerHTML]="item.content"></p>
       <ul class="post-ul-sublist" *ngIf="item.sublist !== undefined">
         <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">

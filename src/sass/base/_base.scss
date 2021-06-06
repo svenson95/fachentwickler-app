@@ -1,0 +1,88 @@
+/* BASIC RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;                 /* set margin and padding of all elements to zero */
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 90%;           /* defines what 1rem is */
+}
+
+body {
+  box-sizing: border-box;     /* elements width and height should include margin and padding */
+  background: var(--background-primary);
+  //overflow: hidden;
+  //&.scroll-locked {
+  //  overflow: hidden;
+  //}
+}
+
+.mat-toolbar {
+  font-size: 1rem;
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.fia-title {
+  @include to-xs {
+    font-size: .9em;
+  }
+}
+
+/* FIAPPY - MENU - <mat-menu> */
+//::ng-deep .mat-menu-panel {
+//  background-color: white;
+//  border-radius: 0;
+//}
+
+/* FIAPPY - TOGGLES */
+.fia-theme-toggle {
+  align-self: center;
+
+  .mat-slide-toggle-thumb {
+    background-color: black;
+  }
+
+  .mat-slide-toggle-bar {
+    background-color: rgba(0,0,0,.5);
+  }
+
+  &.mat-checked {
+    .mat-slide-toggle-thumb {
+      background-color: white;
+    }
+
+    .mat-ripple-element {
+      background-color: var(--primary-color);
+    }
+
+    .mat-slide-toggle-bar {
+      background-color: rgba(255,255,255,.5);
+    }
+  }
+}
+
+/* FIAPPY - MAT-BUTTON-TOGGLE */
+mat-button-toggle-group {
+  .mat-button-toggle-checked {
+    background-color: var(--tertiary-color);
+    color: white;
+  }
+
+  .mat-button-toggle-checked .mat-button-toggle-focus-overlay {
+    border-bottom: none;
+  }
+}
+
+/* FIAPPY - POST LINK (SUBJECT, DASHBOARD, ...) */
+app-post-link:not(:last-of-type),
+.fia-lesson-wrapper:not(:last-of-type) {
+  .fia-post-link-wrapper {
+    margin-bottom: 10px;
+  }
+}

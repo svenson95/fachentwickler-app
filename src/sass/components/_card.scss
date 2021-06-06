@@ -1,0 +1,71 @@
+/* FIAPPY - CARDS */
+.fia-card {
+  max-width: 1130px;
+  background: var(--background-primary);
+  padding: 20px;
+  box-shadow: var(--box-shadow) !important;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  margin-right: 0;
+  transition: none;
+
+  animation-name: moveInTop;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: moveInTop;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
+
+  @include to-xs {
+    border-radius: 0;
+  }
+
+  @include from-xs {
+    padding: 30px;
+  }
+
+  .fia-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fia-post-last-update {
+    font-size: .9em;
+    color: var(--grey-3);
+    text-align: right;
+    margin-top: 40px;
+  }
+}
+
+.fia-card-title {
+  font-family: Nunito-Regular, sans-serif;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+
+  @include from-xs {
+    font-size: 1.5em;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  @include to-xs {
+    font-size: 1.3em;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+p.fia-card-description {
+  display: flex;
+  font-size: 1.1em;
+  font-family: Nunito-Light, sans-serif;
+  color: var(--grey-3);
+  letter-spacing: .5px;
+  margin: 0;
+
+  @include to-xs {
+    font-size: 1em;
+  }
+}

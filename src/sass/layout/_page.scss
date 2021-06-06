@@ -1,0 +1,41 @@
+/* FIAPPY - PAGE */
+.fia-page {
+  background: var(--background-secondary);
+  padding: 20px 20px 20px 0;
+
+  @include to-md {
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fia-no-data {
+    display: flex;
+    color: var(--grey-3);
+    margin-top: 10px;
+
+    @include to-xs {
+      font-size: .9em;
+    }
+  }
+}
+
+a {
+  color: var(--text-color-1);
+  text-decoration-color: var(--secondary-color);
+  transition: color 100ms ease-in-out;
+
+  &:hover {
+    color: var(--secondary-color);
+    transition: color 100ms ease-in-out;
+  }
+}
+
+/* FIAPPY - ROUTE ANIMATIONS FIX */
+.fia-content {
+  background-color: var(--background-secondary);
+
+  .ng-animating {
+    transform: translateY(-5px);
+  }
+}

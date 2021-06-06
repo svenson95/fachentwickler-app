@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {dark, light, Theme} from '../../theme/theme';
+import { Injectable } from '@angular/core';
+import { dark, light, Theme } from '../../sass/_themes';
 
 @Injectable({
     providedIn: 'root'
