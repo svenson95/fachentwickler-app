@@ -68,7 +68,8 @@
         }
 
         .fia-hour-subject {
-          color: var(--text-color-1);
+          color: var(--tertiary-color);
+          font-family: Nunito-Bold, sans-serif;
 
           @include from-sm {
             min-width: 50px;
@@ -79,8 +80,13 @@
           }
         }
 
+        .fia-hour-room {
+          color: var(--text-color-1)
+        }
+
         .fia-hour-teacher {
           font-size: .9em;
+          color: var(--grey-3);
 
           @include to-md {
             font-size: .8em;
@@ -89,7 +95,6 @@
 
         .fia-hour-room,
         .fia-hour-teacher {
-          color: var(--grey-3);
           line-height: 12px;
         }
       }

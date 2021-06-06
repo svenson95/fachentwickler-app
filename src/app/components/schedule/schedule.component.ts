@@ -23,7 +23,7 @@ export class ScheduleComponent implements OnInit {
     const sub = subjects.find((item: MenuItem) => item.url.substring(1) === subject);
     if (sub) {
       return sub.shortTitle;
-    } else if (subject === 'sp') {
+    } else if (subject === 'sport') {
       return 'Sport';
     } else {
       return subject;
