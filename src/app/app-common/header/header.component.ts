@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { delay, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
@@ -19,14 +20,21 @@ import { ImageManagerDialogComponent } from '../../components/image-manager-dial
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements AfterViewInit {
 
   UserRole = UserRole;
   isLoading: boolean;
 
   @Input() isMobile;
-  @Input('sidenav') sidenav;
+  @Input() sidenav;
   @ViewChild('searchInput') searchInput: ElementRef;
+  @ViewChild(MatMenuTrigger) menuTrigger: MatMenuTrigger;
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event): void {
+    // on mobile mat-menu should close on scroll
+    this.menuTrigger.closeMenu();
+  }
 
   constructor(public router: Router,
               public headerService: HeaderService,
@@ -42,9 +50,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         this.isLoading = status;
       }
     );
-  }
-
-  ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
