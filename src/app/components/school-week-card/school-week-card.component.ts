@@ -21,6 +21,7 @@ export class SchoolWeekCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentWeek = Number(this.week.schoolWeek);
+    this.initWeekdays();
   }
 
   /* -- Component functions -- */
