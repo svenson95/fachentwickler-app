@@ -4,16 +4,11 @@
 
 .search-page {
   .card-title-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    p {
-      margin: 0;
-    }
   }
 
   .close-search-btn {
+    float: right;
+
     mat-icon {
       color: var(--text-color-1);
       font-size: 1.4rem;
