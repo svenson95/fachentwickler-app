@@ -108,6 +108,15 @@
       }
     }
 
+    .mat-form-field-flex {
+      transition: background-color 150ms ease-in-out;
+    }
+
+    &.mat-form-field-disabled .mat-form-field-flex {
+      background-color: transparent;
+      transition: background-color 150ms ease-in-out;
+    }
+
     .mat-form-field-outline {
       color: var(--grey-4);
       opacity: 1;
@@ -118,7 +127,8 @@
     }
 
     .mat-form-field-underline {
-      background-image: linear-gradient(to right, rgba(var(--grey-4), 0.25) 0%, rgba(var(--grey-4), 0.25) 0%);
+      background-image: linear-gradient(to right, rgba(var(--grey-4), 1) 0%, rgba(var(--grey-4), 1) 0%);
+      background-color: rgba(var(--tertiary-color-rgb), 0.3);
     }
   }
 }

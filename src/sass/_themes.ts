@@ -16,9 +16,9 @@ export const light: Theme = {
         "--text-color-2": "#787878",
         "--text-color-3": "#b4b4b4",
 
-        "--grey-1": "#dcdcdc",
-        "--grey-1-rgb": "230,230,230",
-        "--grey-2": "#d4d4d4",
+        "--grey-1": "#f5f5f5",
+        "--grey-1-rgb": "245,245,245",
+        "--grey-2": "#d2d2d2",
         "--grey-3": "#b4b4b4",
         "--grey-4": "#989898",
         "--grey-4-rgb": "152,152,152",
