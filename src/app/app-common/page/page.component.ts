@@ -67,19 +67,21 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onScroll(event: any): any {
-    if (this.isMobile.matches) {
-      const container = this.elementRef.nativeElement.querySelector('.fia-body');
-      if (container.scrollTop > 100  && !container.classList.contains('scrolled')) {
-        container.classList.add('scrolled');
-      } else if (container.scrollTop < 20) {
-        container.classList.remove('scrolled');
-      }
-    } else {
-      const container = this.elementRef.nativeElement.querySelector('.fia-page-container');
-      if (event.target.scrollTop > 100 && !container.classList.contains('scrolled')) {
-        container.classList.add('scrolled');
-      } else if (event.target.scrollTop < 20) {
-        container.classList.remove('scrolled');
+    if (!this.isCurriculumPage) {
+      if (this.isMobile.matches) {
+        const container = this.elementRef.nativeElement.querySelector('.fia-body');
+        if (container.scrollTop > 100  && !container.classList.contains('scrolled')) {
+          container.classList.add('scrolled');
+        } else if (container.scrollTop < 20) {
+          container.classList.remove('scrolled');
+        }
+      } else {
+        const container = this.elementRef.nativeElement.querySelector('.fia-page-container');
+        if (event.target.scrollTop > 100 && !container.classList.contains('scrolled')) {
+          container.classList.add('scrolled');
+        } else if (event.target.scrollTop < 20) {
+          container.classList.remove('scrolled');
+        }
       }
     }
   }
@@ -109,5 +111,9 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
     } else {
       this.renderer.removeClass(document.body, 'scroll-locked');
     }
+  }
+
+  isCurriculumPage(): boolean {
+    return this.router.url.startsWith('/lehrplan');
   }
 }
