@@ -6,7 +6,7 @@
         <div class="fia-user-detail name">
           <mat-form-field class="fia-input name" appearance="legacy">
             <mat-label>Name</mat-label>
-            <input matInput type="text" [formControl]="username" #usernameInput="matInput" (keyup)="username.setValue(usernameInput.value)" />
+            <input matInput type="text" autocomplete="off" [formControl]="username" #usernameInput="matInput" (keyup)="username.setValue(usernameInput.value)" />
           </mat-form-field>
           <button class="fia-start-change-btn" (click)="toggleChangeName($event)" *ngIf="username.disabled" [disabled]="email.enabled || password.enabled">
             Bearbeiten
@@ -21,7 +21,7 @@
         <div class="fia-user-detail email">
           <mat-form-field class="fia-input email" appearance="legacy">
             <mat-label>E-Mail</mat-label>
-            <input matInput type="text" [formControl]="email" #emailInput="matInput" (keyup)="email.setValue(emailInput.value)" />
+            <input matInput type="email" autocomplete="off" [formControl]="email" #emailInput="matInput" (keyup)="email.setValue(emailInput.value)" />
           </mat-form-field>
           <button class="fia-start-change-btn" (click)="toggleChangeEmail($event)" *ngIf="email.disabled" [disabled]="username.enabled || password.enabled">
             Bearbeiten
