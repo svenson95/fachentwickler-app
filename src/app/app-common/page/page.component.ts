@@ -21,7 +21,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
   /* -- Post search variables -- */
-  searchbarFormgroup: FormGroup;
+  searchbarFormGroup: FormGroup;
   searchbarHideRequiredControl = new FormControl(false);
   searchbarFloatLabelControl = new FormControl('auto');
 
@@ -67,7 +67,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onScroll(event: any): any {
-    if (!this.isCurriculumPage) {
+    if (!this.isCurriculumPage()) {
       if (this.isMobile.matches) {
         const container = this.elementRef.nativeElement.querySelector('.fia-body');
         if (container.scrollTop > 100  && !container.classList.contains('scrolled')) {
@@ -88,7 +88,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   /* -- Component Functions -- */
   setupComponent(): void {
-    this.searchbarFormgroup = this.formbuilder.group({
+    this.searchbarFormGroup = this.formbuilder.group({
       hideRequired: this.searchbarHideRequiredControl,
       floatLabel: this.searchbarFloatLabelControl
     });
