@@ -12,7 +12,7 @@
     </mat-card-content>
   </mat-card>
 
-  <app-school-week-card *ngIf="dataService.schoolWeek !== undefined" [week]="dataService.schoolWeek" [is-dashboard-page]="true"></app-school-week-card>
+  <app-school-week-card *ngIf="dataService.schoolWeek !== undefined" [week]="dataService.schoolWeek" [isDashboardPage]="true"></app-school-week-card>
   <div class="spinner-wrapper" *ngIf="dataService.schoolWeek === undefined">
     <mat-spinner class="fia-loading-spinner"></mat-spinner>
   </div>

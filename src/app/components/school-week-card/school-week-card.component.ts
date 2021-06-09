@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { subjects } from '../../../data/menu-items';
-import { DataService } from '../../services/data/data.service';
 import { SchoolWeek, Weekdays } from '../../models/school-week';
+import { DataService } from '../../services/data/data.service';
+import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'app-school-week-card',
@@ -10,11 +10,12 @@ import { SchoolWeek, Weekdays } from '../../models/school-week';
 })
 export class SchoolWeekCardComponent implements OnInit {
 
-  @Input() week?: SchoolWeek;
-  @Input('is-dashboard-page') isDashboardPage?: boolean;
+  @Input() week: SchoolWeek;
+  @Input() isDashboardPage?: boolean;
 
-  isLoading: boolean;
+  weekdays: Weekdays[];
   currentWeek: number;
+  isLoading: boolean;
 
   constructor(public dataService: DataService) {}
 
@@ -23,7 +24,7 @@ export class SchoolWeekCardComponent implements OnInit {
   }
 
   /* -- Component functions -- */
-  weekdays(): Weekdays[] {
+  initWeekdays(): void {
     const weekArray: Weekdays[] = [];
     this.week.posts.forEach(post => {
       const postDay = new Date(post.lessonDate).getDay();
@@ -34,7 +35,7 @@ export class SchoolWeekCardComponent implements OnInit {
         weekArray.push({ day: postDay, lessons: [post] });
       }
     });
-    return weekArray;
+    this.weekdays = weekArray;
   }
 
   weekdayAsString(day): string {

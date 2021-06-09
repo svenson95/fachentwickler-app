@@ -24,9 +24,9 @@
   </div>
   <mat-card-content class="fia-view-wrapper">
     <mat-spinner class="fia-loading-spinner" *ngIf="week === undefined"></mat-spinner>
-    <div class="fia-weekday-group" *ngIf="week !== null && week !== undefined">
+    <div class="fia-weekday-group" *ngIf="week !== undefined">
 
-      <div class="fia-weekday-item" *ngFor="let week of weekdays()">
+      <div class="fia-weekday-item" *ngFor="let week of weekdays">
         <div class="fia-label-wrapper">
           <p class="fia-weekday-label">{{weekdayAsString(week.day)}}</p>
           <hr class="weekday-spacer"/>
