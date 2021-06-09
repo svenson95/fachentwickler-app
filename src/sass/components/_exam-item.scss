@@ -177,7 +177,7 @@
   }
 
   .fia-lessons-container {
-    padding-top: 16px;
+    padding-top: 10px;
     margin-left: 50px;
     position: relative;
 
@@ -188,7 +188,7 @@
     .fia-lesson-wrapper {
       position: relative;
 
-      .fia-horizontal-line, .fia-vertical-line-1, .fia-vertical-line-2 {
+      .fia-horizontal-line, .fia-vertical-line {
         border: none;
         position: absolute;
         background: var(--exam-background);
@@ -203,28 +203,24 @@
       }
 
       .fia-horizontal-line {
-        height: 3px;
-        top: 10px;
+        height: 1px;
+        bottom: 0;
+        left: -35px;
 
         @include from-xs {
-          width: 38px;
+          width: 35px;
         }
 
         @include to-xs {
-          width: 27px;
+          width: 24px;
+          left: -24px;
         }
       }
 
-      .fia-vertical-line-1 {
+      .fia-vertical-line {
         width: 3px;
-        top: 13px;
+        top: -10px;
         bottom: 0;
-      }
-
-      .fia-vertical-line-2 {
-        width: 3px;
-        height: 34px;
-        top: -24px;
       }
     }
   }
