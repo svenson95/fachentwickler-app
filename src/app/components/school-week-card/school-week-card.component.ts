@@ -14,13 +14,11 @@ export class SchoolWeekCardComponent implements OnInit {
   @Input() isDashboardPage?: boolean;
 
   weekdays: Weekdays[];
-  currentWeek: number;
   isLoading: boolean;
 
   constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
-    this.currentWeek = Number(this.week.schoolWeek);
     this.initWeekdays();
   }
 
@@ -60,9 +58,9 @@ export class SchoolWeekCardComponent implements OnInit {
   /* -- Calendar buttons --*/
   getPreviousWeek(): void {
     this.isLoading = true;
-    this.dataService.getSchoolWeek(this.currentWeek - 1).subscribe(response => {
-      this.currentWeek--;
+    this.dataService.getSchoolWeek(Number(this.week.schoolWeek) - 1).subscribe(response => {
       this.week = response;
+      this.initWeekdays();
       this.dataService.schoolWeek = response;
       this.isLoading = false;
     });
@@ -70,9 +68,9 @@ export class SchoolWeekCardComponent implements OnInit {
 
   getNextWeek(): void {
     this.isLoading = true;
-    this.dataService.getSchoolWeek(this.currentWeek + 1).subscribe(response => {
-      this.currentWeek++;
+    this.dataService.getSchoolWeek(Number(this.week.schoolWeek) + 1).subscribe(response => {
       this.week = response;
+      this.initWeekdays();
       this.dataService.schoolWeek = response;
       this.isLoading = false;
     });

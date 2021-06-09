@@ -1,7 +1,7 @@
 <mat-card class="fia-card fia-school-week-card">
   <div class="fia-header-wrapper">
     <div class="fia-title-description-wrapper">
-      <p class="fia-card-title">Schulwoche #{{currentWeek}}</p>
+      <p class="fia-card-title">Schulwoche #{{week.schoolWeek}}</p>
       <p class="fia-card-description">
         <span>
           {{(week?.posts[0]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
@@ -14,10 +14,10 @@
     </div>
     <mat-spinner class="fia-loading-spinner" *ngIf="isLoading"></mat-spinner>
     <div class="fia-button-wrapper" *ngIf="isDashboardPage">
-      <button class="fia-previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || currentWeek === 1" mat-icon-button>
+      <button class="fia-previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week === 1 || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
-      <button class="fia-next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || currentWeek === dataService.currentSchoolWeek" mat-icon-button>
+      <button class="fia-next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || week === dataService.currentSchoolWeek || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
