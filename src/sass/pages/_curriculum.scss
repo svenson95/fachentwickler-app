@@ -16,15 +16,6 @@
 
     .fia-year-toggle {
       margin-right: 20px;
-
-      mat-button-toggle {
-        background-color: rgba(var(--tertiary-color-rgb), .2);
-      }
-
-      .mat-button-toggle-checked {
-        background-color: var(--tertiary-color);
-        color: var(--background-primary);
-      }
     }
 
     .fia-card-title {
@@ -46,6 +37,12 @@
 
   .mat-button-toggle-disabled {
     color: var(--text-color-3);
+  }
+
+  .mat-button-toggle-checked {
+    background-color: var(--tertiary-color);
+    color: var(--background-primary);
+    font-family: Nunito-Bold, sans-serif;
   }
 }
 

@@ -74,6 +74,10 @@ $easeIn-duration: 400ms;
     left: 50%;
     top: 60px;
     bottom: -20px;
+
+    @include to-xs {
+      top: 51px;
+    }
   }
 
   &.game-started .connector-container #horizontal-connector {
@@ -85,7 +89,10 @@ $easeIn-duration: 400ms;
     align-items: center;
     justify-content: center;
     min-height: 100px;
-    padding-top: 10px;
+
+    @include from-xs {
+      margin: 10px 0;
+    }
   }
 
   .pair_items {
@@ -143,10 +150,6 @@ $easeIn-duration: 400ms;
   .btn-wrapper {
     display: flex;
     align-items: center;
-
-    &:not(:last-of-type) {
-      margin-bottom: 10px;
-    }
 
     .left-connector {
       height: 25px;
@@ -236,6 +239,13 @@ $easeIn-duration: 400ms;
   .finish-label {
     text-align: center;
     margin: 50px 0;
+  }
+}
+
+#game {
+  .btn-wrapper:not(:last-of-type),
+  .connector-container .connector-wrapper:not(:last-of-type) {
+    margin-bottom: 10px;
   }
 }
 
