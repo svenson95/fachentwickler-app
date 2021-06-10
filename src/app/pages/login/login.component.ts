@@ -94,6 +94,7 @@ export class LoginComponent implements OnInit {
   onFormChange(event): void {
     this.username.setErrors(null);
     this.password.setErrors(null);
+    this.invalidPassword = false;
   }
 
   usernameFieldKeyPress(event): void {
