@@ -113,3 +113,10 @@
     margin: 110px auto 130px !important;
   }
 }
+
+.fia-year-toggle,
+.fia-week-toggle {
+  mat-button-toggle {
+    width: 42px;
+  }
+}

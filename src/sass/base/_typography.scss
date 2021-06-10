@@ -54,3 +54,27 @@ mat-card.fia-card {
 button {
   font-family: Nunito-Regular, sans-serif;
 }
+
+ul {
+  margin-top: 0;
+
+  list-style: none;
+  li::before {
+    content: '\25B8';
+    color: var(--tertiary-color);
+    margin-left: -1rem;
+    margin-right: .5rem;
+  }
+
+  li ul {
+    list-style: none;
+
+    li::before {
+      content: '\25B8';
+      color: var(--text-color-3);
+      opacity: .8;
+      margin-left: 0.5rem;
+      margin-right: .5rem;
+    }
+  }
+}

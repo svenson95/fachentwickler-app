@@ -109,8 +109,9 @@
     padding-inline-start: 30px;
   }
 
+  .post-ol-content,
   .post-ul-content {
-    margin-left: -28px;
+    margin-bottom: 0;
   }
 
   .post-ol-list p,
@@ -132,18 +133,6 @@
   .post-ul-sublist {
     padding-inline-start: 0;
     padding-top: 3px;
-
-    li {
-      display: flex;
-      list-style-type: none;
-
-      &::before {
-        color: var(--text-color-1);
-        font-size: 1em;
-        content: "→";
-        margin-right: 5px;
-      }
-    }
   }
 
   .post-image-wrapper {

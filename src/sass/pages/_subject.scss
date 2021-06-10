@@ -21,21 +21,8 @@
       margin-top: 0;
     }
 
-    ul {
-      margin-top: 0;
-
-      list-style: none;
-      li::before {
-        content: '\25AA';
-        color: var(--tertiary-color);
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
-      }
-    }
-
     .post-ul-content {
+      display: flex;
       text-decoration: underline;
     }
   }

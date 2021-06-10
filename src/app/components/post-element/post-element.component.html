@@ -17,32 +17,36 @@
      [innerHTML]="element.content"></p>
   <!-- LINE -->
   <hr class="post-line" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)"/>
-  <!-- LIST -->
-  <ul class="post-list" *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
-    <label class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></label>
-    <li class="post-ul-list" *ngFor="let item of element.list">
-      <label *ngIf="isString(item)" [innerHTML]="item"></label>
-      <p *ngIf="item.content" [innerHTML]="item.content"></p>
-      <ul class="post-ul-sublist" *ngIf="item.sublist !== undefined">
-        <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">
-          <p [innerHTML]="subItem"></p>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <!-- UNORDERED LIST -->
+  <ng-container *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
+    <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+    <ul class="post-list">
+      <li class="post-ul-list" *ngFor="let item of element.list">
+        <span *ngIf="isString(item)" [innerHTML]="item"></span>
+        <span *ngIf="item.content" [innerHTML]="item.content"></span>
+        <ul class="post-ul-sublist" *ngIf="item.sublist !== undefined">
+          <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">
+            <span [innerHTML]="subItem"></span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </ng-container>
   <!-- ORDERED LIST -->
-  <ol class="post-list-ordered" *ngIf="element.type === ElementType.LIST && element.ordered && (element.hidden ? isVisible : true)">
+  <ng-container *ngIf="element.type === ElementType.LIST && element.ordered && (element.hidden ? isVisible : true)">
     <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
-    <li class="post-ol-list" *ngFor="let item of element.list">
-      <p *ngIf="isString(item)" [innerHTML]="item"></p>
-      <p *ngIf="item.content" [innerHTML]="item.content"></p>
-      <ul class="post-ol-sublist" *ngIf="item.sublist !== undefined">
-        <li class="post-ol-sublist-item" *ngFor="let subItem of item.sublist">
-          <p [innerHTML]="subItem"></p>
-        </li>
-      </ul>
-    </li>
-  </ol>
+    <ol class="post-list-ordered">
+      <li class="post-ol-list" *ngFor="let item of element.list">
+        <span *ngIf="isString(item)" [innerHTML]="item"></span>
+        <span *ngIf="item.content" [innerHTML]="item.content"></span>
+        <ul class="post-ol-sublist" *ngIf="item.sublist !== undefined">
+          <li class="post-ol-sublist-item" *ngFor="let subItem of item.sublist">
+            <span [innerHTML]="subItem"></span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </ng-container>
   <!-- IMAGE -->
   <div class="post-image-wrapper" *ngIf="element.type === ElementType.IMAGE && (element.hidden ? isVisible : true)">
       <img class="post-image" *ngIf="image" [src]="image" alt="image"
