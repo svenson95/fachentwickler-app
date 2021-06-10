@@ -9,7 +9,7 @@
   </div>
 
   <div class="fia-my-class-section" *ngIf="authService.isAuthenticated">
-    <p class="section-title">Meine Klasse</p>
+    <label class="section-title">Meine Klasse</label>
     <mat-nav-list>
       <div class="fia-nav-item-wrapper" *ngFor="let navItem of myClassSection">
         <a class="fia-nav-item" mat-list-item disableRipple
@@ -36,7 +36,7 @@
   </div>
 
   <div class="fia-subjects-section">
-    <p class="section-title">Lernfelder</p>
+    <label class="section-title">Lernfelder</label>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of subjectsSection"
@@ -51,7 +51,7 @@
   </div>
 
   <div class="fia-study-section">
-    <p class="section-title">Studium</p>
+    <label class="section-title">Studium</label>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of studySection"
@@ -67,7 +67,7 @@
   </div>
 
   <div class="fia-areas-section">
-    <p class="section-title">Bereiche</p>
+    <label class="section-title">Bereiche</label>
     <mat-nav-list>
       <a class="fia-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of languageSection"
