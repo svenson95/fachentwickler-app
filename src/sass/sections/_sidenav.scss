@@ -51,7 +51,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
       }
 
       @include to-md {
-        font-size: .8rem;
+        font-size: .9rem;
       }
 
       &.active-route {
@@ -76,7 +76,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
     }
 
     @include to-md {
-      font-size: .8rem;
+      font-size: .9rem;
       min-width: 125px;
     }
 
@@ -108,25 +108,21 @@ mat-sidenav.fia-sidenav.mat-sidenav {
     }
 
     .fia-nav-item.mat-list-item {
-      color: var(--text-color-1);
       background: transparent !important;
-      letter-spacing: 1px;
       height: fit-content;
-      margin-top: 2px;
-      margin-bottom: 2px;
       width: fit-content;
       max-width: 170px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+
+      font-size: .9rem;
+      color: var(--text-color-1);
+      letter-spacing: 1px;
 
       @include from-md {
-        font-size: .9rem;
-
         .mat-list-item-content {
           padding: 0;
         }
-      }
-
-      @include to-md {
-        font-size: .8rem;
       }
 
       @media not all and (min-resolution:.001dpcm){
