@@ -21,8 +21,9 @@
   transition: transform 100ms ease, background 300ms ease-in-out;
 
   &:hover:not(:disabled) {
-    //background-color: rgba(var(--tertiary-color-rgb),.2);
-    background: rgba(var(--tertiary-color-rgb),.1);
+    background: -moz-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, rgba(var(--tertiary-color-rgb),.15) 100%);
+    background: -webkit-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, rgba(var(--tertiary-color-rgb),.15) 100%);
+    background: linear-gradient(to bottom, rgba(var(--tertiary-color-rgb),.15) 0%, rgba(var(--tertiary-color-rgb),.15) 100%);
     cursor: pointer;
     transition: transform 100ms ease, background 300ms ease-in-out;
   }
@@ -45,7 +46,9 @@
     margin-left: 10px;
 
     &:hover {
-      background: rgba(var(--grey-4-rgb), .1);
+      background: -moz-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, rgba(var(--grey-4-rgb), .15) 100%);
+      background: -webkit-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, rgba(var(--grey-4-rgb), .15) 100%);
+      background: linear-gradient(to bottom, rgba(var(--grey-4-rgb), .15) 0%, rgba(var(--grey-4-rgb), .15) 100%);
       color: var(--grey-4);
       transition: transform 100ms ease, background-color 200ms ease-in-out;
     }
