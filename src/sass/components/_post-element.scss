@@ -9,7 +9,6 @@
     &.is-open {
       color: var(--text-color-3);
       border-color: rgba( var(--grey-1-rgb), .6);
-      margin-bottom: 20px;
     }
   }
 
@@ -73,13 +72,14 @@
 
   .post-list-ordered,
   .post-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .post-list-ordered {
     counter-reset: ordered-list-counter;
     list-style: none;
     padding-left: 0;
-    margin-top: 20px;
 
     li {
       margin-left: 15px;
@@ -90,7 +90,7 @@
 
     li::before {
       content: counter(ordered-list-counter);
-      color: var(--secondary-color);
+      color: var(--primary-color);
       --size: 32px;
       left: calc(-1 * var(--size) - 10px);
       line-height: calc(var(--size) - 1px);
@@ -221,3 +221,41 @@
 .fia-post-item.code {
 
 }
+
+.fia-post-item.answer button + p,
+.post-answer-group {
+  background-color: rgba(var(--tertiary-color-rgb), .1);
+  padding: 40px 20px 20px;
+  margin-top: 0;
+  position: relative;
+
+  &:after {
+    content: 'Lösung';
+    position: absolute;
+    font-size: .8rem;
+    top: 8px;
+    left: 12px;
+
+    color: rgba(var(--tertiary-color-rgb), .8);
+    width: 1rem;
+  }
+
+  .post-table {
+    .table-row th {
+      background: var(--grey-2);
+    }
+
+    .table-row th, .table-row td {
+      border-color: var(--grey-3);
+    }
+  }
+
+  .post-code code {
+    border: 1px solid var(--tertiary-color);
+  }
+}
+
+.fia-page.post-page .fia-card .fia-post-content .post-answer-group app-post-element:first-child .fia-post-item {
+  margin-top: 0;
+}
+

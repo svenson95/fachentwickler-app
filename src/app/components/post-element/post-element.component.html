@@ -1,7 +1,7 @@
-<div class="fia-post-item" [ngSwitch]="element.type" [ngClass]="element.type">
+<div class="fia-post-item" [ngSwitch]="element.type" [ngClass]="element.type" [class.answer]="element.hidden">
   <!-- SHOW ANSWER BUTTON -->
   <button class="fia-text-button secondary" *ngIf="element.hidden" (click)="isVisible = !isVisible" [class.is-open]="isVisible">
-    {{isVisible ? 'Lösung ausblenden' : 'Lösung anzeigen'}}
+    {{isVisible ? 'Ausblenden' : 'Lösung anzeigen'}}
   </button>
   <!-- TITLE -->
   <p class="post-title" *ngIf="element.type === ElementType.TITLE && (element.hidden ? isVisible : true)"
