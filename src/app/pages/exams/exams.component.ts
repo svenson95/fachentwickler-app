@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 import { MatCalendar, MatCalendarCellCssClasses } from '@angular/material/datepicker';
 
@@ -31,7 +31,8 @@ export class ExamsComponent implements OnInit, AfterViewInit {
   constructor(private headerService: HeaderService,
               private dataService: DataService,
               private renderer: Renderer2,
-              private dateAdapter: DateAdapter<Date>
+              private dateAdapter: DateAdapter<Date>,
+              private elementRef: ElementRef
   ) {
     this.headerService.setPageTitle('Klausuren');
     this.dateAdapter.getFirstDayOfWeek = () => 1;
@@ -63,8 +64,8 @@ export class ExamsComponent implements OnInit, AfterViewInit {
   }
 
   initializeCalendarButtons(): void {
-    const BACK_BUTTON = document.querySelector('.mat-calendar-previous-button');
-    const FORWARD_BUTTON = document.querySelector('.mat-calendar-next-button');
+    const BACK_BUTTON = this.elementRef.nativeElement.querySelector('.mat-calendar-previous-button');
+    const FORWARD_BUTTON = this.elementRef.nativeElement.querySelector('.mat-calendar-next-button');
     if (BACK_BUTTON) {
       this.renderer.listen(BACK_BUTTON, 'click', () => {
         const month = this.calendarDate.getMonth() as number;
@@ -87,17 +88,6 @@ export class ExamsComponent implements OnInit, AfterViewInit {
         }
       });
     }
-
-    const addEventListener = (button) => {
-      this.renderer.listen(button, 'click', () => {
-        if (button === '.mat-calendar-previous-button' && this.calendarDate.getMonth() === 0) {
-          this.calendarDate.setFullYear(this.calendarDate.getFullYear() - 1);
-          this.calendarDate.setMonth(11);
-        } else {
-          this.calendarDate.setMonth(this.calendarDate.getMonth() - 1);
-        }
-      });
-    };
   }
 
   /* -- Component functions -- */
