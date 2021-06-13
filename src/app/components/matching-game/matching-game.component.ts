@@ -36,16 +36,14 @@ export class MatchingGameComponent implements OnInit {
     moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
 
-  private checkResult(): void {
+  checkResult(): void {
     const leftPairs = this.leftSidePairs;
     const rightPairs = this.rightSidePairs;
 
     let mistakes = 0;
 
     for (let i = 0; i < this.matching.pairs.length; i++) {
-      if (leftPairs[i].pairNumber === rightPairs[i].pairNumber) {
-
-      } else {
+      if (leftPairs[i].pairNumber !== rightPairs[i].pairNumber) {
         mistakes++;
       }
     }
@@ -63,14 +61,6 @@ export class MatchingGameComponent implements OnInit {
       this.isCorrect = undefined;
       this.startNextRound();
     }, 2000);
-  }
-
-  remove(pair, array): void {
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].pairNumber === pair.pairNumber) {
-        array.splice(i, 1);
-      }
-    }
   }
 
   private handleFailedAssignment(): void {

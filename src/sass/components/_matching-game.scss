@@ -5,20 +5,6 @@ $connector-width: 7px;
 
 $easeIn-duration: 400ms;
 
-#game .cdk-drag-preview {
-  background: $item-background;
-  border: none;
-  box-shadow: var(--button-shadow);
-
-  @include to-xs {
-    font-size: .7em;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-  }
-}
-
 #game {
   margin-top: 20px;
 
@@ -239,6 +225,20 @@ $easeIn-duration: 400ms;
   .finish-label {
     text-align: center;
     margin: 50px 0;
+  }
+}
+
+.cdk-drag-preview {
+  background: $item-background;
+  border: none;
+  box-shadow: var(--button-shadow);
+
+  @include to-xs {
+    font-size: .7em;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
   }
 }
 
