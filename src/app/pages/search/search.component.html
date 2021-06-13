@@ -4,7 +4,7 @@
       <button class="close-search-btn" mat-icon-button (click)="closeSearchView()">
         <mat-icon>close</mat-icon>
       </button>
-      <p class="fia-card-title">Suche nach ...</p>
+      <p class="fia-card-title">Suche nach <b>{{searchPostService.searchValue}}</b></p>
       <p class="fia-card-description" *ngIf="searchResults">
         {{ searchResults.length }}
         {{ searchResults.length === 1 ? 'Suchergebnis' : searchResults.length !== 1 ? 'Suchergebnisse' : null }}

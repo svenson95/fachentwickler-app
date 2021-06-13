@@ -47,7 +47,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
       color: var(--text-color-1);
 
       @include from-md {
-        font-size: .9rem;
+        font-size: 1rem;
       }
 
       @include to-md {
@@ -70,7 +70,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
     }
 
     @include from-md {
-      font-size: .9rem;
+      font-size: 1rem;
       width: fit-content;
       max-width: 200px;
     }
