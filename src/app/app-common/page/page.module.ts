@@ -7,6 +7,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 
 import { PageComponent } from './page.component';
 import { HeaderComponent } from '../header/header.component';
+import { AppIconComponent } from '../app-icon/app-icon.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ContentComponent } from '../content/content.component';
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
@@ -18,6 +19,7 @@ import { DeleteImageDialogComponent } from '../../components/delete-image-dialog
   declarations: [
     PageComponent,
     HeaderComponent,
+    AppIconComponent,
     SidenavComponent,
     ContentComponent,
     LogoutDialogComponent,

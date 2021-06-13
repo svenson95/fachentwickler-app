@@ -30,30 +30,12 @@
       }
     }
 
-    .fia-branding {
-      display: flex;
-      height: fit-content;
-      color: var(--text-color-1);
-      align-items: center;
-
+    .fia-logo {
       .fia-icon-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 2px;
         fill: var(--grey-2);
-
-        svg {
-          height: 32px;
-        }
       }
-
-      .unselectable {
-        font-family: Nunito-Light, sans-serif;
-        font-weight: 100;
+      .fia-app-name {
         color: var(--grey-2);
-        line-height: 13px;
-        margin-left: 5px;
       }
     }
 

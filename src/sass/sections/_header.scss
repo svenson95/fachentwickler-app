@@ -218,24 +218,6 @@ app-header.fia-header .mat-toolbar .fia-logo-wrapper {
     }
   }
 
-  .fia-app-name {
-    color: var(--text-color-1);
-    margin: 4px 0;
-    font-family: Nunito-Light, sans-serif;
-    font-weight: 100;
-    transition: letter-spacing 600ms ease;
-
-    @include from-xs {
-      text-align: left;
-      display: inline-block;
-      line-height: 13px;
-    }
-
-    @include to-xs {
-      line-height: 24px;
-    }
-  }
-
   &:hover .fia-app-name {
     letter-spacing: 1px;
     transition: letter-spacing 500ms ease-out;
@@ -244,43 +226,7 @@ app-header.fia-header .mat-toolbar .fia-logo-wrapper {
     letter-spacing: .5px;
   }
 
-  .fia-icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    width: 34px;
-    flex-shrink: 0;
-
-    @include to-xs {
-      width: 24px;
-    }
-
-    svg {
-      height: 32px;
-
-      @include to-xs {
-        height: 24px;
-      }
-
-      g {
-        transform: scale(0.04);
-
-        text {
-          font-family: Nunito-regular, sans-serif;
-        }
-      }
-    }
-
-    @include from-xs {
-      fill: var(--tertiary-color);
-      margin-right: 6px;
-    }
-  }
-
   .fia-app-name {
-    z-index: 1;
-
     @include to-xs {
       display: none;
     }
