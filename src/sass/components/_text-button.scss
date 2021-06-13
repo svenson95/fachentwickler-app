@@ -1,0 +1,68 @@
+/* FIAPPY - TEXT-BUTTON */
+.fia-text-button {
+  background: -moz-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, transparent 100%);
+  background: -webkit-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(var(--tertiary-color-rgb),.15) 0%, transparent 100%);
+  color: var(--tertiary-color);
+  font-family: Nunito-Light, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 12px 20px 10px;
+
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
+  border-top-left-radius: var(--button-radius);
+  border-top-right-radius: var(--button-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  transition: transform 100ms ease, background 300ms ease-in-out;
+
+  &:hover:not(:disabled) {
+    //background-color: rgba(var(--tertiary-color-rgb),.2);
+    background: rgba(var(--tertiary-color-rgb),.1);
+    cursor: pointer;
+    transition: transform 100ms ease, background 300ms ease-in-out;
+  }
+
+  &.secondary {
+    padding: 4px 10px 2px;
+    font-size: .8em;
+
+    @include to-xs {
+      font-size: .7em;
+    }
+  }
+
+  &.show-more {
+    background: -moz-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, transparent 100%);
+    background: -webkit-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(var(--grey-4-rgb), .15) 0%, transparent 100%);
+    color: var(--grey-4);
+    border-color: rgba(var(--grey-4-rgb), .3);
+    margin-left: 10px;
+
+    &:hover {
+      background: rgba(var(--grey-4-rgb), .1);
+      color: var(--grey-4);
+      transition: transform 100ms ease, background-color 200ms ease-in-out;
+    }
+  }
+
+  @include to-xs {
+    font-size: .8em;
+  }
+
+  &:disabled {
+    span {
+      color: rgba(var(--grey-4-rgb), .5);
+    }
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+}

@@ -28,20 +28,20 @@
 @import 'src/sass/components/news-card';
 @import 'src/sass/components/next-exams-card';
 @import 'src/sass/components/ngx-highlightjs';
+@import 'src/sass/components/post-badge';
 @import 'src/sass/components/post-element';
+@import 'src/sass/components/post-link';
 @import 'src/sass/components/quiz-card';
 @import 'src/sass/components/schedule';
 @import 'src/sass/components/school-week-card';
+@import 'src/sass/components/text-button';
 @import 'src/sass/components/user-progress-card';
 
 /* Layout */
-@import 'src/sass/layout/content';
-@import 'src/sass/layout/header';
-@import 'src/sass/layout/page';
-@import 'src/sass/layout/post-badge';
-@import 'src/sass/layout/post-link';
-@import 'src/sass/layout/sidenav';
-@import 'src/sass/layout/text-button';
+@import 'src/sass/sections/content';
+@import 'src/sass/sections/header';
+@import 'src/sass/sections/page';
+@import 'src/sass/sections/sidenav';
 
 /* Pages */
 @import 'src/sass/pages/about';
