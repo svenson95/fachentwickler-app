@@ -202,7 +202,6 @@ export class AuthService {
         try {
             await this.authenticated().subscribe(
             (response) => {
-                console.log('SUCCESS authenticated', response);
                 if (response.user) {
                     this.user = response.user;
                     this.token = response.token;

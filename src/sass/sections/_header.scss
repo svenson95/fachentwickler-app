@@ -402,11 +402,10 @@ app-header.fia-header .fia-header-progress-bar {
 .scrolled {
   app-header.fia-header .fia-header-toolbar {
     height: 60px;
-    transition: height 400ms ease-out;
+    transition: height 300ms ease-out;
 
     @include to-xs {
       height: 50px;
-      transition: height 400ms ease-out;
     }
   }
 }

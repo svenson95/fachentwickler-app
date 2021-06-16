@@ -154,8 +154,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
       }
 
       &.active-route {
-        color: var(--text-color-1);
-        text-shadow: 0 0 2px var(--secondary-color);
+        color: var(--secondary-color);
 
         .fia-nav-item-icon {
           color: var(--text-color-1);
