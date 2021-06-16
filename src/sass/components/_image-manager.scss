@@ -1,8 +1,8 @@
-.fia-image-manager {
+mat-dialog-content.fia-image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
   max-height: 80vh;
-  padding: 0 24px;
+  margin: 0;
 
   &::-webkit-scrollbar {
     width: 3px;
@@ -33,6 +33,10 @@
     font-family: Nunito-Light, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+  }
+
+  hr {
+    background: var(--grey-2);
   }
 
   .fia-add-image-form {
@@ -187,10 +191,9 @@ ngx-dropzone,
   margin-right: 20px;
 }
 
-.upload-image-dropzone {
+.upload-image-dropzone#upload-image-dropzone {
   width: 100%;
   height: 140px;
-  justify-content: center;
   background: rgba(var(--tertiary-color-rgb), .1);
   border: 1px solid var(--tertiary-color);
   border-radius: 5px;
@@ -204,37 +207,34 @@ ngx-dropzone,
     opacity: 1 !important;
     max-width: 300px;
   }
+
+  .dropzone-preview {
+    display: block !important;
+
+    ngx-dropzone-label {
+      text-align: left !important;
+      margin-left: 5px !important;
+      font-size: 1rem;
+      width: 200px;
+    }
+  }
 }
 
-.upload-image-dropzone.ngx-dz-hovered {
+.upload-image-dropzone#upload-image-dropzone.ngx-dz-hovered {
   background: rgba(var(--secondary-color-rgb), .1);
   border: 1px solid var(--secondary-color);
   transition: all 250ms ease-in-out;
 }
 
-ngx-dropzone-image-preview ngx-dropzone-label {
-  text-align: left;
-  margin-left: 5px !important;
-}
-
-ngx-dropzone-label {
+ngx-dropzone-label.dropzone-labels {
   position: unset !important;
   overflow-wrap: anywhere !important;
   font-size: .9em;
 
-  h2, p {
-    font-family: Nunito-Light, sans-serif;
-  }
-
-  h2 {
-    font-size: 1em;
-    margin-bottom: 0;
-  }
-
   p {
     color: grey;
     font-size: .8em;
-    margin: 8px 0;
+    margin: 0;
   }
 
   .drop-image, .choose-image {
@@ -244,6 +244,15 @@ ngx-dropzone-label {
     ion-icon {
       font-size: 1.5em;
       margin-right: 10px;
+    }
+
+    h2, p {
+      font-family: Nunito-Light, sans-serif;
+    }
+
+    h2 {
+      font-size: 1em;
+      margin-bottom: 0;
     }
   }
 }

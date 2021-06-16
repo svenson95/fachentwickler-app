@@ -6,9 +6,9 @@
   </div>
   <hr class="fia-divider-line"/>
   <p class="title">Neues Bild hochladen</p>
-  <form class="fia-add-image-form" encType="multipart/form-data" (submit)="sendImage($event)">
-    <div class="upload-image-dropzone" id="add-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false" l>
-      <ngx-dropzone-label>
+  <form class="fia-add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
+    <div class="upload-image-dropzone" id="upload-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false">
+      <ngx-dropzone-label class="dropzone-labels">
         <div class="drop-image">
           <ion-icon class="drop-icon" name="download-outline"></ion-icon>
           <h2>Datei hierher ziehen</h2>
@@ -19,7 +19,7 @@
           <h2>Datei auswählen</h2>
         </div>
       </ngx-dropzone-label>
-      <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of dropzoneFile" [file]="f" [removable]="true" (removed)="onRemove(f)">
+      <ngx-dropzone-image-preview class="dropzone-preview" ngProjectAs="ngx-dropzone-preview" *ngFor="let f of dropzoneFile" [file]="f" [removable]="true" (removed)="onRemove(f)">
         <ngx-dropzone-label>{{ f.name }} <br/> {{ f.type }} <br/> {{ formatBytes(f.size) }}</ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>

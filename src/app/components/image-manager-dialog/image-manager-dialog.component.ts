@@ -84,7 +84,7 @@ export class ImageManagerDialogComponent implements OnInit {
     return 'data:image/png;base64,' + dataStrings.join('');
   }
 
-  sendImage(event): void {
+  uploadImage(event): void {
     event.preventDefault();
     this.isUploadingImage = true;
     this.dataService.uploadImage(this.dropzoneFile[0]).subscribe(

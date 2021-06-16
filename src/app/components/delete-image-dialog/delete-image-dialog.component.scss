@@ -1,6 +1,6 @@
 @import 'src/sass/abstracts/variables';
 
-.mat-dialog-container {
+::ng-deep .mat-dialog-container {
   background: var(--background-secondary);
   color: var(--text-color-1);
   border-radius: 0;
