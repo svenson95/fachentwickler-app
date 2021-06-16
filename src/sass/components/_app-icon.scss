@@ -1,6 +1,7 @@
 .app-icon .fia-app-name {
   color: var(--text-color-1);
-  margin: 4px 0;
+  align-self: center;
+  font-size: 1.4rem;
   font-family: Nunito-Light, sans-serif;
   font-weight: 100;
   transition: letter-spacing 600ms ease;
@@ -16,6 +17,16 @@
     line-height: 24px;
   }
 
+  .first, .second, .third { text-decoration: underline; }
+  .first { text-decoration-color: var(--tertiary-color); }
+  .second { text-decoration-color: var(--secondary-color); }
+  .third { text-decoration-color: var(--primary-color); }
+
+}
+
+.active-route .fia-app-name {
+  .first { text-decoration-color: var(--secondary-color); }
+  .second { text-decoration-color: var(--tertiary-color); }
 }
 
 .fia-icon-wrapper {
