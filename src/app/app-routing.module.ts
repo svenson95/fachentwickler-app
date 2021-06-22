@@ -159,6 +159,10 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule)
   },
+  {
+    path: 'pruefungssimulator',
+    loadChildren: () => import('src/app/pages/pruefungssimulator/pruefungssimulator.module').then(m => m.PruefungssimulatorModule)
+  },
   // {
   //   path: '**',
   //   redirectTo: '/login'
