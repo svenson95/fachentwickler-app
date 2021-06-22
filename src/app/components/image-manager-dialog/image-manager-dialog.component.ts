@@ -20,13 +20,14 @@ export class ImageManagerDialogComponent implements OnInit {
   UserRole = UserRole;
 
   imagesCount: number;
-  page = 0;
+  currentPage = 0;
+  totalPages: number;
   selectedImage: ImageData;
   dropzoneFile: File[] = [];
-  lastImages: ImageData[] = [];
+  images: ImageData[] = [];
   isLoading: boolean;
   isUploadingImage: boolean;
-  isLoadMoreImages: boolean;
+  isLoadingImages: boolean;
 
   @ViewChild('fileInput') fileInput;
 
@@ -45,6 +46,7 @@ export class ImageManagerDialogComponent implements OnInit {
     this.dataService.getAllImagesLength().subscribe(
         (data) => {
           this.imagesCount = data;
+          this.updateNumberOfPages();
         },
         (error) => {
           console.log('Error while GET images count', error);
@@ -71,7 +73,7 @@ export class ImageManagerDialogComponent implements OnInit {
   initialImages(): void {
     this.dataService.getMultipleImages().subscribe(
       (data) => {
-        this.lastImages = data;
+        this.images = data;
       },
       (error) => {
         console.log('Error while GET post', error);
@@ -91,9 +93,11 @@ export class ImageManagerDialogComponent implements OnInit {
         async (response) => {
           await this.dataService.getImageById(response.file.id).subscribe(
               (image) => {
-                this.lastImages.unshift(image);
+                this.images.unshift(image);
                 this.dropzoneFile = [];
                 this.selectedImage = image;
+                this.imagesCount++;
+                this.updateNumberOfPages();
               }, (err) => {
                 console.log('Get image by id failed');
                 console.log(err);
@@ -109,15 +113,6 @@ export class ImageManagerDialogComponent implements OnInit {
     );
   }
 
-  loadMore(): void {
-    this.page++;
-    this.isLoadMoreImages = true;
-    this.dataService.getMultipleImages(this.page).subscribe(data => {
-      this.lastImages = [...this.lastImages, ...data];
-      this.isLoadMoreImages = false;
-    });
-  }
-
   deleteImage(id: string): void {
     const dialogRef = this.dialog.open(DeleteImageDialogComponent, {
       restoreFocus: true,
@@ -127,8 +122,10 @@ export class ImageManagerDialogComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe((confirmed: any) => {
       if (confirmed) {
-        this.lastImages = this.lastImages.filter(el => el.file._id !== id);
+        this.images = this.images.filter(el => el.file._id !== id);
         this.selectedImage = undefined;
+        this.imagesCount--;
+        this.updateNumberOfPages();
 
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
@@ -150,4 +147,15 @@ export class ImageManagerDialogComponent implements OnInit {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
   }
 
+  updateNumberOfPages(): void {
+    this.totalPages = Math.ceil(this.imagesCount / 10);
+  }
+
+  setIsLoadingImage(value: boolean): void {
+    this.isLoadingImages = value;
+  }
+
+  setImages(value: ImageData[]): void {
+    this.images = value;
+  }
 }

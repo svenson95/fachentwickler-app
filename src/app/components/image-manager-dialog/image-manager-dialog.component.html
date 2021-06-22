@@ -50,18 +50,22 @@
     </div>
   </ng-container>
   <hr class="fia-divider-line"/>
-  <p class="title">Zuletzt hochgeladen</p>
+  <p class="title">Hochgeladene Bilder</p>
   <div class="fia-im-recent-images">
-    <div class="fia-spinner-wrapper" *ngIf="lastImages.length === 0 && isLoading">
+    <div class="fia-spinner-wrapper" *ngIf="images.length === 0 && isLoading || isLoadingImages">
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
-    <img class="image" *ngFor="let image of lastImages" [src]="encode(image)" alt="image"
-         matTooltip="Details anzeigen" matTooltipClass="image-tooltip" matTooltipPosition="right"
-         [matTooltipDisabled]="selectedImage === image" (click)="selectedImage = image" [class.is-selected]="image === selectedImage"
-    />
-    <button class="fia-text-button" (click)="loadMore()" [disabled]="isLoading">
-      <span *ngIf="!isLoadMoreImages">Mehr laden</span>
-      <mat-spinner class="fia-loading-spinner" *ngIf="isLoadMoreImages"></mat-spinner>
-    </button>
+    <ng-container *ngIf="!isLoadingImages">
+      <div class="image-wrapper" *ngFor="let image of images">
+        <img class="image" [class.is-selected]="image === selectedImage" [src]="encode(image)" alt="image" (click)="selectedImage = image"
+             matTooltip="Details anzeigen" matTooltipClass="image-tooltip" matTooltipPosition="right" [matTooltipDisabled]="selectedImage === image"
+        />
+      </div>
+    </ng-container>
+  </div>
+  <div class="fia-pagination-bar" *ngIf="images.length > 0">
+    <p class="title">Seiten</p>
+    <app-pagination-bar [totalPages]="totalPages" [currentPage]="currentPage" (images)="setImages($event)" [imagesCount]="imagesCount"
+                        (isLoadingImages)="setIsLoadingImage($event)"></app-pagination-bar>
   </div>
 </mat-dialog-content>

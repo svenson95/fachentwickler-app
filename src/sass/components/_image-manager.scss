@@ -80,8 +80,8 @@ mat-dialog-content.fia-image-manager {
 
   .fia-im-recent-images {
     overflow-y: scroll;
-    max-height: 380px;
-    margin-bottom: 24px;
+    max-height: 300px;
+    margin-bottom: 20px;
 
     &::-webkit-scrollbar {
       width: var(--scrollbar-width);
@@ -94,9 +94,13 @@ mat-dialog-content.fia-image-manager {
       border-radius: 0;
     }
 
+    .image-wrapper {
+      display: inline-flex;
+      vertical-align: top;
+    }
+
     .image {
-      max-height: 80px;
-      max-width: 180px;
+      width: 180px;
       padding: 10px;
       outline: 0 solid transparent;
       transition: outline 200ms ease;
@@ -107,24 +111,10 @@ mat-dialog-content.fia-image-manager {
         outline-offset: -1px;
       }
     }
+  }
 
-    .fia-text-button {
-      display: block;
-      margin: 20px auto;
-      width: 140px;
-
-      .fia-loading-spinner {
-        margin: 0 auto !important;
-        $size: 18px;
-        width: $size !important;
-        height: $size !important;
-
-        svg {
-          width: $size !important;
-          height: $size !important;
-        }
-      }
-    }
+  .fia-pagination-bar {
+    margin-bottom: 24px;
   }
 }
 
