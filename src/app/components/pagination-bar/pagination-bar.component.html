@@ -1,0 +1,18 @@
+<div class="pagination-bar">
+    <button class="page-button" (click)="goToFirstPage()">
+        <ion-icon class="delete-icon" name="play-back"></ion-icon>
+    </button>
+    <button class="page-button" (click)="decrementPaginationPage()">
+        <ion-icon class="delete-icon" name="caret-back"></ion-icon>
+    </button>
+    <button class="page-button unselectable" *ngFor="let page of paginationButtons()"
+            [class.is-selected]="page === currentPage" (click)="loadPage(page)">
+        {{page + 1}}
+    </button>
+    <button class="page-button" (click)="incrementPaginationPage()">
+        <ion-icon class="delete-icon" name="caret-forward-outline"></ion-icon>
+    </button>
+    <button class="page-button" (click)="goToLastPage()">
+        <ion-icon class="delete-icon" name="play-forward"></ion-icon>
+    </button>
+</div>

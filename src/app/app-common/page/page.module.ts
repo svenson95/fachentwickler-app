@@ -13,6 +13,7 @@ import { ContentComponent } from '../content/content.component';
 import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
 import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
 import { DeleteImageDialogComponent } from '../../components/delete-image-dialog/delete-image-dialog.component';
+import { PaginationBarComponent } from '../../components/pagination-bar/pagination-bar.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DeleteImageDialogComponent } from '../../components/delete-image-dialog
     ContentComponent,
     LogoutDialogComponent,
     ImageManagerDialogComponent,
-    DeleteImageDialogComponent
+    DeleteImageDialogComponent,
+    PaginationBarComponent
   ],
   exports: [
     SidenavComponent,

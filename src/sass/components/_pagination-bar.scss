@@ -1,0 +1,24 @@
+.pagination-bar {
+
+  .page-button {
+    width: 40px;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+
+    &:not(:first-of-type) {
+      border-left: 1px solid var(--grey-2);
+    }
+  }
+
+  .page-button:hover {
+    background-color: var(--tertiary-color);
+  }
+
+  .page-button.is-selected {
+    font-family: Nunito-ExtraBold, sans-serif;
+    background-color: var(--secondary-color);
+  }
+}
