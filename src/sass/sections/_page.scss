@@ -25,7 +25,7 @@
 
     // Scrollbar
     &::-webkit-scrollbar {
-      width: 4px;
+      width: var(--scrollbar-width);
       overflow-y: scroll;
       background: var(--background-secondary);
     }
