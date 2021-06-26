@@ -23,7 +23,7 @@
       "src": "assets/icons/icon-120x120-ios.png",
       "sizes": "120x120",
       "type": "image/png",
-      "purpose": "ios"
+      "purpose": "maskable any"
     },
     {
       "src": "assets/icons/icon-128x128.png",
@@ -47,13 +47,13 @@
       "src": "assets/icons/icon-152x152-ios.png",
       "sizes": "152x152",
       "type": "image/png",
-      "purpose": "ios"
+      "purpose": "maskable any"
     },
     {
       "src": "assets/icons/icon-180x180-ios.png",
       "sizes": "180x180",
       "type": "image/png",
-      "purpose": "ios"
+      "purpose": "maskable any"
     },
     {
       "src": "assets/icons/icon-192x192.png",
@@ -65,7 +65,7 @@
       "src": "assets/icons/icon-196x196-ios.png",
       "sizes": "196x196",
       "type": "image/png",
-      "purpose": "android"
+      "purpose": "maskable any"
     },
     {
       "src": "assets/icons/icon-384x384.png",
