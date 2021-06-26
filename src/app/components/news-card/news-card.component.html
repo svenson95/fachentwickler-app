@@ -8,28 +8,16 @@
   <mat-card-content class="fia-view-wrapper">
     <div class="fia-news-container">
       <mat-spinner class="fia-loading-spinner" *ngIf="news === undefined"></mat-spinner>
-      <ng-container *ngIf="onlyLastOne === true && news !== undefined && news?.length > 0">
-        <div class="fia-news-item">
-          <div class="fia-news-header">
-            <p class="date">{{news[0].date | date:'dd.MM.yyyy'}}</p>
-            <p class="title">{{news[0].title}}</p>
-          </div>
-          <a class="fia-text-button secondary" [routerLink]="'/mitteilungen/' + news[0]?.url">
-            <span>Lesen</span>
-          </a>
+      <div class="fia-news-item" *ngFor="let post of news">
+        <div class="fia-news-header">
+          <p class="date">{{post.date | date:'dd.MM.yyyy'}}</p>
+          <p class="title">{{post.title}}</p>
         </div>
-      </ng-container>
-      <ng-container *ngIf="onlyLastOne === undefined">
-        <div class="fia-news-item" *ngFor="let post of news">
-          <div class="fia-news-header">
-            <p class="date">{{post.date | date:'dd.MM.yyyy'}}</p>
-            <p class="title">{{post.title}}</p>
-          </div>
-          <a class="fia-text-button secondary" [routerLink]="'/mitteilungen/' + post.url">
-            <span>Lesen</span>
-          </a>
-        </div>
-      </ng-container>
+        <a class="fia-text-button secondary" [routerLink]="'/mitteilungen/' + post.url">
+          <span>Lesen</span>
+        </a>
+      </div>
+      <app-pagination-bar *ngIf="onlyLastOne === false" [totalItems]="allNewsLength" [currentPage]="currentPage" (changePage)="loadPage($event)"></app-pagination-bar>
     </div>
   </mat-card-content>
 </mat-card>

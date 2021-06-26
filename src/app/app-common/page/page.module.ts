@@ -31,7 +31,8 @@ import { PaginationBarComponent } from '../../components/pagination-bar/paginati
   exports: [
     SidenavComponent,
     ContentComponent,
-    PageComponent
+    PageComponent,
+    PaginationBarComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

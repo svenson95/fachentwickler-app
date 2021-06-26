@@ -62,8 +62,8 @@
           border-bottom: 1px solid rgba(var(--grey-1-rgb), .5);
         }
 
-        @include to-xs {
-          font-size: .9em;
+        &:first-child {
+          width: 50px;
         }
 
         .fia-hour-subject,

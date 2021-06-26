@@ -1,7 +1,7 @@
 <div class="fia-page dashboard">
 
   <app-user-progress-card [user]="user" [dashboard]="dataService.dashboard"></app-user-progress-card>
-  <app-news-card [news]="dataService.dashboard?.schoolNews" [onlyLastOne]="true"></app-news-card>
+  <app-news-card *ngIf="this.dataService.dashboard?.schoolNews" [news]="[this.dataService.dashboard.schoolNews[0]]" [onlyLastOne]="true"></app-news-card>
   <app-next-exams-card [nextExams]="dataService.dashboard?.nextExams"></app-next-exams-card>
 
   <mat-card class="fia-card fia-schedule">

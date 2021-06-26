@@ -1,22 +1,21 @@
 <mat-dialog-content class="fia-image-manager">
   <div class="fia-im-header">
     <p class="fia-card-title">Image-Manager</p>
-    <p class="fia-card-description" *ngIf="imagesCount === undefined">Bilder werden geladen ...</p>
-    <p class="fia-card-description" *ngIf="imagesCount !== undefined">{{imagesCount}} Bilder</p>
+    <p class="fia-card-description" *ngIf="allImagesLength === undefined">Bilder werden geladen ...</p>
+    <p class="fia-card-description" *ngIf="allImagesLength !== undefined">{{allImagesLength}} Bilder</p>
   </div>
-  <hr class="fia-divider-line"/>
   <p class="title">Neues Bild hochladen</p>
   <form class="fia-add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
     <div class="upload-image-dropzone" id="upload-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false">
       <ngx-dropzone-label class="dropzone-labels">
         <div class="drop-image">
           <ion-icon class="drop-icon" name="download-outline"></ion-icon>
-          <h2>Datei hierher ziehen</h2>
+          <h2>Bild hierher ziehen</h2>
         </div>
         <p>oder</p>
         <div class="choose-image">
           <ion-icon class="choose-icon" name="folder-outline"></ion-icon>
-          <h2>Datei auswählen</h2>
+          <h2>Bild auswählen</h2>
         </div>
       </ngx-dropzone-label>
       <ngx-dropzone-image-preview class="dropzone-preview" ngProjectAs="ngx-dropzone-preview" *ngFor="let f of dropzoneFile" [file]="f" [removable]="true" (removed)="onRemove(f)">
@@ -28,44 +27,62 @@
       <mat-spinner class="fia-loading-spinner" *ngIf="isUploadingImage"></mat-spinner>
     </button>
   </form>
-  <ng-container *ngIf="selectedImage">
-    <hr class="fia-divider-line"/>
-    <p class="title">Details</p>
-    <div class="image-preview">
-      <div class="details">
-        <p><span class="label">ID: </span> {{selectedImage.file._id}}</p>
-        <p><span class="label">Name: </span> {{selectedImage.file.filename}}</p>
-        <p><span class="label">Content-Type: </span> {{selectedImage.file.contentType}}</p>
-        <p>
-          <span class="label">Length: </span>
-          {{formatBytes(selectedImage.file.length)}}
-          <span class="chunks-length">({{selectedImage.chunks.length}} {{selectedImage.chunks.length > 1 ? 'Chunks' : 'Chunk'}})</span>
-        </p>
-        <p><span class="label">Upload Date: </span> {{selectedImage.file.uploadDate | date: 'dd.MM.yyyy - H:mm:ss' :'CET' : 'de'}}</p>
-      </div>
-      <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)">
-        Bild löschen
-        <ion-icon class="drop-icon" name="backspace"></ion-icon>
-      </button>
-    </div>
-  </ng-container>
   <hr class="fia-divider-line"/>
-  <p class="title">Hochgeladene Bilder</p>
+  <p class="title">Details</p>
+  <div class="image-preview">
+    <div class="details">
+      <div class="image-container">
+        <img class="image" [src]="encode(selectedImage)" alt="image" (click)="showPreview()" *ngIf="selectedImage"/>
+      </div>
+      <div class="image-attributes-list">
+        <p>
+          <span class="key">ID: </span>
+          <span class="value">{{selectedImage?.file._id}}</span>
+        </p>
+        <p>
+          <span class="key">Name: </span>
+          <span class="value">{{selectedImage?.file.filename}}</span>
+        </p>
+        <p>
+          <span class="key">Content-Type: </span>
+          <span class="value">{{selectedImage?.file.contentType}}</span>
+        </p>
+        <p>
+          <span class="key">Length: </span>
+          <span class="value">{{ formatBytes(selectedImage?.file.length) }}</span>
+          <span class="chunks-length" *ngIf="selectedImage?.file">({{selectedImage?.chunks.length}} {{selectedImage?.chunks.length > 1 ? 'Chunks' : 'Chunk'}})</span>
+        </p>
+        <p>
+          <span class="key">Upload Date: </span>
+          <span class="value">{{selectedImage?.file.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
+        </p>
+      </div>
+    </div>
+    <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)">
+      Bild löschen
+      <ion-icon class="drop-icon" name="backspace"></ion-icon>
+    </button>
+  </div>
+  <hr class="fia-divider-line"/>
+  <div class="title-wrapper">
+    <p class="title">Hochgeladene Bilder</p>
+    <button (click)="changeSorting()">
+      <span>{{isSortedAscending ? 'Aufsteigend' : 'Absteigend'}}</span>
+      <mat-icon>{{isSortedAscending ? 'expand_less' : 'expand_more'}}</mat-icon>
+    </button>
+  </div>
   <div class="fia-im-recent-images">
-    <div class="fia-spinner-wrapper" *ngIf="images.length === 0 && isLoading || isLoadingImages">
+    <div class="fia-spinner-wrapper" *ngIf="images.length === 0 || isLoadingImages">
       <mat-spinner class="fia-loading-spinner"></mat-spinner>
     </div>
-    <ng-container *ngIf="!isLoadingImages">
-      <div class="image-wrapper" *ngFor="let image of images">
-        <img class="image" [class.is-selected]="image === selectedImage" [src]="encode(image)" alt="image" (click)="selectedImage = image"
-             matTooltip="Details anzeigen" matTooltipClass="image-tooltip" matTooltipPosition="right" [matTooltipDisabled]="selectedImage === image"
-        />
-      </div>
-    </ng-container>
+    <div class="images-list" *ngIf="!isLoadingImages">
+      <button class="list-item" [class.is-selected]="image === selectedImage" *ngFor="let image of images" (click)="selectedImage = image">
+        <span>{{image.file.filename}}</span>
+        <span>{{image.file.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
+      </button>
+    </div>
   </div>
-  <div class="fia-pagination-bar" *ngIf="images.length > 0">
-    <p class="title">Seiten</p>
-    <app-pagination-bar [totalPages]="totalPages" [currentPage]="currentPage" (images)="setImages($event)" [imagesCount]="imagesCount"
-                        (isLoadingImages)="setIsLoadingImage($event)"></app-pagination-bar>
+  <div class="fia-pagination-bar" *ngIf="images.length > 0 && allImagesLength">
+    <app-pagination-bar [totalItems]="allImagesLength" [currentPage]="currentPage" (changePage)="loadImages($event)"></app-pagination-bar>
   </div>
 </mat-dialog-content>

@@ -54,6 +54,7 @@ app-header.fia-header .mat-toolbar {
 
       .title {
         margin-top: 2px;
+        margin-bottom: 0;
         white-space: pre-line;
         line-height: 16px;
         text-align: center;
@@ -101,10 +102,14 @@ app-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
     color: var(--tertiary-color);
     align-items: center;
 
+    .fia-text-button {
+      transition: var(--header-button-transition);
+    }
+
     .fia-menu-btn {
       margin-left: 0;
       margin-right: 0;
-      transition: background-color 200ms ease-in-out;
+      transition: var(--header-button-transition);
 
       @include from-xs {
         &:hover {
@@ -204,6 +209,26 @@ app-header.fia-header .mat-toolbar .fia-logo-wrapper {
 
     fill: var(--tertiary-color);
     border: 1px solid var(--tertiary-color);
+  }
+
+  .fia-icon-wrapper {
+
+    @include to-xs {
+      width: 24px;
+      margin-right: 0;
+    }
+
+    svg {
+      @include to-xs {
+        height: 24px;
+      }
+    }
+  }
+
+  .fia-app-name {
+    @include to-xs {
+      display: none;
+    }
   }
 
   &.active-route {
@@ -319,7 +344,7 @@ app-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
     border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
     border-top-left-radius: var(--button-radius);
     border-top-right-radius: var(--button-radius);
-    transition: background-color 250ms ease;
+    transition: var(--header-button-transition);
 
     @include to-sm {
       width: 180px;

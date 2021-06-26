@@ -1,38 +1,24 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
-import { ImageData } from '../../models/image-data';
-import { DataService } from '../../services/data/data.service';
-
 @Component({
   selector: 'app-pagination-bar',
   templateUrl: './pagination-bar.component.html'
 })
 export class PaginationBarComponent implements OnInit {
 
-  @Output() isLoadingImages = new EventEmitter<boolean>();
-  @Output() images = new EventEmitter<ImageData[]>();
+  @Output() changePage = new EventEmitter<number>();
 
   @Input() currentPage: number;
-  @Input() totalPages: number;
-  @Input() imagesCount: number;
+  @Input() totalItems: number;
 
   paginationPage = 0;
   rowsPerPage = 7;
 
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
-  loadPage(page: number): void {
-    this.currentPage = page;
-    this.isLoadingImages.emit(true);
-    this.dataService.getMultipleImages(page).subscribe(data => {
-      this.images.emit(data);
-      this.isLoadingImages.emit(false);
-    });
-  }
-
-  paginationButtons(): any {
+  get pageButtons(): number[] {
     const trimStart = (this.paginationPage) * this.rowsPerPage;
     let trimEnd = trimStart + this.rowsPerPage;
 
@@ -46,14 +32,26 @@ export class PaginationBarComponent implements OnInit {
     return trimmedPages;
   }
 
-  /* Pagination Page Actions */
-  decrementPaginationPage(): void {
+  get totalPages(): number {
+    const itemsPerPage = 10;
+    return Math.ceil(this.totalItems / itemsPerPage);
+  }
+
+  goTo(pageNumber): void {
+    if (this.currentPage === pageNumber) {
+      return;
+    }
+    this.changePage.emit(pageNumber);
+  }
+
+  /* Pagination Pages */
+  goToPreviousPage(): void {
     if (this.paginationPage - 1 >= 0) {
       this.paginationPage -= 1;
     }
   }
 
-  incrementPaginationPage(): void {
+  goToNextPage(): void {
     if (this.paginationPage + 1 <= Math.floor(this.totalPages / this.rowsPerPage)) {
       this.paginationPage += 1;
     }

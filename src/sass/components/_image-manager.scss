@@ -1,7 +1,8 @@
 mat-dialog-content.fia-image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
-  max-height: 80vh;
+  height: 90vh;
+  max-height: 90vh;
   margin: 0;
 
   &::-webkit-scrollbar {
@@ -16,7 +17,7 @@ mat-dialog-content.fia-image-manager {
   }
 
   .fia-im-header {
-    margin-top: 24px;
+    margin: 24px 0;
 
     .fia-card-title {
       margin-bottom: 2px;
@@ -33,6 +34,31 @@ mat-dialog-content.fia-image-manager {
     font-family: Nunito-Light, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .title {
+      margin: 0;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+
+      span {
+        margin-left: 8px;
+      }
+
+      mat-icon {
+        margin-right: 2px;
+      }
+    }
   }
 
   hr {
@@ -79,9 +105,14 @@ mat-dialog-content.fia-image-manager {
   }
 
   .fia-im-recent-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     overflow-y: scroll;
-    max-height: 300px;
-    margin-bottom: 20px;
+    height: 100%;
+    max-height: 250px;
+    padding-right: 5px;
 
     &::-webkit-scrollbar {
       width: var(--scrollbar-width);
@@ -94,21 +125,39 @@ mat-dialog-content.fia-image-manager {
       border-radius: 0;
     }
 
-    .image-wrapper {
-      display: inline-flex;
-      vertical-align: top;
+    .images-list {
+      width: 100%;
     }
 
-    .image {
-      width: 180px;
-      padding: 10px;
-      outline: 0 solid transparent;
-      transition: outline 200ms ease;
+    .list-item {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 2px 8px;
+      border: none;
+      cursor: pointer;
+
+      span:nth-of-type(2) {
+        font-size: .8rem;
+        color: var(--text-color-3);
+      }
+    }
+
+    .list-item {
+      color: var(--text-color);
+      background-color: transparent;
+      border-bottom: 1px solid var(--grey-2);
+      transition: border-bottom-color 150ms ease-out;
+
+      &:hover {
+        border-bottom: 1px solid var(--tertiary-color);
+        transition: border-bottom-color 150ms ease-in;
+      }
 
       &.is-selected {
-        transition: outline 200ms ease;
-        outline: 1px solid var(--secondary-color);
-        outline-offset: -1px;
+        background-color: rgba(var(--secondary-color-rgb), .1);
+        border-bottom: 1px solid var(--secondary-color);
+        transition: border-bottom-color 150ms ease-in;
       }
     }
   }
@@ -118,10 +167,6 @@ mat-dialog-content.fia-image-manager {
   }
 }
 
-.image-tooltip {
-  background: var(--primary-color);
-}
-
 .image-manager-modal .mat-dialog-container {
   background: var(--background-secondary);
   border-radius: 0;
@@ -129,24 +174,56 @@ mat-dialog-content.fia-image-manager {
 }
 
 .image-manager-modal.cdk-overlay-pane {
+  width: 80vw;
+
   animation-name: moveInTop;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
   -webkit-animation-name: moveInTop;
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
-  min-width: 80vw;
-  max-height: 80vh;
 }
 
 .image-preview {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 
   .details {
+    display: flex;
     text-align: left;
+
+    .image-container {
+      width: 200px;
+      display: flex;
+      align-items: center;
+    }
+
+    .image-wrapper {
+      display: inline-flex;
+      vertical-align: top;
+      cursor: pointer;
+    }
+
+    .image {
+      width: 180px;
+      height: 110px;
+      object-fit: contain;
+      padding: 10px;
+      outline: 0 solid transparent;
+    }
+
+    .image-attributes-list {
+      align-self: center;
+
+      .key {
+        color: var(--text-color-3);
+        width: 90px;
+        display: inline-block;
+        text-align: end;
+        margin-right: 10px;
+      }
+    }
 
     p {
       margin-bottom: 0;
@@ -154,13 +231,6 @@ mat-dialog-content.fia-image-manager {
       .chunks-length {
         color: var(--text-color-3);
       }
-    }
-
-    .label {
-      color: var(--text-color-3);
-      width: 90px;
-      display: inline-block;
-      text-align: end;
     }
   }
 
@@ -183,7 +253,7 @@ ngx-dropzone,
 
 .upload-image-dropzone#upload-image-dropzone {
   width: 100%;
-  height: 140px;
+  height: 80px;
   background: rgba(var(--tertiary-color-rgb), .1);
   border: 1px solid var(--tertiary-color);
   border-radius: 5px;
@@ -217,14 +287,14 @@ ngx-dropzone,
 }
 
 ngx-dropzone-label.dropzone-labels {
-  position: unset !important;
-  overflow-wrap: anywhere !important;
+  display: flex;
+  align-items: center;
   font-size: .9em;
 
   p {
-    color: grey;
+    color: var(--text-color-3);
     font-size: .8em;
-    margin: 0;
+    margin: 0 20px;
   }
 
   .drop-image, .choose-image {

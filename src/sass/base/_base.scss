@@ -7,8 +7,8 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 90%;           /* defines what 1rem is */
+html, body {
+  font-size: 100%;           /* defines what 1rem is */
 }
 
 body {
@@ -32,9 +32,7 @@ body {
 }
 
 .fia-title {
-  @include to-xs {
-    font-size: .9em;
-  }
+
 }
 
 /* FIAPPY - TOGGLES */

@@ -1,24 +1,49 @@
 .pagination-bar {
 
-  .page-button {
+  button {
+    background-color: transparent;
     width: 40px;
     padding: 10px;
-    background-color: white;
     cursor: pointer;
     border: none;
     border-radius: 0;
-
-    &:not(:first-of-type) {
-      border-left: 1px solid var(--grey-2);
-    }
+    transition: transform 150ms ease-out;
+    border-bottom: 1px solid var(--grey-2);
   }
 
-  .page-button:hover {
-    background-color: var(--tertiary-color);
+  button:hover {
+    background-color: rgba(var(--tertiary-color-rgb), .1);
+    border-bottom: 1px solid var(--tertiary-color);
+    transform: translateY(-1px);
+    transition: transform 100ms ease-in;
   }
 
-  .page-button.is-selected {
+  button:active {
+    transform: translateY(1px);
+    transition: transform 100ms ease-in;
+  }
+
+  button.back-btn {
+    margin-right: 10px;
+  }
+
+  button.forward-btn {
+    margin-left: 10px;
+  }
+
+  button.back-btn, button.last-btn, button.page-btn ~ button.page-btn {
+    border-left: 1px solid var(--grey-2-rgb);
+  }
+
+  button.page-btn.is-selected {
     font-family: Nunito-ExtraBold, sans-serif;
-    background-color: var(--secondary-color);
+    background-color: rgba(var(--secondary-color-rgb), 0.1);
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  button:not(.page-btn) {
+    ion-icon {
+      transform: translateY(2px);
+    }
   }
 }

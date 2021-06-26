@@ -1,52 +1,29 @@
 .app-icon .fia-app-name {
-  color: var(--text-color-1);
+  display: inline-block;
   align-self: center;
-  font-size: 1.4rem;
+
+  color: var(--text-color-1);
   font-family: Nunito-Light, sans-serif;
+  font-size: 1.1rem;
   font-weight: 100;
+  text-align: left;
+  line-height: 14px;
+
   transition: letter-spacing 600ms ease;
   z-index: 1;
-
-  @include from-xs {
-    text-align: left;
-    display: inline-block;
-    line-height: 13px;
-  }
-
-  @include to-xs {
-    line-height: 24px;
-  }
-
-  .first, .second, .third { text-decoration: underline; }
-  .first { text-decoration-color: var(--tertiary-color); }
-  .second { text-decoration-color: var(--secondary-color); }
-  .third { text-decoration-color: var(--primary-color); }
-
-}
-
-.active-route .fia-app-name {
-  .first { text-decoration-color: var(--secondary-color); }
-  .second { text-decoration-color: var(--tertiary-color); }
 }
 
 .fia-icon-wrapper {
+  width: 34px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  width: 34px;
   flex-shrink: 0;
-
-  @include to-xs {
-    width: 24px;
-  }
+  margin-right: 6px;
 
   svg {
     height: 32px;
-
-    @include to-xs {
-      height: 24px;
-    }
 
     g {
       transform: scale(0.04);
@@ -59,14 +36,9 @@
 
   @include from-xs {
     fill: var(--tertiary-color);
-    margin-right: 6px;
   }
 }
 
 .fia-app-name {
   z-index: 1;
-
-  @include to-xs {
-    display: none;
-  }
 }

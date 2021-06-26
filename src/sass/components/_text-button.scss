@@ -1,8 +1,6 @@
 /* FIAPPY - TEXT-BUTTON */
 .fia-text-button {
-  background: -moz-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, transparent 100%);
-  background: -webkit-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(var(--tertiary-color-rgb),.15) 0%, transparent 100%);
+  background: transparent;
   color: var(--tertiary-color);
   font-family: Nunito-Light, sans-serif;
   text-transform: uppercase;
@@ -21,9 +19,7 @@
   transition: transform 100ms ease, background 300ms ease-in-out;
 
   &:hover:not(:disabled) {
-    background: -moz-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, rgba(var(--tertiary-color-rgb),.15) 100%);
-    background: -webkit-linear-gradient(bottom, rgba(var(--tertiary-color-rgb),.15) 0%, rgba(var(--tertiary-color-rgb),.15) 100%);
-    background: linear-gradient(to bottom, rgba(var(--tertiary-color-rgb),.15) 0%, rgba(var(--tertiary-color-rgb),.15) 100%);
+    background: rgba(var(--tertiary-color-rgb),.1);
     cursor: pointer;
     transition: transform 100ms ease, background 300ms ease-in-out;
   }
@@ -38,24 +34,16 @@
   }
 
   &.show-more {
-    background: -moz-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, transparent 100%);
-    background: -webkit-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, transparent 100%);
-    background: linear-gradient(to bottom, rgba(var(--grey-4-rgb), .15) 0%, transparent 100%);
+    background: transparent;
     color: var(--grey-4);
     border-color: rgba(var(--grey-4-rgb), .3);
     margin-left: 10px;
 
     &:hover {
-      background: -moz-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, rgba(var(--grey-4-rgb), .15) 100%);
-      background: -webkit-linear-gradient(bottom, rgba(var(--grey-4-rgb), .15) 0%, rgba(var(--grey-4-rgb), .15) 100%);
-      background: linear-gradient(to bottom, rgba(var(--grey-4-rgb), .15) 0%, rgba(var(--grey-4-rgb), .15) 100%);
+      background: rgba(var(--grey-4-rgb), .1);
       color: var(--grey-4);
       transition: transform 100ms ease, background-color 200ms ease-in-out;
     }
-  }
-
-  @include to-xs {
-    font-size: .8em;
   }
 
   &:disabled {

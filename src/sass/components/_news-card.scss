@@ -4,6 +4,7 @@
 }
 
 .fia-card.news-card .fia-news-container {
+
   @include from-xs {
     margin-top: 20px !important;
   }
@@ -22,6 +23,10 @@
       padding-bottom: 10px;
       border-bottom: 1px solid var(--grey-1);
     }
+  }
+
+  app-pagination-bar .pagination-bar {
+    margin-top: 10px;
   }
 }
 
@@ -63,10 +68,6 @@
 
     @include from-sm {
       flex-shrink: 0;
-    }
-
-    @include to-xs {
-      font-size: .9em;
     }
   }
 }

@@ -18,16 +18,15 @@ import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-
 export class ImageManagerDialogComponent implements OnInit {
 
   UserRole = UserRole;
-
-  imagesCount: number;
-  currentPage = 0;
-  totalPages: number;
-  selectedImage: ImageData;
   dropzoneFile: File[] = [];
-  images: ImageData[] = [];
-  isLoading: boolean;
   isUploadingImage: boolean;
   isLoadingImages: boolean;
+
+  images: ImageData[] = [];
+  currentPage = 0;
+  allImagesLength: number;
+  isSortedAscending = false;
+  selectedImage: ImageData;
 
   @ViewChild('fileInput') fileInput;
 
@@ -37,16 +36,9 @@ export class ImageManagerDialogComponent implements OnInit {
               private dialog: MatDialog,
               private snackBar: MatSnackBar
   ) {
-    this.loadingService.loading$.pipe(delay(0)).subscribe(
-      (status: boolean) => {
-        this.isLoading = status;
-      }
-    );
-
     this.dataService.getAllImagesLength().subscribe(
         (data) => {
-          this.imagesCount = data;
-          this.updateNumberOfPages();
+          this.allImagesLength = data;
         },
         (error) => {
           console.log('Error while GET images count', error);
@@ -55,7 +47,7 @@ export class ImageManagerDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.initialImages();
+    this.getImages();
   }
 
   onSelect(event): void {
@@ -68,17 +60,6 @@ export class ImageManagerDialogComponent implements OnInit {
 
   isEmpty(files): boolean {
     return files.length === 0;
-  }
-
-  initialImages(): void {
-    this.dataService.getMultipleImages().subscribe(
-      (data) => {
-        this.images = data;
-      },
-      (error) => {
-        console.log('Error while GET post', error);
-      }
-    );
   }
 
   encode(image): string {
@@ -96,8 +77,7 @@ export class ImageManagerDialogComponent implements OnInit {
                 this.images.unshift(image);
                 this.dropzoneFile = [];
                 this.selectedImage = image;
-                this.imagesCount++;
-                this.updateNumberOfPages();
+                this.allImagesLength += 1;
               }, (err) => {
                 console.log('Get image by id failed');
                 console.log(err);
@@ -124,8 +104,7 @@ export class ImageManagerDialogComponent implements OnInit {
       if (confirmed) {
         this.images = this.images.filter(el => el.file._id !== id);
         this.selectedImage = undefined;
-        this.imagesCount--;
-        this.updateNumberOfPages();
+        this.allImagesLength -= 1;
 
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
@@ -136,6 +115,7 @@ export class ImageManagerDialogComponent implements OnInit {
   }
 
   formatBytes(bytes, decimals = 1): string {
+    if (bytes === null) { return ''; }
     if (bytes === 0) { return '0 Bytes'; }
 
     const k = 1024;
@@ -147,15 +127,46 @@ export class ImageManagerDialogComponent implements OnInit {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
   }
 
-  updateNumberOfPages(): void {
-    this.totalPages = Math.ceil(this.imagesCount / 10);
-  }
-
   setIsLoadingImage(value: boolean): void {
     this.isLoadingImages = value;
   }
 
-  setImages(value: ImageData[]): void {
-    this.images = value;
+  loadImages(pageNumber: number): void {
+    this.loadPage(pageNumber);
+  }
+
+  showPreview(): void {
+    // TODO: install image-viewer package (fullscreen)
+  }
+
+  loadPage(page: number): void {
+    if (this.isLoadingImages) {
+      return;
+    }
+
+    this.currentPage = page;
+    this.getImages(this.currentPage);
+  }
+
+  changeSorting(): void {
+    if (this.isLoadingImages) {
+      return;
+    }
+    this.isSortedAscending = !this.isSortedAscending;
+    this.currentPage = 0;
+    this.getImages();
+  }
+
+  getImages(page = 0): void {
+    this.isLoadingImages = true;
+
+    this.dataService.getMultipleImages(page, undefined, this.isSortedAscending ? 'ascending' : 'descending').subscribe(data => {
+      this.images = data;
+      this.isLoadingImages = false;
+
+      if (!this.selectedImage) {
+        this.selectedImage = data[0];
+      }
+    });
   }
 }

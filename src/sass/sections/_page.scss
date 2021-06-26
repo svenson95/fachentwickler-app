@@ -79,10 +79,6 @@
     display: flex;
     color: var(--grey-3);
     margin-top: 10px;
-
-    @include to-xs {
-      font-size: .9em;
-    }
   }
 }
 

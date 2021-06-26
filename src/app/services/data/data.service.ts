@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -94,8 +94,15 @@ export class DataService {
             }));
     }
 
-    getMultipleImages(page = 0, imagesPerPage = 10): Observable<ImageData[]> {
-        return this.httpClient.get<ImageData[]>(`${this.IMAGES_ENDPOINT}/all?page=${page}&size=${imagesPerPage}`)
+    getMultipleImages(page = 0, imagesPerPage = 10, sorting = 'descending'): Observable<ImageData[]> {
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json');
+        const params = new HttpParams()
+            .set('page', String(page))
+            .set('size', String(imagesPerPage))
+            .set('sort', sorting);
+
+        return this.httpClient.get<ImageData[]>(`${this.IMAGES_ENDPOINT}/all`, {headers, params})
             .pipe(map((response) => {
                 // console.log('response GET images', response);
                 return response;
@@ -177,10 +184,24 @@ export class DataService {
             }));
     }
 
-    getAllNews(): Observable<SchoolNews[]> {
-        return this.httpClient.get<SchoolNews[]>(this.NEWS_ENDPOINT)
+    getAllNews(page = 0, itemsPerPage = 10): Observable<SchoolNews[]> {
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json');
+        const params = new HttpParams()
+            .set('page', String(page))
+            .set('size', String(itemsPerPage));
+
+        return this.httpClient.get<SchoolNews[]>(`${this.NEWS_ENDPOINT}/all`, {headers, params})
             .pipe(map((response) => {
                 // console.log('response GET news', response);
+                return response;
+            }));
+    }
+
+    getAllNewsLength(): Observable<number> {
+        return this.httpClient.get<number>(`${this.NEWS_ENDPOINT}/count`)
+            .pipe(map((response) => {
+                // console.log('response GET news count', response);
                 return response;
             }));
     }

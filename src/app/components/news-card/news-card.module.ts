@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
 import { NewsCardComponent } from './news-card.component';
+import { PageComponentModule } from '../../app-common/page/page.module';
 
 
 
@@ -13,7 +14,8 @@ import { NewsCardComponent } from './news-card.component';
   imports: [
     CommonModule,
     AngularMaterialModule,
-    RouterModule
+    RouterModule,
+    PageComponentModule
   ]
 })
 export class NewsCardModule { }
