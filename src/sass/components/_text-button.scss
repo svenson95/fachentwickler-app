@@ -8,6 +8,13 @@
   letter-spacing: 1px;
   padding: 12px 20px 10px;
 
+  //.unselectable
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);

@@ -52,10 +52,10 @@
       .fia-details-wrapper {
         display: flex;
         justify-content: space-between;
-        font-size: .8em;
+        font-size: .8rem;
 
         @include to-xs {
-          font-size: .7em;
+          font-size: .7rem;
         }
 
         .date,
@@ -64,12 +64,6 @@
           margin-top: 3px;
           margin-bottom: 3px;
           line-height: 16px;
-
-          @include from-xs {
-          }
-
-          @include to-xs {
-          }
         }
 
         .date {

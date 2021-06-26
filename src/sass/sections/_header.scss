@@ -231,15 +231,17 @@ app-header.fia-header .mat-toolbar .fia-logo-wrapper {
     }
   }
 
-  &.active-route {
-    fill: var(--secondary-color);
-
-    .fia-icon-wrapper {
+  @include to-xs {
+    &.active-route {
       fill: var(--secondary-color);
-    }
 
-    @include to-xs {
-      border-color: var(--secondary-color) !important;
+      .fia-icon-wrapper {
+        fill: var(--secondary-color);
+      }
+
+      @include to-xs {
+        border-color: var(--secondary-color) !important;
+      }
     }
   }
 

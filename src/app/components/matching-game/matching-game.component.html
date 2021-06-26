@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="fia-text-button unselectable" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined">
+                    <button class="fia-text-button" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined">
                         <span>Verbinden</span>
                     </button>
                     <ng-container *ngIf="state === 'end'">
