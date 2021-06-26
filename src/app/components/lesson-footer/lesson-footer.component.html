@@ -1,9 +1,9 @@
-<mat-card class="fia-card lesson-footer" *ngIf="authService.user !== null">
-  <div class="fia-button-container">
-    <button class="fia-text-button" (click)="authService.setLessonSolved(postId)" *ngIf="postId !== undefined" [disabled]="alreadyRead() || isLoading">
+<mat-card class="fe-card lesson-footer" *ngIf="authService.user !== null">
+  <div class="fe-button-container">
+    <button class="fe-text-button" (click)="authService.setLessonSolved(postId)" *ngIf="postId !== undefined" [disabled]="alreadyRead() || isLoading">
       <span>Als gelesen markieren</span>
     </button>
-    <button class="fia-text-button" *ngIf="authService.user.role === UserRole.ADMIN" routerLink="edit">
+    <button class="fe-text-button" *ngIf="authService.user.role === UserRole.ADMIN" routerLink="edit">
       <span>Artikel bearbeiten</span>
     </button>
   </div>

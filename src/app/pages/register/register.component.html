@@ -1,14 +1,14 @@
-<div class="fia-page register">
-  <mat-card class="fia-card register">
-    <p class="fia-card-title">Account erstellen</p>
-    <mat-card-content class="fia-view-wrapper">
-      <div class="fia-text-button fia-back-to-login-btn" routerLink="/login">
+<div class="fe-page register">
+  <mat-card class="fe-card register">
+    <p class="fe-card-title">Account erstellen</p>
+    <mat-card-content class="fe-view-wrapper">
+      <div class="fe-text-button fe-back-to-login-btn" routerLink="/login">
         <span>Zurück zum Login</span>
       </div>
-      <hr class="fia-divider-line"/>
-      <form class="fia-register-column" [formGroup]="formGroup" (ngSubmit)="register($event)" (change)="onFormChange($event)" #form>
-        <div class="fia-input-fields">
-          <mat-form-field class="fia-input fia-name-input">
+      <hr class="fe-divider-line"/>
+      <form class="fe-register-column" [formGroup]="formGroup" (ngSubmit)="register($event)" (change)="onFormChange($event)" #form>
+        <div class="fe-input-fields">
+          <mat-form-field class="fe-input fe-name-input">
             <mat-label>Benutzername</mat-label>
             <input matInput type="text" autocomplete="off" [formControl]="name"/>
             <mat-error *ngIf="name.hasError('name') && !name.hasError('required')">
@@ -22,7 +22,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field class="fia-input fia-email-input">
+          <mat-form-field class="fe-input fe-email-input">
             <mat-label>E-Mail</mat-label>
             <input matInput type="email" autocomplete="off" [formControl]="email"/>
             <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
@@ -36,7 +36,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field class="fia-input fia-password-input">
+          <mat-form-field class="fe-input fe-password-input">
             <mat-label>Passwort</mat-label>
             <input matInput type="password" [formControl]="password"/>
             <mat-error *ngIf="password.hasError('password') && !password.hasError('required')">
@@ -50,8 +50,8 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="fia-buttons-wrapper">
-          <button class="fia-text-button" type="submit" [disabled]="form.invalid">
+        <div class="fe-buttons-wrapper">
+          <button class="fe-text-button" type="submit" [disabled]="form.invalid">
             <span>Bestätigen</span>
           </button>
         </div>

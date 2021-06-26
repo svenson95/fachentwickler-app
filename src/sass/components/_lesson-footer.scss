@@ -1,14 +1,14 @@
 
-.fia-card.lesson-footer {
-  .fia-button-container {
+.fe-card.lesson-footer {
+  .fe-button-container {
     display: flex;
     flex-direction: row-reverse;
 
-    .fia-text-button:not(:first-of-type) {
+    .fe-text-button:not(:first-of-type) {
       margin-right: 20px;
     }
 
-    .fia-text-button {
+    .fe-text-button {
       @include to-xs {
         font-size: .9em;
       }

@@ -1,13 +1,13 @@
-.fia-page.exams {
+.fe-page.exams {
 
-  .fia-exams-view {
+  .fe-exams-view {
     display: flex;
 
     @include to-sm {
       flex-direction: column;
     }
 
-    .fia-calendar-column {
+    .fe-calendar-column {
       width: 250px;
       margin-right: 20px;
       flex-shrink: 0;
@@ -83,19 +83,19 @@
         }
       }
     }
-    .fia-exams-column {
+    .fe-exams-column {
       width: 100%;
       margin-top: 20px;
 
-      .fia-exam:not(:last-of-type) {
-        .fia-exam-item {
+      .fe-exam:not(:last-of-type) {
+        .fe-exam-item {
           margin-bottom: 20px;
         }
       }
 
-      .fia-exam-item {
-        .fia-lesson-wrapper {
-          .fia-horizontal-line, .fia-vertical-line-1, .fia-vertical-line-2 {
+      .fe-exam-item {
+        .fe-lesson-wrapper {
+          .fe-horizontal-line, .fe-vertical-line-1, .fe-vertical-line-2 {
             @include from-xs {
               left: -27px !important;
             }
@@ -104,7 +104,7 @@
             }
           }
 
-          .fia-horizontal-line {
+          .fe-horizontal-line {
             @include from-xs {
               width: 27px !important;
             }
@@ -116,25 +116,25 @@
         }
       }
 
-      .fia-no-data {
+      .fe-no-data {
         padding: 10px;
       }
     }
   }
 
 
-  .fia-exams-view .fia-icon-details-title-wrapper {
+  .fe-exams-view .fe-icon-details-title-wrapper {
     flex-direction: column-reverse;
     align-items: self-end !important;
 
-    .fia-icon-details {
+    .fe-icon-details {
       margin-left: -20px !important;
     }
 
-    .fia-exam-title-wrapper {
+    .fe-exam-title-wrapper {
       margin-bottom: 5px;
 
-      .fia-exam-subject, .fia-exam-title {
+      .fe-exam-subject, .fe-exam-title {
         margin-left: 10px !important;
       }
     }

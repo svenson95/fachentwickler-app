@@ -1,22 +1,22 @@
-mat-card.fia-card.fia-school-week-card {
+mat-card.fe-card.fe-school-week-card {
 
-  .fia-header-wrapper {
+  .fe-header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .fia-card-title {
+    .fe-card-title {
     }
 
-    .fia-loading-spinner {
+    .fe-loading-spinner {
       margin: 0 20px 0 auto !important;
     }
 
-    .fia-button-wrapper {
+    .fe-button-wrapper {
       height: fit-content;
 
-      .fia-previous-week-btn,
-      .fia-next-week-btn {
+      .fe-previous-week-btn,
+      .fe-next-week-btn {
         width: 40px;
         height: 40px;
         outline: none;
@@ -45,27 +45,27 @@ mat-card.fia-card.fia-school-week-card {
         }
       }
 
-      .fia-previous-week-btn {
+      .fe-previous-week-btn {
         margin-right: 10px;
       }
 
-      .fia-next-week-btn {
+      .fe-next-week-btn {
       }
     }
   }
 
-  .fia-weekday-group {
+  .fe-weekday-group {
     @include from-md {
       margin-top: 10px;
     }
 
-    .fia-weekday-item {
-      .fia-label-wrapper {
+    .fe-weekday-item {
+      .fe-label-wrapper {
         display: flex;
         align-items: center;
         margin: 25px 0 20px;
 
-        .fia-weekday-label {
+        .fe-weekday-label {
           color: var(--grey-2);
           font-size: .8rem;
           width: fit-content;

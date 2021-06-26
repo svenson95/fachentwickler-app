@@ -1,31 +1,31 @@
-<div class="fia-page pruefungssimulator">
-  <mat-card class="fia-card">
-    <p class="fia-card-title">Zwischenprüfungs- / Abschlussprüfungs-Simulator</p>
-    <p class="fia-card-description" [ngSwitch]="state">
+<div class="fe-page pruefungssimulator">
+  <mat-card class="fe-card">
+    <p class="fe-card-title">Zwischenprüfungs- / Abschlussprüfungs-Simulator</p>
+    <p class="fe-card-description" [ngSwitch]="state">
       <ng-container *ngSwitchCase="AuditState.INTRODUCTION">Einleitung</ng-container>
       <ng-container *ngSwitchCase="AuditState.PLAY">{{round+1}}/{{auditQuestions.length}}</ng-container>
       <ng-container *ngSwitchCase="AuditState.END">Ende</ng-container>
     </p>
-    <mat-card-content class="fia-view-wrapper" *ngIf="state === 'introduction'">
+    <mat-card-content class="fe-view-wrapper" *ngIf="state === 'introduction'">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate delectus exercitationem fugit impedit, ipsa nihil sequi totam ullam vel? Aut magnam neque quisquam veritatis vitae! Culpa minima placeat quidem?</p>
       <p>Das Quiz enthält Prüfungsfragen aus den Zwischenprüfungen der Jahre Sommer 2019, Herbst 2020 und Frühling 2021.</p>
-      <button class="fia-text-button right" (click)="startAudit()">Start</button>
+      <button class="fe-text-button right" (click)="startAudit()">Start</button>
     </mat-card-content>
-    <mat-card-content class="fia-view-wrapper play" *ngIf="state === 'play'">
+    <mat-card-content class="fe-view-wrapper play" *ngIf="state === 'play'">
       <div>
         <p class="question">{{currentQuestion.question}}</p>
         <p class="description" *ngIf="currentQuestion.description" [innerHTML]="currentQuestion.description"></p>
         <ng-container *ngIf="currentQuestion.image">
           <img class="question-image" *ngIf="image" [src]="image" alt="question-image">
-          <mat-spinner class="fia-loading-spinner" *ngIf="isLoading"></mat-spinner>
+          <mat-spinner class="fe-loading-spinner" *ngIf="isLoading"></mat-spinner>
         </ng-container>
         <div class="input-wrapper" *ngIf="!currentQuestion.choices">
-          <mat-form-field class="fia-input choice-input">
+          <mat-form-field class="fe-input choice-input">
             <mat-label>Antwort</mat-label>
             <input matInput type="number" autocomplete="off" [(ngModel)]="choiceInput" />
             <span matSuffix>&nbsp; EUR</span>
           </mat-form-field>
-          <button class="fia-text-button" (click)="checkAnswer($event)">
+          <button class="fe-text-button" (click)="checkAnswer($event)">
             Absenden
           </button>
         </div>
@@ -36,7 +36,7 @@
         </div>
       </div>
     </mat-card-content>
-    <mat-card-content class="fia-view-wrapper" *ngIf="state === 'end'">
+    <mat-card-content class="fe-view-wrapper" *ngIf="state === 'end'">
       <p>Du hast alle Fragen beantwortet</p>
     </mat-card-content>
   </mat-card>

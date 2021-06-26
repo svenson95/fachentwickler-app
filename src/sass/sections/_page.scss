@@ -1,5 +1,5 @@
 /* PAGE */
-.fia-page-container {
+.fe-page-container {
   display: flex;
   flex-direction: column;
   background-color: var(--background-primary);
@@ -10,13 +10,13 @@
   right: 0;
 }
 
-.fia-sidenav-content-wrapper {
+.fe-sidenav-content-wrapper {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
   background-color: var(--background-primary);
 
-  .fia-page-content {
+  .fe-page-content {
     background: var(--background-primary);
   }
 
@@ -37,13 +37,13 @@
   }
 }
 
-.is-mobile .fia-sidenav-content-wrapper {
+.is-mobile .fe-sidenav-content-wrapper {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
 
-.fia-sidenav {
+.fe-sidenav {
   background: var(--background-secondary);
   overflow-x: hidden;
   border-right: 0;
@@ -58,7 +58,7 @@
   }
 }
 
-.fia-page-container .fia-page {
+.fe-page-container .fe-page {
   background: var(--background-secondary);
   padding: 20px 20px 20px 0;
 
@@ -75,7 +75,7 @@
     padding-top: 20px;
   }
 
-  .fia-no-data {
+  .fe-no-data {
     display: flex;
     color: var(--grey-3);
     margin-top: 10px;
@@ -94,7 +94,7 @@ a {
 }
 
 /* ROUTE ANIMATIONS FIX */
-.fia-content {
+.fe-content {
   background-color: var(--background-secondary);
 
   .ng-animating {

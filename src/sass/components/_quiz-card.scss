@@ -1,15 +1,15 @@
 
-.fia-card.quiz-card .fia-card-content {
+.fe-card.quiz-card .fe-card-content {
   justify-content: space-evenly;
 }
 
-.fia-card.quiz-card {
-  .fia-card-title {
+.fe-card.quiz-card {
+  .fe-card-title {
   }
-  .fia-card-description {
+  .fe-card-description {
   }
 
-  .fia-card-content {
+  .fe-card-content {
     display: flex;
     margin-top: 30px;
 
@@ -19,7 +19,7 @@
   }
 }
 
-.fia-card.quiz-card .fia-quiz {
+.fe-card.quiz-card .fe-quiz {
 
   @include from-sm {
     width: 600px;
@@ -36,7 +36,7 @@
 
   p { margin: 0; }
 
-  .fia-content-wrapper {
+  .fe-content-wrapper {
     font-size: 1.1em;
 
     @include to-xs {
@@ -48,7 +48,7 @@
       justify-content: space-between;
       text-align: center;
 
-      .fia-answer-indicator {
+      .fe-answer-indicator {
         //flex-shrink: 0;
         align-self: center;
 
@@ -94,10 +94,10 @@
         font-size: .9em;
       }
 
-      .fia-quiz-answers-wrapper {
+      .fe-quiz-answers-wrapper {
         margin-top: 10px;
 
-        .fia-quiz-answer {
+        .fe-quiz-answer {
           width: 100%;
           text-align: left;
           color: var(--text-color-1);
@@ -114,7 +114,7 @@
         }
 
         &:not(.is-checking-answer) {
-          .fia-quiz-answer {
+          .fe-quiz-answer {
             @include from-sm {
               &:hover {
                 background: rgba(var(--tertiary-color-rgb), 0.3);
@@ -124,26 +124,26 @@
           }
         }
 
-        .fia-quiz-answer.correct {
+        .fe-quiz-answer.correct {
           background: rgba(10,230,10, 0.2);
           transition: background 300ms ease-in-out;
         }
-        .fia-quiz-answer.wrong {
+        .fe-quiz-answer.wrong {
           background: rgba(red, 0.2);
           transition: background 300ms ease-in-out;
         }
       }
     }
 
-    .fia-quiz-end {
+    .fe-quiz-end {
       text-align: center;
 
-      .fia-quiz-done-label {
+      .fe-quiz-done-label {
         font-size: 1.3em;
         margin-bottom: 5px;
       }
 
-      .fia-emoji {
+      .fe-emoji {
         font-size: 4em;
         line-height: 100px;
       }
@@ -188,7 +188,7 @@
         }
       }
 
-      .fia-text-button {
+      .fe-text-button {
         margin-top: 10px;
       }
     }

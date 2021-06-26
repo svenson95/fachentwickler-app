@@ -1,20 +1,20 @@
-<div class="fia-page post-page">
-  <mat-card class="fia-card">
-    <p class="fia-error-message" *ngIf="post && post.elements === undefined">
+<div class="fe-page post-page">
+  <mat-card class="fe-card">
+    <p class="fe-error-message" *ngIf="post && post.elements === undefined">
       Artikel nicht gefunden
     </p>
-    <p class="fia-card-title" *ngIf="post !== undefined">
+    <p class="fe-card-title" *ngIf="post !== undefined">
       {{post.title}}
     </p>
-    <p class="fia-card-description" *ngIf="post !== undefined">
+    <p class="fe-card-description" *ngIf="post !== undefined">
       {{post.description}}
       <fe-post-badge [post]="post"></fe-post-badge>
     </p>
-    <mat-spinner class="fia-loading-spinner" *ngIf="post === undefined"></mat-spinner>
-    <mat-card-content class="fia-post-content" *ngIf="post !== undefined">
+    <mat-spinner class="fe-loading-spinner" *ngIf="post === undefined"></mat-spinner>
+    <mat-card-content class="fe-post-content" *ngIf="post !== undefined">
       <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
     </mat-card-content>
-    <p class="fia-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
+    <p class="fe-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>

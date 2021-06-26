@@ -1,4 +1,4 @@
-.fia-post-link-wrapper {
+.fe-post-link-wrapper {
   display: flex;
   flex-direction: row-reverse;
   padding: 0 40px;
@@ -42,7 +42,7 @@
     }
   }
 
-  .fia-post-link {
+  .fe-post-link {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -71,13 +71,13 @@
         transition: background 100ms ease-in-out;
       }
 
-      &:hover .fia-title {
+      &:hover .fe-title {
         text-decoration: underline;
         text-decoration-color: var(--secondary-color);
       }
     }
 
-    .fia-title-wrapper {
+    .fe-title-wrapper {
       margin: auto 0;
       margin-right: 5px;
 
@@ -89,14 +89,14 @@
         align-self: start;
       }
 
-      .fia-title {
+      .fe-title {
         margin: 0;
         line-height: 16px;
         transition: letter-spacing 400ms ease-out;
       }
     }
 
-    .fia-description-wrapper {
+    .fe-description-wrapper {
       display: flex;
       align-items: center;
       flex-shrink: 0;
@@ -115,7 +115,7 @@
         align-items: flex-end;
       }
 
-      .fia-description {
+      .fe-description {
         color: var(--grey-4);
         font-size: .9em;
         margin: 0;
@@ -137,7 +137,7 @@
         }
       }
 
-      .fia-badge {
+      .fe-badge {
         @include to-sm {
           margin-top: 3px;
           margin-left: 0;

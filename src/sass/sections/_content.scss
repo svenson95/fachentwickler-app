@@ -1,5 +1,5 @@
-.fia-content {
-  .fia-page-footer {
+.fe-content {
+  .fe-page-footer {
     height: fit-content;
     position: relative;
     background: var(--background-primary);
@@ -16,7 +16,7 @@
       padding: 20px 0 60px;
     }
 
-    .fia-labels-wrapper {
+    .fe-labels-wrapper {
       display: flex;
       width: 100%;
       max-width: 1080px;
@@ -30,11 +30,11 @@
       }
     }
 
-    .fia-logo {
-      .fia-icon-wrapper {
+    .fe-logo {
+      .fe-icon-wrapper {
         fill: var(--grey-2);
       }
-      .fia-app-name {
+      .fe-app-name {
         color: var(--grey-2);
       }
     }

@@ -1,11 +1,11 @@
-mat-card.fia-card.fia-next-exams {
-  .fia-card-header {
+mat-card.fe-card.fe-next-exams {
+  .fe-card-header {
   }
 
-  .fia-view-wrapper {
+  .fe-view-wrapper {
     margin-top: 15px;
 
-    .fia-exam-item-wrapper:not(:last-of-type) {
+    .fe-exam-item-wrapper:not(:last-of-type) {
       margin-bottom: 20px;
 
       @include to-xs {

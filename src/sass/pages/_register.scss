@@ -1,4 +1,4 @@
-.fia-page.register .fia-view-wrapper {
+.fe-page.register .fe-view-wrapper {
   display: flex;
   width: fit-content;
   margin: 40px auto;
@@ -8,7 +8,7 @@
     flex-direction: column;
   }
 
-  .fia-back-to-login-btn {
+  .fe-back-to-login-btn {
     align-self: center;
 
     @include from-md {
@@ -17,17 +17,17 @@
   }
 }
 
-.fia-page.register .fia-register-column {
+.fe-page.register .fe-register-column {
   text-align: center;
   margin-right: 150px;
 
-  .fia-input-fields {
+  .fe-input-fields {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 
-    .fia-name-input,
-    .fia-email-input {
+    .fe-name-input,
+    .fe-email-input {
       margin-bottom: 15px;
 
       ::placeholder {
@@ -35,19 +35,19 @@
       }
     }
 
-    .fia-password-input {
+    .fe-password-input {
       margin-bottom: 8px;
     }
   }
 
 
-  .fia-buttons-wrapper {
+  .fe-buttons-wrapper {
     display: flex;
     flex-direction: column;
   }
 }
 
-.fia-page.register .fia-divider-line {
+.fe-page.register .fe-divider-line {
   border: none;
 
   @include from-md {
@@ -60,7 +60,7 @@
   }
 }
 
-.fia-register-column {
+.fe-register-column {
   text-align: center;
   align-self: center;
   margin: 30px 50px 0 auto;
@@ -69,7 +69,7 @@
     margin: 30px auto 0;
   }
 
-  .fia-no-account-hint {
+  .fe-no-account-hint {
     text-align: center;
 
     @include to-md {

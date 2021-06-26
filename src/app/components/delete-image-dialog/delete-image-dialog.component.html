@@ -2,12 +2,12 @@
   Bist du sicher, dass du das Bild löschen möchtest?
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button class="fia-text-button" mat-button mat-dialog-close>Nein</button>
-  <button class="fia-text-button" mat-button (click)="deleteRequest()">
+  <button class="fe-text-button" mat-button mat-dialog-close>Nein</button>
+  <button class="fe-text-button" mat-button (click)="deleteRequest()">
     <ng-container *ngIf="!isLoadingDelete">
       Ja
       <ion-icon class="delete-icon" name="backspace"></ion-icon>
     </ng-container>
-    <mat-spinner class="fia-loading-spinner" *ngIf="isLoadingDelete"></mat-spinner>
+    <mat-spinner class="fe-loading-spinner" *ngIf="isLoadingDelete"></mat-spinner>
   </button>
 </mat-dialog-actions>

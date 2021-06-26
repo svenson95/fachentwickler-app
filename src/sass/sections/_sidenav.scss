@@ -1,7 +1,7 @@
 
 /* Hide sidenav scrollbar in Chrome, Safari and Opera */
-mat-sidenav.fia-sidenav.mat-sidenav,
-mat-sidenav.fia-sidenav.mat-sidenav .mat-drawer-inner-container {
+mat-sidenav.fe-sidenav.mat-sidenav,
+mat-sidenav.fe-sidenav.mat-sidenav .mat-drawer-inner-container {
   -webkit-appearance: none;
   scrollbar-width: none;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -11,7 +11,7 @@ mat-sidenav.fia-sidenav.mat-sidenav .mat-drawer-inner-container {
   }
 }
 
-mat-sidenav.fia-sidenav.mat-sidenav .fia-sidenav-content {
+mat-sidenav.fe-sidenav.mat-sidenav .fe-sidenav-content {
   margin-right: 20px;
 
   .section.areas {
@@ -23,7 +23,7 @@ mat-sidenav.fia-sidenav.mat-sidenav .fia-sidenav-content {
   }
 }
 
-mat-sidenav.fia-sidenav.mat-sidenav {
+mat-sidenav.fe-sidenav.mat-sidenav {
   .section:not(:first-child) {
     @include to-xs {
       margin-top: 20px;
@@ -39,7 +39,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
       margin-left: 15px;
     }
 
-    .fia-pruefungssimulator-btn {
+    .fe-pruefungssimulator-btn {
       font-family: Nunito-Regular, sans-serif;
       font-size: .9rem;
       text-transform: initial;
@@ -72,7 +72,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
     }
 
     .section-title,
-    .fia-nav-item.mat-list-item {
+    .fe-nav-item.mat-list-item {
       margin-left: 30px;
       margin-right: 30px;
 
@@ -98,7 +98,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
       }
     }
 
-    .fia-nav-item.mat-list-item {
+    .fe-nav-item.mat-list-item {
       background: transparent !important;
       height: fit-content;
       width: fit-content;
@@ -122,24 +122,24 @@ mat-sidenav.fia-sidenav.mat-sidenav {
         }
       }
 
-      $fia-nav-item-icon-fade-duration: color 200ms ease-in-out;
+      $fe-nav-item-icon-fade-duration: color 200ms ease-in-out;
 
-      .fia-nav-item-icon {
+      .fe-nav-item-icon {
         margin-right: 10px;
         $size: 1.3em;
         width: $size;
         height: $size;
         color: var(--tertiary-color);
-        transition: hover $fia-nav-item-icon-fade-duration;
+        transition: hover $fe-nav-item-icon-fade-duration;
         flex-shrink: 0;
       }
 
       &:hover, &:focus {
 
         @include from-md {
-          .fia-nav-item-icon {
+          .fe-nav-item-icon {
             color: var(--text-color-1);
-            transition: $fia-nav-item-icon-fade-duration;
+            transition: $fe-nav-item-icon-fade-duration;
           }
         }
       }
@@ -147,7 +147,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
       &.active-route {
         color: var(--secondary-color);
 
-        .fia-nav-item-icon {
+        .fe-nav-item-icon {
           color: var(--text-color-1);
         }
       }
@@ -161,7 +161,7 @@ mat-sidenav.fia-sidenav.mat-sidenav {
   }
 }
 
-mat-sidenav.fia-sidenav.mat-sidenav .fia-sidenav-content:first-child {
+mat-sidenav.fe-sidenav.mat-sidenav .fe-sidenav-content:first-child {
   @include to-xs {
     margin-top: 20px;
   }
@@ -171,7 +171,7 @@ mat-sidenav.fia-sidenav.mat-sidenav .fia-sidenav-content:first-child {
   }
 }
 
-mat-sidenav.fia-sidenav.mat-sidenav .fia-nav-item {
+mat-sidenav.fe-sidenav.mat-sidenav .fe-nav-item {
 
   span {
     padding: 6px 2px;

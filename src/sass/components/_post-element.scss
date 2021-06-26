@@ -1,7 +1,7 @@
-.fia-post-item {
+.fe-post-item {
   overflow: auto;
 
-  .fia-text-button {
+  .fe-text-button {
     padding-top: 4px;
     height: fit-content;
     align-self: center;
@@ -158,7 +158,7 @@
       }
     }
 
-    .fia-loading-spinner {
+    .fe-loading-spinner {
       margin-left: 50px !important;
     }
   }
@@ -218,11 +218,11 @@
 
 }
 
-.fia-post-item.code {
+.fe-post-item.code {
 
 }
 
-.fia-post-item.answer button + p,
+.fe-post-item.answer button + p,
 .post-answer-group {
   background-color: rgba(var(--tertiary-color-rgb), .1);
   padding: 40px 20px 20px;
@@ -255,7 +255,7 @@
   }
 }
 
-.fia-page.post-page .fia-card .fia-post-content .post-answer-group fe-post-element:first-child .fia-post-item {
+.fe-page.post-page .fe-card .fe-post-content .post-answer-group fe-post-element:first-child .fe-post-item {
   margin-top: 0;
 }
 

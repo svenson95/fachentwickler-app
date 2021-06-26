@@ -1,4 +1,4 @@
-.fia-page.curriculum .fia-school-week-card {
+.fe-page.curriculum .fe-school-week-card {
 
   @include from-sm {
     margin-bottom: 30px !important;
@@ -9,22 +9,22 @@
   }
 }
 
-.fia-page.curriculum .fia-card.school-year {
-  .fia-header-wrapper {
+.fe-page.curriculum .fe-card.school-year {
+  .fe-header-wrapper {
     display: flex;
     align-items: center;
 
-    .fia-year-toggle {
+    .fe-year-toggle {
       margin-right: 20px;
     }
 
-    .fia-card-title {
+    .fe-card-title {
       margin-bottom: 0;
     }
   }
 }
 
-.fia-page.curriculum mat-button-toggle-group {
+.fe-page.curriculum mat-button-toggle-group {
   border-radius: var(--border-radius);
   border: none;
   border-color: rgba(var(--tertiary-color-rgb), .2);
@@ -46,7 +46,7 @@
   }
 }
 
-.fia-page.curriculum .fia-week-cards-wrapper {
+.fe-page.curriculum .fe-week-cards-wrapper {
   display: flex;
   position: relative;
   max-width: 1130px;
@@ -54,7 +54,7 @@
   .week-toggle-card {
     margin-bottom: 0;
 
-    .fia-week-toggle {
+    .fe-week-toggle {
       flex-direction: column;
       flex-shrink: 0;
 
@@ -74,7 +74,7 @@
     }
   }
 
-  .fia-weeks-container {
+  .fe-weeks-container {
     position: absolute;
     left: 120px;
     top: 0;
@@ -106,16 +106,16 @@
   }
 }
 
-.fia-page.curriculum .fia-spinner-wrapper {
+.fe-page.curriculum .fe-spinner-wrapper {
   max-width: 1070px;
 
-  .fia-loading-spinner {
+  .fe-loading-spinner {
     margin: 110px auto 130px !important;
   }
 }
 
-.fia-year-toggle,
-.fia-week-toggle {
+.fe-year-toggle,
+.fe-week-toggle {
   mat-button-toggle {
     width: 42px;
   }

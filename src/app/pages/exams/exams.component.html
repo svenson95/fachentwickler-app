@@ -1,9 +1,9 @@
-<div class="fia-page exams">
-  <mat-card class="fia-card">
-    <p class="fia-card-title">Termine</p>
-    <mat-card-content class="fia-view-wrapper">
-      <div class="fia-exams-view">
-        <div class="fia-calendar-column">
+<div class="fe-page exams">
+  <mat-card class="fe-card">
+    <p class="fe-card-title">Termine</p>
+    <mat-card-content class="fe-view-wrapper">
+      <div class="fe-exams-view">
+        <div class="fe-calendar-column">
           <mat-calendar (yearSelected)="calendarDate.setFullYear($event.getFullYear())"
                         (monthSelected)="calendarDate.setMonth($event.getMonth())"
                         [dateClass]="dateClass()"
@@ -13,11 +13,11 @@
                         #calendar
           ></mat-calendar>
         </div>
-        <div class="fia-exams-column">
-          <mat-spinner class="fia-loading-spinner" *ngIf="allExams === undefined"></mat-spinner>
-          <fe-exam-item class="fia-exam" *ngFor="let exam of monthExams" [exam]="exam"></fe-exam-item>
-          <p class="fia-no-data" *ngIf="monthExams && monthExams.length === 0">Keine Klausuren in diesem Monat</p>
-          <p class="fia-no-data" *ngIf="allExams === null">Fehler beim Laden der Klausuren</p>
+        <div class="fe-exams-column">
+          <mat-spinner class="fe-loading-spinner" *ngIf="allExams === undefined"></mat-spinner>
+          <fe-exam-item class="fe-exam" *ngFor="let exam of monthExams" [exam]="exam"></fe-exam-item>
+          <p class="fe-no-data" *ngIf="monthExams && monthExams.length === 0">Keine Klausuren in diesem Monat</p>
+          <p class="fe-no-data" *ngIf="allExams === null">Fehler beim Laden der Klausuren</p>
         </div>
       </div>
     </mat-card-content>

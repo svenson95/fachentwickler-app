@@ -1,7 +1,7 @@
-<div class="fia-sidenav-content">
+<div class="fe-sidenav-content">
 
   <div class="section apps" *ngIf="authService.isAuthenticated">
-    <button class="fia-text-button fia-pruefungssimulator-btn" routerLink="pruefungssimulator"
+    <button class="fe-text-button fe-pruefungssimulator-btn" routerLink="pruefungssimulator"
             [class.active-route]="router.url.startsWith('/pruefungssimulator')"
     >
       Prüfungssimulator
@@ -11,24 +11,24 @@
   <div class="section my-class" *ngIf="authService.isAuthenticated">
     <label class="section-title">Meine Klasse</label>
     <mat-nav-list>
-      <div class="fia-nav-item-wrapper" *ngFor="let navItem of myClassSection">
-        <a class="fia-nav-item" mat-list-item disableRipple
+      <div class="fe-nav-item-wrapper" *ngFor="let navItem of myClassSection">
+        <a class="fe-nav-item" mat-list-item disableRipple
            *ngIf="navItem.url.startsWith('http://')"
            (click)="closeSidebar()"
            [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
            [href]="navItem.url"
            target="_blank"
         >
-          <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+          <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
           <span [innerHTML]="navItem.title"></span>
         </a>
-        <a class="fia-nav-item" mat-list-item disableRipple
+        <a class="fe-nav-item" mat-list-item disableRipple
            *ngIf="!navItem.url.startsWith('http://')"
            (click)="closeSidebar()"
            [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
            [routerLink]="'/' + navItem.url"
         >
-          <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+          <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
           <span [innerHTML]="navItem.title"></span>
         </a>
       </div>
@@ -38,13 +38,13 @@
   <div class="section subjects">
     <label class="section-title">Lernfelder</label>
     <mat-nav-list>
-      <a class="fia-nav-item" mat-list-item disableRipple
+      <a class="fe-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of subjectsSection"
          [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
-        <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+        <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
@@ -53,14 +53,14 @@
   <div class="section study">
     <label class="section-title">Studium</label>
     <mat-nav-list>
-      <a class="fia-nav-item" mat-list-item disableRipple
+      <a class="fe-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of studySection"
          [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
          disabled
       >
-        <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+        <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
@@ -69,14 +69,14 @@
   <div class="section areas">
     <label class="section-title">Bereiche</label>
     <mat-nav-list>
-      <a class="fia-nav-item" mat-list-item disableRipple
+      <a class="fe-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of languageSection"
          [routerLink]="'/' + navItem.url"
          (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
          disabled
       >
-        <ion-icon class="fia-nav-item-icon" [icon]="navItem.icon"></ion-icon>
+        <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
         <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>

@@ -1,11 +1,11 @@
-<div class="fia-page">
-  <div class="fia-spinner-wrapper">
-    <mat-spinner class="fia-loading-spinner" *ngIf="data === undefined"></mat-spinner>
+<div class="fe-page">
+  <div class="fe-spinner-wrapper">
+    <mat-spinner class="fe-loading-spinner" *ngIf="data === undefined"></mat-spinner>
   </div>
-  <mat-card class="fia-card" *ngIf="data !== undefined">
-    <p class="fia-card-title">{{data.title}}</p>
-    <p class="fia-card-description">Nachricht vom {{data.date | date: 'dd.MM.yyyy'}}</p>
-    <mat-card-content class="fia-view-wrapper">
+  <mat-card class="fe-card" *ngIf="data !== undefined">
+    <p class="fe-card-title">{{data.title}}</p>
+    <p class="fe-card-description">Nachricht vom {{data.date | date: 'dd.MM.yyyy'}}</p>
+    <mat-card-content class="fe-view-wrapper">
       <fe-post-element *ngFor="let element of data.content" [element]="element"></fe-post-element>
     </mat-card-content>
   </mat-card>

@@ -1,4 +1,4 @@
-mat-dialog-content.fia-image-manager {
+mat-dialog-content.fe-image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
   height: 90vh;
@@ -16,14 +16,14 @@ mat-dialog-content.fia-image-manager {
     border-radius: 0;
   }
 
-  .fia-im-header {
+  .fe-im-header {
     margin: 24px 0;
 
-    .fia-card-title {
+    .fe-card-title {
       margin-bottom: 2px;
     }
 
-    .fia-card-description {
+    .fe-card-description {
     }
   }
 
@@ -65,7 +65,7 @@ mat-dialog-content.fia-image-manager {
     background: var(--grey-2);
   }
 
-  .fia-add-image-form {
+  .fe-add-image-form {
     display: flex;
     text-align: center;
     align-items: center;
@@ -75,16 +75,16 @@ mat-dialog-content.fia-image-manager {
     .image-picker {
       display: flex;
 
-      .fia-file-input {
+      .fe-file-input {
         color: var(--text-color-1);
         outline: none;
       }
     }
 
-    .fia-text-button {
+    .fe-text-button {
       width: 200px;
 
-      .fia-loading-spinner {
+      .fe-loading-spinner {
         margin: 0 auto !important;
         $size: 18px;
         width: $size !important;
@@ -104,7 +104,7 @@ mat-dialog-content.fia-image-manager {
     margin: 20px 0;
   }
 
-  .fia-im-recent-images {
+  .fe-im-recent-images {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +162,7 @@ mat-dialog-content.fia-image-manager {
     }
   }
 
-  .fia-pagination-bar {
+  .fe-pagination-bar {
     margin-bottom: 24px;
   }
 }
@@ -234,7 +234,7 @@ mat-dialog-content.fia-image-manager {
     }
   }
 
-  .fia-text-button {
+  .fe-text-button {
     height: fit-content;
     display: flex;
     align-items: center;

@@ -82,9 +82,9 @@ export class CurriculumComponent implements OnInit {
     });
   }
 
-  isVisible = (ele) => {
-    const { bottom, height, top } = ele.getBoundingClientRect();
-    const weeksContainer = document.querySelector('.fia-weeks-container');
+  isVisible = (el) => {
+    const { bottom, height, top } = el.getBoundingClientRect();
+    const weeksContainer = document.querySelector('.fe-weeks-container');
     const containerRect = weeksContainer.getBoundingClientRect();
 
     return top <= containerRect.top

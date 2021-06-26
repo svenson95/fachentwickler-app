@@ -1,5 +1,5 @@
 /* CARDS */
-mat-card.mat-card.fia-card {
+mat-card.mat-card.fe-card {
   max-width: 1130px;
   background: var(--background-primary);
   box-shadow: var(--box-shadow);
@@ -29,13 +29,13 @@ mat-card.mat-card.fia-card {
     border-radius: 0;
   }
 
-  .fia-card-header {
+  .fe-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .fia-post-last-update {
+  .fe-post-last-update {
     font-size: .9em;
     color: var(--grey-3);
     text-align: right;
@@ -43,7 +43,7 @@ mat-card.mat-card.fia-card {
   }
 }
 
-p.fia-card-title {
+p.fe-card-title {
   font-family: Nunito-Regular, sans-serif;
   letter-spacing: 1.5px;
   text-decoration: underline;
@@ -62,7 +62,7 @@ p.fia-card-title {
   }
 }
 
-p.fia-card-description {
+p.fe-card-description {
   display: flex;
   align-items: center;
   font-size: 1.1em;

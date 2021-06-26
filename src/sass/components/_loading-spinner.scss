@@ -1,19 +1,19 @@
 /* LOADING SPINNER */
-mat-spinner.fia-loading-spinner.mat-spinner,
-mat-card.fia-card mat-spinner.fia-loading-spinner.mat-spinner {
+mat-spinner.fe-loading-spinner.mat-spinner,
+mat-card.fe-card mat-spinner.fe-loading-spinner.mat-spinner {
   margin: 50px auto;
 
-  $fia-spinner-size: 64px;
-  &.fia-login-column {
-    $fia-spinner-size: 28px;
+  $fe-spinner-size: 64px;
+  &.fe-login-column {
+    $fe-spinner-size: 28px;
   }
 
-  width: $fia-spinner-size !important;
-  height: $fia-spinner-size !important;
+  width: $fe-spinner-size !important;
+  height: $fe-spinner-size !important;
 
   svg {
-    width: $fia-spinner-size !important;
-    height: $fia-spinner-size !important;
+    width: $fe-spinner-size !important;
+    height: $fe-spinner-size !important;
 
     circle {
       stroke: var(--tertiary-color);

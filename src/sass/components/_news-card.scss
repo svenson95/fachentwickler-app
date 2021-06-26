@@ -1,9 +1,9 @@
-.fia-card.news-card .fia-card-header {
-  .fia-card-title {
+.fe-card.news-card .fe-card-header {
+  .fe-card-title {
   }
 }
 
-.fia-card.news-card .fia-news-container {
+.fe-card.news-card .fe-news-container {
 
   @include from-xs {
     margin-top: 20px !important;
@@ -13,7 +13,7 @@
     margin-top: 10px !important;
   }
 
-  .fia-news-item {
+  .fe-news-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@
   }
 }
 
-.fia-card.news-card .fia-news-item .fia-news-header {
+.fe-card.news-card .fe-news-item .fe-news-header {
   display: flex;
 
   @include to-md {
@@ -73,13 +73,13 @@
   }
 }
 
-.fia-card.news-card .fia-news-item .fia-text-button {
+.fe-card.news-card .fe-news-item .fe-text-button {
   &:hover {
     color: var(--tertiary-color);
   }
 }
 
-.fia-card.news-card .fia-news-container .fia-loading-spinner {
+.fe-card.news-card .fe-news-container .fe-loading-spinner {
 
   @include from-xs {
     margin-top: -12px !important;

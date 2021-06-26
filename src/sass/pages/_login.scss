@@ -1,4 +1,4 @@
-.fia-page.login-page .fia-view-wrapper {
+.fe-page.login-page .fe-view-wrapper {
   display: flex;
   width: fit-content;
   margin: 40px auto;
@@ -9,15 +9,15 @@
   }
 }
 
-.fia-page.login-page .fia-login-column {
+.fe-page.login-page .fe-login-column {
   text-align: center;
 
-  .fia-input-fields {
+  .fe-input-fields {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 
-    .fia-name-input {
+    .fe-name-input {
       margin-bottom: 8px;
 
       ::placeholder {
@@ -25,17 +25,17 @@
       }
     }
 
-    .fia-password-input {
+    .fe-password-input {
       margin-bottom: 8px;
     }
   }
 
 
-  .fia-buttons-wrapper {
+  .fe-buttons-wrapper {
     display: flex;
     flex-direction: column;
 
-    .fia-loading-spinner {
+    .fe-loading-spinner {
       margin: 0 auto !important;
       $size: 18px;
       width: $size !important;
@@ -47,17 +47,17 @@
       }
     }
 
-    .fia-text-button:first-child {
+    .fe-text-button:first-child {
       margin-bottom: 20px;
     }
 
-    //.fia-forgot-password-btn {
+    //.fe-forgot-password-btn {
     //  margin-top: 15px;
     //}
   }
 }
 
-.fia-page.login-page .fia-divider-line {
+.fe-page.login-page .fe-divider-line {
   border: none;
 
   @include from-md {
@@ -70,16 +70,16 @@
   }
 }
 
-.fia-page.login-page .fia-register-column {
+.fe-page.login-page .fe-register-column {
   text-align: center;
   align-self: center;
 
-  .fia-no-account-hint {
+  .fe-no-account-hint {
     text-align: center;
     margin: 20px 0;
   }
 
-  .fia-text-button:hover {
+  .fe-text-button:hover {
     span {
       color: var(--tertiary-color);
     }

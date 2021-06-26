@@ -1,20 +1,20 @@
 
-.fia-page.landing-page {
+.fe-page.landing-page {
 
-  .fia-description {
+  .fe-description {
     color: var(--text-color-3);
     margin-top: 0;
     margin-bottom: 3px;
   }
 
-  .fia-welcome-banner {
+  .fe-welcome-banner {
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
 
-    .fia-app-icon {
+    .fe-app-icon {
       width: 220px;
       height: 220px;
       flex-shrink: 0;
@@ -39,7 +39,7 @@
       }
     }
 
-    .fia-labels {
+    .fe-labels {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -71,7 +71,7 @@
     }
   }
 
-  .fia-landing-row {
+  .fe-landing-row {
     display: flex;
     max-width: 1135px;
     flex-direction: column;
@@ -91,22 +91,22 @@
       flex-direction: column;
     }
 
-    .fia-image-wrapper {
-      .fia-landing-image {
+    .fe-image-wrapper {
+      .fe-landing-image {
         align-self: center;
       }
     }
 
-    .fia-text-row {
+    .fe-text-row {
       display: flex;
       align-self: center;
     }
 
-    .fia-text-column {
+    .fe-text-column {
       display: flex;
       flex-direction: column;
 
-      .fia-title {
+      .fe-title {
         font-size: 1.6em;
         letter-spacing: 1px;
         line-height: 30px;
@@ -129,17 +129,17 @@
       }
     }
 
-    .fia-component-wrapper {
-      .fia-card-title {
+    .fe-component-wrapper {
+      .fe-card-title {
         line-height: 20px;
       }
     }
   }
 
-  .fia-landing-row.first {
+  .fe-landing-row.first {
     justify-content: space-between;
 
-    .fia-components-wrapper {
+    .fe-components-wrapper {
       align-self: center;
 
       @include from-xs {
@@ -151,7 +151,7 @@
       }
     }
 
-    .fia-text-row {
+    .fe-text-row {
       margin-top: 50px;
       margin-bottom: 20px;
 
@@ -160,16 +160,16 @@
       }
     }
 
-    .fia-text-column {
+    .fe-text-column {
       align-items: center;
       align-self: center;
       max-width: 350px;
 
-      .fia-eduaction-svg {
+      .fe-eduaction-svg {
         width: 120px;
       }
 
-      .fia-reading-svg {
+      .fe-reading-svg {
         width: 120px;
 
         @include to-xs {
@@ -179,10 +179,10 @@
     }
   }
 
-  .fia-landing-row.second {
+  .fe-landing-row.second {
     align-items: center;
 
-    .fia-text-row {
+    .fe-text-row {
       margin-top: 30px;
       margin-bottom: 20px;
 
@@ -191,7 +191,7 @@
       }
     }
 
-    .fia-text-column {
+    .fe-text-column {
       align-self: center;
       max-width: 400px;
 
@@ -200,13 +200,13 @@
         margin-top: 20px;
       }
 
-      .fia-title {
+      .fe-title {
         @include to-sm {
           align-self: baseline;
         }
       }
 
-      .fia-game-svg {
+      .fe-game-svg {
         width: 100px;
         margin-left: 20px;
 
@@ -215,7 +215,7 @@
         }
       }
 
-      .fia-online-course-svg {
+      .fe-online-course-svg {
         width: 100px;
         margin-left: 20px;
 
@@ -225,7 +225,7 @@
       }
     }
 
-    .fia-component-wrapper {
+    .fe-component-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -252,7 +252,7 @@
         margin-top: 20px;
       }
 
-      .fia-divider-line {
+      .fe-divider-line {
         height: 1px;
         width: 80%;
         border: none;
@@ -260,13 +260,13 @@
     }
   }
 
-  .fia-landing-row.school {
+  .fe-landing-row.school {
 
-    .fia-component-wrapper {
+    .fe-component-wrapper {
       width: 90%;
     }
 
-    .fia-text-row {
+    .fe-text-row {
       margin-top: 40px;
       margin-bottom: 20px;
 
@@ -275,7 +275,7 @@
       }
     }
 
-    .fia-text-column {
+    .fe-text-column {
       display: flex;
       align-items: center;
       align-self: center;
@@ -288,33 +288,33 @@
         }
       }
 
-      .fia-hardware-svg {
+      .fe-hardware-svg {
         vertical-align: top;
         margin-right: 5px;
       }
 
-      .fia-hardware-svg, .fia-world-grid-svg {
+      .fe-hardware-svg, .fe-world-grid-svg {
         width: 64px;
         height: 64px;
       }
 
-      .fia-datenbankspeicher-svg {
+      .fe-datenbankspeicher-svg {
         width: 96px;
         height: 96px;
       }
 
-      .fia-world-grid-svg {
+      .fe-world-grid-svg {
         margin-left: 5px;
         align-self: flex-end;
       }
 
-      .fia-question-svg {
+      .fe-question-svg {
         width: 80px;
         height: 80px;
         color: var(--secondary-color);
       }
 
-      .fia-title {
+      .fe-title {
         align-self: start;
 
         @include to-sm {
@@ -323,7 +323,7 @@
       }
     }
 
-    .fia-component-wrapper {
+    .fe-component-wrapper {
       align-self: center;
 
       @include from-sm {
@@ -334,34 +334,34 @@
         width: 100%;
       }
 
-      .fia-landing-image {
+      .fe-landing-image {
         max-width: 100%;
       }
     }
   }
 
-  .fia-rocket-svg,
-  .fia-eduaction-svg,
-  .fia-reading-svg,
-  .fia-game-svg,
-  .fia-online-course-svg,
-  .fia-question-svg,
-  .fia-hardware-svg, .fia-datenbankspeicher-svg, .fia-world-grid-svg {
+  .fe-rocket-svg,
+  .fe-eduaction-svg,
+  .fe-reading-svg,
+  .fe-game-svg,
+  .fe-online-course-svg,
+  .fe-question-svg,
+  .fe-hardware-svg, .fe-datenbankspeicher-svg, .fe-world-grid-svg {
     opacity: .5;
   }
 
-  .fia-landing-row.start {
+  .fe-landing-row.start {
     display: block;
     text-align: center;
 
-    .fia-text-column {
+    .fe-text-column {
       align-items: center;
 
       @include to-sm {
         margin-top: 40px;
       }
 
-      .fia-rocket-svg {
+      .fe-rocket-svg {
         width: 100px;
         height: 100px;
         font-size: 100px;
@@ -369,29 +369,29 @@
       }
     }
 
-    .fia-text-button {
+    .fe-text-button {
       margin-top: 10px;
     }
   }
 }
 
-.fia-landing-row.first {
-  .fia-weekday-group {
-    .fia-weekday-item:nth-child(1), .fia-weekday-item:nth-child(2) {
-      .fia-post-link-wrapper .fia-post-link {
+.fe-landing-row.first {
+  .fe-weekday-group {
+    .fe-weekday-item:nth-child(1), .fe-weekday-item:nth-child(2) {
+      .fe-post-link-wrapper .fe-post-link {
         border-right: 2px solid var(--secondary-color);
       }
     }
 
-    .fia-weekday-item:nth-child(3), .fia-weekday-item:nth-child(4) {
-      .fia-post-link-wrapper .fia-post-link {
+    .fe-weekday-item:nth-child(3), .fe-weekday-item:nth-child(4) {
+      .fe-post-link-wrapper .fe-post-link {
         border-right: 2px solid var(--tertiary-color);
       }
     }
   }
 
-  .fia-next-lesson {
-    .fia-post-link-wrapper .fia-post-link.isCompleted {
+  .fe-next-lesson {
+    .fe-post-link-wrapper .fe-post-link.isCompleted {
       border-right: 2px solid var(--tertiary-color);
     }
   }

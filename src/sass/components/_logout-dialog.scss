@@ -1,5 +1,5 @@
 
-::ng-deep .mat-dialog-container .fia-logout-dialog {
+::ng-deep .mat-dialog-container .fe-logout-dialog {
   background: var(--background-secondary);
   color: var(--text-color-1);
   border-radius: 0;
@@ -8,10 +8,10 @@
     margin-bottom: 10px;
   }
 
-  .fia-no-btn, .fia-logout-btn {
+  .fe-no-btn, .fe-logout-btn {
   }
 
-  .fia-text-button .mat-icon {
+  .fe-text-button .mat-icon {
     height: 20px;
     width: 20px;
     line-height: 1.3rem;

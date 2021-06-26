@@ -1,19 +1,19 @@
-.fia-page.dashboard {
-  .fia-card {
+.fe-page.dashboard {
+  .fe-card {
     @include to-xs {
       margin-bottom: 20px;
     }
   }
 
-  .fia-card:not(:last-of-type) {
+  .fe-card:not(:last-of-type) {
     margin-bottom: 20px;
   }
 
-  .fia-schedule {
-    .fia-card-title {
+  .fe-schedule {
+    .fe-card-title {
     }
 
-    .fia-view-wrapper {
+    .fe-view-wrapper {
       display: flex;
 
       @include to-sm {

@@ -1,44 +1,44 @@
-<div class="fia-page edit-post">
-  <mat-card class="fia-card elements-bar">
-    <p class="fia-elements-label">Elemente</p>
-    <div class="fia-elements-bar">
-      <button class="fia-element-button">Text</button>
-      <button class="fia-element-button">Title</button>
-      <button class="fia-element-button">Subtitle</button>
-      <button class="fia-element-button">Hint</button>
-      <button class="fia-element-button">Image</button>
-      <button class="fia-element-button">Line</button>
-      <button class="fia-element-button">List</button>
-      <button class="fia-element-button">Table</button>
-      <button class="fia-element-button">Code</button>
-      <button class="fia-element-button">File</button>
+<div class="fe-page edit-post">
+  <mat-card class="fe-card elements-bar">
+    <p class="fe-elements-label">Elemente</p>
+    <div class="fe-elements-bar">
+      <button class="fe-element-button">Text</button>
+      <button class="fe-element-button">Title</button>
+      <button class="fe-element-button">Subtitle</button>
+      <button class="fe-element-button">Hint</button>
+      <button class="fe-element-button">Image</button>
+      <button class="fe-element-button">Line</button>
+      <button class="fe-element-button">List</button>
+      <button class="fe-element-button">Table</button>
+      <button class="fe-element-button">Code</button>
+      <button class="fe-element-button">File</button>
     </div>
   </mat-card>
-  <mat-card class="fia-card">
-    <p class="fia-error-message" *ngIf="post && post.elements === undefined">
+  <mat-card class="fe-card">
+    <p class="fe-error-message" *ngIf="post && post.elements === undefined">
       Artikel nicht gefunden
     </p>
-    <p class="fia-card-title" *ngIf="post !== undefined">
+    <p class="fe-card-title" *ngIf="post !== undefined">
       {{post.title}}
     </p>
-    <p class="fia-card-description" *ngIf="post !== undefined">
+    <p class="fe-card-description" *ngIf="post !== undefined">
       {{post.description}}
     </p>
-    <mat-spinner class="fia-loading-spinner" *ngIf="post === undefined"></mat-spinner>
-    <mat-card-content class="fia-post-content" *ngIf="post !== undefined">
+    <mat-spinner class="fe-loading-spinner" *ngIf="post === undefined"></mat-spinner>
+    <mat-card-content class="fe-post-content" *ngIf="post !== undefined">
       <fe-post-element *ngFor="let element of post.elements" [element]="element" [contentEditable]="true"></fe-post-element>
     </mat-card-content>
-    <p class="fia-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
+    <p class="fe-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
 
-  <mat-card class="fia-card" *ngIf="authService.user !== null">
-    <div class="fia-button-container">
-      <button class="fia-text-button" *ngIf="authService?.user?.role === 'admin'">
+  <mat-card class="fe-card" *ngIf="authService.user !== null">
+    <div class="fe-button-container">
+      <button class="fe-text-button" *ngIf="authService?.user?.role === 'admin'">
         <span>Speichern</span>
       </button>
-      <button class="fia-text-button" *ngIf="authService?.user?.role === 'admin'">
+      <button class="fe-text-button" *ngIf="authService?.user?.role === 'admin'">
         <span>Artikel Löschen</span>
       </button>
     </div>

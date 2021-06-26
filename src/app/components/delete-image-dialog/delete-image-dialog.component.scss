@@ -5,14 +5,14 @@
   color: var(--text-color-1);
   border-radius: 0;
 
-  .fia-text-button {
+  .fe-text-button {
     .delete-icon {
       font-size: 1.5em;
       margin-left: 5px;
       margin-bottom: 2px;
     }
 
-    .fia-loading-spinner {
+    .fe-loading-spinner {
       margin: 8px auto !important;
       $size: 20px;
       width: $size !important;

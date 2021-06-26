@@ -1,7 +1,7 @@
-.fia-page.my-profile .fia-card {
-  .fia-card-title {
+.fe-page.my-profile .fe-card {
+  .fe-card-title {
   }
-  .fia-view-wrapper {
+  .fe-view-wrapper {
     margin-top: 40px;
     font-size: 1.2em;
 
@@ -16,13 +16,13 @@
       margin-bottom: 30px;
     }
 
-    .fia-edit-wrapper {
+    .fe-edit-wrapper {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       text-align: right;
 
-      .fia-edit-user-btn {
+      .fe-edit-user-btn {
         font-size: .8em;
         width: fit-content;
 
@@ -34,10 +34,10 @@
   }
 }
 
-.fia-page.my-profile {
-  .fia-start-change-btn,
-  .fia-discard-change-btn,
-  .fia-save-change-btn {
+.fe-page.my-profile {
+  .fe-start-change-btn,
+  .fe-discard-change-btn,
+  .fe-save-change-btn {
     width: 100px;
     border: none;
     outline: none;
@@ -54,7 +54,7 @@
     }
   }
 
-  .fia-start-change-btn, .fia-discard-change-btn {
+  .fe-start-change-btn, .fe-discard-change-btn {
     color: var(--text-color-1);
 
     &:disabled {
@@ -62,7 +62,7 @@
     }
   }
 
-  .fia-start-change-btn {
+  .fe-start-change-btn {
     background: rgba(var(--grey-4-rgb), .2);
 
     &:hover:not([disabled]) {
@@ -70,19 +70,19 @@
     }
   }
 
-  .fia-discard-change-btn {
+  .fe-discard-change-btn {
     background: rgba(var(--tertiary-color-rgb), .3);
   }
 
-  .fia-save-change-btn {
+  .fe-save-change-btn {
     background: var(--primary-color);
     color: white;
   }
 }
 
-.fia-page.my-profile {
+.fe-page.my-profile {
 
-  .fia-input {
+  .fe-input {
 
     @include from-sm {
       width: 300px;

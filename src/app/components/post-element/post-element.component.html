@@ -1,6 +1,6 @@
-<div class="fia-post-item" [ngSwitch]="element.type" [ngClass]="element.type" [class.answer]="element.hidden">
+<div class="fe-post-item" [ngSwitch]="element.type" [ngClass]="element.type" [class.answer]="element.hidden">
   <!-- SHOW ANSWER BUTTON -->
-  <button class="fia-text-button secondary" *ngIf="element.hidden" (click)="isVisible = !isVisible" [class.is-open]="isVisible">
+  <button class="fe-text-button secondary" *ngIf="element.hidden" (click)="isVisible = !isVisible" [class.is-open]="isVisible">
     {{isVisible ? 'Ausblenden' : 'Lösung anzeigen'}}
   </button>
   <!-- TITLE -->
@@ -52,7 +52,7 @@
       <img class="post-image" *ngIf="image" [src]="image" alt="image"
            [class.small]="element.size === 's'" [class.medium]="element.size === 'm'" [class.large]="element.size === 'l'"
       />
-    <mat-spinner class="fia-loading-spinner" *ngIf="image === false"></mat-spinner>
+    <mat-spinner class="fe-loading-spinner" *ngIf="image === false"></mat-spinner>
     <p style="color: grey !important;" *ngIf="image === null">no image found</p>
   </div>
   <!-- TABLE -->

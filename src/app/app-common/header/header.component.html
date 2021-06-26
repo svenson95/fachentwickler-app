@@ -1,5 +1,5 @@
-<mat-toolbar class="fia-header-toolbar">
-  <button class="fia-logo-wrapper"
+<mat-toolbar class="fe-header-toolbar">
+  <button class="fe-logo-wrapper"
           (click)="closeSidenav()"
           [routerLink]="isMobile.matches ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
           [ngClass]="{'active-route':
@@ -10,68 +10,68 @@
   >
     <fe-icon></fe-icon>
   </button>
-  <div class="fia-header-content">
-    <div class="fia-page-title" (click)="isMobile.matches ? goToSubject() : goToSubject()">
+  <div class="fe-header-content">
+    <div class="fe-page-title" (click)="isMobile.matches ? goToSubject() : goToSubject()">
       <span class="bracket">[</span>
       <p class="title" [innerHTML]="headerService.pageTitle"></p>
       <span class="bracket">]</span>
     </div>
-    <div class="fia-header-elements-wrapper">
-      <div class="fia-searchbar-wrapper" *ngIf="!isMobile.matches">
-        <mat-form-field class="fia-search-bar" appearance="fill">
+    <div class="fe-header-elements-wrapper">
+      <div class="fe-searchbar-wrapper" *ngIf="!isMobile.matches">
+        <mat-form-field class="fe-search-bar" appearance="fill">
           <mat-icon class="unselectable" matSuffix (click)="openSearchView()" *ngIf="!searchPostService.isSearching">search</mat-icon>
-          <mat-spinner matSuffix class="fia-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
+          <mat-spinner matSuffix class="fe-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
           <input matInput type="text" autocomplete="off" [(ngModel)]="searchPostService.searchValue" placeholder="Suchbegriff" #searchInput>
         </mat-form-field>
       </div>
-      <div class="fia-button-container">
-        <button class="fia-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
+      <div class="fe-button-container">
+        <button class="fe-sidenav-hamburger-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
           <mat-icon>menu</mat-icon>
         </button>
-        <button class="fia-dashboard-login-btn fia-text-button"
+        <button class="fe-dashboard-login-btn fe-text-button"
            [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
            [ngClass]="{'active-route': router.url.startsWith('/dashboard') || router.url.startsWith('/login')}"
         >
           <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
         </button>
-        <button class="fia-menu-btn" mat-icon-button [matMenuTriggerFor]="menu">
+        <button class="fe-menu-btn" mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
         </button>
-        <mat-menu class="fia-more-menu" #menu="matMenu">
-          <a class="fia-menu-button" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile.matches"
+        <mat-menu class="fe-more-menu" #menu="matMenu">
+          <a class="fe-menu-button" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile.matches"
              [disabled]="router.url.startsWith('/dashboard')"
           >
             <mat-icon>dashboard</mat-icon>
             <span class="label">Dashboard</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated"
+          <a class="fe-menu-button" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated"
              [disabled]="router.url.startsWith('/mein-profil')"
           >
             <mat-icon>account_circle</mat-icon>
             <span class="label">Mein Profil</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated"
+          <a class="fe-menu-button" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated"
              [disabled]="router.url.startsWith('/login')"
           >
             <mat-icon>login</mat-icon>
             <span class="label">Einloggen</span>
           </a>
-          <a class="fia-menu-button" mat-menu-item routerLink="feedback"
+          <a class="fe-menu-button" mat-menu-item routerLink="feedback"
              [disabled]="router.url.startsWith('/feedback')"
           >
             <mat-icon>feedback</mat-icon>
             <span class="label">Feedback</span>
           </a>
-          <button class="fia-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user?.role === UserRole.ADMIN">
+          <button class="fe-menu-button" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user?.role === UserRole.ADMIN">
             <!--            *ngIf="authService.user.role === UserRole.ADMIN"-->
             <mat-icon>perm_media</mat-icon>
             <span class="label">Image-Manager</span>
           </button>
-          <a class="fia-menu-button" mat-menu-item (click)="themeService.toggleTheme()">
+          <a class="fe-menu-button" mat-menu-item (click)="themeService.toggleTheme()">
             <mat-icon>invert_colors</mat-icon>
             <span class="label">{{themeService.isDarkTheme() ? 'Light': 'Dark'}} Theme aktivieren</span>
           </a>
-          <button class="fia-menu-button" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
+          <button class="fe-menu-button" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
             <mat-icon>logout</mat-icon>
             <span class="label">Ausloggen</span>
           </button>
@@ -80,4 +80,4 @@
     </div>
   </div>
 </mat-toolbar>
-<mat-progress-bar class="fia-header-progress-bar" value="100" [mode]="isLoading ? 'indeterminate' : 'determinate'"></mat-progress-bar>
+<mat-progress-bar class="fe-header-progress-bar" value="100" [mode]="isLoading ? 'indeterminate' : 'determinate'"></mat-progress-bar>

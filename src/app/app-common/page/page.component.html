@@ -1,12 +1,12 @@
-<div class="fia-page-container" [class.is-mobile]="isMobile.matches" [ngClass]="themeService.getActiveTheme().name">
-  <fe-header class="fia-header" [isMobile]="isMobile" [sidenav]="sidenav"></fe-header>
+<div class="fe-page-container" [class.is-mobile]="isMobile.matches" [ngClass]="themeService.getActiveTheme().name">
+  <fe-header class="fe-header" [isMobile]="isMobile" [sidenav]="sidenav"></fe-header>
 
-  <mat-sidenav-container class="fia-sidenav-content-wrapper"
+  <mat-sidenav-container class="fe-sidenav-content-wrapper"
                          [style.marginTop.px]="isMobile.matches ? 56 : 0"
                          autosize
                          #sidenavContainer
   >
-    <mat-sidenav class="fia-sidenav" #sidenav
+    <mat-sidenav class="fe-sidenav" #sidenav
                  [mode]="isMobile.matches ? 'over' : 'side'"
                  [opened]="!isMobile.matches"
                  [fixedInViewport]="isMobile.matches"

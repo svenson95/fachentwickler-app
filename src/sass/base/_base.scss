@@ -31,12 +31,12 @@ body {
   }
 }
 
-.fia-title {
+.fe-title {
 
 }
 
 /* MAT-SLIDE-TOGGLE */
-.fia-theme-toggle {
+.fe-theme-toggle {
   align-self: center;
 
   .mat-slide-toggle-thumb {
@@ -76,8 +76,8 @@ mat-button-toggle-group {
 
 /* POST LINK (SUBJECT, DASHBOARD, ...) */
 fe-post-link:not(:last-of-type),
-.fia-lesson-wrapper:not(:last-of-type) {
-  .fia-post-link-wrapper {
+.fe-lesson-wrapper:not(:last-of-type) {
+  .fe-post-link-wrapper {
     margin-bottom: 10px;
   }
 }

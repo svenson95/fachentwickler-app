@@ -1,9 +1,9 @@
-<div class="fia-exam-item">
-  <div class="fia-icon-details-title-wrapper">
-    <div class="fia-icon-details">
-      <mat-icon class="fia-exam-item-icon">insert_invitation</mat-icon>
+<div class="fe-exam-item">
+  <div class="fe-icon-details-title-wrapper">
+    <div class="fe-icon-details">
+      <mat-icon class="fe-exam-item-icon">insert_invitation</mat-icon>
       <div class="details-button-wrapper">
-        <div class="fia-details-wrapper">
+        <div class="fe-details-wrapper">
           <p class="date">{{exam.date | date:'dd.MM.yyyy'}} <span class="bracket">|</span> {{exam.date | date: 'EEEE'}}</p>
           <p class="days-left" *ngIf="daysLeft !== null">{{daysLeft(exam.date)}}</p>
         </div>
@@ -14,17 +14,17 @@
         </button>
       </div>
     </div>
-    <div class="fia-exam-title-wrapper">
-      <p class="fia-exam-subject" [innerHTML]="fullSubjectName(exam.subject)"></p>
-      <p class="fia-exam-title">{{exam.title}}</p>
+    <div class="fe-exam-title-wrapper">
+      <p class="fe-exam-subject" [innerHTML]="fullSubjectName(exam.subject)"></p>
+      <p class="fe-exam-title">{{exam.title}}</p>
     </div>
   </div>
-  <div class="fia-lessons-container" *ngIf="lessonsVisible">
-    <div class="fia-lesson-wrapper" *ngFor="let lesson of examLessons; let i = index;">
-      <hr class="fia-horizontal-line">
-      <hr class="fia-vertical-line">
+  <div class="fe-lessons-container" *ngIf="lessonsVisible">
+    <div class="fe-lesson-wrapper" *ngFor="let lesson of examLessons; let i = index;">
+      <hr class="fe-horizontal-line">
+      <hr class="fe-vertical-line">
       <fe-post-link [post]="lesson"></fe-post-link>
     </div>
-    <mat-spinner class="fia-loading-spinner" *ngIf="lessonsVisible && examLessons === undefined"></mat-spinner>
+    <mat-spinner class="fe-loading-spinner" *ngIf="lessonsVisible && examLessons === undefined"></mat-spinner>
   </div>
 </div>

@@ -1,4 +1,4 @@
-.fia-page.edit-post .elements-bar {
+.fe-page.edit-post .elements-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
     display: none;
   }
 
-  .fia-elements-label {
+  .fe-elements-label {
     font-size: 1.2em;
     margin-bottom: 0;
     margin-right: 10px;
@@ -20,7 +20,7 @@
     letter-spacing: 1px;
   }
 
-  .fia-element-button {
+  .fe-element-button {
     background: transparent;
     border: 1px solid var(--tertiary-color);
     color: var(--tertiary-color);
@@ -35,25 +35,25 @@
   }
 }
 
-.fia-page.edit-post .fia-card {
-  .fia-card-title {
+.fe-page.edit-post .fe-card {
+  .fe-card-title {
   }
-  .fia-card-description {
+  .fe-card-description {
   }
 
-  .fia-post-content {
+  .fe-post-content {
     fe-post-element:first-child {
-      .fia-post-item {
+      .fe-post-item {
         margin-top: 20px;
       }
     }
   }
 
-  .fia-button-container {
+  .fe-button-container {
     display: flex;
     flex-direction: row-reverse;
 
-    .fia-text-button:not(:first-of-type) {
+    .fe-text-button:not(:first-of-type) {
       margin-right: 10px;
     }
   }

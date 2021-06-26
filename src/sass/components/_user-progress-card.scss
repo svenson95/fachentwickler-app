@@ -1,11 +1,11 @@
-mat-card.fia-card.fia-user-progress {
+mat-card.fe-card.fe-user-progress {
   overflow: hidden;
   padding-bottom: 20px;
 
-  .fia-view-wrapper {
+  .fe-view-wrapper {
     padding-top: 10px;
 
-    .fia-progress-lesson, .fia-progress-week {
+    .fe-progress-lesson, .fe-progress-week {
       .label {
         font-size: 1.1em;
         margin-top: 8px;
@@ -25,7 +25,7 @@ mat-card.fia-card.fia-user-progress {
       }
     }
 
-    .fia-progress-lesson {
+    .fe-progress-lesson {
       margin-bottom: 20px;
 
       .progress-bar {
@@ -35,7 +35,7 @@ mat-card.fia-card.fia-user-progress {
       }
     }
 
-    .fia-progress-week {
+    .fe-progress-week {
       margin-bottom: 30px;
 
       .progress-bar {
@@ -45,7 +45,7 @@ mat-card.fia-card.fia-user-progress {
       }
     }
 
-    .fia-loading-spinner {
+    .fe-loading-spinner {
       margin-top: 35px;
       margin-bottom: 4px;
     }

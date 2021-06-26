@@ -1,8 +1,8 @@
-.fia-exam-item {
+.fe-exam-item {
   display: flex;
   flex-direction: column;
 
-  .fia-icon-details-title-wrapper {
+  .fe-icon-details-title-wrapper {
     display: flex;
     align-items: center;
 
@@ -11,7 +11,7 @@
       flex-direction: column-reverse;
     }
 
-    .fia-icon-details {
+    .fe-icon-details {
       display: flex;
       align-items: center;
       background: var(--exam-background);
@@ -22,7 +22,7 @@
         padding: 10px 10px 10px 25px;
       }
 
-      .fia-exam-item-icon {
+      .fe-exam-item-icon {
         align-self: center;
         color: var(--tertiary-color);
         $size: 50px;
@@ -49,7 +49,7 @@
       flex-direction: column;
       margin-right: 5px;
 
-      .fia-details-wrapper {
+      .fe-details-wrapper {
         display: flex;
         justify-content: space-between;
         font-size: .8rem;
@@ -123,9 +123,9 @@
       }
     }
 
-    .fia-exam-title-wrapper {
+    .fe-exam-title-wrapper {
 
-      .fia-exam-subject {
+      .fe-exam-subject {
         color: var(--grey-4);
         letter-spacing: 1px;
         margin-bottom: 0;
@@ -139,7 +139,7 @@
         }
       }
 
-      .fia-exam-subject, .fia-exam-title {
+      .fe-exam-subject, .fe-exam-title {
 
         @include from-sm {
           margin-top: 0;
@@ -150,7 +150,7 @@
         }
       }
 
-      .fia-exam-title {
+      .fe-exam-title {
         font-size: 1em;
         letter-spacing: 1px;
         flex-grow: 1;
@@ -170,7 +170,7 @@
 
   }
 
-  .fia-lessons-container {
+  .fe-lessons-container {
     padding-top: 10px;
     margin-left: 50px;
     position: relative;
@@ -179,10 +179,10 @@
       margin-left: 35px;
     }
 
-    .fia-lesson-wrapper {
+    .fe-lesson-wrapper {
       position: relative;
 
-      .fia-horizontal-line, .fia-vertical-line {
+      .fe-horizontal-line, .fe-vertical-line {
         border: none;
         position: absolute;
         background: var(--exam-background);
@@ -196,7 +196,7 @@
         }
       }
 
-      .fia-horizontal-line {
+      .fe-horizontal-line {
         height: 1px;
         bottom: 0;
         left: -35px;
@@ -211,7 +211,7 @@
         }
       }
 
-      .fia-vertical-line {
+      .fe-vertical-line {
         width: 3px;
         top: -10px;
         bottom: 0;

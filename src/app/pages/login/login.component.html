@@ -1,10 +1,10 @@
-<div class="fia-page login-page">
-  <mat-card class="fia-card">
-    <p class="fia-card-title">Schülerbereich</p>
-    <mat-card-content class="fia-view-wrapper">
-      <form class="fia-login-column" [formGroup]="formGroup" (ngSubmit)="login($event)" (change)="onFormChange($event)">
-        <div class="fia-input-fields">
-          <mat-form-field class="fia-input fia-name-input">
+<div class="fe-page login-page">
+  <mat-card class="fe-card">
+    <p class="fe-card-title">Schülerbereich</p>
+    <mat-card-content class="fe-view-wrapper">
+      <form class="fe-login-column" [formGroup]="formGroup" (ngSubmit)="login($event)" (change)="onFormChange($event)">
+        <div class="fe-input-fields">
+          <mat-form-field class="fe-input fe-name-input">
             <mat-label>Benutzername</mat-label>
             <input matInput type="text" autocomplete="off" [formControl]="username" (keypress)="usernameFieldKeyPress($event)"/>
             <mat-error *ngIf="username.hasError('username') && !username.hasError('required')">
@@ -15,7 +15,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field class="fia-input fia-password-input">
+          <mat-form-field class="fe-input fe-password-input">
             <mat-label>Passwort</mat-label>
             <input matInput type="password" [formControl]="password" #passwordInput/>
             <mat-error *ngIf="password.hasError('invalidPassword') && !password.hasError('required')">
@@ -32,20 +32,20 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="fia-buttons-wrapper">
-          <button class="fia-text-button" type="submit">
+        <div class="fe-buttons-wrapper">
+          <button class="fe-text-button" type="submit">
             <span *ngIf="!loading">Anmelden</span>
-            <mat-spinner class="fia-loading-spinner" *ngIf="loading"></mat-spinner>
+            <mat-spinner class="fe-loading-spinner" *ngIf="loading"></mat-spinner>
           </button>
-          <button class="fia-text-button" disabled>
+          <button class="fe-text-button" disabled>
             <span>Passwort vergessen?</span>
           </button>
         </div>
       </form>
-      <hr class="fia-divider-line"/>
-      <div class="fia-register-column">
-        <p class="fia-no-account-hint">Noch nicht registriert?</p>
-        <a class="fia-text-button" routerLink="/register">
+      <hr class="fe-divider-line"/>
+      <div class="fe-register-column">
+        <p class="fe-no-account-hint">Noch nicht registriert?</p>
+        <a class="fe-text-button" routerLink="/register">
           <span>Account erstellen</span>
         </a>
       </div>

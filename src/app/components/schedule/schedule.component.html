@@ -1,22 +1,22 @@
-<table class="fia-schedule-table">
+<table class="fe-schedule-table">
   <tbody>
     <tr>
-      <th class="fia-schedule-header"></th>
-      <td class="fia-schedule-time">07:15 - <br/> 08:45</td>
-      <td class="fia-schedule-time">09:15 - <br/> 10:45</td>
-      <td class="fia-schedule-time">11:10 - <br/> 12:40</td>
-      <td class="fia-schedule-time">13:10 - <br/> 14:40</td>
+      <th class="fe-schedule-header"></th>
+      <td class="fe-schedule-time">07:15 - <br/> 08:45</td>
+      <td class="fe-schedule-time">09:15 - <br/> 10:45</td>
+      <td class="fe-schedule-time">11:10 - <br/> 12:40</td>
+      <td class="fe-schedule-time">13:10 - <br/> 14:40</td>
     </tr>
     <tr *ngFor="let day of schedule.days; let i = index">
-      <th *ngIf="i === 0" class="fia-schedule-header">Mo</th>
-      <th *ngIf="i === 1" class="fia-schedule-header">Di</th>
-      <th *ngIf="i === 2" class="fia-schedule-header">Mi</th>
-      <th *ngIf="i === 3" class="fia-schedule-header">Do</th>
-      <th *ngIf="i === 4" class="fia-schedule-header">Fr</th>
+      <th *ngIf="i === 0" class="fe-schedule-header">Mo</th>
+      <th *ngIf="i === 1" class="fe-schedule-header">Di</th>
+      <th *ngIf="i === 2" class="fe-schedule-header">Mi</th>
+      <th *ngIf="i === 3" class="fe-schedule-header">Do</th>
+      <th *ngIf="i === 4" class="fe-schedule-header">Fr</th>
       <td *ngFor="let hour of day.lessons">
-        <span class="fia-hour-subject">{{subjectName(hour.subject)}}</span>
-        <span class="fia-hour-teacher">{{hour.teacher | titlecase}}</span>
-        <span class="fia-hour-room">{{hour.room}}</span>
+        <span class="fe-hour-subject">{{subjectName(hour.subject)}}</span>
+        <span class="fe-hour-teacher">{{hour.teacher | titlecase}}</span>
+        <span class="fe-hour-room">{{hour.room}}</span>
       </td>
     </tr>
   </tbody>

@@ -57,7 +57,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);
 
-    const body = this.elementRef.nativeElement.querySelector('.fia-body');
+    const body = this.elementRef.nativeElement.querySelector('.fe-body');
     if (this.isMobile.matches && body) {
       body.addEventListener('scroll', this.onScroll.bind(this), true);
     } else {
@@ -69,14 +69,14 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   onScroll(event: any): any {
     if (!this.isCurriculumPage()) {
       if (this.isMobile.matches) {
-        const container = this.elementRef.nativeElement.querySelector('.fia-body');
+        const container = this.elementRef.nativeElement.querySelector('.fe-body');
         if (container.scrollTop > 100  && !container.classList.contains('scrolled')) {
           container.classList.add('scrolled');
         } else if (container.scrollTop < 20) {
           container.classList.remove('scrolled');
         }
       } else {
-        const container = this.elementRef.nativeElement.querySelector('.fia-page-container');
+        const container = this.elementRef.nativeElement.querySelector('.fe-page-container');
         if (event.target.scrollTop > 100 && !container.classList.contains('scrolled')) {
           container.classList.add('scrolled');
         } else if (event.target.scrollTop < 20) {

@@ -1,14 +1,14 @@
-.fia-card.fia-card-index-cards .fia-card-content {
+.fe-card.fe-card-index-cards .fe-card-content {
   justify-content: space-evenly;
 }
 
-.fia-card.fia-card-index-cards {
-  .fia-card-title {
+.fe-card.fe-card-index-cards {
+  .fe-card-title {
   }
-  .fia-card-description {
+  .fe-card-description {
   }
 
-  .fia-card-content {
+  .fe-card-content {
     display: flex;
     margin-top: 60px;
     margin-bottom: 30px;
@@ -21,7 +21,7 @@
   }
 }
 
-.fia-card.fia-card-index-cards .fia-index-card {
+.fe-card.fe-card-index-cards .fe-index-card {
   background-color: transparent;
   width: 530px;
   height: 380px;
@@ -41,7 +41,7 @@
     font-size: .7em;
   }
 
-  .fia-index-card-inner {
+  .fe-index-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -51,11 +51,11 @@
     box-shadow: var(--box-shadow);
   }
 
-  &.show-back .fia-index-card-inner {
+  &.show-back .fe-index-card-inner {
     transform: rotateY(180deg);
   }
 
-  .fia-index-card--front, .fia-index-card--back {
+  .fe-index-card--front, .fe-index-card--back {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -118,7 +118,7 @@
     }
   }
 
-  .fia-index-card--front {
+  .fe-index-card--front {
     background-image: url("../../assets/images/indexcard-background.png");
 
     .card-header, .content {
@@ -134,7 +134,7 @@
     }
   }
 
-  .fia-index-card--back {
+  .fe-index-card--back {
     background-image: url("../../assets/images/indexcard-background-flipped.png");
     transform: rotateY(180deg);
 
@@ -153,7 +153,7 @@
 
 }
 
-.fia-card.fia-card-index-cards .fia-buttons-container {
+.fe-card.fe-card-index-cards .fe-buttons-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

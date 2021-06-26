@@ -1,8 +1,8 @@
-fe-header.fia-header {
+fe-header.fe-header {
   box-shadow: var(--box-shadow);
 }
 
-fe-header.fia-header .mat-toolbar {
+fe-header.fe-header .mat-toolbar {
   height: 80px;
   width: 100%;
   max-width: 1365px;
@@ -21,13 +21,13 @@ fe-header.fia-header .mat-toolbar {
     padding: 0 5px;
   }
 
-  .fia-header-content {
+  .fe-header-content {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 
-    .fia-page-title {
+    .fe-page-title {
       display: flex;
       align-items: center;
       margin-left: 10px;
@@ -90,23 +90,23 @@ fe-header.fia-header .mat-toolbar {
   }
 }
 
-fe-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
+fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   z-index: 2;
 
-  .fia-button-container {
+  .fe-button-container {
     display: flex;
     line-height: normal;
     color: var(--tertiary-color);
     align-items: center;
 
-    .fia-text-button {
+    .fe-text-button {
       transition: var(--header-button-transition);
     }
 
-    .fia-menu-btn {
+    .fe-menu-btn {
       margin-left: 0;
       margin-right: 0;
       transition: var(--header-button-transition);
@@ -125,7 +125,7 @@ fe-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
     $btn-color: #19bc8b;
     $btn-shadow: #{adjust-hue($btn-color, 45deg)};
 
-    .fia-dashboard-login-btn {
+    .fe-dashboard-login-btn {
       padding: 8px 14px 6px;
       margin-left: 10px;
       margin-right: 20px;
@@ -158,8 +158,8 @@ fe-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
       }
     }
 
-    .fia-sidenav-hamburger-btn,
-    .fia-admin-panel-btn {
+    .fe-sidenav-hamburger-btn,
+    .fe-admin-panel-btn {
       margin-top: 5px;
 
       @include from-xs {
@@ -171,17 +171,17 @@ fe-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
       }
     }
 
-    .fia-admin-panel-btn {
+    .fe-admin-panel-btn {
       margin-top: 0;
     }
 
-    .fia-sidenav-hamburger-btn {
+    .fe-sidenav-hamburger-btn {
       margin-top: 0;
     }
   }
 }
 
-fe-header.fia-header .mat-toolbar .fia-logo-wrapper {
+fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
   display: flex;
   justify-content: left;
   cursor: pointer;
@@ -211,7 +211,7 @@ fe-header.fia-header .mat-toolbar .fia-logo-wrapper {
     border: 1px solid var(--tertiary-color);
   }
 
-  .fia-icon-wrapper {
+  .fe-icon-wrapper {
 
     @include to-xs {
       width: 24px;
@@ -225,7 +225,7 @@ fe-header.fia-header .mat-toolbar .fia-logo-wrapper {
     }
   }
 
-  .fia-app-name {
+  .fe-app-name {
     @include to-xs {
       display: none;
     }
@@ -235,7 +235,7 @@ fe-header.fia-header .mat-toolbar .fia-logo-wrapper {
     &.active-route {
       fill: var(--secondary-color);
 
-      .fia-icon-wrapper {
+      .fe-icon-wrapper {
         fill: var(--secondary-color);
       }
 
@@ -245,24 +245,24 @@ fe-header.fia-header .mat-toolbar .fia-logo-wrapper {
     }
   }
 
-  &:hover .fia-app-name {
+  &:hover .fe-app-name {
     letter-spacing: 1px;
     transition: letter-spacing 500ms ease-out;
   }
-  &:active .fia-app-name {
+  &:active .fe-app-name {
     letter-spacing: .5px;
   }
 
-  .fia-app-name {
+  .fe-app-name {
     @include to-xs {
       display: none;
     }
   }
 }
 
-mat-toolbar.fia-header-toolbar.mat-toolbar .fia-logo-wrapper {
+mat-toolbar.fe-header-toolbar.mat-toolbar .fe-logo-wrapper {
   &:hover, &:focus {
-    .fia-icon-wrapper:not(.active-route) {
+    .fe-icon-wrapper:not(.active-route) {
       @include from-md {
         fill: var(--secondary-color);
         transition: 150ms;
@@ -276,18 +276,18 @@ mat-toolbar.fia-header-toolbar.mat-toolbar .fia-logo-wrapper {
 }
 
 .cdk-overlay-container {
-  .fia-more-menu {
+  .fe-more-menu {
     background-color: var(--background-secondary);
 
-    .fia-menu-button .label {
+    .fe-menu-button .label {
       color: var(--text-color-1);
     }
 
-    .fia-menu-button mat-icon {
+    .fe-menu-button mat-icon {
       color: var(--tertiary-color) !important;
     }
 
-    .fia-menu-button .label {
+    .fe-menu-button .label {
       padding-right: 10px;
     }
 
@@ -315,14 +315,14 @@ mat-toolbar.fia-header-toolbar.mat-toolbar .fia-logo-wrapper {
   }
 }
 
-fe-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
+fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
   margin-left: 20px;
 
   @include to-md {
     display: none;
   }
 
-  mat-spinner.fia-loading-spinner.mat-spinner {
+  mat-spinner.fe-loading-spinner.mat-spinner {
     $size: 16px;
     width: $size !important;
     height: $size !important;
@@ -340,7 +340,7 @@ fe-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
   }
 
   $searchbar-height: 33px;
-  .fia-search-bar {
+  .fe-search-bar {
     height: $searchbar-height;
     width: 200px;
     border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
@@ -405,7 +405,7 @@ fe-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
   }
 }
 
-fe-header.fia-header .fia-header-progress-bar {
+fe-header.fe-header .fe-header-progress-bar {
   height: var(--progressbar-height);
   z-index: 999;
 
@@ -427,7 +427,7 @@ fe-header.fia-header .fia-header-progress-bar {
 }
 
 .scrolled {
-  fe-header.fia-header .fia-header-toolbar {
+  fe-header.fe-header .fe-header-toolbar {
     height: 60px;
     transition: height 300ms ease-out;
 
@@ -438,7 +438,7 @@ fe-header.fia-header .fia-header-progress-bar {
 }
 
 
-.is-mobile fe-header.fia-header .mat-toolbar {
+.is-mobile fe-header.fe-header .mat-toolbar {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 999;

@@ -1,21 +1,21 @@
-<mat-card class="fia-card fia-card-index-cards">
-  <p class="fia-card-title" *ngIf="indexCards !== undefined"
+<mat-card class="fe-card fe-card-index-cards">
+  <p class="fe-card-title" *ngIf="indexCards !== undefined"
      [innerHTML]="indexCards.title"></p>
-  <p class="fia-card-description" *ngIf="indexCards !== undefined">
+  <p class="fe-card-description" *ngIf="indexCards !== undefined">
     <span [innerHTML]="indexCards.description"></span>
     <fe-post-badge [post]="indexCards"></fe-post-badge>
   </p>
-  <mat-card-content class="fia-card-content" *ngIf="indexCards !== undefined">
-    <div class="fia-index-card" [class.show-back]="isAnswerVisible">
-      <div class="fia-index-card-inner">
-        <div class="fia-index-card--front">
+  <mat-card-content class="fe-card-content" *ngIf="indexCards !== undefined">
+    <div class="fe-index-card" [class.show-back]="isAnswerVisible">
+      <div class="fe-index-card-inner">
+        <div class="fe-index-card--front">
           <div class="card-header">
             <p class="label">Frage</p>
             <p class="label">{{level+1}} von {{indexCards.questions.length}}</p>
           </div>
           <p class="content" [innerHTML]="indexCards.questions[this.level].question"></p>
         </div>
-        <div class="fia-index-card--back">
+        <div class="fe-index-card--back">
           <div class="card-header">
             <p class="label">Antwort</p>
             <p class="label">{{level+1}} von {{indexCards.questions.length}}</p>
@@ -26,21 +26,21 @@
         </div>
       </div>
     </div>
-    <div class="fia-buttons-container">
-      <button class="fia-text-button" (click)="showAnswer()"
+    <div class="fe-buttons-container">
+      <button class="fe-text-button" (click)="showAnswer()"
               [disabled]="isAnswerVisible">
         <span>Weiter</span>
       </button>
-      <button class="fia-text-button" (click)="increaseLevel()"
+      <button class="fe-text-button" (click)="increaseLevel()"
               [disabled]="!isAnswerVisible || end">
         <span>Nächste Frage</span>
       </button>
-      <button class="fia-text-button disabled" (click)="resetLevel()" [disabled]="!end">
+      <button class="fe-text-button disabled" (click)="resetLevel()" [disabled]="!end">
         <span>Zurück zum Anfang</span>
       </button>
     </div>
   </mat-card-content>
-  <p class="fia-post-last-update" *ngIf="indexCards !== undefined">
+  <p class="fe-post-last-update" *ngIf="indexCards !== undefined">
     Letzte Aktualisierung: {{indexCards.lastUpdate | date:'dd.MM.yyyy'}}
   </p>
 </mat-card>

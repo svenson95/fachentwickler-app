@@ -1,20 +1,20 @@
-<div class="fia-page dashboard">
+<div class="fe-page dashboard">
 
   <fe-user-progress-card [user]="user" [dashboard]="dataService.dashboard"></fe-user-progress-card>
   <fe-news-card *ngIf="this.dataService.dashboard?.schoolNews" [news]="[this.dataService.dashboard.schoolNews[0]]" [onlyLastOne]="true"></fe-news-card>
   <fe-next-exams-card [nextExams]="dataService.dashboard?.nextExams"></fe-next-exams-card>
 
-  <mat-card class="fia-card fia-schedule">
-    <p class="fia-card-title">Stundenplan</p>
-    <p class="fia-card-description">{{schedule.weekBegin | date:'dd.MM.yyyy'}} bis {{schedule.weekEnd | date:'dd.MM.yyyy'}}</p>
-    <mat-card-content class="fia-view-wrapper">
+  <mat-card class="fe-card fe-schedule">
+    <p class="fe-card-title">Stundenplan</p>
+    <p class="fe-card-description">{{schedule.weekBegin | date:'dd.MM.yyyy'}} bis {{schedule.weekEnd | date:'dd.MM.yyyy'}}</p>
+    <mat-card-content class="fe-view-wrapper">
       <fe-schedule></fe-schedule>
     </mat-card-content>
   </mat-card>
 
   <fe-school-week-card *ngIf="dataService.schoolWeek !== undefined" [week]="dataService.schoolWeek" [isDashboardPage]="true"></fe-school-week-card>
   <div class="spinner-wrapper" *ngIf="dataService.schoolWeek === undefined">
-    <mat-spinner class="fia-loading-spinner"></mat-spinner>
+    <mat-spinner class="fe-loading-spinner"></mat-spinner>
   </div>
 
 </div>

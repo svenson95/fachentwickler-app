@@ -1,12 +1,12 @@
-<mat-card class="fia-card">
-    <p class="fia-card-title" *ngIf="matching !== undefined" [innerHTML]="matching.title"></p>
-    <p class="fia-card-description" *ngIf="matching !== undefined">
+<mat-card class="fe-card">
+    <p class="fe-card-title" *ngIf="matching !== undefined" [innerHTML]="matching.title"></p>
+    <p class="fe-card-description" *ngIf="matching !== undefined">
         <span [innerHTML]="matching.description"></span>
         <fe-post-badge [post]="matching"></fe-post-badge>
     </p>
-    <mat-card-content class="fia-card-content" *ngIf="matching !== undefined">
-        <div class="fia-matching">
-            <div class="fia-content-wrapper">
+    <mat-card-content class="fe-card-content" *ngIf="matching !== undefined">
+        <div class="fe-matching">
+            <div class="fe-content-wrapper">
                 <div id="game" #gameView [class.correct]="isCorrect === true" [class.wrong]="isCorrect === false">
                     <p class="game-introduction">
                         Setze die Karten in die richtige Reihenfolge und klicke auf Verbinden.
@@ -34,12 +34,12 @@
                             </div>
                         </div>
                     </div>
-                    <button class="fia-text-button" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined">
+                    <button class="fe-text-button" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined">
                         <span>Verbinden</span>
                     </button>
                     <ng-container *ngIf="state === 'end'">
                         <h1 class="finish-label">Lektion abgeschlossen</h1>
-                        <button class="fia-text-button" (click)="restartGame()">
+                        <button class="fe-text-button" (click)="restartGame()">
                             <span>Neustarten</span>
                         </button>
                     </ng-container>
@@ -47,7 +47,7 @@
             </div>
         </div>
     </mat-card-content>
-    <p class="fia-post-last-update" *ngIf="matching !== undefined">
+    <p class="fe-post-last-update" *ngIf="matching !== undefined">
         Letzte Aktualisierung: {{matching.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
 </mat-card>
