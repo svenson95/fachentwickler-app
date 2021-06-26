@@ -5,7 +5,7 @@ import { schedule } from '../../../data/schedule';
 import { MenuItem } from '../../models/menu-item';
 
 @Component({
-  selector: 'app-schedule',
+  selector: 'fe-schedule',
   templateUrl: './schedule.component.html'
 })
 export class ScheduleComponent implements OnInit {

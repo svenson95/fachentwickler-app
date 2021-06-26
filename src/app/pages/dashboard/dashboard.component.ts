@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { schedule } from '../../../data/schedule';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'fe-dashboard',
   templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {

@@ -8,16 +8,16 @@
     </p>
     <p class="fia-card-description" *ngIf="post !== undefined">
       {{post.description}}
-      <app-post-badge [post]="post"></app-post-badge>
+      <fe-post-badge [post]="post"></fe-post-badge>
     </p>
     <mat-spinner class="fia-loading-spinner" *ngIf="post === undefined"></mat-spinner>
     <mat-card-content class="fia-post-content" *ngIf="post !== undefined">
-      <app-post-element *ngFor="let element of post.elements" [element]="element"></app-post-element>
+      <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
     </mat-card-content>
     <p class="fia-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>
 
-  <app-lesson-footer [postId]="post._id" *ngIf="authService.isAuthenticated && post"></app-lesson-footer>
+  <fe-lesson-footer [postId]="post._id" *ngIf="authService.isAuthenticated && post"></fe-lesson-footer>
 </div>

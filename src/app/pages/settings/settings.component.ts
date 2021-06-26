@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HeaderService} from '../../services/header.service';
 
 @Component({
-  selector: 'app-settings',
+  selector: 'fe-settings',
   templateUrl: './settings.component.html'
 })
 export class SettingsComponent implements OnInit {

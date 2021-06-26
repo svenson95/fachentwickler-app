@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HeaderService} from '../../services/header.service';
 
 @Component({
-  selector: 'app-feedback',
+  selector: 'fe-feedback',
   templateUrl: './feedback.component.html'
 })
 export class FeedbackComponent implements OnInit {

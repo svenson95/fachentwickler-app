@@ -9,7 +9,7 @@ import { HeaderService } from '../../services/header.service';
 import { subjects } from '../../../data/menu-items';
 
 @Component({
-  selector: 'app-subject',
+  selector: 'fe-subject',
   templateUrl: './subject.component.html'
 })
 export class SubjectComponent implements OnInit, OnDestroy {

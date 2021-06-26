@@ -5,7 +5,7 @@ import { DataService } from '../../services/data/data.service';
 import { subjects } from '../../../data/menu-items';
 
 @Component({
-  selector: 'app-school-week-card',
+  selector: 'fe-school-week-card',
   templateUrl: './school-week-card.component.html'
 })
 export class SchoolWeekCardComponent implements OnInit {

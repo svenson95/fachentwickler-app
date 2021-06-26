@@ -12,7 +12,7 @@ import { LoadingService } from '../../services/loading.service';
 import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-dialog.component';
 
 @Component({
-  selector: 'app-image-manager-dialog',
+  selector: 'fe-image-manager-dialog',
   templateUrl: './image-manager-dialog.component.html'
 })
 export class ImageManagerDialogComponent implements OnInit {

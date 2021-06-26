@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pagination-bar',
+  selector: 'fe-pagination-bar',
   templateUrl: './pagination-bar.component.html'
 })
 export class PaginationBarComponent implements OnInit {

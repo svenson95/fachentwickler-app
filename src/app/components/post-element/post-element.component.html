@@ -71,7 +71,7 @@
   </table>
   <!-- TABLE-GROUP -->
   <div class="post-table-group" *ngIf="element.type === ElementType.TABLE_GROUP && (element.hidden ? isVisible : true)">
-    <app-post-element *ngFor="let table of element.elements" [element]="table"></app-post-element>
+    <fe-post-element *ngFor="let table of element.elements" [element]="table"></fe-post-element>
   </div>
   <!-- CODE -->
   <pre class="post-code" *ngIf="element.type === ElementType.CODE && (element.hidden ? isVisible : true)">
@@ -79,6 +79,6 @@
   </pre>
   <!-- ANSWER-GROUP -->
   <div class="post-answer-group" *ngIf="element.type === ElementType.ANSWER_GROUP && (element.hidden ? isVisible : true)">
-    <app-post-element *ngFor="let el of element.elements" [element]="el"></app-post-element>
+    <fe-post-element *ngFor="let el of element.elements" [element]="el"></fe-post-element>
   </div>
 </div>

@@ -10,7 +10,7 @@ import { ThemeService } from '../../services/theme.service';
 
 /** @title Responsive sidenav */
 @Component({
-  selector: 'app-page',
+  selector: 'fe-page',
   templateUrl: 'page.component.html'
 })
 export class PageComponent implements OnInit, OnDestroy, AfterViewInit {

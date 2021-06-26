@@ -11,7 +11,7 @@ import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'fe-login',
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {

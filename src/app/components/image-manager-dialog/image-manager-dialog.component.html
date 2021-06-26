@@ -83,6 +83,6 @@
     </div>
   </div>
   <div class="fia-pagination-bar" *ngIf="images.length > 0 && allImagesLength">
-    <app-pagination-bar [totalItems]="allImagesLength" [currentPage]="currentPage" (changePage)="loadImages($event)"></app-pagination-bar>
+    <fe-pagination-bar [totalItems]="allImagesLength" [currentPage]="currentPage" (changePage)="loadImages($event)"></fe-pagination-bar>
   </div>
 </mat-dialog-content>

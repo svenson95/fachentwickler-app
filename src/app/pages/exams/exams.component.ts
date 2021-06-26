@@ -7,7 +7,7 @@ import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
 
 @Component({
-  selector: 'app-exams',
+  selector: 'fe-exams',
   templateUrl: './exams.component.html'
 })
 export class ExamsComponent implements OnInit, AfterViewInit {

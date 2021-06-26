@@ -3,7 +3,7 @@
      [innerHTML]="quiz.title"></p>
   <p class="fia-card-description" *ngIf="quiz !== undefined">
     <span [innerHTML]="quiz.description"></span>
-    <app-post-badge [post]="quiz"></app-post-badge>
+    <fe-post-badge [post]="quiz"></fe-post-badge>
   </p>
   <mat-card-content class="fia-card-content" *ngIf="quiz !== undefined">
     <div class="fia-quiz">

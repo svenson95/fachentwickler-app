@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-content',
+  selector: 'fe-content',
   templateUrl: './content.component.html'
 })
 export class ContentComponent implements OnInit {

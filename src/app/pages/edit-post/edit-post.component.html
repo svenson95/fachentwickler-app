@@ -26,7 +26,7 @@
     </p>
     <mat-spinner class="fia-loading-spinner" *ngIf="post === undefined"></mat-spinner>
     <mat-card-content class="fia-post-content" *ngIf="post !== undefined">
-      <app-post-element *ngFor="let element of post.elements" [element]="element" [contentEditable]="true"></app-post-element>
+      <fe-post-element *ngFor="let element of post.elements" [element]="element" [contentEditable]="true"></fe-post-element>
     </mat-card-content>
     <p class="fia-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}

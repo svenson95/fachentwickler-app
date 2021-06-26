@@ -6,7 +6,7 @@ import { ImageChunk } from '../../models/image-data';
 import { DataService } from '../../services/data/data.service';
 
 @Component({
-  selector: 'app-post-element',
+  selector: 'fe-post-element',
   templateUrl: './post-element.component.html'
 })
 export class PostElementComponent implements OnInit {

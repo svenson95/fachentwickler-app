@@ -4,7 +4,7 @@ import { HeaderService } from '../../services/header.service';
 import { schedule } from '../../../data/schedule';
 
 @Component({
-  selector: 'app-substitution-schedule',
+  selector: 'fe-substitution-schedule',
   templateUrl: './substitution-schedule.component.html'
 })
 export class SubstitutionScheduleComponent implements OnInit {

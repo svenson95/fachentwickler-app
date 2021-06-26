@@ -8,7 +8,7 @@ import { DataService } from '../../services/data/data.service';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'app-exam-item',
+  selector: 'fe-exam-item',
   templateUrl: './exam-item.component.html'
   // animations: [
   //   trigger('listAnimation', [

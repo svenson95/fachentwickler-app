@@ -195,7 +195,7 @@
     display: inline-flex;
     flex-wrap: wrap;
 
-    > app-post-element {
+    > fe-post-element {
       margin: 6px;
 
       .post-table {
@@ -255,7 +255,7 @@
   }
 }
 
-.fia-page.post-page .fia-card .fia-post-content .post-answer-group app-post-element:first-child .fia-post-item {
+.fia-page.post-page .fia-card .fia-post-content .post-answer-group fe-post-element:first-child .fia-post-item {
   margin-top: 0;
 }
 

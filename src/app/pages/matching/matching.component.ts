@@ -7,7 +7,7 @@ import { Matching } from '../../models/matching-piece';
 import { subjects } from '../../../data/menu-items';
 
 @Component({
-  selector: 'app-quiz',
+  selector: 'fe-quiz',
   templateUrl: './matching.component.html'
 })
 export class MatchingComponent implements OnInit {

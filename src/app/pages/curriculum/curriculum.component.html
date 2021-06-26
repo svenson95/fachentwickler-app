@@ -20,7 +20,7 @@
       </mat-button-toggle-group>
     </mat-card>
     <div class="fia-weeks-container" (scroll)="onScroll()">
-      <app-school-week-card [class]="'week-' + week.schoolWeek" *ngFor="let week of schoolYears[selectedYear]?.weeks" [week]="week"></app-school-week-card>
+      <fe-school-week-card [class]="'week-' + week.schoolWeek" *ngFor="let week of schoolYears[selectedYear]?.weeks" [week]="week"></fe-school-week-card>
     </div>
   </div>
   <div class="fia-spinner-wrapper">

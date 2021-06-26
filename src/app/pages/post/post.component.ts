@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
 
 @Component({
-  selector: 'app-post',
+  selector: 'fe-post',
   templateUrl: './post.component.html'
 })
 export class PostComponent implements OnInit {

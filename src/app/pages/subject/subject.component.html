@@ -4,12 +4,12 @@
     <mat-spinner class="fia-loading-spinner" *ngIf="subject === undefined"></mat-spinner>
     <mat-card-content *ngIf="subject !== undefined">
       <div class="topic-description" *ngIf="subject.description !== undefined">
-        <app-post-element *ngFor="let el of subject.description" [element]="el"></app-post-element>
+        <fe-post-element *ngFor="let el of subject.description" [element]="el"></fe-post-element>
       </div>
       <div class="fia-topic" *ngFor="let topic of subject.topics">
         <p class="fia-topic-title">{{topic.title}}</p>
         <div class="fia-links">
-          <app-post-link *ngFor="let post of topic.links" [post]="post"></app-post-link>
+          <fe-post-link *ngFor="let post of topic.links" [post]="post"></fe-post-link>
         </div>
       </div>
     </mat-card-content>
@@ -19,7 +19,7 @@
     <p class="fia-card-title">Tests</p>
     <mat-card-content>
       <div class="fia-test-container">
-        <app-post-link *ngFor="let post of subject.tests" [post]="post"></app-post-link>
+        <fe-post-link *ngFor="let post of subject.tests" [post]="post"></fe-post-link>
       </div>
     </mat-card-content>
   </mat-card>

@@ -19,7 +19,7 @@
     </p>
     <mat-card-content>
       <div class="fia-search-results" *ngIf="!searchPostService.isSearching">
-        <app-post-link *ngFor="let post of searchResults" [post]="post"></app-post-link>
+        <fe-post-link *ngFor="let post of searchResults" [post]="post"></fe-post-link>
       </div>
     </mat-card-content>
   </mat-card>

@@ -235,20 +235,20 @@
         min-width: 500px;
       }
 
-      app-quiz-card,
-      app-indexcards-card,
-      app-matching-game {
+      fe-quiz-card,
+      fe-indexcards-card,
+      fe-matching-game {
         min-width: 80%;
       }
 
-      app-indexcards-card {
+      fe-indexcards-card {
         @include to-md {
           width: 100%;
         }
       }
 
-      app-indexcards-card,
-      app-matching-game {
+      fe-indexcards-card,
+      fe-matching-game {
         margin-top: 20px;
       }
 

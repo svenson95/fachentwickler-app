@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { IndexCards } from '../../models/index-cards';
 
 @Component({
-  selector: 'app-index-cards',
+  selector: 'fe-index-cards',
   templateUrl: './index-cards.component.html'
 })
 export class IndexCardsComponent implements OnInit {

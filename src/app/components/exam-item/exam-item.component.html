@@ -23,7 +23,7 @@
     <div class="fia-lesson-wrapper" *ngFor="let lesson of examLessons; let i = index;">
       <hr class="fia-horizontal-line">
       <hr class="fia-vertical-line">
-      <app-post-link [post]="lesson"></app-post-link>
+      <fe-post-link [post]="lesson"></fe-post-link>
     </div>
     <mat-spinner class="fia-loading-spinner" *ngIf="lessonsVisible && examLessons === undefined"></mat-spinner>
   </div>

@@ -53,10 +53,10 @@
       </div>
     </div>
     <div class="fia-components-wrapper">
-      <app-user-progress-card [user]="testUser" [dashboard]="testDashboard"></app-user-progress-card>
-      <app-news-card [news]="testDashboard.schoolNews" [onlyLastOne]="true"></app-news-card>
-      <app-next-exams-card [nextExams]="testDashboard.nextExams"></app-next-exams-card>
-      <app-school-week-card [week]="testSchoolWeek"></app-school-week-card>
+      <fe-user-progress-card [user]="testUser" [dashboard]="testDashboard"></fe-user-progress-card>
+      <fe-news-card [news]="testDashboard.schoolNews" [onlyLastOne]="true"></fe-news-card>
+      <fe-next-exams-card [nextExams]="testDashboard.nextExams"></fe-next-exams-card>
+      <fe-school-week-card [week]="testSchoolWeek"></fe-school-week-card>
     </div>
   </div>
   <div class="fia-landing-row second">
@@ -79,11 +79,11 @@
       </div>
     </div>
     <div class="fia-component-wrapper">
-      <app-quiz-card [quiz]="testQuiz"></app-quiz-card>
+      <fe-quiz-card [quiz]="testQuiz"></fe-quiz-card>
       <hr class="fia-divider-line"/>
-      <app-indexcards-card [indexCards]="testIndexCards"></app-indexcards-card>
+      <fe-indexcards-card [indexCards]="testIndexCards"></fe-indexcards-card>
       <hr class="fia-divider-line"/>
-      <app-matching-game [matching]="testMatching"></app-matching-game>
+      <fe-matching-game [matching]="testMatching"></fe-matching-game>
     </div>
   </div>
   <div class="fia-landing-row school">

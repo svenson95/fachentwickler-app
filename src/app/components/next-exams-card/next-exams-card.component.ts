@@ -6,7 +6,7 @@ import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
 
 @Component({
-  selector: 'app-next-exams-card',
+  selector: 'fe-next-exams-card',
   templateUrl: './next-exams-card.component.html'
 })
 export class NextExamsCardComponent implements OnInit {

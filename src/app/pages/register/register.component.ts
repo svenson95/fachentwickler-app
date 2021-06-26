@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
-  selector: 'app-register',
+  selector: 'fe-register',
   templateUrl: './register.component.html'
 })
 export class RegisterComponent implements OnInit, OnChanges {

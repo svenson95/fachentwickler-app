@@ -4,11 +4,11 @@ import { NavigationEnd , Router} from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-root',
+  selector: 'fe-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'fiademy-app';
+  title = 'fachentwickler-app';
 
   constructor(private router: Router,
               private viewportScroller: ViewportScroller

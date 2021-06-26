@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { study, languages, myClass, subjects } from '../../../data/menu-items';
 
 @Component({
-  selector: 'app-sidenav',
+  selector: 'fe-sidenav',
   templateUrl: './sidenav.component.html'
 })
 export class SidenavComponent implements OnInit {

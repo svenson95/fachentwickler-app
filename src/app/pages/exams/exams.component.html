@@ -15,7 +15,7 @@
         </div>
         <div class="fia-exams-column">
           <mat-spinner class="fia-loading-spinner" *ngIf="allExams === undefined"></mat-spinner>
-          <app-exam-item class="fia-exam" *ngFor="let exam of monthExams" [exam]="exam"></app-exam-item>
+          <fe-exam-item class="fia-exam" *ngFor="let exam of monthExams" [exam]="exam"></fe-exam-item>
           <p class="fia-no-data" *ngIf="monthExams && monthExams.length === 0">Keine Klausuren in diesem Monat</p>
           <p class="fia-no-data" *ngIf="allExams === null">Fehler beim Laden der Klausuren</p>
         </div>

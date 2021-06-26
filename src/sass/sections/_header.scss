@@ -1,8 +1,8 @@
-app-header.fia-header {
+fe-header.fia-header {
   box-shadow: var(--box-shadow);
 }
 
-app-header.fia-header .mat-toolbar {
+fe-header.fia-header .mat-toolbar {
   height: 80px;
   width: 100%;
   max-width: 1365px;
@@ -90,7 +90,7 @@ app-header.fia-header .mat-toolbar {
   }
 }
 
-app-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
+fe-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -181,7 +181,7 @@ app-header.fia-header .mat-toolbar .fia-header-elements-wrapper {
   }
 }
 
-app-header.fia-header .mat-toolbar .fia-logo-wrapper {
+fe-header.fia-header .mat-toolbar .fia-logo-wrapper {
   display: flex;
   justify-content: left;
   cursor: pointer;
@@ -315,7 +315,7 @@ mat-toolbar.fia-header-toolbar.mat-toolbar .fia-logo-wrapper {
   }
 }
 
-app-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
+fe-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
   margin-left: 20px;
 
   @include to-md {
@@ -405,7 +405,7 @@ app-header.fia-header .mat-toolbar .fia-searchbar-wrapper {
   }
 }
 
-app-header.fia-header .fia-header-progress-bar {
+fe-header.fia-header .fia-header-progress-bar {
   height: var(--progressbar-height);
   z-index: 999;
 
@@ -427,7 +427,7 @@ app-header.fia-header .fia-header-progress-bar {
 }
 
 .scrolled {
-  app-header.fia-header .fia-header-toolbar {
+  fe-header.fia-header .fia-header-toolbar {
     height: 60px;
     transition: height 300ms ease-out;
 
@@ -438,7 +438,7 @@ app-header.fia-header .fia-header-progress-bar {
 }
 
 
-.is-mobile app-header.fia-header .mat-toolbar {
+.is-mobile fe-header.fia-header .mat-toolbar {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 999;

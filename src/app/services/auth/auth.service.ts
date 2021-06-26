@@ -12,7 +12,7 @@ import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse,
 import { ThemeService } from '../theme.service';
 import { DataService } from '../data/data.service';
 
-const CREDENTIALS_STORAGE_KEY = 'fiappy_auth';
+const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';
 
 @Injectable({
   providedIn: 'root'

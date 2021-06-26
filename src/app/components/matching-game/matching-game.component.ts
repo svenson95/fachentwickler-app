@@ -6,7 +6,7 @@ import { Matching, MatchingPair } from '../../models/matching-piece';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
-  selector: 'app-matching-game',
+  selector: 'fe-matching-game',
   templateUrl: './matching-game.component.html'
 })
 export class MatchingGameComponent implements OnInit {

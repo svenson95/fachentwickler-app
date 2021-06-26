@@ -7,7 +7,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 
 @Component({
-  selector: 'app-delete-image-dialog',
+  selector: 'fe-delete-image-dialog',
   templateUrl: './delete-image-dialog.component.html',
   styleUrls: ['./delete-image-dialog.component.scss']
 })

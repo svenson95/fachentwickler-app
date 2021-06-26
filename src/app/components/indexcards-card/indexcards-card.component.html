@@ -3,7 +3,7 @@
      [innerHTML]="indexCards.title"></p>
   <p class="fia-card-description" *ngIf="indexCards !== undefined">
     <span [innerHTML]="indexCards.description"></span>
-    <app-post-badge [post]="indexCards"></app-post-badge>
+    <fe-post-badge [post]="indexCards"></fe-post-badge>
   </p>
   <mat-card-content class="fia-card-content" *ngIf="indexCards !== undefined">
     <div class="fia-index-card" [class.show-back]="isAnswerVisible">

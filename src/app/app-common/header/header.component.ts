@@ -17,7 +17,7 @@ import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dia
 import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
 
 @Component({
-  selector: 'app-header',
+  selector: 'fe-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements AfterViewInit {

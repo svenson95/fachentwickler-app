@@ -7,7 +7,7 @@ import { Quiz } from '../../models/quiz';
 import { IndexCards } from '../../models/index-cards';
 
 @Component({
-  selector: 'app-post-link',
+  selector: 'fe-post-link',
   templateUrl: './post-link.component.html'
 })
 export class PostLinkComponent implements OnInit {

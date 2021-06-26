@@ -9,7 +9,7 @@ import { DataService } from '../../services/data/data.service';
 import { auditQuestions } from '../../../data/pruefungsfragen';
 
 @Component({
-  selector: 'app-pruefungssimluator',
+  selector: 'fe-pruefungssimluator',
   templateUrl: './pruefungssimulator.component.html'
 })
 export class PruefungsSimulatorComponent implements OnInit {

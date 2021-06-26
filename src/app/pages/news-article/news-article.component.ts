@@ -5,7 +5,7 @@ import { SchoolNews } from '../../models/school-news';
 import { HeaderService } from '../../services/header.service';
 
 @Component({
-  selector: 'app-news-article',
+  selector: 'fe-news-article',
   templateUrl: './news-article.component.html'
 })
 export class NewsArticleComponent implements OnInit {

@@ -7,7 +7,7 @@ import { DataService } from '../../services/data/data.service';
 import { delay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-messages',
+  selector: 'fe-messages',
   templateUrl: './messages.component.html'
 })
 export class MessagesComponent implements OnInit {

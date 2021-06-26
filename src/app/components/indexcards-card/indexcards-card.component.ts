@@ -4,7 +4,7 @@ import { DataService } from '../../services/data/data.service';
 import { IndexCards } from '../../models/index-cards';
 
 @Component({
-  selector: 'app-indexcards-card',
+  selector: 'fe-indexcards-card',
   templateUrl: './indexcards-card.component.html'
 })
 export class IndexcardsCardComponent implements OnInit {

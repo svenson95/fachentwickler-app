@@ -12,7 +12,7 @@ interface SchoolYear {
 }
 
 @Component({
-  selector: 'app-curriculum',
+  selector: 'fe-curriculum',
   templateUrl: './curriculum.component.html'
 })
 export class CurriculumComponent implements OnInit {

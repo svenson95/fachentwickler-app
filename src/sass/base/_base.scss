@@ -35,7 +35,7 @@ body {
 
 }
 
-/* FIAPPY - TOGGLES */
+/* MAT-SLIDE-TOGGLE */
 .fia-theme-toggle {
   align-self: center;
 
@@ -62,7 +62,7 @@ body {
   }
 }
 
-/* FIAPPY - MAT-BUTTON-TOGGLE */
+/* MAT-BUTTON-TOGGLE */
 mat-button-toggle-group {
   .mat-button-toggle-checked {
     background-color: var(--tertiary-color);
@@ -74,8 +74,8 @@ mat-button-toggle-group {
   }
 }
 
-/* FIAPPY - POST LINK (SUBJECT, DASHBOARD, ...) */
-app-post-link:not(:last-of-type),
+/* POST LINK (SUBJECT, DASHBOARD, ...) */
+fe-post-link:not(:last-of-type),
 .fia-lesson-wrapper:not(:last-of-type) {
   .fia-post-link-wrapper {
     margin-bottom: 10px;

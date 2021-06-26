@@ -31,7 +31,7 @@
           <p class="fia-weekday-label">{{weekdayAsString(week.day)}}</p>
           <hr class="weekday-spacer"/>
         </div>
-        <app-post-link *ngFor="let post of week.lessons" [post]="post" [title]="fullSubjectName(post.subject)"></app-post-link>
+        <fe-post-link *ngFor="let post of week.lessons" [post]="post" [title]="fullSubjectName(post.subject)"></fe-post-link>
       </div>
 
     </div>

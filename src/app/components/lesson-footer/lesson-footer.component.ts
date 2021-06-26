@@ -7,7 +7,7 @@ import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
 
 @Component({
-  selector: 'app-lesson-footer',
+  selector: 'fe-lesson-footer',
   templateUrl: './lesson-footer.component.html'
 })
 export class LessonFooterComponent implements OnInit {

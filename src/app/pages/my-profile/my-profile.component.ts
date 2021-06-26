@@ -11,7 +11,7 @@ import { DataService } from '../../services/data/data.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
-  selector: 'app-my-profile',
+  selector: 'fe-my-profile',
   templateUrl: './my-profile.component.html'
 })
 export class MyProfileComponent implements OnInit {

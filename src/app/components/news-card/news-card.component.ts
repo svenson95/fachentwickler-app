@@ -4,7 +4,7 @@ import { SchoolNews } from '../../models/school-news';
 import { DataService } from '../../services/data/data.service';
 
 @Component({
-  selector: 'app-news-card',
+  selector: 'fe-news-card',
   templateUrl: './news-card.component.html'
 })
 export class NewsCardComponent implements OnInit {

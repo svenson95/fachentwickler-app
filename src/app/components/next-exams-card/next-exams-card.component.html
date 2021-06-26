@@ -7,7 +7,7 @@
   </div>
   <mat-card-content class="fia-view-wrapper">
     <div class="fia-exam-item-wrapper" *ngFor="let exam of nextExams">
-      <app-exam-item [exam]="exam"></app-exam-item>
+      <fe-exam-item [exam]="exam"></fe-exam-item>
     </div>
     <mat-spinner class="fia-loading-spinner" *ngIf="isLoading && !nextExams"></mat-spinner>
     <p class="fia-no-data" *ngIf="nextExams?.length === 0">Keine anstehenden Klausuren</p>

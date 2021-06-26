@@ -15,7 +15,7 @@ import { matchings } from '../../../data/matchings';
 import { testDashboard, testSchoolWeek, testUser } from '../../../data/dashboard-test-data';
 
 @Component({
-  selector: 'app-landing-page',
+  selector: 'fe-landing-page',
   templateUrl: './landing-page.component.html'
 })
 export class LandingPageComponent {

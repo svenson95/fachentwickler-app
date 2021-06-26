@@ -6,7 +6,7 @@ import { IndexCards } from '../../models/index-cards';
 import { Matching } from '../../models/matching-piece';
 
 @Component({
-  selector: 'app-post-badge',
+  selector: 'fe-post-badge',
   templateUrl: './post-badge.component.html'
 })
 export class PostBadgeComponent implements OnInit {

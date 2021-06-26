@@ -2,7 +2,7 @@
 
   <mat-spinner class="fia-loading-spinner" *ngIf="quiz === undefined"></mat-spinner>
 
-  <app-quiz-card [quiz]="quiz" *ngIf="quiz !== undefined"></app-quiz-card>
+  <fe-quiz-card [quiz]="quiz" *ngIf="quiz !== undefined"></fe-quiz-card>
 
-  <app-lesson-footer [postId]="quiz._id" *ngIf="quiz !== undefined"></app-lesson-footer>
+  <fe-lesson-footer [postId]="quiz._id" *ngIf="quiz !== undefined"></fe-lesson-footer>
 </div>

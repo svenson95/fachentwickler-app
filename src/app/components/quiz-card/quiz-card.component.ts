@@ -3,7 +3,7 @@ import { DataService } from '../../services/data/data.service';
 import { Quiz } from '../../models/quiz';
 
 @Component({
-  selector: 'app-quiz-card',
+  selector: 'fe-quiz-card',
   templateUrl: './quiz-card.component.html'
 })
 export class QuizCardComponent implements OnInit {

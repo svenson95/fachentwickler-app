@@ -8,7 +8,7 @@ import { LoadingService } from '../../services/loading.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search',
+  selector: 'fe-search',
   templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit, OnDestroy {

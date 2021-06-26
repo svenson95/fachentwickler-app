@@ -6,7 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
-  selector: 'app-logout-dialog',
+  selector: 'fe-logout-dialog',
   templateUrl: './logout-dialog.component.html'
 })
 export class LogoutDialogComponent implements OnInit {

@@ -6,7 +6,7 @@ import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
 
 @Component({
-  selector: 'app-user-progress-card',
+  selector: 'fe-user-progress-card',
   templateUrl: './user-progress-card.component.html'
 })
 export class UserProgressCardComponent implements OnInit {

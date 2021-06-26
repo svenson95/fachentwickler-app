@@ -1,5 +1,5 @@
 <div class="fia-page-container" [class.is-mobile]="isMobile.matches" [ngClass]="themeService.getActiveTheme().name">
-  <app-header class="fia-header" [isMobile]="isMobile" [sidenav]="sidenav"></app-header>
+  <fe-header class="fia-header" [isMobile]="isMobile" [sidenav]="sidenav"></fe-header>
 
   <mat-sidenav-container class="fia-sidenav-content-wrapper"
                          [style.marginTop.px]="isMobile.matches ? 56 : 0"
@@ -13,10 +13,10 @@
                  fixedTopGap="56"
                  (openedChange)="onSideMenuToggled(sidenav.opened)"
     >
-      <app-sidenav></app-sidenav>
+      <fe-sidenav></fe-sidenav>
     </mat-sidenav>
 
-    <app-content></app-content>
+    <fe-content></fe-content>
 
   </mat-sidenav-container>
 </div>
