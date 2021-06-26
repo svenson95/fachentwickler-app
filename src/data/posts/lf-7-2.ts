@@ -2043,4 +2043,54 @@ export const LF7_2_POSTS: Post[] = [
             }
         ]
     },
+    {
+        "url": "netze_und_dienste/tcp_ip",
+        "_id": "60d59a8da8aa26228824ead7",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "TCP/IP",
+        "description": "Mitschrift vom 07.06.2021",
+        "subject": "lf-7-2",
+        "type": "article",
+        "lessonDate": "2021-06-07",
+        "lastUpdate": "2021-06-25",
+        "schoolWeek": "26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "TCP/IP (<i>Transmission Control Protocol/Internet Protocol</i>), ist eine Reihe von Kommunikationsprotokollen, die zur Verbindung von Netzwerkgeräten im Internet verwendet werden. TCP/IP kann auch als Kommunikationsprotokoll in einem privaten Computernetzwerk (einem Intranet oder Extranet) verwendet werden. Die gesamte Suite des Internet-Protokolls – eine Reihe von Regeln und Verfahren – wird allgemein als TCP/IP bezeichnet. TCP und IP sind die beiden Hauptprotokolle. Die TCP/IP-Protokollsuite fungiert als Abstraktionsschicht zwischen Internet-Anwendungen und der Routing-/Switching-Struktur."
+            },
+            {
+                "type": "text",
+                "content": "TCP/IP spezifiziert, wie Daten über das Internet ausgetauscht werden, indem es eine Ende-zu-Ende-Kommunikation bereitstellt. Sie legt fest, wie die Daten in Pakete aufgeteilt, adressiert, übertragen, weitergeleitet und am Zielort empfangen werden sollen. TCP/IP erfordert nur wenig zentrale Verwaltung und ist darauf ausgelegt, Netzwerke zuverlässig zu machen, mit der Fähigkeit, sich nach dem Ausfall eines beliebigen Geräts im Netzwerk automatisch zu erholen."
+            },
+            {
+                "type": "list",
+                "content": "Zu den gängigen Protokollen von TCP/IP gehören:",
+                "list": [
+                    "HTTP (Hyper Text Transfer Protocol) übernimmt die Kommunikation zwischen einem Webserver und einem Webbrowser",
+                    "HTTPS (Secure HTTP) wickelt die sichere Kommunikation zwischen einem Webserver und einem Webbrowser ab",
+                    "FTP (File Transfer Protocol) sorgt für die Übertragung von Dateien zwischen Computern"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "TCP/IP verwendet das Client-Server-Kommunikationsmodell, bei dem einem Benutzer oder einer Maschine (einem Client) ein Dienst (wie das Senden einer Webseite) von einem anderen Computer (einem Server) im Netzwerk zur Verfügung gestellt wird."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "TCP/IP (Transmission Control Protocol/Internet Protocol) | 25.06.2021 | <a href='https://www.computerweekly.com/de/definition/TCP-IP-Transmission-Control-Protocol-Internet-Protocol' target=\"_blank\" rel=\"noopener noreferrer\">https://www.computerweekly.com/de/definition/TCP-IP-Transmission-Control-Protocol-Internet-Protocol</a>"
+                ]
+            }
+        ]
+    },
 ];

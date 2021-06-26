@@ -380,7 +380,7 @@ export const WP_POSTS: Post[] = [
         "subject": "wp",
         "type": "article",
         "lessonDate": "2020-09-23",
-        "lastUpdate": "2021-05-15",
+        "lastUpdate": "2021-06-26",
         "schoolWeek": "16",
         "elements": [
             {
@@ -396,8 +396,16 @@ export const WP_POSTS: Post[] = [
                 "content": "Dreh- und Angelpunkt in der GRAFCET Norm sind Schritte, Transitionen und Aktionen. Die richtige Kombination dieser Elemente erzeugt eine genaue Beschreibung eines technischen Ablaufs. Man begegnet in der Praxis häufig GRAFCET-Plänen, die offensichtlich falsch sind bzw. nicht der Norm entsprechen. Es gibt aber einige Kernpunkte, die sehr wichtig für das Verständnis dieser Beschreibungssprache sind."
             },
             {
+                "type": "hint",
+                "content": "Der Begriff GRAFCET stammt aus dem Französischen und ist eine Abkürzung und steht für: <b>GRA</b>phe <b>F</b>onctionnel de <b>C</b>ommande <b>E</b>tape <b>T</b>ransition. Ins Deutsche übersetzt bedeutet dies: Darstellung der Steuerungsfunktion mit Schritten und Weiterschaltbedingungen."
+            },
+            {
                 "type": "text",
                 "content": "GRAFCET ist eine europäische DIN-Norm (DIN EN60848) für das Erstellen von Funktionsplänen speziell für Ablaufsteuerungen. Mithilfe von Schritten und Transitionen (Übergängen) kann ein technischer Ablauf dargestellt werden, welche die Funktionsweise einer Maschine oder Anlage beschreibt. In Deutschland ist GRAFCET Bestandteil des Lehrplans von vielen technischen Berufen wie z.B. Mechatroniker, Elektroniker für Automatisierungstechnik, Elektroniker für Betriebstechnik, Industriemechaniker und Fachinformatiker."
+            },
+            {
+                "type": "text",
+                "content": "Die Abläufe werden wie bisher in Schritte und Transitionen unterteilt. ..."
             },
             {
                 "type": "image",
@@ -423,6 +431,17 @@ export const WP_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5f88c6d0e20bf42e68ab2b7a"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Aus für den Funktionsplan – jetzt gilt GRAFCET (01/2007) | 26.06.2021 | <a href='https://www.festo-didactic.com/ov3/media/customers/1100/grafcet_kompakt_2008_1.pdf'>https://www.festo-didactic.com/ov3/media/customers/1100/grafcet_kompakt_2008_1.pdf</a>"
+                ]
             }
         ]
     },
@@ -435,7 +454,7 @@ export const WP_POSTS: Post[] = [
         "subject": "wp",
         "type": "tasks",
         "lessonDate": "2020-10-28",
-        "lastUpdate": "2021-05-15",
+        "lastUpdate": "2021-06-26",
         "schoolWeek": "17",
         "elements": [
             {
@@ -443,16 +462,62 @@ export const WP_POSTS: Post[] = [
                 "content": "Definition"
             },
             {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Pfeil nach oben" },
+                            { "align": "left", "content": "Vorgang wird ausgeführt wenn der Schritt anfängt" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Pfeil nach unten" },
+                            { "align": "left", "content": "Vorgang wird ausgeführt wenn der Schritt fertig ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<b>M</b>0.1" },
+                            { "align": "left", "content": "Zustands-Merker" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<b>Q</b>0.1" },
+                            { "align": "left", "content": "Ausgang" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60d71724c15b475f263c61c0"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiele"
+            },
+            {
                 "type": "subtitle",
-                "content": "GRAFCET Ablaufsteuerung"
+                "content": "Rührbehälter SPS"
             },
             {
                 "type": "text",
-                "content": "Pfeil nach oben -> Vorgang wird ausgeführt wenn der Schritt anfängt <br/> Pfeil nach unten -> Vorgang wird ausgeführt wenn der Schritt fertig ist"
+                "content": "Speicherprogrammierbare Steuerung eines Rührbehälters. ... "
             },
             {
-                "type": "text",
-                "content": "M0.1 (M = Merker) <br/> Q (Q = Ausgang)"
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5fce8bc7d58f4c4d8a43c0fa"
             },
             {
                 "type": "line",
@@ -460,23 +525,11 @@ export const WP_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Rührbehälter SPS"
+                "content": "Rührbehälter L"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Rührbehälter L"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5fce8bdad58f4c4d8a43c0fc"
             },
             {
                 "type": "line",
@@ -487,8 +540,12 @@ export const WP_POSTS: Post[] = [
                 "content": "Autowaschanlage"
             },
             {
+                "type": "subtitle",
+                "content": "Der Kunde gibt ihnen folgende Ablaufbeschreibung, aus der Sie eine GRAFCET Ablaufbeschreibung erstellen sollen."
+            },
+            {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5fce8be8d58f4c4d8a43c0fe"
             },
             {
                 "type": "list",
@@ -935,7 +992,7 @@ export const WP_POSTS: Post[] = [
         "subject": "wp",
         "type": "tasks",
         "lessonDate": "2021-03-03",
-        "lastUpdate": "2021-05-15",
+        "lastUpdate": "2021-05-26",
         "schoolWeek": "22",
         "elements": [
             {
@@ -944,104 +1001,102 @@ export const WP_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "An einer Ersatzstromversorung mit einer Leistung <i>P</i> = 8 kW sind die Antriebsmotoren M1 mit 7 kW, M2 mit 5 kW und M3 mit 2 kW angeschlossen (Bild 3). Der Motor M1 wird durch den Steuerschalter S1, Motor M2 durch S2 und Motor M3 durch S3 eingeschaltet."
+                "content": "<b>a) Erstellen Sie die Wertetabellen für den ungestörten und für den gestörten Betrieb</b>"
             },
             {
-                "type": "text",
-                "content": "Eine Steuerlogik soll die Eingangssignale A, B und C der Steuerschalter überwachen und eine Überlastung des Aggregats verhindern. Zusätzlich soll eine Schalterstellung, die eine Überlastung hervorrufen würde, durch eine Meldeleuchte P1 angezeigt werden."
-            },
-            {
-                "type": "text",
-                "content": "a) Erstellen Sie die Wertetabellen für ungestörten und für gestörten Betrieb."
-            },
-            {
-                "type": "text",
-                "content": "Antwort: <b>Ungestörter Betrieb</b>"
-            },
-            {
-                "type": "table",
-                "content": "Antwort",
-                "rows": [
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
                     {
-                        "type": "header",
-                        "columns": [
-                            { "align": "middle", "content": "M1" },
-                            { "align": "middle", "content": "M2" },
-                            { "align": "middle", "content": "M3" }
+                        "type": "subtitle",
+                        "content": "<u>Ungestörter Betrieb</u>"
+                    },
+                    {
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "middle", "content": "M1" },
+                                    { "align": "middle", "content": "M2" },
+                                    { "align": "middle", "content": "M3" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Aus" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Aus" }
-                        ]
+                        "type": "subtitle",
+                        "content": "<u>Gestörter Betrieb</u>"
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "text",
-                "content": "Antwort: <b>Gestörter Betrieb</b>"
-            },
-            {
-                "type": "table",
-                "content": "Antwort",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "middle", "content": "M1" },
-                            { "align": "middle", "content": "M2" },
-                            { "align": "middle", "content": "M3" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "middle", "content": "Ein" },
-                            { "align": "middle", "content": "Aus" },
-                            { "align": "middle", "content": "Ein" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "middle", "content": "M1" },
+                                    { "align": "middle", "content": "M2" },
+                                    { "align": "middle", "content": "M3" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "middle", "content": "Ein" },
+                                    { "align": "middle", "content": "Aus" },
+                                    { "align": "middle", "content": "Ein" }
+                                ]
+                            }
                         ]
                     }
                 ]
@@ -1052,221 +1107,238 @@ export const WP_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "b) Zeichnen Sie den Funktionsplan der Steuerlogik. Verwenden Sie für die Eingänge und Ausgänge der Steuerlogik die in Bild 3 angegebenen Variablen."
+                "content": "<b>b) Zeichnen Sie den Funktionsplan der Steuerlogik. Verwenden Sie für die Eingänge und Ausgänge der Steuerlogik die in Bild 3 angegebenen Variablen</b>"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6053a1b3ec849e78978418a8"
-            },
-            {
-                "type": "text",
-                "content": "Antwort ..."
+                "content": "http://159.65.105.150:3000/images/60a579ca59a0005b1c634b66",
+                "size": "s"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6053a38dec849e78978418aa"
+                "content": "http://159.65.105.150:3000/images/60a57ca859a0005b1c634b69",
+                "size": "m",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
-                "content": "c) Erstellen Sie eine vollständige und eine konsolidierte Entscheidungstabelle mit den Bedingungen A, B, C und den Aktionen X, Y, Z, U."
+                "content": "<b>c) Erstellen Sie eine vollständige und eine konsolidierte Entscheidungstabelle mit den Bedingungen A, B, C und den Aktionen X, Y, Z und U</b>"
             },
             {
-                "type": "table",
-                "content": "Antwort: Entscheidungstabelle vollständig",
-                "rows": [
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
                     {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "A" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" }
+                        "type": "subtitle",
+                        "content": "Vollständige Entscheidungstabelle"
+                    },
+                    {
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "A" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "B" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "C" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Z (M1)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Y (M2)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "X (M3)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "U (Störung P1)" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "B" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" }
-                        ]
+                        "type": "subtitle",
+                        "content": "Konsolidierte Entscheidungstabelle"
                     },
                     {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "C" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Z (M1)" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Y (M2)" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "X (M3)" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "U (Störung P1)" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "table",
-                "content": "Antwort: konsolidiert",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "A" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "n" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "B" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "n" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "C" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "j" },
-                            { "align": "middle", "content": "n" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Z (M1)" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "Y (M2)" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "X (M3)" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "U (Störung P1)" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "x" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" },
-                            { "align": "middle", "content": "" }
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "A" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "B" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "C" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Z (M1)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Y (M2)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "X (M3)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "U (Störung P1)" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            }
                         ]
                     }
                 ]
@@ -1277,19 +1349,34 @@ export const WP_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "d) Entwickeln Sie aus der konsolidierten Entscheidungstabelle ein Struktogramm für die Funktion Ersatzstromversorgung()."
+                "content": "<b>d) Entwickeln Sie aus der konsolidierten Entscheidungstabelle ein Struktogramm für die Funktion Ersatzstromversorgung()</b>"
             },
             {
-                "type": "text",
-                "content": "Eingabe: binär - A, B, C <br/> Verarbeitung: entwickelte Steuerlogik <br/> Ausgabe: binär - X, Y, Z, U"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "text",
-                "content": "e) Programmieren und testen Sie die Funktion Ersatzstromversorgung()."
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Eingabe" },
+                            { "align": "left", "content": "Binär - A, B, C" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Verarbeitung" },
+                            { "align": "left", "content": "entwickelte Steuerlogik" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Ausgabe" },
+                            { "align": "left", "content": "Binär - X, Y, Z, U" }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -1395,7 +1482,7 @@ export const WP_POSTS: Post[] = [
         "subject": "wp",
         "type": "tasks",
         "lessonDate": "2021-05-19",
-        "lastUpdate": "2021-05-24",
+        "lastUpdate": "2021-05-26",
         "schoolWeek": "25",
         "elements": [
             {
@@ -1519,7 +1606,7 @@ export const WP_POSTS: Post[] = [
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/60a579ca59a0005b1c634b66",
-                "size": "m"
+                "size": "s"
             },
             {
                 "type": "image",
@@ -1534,6 +1621,221 @@ export const WP_POSTS: Post[] = [
             {
                 "type": "text",
                 "content": "<b>c) Erstellen Sie eine vollständige und eine konsolidierte Entscheidungstabelle mit den Bedingungen A, B, C und den Aktionen X, Y, Z und U</b>"
+            },
+            {
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
+                    {
+                        "type": "subtitle",
+                        "content": "Vollständige Entscheidungstabelle"
+                    },
+                    {
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "A" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "B" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "C" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Z (M1)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Y (M2)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "X (M3)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "U (Störung P1)" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "subtitle",
+                        "content": "Konsolidierte Entscheidungstabelle"
+                    },
+                    {
+                        "type": "table",
+                        "content": "",
+                        "rows": [
+                            {
+                                "type": "header",
+                                "columns": [
+                                    { "align": "left", "content": "A" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "B" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "C" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "j" },
+                                    { "align": "middle", "content": "n" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Z (M1)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "Y (M2)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "X (M3)" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            },
+                            {
+                                "type": "default",
+                                "columns": [
+                                    { "align": "left", "content": "U (Störung P1)" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "x" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" },
+                                    { "align": "middle", "content": "" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "type": "line",

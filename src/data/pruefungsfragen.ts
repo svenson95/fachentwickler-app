@@ -15,7 +15,7 @@ export const auditQuestions: AuditQuestion[] = [
     },
     {
         "question": "Berechnen Sie den Preis pro Ticket, wenn mit einem Gewinnzuschlag von 25 % kalkuliert wird.",
-        "description": "<u>Gegeben</u>: <br/>Variable Kosten/Kunde\t\t 6 EUR <br/>Fixkosten\t\t\t\t120.000 EUR <br/>Anzahl der Kunden\t\t12.000",
+        "description": "<u>Gegeben</u>: <br/>Variable Kosten/Kunde\t\t6 EUR <br/>Fixkosten\t\t\t\t120.000 EUR <br/>Anzahl der Kunden\t\t12.000",
         "answer": 20
     },
     {

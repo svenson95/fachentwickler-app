@@ -3,7 +3,58 @@ import { Post } from '../../app/models/post';
 
 export const LF6_POSTS: Post[] = [
     {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/objektorientierung_und_vererbung",
+        "_id": "60bc2b8b2e26a059c20d3597",
+        "topicId": "6056629db0623029d4a68f6b",
+        "title": "Objektorientierung und Vererbung",
+        "description": "Thema vom 12.08.2019",
+        "subject": "lf-6",
+        "type": "article",
+        "lessonDate": "2019-08-12",
+        "lastUpdate": "2021-06-06",
+        "schoolWeek": "1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Objektorientierung"
+            },
+            {
+                "type": "text",
+                "content": "Unter Objektorientierung (kurz OO, engl. <i>object-oriented</i>) versteht man in der Entwicklung von Software eine Sichtweise auf komplexe Systeme, bei der ein System durch das Zusammenspiel kooperierender Objekte beschrieben wird. Objektorientierung wird hauptsächlich im Rahmen der objektorientierten Programmierung (OOP) verwendet, um die Komplexität der entstehenden Programme zu verringern. Der Begriff existiert jedoch auch für andere, der Programmierung vorgelagerte Phasen der Softwareentwicklung, wie die objektorientierte Analyse und objektorientiertes Design (Synonym objektorientierter Entwurf) von Software."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Vererbung"
+            },
+            {
+                "type": "text",
+                "content": "In der Regel ist in objektorientierten Ansätzen das Konzept der Vererbung zu finden, bei dem Eigenschaften und Methoden zwischen Klassen hierarchisch ausgetauscht beziehungsweise ergänzt werden können. Vererbung bedeutet vereinfacht, dass eine abgeleitete Klasse die Methoden und Attribute der Basisklasse ebenfalls besitzt, also „erbt“. Somit kann die abgeleitete Klasse auch darauf zugreifen. Neue Arten von Objekten können auf der Basis bereits vorhandener Objekt-Definitionen festgelegt werden. Es können neue Bestandteile hinzugenommen werden oder vorhandene überlagert werden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Wikipedia - Objektorientierung | 06.06.2021 | <a href='https://de.wikipedia.org/wiki/Objektorientierung'>https://de.wikipedia.org/wiki/Objektorientierung</a>"
+                ]
+            }
+        ]
+    },
+    {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen_in_java",
+        "_id": "60bc15892e26a059c20d3591",
+        "topicId": "6056629db0623029d4a68f6b",
         "title": "Datentypen (in Java)",
         "description": "Thema vom 03.09.2019",
         "subject": "lf-6",
@@ -3229,12 +3280,14 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_und_uebungen",
+        "_id": "5f429c59165d0ab470bc57e2",
+        "topicId": "6056629db0623029d4a68f6b",
         "title": "Rekursion - Definition & Übungen",
         "description": "Thema vom 14.08.2020",
         "subject": "lf-6",
         "type": "article",
         "lessonDate": "2020-08-14",
-        "lastUpdate": "2020-11-04",
+        "lastUpdate": "2021-06-06",
         "schoolWeek": "14",
         "elements": [
             {
@@ -3247,62 +3300,23 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Rekursion (lat. recurrere) bedeutet Selbstbezüglichkeit, d. h. etwas verweist auf sich selbst."
+                "content": "Rekursion, oder auch rekursivität / rekurrenz bedeutet Selbstbezüglichkeit, es kommt aus dem Lateinischen recurrere - zurücklaufen. Eine Rekursion tritt immer dann auf, wenn etwas auf sich selbst verweist. Bei der rekursiven Programmierung ruft sich eine Funktion / Methode selbst auf. Auch der gegenseitige Aufruf stellt eine Rekursion dar, ein rekursives Element muss sich also nicht direkt auf sich selbst verweisen. Wenn sich die Funktion selbst aufruft, spricht man von der <b>direkten Rekursion</b>."
             },
             {
                 "type": "text",
-                "content": "<b>Inkarnation</b>: wiederholte Selbstaufrufe einer Funktion <br/> <b>Termination</b>: die Inkarnationskette bricht ab"
-            },
-            {
-                "type": "hint",
-                "content": "Der Abbruch der Inkarnationskette muss garantiert werden, d. h. der Algorithmus muss terminieren!"
-            },
-            {
-                "type": "subtitle",
-                "content": "Motivation Rekursionen"
+                "content": "Eine Prozedur dieser Art, die einen Teil der Aufgabe selbst löst und dann den Rest erledigt, indem sie sich selbst aufruft, wird rekursive Prozedur genannt. Wenn also im realen Leben das Geschirr gespült werden muss, würde man wie folgt vorgehen ..."
             },
             {
                 "type": "list",
-                "content": "Rekursive Programme sind ...",
+                "content": "",
                 "list": [
-                    "In der Regel kürzer/einfacher zu formulieren",
-                    "eng verbunden mit dem leistungsfähigen Algorithmenschema Teile-und-Herrsche",
-                    {
-                        "content": "Viele Berechnungen und Datenstrukturen sind von Haus aus selbstbezüglich:",
-                        "sublist": [
-                            "Ein Verzeichnis enthält Daten und andere Verzeichnisse",
-                            "Euklidischer Algorithmus ggT",
-                            "Quicksort",
-                            "Listen, Bäume"
-                        ]
-                    }
+                    "man spült ein einziges Teil ab (erledigt einen Teil der Aufgabe)",
+                    "man sucht die nächste Person, die den Abwasch erledigen soll"
                 ]
             },
             {
-                "type": "subtitle",
-                "content": "Fakultätsberechnung - Beispiel einer rekursiven Funktion"
-            },
-            {
                 "type": "text",
-                "content": "Die Fakultät ist in der Mathematik eine Funktion, die <code>fac</code>-Funktion erwartet einen Parameter vom Typ <code>int</code> und gibt einen Wert als <code>int</code> zurück. Da sich die Funktion selbst aufruft spricht man hier von einer rekursiven Funktion."
-            },
-            {
-                "type": "code",
-                "language": "java",
-                "content": "public static int fac(int n) {\n   if (n > 0) return n * fac(n - 1);\n   else return 1;\n}\n\npublic static void main(String[] args) {\n   int n = 4;\n   System.out.println(fac(n));\n}"
-            },
-            {
-                "type": "subtitle",
-                "content": "Iterativ und Rekursiv"
-            },
-            {
-                "type": "code",
-                "language": "java",
-                "content": "// iterativ\npublic static int fac(int n) {\n   int fac = 1;\n   while (n > 0) {\n      fac = fac * a;\n      n = n - 1;\n   }\n   return fac;\n}\n\n// rekursiv\npublic static int fac(int n) {\n   return n === 0 ? 1 : n * fac(n - 1);\n}"
-            },
-            {
-                "type": "text",
-                "content": "Ein rekursiver Ansatz ist meist eleganter als ein Programm mit iterativem Ansatz. <br/> Ein iterativer Ansatz ist meist effizienter als ein Programm mit rekursivem Ansatz. <br/> Jede rekursive Funktion kann durch ein iterativen Pendant ersetzt werden und umgekehrt."
+                "content": "So muss keiner mehr als ein Teil spülen, und der Letzte muss garnichts mehr machen. In diesem Fall würde man sich selbst einmal aufrufen - angenommen wir haben eine Klasse <code>Person</code> mit der Funktion <code>washDishes()</code>, dann würde man in der Funktion <code>washDishes()</code> selbst nochmal <code>washDishes()</code> aufrufen (lassen), indem die nächste Person gesucht wird welche dann wieder <code>washDishes()</code> ausführt. Weil der Job somit für die nächste Person ein wenig kleiner wird, ist er irgendwann ganz erledigt und die Schleife kann gebrochen werden."
             },
             {
                 "type": "list",
@@ -3323,6 +3337,35 @@ export const LF6_POSTS: Post[] = [
                 ]
             },
             {
+                "type": "subtitle",
+                "content": "Fachbegriffe"
+            },
+            {
+                "type": "text",
+                "content": "<b>Inkarnation</b>: wiederholte Selbstaufrufe einer Funktion <br/> <b>Termination</b>: die Inkarnationskette bricht ab"
+            },
+            {
+                "type": "hint",
+                "content": "Der Abbruch der Inkarnationskette muss garantiert werden, d. h. der Algorithmus muss terminieren!"
+            },
+            {
+                "type": "list",
+                "content": "Grundidee der Rekursion ist die Reduktion eines gegebenen Problems auf ein einfacheres Problem. Rekursive Programme sind ...",
+                "list": [
+                    "In der Regel kürzer/einfacher zu formulieren",
+                    "eng verbunden mit dem leistungsfähigen Algorithmenschema Teile-und-Herrsche",
+                    {
+                        "content": "Viele Berechnungen und Datenstrukturen sind von Haus aus selbstbezüglich:",
+                        "sublist": [
+                            "Ein Verzeichnis enthält Daten und andere Verzeichnisse",
+                            "Euklidischer Algorithmus ggT",
+                            "Quicksort",
+                            "Listen, Bäume"
+                        ]
+                    }
+                ]
+            },
+            {
                 "type": "line",
                 "content": "<hr/>"
             },
@@ -3331,12 +3374,22 @@ export const LF6_POSTS: Post[] = [
                 "content": "Rekursionsmuster"
             },
             {
-                "type": "text",
-                "content": "Es gibt vier grundlegende Rekursionsmuster"
+                "type": "list",
+                "content": "Es gibt verschiedene Arten von Rekursionen ...",
+                "list": [
+                    "Lineare Rekursion",
+                    "Verzweigte Rekursion",
+                    "Verschachtelte Rekursion",
+                    "Verschränkte Rekursion"
+                ]
             },
             {
                 "type": "subtitle",
-                "content": "Lineare Rekursion"
+                "content": "Lineare Rekursion & Nicht Lineare Rekursion"
+            },
+            {
+                "type": "text",
+                "content": "Man unterscheidet zwischen linearen und nicht linearen Rekursionen. Eine Funktion ist linear rekursiv, wenn nur ein rekursiver Aufruf erfolgt - wie bei der Fakultät. Eine rekursive Funktion ist nicht-linear rekursiv, wenn die Ausführung zu mehr als einem rekursiven Aufruf führt - wie in der Fibonacci-Folge."
             },
             {
                 "type": "code",
@@ -3344,13 +3397,17 @@ export const LF6_POSTS: Post[] = [
                 "content": "public static int fac(int n) {\n   if (n === 0) {\n      return 1;\n   } else {\n      return n * fac(n - 1);\n   }\n}"
             },
             {
+                "type": "subtitle",
+                "content": "Repetitive Rekursion"
+            },
+            {
                 "type": "text",
-                "content": "Spezialfall: Repetitive Rekursion (engl. <i>tail recursive</i>, auch endrekursiv, iterativ rekursiv) Die Funktion ruft sich selbst mit einem veränderten Parameter auf."
+                "content": "Eine Funktion ist repetitiv rekursiv (engl. <i>tail recursive</i>) wenn sich die Funktion am Ende selbst aufruft, also der letzte auszuwertende Ausdruck ist."
             },
             {
                 "type": "code",
                 "language": "java",
-                "content": "// Beispiel: Moduloperation - Aufruf von mod(5,3) läuft bis mod(2,3) aufgerufen wird (return 2)\npublic static int mod(int a, int b) {\n   if (a < b) {\n      return a;\n   } else {\n      return mod(a - b, b);\n   }\n}\n\n// Beispiel: Größter gemeinsamer Teiler\npublic static int ggT(int a, int b) {\n   if (b ==== 0) {\n      return a;\n   } else {\n      return ggT(b, a % b);\n   }\n}\n\n// Beispiel: Der Klassiker -  Die Türme von Hanoi\nprivate static void verschiebe(char a, char b, char c, int n) {\n   if (n === 1) {\n      System.out.println(\"Lege die oberste Scheibe von Turm\" + a + \" auf Turm \" + c + \".\");\n   } else {\n      verschiebe(a, c, b, n - 1);\n      verschiebe(a, b, c, 1);\n      verschiebe(b, a, c, n - 1);\n   }\n}\n\npublic static void main(String [] args) {\n   // verschiebe von -> nach -> über, Höhe des Turms\n   verschiebe('A', 'B', 'C', 3);\n}"
+                "content": "// Beispiel: Moduloperation - Aufruf von mod(5,3) läuft bis mod(2,3) aufgerufen wird (return 2)\npublic static int mod(int a, int b) {\n   if (a < b) {\n      return a;\n   } else {\n      return mod(a - b, b);\n   }\n}\n\n// Beispiel: Größter gemeinsamer Teiler\npublic static int ggT(int a, int b) {\n   if (b ==== 0) {\n      return a;\n   } else {\n      return ggT(b, a % b);\n   }\n}"
             },
             {
                 "type": "line",
@@ -3358,33 +3415,54 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Baumartige Rekursion"
+                "content": "Fakultätsberechnung - Beispiel einer rekursiven Funktion"
+            },
+            {
+                "type": "text",
+                "content": "Die Fakultät ist eine mathematische Funktion. Die Fakultät einer Zahl ist das Produkt aller ganzen Zahlen kleiner gleich der Zahl selbst. Die <code>fac</code>-Funktion erwartet einen Parameter vom Typ <code>int</code> und gibt einen Wert als <code>int</code> zurück."
             },
             {
                 "type": "code",
                 "language": "java",
-                "content": "// Beispiel: Fibonacci-Folge ist rekursiv definiert\npublic static long fib(int n) {\n   if (n <= 1) return n;\n   else return fib(n-1) + fib(n-2);\n}"
+                "content": "public static int fac(int n) {\n   if (n > 0) return n * fac(n - 1);\n   else return 1;\n}\n\npublic static void main(String[] args) {\n   System.out.println(fac(4)); // 3\n}"
+            },
+            {
+                "type": "text",
+                "content": "Jede Rekursion lässt sich auch in eine iterative Lösung umwandeln und umgekehrt. Iterationen haben den Vorteil, dass sie performanter sind."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// iterativ\npublic static int fac(int n) {\n   int fac = 1;\n   while (n > 0) {\n      fac = fac * a;\n      n = n - 1;\n   }\n   return fac;\n}\n\n// rekursiv\npublic static int fac(int n) {\n   return n === 0 ? 1 : n * fac(n - 1);\n}"
+            },
+            {
+                "type": "hint",
+                "content": "Ein rekursiver Ansatz ist meist eleganter als ein Programm mit iterativem Ansatz. <br/> Ein iterativer Ansatz ist meist effizienter als ein Programm mit rekursivem Ansatz. <br/> Jede rekursive Funktion kann durch ein iterativen Pendant ersetzt werden und umgekehrt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fibonacci-Folge"
             },
             {
                 "type": "text",
                 "content": "Baumartige Rekursion für die Fibonacci-Folge F<sub>5</sub>"
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f43d11f846fa034c7ff8c6a"
+                "type": "text",
+                "content": "Im rekursiven Code kann es zu extremen Speicherbedarf und extrem häufigen Neuberechnungen kommen. Besonders vorsichtig sollten Sie im rekursiven Code bei der Erzeugung von Arrays sein. Baumrekursion kann durch Memoisation (engl. <i>memoization</i> oder <i>memoisation</i>) optimiert werden."
             },
             {
                 "type": "code",
                 "language": "java",
-                "content": "// Beispiel: Pascalsche Dreieck\npublic static int pas(int n, int k) {\n   if ((k === 0) || (k === n))\n      return 1;\n   else\n      return pas(n-1, k) + pas(n-1, k-1);\n}"
+                "content": "public static long fib(int n) {\n   if (n <= 1) return n;\n   else return fib(n-1) + fib(n-2);\n}\n\nfib(5)\nfib(5-1) + fib(5-2)\nfib(4) // erste Schleife\nfib(4-1) + fib(4-2)\nfib(3)\nfib(3-1) + fib(3-2)\nfib(2)\nfib(2-1) + fib(2-2)\nfib(1)\nfib(1) <= 1\nfib(0)\nfib(0) <= 1\nfib(1)\nfib(1) <= 1\nfib(2)\nfib(2-1) + fib(2-2)\nfib(1)\nfib(1) <= 1\nfib(0)\nfib(0) <= 1\nfib(3) // Zweite Schleife\nfib(3-1) + fib(3-2)\nfib(2)\nfib(2-1) + fib(2-2)\nfib(1)\nfib(1) <= 1\nfib(0)\nfib(0) <= 1\nfib(1)\nfib(1) <= 1"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f43d132846fa034c7ff8c6c"
-            },
-            {
-                "type": "text",
-                "content": "Im rekursiven Code kann es zu extremen Speicherbedarf und extrem häufigen Neuberechnungen kommen. Besonders vorsichtig sollten Sie im rekursiven Code bei der Erzeugung von Arrays sein. Baumrekursion kann durch Memoisation (engl. <i>memoization</i> oder <i>memoisation</i>) optimiert werden."
+                "content": "http://159.65.105.150:3000/images/5f43d11f846fa034c7ff8c6a"
             },
             {
                 "type": "line",
@@ -3392,7 +3470,24 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Geschachtelte Rekursion"
+                "content": "Pascalsche Dreieck"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int pas(int n, int k) {\n   if ((k === 0) || (k === n))\n      return 1;\n   else\n      return pas(n-1, k) + pas(n-1, k-1);\n}"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f43d132846fa034c7ff8c6c"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Verschachtelte Rekursion"
             },
             {
                 "type": "text",
@@ -3412,18 +3507,32 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Zwei oder mehrere Funktionen rufen sich gegenseitig auf."
+                "content": "Wenn sich zwei oder mehrere Funktionen gegenseitig aufrufen, spricht man von verschränkt rekursiven Funktionen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Phansud Wiki - Rekursion | 06.06.2021 | <a href='http://ais.informatik.uni-freiburg.de/teaching/ss09/info_MST/material/mst_08_recursion.pdf'>http://ais.informatik.uni-freiburg.de/teaching/ss09/info_MST/material/mst_08_recursion.pdf</a>",
+                    "Einführung in die Informatik - Recursion - Wolfram Burgard & Cyrill Stachniss | 06.06.2021 | <a href='https://phansud.fandom.com/de/wiki/Rekursion'>https://phansud.fandom.com/de/wiki/Rekursion</a>"
+                ]
             }
         ]
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme",
+        "_id": "5f67ad91257ec895e489e34c",
+        "topicId": "6056629db0623029d4a68f6b",
         "title": "Datenbanken und Datenbanksysteme",
         "description": "Thema vom 31.08.2020",
         "subject": "lf-6",
         "type": "article",
         "lessonDate": "2020-08-31",
-        "lastUpdate": "2020-09-20",
+        "lastUpdate": "2021-06-26",
         "schoolWeek": "15",
         "elements": [
             {
@@ -3520,7 +3629,8 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f67aece8dcdb242a7e7c65e"
+                "content": "http://159.65.105.150:3000/images/5f67aece8dcdb242a7e7c65e",
+                "size": "s"
             },
             {
                 "type": "line",
@@ -3552,7 +3662,8 @@ export const LF6_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f67aede8dcdb242a7e7c662"
+                "content": "http://159.65.105.150:3000/images/5f67aede8dcdb242a7e7c662",
+                "size": "s"
             }
         ]
     },

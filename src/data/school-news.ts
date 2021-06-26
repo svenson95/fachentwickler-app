@@ -330,4 +330,31 @@ export const schoolNewsData: SchoolNews[] = [
       }
     ]
   },
+  {
+    "title": "Informationen zum Schulbetrieb ab dem 07.06.2021",
+    "date": "2021-06-01",
+    "url": "info_2021_06_01",
+    "content": [
+      {
+        "type": "text",
+        "content": "Für alle Schülerinnen und Schüler wird der volle Präsenzunterricht ab dem 07.06.2021 durchgeführt, da der aktuelle Inzidenzwert unseres Landkreises unter 50 liegt."
+      },
+      {
+        "type": "text",
+        "content": "Wird der Inzidenzwert von 100 im Landkreis Potsdam-Mittelmark überschritten, wird der Unterricht für die Klassen wieder im Wechsel von Präsenz- und Distanzunterricht umgesetzt. In diesem Fall informieren wir Sie schnellstmöglich über unsere Homepage."
+      },
+      {
+        "type": "text",
+        "content": "Sport wird mit sporttheoretischen Inhalten im Klassenraum oder im Freien unterrichtet."
+      },
+      {
+        "type": "text",
+        "content": "Bitte beachten Sie, das auf dem gesamten Schulgelände geltende Abstandsgebot und dass die Maskenpflicht zum Tragen einer medizinischen oder FFP-2-Maske weiterhin besteht. Ebenso gelten alle weiteren Maßnahmen entsprechend der Belehrung zu der „Regelung zur Vermeidung der Ausbreitung des Coronavirus bei der Durchführung von Unterricht bzw. im Schulbetrieb“ (siehe Homepage)."
+      },
+      {
+        "type": "text",
+        "content": "H. Danker <br/> Schulleiter"
+      }
+    ]
+  },
 ];

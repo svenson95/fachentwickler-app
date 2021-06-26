@@ -175,5 +175,79 @@ export const quizzes: QuizData[] = [
                 "answer": 2
             }
         ]
-    }
+    },
+    {
+        "url": "markt_und_kundenbeziehungen/fragen_zum_marketing_mix/quiz",
+        "_id": "60ad74d3e5eb3378a74bc830",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Fragen zum Marketing Mix",
+        "description": "Thema vom 18.05.2021",
+        "subject": "lf-8",
+        "type": "quiz",
+        "lessonDate": "2021-05-18",
+        "lastUpdate": "2021-05-25",
+        "schoolWeek": "25",
+        "questions": [
+            {
+                "question": "Die Distributions-, Preis-, Kommunikations- und Produktpolitik sind die vier Instrumente des ...",
+                "choice1": "Marketing-Mix",
+                "choice2": "Produktlebenszyklus",
+                "answer": 1
+            },
+            {
+                "question": "... ist kurzfristiger angelegt als Werbung. Die Analyse, Planung, Durchführung und Kontrolle meist kurzfristiger und primär kommunikativer Maßnahmen dient dazu, Absatzorgane und Absatzmittler zum Verkauf zu motivieren",
+                "choice1": "Sponsoring",
+                "choice2": "Verkaufsförderung",
+                "answer": 2
+            },
+            {
+                "question": "Bei dem Verkauf von Produkten vom Hersteller an den Konsumenten (z. B. Werksverkauf) wird vom ... Vertriebsweg gesprochen",
+                "choice1": "Indirekten",
+                "choice2": "Direkten",
+                "answer": 2
+            },
+            {
+                "question": "Zur Marktanalyse im Rahmen der Marktforschung zählen Befragungen, Beobachtungen und ...",
+                "choice1": "Untersuchungen",
+                "choice2": "Tests",
+                "answer": 2
+            },
+            {
+                "question": "Beim Verkauf vom Hersteller über Absatzmittler an den Konsumenten wird vom ... Absatzweg gesprochen",
+                "choice1": "Indirekten",
+                "choice2": "Direkten",
+                "answer": 1
+            },
+            {
+                "question": "Bei der Distributionspolitik ist das Ziel, dem ... das richtige Produkt in der richtigen Menge zur richtigen Zeit im richtigen Zustand am richtigen Ort zur Verfügung zu stellen",
+                "choice1": "Absatzmittler",
+                "choice2": "Abnehmer",
+                "answer": 2
+            },
+            {
+                "question": "Wenn Markenartikel in bspw. Filmen geschickt platziert werden, ohne dass es direkt ins Auge fällt, sondern im Unterbewusstsein der Zuschauer verarbeitet wird, wird von ... gesprochen. Dabei soll sich z. B. das Image eines Schauspielers auf das Produkt übertragen",
+                "choice1": "Werbung",
+                "choice2": "Produktplatzierung",
+                "answer": 2
+            },
+            {
+                "question": "Zurückgreifen auf vorhandene Informationen (desk research)",
+                "choice1": "Sekundärforschung",
+                "choice2": "Primärforschung",
+                "answer": 1
+            },
+            {
+                "question": "Wird Marktforschung über einen längeren Zeitraum mit einer gleichbleibenden Personengruppe durchgeführt, spricht man von der ...",
+                "choice1": "Marktstudie",
+                "choice2": "Marktbeobachtung",
+                "answer": 2
+            },
+            {
+                "question": "Bei der Distributionspolitik geht es um den ... von Leistungen / Produkten",
+                "choice1": "Vertrieb",
+                "choice2": "Absatzmittler",
+                "answer": 1
+            }
+        ]
+    },
 ];

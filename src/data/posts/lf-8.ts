@@ -531,7 +531,7 @@ export const LF8_POSTS: Post[] = [
         "subject": "lf-8",
         "type": "article",
         "lessonDate": "2021-05-20",
-        "lastUpdate": "2021-05-23",
+        "lastUpdate": "2021-05-26",
         "schoolWeek": "25",
         "elements": [
             {
@@ -540,6 +540,179 @@ export const LF8_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "content": "Der Begriff Preispolitik steht für eine Marketing-Strategie, die Kaufanreize durch eine gezielte Gestaltung des Verkaufspreises setzen soll. Sie ist zusammen mit Produktpolitik, Kommunikationspolitik und Distributionspolitik ein Teil des Marketing-Mixes."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Preispolitik bezeichnet eine Marketing-Strategie, die mit Hilfe des Verkaufspreises Kaufanreize setzen soll",
+                    "Preisuntergrenzen richten sich nach den Kosten und finden in der kostenorientierten Preispolitik Anwendung",
+                    "Marktorientierte Preispolitik richtet sich nach der Konkurrenz und dem Verhalten der Nachfrager",
+                    "Drei Grundlegende Preisstrategien: Festpreisstrategie, Preiswettbewerbsstrategie und Preisabfolgestrategie"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60ad7d8de5eb3378a74bc835",
+                "size": "m"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Prozesse in der Preispolitik"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Preisbildung und Veränderung",
+                    "Preisdifferenzierung",
+                    "Preisdurchsetzung",
+                    "Definition der Verkaufskonditionen",
+                    "Entwicklung von Dienstleistungen"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Kostenorientierte Preispolitik"
+            },
+            {
+                "type": "text",
+                "content": "Ein wichtiges Kriterium für die Entscheidungen innerhalb der Preispolitik ist die Preisuntergrenze. Sie basiert in einem Produktionsunternehmen auf der Teilkosten- oder der Vollkostenrechnung, die Material- und Produktionskosten mit einkalkulieren."
+            },
+            {
+                "type": "text",
+                "content": "Die langfristige Preisuntergrenze deckt die Gesamtkosten bei ausbleibenden Gewinn ab und kennzeichnet simultan die Gewinnschwelle. Da sich die kurz- und langfristige Preisuntergrenze nach den Kosten eines Produktes richten, werden beide Varianten unter dem Begriff der kostenorientierten Preispolitik zusammengefasst."
+            },
+            {
+                "type": "text",
+                "content": "Die Preisobergrenze wird ausschließlich durch die Nachfrage festgelegt und liegt dort, wo die Wertschätzung eines Artikels durch den Kunden mit dem wahrgenommenen Preis übereinstimmt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Marktorientierte Preispolitik"
+            },
+            {
+                "type": "text",
+                "content": "Die marktorientierte Preispolitik – auch optimale Preisfindung genannt – richtet sich nach den Preisen von Konkurrenzunternehmen und dem Verhalten der Kunden. Hauptziel dieser Politik ist die Gewinnmaximierung. Für dieses Vorhaben muss die Marktform berücksichtigt, die Konkurrenz analysiert und aufwändige Marktforschung betrieben werden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Preisstrategien"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Einführung eines Produktes wird im Vorfeld eine Preisstrategie festgelegt, die für das Produkt auf dem Markt angewendet wird. Grundlegend wird dabei zwischen den drei Strategien Festpreisstrategie, Preiswettbewerbsstrategie sowie Preisabfolgestrategie unterschieden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Marketing » Marketingmix » Preispolitik | 26.05.2021 | <a href='https://bwl-wissen.net/definition/preispolitik' target=\"_blank\" rel=\"noopener noreferrer\">https://bwl-wissen.net/definition/preispolitik</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "markt_und_kundenbeziehungen/preissetzung_uebung",
+        "_id": "60ad7ccce5eb3378a74bc833",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Preissetzung Übung",
+        "description": "Thema vom 20.05.2021",
+        "subject": "lf-8",
+        "type": "tasks",
+        "lessonDate": "2021-05-20",
+        "lastUpdate": "2021-05-26",
+        "schoolWeek": "25",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Problemsituation"
+            },
+            {
+                "type": "text",
+                "content": "Die Firma ACI, ein IT-Systemhaus, führt zurzeit eine Analyse durch, in welcher Phase des Produktlebenszyklus sich die einzelnen Produkte befinden, um im Rahmen des Marketingmix Anpassungen vorzunehmen. Die Produkt-, Kommunikations- und Distributionspolitik wurden bereits beleuchtet. Nun macht die Preis- und Konditionenpolitik noch Sorge, da die erwarteten Gewinne bis zum Jahresende gegebenenfalls nicht erreicht werden."
+            },
+            {
+                "type": "text",
+                "content": "Grundsätzlich muss ACI die Kosten des Produktes, die Preise der Konkurrenz sowie das Wertempfinden und Verhalten der Nachfrager berücksichtigen. Um preisliche Maßnahmen ableiten zu können, möchte sich ACI mit den Methoden und Strategien der Preispolitik vertraut machen und diese dann in Bezug zum Produktlebenszyklus setzen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Sie werden damit beauftragt dieses Problem zu lösen."
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>1</span> Informieren Sie sich über die Möglichkeiten der Preissetzung im Rahmen der Preispolitik und in diesem Zusammenhang"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Kostenarten (fixe und variable Kosten)",
+                    "kostenorientierte Preisbildung (Kostenzuschlagskalkulation und Break-Even-Analyse)",
+                    "nachfrageorientierte Preisbildung und Preisdifferenzierungsstrategien",
+                    "und konkurrenzorientierte Preisbildung (Marktformen und deren Einfluss auf den Preis)",
+                    "Konditionenpolitik"
+                ]
+            },
+            {
+                "type": "text",
+                "hidden": true,
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>2</span> Erstellen Sie eine Übersicht und präsentieren Sie Ihre Ergebnisse"
+            },
+            {
+                "type": "text",
+                "hidden": true,
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='list-number'>3</span> Beurteilen Sie, inwieweit die Kenntnis preispolitischer Maßnahmen bei der Optimierung des Produktlebenszyklus hilft"
+            },
+            {
+                "type": "text",
+                "hidden": true,
                 "content": "..."
             }
         ]

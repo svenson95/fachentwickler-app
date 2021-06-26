@@ -3237,4 +3237,51 @@ export const LF9_POSTS: Post[] = [
             },
         ]
     },
+    {
+        "url": "oeffentliche_netze_und_dienste/voice_over_ip",
+        "_id": "60d598e6a8aa26228824ead4",
+        "topicId": "60568d0407c61731b8d162f0",
+        "title": "Voice over IP",
+        "description": "Mitschrift vom 07.06.2021",
+        "subject": "lf-9",
+        "type": "article",
+        "lessonDate": "2021-06-07",
+        "lastUpdate": "2021-06-25",
+        "schoolWeek": "26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Was ist IP-Telefonie/VoIP/Internettelefonie?\n"
+            },
+            {
+                "type": "text",
+                "content": "IP-Telefonie oder Voice over IP genannt, ist das Telefonieren über Rechnernetze, welche nach Internetstandards aufgebaut sind. Dabei werden für Telefonie typische Informationen, mithin Sprache und Steuerinformationen beispielsweise für den Aufbau einer Verbindung, über ein Datennetz übertragen. Internettelefonie bietet alle Leistungsmerkmale der traditionellen Telefonie (Telefonieren, Fax, Voicemail, Videoanrufe, ...), allerdings werden hier Telefonate und Daten über das Internet übertragen statt über den traditionellen Festnetzanschluss."
+            },
+            {
+                "type": "list",
+                "content": "Bei der IP-Telefonie werden die Telefone nicht länger in die TAE-Buchse der Telefondose, in eine ISDN-Box oder in einen Splitter eingestöpselt, sondern in den DSL-Router oder in ein VoIP-fähiges Kabelmodem. Auch im Hintergrund spielt sich bei der Internettelefonie ein ganz anderer technischer Vorgang ab. Den Verbindungen werden keine festen Leitungen mehr zugewiesen - stattdessen wird die Sprache, wie jeder andere digitale Dienst auch, in Form von Datenpaketen über das Internet versandt. Dies geschieht aufgrund der Echtzeitanforderungen dabei in der Regel priorisiert. Auch ein Telefongespräch, das über das Internet geführt wird, lässt sich wie bei der klassischen Telefonie in drei grundlegende Vorgänge einteilen:",
+                "ordered": true,
+                "list": [
+                    "Verbindungsaufbau",
+                    "Gesprächsübertragung",
+                    "Verbindungsabbau"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Was ist IP-Telefonie? | 25.06.2021 | <a href='https://www.placetel.de/ratgeber/ip-telefonie-voip-telefonie' target=\"_blank\" rel=\"noopener noreferrer\">https://www.placetel.de/ratgeber/ip-telefonie-voip-telefonie</a>"
+                ]
+            }
+        ]
+    },
 ];

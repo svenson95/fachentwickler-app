@@ -75,7 +75,7 @@ const test: Post = {
             "type": "list",
             "content": "Quellen:",
             "list": [
-                "<a href='link' target=\"_blank\" rel=\"noopener noreferrer\">text</a>"
+                "TITLE | DATE | <a href='link' target=\"_blank\" rel=\"noopener noreferrer\">text</a>"
             ]
         }
     ]

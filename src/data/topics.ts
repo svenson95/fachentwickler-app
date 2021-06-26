@@ -155,7 +155,7 @@ export const topics: Topic[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen",
         "subject": "lf-6",
         "links": [
-            "5f429c59165d0ab470bc57e2",
+            "60bc15892e26a059c20d3591",
             "5f429ba9165d0ab470bc57dc",
             "5f429caf165d0ab470bc57e4",
             "5f8ca961eac9e043cd102fc1",
@@ -165,7 +165,7 @@ export const topics: Topic[] = [
             "5f429cf5165d0ab470bc57e8",
             "5f429d06165d0ab470bc57e9",
             "5f429d16165d0ab470bc57ea",
-            "5f43d3dcf067639a259359c6",
+            "5f429c59165d0ab470bc57e2",
             "5f67ad91257ec895e489e34c",
             "5ffca2c6e3bc33038ff5f16e",
             "602101bc65dbdf479177a4c1"
@@ -197,9 +197,9 @@ export const topics: Topic[] = [
         ]
     },
     {
-        "title": "E-Technik",
+        "title": "Vernetzte IT-Systeme",
         "_id": "6056854807c61731b8d162ec",
-        "url": "e_technik",
+        "url": "vernetzte_it_systeme",
         "subject": "lf-7-1",
         "links": [
             "5f79fd90322ea57fbdb3b037",
@@ -241,7 +241,8 @@ export const topics: Topic[] = [
             "603eb62eb0c00c20f201d120",
             "603eb640b0c00c20f201d121",
             "605c866f23779759b9bb2902",
-            "609e584a7bc55c76643cf50c"
+            "609e584a7bc55c76643cf50c",
+            "60d59a8da8aa26228824ead7"
         ]
     },
     {
@@ -280,7 +281,8 @@ export const topics: Topic[] = [
             "603cc763b791dc7b6076e1ac",
             "603cf9deb0c00c20f201d0fe",
             "60585dfe4756c974afde617a",
-            "60a2f31359a0005b1c634aaf"
+            "60a2f31359a0005b1c634aaf",
+            "60d598e6a8aa26228824ead4"
         ]
     },
     {
