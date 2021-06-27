@@ -28,7 +28,7 @@ mat-card.fe-card.fe-school-week-card {
         &:not(&:disabled) {
           cursor: pointer;
           &:hover {
-            background-color: rgba(var(--tertiary-color-rgb), .1);
+            background-color: var(--button-hover-background);
             transition: background-color 200ms ease-in-out;
           }
         }

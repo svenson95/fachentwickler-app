@@ -113,7 +113,7 @@ fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
 
       @include from-xs {
         &:hover {
-          background-color: rgba(var(--tertiary-color-rgb), .1);
+          background-color: var(--button-hover-background);
         }
       }
 
@@ -357,7 +357,7 @@ fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
     }
 
     &:hover, &.mat-form-field-should-float {
-      background-color: rgba(var(--tertiary-color-rgb), .1);
+      background-color: var(--button-hover-background);
     }
 
     .mat-form-field-outline {

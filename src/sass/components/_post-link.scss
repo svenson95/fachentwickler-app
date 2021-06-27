@@ -67,7 +67,7 @@
 
     @media screen and (min-width: 1000px) {
       &:hover {
-        background: rgba(var(--tertiary-color-rgb), .1);
+        background: var(--button-hover-background);
         transition: background 100ms ease-in-out;
       }
 

@@ -175,7 +175,7 @@
       color: var(--text-color-1);
 
       th {
-        font-family: Nunito-ExtraBold, sans-serif;
+        font-family: Nunito-Bold, sans-serif;
         background: var(--background-secondary);
       }
 
@@ -224,7 +224,7 @@
 
 .fe-post-item.answer button + p,
 .post-answer-group {
-  background-color: rgba(var(--tertiary-color-rgb), .1);
+  background-color: var(--button-hover-background);
   padding: 40px 20px 20px;
   margin-top: 0;
   position: relative;

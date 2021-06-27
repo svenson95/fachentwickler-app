@@ -14,11 +14,6 @@
   src: url('../../assets/fonts/Nunito-Bold.ttf');
 }
 
-@font-face {
-  font-family: 'Nunito-ExtraBold';
-  src: url('../../assets/fonts/Nunito-ExtraBold.ttf');
-}
-
 body {
   /* Clean set general font, custom font imported in header */
   font-size: 26px;
@@ -28,7 +23,7 @@ body {
 }
 
 b, strong {
-  font-family: Nunito-ExtraBold, sans-serif;
+  font-family: Nunito-Bold, sans-serif;
   font-weight: initial; // firefox font-weight too bold without font-weight: initial;
 }
 
