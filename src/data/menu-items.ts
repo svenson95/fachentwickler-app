@@ -215,7 +215,7 @@ export const myClass: MenuItem[] = [
   {
     title: 'Schuljahresplan',
     shortTitle: 'Schuljahresplan',
-    url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/20_21/se-fi_20-21.pdf',
+    url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/21_22/se-fi_21-22.pdf',
     icon: calendarOutline,
   }
 ];

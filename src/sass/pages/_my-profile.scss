@@ -85,11 +85,11 @@
   .fe-input {
 
     @include from-sm {
-      width: 300px;
+      width: 400px;
     }
 
     @include from-xs {
-      width: 250px;
+      width: 300px;
     }
 
     .mat-input-element {
