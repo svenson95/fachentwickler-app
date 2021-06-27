@@ -17,7 +17,7 @@
       <span class="bracket">]</span>
     </div>
     <div class="fe-header-elements-wrapper">
-      <div class="fe-searchbar-wrapper" *ngIf="!isMobile.matches">
+      <div class="fe-searchbar-wrapper" *ngIf="!isMobile.matches" [class.is-searching]="router.url.startsWith('/search')">
         <mat-form-field class="fe-search-bar" appearance="fill">
           <mat-icon class="unselectable" matSuffix (click)="openSearchView()" *ngIf="!searchPostService.isSearching">search</mat-icon>
           <mat-spinner matSuffix class="fe-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>

@@ -102,7 +102,6 @@ mat-dialog-content.fe-image-manager {
   }
 
   hr {
-    border: none;
     height: 1px;
     margin: 20px 0;
   }
@@ -167,6 +166,10 @@ mat-dialog-content.fe-image-manager {
 
   .fe-pagination-bar {
     margin-bottom: 24px;
+
+    hr {
+      margin-top: 0;
+    }
   }
 }
 
