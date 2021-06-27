@@ -67,7 +67,7 @@
             <mat-slide-toggle class="fe-theme-toggle" [checked]="themeService.isDarkTheme()" (change)="toggleTheme()">
             </mat-slide-toggle>
           </mat-form-field>
-          <button class="fe-save-change-btn" (click)="saveChangeTheme($event)" *ngIf="themeService.getActiveTheme().name !== authService.user.theme">
+          <button class="fe-save-change-btn" (click)="saveChangeTheme($event)" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme">
             Speichern
           </button>
         </div>
