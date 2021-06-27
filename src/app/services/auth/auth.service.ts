@@ -8,7 +8,15 @@ import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component'
 
 import { environment } from '../../../environments/environment';
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
-import { LoginResponse, RegisterResponse, LogoutResponse, AuthenticatedResponse, EditUserResponse, AddProgressResponse } from '../../models/fetch-response';
+import {
+    LoginResponse,
+    RegisterResponse,
+    LogoutResponse,
+    AuthenticatedResponse,
+    EditUserResponse,
+    AddProgressResponse,
+    ConfirmationResponse
+} from '../../models/fetch-response';
 import { ThemeService } from '../theme.service';
 import { DataService } from '../data/data.service';
 
@@ -21,6 +29,7 @@ export class AuthService {
 
     private LOGIN_ENDPOINT = environment.baseUrl + '/user/login';
     private REGISTER_ENDPOINT = environment.baseUrl + '/user/register';
+    private CONFIRMATION_ENDPOINT = environment.baseUrl + '/user/confirmation';
     private EDIT_USER_ENDPOINT = environment.baseUrl + '/user/edit-user';
     private ADD_PROGRESS_ENDPOINT = environment.baseUrl + '/user/add-progress';
     private LOGOUT_ENDPOINT = environment.baseUrl + '/user/logout';
@@ -77,11 +86,32 @@ export class AuthService {
         return this.httpClient.post<RegisterResponse>(this.REGISTER_ENDPOINT, JSON.stringify(user), httpOptions)
             .pipe(map(response => {
                 // console.log('response POST register', response);
-                this.isAuthenticated = response.success;
                 if (response.success) {
+                    this.isAuthenticated = response.success;
                     this.user = response.user;
                     this.token = response.token;
                     this.storeData();
+                }
+                return response;
+            }));
+    }
+
+    confirmRegistration(email: string, code: string): Observable<ConfirmationResponse> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            }),
+            withCredentials: true
+        };
+
+        return this.httpClient.get<ConfirmationResponse>(`${this.CONFIRMATION_ENDPOINT}/${email}/${code}`, httpOptions)
+            .pipe(map(response => {
+                // console.log('response POST register', response);
+                if (response.success) {
+                    this.user.active = true;
+                    this.storeData();
+                } else if (response.error) {
+                    console.log('error...', response);
                 }
                 return response;
             }));

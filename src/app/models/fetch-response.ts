@@ -19,6 +19,13 @@ export interface RegisterResponse {
   error?: Error;
 }
 
+export interface ConfirmationResponse {
+  success: boolean;
+  message: string;
+  error?: Error;
+  response?: any;
+}
+
 export interface LogoutResponse {
   success: boolean;
   message: string;

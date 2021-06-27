@@ -30,7 +30,11 @@ export class AuthGuardService implements CanActivate {
     // Store the attempted URL for redirecting    TODO: check redirectUrl in login & register function
     this.authService.redirectUrl = url;
 
-    if (this.authService.isAuthenticated || this.isTestDataRequest(url)) {
+    if (this.authService.isAuthenticated && !this.authService.user.active) {
+      this.router.navigateByUrl('/verify');
+    }
+
+    if (this.authService.isAuthenticated && this.authService.user.active || this.isTestDataRequest(url)) {
       return true;
     } else if (!this.authService.isAuthenticated) {
       if (this.router.url !== '/login') {

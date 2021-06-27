@@ -108,6 +108,10 @@ const routes: Routes = [
     data: { animation: 'RegisterPage' }
   },
   {
+    path: 'verify',
+    loadChildren: () => import('src/app/pages/verify/verify.module').then(m => m.VerifyModule)
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
     data: { animation: 'DashboardPage' },

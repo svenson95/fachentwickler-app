@@ -4,6 +4,7 @@ export interface User {
   email: string;
   password?: string;
   progress: string[];
+  active: boolean;
   role: UserRole;
   theme: 'light' | 'dark';
   _id: string;
