@@ -1,4 +1,5 @@
 .fe-schedule-table {
+  width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
   margin-top: 20px;
@@ -10,7 +11,6 @@
 
   tbody {
     display: flex;
-    font-size: .9em;
 
     tr {
       display: flex;
@@ -22,16 +22,18 @@
 
       &:first-of-type {
         @include from-xs {
-          max-width: 70px;
+          width: 75px;
+          flex-shrink: 0;
         }
 
         @include to-xs {
-          max-width: 50px;
+          width: 50px;
+          flex-shrink: 0;
         }
       }
 
-      &:not(.first-of-type) {
-        width: calc(100% / 6);
+      &:not(:first-of-type) {
+        width: 100%;
       }
 
       th {
@@ -60,9 +62,16 @@
       td {
         display: flex;
         flex-direction: column;
-        min-height: 61px;
         justify-content: center;
         text-align: center;
+
+        @include from-md {
+          min-height: 70px;
+        }
+
+        @include to-md {
+          min-height: 61px;
+        }
 
         &:nth-child(2), &:nth-child(3), &:nth-child(4) {
           border-bottom: 1px solid rgba(var(--grey-1-rgb), .5);
@@ -75,14 +84,16 @@
         .hour-subject,
         .hour-teacher,
         .hour-room {
+          @include to-lg {
+            font-size: .8rem;
+          }
+
+          @include to-xs {
+            font-size: .65rem;
+          }
         }
 
         .hour-room {
-          font-size: .8em;
-
-          @include to-xs {
-            font-size: .7em;
-          }
         }
 
         .hour-subject {
@@ -95,7 +106,6 @@
 
           @include to-lg {
             white-space: nowrap;
-            font-size: .7rem;
           }
         }
 
@@ -104,18 +114,15 @@
         }
 
         .hour-teacher {
-          font-size: .8rem;
           font-family: Nunito-Light, sans-serif;
           color: var(--grey-3);
-
-          @include to-md {
-            font-size: .6rem;
-          }
         }
 
         .hour-room,
         .hour-teacher {
-          line-height: 14px;
+          @include to-md {
+            line-height: 14px;
+          }
         }
       }
 
@@ -130,10 +137,6 @@
       .schedule-time {
         text-align: left;
         color: var(--text-color-1);
-
-        @include from-xs {
-          min-width: 50px;
-        }
 
         @include to-xs {
           font-size: .7em;

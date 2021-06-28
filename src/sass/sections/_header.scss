@@ -206,22 +206,14 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
     padding: 5px;
     margin-left: 10px;
     margin-right: 10px;
-
     fill: var(--tertiary-color);
-    border: 1px solid var(--tertiary-color);
   }
 
   .fe-icon-wrapper {
 
     @include to-xs {
-      width: 24px;
+      width: 28px;
       margin-right: 0;
-    }
-
-    svg {
-      @include to-xs {
-        height: 24px;
-      }
     }
   }
 
@@ -231,17 +223,9 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
     }
   }
 
-  @include to-xs {
-    &.active-route {
+  &.active-route {
+    .fe-icon-wrapper {
       fill: var(--secondary-color);
-
-      .fe-icon-wrapper {
-        fill: var(--secondary-color);
-      }
-
-      @include to-xs {
-        border-color: var(--secondary-color) !important;
-      }
     }
   }
 
