@@ -1,46 +1,36 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../angular-material.module';
-import { NgxDropzoneModule } from 'ngx-dropzone';
 
 import { PageComponent } from './page.component';
 import { HeaderComponent } from '../header/header.component';
-import { AppIconComponent } from '../app-icon/app-icon.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ContentComponent } from '../content/content.component';
+import { AppIconComponent } from '../app-icon/app-icon.component';
 import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/logout-dialog.component';
-import { ImageManagerDialogComponent } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.component';
 import { DeleteImageDialogComponent } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.component';
-import { PaginationBarComponent } from '../../components/pagination-bar/pagination-bar.component';
+import { ImageManagerDialogModule } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.module';
 
 
 @NgModule({
   declarations: [
     PageComponent,
     HeaderComponent,
+    SidenavComponent,
+    ContentComponent,
     AppIconComponent,
-    SidenavComponent,
-    ContentComponent,
     LogoutDialogComponent,
-    ImageManagerDialogComponent,
     DeleteImageDialogComponent,
-    PaginationBarComponent
   ],
-  exports: [
-    SidenavComponent,
-    ContentComponent,
-    PageComponent,
-    PaginationBarComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [PageComponent],
   imports: [
     CommonModule,
     AngularMaterialModule,
     RouterModule,
     FormsModule,
-    NgxDropzoneModule
+    ImageManagerDialogModule
   ]
 })
 export class PageComponentModule { }

@@ -22,10 +22,7 @@
         <ngx-dropzone-label>{{ f.name }} <br/> {{ f.type }} <br/> {{ formatBytes(f.size) }}</ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
-    <button class="fe-text-button" type="submit" [disabled]="isEmpty(dropzoneFile)">
-      <span *ngIf="!isUploadingImage">Hochladen</span>
-      <mat-spinner class="fe-loading-spinner" *ngIf="isUploadingImage"></mat-spinner>
-    </button>
+    <fe-button-state type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)">Hochladen</fe-button-state>
   </form>
   <hr class="fe-divider-line"/>
   <p class="title">Details</p>
