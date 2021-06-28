@@ -38,11 +38,11 @@
   }
 
   .fe-topic-title {
-    padding: 8px 12px;
+    background: rgba(var(--tertiary-color-rgb), .1);
+    padding: 10px 12px;
+    font-family: Nunito-Bold, sans-serif;
     line-height: 20px;
     border-bottom: 1px solid var(--grey-1);
-    font-family: Nunito-Bold, sans-serif;
-    background: var(--background-secondary);
     border-top-left-radius: var(--button-radius);
     border-top-right-radius: var(--button-radius);
 
