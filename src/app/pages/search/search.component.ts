@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   resultsSubscription: Subscription;
   searchResults = [];
+  searchString: string;
 
   loadingSubscription: Subscription;
   isLoading: boolean;
@@ -30,6 +31,7 @@ export class SearchComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.resultsSubscription = this.searchPostService.searchResults$.pipe(delay(0)).subscribe(
       (posts) => {
+        this.searchString = this.searchPostService.searchValue;
         this.searchResults = posts;
       }
     );
@@ -43,6 +45,7 @@ export class SearchComponent implements OnInit, OnDestroy {
     if (this.searchResults.length === 0) {
       const searchValue = this.router.url.substring(14, this.router.url.length).split('%20').join(' ');
       if (searchValue !== '') {
+        this.searchString = searchValue;
         this.searchPostService.searchValue = searchValue;
         this.searchPostService.searchPosts(searchValue).subscribe((response) => {
           this.searchPostService.searchResults$.next(response);
@@ -58,6 +61,7 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   closeSearchView(): void {
     this.searchPostService.searchValue = '';
+    this.searchString = '';
     this.router.navigateByUrl(this.searchPostService.redirectUrl);
   }
 
