@@ -3,7 +3,7 @@
   table-layout: fixed;
   margin-top: 20px;
 
-  @include to-xs {
+  @include to-lg {
     width: 100%;
     margin: 10px 0;
   }
@@ -83,11 +83,11 @@
           color: var(--tertiary-color);
           font-family: Nunito-Bold, sans-serif;
 
-          @include from-sm {
+          @include from-lg {
             min-width: 50px;
           }
 
-          @include to-sm {
+          @include to-lg {
             white-space: nowrap;
             font-size: .7rem;
           }

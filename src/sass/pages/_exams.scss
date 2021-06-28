@@ -3,7 +3,7 @@
   .fe-exams-view {
     display: flex;
 
-    @include to-sm {
+    @include to-lg {
       flex-direction: column;
     }
 
@@ -12,12 +12,12 @@
       margin-right: 20px;
       flex-shrink: 0;
 
-      @include from-sm {
+      @include from-lg {
         padding-right: 20px;
         border-right: 1px solid var(--grey-1);
       }
 
-      @include to-sm {
+      @include to-lg {
         margin-bottom: 20px;
       }
 

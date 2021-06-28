@@ -85,7 +85,7 @@
         align-self: center;
       }
 
-      @include to-sm {
+      @include to-lg {
         align-self: start;
       }
 
@@ -105,11 +105,11 @@
         margin-top: -5px;
       }
 
-      @include from-sm {
+      @include from-lg {
         flex-direction: row-reverse;
       }
 
-      @include to-sm {
+      @include to-lg {
         flex-direction: column;
         align-self: start;
         align-items: flex-end;
@@ -132,13 +132,13 @@
           max-width: 80px;
         }
 
-        @include from-sm {
+        @include from-lg {
           padding: 0 5px;
         }
       }
 
       .fe-badge {
-        @include to-sm {
+        @include to-lg {
           margin-top: 3px;
           margin-left: 0;
         }

@@ -54,7 +54,7 @@
         margin-bottom: 6px;
       }
 
-      @include to-sm {
+      @include to-lg {
         font-size: 1.1em;
         line-height: 16px;
       }
@@ -87,7 +87,7 @@
       margin-bottom: 20px;
     }
 
-    @include to-sm {
+    @include to-lg {
       flex-direction: column;
     }
 
@@ -114,7 +114,7 @@
         margin-bottom: 0;
       }
 
-      @include to-sm {
+      @include to-lg {
         align-items: center;
       }
 
@@ -195,13 +195,13 @@
       align-self: center;
       max-width: 400px;
 
-      @include to-sm {
+      @include to-lg {
         margin-bottom: 20px;
         margin-top: 20px;
       }
 
       .fe-title {
-        @include to-sm {
+        @include to-lg {
           align-self: baseline;
         }
       }
@@ -210,7 +210,7 @@
         width: 100px;
         margin-left: 20px;
 
-        @include to-sm {
+        @include to-lg {
           margin-right: auto;
         }
       }
@@ -219,7 +219,7 @@
         width: 100px;
         margin-left: 20px;
 
-        @include to-sm {
+        @include to-lg {
           margin-right: auto;
         }
       }
@@ -317,7 +317,7 @@
       .fe-title {
         align-self: start;
 
-        @include to-sm {
+        @include to-lg {
           align-self: baseline;
         }
       }
@@ -326,7 +326,7 @@
     .fe-component-wrapper {
       align-self: center;
 
-      @include from-sm {
+      @include from-lg {
         //min-width: 400px;
       }
 
@@ -357,7 +357,7 @@
     .fe-text-column {
       align-items: center;
 
-      @include to-sm {
+      @include to-lg {
         margin-top: 40px;
       }
 

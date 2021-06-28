@@ -16,7 +16,7 @@
     .fe-view-wrapper {
       display: flex;
 
-      @include to-sm {
+      @include to-lg {
         flex-direction: column;
       }
     }

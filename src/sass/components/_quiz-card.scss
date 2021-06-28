@@ -13,7 +13,7 @@
     display: flex;
     margin-top: 30px;
 
-    @include to-sm {
+    @include to-lg {
       //flex-direction: column;
     }
   }
@@ -21,12 +21,12 @@
 
 .fe-card.quiz-card .fe-quiz {
 
-  @include from-sm {
+  @include from-lg {
     width: 600px;
     padding: 20px 0;
   }
 
-  @include to-sm {
+  @include to-lg {
     width: 500px;
   }
 
@@ -115,7 +115,7 @@
 
         &:not(.is-checking-answer) {
           .fe-quiz-answer {
-            @include from-sm {
+            @include from-lg {
               &:hover {
                 background: rgba(var(--tertiary-color-rgb), 0.3);
                 transition: background 300ms ease-in-out;

@@ -8,7 +8,7 @@
   outline: var(--progressbar-height) solid var(--tertiary-color);
   outline-offset: calc(var(--progressbar-height)  * -1);
 
-  @include to-sm {
+  @include to-lg {
     display: none;
   }
 

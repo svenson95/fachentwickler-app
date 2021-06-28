@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
 
-    @include to-sm {
+    @include to-lg {
       align-items: start;
       flex-direction: column-reverse;
     }
@@ -18,7 +18,7 @@
       padding: 10px 10px 10px 25px;
       margin-left: -30px;
 
-      @include to-sm {
+      @include to-lg {
         padding: 10px 10px 10px 25px;
       }
 
@@ -141,12 +141,12 @@
 
       .fe-exam-subject, .fe-exam-title {
 
-        @include from-sm {
+        @include from-lg {
           margin-top: 0;
           margin-left: 20px;
         }
 
-        @include to-sm {
+        @include to-lg {
         }
       }
 
@@ -155,7 +155,7 @@
         letter-spacing: 1px;
         flex-grow: 1;
 
-        @include from-sm {
+        @include from-lg {
           margin-top: 0;
           margin-bottom: 0;
         }

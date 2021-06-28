@@ -1,10 +1,10 @@
 .fe-page.curriculum .school-week-card {
 
-  @include from-sm {
+  @include from-lg {
     margin-bottom: 30px !important;
   }
 
-  @include to-sm {
+  @include to-lg {
     margin-bottom: 20px !important;
   }
 }

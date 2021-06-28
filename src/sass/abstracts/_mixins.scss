@@ -35,17 +35,6 @@
     @content
   }
 }
-@mixin from-sm() {
-  @include from($breakpoint-sm) {
-    @content
-  }
-}
-
-@mixin to-sm() {
-  @media screen and (max-width: $breakpoint-sm) {
-    @content
-  }
-}
 
 @mixin to-md() {
   @media screen and (max-width: $breakpoint-md) {
@@ -55,6 +44,18 @@
 
 @mixin from-md() {
   @include from($breakpoint-md) {
+    @content
+  }
+}
+
+@mixin from-lg() {
+  @include from($breakpoint-lg) {
+    @content
+  }
+}
+
+@mixin to-lg() {
+  @media screen and (max-width: $breakpoint-lg) {
     @content
   }
 }

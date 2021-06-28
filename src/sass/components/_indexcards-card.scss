@@ -14,7 +14,7 @@
     margin-bottom: 30px;
     flex-shrink: 1;
 
-    @include to-sm {
+    @include to-lg {
       align-items: center;
       flex-direction: column;
     }
@@ -159,17 +159,17 @@
   justify-content: center;
   margin: 30px;
 
-  @include to-sm {
+  @include to-lg {
     margin-left: 0;
     margin-right: 0;
   }
 
-  @include to-sm {
+  @include to-lg {
     margin-top: 60px;
   }
 
   button {
-    @include to-sm {
+    @include to-lg {
       width: fit-content;
       align-self: center;
       padding-left: 40px;
@@ -178,11 +178,11 @@
   }
 
   button:not(:last-child) {
-    @include from-sm {
+    @include from-lg {
       margin-bottom: 50px;
     }
 
-    @include to-sm {
+    @include to-lg {
       margin-bottom: 15px;
     }
   }

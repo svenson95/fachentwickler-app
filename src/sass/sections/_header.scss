@@ -346,7 +346,7 @@ fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
     border-top-right-radius: var(--button-radius);
     transition: var(--header-button-transition);
 
-    @include to-sm {
+    @include to-lg {
       width: 180px;
     }
 
