@@ -21,7 +21,13 @@
       }
 
       &:first-of-type {
-        min-width: 44px;
+        @include from-xs {
+          max-width: 70px;
+        }
+
+        @include to-xs {
+          max-width: 50px;
+        }
       }
 
       &:not(.first-of-type) {
