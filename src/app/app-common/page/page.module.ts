@@ -10,9 +10,9 @@ import { HeaderComponent } from '../header/header.component';
 import { AppIconComponent } from '../app-icon/app-icon.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ContentComponent } from '../content/content.component';
-import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
-import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
-import { DeleteImageDialogComponent } from '../../components/delete-image-dialog/delete-image-dialog.component';
+import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/logout-dialog.component';
+import { ImageManagerDialogComponent } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.component';
+import { DeleteImageDialogComponent } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.component';
 import { PaginationBarComponent } from '../../components/pagination-bar/pagination-bar.component';
 
 

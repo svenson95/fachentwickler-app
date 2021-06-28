@@ -4,7 +4,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 
 import { SubstitutionScheduleComponent } from './substitution-schedule.component';
 import { SubstitutionScheduleRoutingModule } from './substitution-schedule-routing.module';
-import { ScheduleCardModule } from '../../components/schedule-card/schedule-card.module';
+import { ScheduleCardModule } from '../../components/cards/schedule-card/schedule-card.module';
 
 
 

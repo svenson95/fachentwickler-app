@@ -1,11 +1,11 @@
-mat-card.fe-card.fe-user-progress {
+mat-card.fe-card.user-progress-card {
   overflow: hidden;
   padding-bottom: 20px;
 
   .fe-view-wrapper {
     padding-top: 10px;
 
-    .fe-progress-lesson, .fe-progress-week {
+    .fe-progress-lesson, .progress-week {
       .label {
         font-size: 1.1em;
         margin-top: 8px;
@@ -35,7 +35,7 @@ mat-card.fe-card.fe-user-progress {
       }
     }
 
-    .fe-progress-week {
+    .progress-week {
       margin-bottom: 30px;
 
       .progress-bar {

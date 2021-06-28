@@ -1,0 +1,42 @@
+<mat-card class="fe-card school-week-card">
+  <div class="fe-card-header">
+    <div class="fe-title-description-wrapper">
+      <p class="fe-card-title">Schulwoche #{{week.schoolWeek}}</p>
+      <p class="fe-card-description">
+        <span>
+          {{(week?.posts[0]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
+        </span>
+        <span> - </span>
+        <span>
+          {{(week?.posts[week.posts.length-1]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
+        </span>
+      </p>
+    </div>
+    <mat-spinner class="fe-loading-spinner" *ngIf="isLoading"></mat-spinner>
+    <div class="button-wrapper" *ngIf="isDashboardPage">
+      <button class="previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week === 1 || isLoading" mat-icon-button>
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button class="next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || week === dataService.currentSchoolWeek || isLoading" mat-icon-button>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+  <mat-card-content class="fe-view-wrapper">
+    <mat-spinner class="fe-loading-spinner" *ngIf="week === undefined"></mat-spinner>
+    <div class="weekday-group" *ngIf="week !== undefined">
+
+      <div class="weekday-item" *ngFor="let week of weekdays">
+        <div class="label-wrapper">
+          <p class="weekday-label">{{weekdayAsString(week.day)}}</p>
+          <hr class="weekday-spacer"/>
+        </div>
+        <fe-post-link *ngFor="let post of week.lessons" [post]="post" [title]="fullSubjectName(post.subject)"></fe-post-link>
+      </div>
+
+    </div>
+    <p class="fe-no-data" *ngIf="week && week.posts.length === 0">
+      Artikel noch nicht freigeschaltet
+    </p>
+  </mat-card-content>
+</mat-card>

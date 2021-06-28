@@ -376,14 +376,14 @@
 }
 
 .fe-landing-row.first {
-  .fe-weekday-group {
-    .fe-weekday-item:nth-child(1), .fe-weekday-item:nth-child(2) {
+  .weekday-group {
+    .weekday-item:nth-child(1), .weekday-item:nth-child(2) {
       .fe-post-link-wrapper .fe-post-link {
         border-right: 2px solid var(--secondary-color);
       }
     }
 
-    .fe-weekday-item:nth-child(3), .fe-weekday-item:nth-child(4) {
+    .weekday-item:nth-child(3), .weekday-item:nth-child(4) {
       .fe-post-link-wrapper .fe-post-link {
         border-right: 2px solid var(--tertiary-color);
       }

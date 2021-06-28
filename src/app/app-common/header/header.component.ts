@@ -13,8 +13,8 @@ import { SidenavService } from '../../services/sidenav.service';
 import { SearchPostService } from '../../services/data/search-post.service';
 import { ThemeService } from '../../services/theme.service';
 
-import { LogoutDialogComponent } from '../../components/logout-dialog/logout-dialog.component';
-import { ImageManagerDialogComponent } from '../../components/image-manager-dialog/image-manager-dialog.component';
+import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/logout-dialog.component';
+import { ImageManagerDialogComponent } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.component';
 
 @Component({
   selector: 'fe-header',

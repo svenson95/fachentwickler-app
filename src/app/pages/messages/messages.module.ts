@@ -5,7 +5,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 import { MessagesComponent } from './messages.component';
 import { MessagesPageRoutingModule } from './messages-routing.module';
 
-import { NewsCardModule } from '../../components/news-card/news-card.module';
+import { NewsCardModule } from '../../components/cards/news-card/news-card.module';
 
 
 

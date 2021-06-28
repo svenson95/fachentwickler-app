@@ -1,4 +1,4 @@
-.fe-page.curriculum .fe-school-week-card {
+.fe-page.curriculum .school-week-card {
 
   @include from-sm {
     margin-bottom: 30px !important;
@@ -10,7 +10,7 @@
 }
 
 .fe-page.curriculum .fe-card.school-year {
-  .fe-header-wrapper {
+  .fe-card-header {
     display: flex;
     align-items: center;
 

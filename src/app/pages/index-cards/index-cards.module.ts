@@ -5,7 +5,7 @@ import { IndexCardsComponent } from './index-cards.component';
 import { IndexCardsRoutingModule } from './index-cards-routing.module';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
-import {IndexcardsCardModule} from '../../components/indexcards-card/indexcards-card.module';
+import {IndexcardsCardModule} from '../../components/cards/indexcards-card/indexcards-card.module';
 
 
 @NgModule({

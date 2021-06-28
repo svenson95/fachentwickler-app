@@ -1,6 +1,6 @@
-mat-card.fe-card.fe-school-week-card {
+mat-card.fe-card.school-week-card {
 
-  .fe-header-wrapper {
+  .fe-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,11 +12,11 @@ mat-card.fe-card.fe-school-week-card {
       margin: 0 20px 0 auto !important;
     }
 
-    .fe-button-wrapper {
+    .button-wrapper {
       height: fit-content;
 
-      .fe-previous-week-btn,
-      .fe-next-week-btn {
+      .previous-week-btn,
+      .next-week-btn {
         width: 40px;
         height: 40px;
         outline: none;
@@ -45,27 +45,27 @@ mat-card.fe-card.fe-school-week-card {
         }
       }
 
-      .fe-previous-week-btn {
+      .previous-week-btn {
         margin-right: 10px;
       }
 
-      .fe-next-week-btn {
+      .next-week-btn {
       }
     }
   }
 
-  .fe-weekday-group {
+  .weekday-group {
     @include from-md {
       margin-top: 10px;
     }
 
-    .fe-weekday-item {
-      .fe-label-wrapper {
+    .weekday-item {
+      .label-wrapper {
         display: flex;
         align-items: center;
         margin: 25px 0 20px;
 
-        .fe-weekday-label {
+        .weekday-label {
           color: var(--grey-2);
           font-size: .8rem;
           width: fit-content;
