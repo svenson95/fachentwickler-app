@@ -31,21 +31,9 @@
   }
 
 
-  .fe-buttons-wrapper {
+  .buttons-wrapper {
     display: flex;
     flex-direction: column;
-
-    .fe-loading-spinner {
-      margin: 0 auto !important;
-      $size: 18px;
-      width: $size !important;
-      height: $size !important;
-
-      svg {
-        width: $size !important;
-        height: $size !important;
-      }
-    }
 
     .fe-text-button:first-child {
       margin-bottom: 20px;

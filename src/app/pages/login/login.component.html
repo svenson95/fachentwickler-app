@@ -32,11 +32,8 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="fe-buttons-wrapper">
-          <button class="fe-text-button" type="submit">
-            <span *ngIf="!loading">Anmelden</span>
-            <mat-spinner class="fe-loading-spinner" *ngIf="loading"></mat-spinner>
-          </button>
+        <div class="buttons-wrapper">
+          <fe-button-state type="submit" [isLoading]="isLoading">Anmelden</fe-button-state>
           <button class="fe-text-button" disabled>
             <span>Passwort vergessen?</span>
           </button>

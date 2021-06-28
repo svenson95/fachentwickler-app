@@ -7,6 +7,7 @@ import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component'
 import { RegisterUser, UserRole } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
@@ -19,6 +20,8 @@ export class RegisterComponent implements OnInit, OnChanges {
   name: FormControl;
   email: FormControl;
   password: FormControl;
+
+  isLoading: boolean;
 
   nameAlreadyTaken: boolean;
   emailAlreadyTaken: boolean;
@@ -41,12 +44,17 @@ export class RegisterComponent implements OnInit, OnChanges {
 
   constructor(private router: Router,
               private formBuilder: FormBuilder,
+              private snackBar: MatSnackBar,
               private headerService: HeaderService,
               private authService: AuthService,
-              private snackBar: MatSnackBar,
+              private loadService: LoadingService,
               private themeService: ThemeService
   ) {
     this.headerService.setPageTitle('Registrieren');
+    this.loadService.loading$.subscribe(value => {
+      this.isLoading = value;
+    });
+
     this.name = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken],
       updateOn: 'submit'

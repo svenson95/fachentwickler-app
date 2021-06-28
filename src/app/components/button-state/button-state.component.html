@@ -1,0 +1,6 @@
+<button class="fe-text-button" [type]="type" [disabled]="disabled">
+    <span [class.hidden]="isLoading">
+        <ng-content></ng-content>
+    </span>
+    <mat-spinner class="fe-loading-spinner button-spinner" *ngIf="isLoading"></mat-spinner>
+</button>

@@ -6,24 +6,15 @@
     max-width: 50%;
   }
 
-  .fe-buttons-wrapper {
+  .fe-input {
+    margin-bottom: 10px;
+  }
+
+  .buttons-wrapper {
     margin: auto;
 
-    .fe-text-button {
-      width: 130px;
-      margin-top: 10px;
-    }
-
-    .fe-loading-spinner {
-      margin: 0 auto !important;
-      $size: 18px;
-      width: $size !important;
-      height: $size !important;
-
-      svg {
-        width: $size !important;
-        height: $size !important;
-      }
+    p {
+      margin-top: 40px;
     }
   }
 }

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   formGroup: FormGroup;
   username: FormControl;
   password: FormControl;
-  loading = false;
+  isLoading: boolean;
 
   invalidPassword: boolean;
   InvalidPassword: ValidatorFn = (ac): ValidationErrors => {
@@ -39,11 +39,15 @@ export class LoginComponent implements OnInit {
               private snackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
+    this.headerService.setPageTitle('Login');
+    this.loadService.loading$.subscribe(value => {
+      this.isLoading = value;
+    });
+
     if (authService.isAuthenticated) {
       router.navigate(['dashboard']);
     }
 
-    this.headerService.setPageTitle('Login');
     this.username = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
@@ -67,7 +71,6 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.loading = true;
     const username = this.formGroup.get('username').value.toLowerCase();
     const password = this.formGroup.get('password').value.toLowerCase();
 
@@ -77,10 +80,8 @@ export class LoginComponent implements OnInit {
           this.themeService.toggleTheme();
         }
         this.router.navigateByUrl('/dashboard');
-        this.loading = false;
       }, (error) => {
         console.log(error);
-        this.loading = false;
         this.invalidPassword = true;
         this.passwordInput.nativeElement.blur();
         this.snackBar.openFromComponent(SnackbarComponent, {

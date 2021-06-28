@@ -4,7 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
 import { VerifyComponent } from './verify.component';
-import { LoginPageRoutingModule } from './verify-routing.module';
+import { VerifyPageRoutingModule } from './verify-routing.module';
+
+import { ButtonStateModule } from '../../components/button-state/button-state.module';
 
 @NgModule({
     imports: [
@@ -12,7 +14,8 @@ import { LoginPageRoutingModule } from './verify-routing.module';
         FormsModule,
         ReactiveFormsModule,
         AngularMaterialModule,
-        LoginPageRoutingModule
+        VerifyPageRoutingModule,
+        ButtonStateModule
     ],
   declarations: [VerifyComponent],
 })

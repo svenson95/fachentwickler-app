@@ -13,11 +13,10 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="fe-buttons-wrapper">
-          <button class="fe-text-button" type="submit">
-            <span *ngIf="!loading">Bestätigen</span>
-            <mat-spinner class="fe-loading-spinner" *ngIf="loading"></mat-spinner>
-          </button>
+        <div class="buttons-wrapper">
+          <fe-button-state type="submit" [isLoading]="loading">Bestätigen</fe-button-state>
+          <p>Du hast keine E-Mail erhalten?</p>
+          <fe-button-state [isLoading]="loading" (click)="resendVerificationMail()">Nochmal senden</fe-button-state>
         </div>
       </form>
     </mat-card-content>

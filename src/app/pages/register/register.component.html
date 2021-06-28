@@ -50,10 +50,8 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="fe-buttons-wrapper">
-          <button class="fe-text-button" type="submit" [disabled]="form.invalid">
-            <span>Bestätigen</span>
-          </button>
+        <div class="buttons-wrapper">
+          <fe-button-state type="submit" [disabled]="form.invalid" [isLoading]="isLoading">Bestätigen</fe-button-state>
         </div>
       </form>
     </mat-card-content>

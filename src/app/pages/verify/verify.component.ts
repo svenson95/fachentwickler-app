@@ -91,4 +91,7 @@ export class VerifyComponent implements OnInit {
     }
   }
 
+    resendVerificationMail(): void {
+        // TODO: implement resend verification mail
+    }
 }

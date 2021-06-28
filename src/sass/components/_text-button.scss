@@ -64,3 +64,28 @@
   }
 
 }
+
+// Button state
+mat-card .fe-text-button {
+  position: relative;
+
+  mat-spinner.fe-loading-spinner.button-spinner {
+    margin: 0 !important;
+    $size: 18px;
+    width: $size !important;
+    height: $size !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: $size !important;
+      height: $size !important;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+}
