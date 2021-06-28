@@ -8,7 +8,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 
 import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { NextExamsCardModule } from '../../components/next-exams-card/next-exams-card.module';
-import { ScheduleModule } from '../../components/schedule/schedule.module';
+import { ScheduleCardModule } from '../../components/schedule-card/schedule-card.module';
 import { SchoolWeekCardModule } from '../../components/school-week-card/school-week-card.module';
 import { NewsCardModule } from '../../components/news-card/news-card.module';
 import { UserProgressCardModule } from '../../components/user-progress-card/user-progress-card.module';
@@ -23,7 +23,7 @@ import { UserProgressCardModule } from '../../components/user-progress-card/user
       PostLinkModule,
       SchoolWeekCardModule,
       NextExamsCardModule,
-      ScheduleModule,
+      ScheduleCardModule,
       NewsCardModule,
       UserProgressCardModule
     ]

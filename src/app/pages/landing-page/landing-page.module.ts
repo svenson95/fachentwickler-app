@@ -11,6 +11,7 @@ import { SchoolWeekCardModule } from '../../components/school-week-card/school-w
 import { QuizCardModule } from '../../components/quiz-card/quiz-card.module';
 import { IndexcardsCardModule } from '../../components/indexcards-card/indexcards-card.module';
 import { MatchingGameModule } from '../../components/matching-game/matching-game.module';
+import { ScheduleCardModule } from '../../components/schedule-card/schedule-card.module';
 
 
 
@@ -26,7 +27,8 @@ import { MatchingGameModule } from '../../components/matching-game/matching-game
     SchoolWeekCardModule,
     QuizCardModule,
     IndexcardsCardModule,
-    MatchingGameModule
+    MatchingGameModule,
+    ScheduleCardModule,
   ]
 })
 export class LandingPageModule { }

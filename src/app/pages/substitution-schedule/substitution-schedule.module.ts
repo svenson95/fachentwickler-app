@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AngularMaterialModule } from '../../app-common/angular-material.module';
+
 import { SubstitutionScheduleComponent } from './substitution-schedule.component';
 import { SubstitutionScheduleRoutingModule } from './substitution-schedule-routing.module';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
-import { ScheduleModule } from '../../components/schedule/schedule.module';
+import { ScheduleCardModule } from '../../components/schedule-card/schedule-card.module';
 
 
 
@@ -13,7 +14,7 @@ import { ScheduleModule } from '../../components/schedule/schedule.module';
     CommonModule,
     SubstitutionScheduleRoutingModule,
     AngularMaterialModule,
-    ScheduleModule
+    ScheduleCardModule
   ]
 })
 export class SubstitutionScheduleModule { }

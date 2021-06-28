@@ -4,11 +4,5 @@
     <span class="fe-no-data">Keine Vertretungen</span>
   </mat-card>
 
-  <mat-card class="fe-card">
-    <p class="fe-card-title">Stundenplan</p>
-    <p class="fe-card-description">{{schedule.weekBegin | date:'dd.MM.yyyy'}} bis {{schedule.weekEnd | date:'dd.MM.yyyy'}}</p>
-    <mat-card-content class="fe-schedule-content">
-      <fe-schedule></fe-schedule>
-    </mat-card-content>
-  </mat-card>
+  <fe-schedule-card [schedule]="schedule"></fe-schedule-card>
 </div>

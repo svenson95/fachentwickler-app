@@ -1,6 +1,7 @@
 import { SchoolWeek } from '../app/models/school-week';
 import { DashboardData } from '../app/models/dashboard-data';
 import { User, UserRole } from '../app/models/user';
+import { Schedule } from '../app/models/schedule';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const testSchoolWeek: SchoolWeek = {
@@ -80,4 +81,133 @@ export const testUser: User = {
     theme: 'light',
     active: true,
     _id: '5f1a3dca8d16e73572a16f50'
+};
+
+
+export const testSchedule: Schedule = {
+    "weekBegin": '2021-08-23',
+    "weekEnd": '2021-08-27',
+    "days": [
+        {
+            "day": '0',
+            "lessons": [
+                {
+                    "subject": 'lf-9',
+                    "teacher": 'Foo',
+                    "room": 'A111',
+                    "block": '1'
+                },
+                {
+                    "subject": 'lf-9',
+                    "teacher": 'Foo1',
+                    "room": 'A111',
+                    "block": '2'
+                },
+                {
+                    "subject": 'sport',
+                    "teacher": 'Foo9',
+                    "room": 'A022',
+                    "block": '3'
+                }
+            ]
+        },
+        {
+            "day": '1',
+            "lessons": [
+                {
+                    "subject": "lf-7-2",
+                    "teacher": "Foo2",
+                    "room": "A113",
+                    "block": '1'
+                },
+                {
+                    "subject": 'deutsch',
+                    "teacher": 'Foo8',
+                    "room": 'A212',
+                    "block": '2'
+                },
+                {
+                    "subject": 'lf-7-1',
+                    "teacher": 'Foo7',
+                    "room": 'A110',
+                    "block": '3'
+                }
+            ]
+        },
+        {
+            "day": '2',
+            "lessons": [
+                {
+                    "subject": 'wp',
+                    "teacher": 'Foo6',
+                    "room": 'A212',
+                    "block": '1'
+                },
+                {
+                    "subject": 'lf-6',
+                    "teacher": 'Foo3',
+                    "room": 'A213',
+                    "block": '2'
+                },
+                {
+                    "subject": 'wp',
+                    "teacher": 'Foo6',
+                    "room": 'A212',
+                    "block": '3'
+                }
+            ]
+        },
+        {
+            "day": '3',
+            "lessons": [
+                {
+                    "subject": 'wiso',
+                    "teacher": 'Foo5',
+                    "room": 'A114',
+                    "block": '1'
+                },
+                {
+                    "subject": 'lf-8',
+                    "teacher": 'Foo4',
+                    "room": 'A022',
+                    "block": '2'
+                },
+                {
+                    "subject": 'lf-6',
+                    "teacher": 'Foo3',
+                    "room": 'A213',
+                    "block": '3'
+                },
+                {
+                    "subject": 'sport',
+                    "teacher": 'Foo9',
+                    "room": 'A022',
+                    "block": '4'
+                }
+            ]
+        },
+        {
+            "day": '4',
+            "lessons": [
+                {
+                    "subject": "lf-7-2",
+                    "teacher": "Foo2",
+                    "room": "A113",
+                    "block": '1'
+                },
+                {
+                    "subject": "lf-7-2",
+                    "teacher": "Foo2",
+                    "room": "A113",
+                    "block": '2'
+                },
+                {
+                    "subject": 'lf-6',
+                    "teacher": 'Foo3',
+                    "room": 'A213',
+                    "block": '3'
+                }
+            ]
+        }
+    ]
 };

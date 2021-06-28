@@ -66,12 +66,12 @@
           width: 50px;
         }
 
-        .fe-hour-subject,
-        .fe-hour-teacher,
-        .fe-hour-room {
+        .hour-subject,
+        .hour-teacher,
+        .hour-room {
         }
 
-        .fe-hour-room {
+        .hour-room {
           font-size: .8em;
 
           @include to-xs {
@@ -79,7 +79,7 @@
           }
         }
 
-        .fe-hour-subject {
+        .hour-subject {
           color: var(--tertiary-color);
           font-family: Nunito-Bold, sans-serif;
 
@@ -93,11 +93,11 @@
           }
         }
 
-        .fe-hour-room {
+        .hour-room {
           color: var(--text-color-1)
         }
 
-        .fe-hour-teacher {
+        .hour-teacher {
           font-size: .8rem;
           font-family: Nunito-Light, sans-serif;
           color: var(--grey-3);
@@ -107,21 +107,21 @@
           }
         }
 
-        .fe-hour-room,
-        .fe-hour-teacher {
+        .hour-room,
+        .hour-teacher {
           line-height: 14px;
         }
       }
 
-      .fe-schedule-header {
+      .schedule-header {
         color: var(--grey-3);
       }
 
-      .fe-schedule-header,
-      .fe-schedule-time {
+      .schedule-header,
+      .schedule-time {
       }
 
-      .fe-schedule-time {
+      .schedule-time {
         text-align: left;
         color: var(--text-color-1);
 

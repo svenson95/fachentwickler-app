@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { subjects } from 'src/data/menu-items';
-import { schedule } from '../../../data/schedule';
 import { MenuItem } from '../../models/menu-item';
+import { Schedule } from '../../models/schedule';
 
 @Component({
   selector: 'fe-schedule',
@@ -10,7 +10,7 @@ import { MenuItem } from '../../models/menu-item';
 })
 export class ScheduleComponent implements OnInit {
 
-  schedule = schedule;
+  @Input() schedule: Schedule;
 
   constructor() { }
 
