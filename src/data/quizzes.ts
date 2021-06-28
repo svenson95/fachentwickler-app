@@ -1,7 +1,7 @@
-import { QuizData } from '../app/new-post-models/post-quiz';
+import { Quiz } from '../app/models/quiz';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const quizzes: QuizData[] = [
+export const quizzes: Quiz[] = [
     {
         "url": "beduerfnisse_und_gueter/wirtschaftsgueter_bedarf_und_nachfrage/quiz",
         "_id": "5f083a88757f87cdceba18be",
