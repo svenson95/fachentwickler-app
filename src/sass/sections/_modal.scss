@@ -1,0 +1,19 @@
+.mat-dialog-container {
+  background: var(--background-secondary);
+  color: var(--text-color-1);
+  border-radius: var(--border-radius);
+
+  .mat-dialog-content {
+    margin-bottom: 10px;
+  }
+
+  .mat-dialog-actions {
+    min-height: inherit;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .fe-text-button.close {
+    margin-right: 10px;
+  }
+}

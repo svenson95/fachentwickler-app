@@ -66,7 +66,8 @@
 }
 
 // Button state
-mat-card .fe-text-button {
+mat-card .fe-text-button,
+.mat-dialog-container .fe-text-button {
   position: relative;
 
   mat-spinner.fe-loading-spinner.button-spinner {

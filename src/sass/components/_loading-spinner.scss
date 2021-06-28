@@ -3,17 +3,14 @@ mat-spinner.fe-loading-spinner.mat-spinner,
 mat-card.fe-card mat-spinner.fe-loading-spinner.mat-spinner {
   margin: 50px auto;
 
-  $fe-spinner-size: 64px;
-  &.fe-login-column {
-    $fe-spinner-size: 28px;
-  }
+  $size: 32px;
 
-  width: $fe-spinner-size !important;
-  height: $fe-spinner-size !important;
+  width: $size !important;
+  height: $size !important;
 
   svg {
-    width: $fe-spinner-size !important;
-    height: $fe-spinner-size !important;
+    width: $size !important;
+    height: $size !important;
 
     circle {
       stroke: var(--tertiary-color);

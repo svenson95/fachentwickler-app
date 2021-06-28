@@ -3,8 +3,8 @@
     Möchtest du dich abmelden?
   </mat-dialog-content>
   <mat-dialog-actions>
-    <button class="fe-text-button" mat-button mat-dialog-close>Nein</button>
-    <button class="fe-text-button" mat-button mat-dialog-close (click)="logout()">
+    <button class="fe-text-button close" mat-dialog-close>Nein</button>
+    <button class="fe-text-button" (click)="logout()" mat-dialog-close>
       Ja
       <mat-icon>meeting_room</mat-icon>
     </button>

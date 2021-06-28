@@ -19,7 +19,10 @@
 
 .fe-page.register .fe-register-column {
   text-align: center;
-  margin-right: 150px;
+
+  @include from-lg {
+    margin-right: 150px;
+  }
 
   .fe-input-fields {
     display: flex;

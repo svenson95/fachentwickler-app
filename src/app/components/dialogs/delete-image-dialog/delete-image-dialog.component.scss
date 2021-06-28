@@ -1,36 +1,5 @@
 @import 'src/sass/abstracts/variables';
 
-::ng-deep .mat-dialog-container {
-  background: var(--background-secondary);
-  color: var(--text-color-1);
-  border-radius: 0;
-
-  .fe-text-button {
-    .delete-icon {
-      font-size: 1.5em;
-      margin-left: 5px;
-      margin-bottom: 2px;
-    }
-
-    .fe-loading-spinner {
-      margin: 8px auto !important;
-      $size: 20px;
-      width: $size !important;
-      height: $size !important;
-
-      svg {
-        width: $size !important;
-        height: $size !important;
-      }
-    }
-  }
-
-  .mat-dialog-actions {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-}
-
 ::ng-deep .delete-image-modal.cdk-overlay-pane {
   animation-name: moveInTop;
   animation-duration: 400ms;
@@ -38,4 +7,14 @@
   -webkit-animation-name: moveInTop;
   -webkit-animation-duration: 400ms;
   -webkit-animation-timing-function: ease-in-out;
+
+  .fe-text-button {
+    span {
+      display: flex;
+    }
+    .delete-icon {
+      font-size: 1.3em;
+      margin-left: 5px;
+    }
+  }
 }

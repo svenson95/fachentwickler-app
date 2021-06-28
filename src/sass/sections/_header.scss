@@ -280,14 +280,11 @@ mat-toolbar.fe-header-toolbar.mat-toolbar .fe-logo-wrapper {
 
   .fe-menu-button .label {
     color: var(--text-color-1);
+    padding-right: 5px;
   }
 
   .fe-menu-button mat-icon {
     color: var(--tertiary-color) !important;
-  }
-
-  .fe-menu-button .label {
-    padding-right: 10px;
   }
 
   .mat-menu-item:hover {

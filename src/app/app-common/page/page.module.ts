@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../angular-material.module';
 
 import { PageComponent } from './page.component';
+
 import { HeaderComponent } from '../header/header.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ContentComponent } from '../content/content.component';
 import { AppIconComponent } from '../app-icon/app-icon.component';
 import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/logout-dialog.component';
-import { DeleteImageDialogComponent } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.component';
 import { ImageManagerDialogModule } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.module';
+import { DeleteImageDialogModule } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.module';
 
 
 @NgModule({
@@ -21,8 +22,7 @@ import { ImageManagerDialogModule } from '../../components/dialogs/image-manager
     SidenavComponent,
     ContentComponent,
     AppIconComponent,
-    LogoutDialogComponent,
-    DeleteImageDialogComponent,
+    LogoutDialogComponent
   ],
   exports: [PageComponent],
   imports: [
@@ -30,7 +30,8 @@ import { ImageManagerDialogModule } from '../../components/dialogs/image-manager
     AngularMaterialModule,
     RouterModule,
     FormsModule,
-    ImageManagerDialogModule
+    ImageManagerDialogModule,
+    DeleteImageDialogModule
   ]
 })
 export class PageComponentModule { }
