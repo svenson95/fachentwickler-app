@@ -1,5 +1,6 @@
 
 export interface User {
+  _id: string;
   name: string;
   email: string;
   password?: string;
@@ -7,7 +8,6 @@ export interface User {
   active: boolean;
   role: UserRole;
   theme: 'light' | 'dark';
-  _id: string;
 }
 
 export interface AuthUser {
@@ -20,14 +20,15 @@ export interface RegisterUser {
   email: string;
   password: string;
   role: UserRole;
+  theme: 'light' | 'dark';
 }
 
 export interface EditUser {
-  name: string;
+  _id: string;
   newName?: string;
   email?: string;
   password?: string;
-  theme?: string;
+  theme?: 'light' | 'dark';
 }
 
 export enum UserRole {

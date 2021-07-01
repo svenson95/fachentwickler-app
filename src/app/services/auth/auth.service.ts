@@ -30,6 +30,7 @@ export class AuthService {
     private LOGIN_ENDPOINT = environment.baseUrl + '/user/login';
     private REGISTER_ENDPOINT = environment.baseUrl + '/user/register';
     private CONFIRMATION_ENDPOINT = environment.baseUrl + '/user/confirmation';
+    private RESEND_VERIFICATION_ENDPOINT = environment.baseUrl + '/user/resend-verification-link';
     private EDIT_USER_ENDPOINT = environment.baseUrl + '/user/edit-user';
     private ADD_PROGRESS_ENDPOINT = environment.baseUrl + '/user/add-progress';
     private LOGOUT_ENDPOINT = environment.baseUrl + '/user/logout';
@@ -46,18 +47,14 @@ export class AuthService {
                 private router: Router,
                 private matSnackBar: MatSnackBar,
     ) {
-        this.checkAuthentication();
+        this.restore();
     }
 
     login(user: AuthUser): Observable<LoginResponse> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            }),
-            withCredentials: true
-        };
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json');
 
-        return this.httpClient.post<LoginResponse>(this.LOGIN_ENDPOINT, JSON.stringify(user), httpOptions)
+        return this.httpClient.post<LoginResponse>(this.LOGIN_ENDPOINT, JSON.stringify(user), {headers})
             .pipe(map(response => {
                 // console.log('response POST login', response);
                 this.isAuthenticated = response.isAuthenticated;
@@ -76,14 +73,10 @@ export class AuthService {
     }
 
     register(user: RegisterUser): Observable<RegisterResponse> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            }),
-            withCredentials: true
-        };
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json');
 
-        return this.httpClient.post<RegisterResponse>(this.REGISTER_ENDPOINT, JSON.stringify(user), httpOptions)
+        return this.httpClient.post<RegisterResponse>(this.REGISTER_ENDPOINT, JSON.stringify(user), {headers})
             .pipe(map(response => {
                 // console.log('response POST register', response);
                 if (response.success) {
@@ -96,15 +89,32 @@ export class AuthService {
             }));
     }
 
-    confirmRegistration(email: string, code: string): Observable<ConfirmationResponse> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            }),
-            withCredentials: true
-        };
+    confirmRegistration(email: string, code: string, newEmail = null): Observable<ConfirmationResponse> {
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json');
+        let confirmationEndpoint = `${this.CONFIRMATION_ENDPOINT}/${email}/${code}`;
 
-        return this.httpClient.get<ConfirmationResponse>(`${this.CONFIRMATION_ENDPOINT}/${email}/${code}`, httpOptions)
+        if (newEmail !== null) confirmationEndpoint += `/${newEmail}`
+
+        return this.httpClient.get<ConfirmationResponse>(confirmationEndpoint, {headers})
+            .pipe(map(response => {
+                // console.log('response POST register', response);
+                if (response.success) {
+                    this.user.active = true;
+                    this.storeData();
+                } else if (response.error) {
+                    console.log('error...', response);
+                }
+                return response;
+            }));
+    }
+
+    resendVerificationLink(email: string): Observable<ConfirmationResponse> {
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json')
+            .set('Authorization', this.token);
+
+        return this.httpClient.post<ConfirmationResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, JSON.stringify({ email }), {headers})
             .pipe(map(response => {
                 // console.log('response POST register', response);
                 if (response.success) {
@@ -147,16 +157,13 @@ export class AuthService {
     }
 
     editUser(updatedUser: EditUser): Observable<EditUserResponse> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            }),
-            withCredentials: true
-        };
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json')
+            .set('Authorization', this.token);
 
-        return this.httpClient.patch<EditUserResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(updatedUser), httpOptions)
+        return this.httpClient.patch<EditUserResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(updatedUser), {headers})
             .pipe(map(response => {
-                // console.log('response PATCH edit-user', response);
+                console.log('response PATCH edit-user', response);
                 if (response.success) {
                     this.user = response.user;
                     this.storeData();
@@ -166,14 +173,11 @@ export class AuthService {
     }
 
     addProgress(progress: UserProgress): Observable<AddProgressResponse> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            }),
-            withCredentials: true
-        };
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json')
+            .set('Authorization', this.token);
 
-        return this.httpClient.post<AddProgressResponse>(this.ADD_PROGRESS_ENDPOINT, JSON.stringify(progress), httpOptions)
+        return this.httpClient.post<AddProgressResponse>(this.ADD_PROGRESS_ENDPOINT, JSON.stringify(progress), {headers})
             .pipe(map(response => {
                 // console.log('response POST user/add-progress', response);
                 if (response.success) {
@@ -185,18 +189,18 @@ export class AuthService {
     }
 
     invalidate(): Observable<LogoutResponse> {
-        const httpOptions = {
-            withCredentials: true
-        };
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json')
+            .set('Authorization', this.token);
 
         this.user = undefined;
         this.token = 'jwt';
-        this.isAuthenticated = false;
+        this.isAuthenticated = undefined;
         this.dataService.dashboard = undefined;
         this.dataService.schoolWeek = undefined;
         localStorage.removeItem(CREDENTIALS_STORAGE_KEY);
 
-        return this.httpClient.get<LogoutResponse>(this.LOGOUT_ENDPOINT, httpOptions)
+        return this.httpClient.get<LogoutResponse>(this.LOGOUT_ENDPOINT, {headers})
             .pipe(map(response => {
                 // console.log('response GET user/logout', response);
                 return response;
@@ -204,14 +208,11 @@ export class AuthService {
     }
 
     authenticated(): Observable<AuthenticatedResponse> {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            }),
-            withCredentials: true
-        };
+        const headers = new HttpHeaders()
+            .set('Content-Type', 'application/json')
+            .set('Authorization', this.token);
 
-        return this.httpClient.get<AuthenticatedResponse>(this.AUTHENTICATED_ENDPOINT, httpOptions)
+        return this.httpClient.get<AuthenticatedResponse>(this.AUTHENTICATED_ENDPOINT, {headers})
             .pipe(map(response => {
                 // console.log('response POST authenticated', response);
                 this.isAuthenticated = response.isAuthenticated;
@@ -223,43 +224,41 @@ export class AuthService {
             }));
     }
 
-    async checkAuthentication(): Promise<boolean | AuthenticatedResponse> {
+    async restore(): Promise<boolean | AuthenticatedResponse> {
         const stored = localStorage.getItem(CREDENTIALS_STORAGE_KEY);
         if (stored === null) {
             return;
         }
 
-        try {
-            await this.authenticated().subscribe(
-            (response) => {
-                if (response.user) {
-                    this.user = response.user;
-                    this.token = response.token;
-                    this.isAuthenticated = true;
-                    if (this.themeService.getActiveTheme().name !== response.user.theme) {
-                        this.themeService.toggleTheme();
-                    }
-                    this.storeData();
-                    return response;
-                }
-            }, (error) => {
-                console.log('ERROR authenticated', error);
-            });
+        const data = JSON.parse(stored);
+        this.user = data.user;
+        this.token = data.token;
+        this.isAuthenticated = true;
+        if (this.themeService.getActiveTheme().name !== this.user.theme) {
+            this.themeService.toggleTheme();
+        }
 
-            // workaround for localhost
-            if (this.user === undefined) {
-                const data = JSON.parse(stored);
-                this.user = data.user;
-                this.token = data.token;
+        if (this.token === undefined) {
+            return;
+        }
+
+        await this.authenticated().subscribe(
+        (response) => {
+            if (response.user) {
+                this.user = response.user;
+                this.token = response.token;
                 this.isAuthenticated = true;
-                if (this.themeService.getActiveTheme().name !== this.user.theme) {
+                if (this.themeService.getActiveTheme().name !== response.user.theme) {
                     this.themeService.toggleTheme();
                 }
-                return data;
+                this.storeData();
+                return response;
             }
-        } catch (err) {
-            console.log('error while check authentication cookie ...', err);
-        }
+        }, (error) => {
+            // console.log('ERROR authenticated', error);
+            this.invalidate();
+        });
+
     }
 
     storeData(): void {

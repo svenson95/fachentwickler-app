@@ -6,7 +6,6 @@ import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component'
 
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
@@ -18,14 +17,16 @@ export class VerifyComponent implements OnInit {
 
   formGroup: FormGroup;
   verificationCode: FormControl;
-  loading = false;
+
+  isSubmitLoading = false;
+  isResendLoading = false;
+  resendTimeout: boolean;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
               private authService: AuthService,
               private headerService: HeaderService,
               private themeService: ThemeService,
-              private loadService: LoadingService,
               private snackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
@@ -34,7 +35,7 @@ export class VerifyComponent implements OnInit {
     }
 
     this.headerService.setPageTitle('Verifizierung');
-    this.verificationCode = new FormControl('', {
+    this.verificationCode = new FormControl(null as number, {
       validators: [Validators.required],
       updateOn: 'submit'
     });
@@ -61,16 +62,16 @@ export class VerifyComponent implements OnInit {
       return;
     }
 
-    this.loading = true;
+    this.isSubmitLoading = true;
     const verificationCode = this.formGroup.get('verificationCode').value;
 
     this.authService.confirmRegistration(this.authService.user.email, verificationCode).subscribe(
       (response) => {
         this.router.navigateByUrl('/dashboard');
-        this.loading = false;
+        this.isSubmitLoading = false;
       }, (error) => {
         console.log(error);
-        this.loading = false;
+        this.isSubmitLoading = false;
         this.codeInput.nativeElement.blur();
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
@@ -91,7 +92,31 @@ export class VerifyComponent implements OnInit {
     }
   }
 
-    resendVerificationMail(): void {
-        // TODO: implement resend verification mail
+  resendVerificationMail(): void {
+    if (this.resendTimeout !== undefined) {
+      return;
     }
+
+    this.isResendLoading = true;
+    this.resendTimeout = true;
+    this.authService.resendVerificationLink(this.authService.user.email).subscribe(
+    (result) => {
+      this.isResendLoading = false;
+      setTimeout(() => {
+        this.resendTimeout = undefined;
+      }, 2500);
+    }, (error) => {
+      console.log(error);
+      console.log(this.authService.token);
+      this.snackBar.openFromComponent(SnackbarComponent, {
+        duration: 2500,
+        data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
+      });
+
+      this.isResendLoading = false;
+      setTimeout(() => {
+        this.resendTimeout = undefined;
+      }, 2500);
+    });
+  }
 }

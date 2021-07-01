@@ -9,14 +9,14 @@ import { VerifyPageRoutingModule } from './verify-routing.module';
 import { ButtonStateModule } from '../../components/button-state/button-state.module';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        AngularMaterialModule,
-        VerifyPageRoutingModule,
-        ButtonStateModule
-    ],
   declarations: [VerifyComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularMaterialModule,
+    VerifyPageRoutingModule,
+    ButtonStateModule
+  ],
 })
 export class VerifyModule { }

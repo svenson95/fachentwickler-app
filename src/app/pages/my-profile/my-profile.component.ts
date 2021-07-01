@@ -18,12 +18,14 @@ export class MyProfileComponent implements OnInit {
 
   user: User;
   isEditable = false;
+  isChangingEmail: boolean;
   progressPercentage: number;
 
   /* -- Form values -- */
   formGroup: FormGroup;
   username: FormControl;
   email: FormControl;
+  verificationCode: FormControl;
   password: FormControl;
   role: FormControl;
   progress: FormControl;
@@ -75,6 +77,10 @@ export class MyProfileComponent implements OnInit {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
+    this.verificationCode = new FormControl({ value: '' }, {
+      // validators: [Validators.required, Validators.minLength(4)],
+      updateOn: 'submit'
+    });
     this.password = new FormControl({ value: this.user.password.substring(0, 8), disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
@@ -94,6 +100,7 @@ export class MyProfileComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       username: this.username,
       email: this.email,
+      verificationCode: this.verificationCode,
       password: this.password,
       role: this.role,
       progress: this.progress,
@@ -133,9 +140,8 @@ export class MyProfileComponent implements OnInit {
 
   saveChangeName(event): void {
     const updatedUser = {
-      name: this.authService.user.name,
-      newName: this.username.value.toLowerCase(),
-      email: this.authService.user.email
+      _id: this.authService.user._id,
+      newName: this.username.value.toLowerCase()
     };
 
     this.authService.editUser(updatedUser).subscribe(
@@ -145,10 +151,11 @@ export class MyProfileComponent implements OnInit {
           duration: 3000,
           data: 'Benutzername geändert'
         });
-      }, (error) => {
+      }, (errorRes) => {
+        this.formGroup.controls['username'].setValue(this.authService.user.name);
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+          data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
         });
       }
     ).add(() => {
@@ -171,22 +178,23 @@ export class MyProfileComponent implements OnInit {
 
   saveChangeEmail(event): void {
     const updatedUser = {
-      name: this.authService.user.name,
-      email: this.email.value.toLowerCase(),
-      password: this.authService.user.password
+      _id: this.authService.user._id,
+      email: this.email.value.toLowerCase()
     };
 
     this.authService.editUser(updatedUser).subscribe(
       (response) => {
         this.authService.user = response.user;
+        this.isChangingEmail = true;
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'E-Mail geändert'
         });
-      }, (error) => {
+      }, (errorRes) => {
+        this.formGroup.controls['email'].setValue(this.authService.user.email);
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+          data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
         });
       }
     ).add(() => {
@@ -210,8 +218,7 @@ export class MyProfileComponent implements OnInit {
 
   saveChangePassword(event): void {
     const updatedUser = {
-      name: this.authService.user.name,
-      email: this.authService.user.email,
+      _id: this.authService.user._id,
       password: this.password.value
     };
 
@@ -222,10 +229,10 @@ export class MyProfileComponent implements OnInit {
           duration: 3000,
           data: 'Passwort geändert'
         });
-      }, (error) => {
+      }, (errorRes) => {
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+          data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
         });
       }
     ).add(() => {
@@ -242,7 +249,7 @@ export class MyProfileComponent implements OnInit {
   /* -- Change theme -- */
   saveChangeTheme(event): void {
     const updatedUser = {
-      name: this.authService.user.name,
+      _id: this.authService.user._id,
       theme: this.themeService.getActiveTheme().name
     } as EditUser;
 
@@ -253,14 +260,19 @@ export class MyProfileComponent implements OnInit {
           duration: 3000,
           data: 'Standard-Theme geändert'
         });
-      }, (error) => {
-        console.log('Error while PATCH user/edit-user', error);
+      }, (errorRes) => {
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Fehler: ' + typeof error === 'string' ? error : error.message
+          data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
         });
       }
     );
   }
 
+  confirmChangedEmail(event: MouseEvent) {
+    // TODO: check input token and update user
+    this.authService.confirmRegistration(this.authService.user.email, this.verificationCode.value, this.email.value.toLowerCase()).subscribe(response => {
+      this.isChangingEmail = undefined;
+    });
+  }
 }
