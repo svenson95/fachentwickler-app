@@ -260,7 +260,9 @@ mat-toolbar.fe-header-toolbar.mat-toolbar .fe-logo-wrapper {
 }
 
 .cdk-overlay-container .fe-more-menu {
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 
   .fe-menu-button .label {
     color: var(--text-color-1);

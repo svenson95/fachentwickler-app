@@ -38,13 +38,6 @@ export class DashboardComponent implements OnInit {
       });
       this.fetchNextExams();
       this.authService.fetchAllLessons();
-
-    } else if (this.dataService.dashboard) {
-
-      if (!this.dataService.dashboard.nextLesson) {
-        this.authService.fetchNextLesson(this.dataService.dashboard.allLessons);
-      }
-
     }
   }
 

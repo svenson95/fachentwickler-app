@@ -93,29 +93,6 @@
         }
       }
 
-      .fe-exam-item {
-        .fe-lesson-wrapper {
-          .fe-horizontal-line, .fe-vertical-line-1, .fe-vertical-line-2 {
-            @include from-xs {
-              left: -27px !important;
-            }
-            @include to-xs {
-              left: -30px !important;
-            }
-          }
-
-          .fe-horizontal-line {
-            @include from-xs {
-              width: 27px !important;
-            }
-
-            @include to-xs {
-              width: 30px !important;
-            }
-          }
-        }
-      }
-
       .fe-no-data {
         padding: 10px;
       }

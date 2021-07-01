@@ -188,11 +188,11 @@
         background: var(--exam-background);
 
         @include from-xs {
-          left: -30px;
+          left: -38px;
         }
 
         @include to-xs {
-          left: -33px;
+          left: -27px;
         }
       }
 
@@ -213,7 +213,7 @@
 
       .fe-vertical-line {
         width: 3px;
-        top: -30px;
+        top: -10px;
         bottom: 0;
       }
     }

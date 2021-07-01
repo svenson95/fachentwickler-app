@@ -28,10 +28,8 @@ export class SidenavComponent implements OnInit {
   }
 
   closeSidebar(): void {
-    if (this.breakpointObserver.isMatched('(max-width: 600px)')) {
-      if (this.sidenavService.isOpen()) {
-        this.sidenavService.close();
-      }
+    if (this.breakpointObserver.isMatched('(max-width: 820px)') && this.sidenavService.isOpen()) {
+      this.sidenavService.close();
     }
   }
 

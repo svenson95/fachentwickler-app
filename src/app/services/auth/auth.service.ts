@@ -94,7 +94,9 @@ export class AuthService {
             .set('Content-Type', 'application/json');
         let confirmationEndpoint = `${this.CONFIRMATION_ENDPOINT}/${email}/${code}`;
 
-        if (newEmail !== null) confirmationEndpoint += `/${newEmail}`
+        if (newEmail !== null) {
+            confirmationEndpoint += `/${newEmail}`;
+        }
 
         return this.httpClient.get<ConfirmationResponse>(confirmationEndpoint, {headers})
             .pipe(map(response => {
