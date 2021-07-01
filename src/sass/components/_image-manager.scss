@@ -66,6 +66,8 @@ mat-dialog-content.fe-image-manager {
 
   hr {
     background: var(--grey-2);
+    height: 1px;
+    margin: 20px 0;
   }
 
   .fe-add-image-form {
@@ -99,11 +101,6 @@ mat-dialog-content.fe-image-manager {
         }
       }
     }
-  }
-
-  hr {
-    height: 1px;
-    margin: 20px 0;
   }
 
   .fe-im-recent-images {
@@ -169,6 +166,7 @@ mat-dialog-content.fe-image-manager {
 
     hr {
       margin-top: 0;
+      margin-bottom: 10px;
     }
   }
 }
