@@ -184,7 +184,7 @@ export class AuthService {
                 // console.log('response POST user/add-progress', response);
                 if (response.success) {
                     this.user = response.user;
-                    this.fetchAllLessons();
+                    this.fetchNextLesson(this.dataService.dashboard.allLessons);
                 }
                 return response;
             }));
