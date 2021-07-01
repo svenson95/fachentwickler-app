@@ -5,8 +5,11 @@
     padding-top: 4px;
     height: fit-content;
     align-self: center;
+  }
 
-    &.is-open {
+  &.is-open {
+
+    .fe-text-button {
       color: var(--text-color-3);
       border-color: rgba( var(--grey-1-rgb), .6);
     }
@@ -222,6 +225,8 @@
 }
 
 .fe-post-item.answer button + p,
+.fe-post-item.answer button + ul,
+.fe-post-item.answer button + ol,
 .post-answer-group {
   background-color: var(--button-hover-background);
   padding: 40px 20px 20px;
@@ -252,6 +257,10 @@
   .post-code code {
     border: 1px solid var(--tertiary-color);
   }
+}
+
+.fe-post-item.answer button + ul {
+  padding-left: 40px;
 }
 
 .fe-page.post-page .fe-card .fe-post-content .post-answer-group fe-post-element:first-child .fe-post-item {

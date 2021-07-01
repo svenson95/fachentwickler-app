@@ -22,18 +22,17 @@ export class LogoutDialogComponent implements OnInit {
   logout(): void {
     this.authService.invalidate().subscribe(
       response => {
-        console.log('response logout', response);
         this.router.navigateByUrl('/');
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Du hast dich abgemeldet'
+          data: 'Du hast dich erfolgreich abgemeldet'
         });
       }, error => {
         this.router.navigateByUrl('/');
         console.log('error logout', error);
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Fehler beim Abmelden'
+          data: 'Fehler beim Abmelden aufgetreten'
         });
       }
     );

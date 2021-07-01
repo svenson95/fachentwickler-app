@@ -27,7 +27,7 @@
         }
 
         @include to-xs {
-          width: 50px;
+          width: 52px;
           flex-shrink: 0;
         }
       }
@@ -66,7 +66,7 @@
         text-align: center;
 
         @include from-md {
-          min-height: 70px;
+          min-height: 80px;
         }
 
         @include to-md {
@@ -122,6 +122,10 @@
         .hour-teacher {
           @include to-md {
             line-height: 14px;
+          }
+
+          @include from-xs {
+            font-size: .8rem;
           }
         }
       }
