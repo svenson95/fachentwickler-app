@@ -39,14 +39,14 @@ export class LoginComponent implements OnInit {
               private snackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
+    if (authService.isAuthenticated) {
+      this.router.navigate(['dashboard']);
+    }
+
     this.headerService.setPageTitle('Login');
     this.loadService.loading$.subscribe(value => {
       this.isLoading = value;
     });
-
-    if (authService.isAuthenticated) {
-      router.navigate(['dashboard']);
-    }
 
     this.username = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4)],

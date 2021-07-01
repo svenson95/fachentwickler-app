@@ -50,6 +50,10 @@ export class RegisterComponent implements OnInit, OnChanges {
               private loadService: LoadingService,
               private themeService: ThemeService
   ) {
+    if (authService.isAuthenticated) {
+      this.router.navigate(['dashboard']);
+    }
+
     this.headerService.setPageTitle('Registrieren');
     this.loadService.loading$.subscribe(value => {
       this.isLoading = value;
