@@ -1,7 +1,7 @@
 <div class="fe-page dashboard">
 
+  <fe-next-exams-card [nextExams]="dataService.dashboard?.nextExams" *ngIf="dataService.dashboard?.nextExams?.length > 0"></fe-next-exams-card>
   <fe-schedule-card [schedule]="schedule"></fe-schedule-card>
-  <fe-next-exams-card [nextExams]="dataService.dashboard?.nextExams"></fe-next-exams-card>
   <fe-news-card *ngIf="this.dataService.dashboard?.schoolNews" [news]="[this.dataService.dashboard.schoolNews[0]]" [onlyLastOne]="true"></fe-news-card>
   <fe-user-progress-card [user]="user" [dashboard]="dataService.dashboard"></fe-user-progress-card>
 
