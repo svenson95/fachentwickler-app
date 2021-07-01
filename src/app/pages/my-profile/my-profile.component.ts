@@ -44,15 +44,14 @@ export class MyProfileComponent implements OnInit {
   ) {
     this.headerService.setPageTitle('Mein Profil');
     this.user = this.authService.user;
-    this.initializeForms();
+    this.initFormGroup();
   }
 
   ngOnInit(): void {
-    this.initializeComponent();
+    this.initUserProgress();
   }
 
-  /* -- Initial functions -- */
-  initializeComponent(): void {
+  initUserProgress(): void {
     if (this.dataService.dashboard === undefined) {
       this.dataService.getAllLessons().subscribe(
         (lessons) => {
@@ -68,7 +67,7 @@ export class MyProfileComponent implements OnInit {
     }
   }
 
-  initializeForms(): void {
+  initFormGroup(): void {
     this.username = new FormControl({ value: this.user.name, disabled: true }, {
       // validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'

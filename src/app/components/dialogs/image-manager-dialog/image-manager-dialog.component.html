@@ -55,8 +55,8 @@
         </p>
       </div>
     </div>
-    <button class="fe-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)">
-      Bild löschen
+    <button class="fe-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)" [disabled]="!selectedImage">
+      <span>Bild löschen</span>
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
     </button>
   </div>
