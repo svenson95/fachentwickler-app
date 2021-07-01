@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
 
 import { SchoolWeek } from '../../models/school-week';
@@ -26,7 +26,8 @@ export class CurriculumComponent implements OnInit {
 
   constructor(private headerService: HeaderService,
               private dataService: DataService,
-              private loadingService: LoadingService
+              private loadingService: LoadingService,
+              private elementRef: ElementRef
   ) {
     this.allWeeks = Array.from(Array(this.dataService.currentSchoolWeek + 1).keys());
     this.allWeeks.shift();      // remove school-week 0
@@ -67,7 +68,7 @@ export class CurriculumComponent implements OnInit {
   }
 
   changeWeek(week): void {
-    document.querySelector('.week-' + week).scrollIntoView({
+    this.elementRef.nativeElement.querySelector('.week-' + week).scrollIntoView({
       behavior: 'auto',
       block: 'start'
     });
@@ -75,7 +76,7 @@ export class CurriculumComponent implements OnInit {
 
   onScroll(): void {
     this.schoolYears[this.selectedYear].weeks.forEach(week => {
-      const weekEl = document.querySelector('.week-' + week.schoolWeek);
+      const weekEl = this.elementRef.nativeElement.querySelector('.week-' + week.schoolWeek);
       if (this.isVisible(weekEl)) {
         this.selectedWeek = Number(week.schoolWeek);
       }
