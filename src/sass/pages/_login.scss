@@ -9,15 +9,15 @@
   }
 }
 
-.fe-page.login-page .fe-login-column {
+.fe-page.login-page .login-form {
   text-align: center;
 
-  .fe-input-fields {
+  .form-inputs {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 
-    .fe-name-input {
+    .name {
       margin-bottom: 8px;
 
       ::placeholder {
@@ -25,7 +25,7 @@
       }
     }
 
-    .fe-password-input {
+    .password {
       margin-bottom: 8px;
     }
   }
@@ -58,11 +58,11 @@
   }
 }
 
-.fe-page.login-page .fe-register-column {
+.fe-page.login-page .register-form {
   text-align: center;
   align-self: center;
 
-  .fe-no-account-hint {
+  .no-account-hint {
     text-align: center;
     margin: 20px 0;
   }

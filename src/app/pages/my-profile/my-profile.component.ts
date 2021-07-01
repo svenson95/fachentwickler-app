@@ -17,7 +17,6 @@ import { ThemeService } from '../../services/theme.service';
 export class MyProfileComponent implements OnInit {
 
   user: User;
-  isEditable = false;
   isChangingEmail: boolean;
   progressPercentage: number;
 
@@ -268,10 +267,11 @@ export class MyProfileComponent implements OnInit {
     );
   }
 
-  confirmChangedEmail(event: MouseEvent) {
+  confirmChangedEmail(event: MouseEvent): void {
     // TODO: check input token and update user
-    this.authService.confirmRegistration(this.authService.user.email, this.verificationCode.value, this.email.value.toLowerCase()).subscribe(response => {
-      this.isChangingEmail = undefined;
-    });
+    this.authService.confirmRegistration(this.authService.user.email, this.verificationCode.value, this.email.value.toLowerCase())
+      .subscribe(response => {
+        this.isChangingEmail = undefined;
+      });
   }
 }

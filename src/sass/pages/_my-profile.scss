@@ -34,9 +34,9 @@
 }
 
 .fe-page.my-profile {
-  .fe-start-change-btn,
-  .fe-discard-change-btn,
-  .fe-save-change-btn {
+  .start-change-btn,
+  .discard-change-btn,
+  .save-change-btn {
     width: 100px;
     border: none;
     outline: none;
@@ -53,7 +53,7 @@
     }
   }
 
-  .fe-start-change-btn, .fe-discard-change-btn {
+  .start-change-btn, .discard-change-btn {
     color: var(--text-color-1);
 
     &:disabled {
@@ -61,7 +61,7 @@
     }
   }
 
-  .fe-start-change-btn {
+  .start-change-btn {
     background: rgba(var(--grey-4-rgb), .2);
 
     &:hover:not([disabled]) {
@@ -69,11 +69,11 @@
     }
   }
 
-  .fe-discard-change-btn {
+  .discard-change-btn {
     background: rgba(var(--tertiary-color-rgb), .3);
   }
 
-  .fe-save-change-btn {
+  .save-change-btn {
     background: var(--primary-color);
     color: white;
   }
@@ -81,7 +81,7 @@
 
 .fe-page.my-profile {
 
-  .fe-input {
+  .input {
 
     @include from-lg {
       width: 400px;

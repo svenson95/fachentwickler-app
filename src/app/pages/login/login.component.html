@@ -2,9 +2,9 @@
   <mat-card class="fe-card">
     <p class="fe-card-title">Schülerbereich</p>
     <mat-card-content class="fe-view-wrapper">
-      <form class="fe-login-column" [formGroup]="formGroup" (ngSubmit)="login($event)" (change)="onFormChange($event)">
-        <div class="fe-input-fields">
-          <mat-form-field class="fe-input fe-name-input">
+      <form class="login-form" [formGroup]="formGroup" (ngSubmit)="login($event)" (change)="onFormChange($event)">
+        <div class="form-inputs">
+          <mat-form-field class="input name">
             <mat-label>Benutzername</mat-label>
             <input matInput type="text" autocomplete="off" [formControl]="username" (keypress)="usernameFieldKeyPress($event)"/>
             <mat-error *ngIf="username.hasError('username') && !username.hasError('required')">
@@ -15,7 +15,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field class="fe-input fe-password-input">
+          <mat-form-field class="input password">
             <mat-label>Passwort</mat-label>
             <input matInput type="password" [formControl]="password" #passwordInput/>
             <mat-error *ngIf="password.hasError('invalidPassword') && !password.hasError('required')">
@@ -40,8 +40,8 @@
         </div>
       </form>
       <hr class="fe-divider-line"/>
-      <div class="fe-register-column">
-        <p class="fe-no-account-hint">Noch nicht registriert?</p>
+      <div class="register-form">
+        <p class="no-account-hint">Noch nicht registriert?</p>
         <a class="fe-text-button" routerLink="/register">
           <span>Account erstellen</span>
         </a>

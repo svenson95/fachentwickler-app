@@ -2,10 +2,10 @@
   <mat-card class="fe-card">
     <p class="fe-card-title">Registrierung abschließen</p>
     <mat-card-content class="fe-view-wrapper">
-      <form class="fe-verify-form" [formGroup]="formGroup" (ngSubmit)="verifyUser($event)" (change)="onFormChange($event)">
-        <div class="fe-input-fields">
+      <form class="verify-form" [formGroup]="formGroup" (ngSubmit)="verifyUser($event)" (change)="onFormChange($event)">
+        <div class="form-inputs">
           <p>Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem Verifizierungscode zugeschickt. </p>
-          <mat-form-field class="fe-input fe-email-input">
+          <mat-form-field class="input code">
             <mat-label>Verifizierungscode</mat-label>
             <input matInput type="text" pattern="\d*" autocomplete="off" [formControl]="verificationCode" #codeInput/>
             <mat-error *ngIf="verificationCode.hasError('required')">
