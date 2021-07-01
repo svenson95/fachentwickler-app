@@ -101,13 +101,8 @@ export class RegisterComponent implements OnInit, OnChanges {
 
     this.authService.register(user).subscribe(
       (value) => {
-        console.log('response register');
-        console.log(value);
         this.router.navigateByUrl('/dashboard');
       }, (error) => {
-        console.log('ERROR register');
-        console.log(error);
-
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
           data: this.showErrorMessage(error)
