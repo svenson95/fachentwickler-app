@@ -72,7 +72,7 @@ export class LoginComponent implements OnInit {
     }
 
     const username = this.formGroup.get('username').value.toLowerCase();
-    const password = this.formGroup.get('password').value.toLowerCase();
+    const password = this.formGroup.get('password').value;
 
     this.authService.login({username, password} as AuthUser).subscribe(
       (response) => {
