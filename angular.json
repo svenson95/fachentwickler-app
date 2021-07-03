@@ -22,6 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               "src/favicon.png",
               "src/assets",
@@ -32,13 +33,7 @@
             ],
             "scripts": [],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json",
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -67,24 +62,19 @@
                   "maximumError": "100kb"
                 }
               ]
-            },
-            "development": {}
-          },
-          "defaultConfiguration": "production"
+            }
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "browserTarget": "fachentwickler-app:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "fachentwickler-app:build:production"
-            },
-            "development": {
-              "browserTarget": "fachentwickler-app:build:development"
             }
-          },
-          "defaultConfiguration": "development"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -126,17 +116,14 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js"
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "fachentwickler-app:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "fachentwickler-app:serve:production"
-            },
-            "development": {
-              "devServerTarget": "fachentwickler-app:serve:development"
             }
-          },
-          "defaultConfiguration": "development"
+          }
         }
       }
     }
