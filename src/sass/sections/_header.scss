@@ -1,16 +1,22 @@
 fe-header.fe-header {
   box-shadow: var(--box-shadow);
+  z-index: 3;
 }
 
 fe-header.fe-header .mat-toolbar {
   height: 80px;
   width: 100%;
-  max-width: 1365px;
   background: -moz-linear-gradient(left, var(--background-primary) 0%, var(--background-secondary) 100%);
   background: -webkit-linear-gradient(left, var(--background-primary) 0%, var(--background-secondary) 100%);
   background: linear-gradient(to left, var(--background-primary) 0%, var(--background-secondary) 100%);
   justify-content: space-between;
   transition: height 250ms ease-out;
+
+  .header-items {
+    display: flex;
+    width: 100%;
+    max-width: 1350px;
+  }
 
   @include from-md {
     padding: 0 20px;
@@ -125,13 +131,14 @@ fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
     $btn-color: #19bc8b;
     $btn-shadow: #{adjust-hue($btn-color, 45deg)};
 
-    .fe-dashboard-login-btn {
+    .dashboard-btn {
       padding: 8px 14px 6px;
       margin-left: 10px;
       margin-right: 20px;
-
       outline: none;
 
+      color: var(--tertiary-color);
+      font-size: .9rem;
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
@@ -184,10 +191,9 @@ fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
 fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
   display: flex;
   justify-content: left;
-  cursor: pointer;
-  border: none;
   background: transparent;
   font-size: 1em;
+  text-decoration: none;
   padding: 8px 13px;
   flex-shrink: 0;
   align-items: center;
@@ -373,7 +379,7 @@ fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
 
         .mat-icon {
           font-size: 1.3rem;
-          line-height: 2rem;
+          line-height: 1.8rem;
           color: var(--tertiary-color);
           cursor: pointer;
         }
@@ -392,8 +398,15 @@ fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper.is-searching {
   }
 }
 
+fe-header.fe-header .fe-header-toolbar {
+  position: relative;
+}
+
 fe-header.fe-header .fe-header-progress-bar {
   height: var(--progressbar-height);
+  position: absolute;
+  left: 0;
+  bottom: 0;
   z-index: 999;
 
   .mat-progress-bar-fill::after {
@@ -401,15 +414,6 @@ fe-header.fe-header .fe-header-progress-bar {
   }
   .mat-progress-bar-buffer {
     background: #b3cbe7;
-  }
-
-  @include to-md {
-    position: fixed;
-    top: 80px;
-  }
-
-  @include to-xs {
-    top: 60px;
   }
 }
 
