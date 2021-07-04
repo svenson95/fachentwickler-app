@@ -79,7 +79,12 @@ export class LoginComponent implements OnInit {
         if (this.themeService.getActiveTheme().name !== response.user.theme) {
           this.themeService.toggleTheme();
         }
-        this.router.navigateByUrl('/dashboard');
+
+        if (this.authService.redirectUrl) {
+          this.redirectTo(this.authService.redirectUrl);
+        } else {
+          this.router.navigateByUrl('/dashboard');
+        }
       }, (error) => {
         console.log(error);
         this.invalidPassword = true;
@@ -103,6 +108,11 @@ export class LoginComponent implements OnInit {
       event.preventDefault();
       this.passwordInput.nativeElement.focus();
     }
+  }
+
+  redirectTo(url): void {
+    this.router.navigateByUrl(url);
+    this.authService.redirectUrl = undefined;
   }
 
 }

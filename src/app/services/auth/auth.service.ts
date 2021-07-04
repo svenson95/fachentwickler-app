@@ -63,10 +63,6 @@ export class AuthService {
                     this.user = response.user;
                     this.token = response.token;
                     this.storeData();
-
-                    if (this.redirectUrl) {
-                        this.router.navigateByUrl(this.redirectUrl);
-                    }
                 }
                 return response;
             }));

@@ -27,7 +27,7 @@ export class AuthGuardService implements CanActivate {
   /* -- Auth validation on route load -- */
   async userIsAuthenticated(url: string): Promise<boolean> {
 
-    // Store the attempted URL for redirecting    TODO: check redirectUrl in login & register function
+    // Store the attempted URL for redirecting
     this.authService.redirectUrl = url;
 
     if (this.authService.isAuthenticated && !this.authService.user.active) {
