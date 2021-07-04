@@ -12,7 +12,7 @@ fe-header.fe-header .mat-toolbar {
   justify-content: space-between;
   transition: height 250ms ease-out;
 
-  .header-items {
+  .header-wrapper {
     display: flex;
     width: 100%;
     max-width: 1350px;
@@ -27,13 +27,13 @@ fe-header.fe-header .mat-toolbar {
     padding: 0 5px;
   }
 
-  .fe-header-content {
+  .header-content {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 
-    .fe-page-title {
+    .page-title {
       display: flex;
       align-items: center;
       margin-left: 10px;
@@ -96,13 +96,13 @@ fe-header.fe-header .mat-toolbar {
   }
 }
 
-fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
+fe-header.fe-header .mat-toolbar .header-elements-wrapper {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   z-index: 2;
 
-  .fe-button-container {
+  .button-container {
     display: flex;
     line-height: normal;
     color: var(--tertiary-color);
@@ -112,7 +112,7 @@ fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
       transition: var(--header-button-transition);
     }
 
-    .fe-menu-btn {
+    .more-menu-btn {
       margin-left: 0;
       margin-right: 0;
       transition: var(--header-button-transition);
@@ -165,8 +165,7 @@ fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
       }
     }
 
-    .fe-sidenav-hamburger-btn,
-    .fe-admin-panel-btn {
+    .sidenav-btn {
       margin-top: 5px;
 
       @include from-xs {
@@ -178,11 +177,7 @@ fe-header.fe-header .mat-toolbar .fe-header-elements-wrapper {
       }
     }
 
-    .fe-admin-panel-btn {
-      margin-top: 0;
-    }
-
-    .fe-sidenav-hamburger-btn {
+    .sidenav-btn {
       margin-top: 0;
     }
   }
@@ -199,7 +194,7 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
   align-items: center;
 
   @include from-md {
-    width: 196px;
+    width: 200px;
   }
 
   @include to-md {
@@ -250,7 +245,7 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
   }
 }
 
-mat-toolbar.fe-header-toolbar.mat-toolbar .fe-logo-wrapper {
+mat-toolbar.header-toolbar.mat-toolbar .fe-logo-wrapper {
   &:hover, &:focus {
     .fe-icon-wrapper:not(.active-route) {
       @include from-md {
@@ -265,17 +260,17 @@ mat-toolbar.fe-header-toolbar.mat-toolbar .fe-logo-wrapper {
   }
 }
 
-.cdk-overlay-container .fe-more-menu {
+.cdk-overlay-container .more-menu {
   background-color: var(--background-primary);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 
-  .fe-menu-button .label {
+  .menu-btn .label {
     color: var(--text-color-1);
     padding-right: 5px;
   }
 
-  .fe-menu-button mat-icon {
+  .menu-btn mat-icon {
     color: var(--tertiary-color) !important;
   }
 
@@ -302,7 +297,7 @@ mat-toolbar.fe-header-toolbar.mat-toolbar .fe-logo-wrapper {
   }
 }
 
-fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
+fe-header.fe-header .mat-toolbar .searchbar-wrapper {
   margin-left: 20px;
 
   @include to-md {
@@ -327,7 +322,7 @@ fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
   }
 
   $searchbar-height: 33px;
-  .fe-search-bar {
+  .search-bar-form-field {
     height: $searchbar-height;
     width: 200px;
     border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
@@ -392,17 +387,17 @@ fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper {
   }
 }
 
-fe-header.fe-header .mat-toolbar .fe-searchbar-wrapper.is-searching {
-  .fe-search-bar {
+fe-header.fe-header .mat-toolbar .searchbar-wrapper.is-searching {
+  .search-bar-form-field {
     border-bottom: 1px solid var(--secondary-color);
   }
 }
 
-fe-header.fe-header .fe-header-toolbar {
+fe-header.fe-header .header-toolbar {
   position: relative;
 }
 
-fe-header.fe-header .fe-header-progress-bar {
+fe-header.fe-header .header-progress-bar {
   height: var(--progressbar-height);
   position: absolute;
   left: 0;
@@ -418,7 +413,7 @@ fe-header.fe-header .fe-header-progress-bar {
 }
 
 .scrolled {
-  fe-header.fe-header .fe-header-toolbar {
+  fe-header.fe-header .header-toolbar {
     height: 60px;
     transition: height 300ms ease-out;
 
