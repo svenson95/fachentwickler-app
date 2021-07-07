@@ -1,19 +1,19 @@
 <hr class="pagination-bar-divider"/>
 <div class="pagination-bar">
-    <button class="first-btn" (click)="goToFirstPage()">
+    <button class="first-btn" (click)="goToFirstPage()" [disabled]="isFirstPaginationPage">
         <ion-icon class="delete-icon" name="play-back"></ion-icon>
     </button>
-    <button class="back-btn" (click)="goToPreviousPage()">
+    <button class="back-btn" (click)="goToPreviousPage()" [disabled]="isFirstPaginationPage">
         <ion-icon class="delete-icon" name="caret-back"></ion-icon>
     </button>
     <button class="page-btn unselectable" *ngFor="let page of pageButtons"
             [class.is-selected]="page === currentPage" (click)="goTo(page)">
         {{page + 1}}
     </button>
-    <button class="forward-btn" (click)="goToNextPage()">
+    <button class="forward-btn" (click)="goToNextPage()" [disabled]="isLastPaginationPage">
         <ion-icon class="delete-icon" name="caret-forward-outline"></ion-icon>
     </button>
-    <button class="last-btn" (click)="goToLastPage()">
+    <button class="last-btn" (click)="goToLastPage()" [disabled]="isLastPaginationPage">
         <ion-icon class="delete-icon" name="play-forward"></ion-icon>
     </button>
 </div>

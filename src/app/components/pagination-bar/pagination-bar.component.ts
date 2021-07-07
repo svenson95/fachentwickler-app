@@ -64,4 +64,12 @@ export class PaginationBarComponent implements OnInit {
   goToLastPage(): void {
     this.paginationPage = Math.floor(this.totalPages / this.rowsPerPage);
   }
+
+  get isFirstPaginationPage(): boolean {
+    return !(this.paginationPage - 1 >= 0);
+  }
+
+  get isLastPaginationPage(): boolean {
+    return !(this.paginationPage + 1 <= Math.floor(this.totalPages / this.rowsPerPage));
+  }
 }
