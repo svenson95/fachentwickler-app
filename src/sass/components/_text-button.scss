@@ -54,6 +54,8 @@
   }
 
   &:disabled {
+    border-color: var(--grey-2);
+
     span, .drop-icon {
       color: rgba(var(--grey-4-rgb), .5);
     }

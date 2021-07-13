@@ -6,7 +6,7 @@
 
   .fe-post-content {
     fe-post-element:first-child {
-      .fe-post-item {
+      .fe-post-item:not(.table) {
         margin-top: 20px;
       }
     }
