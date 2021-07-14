@@ -18,13 +18,7 @@
         <span class="bracket">]</span>
       </div>
       <div class="header-elements-wrapper">
-        <div class="searchbar-wrapper" *ngIf="!isMobile.matches" [class.is-searching]="router.url.startsWith('/search')">
-          <mat-form-field class="search-bar-form-field" appearance="fill">
-            <mat-icon class="unselectable" matSuffix (click)="openSearchView()" *ngIf="!searchPostService.isSearching">search</mat-icon>
-            <mat-spinner matSuffix class="fe-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
-            <input matInput type="text" autocomplete="off" [(ngModel)]="searchPostService.searchValue" placeholder="Suchbegriff" #searchInput>
-          </mat-form-field>
-        </div>
+        <fe-searchbar *ngIf="!isMobile.matches"></fe-searchbar>
         <div class="button-container">
           <button class="sidenav-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
             <mat-icon>menu</mat-icon>

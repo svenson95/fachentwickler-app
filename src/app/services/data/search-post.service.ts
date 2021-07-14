@@ -10,20 +10,19 @@ import { Post } from '../../models/post';
 })
 export class SearchPostService {
 
-  searchValue = '';
+  searchTerm = '';
+  searchedTerm: string;
   searchResults$: Subject<Post[]> = new Subject();
   redirectUrl: string;
   isSearching = false;
 
   constructor(private httpClient: HttpClient) { }
 
-  // Search component - GET post
-  searchPosts(text: string): Observable<Post[]> {
-    this.isSearching = true;
-    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search?query=${text}`)
+  searchPosts(searchTerm: string): Observable<Post[]> {
+    this.searchedTerm = searchTerm;
+    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search?query=${searchTerm}`)
       .pipe(map((response) => {
         // console.log('response GET search post', response);
-        this.isSearching = false;
         return response;
       }));
   }

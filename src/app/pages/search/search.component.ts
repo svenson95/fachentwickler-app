@@ -15,10 +15,6 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   resultsSubscription: Subscription;
   searchResults = [];
-  searchString: string;
-
-  loadingSubscription: Subscription;
-  isLoading: boolean;
 
   constructor(private headerService: HeaderService,
               private loadingService: LoadingService,
@@ -26,42 +22,32 @@ export class SearchComponent implements OnInit, OnDestroy {
               private router: Router
   ) {
     this.headerService.setPageTitle('Suche');
+
+    const searchValue = this.router.url.substring(14, this.router.url.length).split('%20').join(' ');
+    if (searchValue !== '') {
+      this.searchPostService.searchTerm = searchValue;
+      this.searchPostService.searchedTerm = searchValue;
+      this.searchPostService.searchPosts(searchValue).subscribe((posts) => {
+        this.searchResults = posts;
+      });
+    }
+
+    this.searchPostService.searchResults$.subscribe(posts => this.searchResults = posts);
   }
 
   ngOnInit(): void {
-    this.resultsSubscription = this.searchPostService.searchResults$.pipe(delay(0)).subscribe(
-      (posts) => {
-        this.searchString = this.searchPostService.searchValue;
-        this.searchResults = posts;
-      }
+    this.resultsSubscription = this.searchPostService.searchResults$.subscribe(
+      posts => this.searchResults = posts
     );
-
-    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(
-      (status: boolean) => {
-        this.isLoading = status;
-      }
-    );
-
-    if (this.searchResults.length === 0) {
-      const searchValue = this.router.url.substring(14, this.router.url.length).split('%20').join(' ');
-      if (searchValue !== '') {
-        this.searchString = searchValue;
-        this.searchPostService.searchValue = searchValue;
-        this.searchPostService.searchPosts(searchValue).subscribe((response) => {
-          this.searchPostService.searchResults$.next(response);
-        });
-      }
-    }
   }
 
   ngOnDestroy(): void {
     this.resultsSubscription.unsubscribe();
-    this.loadingSubscription.unsubscribe();
   }
 
   closeSearchView(): void {
-    this.searchPostService.searchValue = '';
-    this.searchString = '';
+    this.searchPostService.searchTerm = '';
+    this.searchPostService.searchedTerm = '';
     this.router.navigateByUrl(this.searchPostService.redirectUrl);
   }
 
