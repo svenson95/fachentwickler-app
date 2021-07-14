@@ -138,7 +138,7 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
       outline: none;
 
       color: var(--tertiary-color);
-      font-size: .9rem;
+      font-size: .8rem;
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
@@ -204,6 +204,7 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
   @include to-xs {
     width: fit-content;
     height: 36px;
+    align-self: center;
     padding: 5px;
     margin-left: 10px;
     margin-right: 10px;
