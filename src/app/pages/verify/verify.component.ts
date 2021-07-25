@@ -99,7 +99,7 @@ export class VerifyComponent implements OnInit {
 
     this.isResendLoading = true;
     this.resendTimeout = true;
-    this.authService.resendVerificationLink(this.authService.user.email).subscribe(
+    this.authService.resendVerificationCode(this.authService.user.email).subscribe(
     (result) => {
       this.isResendLoading = false;
       setTimeout(() => {

@@ -16,6 +16,7 @@ import {
   EditUserResponse,
   AddProgressResponse,
   ConfirmationResponse,
+  ResendVerificationCodeResponse,
   ForgotPasswordResponse,
   ChangePasswordResponse
 } from '../../models/fetch-response';
@@ -33,7 +34,7 @@ export class AuthService {
     private LOGIN_ENDPOINT = environment.baseUrl + '/user/login';
     private REGISTER_ENDPOINT = environment.baseUrl + '/user/register';
     private CONFIRMATION_ENDPOINT = environment.baseUrl + '/user/confirmation';
-    private RESEND_VERIFICATION_ENDPOINT = environment.baseUrl + '/user/resend-verification-link';
+    private RESEND_VERIFICATION_ENDPOINT = environment.baseUrl + '/user/resend-verification-code';
     private FORGOT_PASSWORD_ENDPOINT = environment.baseUrl + '/user/forgot-password';
     private CHANGE_PASSWORD_ENDPOINT = environment.baseUrl + '/user/change-password';
     private EDIT_USER_ENDPOINT = environment.baseUrl + '/user/edit-user';
@@ -101,7 +102,7 @@ export class AuthService {
 
         return this.httpClient.get<ConfirmationResponse>(confirmationEndpoint, {headers})
             .pipe(map(response => {
-                // console.log('response POST register', response);
+                // console.log('response POST confirm-registration', response);
                 if (response.success) {
                     this.user.active = true;
                     this.storeData();
@@ -112,14 +113,14 @@ export class AuthService {
             }));
     }
 
-    resendVerificationLink(email: string): Observable<ConfirmationResponse> {
+    resendVerificationCode(email: string): Observable<ResendVerificationCodeResponse> {
         const headers = new HttpHeaders()
             .set('Content-Type', 'application/json')
             .set('Authorization', this.token);
 
-        return this.httpClient.post<ConfirmationResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, JSON.stringify({ email }), {headers})
+        return this.httpClient.post<ResendVerificationCodeResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, JSON.stringify({ email }), {headers})
             .pipe(map(response => {
-                // console.log('response POST register', response);
+                // console.log('response POST resend-verification-code', response);
                 if (response.success) {
                     this.user.active = true;
                     this.storeData();
