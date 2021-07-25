@@ -26,6 +26,22 @@ export interface ConfirmationResponse {
   response?: any;
 }
 
+export interface ForgotPasswordResponse {
+  success: boolean;
+  message: string;
+  code?: string;
+  error?: Error;
+  response?: any;
+}
+
+export interface ChangePasswordResponse {
+  success: boolean;
+  message: string;
+  code?: string;
+  error?: Error;
+  response?: any;
+}
+
 export interface LogoutResponse {
   success: boolean;
   message: string;

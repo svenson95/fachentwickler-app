@@ -9,16 +9,19 @@ import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component'
 import { environment } from '../../../environments/environment';
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
 import {
-    LoginResponse,
-    RegisterResponse,
-    LogoutResponse,
-    AuthenticatedResponse,
-    EditUserResponse,
-    AddProgressResponse,
-    ConfirmationResponse
+  LoginResponse,
+  RegisterResponse,
+  LogoutResponse,
+  AuthenticatedResponse,
+  EditUserResponse,
+  AddProgressResponse,
+  ConfirmationResponse,
+  ForgotPasswordResponse,
+  ChangePasswordResponse
 } from '../../models/fetch-response';
 import { ThemeService } from '../theme.service';
 import { DataService } from '../data/data.service';
+/* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';
 
@@ -31,6 +34,8 @@ export class AuthService {
     private REGISTER_ENDPOINT = environment.baseUrl + '/user/register';
     private CONFIRMATION_ENDPOINT = environment.baseUrl + '/user/confirmation';
     private RESEND_VERIFICATION_ENDPOINT = environment.baseUrl + '/user/resend-verification-link';
+    private FORGOT_PASSWORD_ENDPOINT = environment.baseUrl + '/user/forgot-password';
+    private CHANGE_PASSWORD_ENDPOINT = environment.baseUrl + '/user/change-password';
     private EDIT_USER_ENDPOINT = environment.baseUrl + '/user/edit-user';
     private ADD_PROGRESS_ENDPOINT = environment.baseUrl + '/user/add-progress';
     private LOGOUT_ENDPOINT = environment.baseUrl + '/user/logout';
@@ -123,6 +128,30 @@ export class AuthService {
                 }
                 return response;
             }));
+    }
+
+    forgotPassword(email: string): Observable<ForgotPasswordResponse> {
+      const headers = new HttpHeaders()
+        .set('Content-Type', 'application/json');
+
+      return this.httpClient.post<ForgotPasswordResponse>(`${this.FORGOT_PASSWORD_ENDPOINT}`, JSON.stringify({ email }), {headers})
+        .pipe(map(response => {
+          // console.log('response POST forgot-password', response);
+          return response;
+        }));
+    }
+
+    changePassword(code: string, newPassword: string): Observable<ChangePasswordResponse> {
+      const headers = new HttpHeaders()
+        .set('Content-Type', 'application/json');
+
+      const body = { code, newPassword };
+
+      return this.httpClient.post<ChangePasswordResponse>(`${this.CHANGE_PASSWORD_ENDPOINT}`, JSON.stringify(body), {headers})
+        .pipe(map(response => {
+          // console.log('response POST forgot-password', response);
+          return response;
+        }));
     }
 
     async fetchAllLessons(): Promise<void> {

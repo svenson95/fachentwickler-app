@@ -112,6 +112,10 @@ const routes: Routes = [
     loadChildren: () => import('src/app/pages/verify/verify.module').then(m => m.VerifyModule)
   },
   {
+    path: 'forgot-password',
+    loadChildren: () => import('src/app/pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule)
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
     data: { animation: 'DashboardPage' },
