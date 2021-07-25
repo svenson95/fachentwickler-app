@@ -184,12 +184,12 @@ export class AuthService {
         );
     }
 
-    editUser(updatedUser: EditUser): Observable<EditUserResponse> {
+    editUser(user: EditUser): Observable<EditUserResponse> {
         const headers = new HttpHeaders()
             .set('Content-Type', 'application/json')
             .set('Authorization', this.token);
 
-        return this.httpClient.patch<EditUserResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(updatedUser), {headers})
+        return this.httpClient.patch<EditUserResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(user), {headers})
             .pipe(map(response => {
                 console.log('response PATCH edit-user', response);
                 if (response.success) {

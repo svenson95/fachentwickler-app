@@ -83,12 +83,10 @@
 
   .input {
 
-    @include from-lg {
-      width: 400px;
-    }
+    margin-bottom: .5rem;
 
-    @include from-xs {
-      width: 300px;
+    @include from-lg {
+      width: 350px;
     }
 
     .mat-input-element {
@@ -123,6 +121,10 @@
     .mat-form-field-underline {
       background-image: linear-gradient(to right, rgba(var(--grey-4), 1) 0%, rgba(var(--grey-4), 1) 0%);
       background-color: rgba(var(--tertiary-color-rgb), 0.3);
+    }
+
+    .mat-error {
+      margin-inline: 10px;
     }
 
     &.mat-form-field-disabled {
