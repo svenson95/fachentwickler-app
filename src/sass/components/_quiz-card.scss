@@ -59,7 +59,7 @@
 
       .quiz-level, .quiz-wrong-answers {
         background: var(--background-secondary);
-        border-radius: var(--button-radius);
+        border-radius: var(--border-radius);
         padding: 8px 20px;
       }
 
@@ -89,7 +89,7 @@
       .label {
         padding: 10px 15px;
         border: 1px solid var(--secondary-color);
-        border-radius: var(--button-radius);
+        border-radius: var(--border-radius);
         font-family: Nunito-Bold, sans-serif;
         font-size: .9em;
       }
@@ -103,7 +103,7 @@
           color: var(--text-color-1);
           padding: 12px 15px;
           background: rgba(var(--tertiary-color-rgb), 0.2);
-          border-radius: var(--button-radius);
+          border-radius: var(--border-radius);
           border: none;
           cursor: pointer;
           transition: background 200ms ease-in-out;
@@ -118,7 +118,7 @@
             @include from-lg {
               &:hover {
                 background: rgba(var(--tertiary-color-rgb), 0.3);
-                transition: background 300ms ease-in-out;
+                transition: background 100ms ease-in-out;
               }
             }
           }
@@ -126,11 +126,11 @@
 
         .fe-quiz-answer.correct {
           background: rgba(10,230,10, 0.2);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
         .fe-quiz-answer.wrong {
           background: rgba(red, 0.2);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
       }
     }

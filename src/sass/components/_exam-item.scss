@@ -90,8 +90,8 @@
         align-items: center;
         align-self: flex-end;
         border: none;
-        border-top-left-radius: var(--button-radius);
-        border-top-right-radius: var(--button-radius);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
         cursor: pointer;
         outline: none;
         margin-top: 4px;
@@ -100,7 +100,7 @@
         transition: background 200ms ease-out;
 
         &:hover:not(:active) span {
-          background: var(--background-primary);
+          background: rgba(var(--tertiary-color-rgb), .1);
           transition: background 200ms ease-out;
         }
 

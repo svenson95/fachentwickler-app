@@ -43,8 +43,8 @@
     font-family: Nunito-Bold, sans-serif;
     line-height: 20px;
     border-bottom: 1px solid var(--grey-1);
-    border-top-left-radius: var(--button-radius);
-    border-top-right-radius: var(--button-radius);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
 
     @include from-md {
       margin-bottom: 0;

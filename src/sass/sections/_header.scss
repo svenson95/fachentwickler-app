@@ -327,8 +327,8 @@ fe-header.fe-header .mat-toolbar .searchbar-wrapper {
     height: $searchbar-height;
     width: 200px;
     border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-    border-top-left-radius: var(--button-radius);
-    border-top-right-radius: var(--button-radius);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     transition: var(--header-button-transition);
 
     @include to-lg {

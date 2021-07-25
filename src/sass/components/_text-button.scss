@@ -18,17 +18,17 @@
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-  border-top-left-radius: var(--button-radius);
-  border-top-right-radius: var(--button-radius);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 
-  transition: transform 100ms ease, background 300ms ease-in-out;
+  transition: transform 100ms ease, background 100ms ease-in-out;
 
   &:hover:not(:disabled) {
     background: var(--button-hover-background);
     cursor: pointer;
-    transition: transform 100ms ease, background 300ms ease-out;
+    transition: transform 100ms ease, background 100ms ease-out;
   }
 
   &.secondary {

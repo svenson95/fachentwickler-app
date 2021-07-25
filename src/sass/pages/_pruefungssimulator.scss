@@ -35,13 +35,13 @@
       .choice-button {
         cursor: pointer;
         border: none;
-        border-radius: var(--button-radius);
+        border-radius: var(--border-radius);
         width: 100%;
         padding: 10px;
         color: var(--text-color-1);
         text-align: left;
         background: rgba(var(--tertiary-color-rgb), .2);
-        transition: background 300ms ease-in-out;
+        transition: background 100ms ease-in-out;
 
         &:not(:last-of-type) {
           margin-bottom: 10px;
@@ -49,17 +49,17 @@
 
         &:hover {
           background: rgba(var(--tertiary-color-rgb), .3);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
 
         &.correct {
           background-color: rgba(50, 205, 50, .4);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
 
         &.wrong {
           background-color: rgba(255, 0, 0, .4);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
       }
     }
@@ -94,16 +94,16 @@
       .fe-text-button {
         margin-left: 20px;
         transform: translateY(-3px);
-        transition: background 300ms ease-in-out;
+        transition: background 100ms ease-in-out;
 
         &.correct {
           background-color: rgba(50, 205, 50, .2);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
 
         &.wrong {
           background-color: rgba(255, 0, 0, .2);
-          transition: background 300ms ease-in-out;
+          transition: background 100ms ease-in-out;
         }
       }
     }
