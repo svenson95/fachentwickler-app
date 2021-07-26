@@ -121,6 +121,12 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
       @include to-md {
         margin-right: 10px;
       }
+
+      .mat-icon {
+        @include to-xs {
+          font-size: 1.2rem;
+        }
+      }
     }
 
     $btn-color: #19bc8b;
@@ -161,8 +167,6 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
     }
 
     .sidenav-btn {
-      margin-top: 5px;
-
       @include from-xs {
         margin-right: 15px;
       }
@@ -174,6 +178,12 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
 
     .sidenav-btn {
       margin-top: 0;
+
+      .mat-icon {
+        @include to-xs {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }
