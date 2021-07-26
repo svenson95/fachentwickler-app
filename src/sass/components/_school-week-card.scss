@@ -21,18 +21,16 @@ mat-card.fe-card.school-week-card {
         height: 40px;
         outline: none;
         line-height: initial;
-
-        transition: background-color 100ms ease-out;
         position: relative;
+        transition: background-color 100ms ease-out;
 
         &:not(&:disabled) {
           cursor: pointer;
+
           &:hover {
             background-color: var(--button-hover-background);
+            transition: none;
           }
-        }
-
-        &:active {
         }
 
         &:disabled mat-icon {
@@ -46,9 +44,6 @@ mat-card.fe-card.school-week-card {
 
       .previous-week-btn {
         margin-right: 10px;
-      }
-
-      .next-week-btn {
       }
     }
   }

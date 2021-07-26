@@ -111,10 +111,12 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
     .more-menu-btn {
       margin-left: 0;
       margin-right: 0;
+      transition: background-color 100ms ease-in-out;
 
       @include from-xs {
         &:hover {
           background-color: var(--button-hover-background);
+          transition: none;
         }
       }
 
@@ -319,10 +321,12 @@ fe-header.fe-header .mat-toolbar .searchbar-wrapper {
         align-items: center;
         border-top-left-radius: var(--border-radius);
         border-top-right-radius: var(--border-radius);
+        transition: background-color 100ms ease-in-out;
       }
 
       .mat-form-field-flex:hover, &.mat-form-field-should-float {
         background-color: var(--button-hover-background);
+        transition: none;
       }
 
       .mat-form-field-infix {

@@ -120,7 +120,7 @@ mat-sidenav.fe-sidenav.mat-sidenav {
         }
       }
 
-      $fe-nav-item-icon-fade-duration: color 200ms ease-in-out;
+      $fe-nav-item-icon-fade-duration: color 100ms ease-in-out;
 
       .fe-nav-item-icon {
         margin-right: 10px;
@@ -128,7 +128,7 @@ mat-sidenav.fe-sidenav.mat-sidenav {
         width: $size;
         height: $size;
         color: var(--tertiary-color);
-        transition: hover $fe-nav-item-icon-fade-duration;
+        transition: none;
         flex-shrink: 0;
       }
 
