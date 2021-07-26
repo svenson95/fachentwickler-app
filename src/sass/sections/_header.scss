@@ -108,14 +108,9 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
     color: var(--tertiary-color);
     align-items: center;
 
-    .fe-text-button {
-      transition: var(--header-button-transition);
-    }
-
     .more-menu-btn {
       margin-left: 0;
       margin-right: 0;
-      transition: var(--header-button-transition);
 
       @include from-xs {
         &:hover {
@@ -251,7 +246,7 @@ mat-toolbar.header-toolbar.mat-toolbar .fe-logo-wrapper {
     .fe-icon-wrapper:not(.active-route) {
       @include from-md {
         fill: var(--secondary-color);
-        transition: 150ms;
+        transition: letter-spacing 150ms ease-out;
       }
     }
   }
@@ -292,7 +287,6 @@ fe-header.fe-header .mat-toolbar .searchbar-wrapper {
     border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    transition: var(--header-button-transition);
 
     @include to-lg {
       width: 180px;
@@ -302,14 +296,11 @@ fe-header.fe-header .mat-toolbar .searchbar-wrapper {
       display: none;
     }
 
-    &:hover, &.mat-form-field-should-float {
-      background-color: var(--button-hover-background);
-    }
-
     .mat-form-field-outline {
       opacity: 1;
       color: var(--grey-3);
     }
+
     .mat-form-field-wrapper {
       .mat-form-field-flex {
         background: transparent;
@@ -317,6 +308,11 @@ fe-header.fe-header .mat-toolbar .searchbar-wrapper {
         height: $searchbar-height;
         align-items: center;
       }
+
+      .mat-form-field-flex:hover, &.mat-form-field-should-float {
+        background-color: var(--button-hover-background);
+      }
+
       .mat-form-field-infix {
         padding: 0;
         border-top: 0;

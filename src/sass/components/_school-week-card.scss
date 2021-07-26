@@ -22,14 +22,13 @@ mat-card.fe-card.school-week-card {
         outline: none;
         line-height: initial;
 
-        transition: background-color 200ms ease-in-out;
+        transition: background-color 100ms ease-out;
         position: relative;
 
         &:not(&:disabled) {
           cursor: pointer;
           &:hover {
             background-color: var(--button-hover-background);
-            transition: background-color 200ms ease-in-out;
           }
         }
 
