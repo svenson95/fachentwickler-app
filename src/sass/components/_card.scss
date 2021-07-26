@@ -1,6 +1,6 @@
 /* CARDS */
 mat-card.mat-card.fe-card {
-  max-width: 1130px;
+  max-width: var(--max-width);
   background: var(--background-primary);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);

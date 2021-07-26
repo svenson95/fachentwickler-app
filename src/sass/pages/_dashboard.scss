@@ -23,7 +23,7 @@
   }
 
   .spinner-wrapper {
-    max-width: 1070px;
+    max-width: var(--max-width);
     padding: 30px;
   }
 }

@@ -49,7 +49,7 @@
 .fe-page.curriculum .fe-week-cards-wrapper {
   display: flex;
   position: relative;
-  max-width: 1130px;
+  max-width: var(--max-width);
 
   .week-toggle-card {
     margin-bottom: 0;
@@ -107,7 +107,7 @@
 }
 
 .fe-page.curriculum .fe-spinner-wrapper {
-  max-width: 1070px;
+  max-width: var(--max-width);
 
   .fe-loading-spinner {
     margin: 110px auto 130px !important;
