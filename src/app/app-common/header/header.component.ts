@@ -20,7 +20,6 @@ import { ImageManagerDialogComponent } from '../../components/dialogs/image-mana
 })
 export class HeaderComponent {
 
-  UserRole = UserRole;
   isLoading: boolean;
 
   @Input() isMobile;
@@ -36,29 +35,12 @@ export class HeaderComponent {
   constructor(public router: Router,
               public headerService: HeaderService,
               public authService: AuthService,
-              public themeService: ThemeService,
               public loadingService: LoadingService,
-              private sidenavService: SidenavService,
-              public dialog: MatDialog,
+              private sidenavService: SidenavService
   ) {
     this.loadingService.loading$.pipe(delay(0)).subscribe(
       (status: boolean) => this.isLoading = status
     );
-  }
-
-  async openLogoutDialog(): Promise<void> {
-    await this.dialog.open(LogoutDialogComponent, {
-      restoreFocus: true,
-      panelClass: 'logout-modal',
-      autoFocus: false
-    });
-  }
-
-  async openImageManager(): Promise<void> {
-    await this.dialog.open(ImageManagerDialogComponent, {
-      restoreFocus: true,
-      panelClass: 'image-manager-modal'
-    });
   }
 
   closeSidenav(): void {

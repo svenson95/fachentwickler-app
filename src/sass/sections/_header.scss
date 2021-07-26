@@ -261,43 +261,6 @@ mat-toolbar.header-toolbar.mat-toolbar .fe-logo-wrapper {
   }
 }
 
-.cdk-overlay-container .more-menu {
-  background-color: var(--background-primary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-
-  .menu-btn .label {
-    color: var(--text-color-1);
-    padding-right: 5px;
-  }
-
-  .menu-btn mat-icon {
-    color: var(--tertiary-color) !important;
-  }
-
-  .mat-menu-item:hover {
-    background: rgba(var(--secondary-color-rgb), .8);
-
-    mat-icon {
-      color : var(--background-primary) !important;
-    }
-  }
-
-  .mat-ripple-element {
-    background-color: rgba(var(--background-primary-rgb),.2);
-  }
-
-  .mat-menu-item[disabled] {
-    mat-icon {
-      color: var(--secondary-color) !important;
-    }
-
-    .label {
-      color: var(--text-color-3);
-    }
-  }
-}
-
 fe-header.fe-header .mat-toolbar .searchbar-wrapper {
   margin-left: 20px;
 

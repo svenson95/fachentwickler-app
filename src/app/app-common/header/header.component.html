@@ -29,48 +29,7 @@
           >
             <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
           </a>
-          <button class="more-menu-btn" mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu class="more-menu" #menu="matMenu">
-            <a class="menu-btn" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile.matches"
-               [disabled]="router.url.startsWith('/dashboard')"
-            >
-              <mat-icon>dashboard</mat-icon>
-              <span class="label">Dashboard</span>
-            </a>
-            <a class="menu-btn" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated"
-               [disabled]="router.url.startsWith('/mein-profil')"
-            >
-              <mat-icon>account_circle</mat-icon>
-              <span class="label">Mein Profil</span>
-            </a>
-            <a class="menu-btn" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated"
-               [disabled]="router.url.startsWith('/login')"
-            >
-              <mat-icon>login</mat-icon>
-              <span class="label">Einloggen</span>
-            </a>
-            <a class="menu-btn" mat-menu-item routerLink="feedback"
-               [disabled]="router.url.startsWith('/feedback')"
-            >
-              <mat-icon>feedback</mat-icon>
-              <span class="label">Feedback</span>
-            </a>
-            <button class="menu-btn" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user?.role === UserRole.ADMIN">
-              <!--            *ngIf="authService.user.role === UserRole.ADMIN"-->
-              <mat-icon>perm_media</mat-icon>
-              <span class="label">Image-Manager</span>
-            </button>
-            <a class="menu-btn" mat-menu-item (click)="themeService.toggleTheme()">
-              <mat-icon>invert_colors</mat-icon>
-              <span class="label">{{themeService.isDarkTheme() ? 'Light': 'Dark'}} Theme aktivieren</span>
-            </a>
-            <button class="menu-btn" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated">
-              <mat-icon>logout</mat-icon>
-              <span class="label">Ausloggen</span>
-            </button>
-          </mat-menu>
+          <fe-header-menu [isMobile]="isMobile"></fe-header-menu>
         </div>
       </div>
     </div>

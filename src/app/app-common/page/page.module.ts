@@ -14,6 +14,7 @@ import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/lo
 import { ImageManagerDialogModule } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.module';
 import { DeleteImageDialogModule } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.module';
 import { SearchbarModule } from '../../components/searchbar/searchbar.module';
+import { HeaderMenuModule } from '../../components/header-menu/header-menu.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SearchbarModule } from '../../components/searchbar/searchbar.module';
     FormsModule,
     ImageManagerDialogModule,
     DeleteImageDialogModule,
-    SearchbarModule
+    SearchbarModule,
+    HeaderMenuModule
   ]
 })
 export class PageComponentModule { }
