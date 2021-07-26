@@ -307,6 +307,8 @@ fe-header.fe-header .mat-toolbar .searchbar-wrapper {
         padding: 0 1rem;
         height: $searchbar-height;
         align-items: center;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
       }
 
       .mat-form-field-flex:hover, &.mat-form-field-should-float {
