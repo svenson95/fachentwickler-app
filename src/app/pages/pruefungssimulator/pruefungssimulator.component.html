@@ -11,7 +11,7 @@
       <p>Das Quiz enthält Prüfungsfragen aus den Zwischenprüfungen der Jahre Sommer 2019, Herbst 2020 und Frühling 2021.</p>
       <button class="fe-text-button right" (click)="startAudit()">Start</button>
     </mat-card-content>
-    <mat-card-content class="fe-view-wrapper play" *ngIf="state === 'play'">
+    <mat-card-content class="fe-view-wrapper play" *ngIf="state === 'play'" #slideInWrapper>
       <div>
         <p class="question">{{currentQuestion.question}}</p>
         <p class="description" *ngIf="currentQuestion.description" [innerHTML]="currentQuestion.description"></p>

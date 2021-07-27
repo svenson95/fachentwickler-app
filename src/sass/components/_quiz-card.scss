@@ -3,6 +3,10 @@
   justify-content: space-evenly;
 }
 
+.fe-card.quiz-card .slide-in-animation {
+  @include moveInLeftAnimation;
+}
+
 .fe-card.quiz-card {
   .fe-card-title {
   }
@@ -137,6 +141,7 @@
 
     .fe-quiz-end {
       text-align: center;
+      margin-top: 20px;
 
       .fe-quiz-done-label {
         font-size: 1.3em;

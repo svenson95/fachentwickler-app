@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import { DataService } from '../../../services/data/data.service';
 import { Quiz } from '../../../models/quiz';
 
@@ -15,6 +15,8 @@ export class QuizCardComponent implements OnInit {
   answer: number;
   isCorrectAnswer: boolean;
   end = false;
+
+  @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
 
   finishTexts = [
     'Du hast das Quiz ohne Fehler abgeschlossen',
@@ -46,6 +48,9 @@ export class QuizCardComponent implements OnInit {
     }
 
     setTimeout(() => {
+      this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
+      setTimeout(() => this.slideInWrapper.nativeElement.classList.remove('slide-in-animation'), 400);
+
       this.answer = undefined;
       this.isCorrectAnswer = null;
       if (this.quiz.questions[this.level + 1] !== undefined) {

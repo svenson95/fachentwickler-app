@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { delay } from 'rxjs/operators';
 
 import { ImageChunk } from '../../models/image-data';
@@ -13,6 +13,8 @@ import { auditQuestions } from '../../../data/pruefungsfragen';
   templateUrl: './pruefungssimulator.component.html'
 })
 export class PruefungsSimulatorComponent implements OnInit {
+
+  @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
 
   AuditState = AuditState;
   auditQuestions = auditQuestions;
@@ -61,8 +63,11 @@ export class PruefungsSimulatorComponent implements OnInit {
 
     setTimeout(() => {
       event.target.classList.remove(this.isCorrect ? 'correct' : 'wrong');
+
       if (this.isCorrect) {
         this.nextRound();
+        this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
+        setTimeout(() => this.slideInWrapper.nativeElement.classList.remove('slide-in-animation'), 400);
       }
       this.isCorrect = undefined;
     }, 1000);

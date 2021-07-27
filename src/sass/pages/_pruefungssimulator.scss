@@ -109,3 +109,7 @@
     }
   }
 }
+
+.fe-page.pruefungssimulator .fe-card .slide-in-animation {
+  @include moveInLeftAnimation;
+}

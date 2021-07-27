@@ -29,7 +29,7 @@
             <p class="value">{{wrongAnswers}}</p>
           </div>
         </div>
-        <div class="quiz-question" *ngIf="!end">
+        <div class="quiz-question" *ngIf="!end" #slideInWrapper>
           <p class="label" [innerHTML]="quiz.questions[level].question"></p>
           <div class="fe-quiz-answers-wrapper" [class.is-checking-answer]="answer !== undefined">
             <button class="fe-quiz-answer answer-1" [innerHTML]="quiz.questions[level].choice1" (click)="checkAnswer(1)"

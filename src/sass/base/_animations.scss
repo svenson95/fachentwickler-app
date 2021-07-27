@@ -30,6 +30,8 @@
   }
 }
 
+//
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -53,6 +55,39 @@
 
   40% {
     transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+//
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+
+  40% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+
+  40% {
+    transform: translateX(2rem);
   }
 
   100% {
