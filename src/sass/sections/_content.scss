@@ -6,12 +6,7 @@
     padding: 35px 20px;
     border-top-left-radius: var(--border-radius);
 
-    animation-name: moveInTop;
-    animation-duration: 400ms;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-name: moveInTop;
-    -webkit-animation-duration: 400ms;
-    -webkit-animation-timing-function: ease-in-out;
+    @include moveInTopAnimation;
 
     @include to-xs {
       padding: 20px 0 60px;
