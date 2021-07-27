@@ -1,6 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
@@ -20,19 +19,11 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
-  /* -- Post search variables -- */
-  searchbarFormGroup: FormGroup;
-  searchbarHideRequiredControl = new FormControl(false);
-  searchbarFloatLabelControl = new FormControl('auto');
-
   /* -- Media query variables -- */
   isMobile: MediaQueryList;
-  tinyDisplay: MediaQueryList;
   IS_MOBILE_LISTENER: () => void;
-  TINY_DISPLAY_LISTENER: () => void;
 
-  constructor(private formbuilder: FormBuilder,
-              private breakpointObserver: BreakpointObserver,
+  constructor(private breakpointObserver: BreakpointObserver,
               private changeDetectorRef: ChangeDetectorRef,
               private media: MediaMatcher,
               private sidenavService: SidenavService,
@@ -49,7 +40,6 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnDestroy(): void {
     this.isMobile.removeListener(this.IS_MOBILE_LISTENER);
-    this.tinyDisplay.removeListener(this.TINY_DISPLAY_LISTENER);
     this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
       .removeEventListener('scroll', this.onScroll.bind(this), true);
   }
@@ -88,17 +78,10 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   /* -- Component Functions -- */
   setupComponent(): void {
-    this.searchbarFormGroup = this.formbuilder.group({
-      hideRequired: this.searchbarHideRequiredControl,
-      floatLabel: this.searchbarFloatLabelControl
-    });
     this.isMobile = this.media.matchMedia('(max-width: 820px)');
-    this.tinyDisplay = this.media.matchMedia('(max-width: 350px)');
 
     this.IS_MOBILE_LISTENER = () => this.changeDetectorRef.detectChanges();
-    this.TINY_DISPLAY_LISTENER = () => this.changeDetectorRef.detectChanges();
     this.isMobile.addListener(this.IS_MOBILE_LISTENER);
-    this.tinyDisplay.addListener(this.TINY_DISPLAY_LISTENER);
   }
 
   showActions(): void {
