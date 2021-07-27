@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Subject } from 'rxjs';
 
@@ -25,6 +25,8 @@ export class MatchingGameComponent implements OnInit {
   assignmentStream = new Subject<{pair: MatchingPair, side: string}>();
 
   @ViewChild('gameView') gameView;
+  @ViewChild('slideInLeft') slideInLeft: ElementRef;
+  @ViewChild('slideInRight') slideInRight: ElementRef;
 
   constructor(private auth: AuthService) { }
 
@@ -60,6 +62,11 @@ export class MatchingGameComponent implements OnInit {
     setTimeout(() => {
       this.isCorrect = undefined;
       this.startNextRound();
+
+      this.slideInLeft.nativeElement.classList.add('slide-in-left');
+      this.slideInRight.nativeElement.classList.add('slide-in-right');
+      setTimeout(() => this.slideInLeft.nativeElement.classList.remove('slide-in-left'), 400);
+      setTimeout(() => this.slideInRight.nativeElement.classList.remove('slide-in-right'), 400);
     }, 2000);
   }
 
@@ -107,7 +114,7 @@ export class MatchingGameComponent implements OnInit {
   }
 
   setSolvedState(): void {
-    if (!this.auth.user.progress.includes(this.matching._id)) {
+    if (!this.auth.user.progress.includes(this.matching._id) && this.auth.isAuthenticated) {
       this.auth.setLessonSolved(this.matching._id);
     }
   }

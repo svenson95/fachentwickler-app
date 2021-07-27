@@ -13,7 +13,7 @@
                     </p>
                     <h2 class="round-label">{{round+1}}/{{matching.pairs.length}}</h2>
                     <div class="container unsolved" *ngIf="unsolvedPairs.length > 0 && state !== 'end'">
-                        <div class="pair_items left" (cdkDropListDropped)="drop($event, leftSidePairs)" cdkDropList>
+                        <div class="pair_items left" (cdkDropListDropped)="drop($event, leftSidePairs)" cdkDropList #slideInLeft>
                             <div class="btn-wrapper" *ngFor="let pair of leftSidePairs">
                                 <button class="item unselectable cdk-drag-animating" [disabled]="isCorrect !== undefined" cdkDrag>
                                     {{pair.leftpart}}
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="vertical-connector"></div>
-                        <div class="pair_items right" (cdkDropListDropped)="drop($event, rightSidePairs)" cdkDropList>
+                        <div class="pair_items right" (cdkDropListDropped)="drop($event, rightSidePairs)" cdkDropList #slideInRight>
                             <div class="btn-wrapper" *ngFor="let pair of rightSidePairs">
                                 <button class="item unselectable cdk-drag-animating" [disabled]="isCorrect !== undefined" cdkDrag>
                                     {{pair.rightpart}}
