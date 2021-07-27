@@ -1,7 +1,7 @@
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export interface Theme {
-    name: string;
+    name: 'light' | 'dark';
     properties: any;
 }
 

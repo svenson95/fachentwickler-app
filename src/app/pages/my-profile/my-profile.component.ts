@@ -239,12 +239,7 @@ export class MyProfileComponent implements OnInit {
   }
 
   saveChangeTheme(): void {
-    const updatedUser = {
-      _id: this.authService.user._id,
-      theme: this.themeService.getActiveTheme().name
-    } as EditUser;
-
-    this.authService.editUser(updatedUser).subscribe(
+    this.authService.editUser({ _id: this.authService.user._id, theme: this.themeService.getActiveTheme().name }).subscribe(
       (response) => {
         this.authService.user = response.user;
         this.matSnackBar.openFromComponent(SnackbarComponent, {

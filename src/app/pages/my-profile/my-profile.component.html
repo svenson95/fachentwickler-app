@@ -3,7 +3,7 @@
     <p class="fe-card-title">Benutzerdaten</p>
     <mat-card-content class="fe-view-wrapper">
       <form class="user-form" [formGroup]="formGroup">
-        <div class="detail-wrapper">
+        <div class="fe-user-detail name">
           <mat-form-field class="input name" appearance="legacy">
             <mat-label>Benutzername</mat-label>
             <input matInput type="text" autocomplete="off" [formControl]="username" #usernameInput="matInput" (keyup)="username.setValue(usernameInput.value)" />
