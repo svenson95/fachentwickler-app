@@ -2,52 +2,55 @@
   <mat-card class="fe-card fe-my-profile">
     <p class="fe-card-title">Benutzerdaten</p>
     <mat-card-content class="fe-view-wrapper">
-      <form class="user-form" [formGroup]="formGroup">
-        <div class="fe-user-detail name">
+      <div class="user-details">
+        <div class="name-control">
           <mat-form-field class="input name" appearance="legacy">
             <mat-label>Benutzername</mat-label>
-            <input matInput type="text" autocomplete="off" [formControl]="username" #usernameInput="matInput" (keyup)="username.setValue(usernameInput.value)" />
-            <mat-error *ngIf="username.hasError('required') && username.touched">Benutzername ist erforderlich</mat-error>
-            <mat-error *ngIf="username.hasError('minlength') && username.touched">Benutzername muss mindestens 4 Zeichen lang sein</mat-error>
+            <input matInput type="text" autocomplete="off" [formControl]="name" #nameInput="matInput" (keyup)="name.setValue(nameInput.value)" />
+            <mat-error *ngIf="name.hasError('required') && name.touched">Benutzername ist erforderlich</mat-error>
+            <mat-error *ngIf="name.hasError('minlength') && name.touched">Benutzername muss mindestens 4 Zeichen lang sein</mat-error>
           </mat-form-field>
-          <button class="start-change-btn" (click)="toggleChangeName()" *ngIf="username.disabled" [disabled]="email.enabled || password.enabled || isChangingEmail">
+          <button class="start-change-btn" (click)="toggleChangeName()" *ngIf="name.disabled" [disabled]="email.enabled || password.enabled || isConfirmingEmail">
             Bearbeiten
           </button>
-          <button class="discard-change-btn" (click)="toggleChangeName()" *ngIf="username.enabled && username.value === user.name">
+          <button class="discard-change-btn" (click)="toggleChangeName()" *ngIf="name.enabled && name.value === authService.user.name">
             Abbrechen
           </button>
-          <button class="save-change-btn" (click)="saveChangeName()" *ngIf="username.enabled && username.value !== user.name" [disabled]="email.enabled || password.enabled">
+          <button class="save-change-btn" (click)="saveChangeName()" *ngIf="name.enabled && name.value !== authService.user.name" [disabled]="email.enabled || password.enabled">
             Speichern
           </button>
         </div>
-        <div class="fe-user-detail email" *ngIf="!isChangingEmail">
-          <mat-form-field class="input email" appearance="legacy">
-            <mat-label>E-Mail</mat-label>
-            <input matInput type="email" autocomplete="off" [formControl]="email" #emailInput="matInput" (keyup)="email.setValue(emailInput.value)" />
-            <mat-error *ngIf="email.hasError('required') && email.touched">E-Mail Adresse ist erforderlich</mat-error>
-            <mat-error *ngIf="email.hasError('email') && email.touched">E-Mail Adresse ist ungültig</mat-error>
-          </mat-form-field>
-          <button class="start-change-btn" (click)="toggleChangeEmail()" *ngIf="email.disabled" [disabled]="username.enabled || password.enabled">
-            Bearbeiten
-          </button>
-          <button class="discard-change-btn" (click)="toggleChangeEmail()" *ngIf="email.enabled && email.value === user.email">
-            Abbrechen
-          </button>
-          <button class="save-change-btn" (click)="saveChangeEmail()" *ngIf="email.enabled && email.value !== user.email" [disabled]="username.enabled || password.enabled">
-            Speichern
-          </button>
-        </div>
-        <div class="fe-user-detail verification-code" *ngIf="isChangingEmail">
-          <mat-form-field class="input email" appearance="legacy">
-            <mat-label>Verifizierungscode</mat-label>
-            <input matInput type="text" autocomplete="off" [formControl]="verificationCode" #verificationCodeInput="matInput" (keyup)="verificationCode.setValue(verificationCodeInput.value)" />
-            <mat-error *ngIf="verificationCode.hasError('required') && verificationCode.touched">Verifizierungscode ist erforderlich</mat-error>
-          </mat-form-field>
-          <button class="save-change-btn" (click)="confirmChangedEmail()" *ngIf="isChangingEmail">
-            Bestätigen
-          </button>
-        </div>
-        <div class="fe-user-detail password">
+        <form class="email-form" [formGroup]="emailFormGroup" (ngSubmit)="isConfirmingEmail ? confirmChangedEmail() : saveChangeEmail()">
+          <ng-container *ngIf="!isConfirmingEmail">
+            <mat-form-field class="input email" appearance="legacy">
+              <mat-label>E-Mail</mat-label>
+              <input matInput type="email" autocomplete="off" [formControl]="email" #emailInput="matInput" (keyup)="email.setValue(emailInput.value)" />
+              <mat-error *ngIf="email.hasError('required')">E-Mail Adresse ist erforderlich</mat-error>
+              <mat-error *ngIf="email.hasError('email')">E-Mail Adresse ist ungültig</mat-error>
+            </mat-form-field>
+            <button class="start-change-btn" (click)="toggleChangeEmail()" *ngIf="email.disabled" [disabled]="name.enabled || password.enabled">
+              Bearbeiten
+            </button>
+            <button class="discard-change-btn" (click)="toggleChangeEmail()" *ngIf="email.enabled && email.value === authService.user.email">
+              Abbrechen
+            </button>
+            <button class="save-change-btn" type="submit" *ngIf="email.enabled && email.value !== authService.user.email" [disabled]="name.enabled || password.enabled">
+              Speichern
+            </button>
+          </ng-container>
+          <ng-container *ngIf="isConfirmingEmail">
+            <mat-form-field class="input verification-code mat-form-field-should-float" appearance="legacy">
+              <mat-label>Verifizierungscode</mat-label>
+              <input matInput type="text" autocomplete="off" [formControl]="verificationCode" #verificationCodeInput="matInput" (keyup)="verificationCode.setValue(verificationCodeInput.value)" />
+              <mat-error *ngIf="verificationCode.hasError('required') && verificationCode.touched">Verifizierungscode ist erforderlich</mat-error>
+              <mat-error *ngIf="verificationCode.hasError('incorrect') && verificationCode.touched">Verifizierungscode ungültig</mat-error>
+            </mat-form-field>
+            <button class="save-change-btn" type="submit" *ngIf="isConfirmingEmail">
+              Bestätigen
+            </button>
+          </ng-container>
+        </form>
+        <form class="password-form" [formGroup]="passwordFormGroup" (ngSubmit)="saveChangePassword()">
           <mat-form-field class="input password mat-form-field-should-float" appearance="legacy" *ngIf="!isConfirmingPassword">
             <mat-label>{{password.disabled ? 'Passwort' : 'Neues Passwort'}}</mat-label>
             <input matInput type="password" [formControl]="password" #passwordInput="matInput" (keyup)="password.setValue(passwordInput.value)" />
@@ -61,16 +64,16 @@
             <mat-error *ngIf="confirmPassword.hasError('minlength') && confirmPassword.touched">Neues Passwort bestätigen muss mindestens 4 Zeichen lang sein</mat-error>
             <mat-error *ngIf="confirmPassword.hasError('match') && confirmPassword.touched">Neues Passwort und Passwort bestätigen stimmen nicht überein</mat-error>
           </mat-form-field>
-          <button class="start-change-btn" (click)="toggleChangePassword()" *ngIf="password.disabled" [disabled]="username.enabled || email.enabled || isChangingEmail">
+          <button class="start-change-btn" (click)="toggleChangePassword()" *ngIf="password.disabled" [disabled]="name.enabled || email.enabled || isConfirmingEmail">
             Bearbeiten
           </button>
           <button class="discard-change-btn" (click)="toggleChangePassword()" *ngIf="password.value.length === 0">
             Abbrechen
           </button>
-          <button class="save-change-btn" (click)="saveChangePassword()" *ngIf="password.enabled && password.value.length > 0" [disabled]="username.enabled || email.enabled">
+          <button class="save-change-btn" type="submit" *ngIf="password.enabled && password.value.length > 0" [disabled]="name.enabled || email.enabled">
             Speichern
           </button>
-        </div>
+        </form>
         <div class="fe-user-detail role">
           <mat-form-field class="input role" appearance="legacy">
             <mat-label>Gruppe</mat-label>
@@ -90,11 +93,11 @@
             <mat-slide-toggle class="fe-theme-toggle" [checked]="themeService.isDarkTheme()" (change)="toggleTheme()">
             </mat-slide-toggle>
           </mat-form-field>
-          <button class="save-change-btn" (click)="saveChangeTheme()" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme" [disabled]="isChangingEmail">
+          <button class="save-change-btn" (click)="saveChangeTheme()" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme" [disabled]="isConfirmingEmail">
             Speichern
           </button>
         </div>
-      </form>
+      </div>
 
       <hr/>
 

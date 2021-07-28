@@ -98,9 +98,9 @@ export class ForgotPasswordComponent implements OnInit {
         if (!result.success && result.code === 'UserVerifiedException') {
           return this.snackBar.openFromComponent(SnackbarComponent, {
             duration: 2500,
-            data: 'Fehler! Verifizierungscode konnte nicht gesendet werden'
+            data: 'Fehler! Benutzer ist bereits verfiziert'
           });
-        } else if (!result.response) {
+        } else if (!result.success && result.code === 'UserNotFoundException') {
           return this.snackBar.openFromComponent(SnackbarComponent, {
             duration: 2500,
             data: 'Benutzer mit angegebener E-Mail Adresse nicht gefunden'

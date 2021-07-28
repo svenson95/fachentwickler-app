@@ -65,7 +65,7 @@ export class VerifyComponent implements OnInit {
     this.isSubmitLoading = true;
     const verificationCode = this.formGroup.get('verificationCode').value;
 
-    this.authService.confirmRegistration(this.authService.user.email, verificationCode).subscribe(
+    this.authService.verifyUser(this.authService.user.email, verificationCode).subscribe(
       (response) => {
         this.router.navigateByUrl('/dashboard');
         this.isSubmitLoading = false;

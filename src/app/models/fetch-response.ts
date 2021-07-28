@@ -1,81 +1,20 @@
-import { HttpErrorResponse } from '@angular/common/http';
-
 import { User } from './user';
 
-export interface LoginResponse {
-  isAuthenticated: boolean;
-  message: string;
-  user?: User;
-  token?: string;
-  response: HttpErrorResponse;
-  request: any;
-}
-
-export interface RegisterResponse {
-  success: boolean;
-  message: string;
-  user?: User;
-  token?: string;
-  error?: Error;
-}
-
-export interface ConfirmationResponse {
+export interface BasicResponse {
   success: boolean;
   message: string;
   error?: Error;
-  response?: any;
-}
-
-export interface ResendVerificationCodeResponse {
-  success: boolean;
-  message: string;
   code?: string;
-  error?: Error;
-  response?: any;
 }
 
-export interface ForgotPasswordResponse {
-  success: boolean;
-  message: string;
-  code?: string;
-  error?: Error;
-  response?: any;
-}
-
-export interface ChangePasswordResponse {
-  success: boolean;
-  message: string;
-  code?: string;
-  error?: Error;
-  response?: any;
-}
-
-export interface LogoutResponse {
-  success: boolean;
-  message: string;
-}
-
-export interface AuthenticatedResponse {
-  isAuthenticated: boolean;
-  message: string;
+export interface AuthResponse extends BasicResponse {
   user?: User;
+}
+
+export interface TokenResponse extends AuthResponse {
   token?: string;
-  error?: any;
-  response: HttpErrorResponse;
-  request: any;
 }
 
-export interface EditUserResponse {
-  success: boolean;
-  message: string;
-  user?: User;
-  error?: Error;
-}
-
-export interface AddProgressResponse {
-  success: boolean;
-  message: string;
+export interface UserProgressResponse extends AuthResponse {
   progress?: any;
-  user?: User;
-  error?: any;
 }

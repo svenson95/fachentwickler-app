@@ -4,7 +4,6 @@ import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
-import { EditUser, User } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
@@ -17,13 +16,14 @@ import { inputsMatch } from '../../validators/match.validator';
 })
 export class MyProfileComponent implements OnInit {
 
-  user: User;
-  isChangingEmail: boolean;
+  isConfirmingEmail: boolean;
   isConfirmingPassword: boolean;
   progressPercentage: number;
 
-  formGroup: FormGroup;
-  username: FormControl;
+  emailFormGroup: FormGroup;
+  passwordFormGroup: FormGroup;
+
+  name: FormControl;
   email: FormControl;
   verificationCode: FormControl;
   password: FormControl;
@@ -32,7 +32,7 @@ export class MyProfileComponent implements OnInit {
   progress: FormControl;
   theme: FormControl;
 
-  @ViewChild('usernameInput') usernameInput: MatInput;
+  @ViewChild('nameInput') nameInput: MatInput;
   @ViewChild('emailInput') emailInput: MatInput;
   @ViewChild('passwordInput') passwordInput: MatInput;
 
@@ -44,8 +44,8 @@ export class MyProfileComponent implements OnInit {
               private formBuilder: FormBuilder
   ) {
     this.headerService.setPageTitle('Mein Profil');
-    this.user = this.authService.user;
-    this.initFormGroup();
+    this.initFormControls();
+    this.initFormGroups();
   }
 
   ngOnInit(): void {
@@ -56,24 +56,24 @@ export class MyProfileComponent implements OnInit {
     if (this.dataService.dashboard === undefined) {
       this.dataService.getAllLessons().subscribe(
         (lessons) => {
-          this.progressPercentage = Math.floor((this.user.progress.length / lessons.length) * 100);
+          this.progressPercentage = Math.floor((this.authService.user.progress.length / lessons.length) * 100);
           this.progress.setValue(this.progressPercentage + ' %');
         }, (error) => {
           console.log('error while GET all-lessons', error);
         }
       );
     } else {
-      this.progressPercentage = Math.floor((this.user.progress.length / this.dataService.dashboard.allLessons.length) * 100);
+      this.progressPercentage = Math.floor((this.authService.user.progress.length / this.dataService.dashboard.allLessons.length) * 100);
       this.progress.setValue(this.progressPercentage + ' %');
     }
   }
 
-  initFormGroup(): void {
-    this.username = new FormControl({ value: this.user.name, disabled: true }, {
+  initFormControls(): void {
+    this.name = new FormControl({ value: this.authService.user.name, disabled: true }, {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.email = new FormControl({ value: this.user.email, disabled: true }, {
+    this.email = new FormControl({ value: this.authService.user.email, disabled: true }, {
       validators: [Validators.required, Validators.email],
       updateOn: 'submit'
     });
@@ -81,7 +81,7 @@ export class MyProfileComponent implements OnInit {
       validators: [Validators.required],
       updateOn: 'submit'
     });
-    this.password = new FormControl({ value: this.user.password.substring(0, 8), disabled: true }, {
+    this.password = new FormControl({ value: 'xxxxxxxx', disabled: true }, {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
@@ -89,24 +89,24 @@ export class MyProfileComponent implements OnInit {
       validators: [inputsMatch('password')],
       updateOn: 'submit'
     });
-    this.role = new FormControl({ value: this.user.role, disabled: true }, {
+    this.role = new FormControl({ value: this.authService.user.role, disabled: true }, {
       updateOn: 'submit'
     });
     this.progress = new FormControl({ value: 0, disabled: true }, {
       updateOn: 'submit'
     });
-    this.theme = new FormControl({ value: this.themeService.getActiveTheme().name, disabled: true }, {
-      updateOn: 'change'
-    });
-    this.formGroup = this.formBuilder.group({
-      username: this.username,
+    this.theme = new FormControl({ value: this.themeService.getActiveTheme().name, disabled: true });
+  }
+
+  initFormGroups(): void {
+    this.emailFormGroup = this.formBuilder.group({
       email: this.email,
-      verificationCode: this.verificationCode,
+      verificationCode: this.verificationCode
+    });
+
+    this.passwordFormGroup = this.formBuilder.group({
       password: this.password,
       confirmPassword: this.confirmPassword,
-      role: this.role,
-      progress: this.progress,
-      theme: this.theme
     });
   }
 
@@ -119,37 +119,35 @@ export class MyProfileComponent implements OnInit {
   }
 
   toggleChangeName(): void {
-    if (this.username.disabled) {
-      this.username.enable();
-      this.usernameInput.focus();
+    if (this.name.disabled) {
+      this.name.enable();
+      this.nameInput.focus();
     } else {
-      this.username.setValue(this.user.name);
-      this.username.disable();
+      this.name.setValue(this.authService.user.name);
+      this.name.disable();
     }
   }
 
   saveChangeName(): void {
-    if (this.username.invalid) {
+    if (this.name.invalid) {
       return;
     }
 
-    this.authService.editUser({ _id: this.authService.user._id, newName: this.username.value.toLowerCase() }).subscribe(
+    this.authService.editUser({ _id: this.authService.user._id, newName: this.name.value.toLowerCase() }).subscribe(
       (response) => {
-        this.authService.user = response.user;
+        this.name.disable();
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Benutzername geändert'
         });
       }, (errorRes) => {
-        this.formGroup.controls.username.setValue(this.authService.user.name);
+        this.name.setValue(this.authService.user.name);
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
         });
       }
-    ).add(() => {
-      this.username.disable();
-    });
+    );
   }
 
   toggleChangeEmail(): void {
@@ -157,7 +155,7 @@ export class MyProfileComponent implements OnInit {
       this.email.enable();
       this.emailInput.focus();
     } else {
-      this.email.setValue(this.user.email);
+      this.email.setValue(this.authService.user.email);
       this.email.disable();
     }
   }
@@ -166,25 +164,49 @@ export class MyProfileComponent implements OnInit {
     if (this.email.invalid) {
       return;
     }
+    const {email} = this.emailFormGroup.value;
 
-    this.authService.editUser({ _id: this.authService.user._id, email: this.email.value.toLowerCase() }).subscribe(
+    this.authService.editUser({ _id: this.authService.user._id, email }).subscribe(
       (response) => {
-        this.authService.user = response.user;
-        this.isChangingEmail = true;
+        this.isConfirmingEmail = true;
+
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'E-Mail geändert'
+          data: 'Verifizierungscode versendet'
         });
       }, (errorRes) => {
-        this.formGroup.controls.email.setValue(this.authService.user.email);
+        this.emailFormGroup.controls.email.setValue(this.authService.user.email);
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
         });
       }
-    ).add(() => {
-      this.email.disable();
-    });
+    );
+  }
+
+  confirmChangedEmail(): void {
+    if (this.emailFormGroup.invalid) {
+      return;
+    }
+    const {email, verificationCode} = this.emailFormGroup.value;
+
+    this.authService.verifyUser(this.authService.user.email, verificationCode, email)
+      .subscribe(
+        (response) => {
+          if (response.success) {
+            this.email.disable();
+            this.matSnackBar.openFromComponent(SnackbarComponent, {
+              duration: 3000,
+              data: 'E-Mail geändert'
+            });
+            this.isConfirmingEmail = undefined;
+          }
+        }, (error) => {
+          if (error.error.code === 'TokenNotFoundException') {
+            return this.verificationCode.setErrors({ incorrect: true });
+          }
+        }
+      );
   }
 
   toggleChangePassword(): void {
@@ -193,7 +215,7 @@ export class MyProfileComponent implements OnInit {
       this.password.enable();
       this.passwordInput.focus();
     } else {
-      this.password.setValue(this.user.password.substring(0, 8));
+      this.password.setValue(this.authService.user.password.substring(0, 8));
       this.password.disable();
     }
   }
@@ -210,9 +232,15 @@ export class MyProfileComponent implements OnInit {
         return;
       }
 
-      this.authService.editUser({ _id: this.authService.user._id, password: this.confirmPassword.value }).subscribe(
+      const {confirmPassword} = this.passwordFormGroup.value;
+
+      this.authService.editUser({ _id: this.authService.user._id, password: confirmPassword }).subscribe(
         (response) => {
-          this.authService.user = response.user;
+          this.password.disable();
+          this.password.setValue('xxxxxxxx');
+          this.password.markAsUntouched();
+          this.confirmPassword.markAsUntouched();
+          this.isConfirmingPassword = undefined;
           this.matSnackBar.openFromComponent(SnackbarComponent, {
             duration: 3000,
             data: 'Passwort geändert'
@@ -223,13 +251,7 @@ export class MyProfileComponent implements OnInit {
             data: 'Fehler: ' + typeof errorRes === 'string' ? errorRes : errorRes.error.message
           });
         }
-      ).add(() => {
-        this.password.disable();
-        this.password.setValue(this.user.password.substring(0, 8));
-        this.password.markAsUntouched();
-        this.confirmPassword.markAsUntouched();
-        this.isConfirmingPassword = undefined;
-      });
+      );
     }
   }
 
@@ -239,9 +261,8 @@ export class MyProfileComponent implements OnInit {
   }
 
   saveChangeTheme(): void {
-    this.authService.editUser({ _id: this.authService.user._id, theme: this.themeService.getActiveTheme().name }).subscribe(
+    this.authService.editUser({ _id: this.authService.user._id, theme: this.theme.value }).subscribe(
       (response) => {
-        this.authService.user = response.user;
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Standard-Theme geändert'
@@ -253,13 +274,5 @@ export class MyProfileComponent implements OnInit {
         });
       }
     );
-  }
-
-  confirmChangedEmail(): void {
-    // TODO: check input token and update user
-    this.authService.confirmRegistration(this.authService.user.email, this.verificationCode.value, this.email.value.toLowerCase())
-      .subscribe(response => {
-        this.isChangingEmail = undefined;
-      });
   }
 }
