@@ -39,6 +39,80 @@
   }
 }
 
-.fe-app-name {
-  z-index: 1;
+fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
+  display: flex;
+  justify-content: left;
+  background: transparent;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 8px 13px;
+  flex-shrink: 0;
+  align-items: center;
+
+  @include from-md {
+    width: 200px;
+  }
+
+  @include to-md {
+    width: 158px;
+  }
+
+  @include to-xs {
+    width: fit-content;
+    height: 36px;
+    align-self: center;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    fill: var(--tertiary-color);
+  }
+
+  .fe-icon-wrapper {
+
+    @include to-xs {
+      width: 28px;
+      margin-right: 0;
+    }
+  }
+
+  .fe-app-name {
+    @include to-xs {
+      display: none;
+    }
+  }
+
+  &.active-route {
+    .fe-icon-wrapper {
+      fill: var(--secondary-color);
+    }
+  }
+
+  &:hover .fe-app-name {
+    letter-spacing: 1px;
+    transition: letter-spacing 500ms ease-out;
+  }
+  &:active .fe-app-name {
+    letter-spacing: .5px;
+  }
+
+  .fe-app-name {
+    @include to-xs {
+      display: none;
+    }
+  }
+}
+
+fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
+  &:hover, &:focus {
+    .fe-icon-wrapper:not(.active-route) {
+      @include from-md {
+        fill: var(--secondary-color);
+        transition: letter-spacing 150ms ease-out;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

@@ -26,71 +26,71 @@ fe-header.fe-header .mat-toolbar {
     height: 60px;
     padding: 0 5px;
   }
+}
 
-  .header-content {
+fe-header.fe-header .mat-toolbar .header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  .page-title {
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 6px 10px;
 
-    .page-title {
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 6px 10px;
+    color: var(--text-color-1);
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
-      color: var(--text-color-1);
-      font-weight: 200;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    @include to-md {
+      flex-shrink: 1;
+    }
 
-      @include to-md {
-        flex-shrink: 1;
+    @include to-xs {
+      margin-left: 3px;
+      padding: 0;
+    }
+
+    @include to-tiny {
+      font-size: .9em;
+    }
+
+    .title {
+      margin-top: 2px;
+      margin-bottom: 0;
+      white-space: pre-line;
+      line-height: 16px;
+      text-align: center;
+
+      @include from-xs {
+        padding: 0 5px;
+        margin-top: 3px;
       }
 
       @include to-xs {
-        margin-left: 3px;
-        padding: 0;
+        padding: 0 3px;
+      }
+    }
+
+    .bracket {
+      font-size: 1.3em;
+      font-family: Nunito-Light, sans-serif;
+      color: var(--primary-color);
+
+      @include to-xs {
+        font-size: 1.2em;
       }
 
-      @include to-tiny {
-        font-size: .9em;
+      &:first-of-type {
+        margin-right: 1px;
       }
 
-      .title {
-        margin-top: 2px;
-        margin-bottom: 0;
-        white-space: pre-line;
-        line-height: 16px;
-        text-align: center;
-
-        @include from-xs {
-          padding: 0 5px;
-          margin-top: 3px;
-        }
-
-        @include to-xs {
-          padding: 0 3px;
-        }
-      }
-
-      .bracket {
-        font-size: 1.3em;
-        font-family: Nunito-Light, sans-serif;
-        color: var(--primary-color);
-
-        @include to-xs {
-          font-size: 1.2em;
-        }
-
-        &:first-of-type {
-          margin-right: 1px;
-        }
-
-        &:last-of-type {
-          margin-left: 1px;
-        }
+      &:last-of-type {
+        margin-left: 1px;
       }
     }
   }
@@ -107,265 +107,81 @@ fe-header.fe-header .mat-toolbar .header-elements-wrapper {
     line-height: normal;
     color: var(--tertiary-color);
     align-items: center;
-
-    .more-menu-btn {
-      margin-left: 0;
-      margin-right: 0;
-      transition: background-color 100ms ease-in-out;
-
-      @include from-xs {
-        &:hover {
-          background-color: var(--button-hover-background);
-          transition: none;
-        }
-      }
-
-      @include to-md {
-        margin-right: 10px;
-      }
-
-      .mat-icon {
-        @include to-xs {
-          font-size: 1.2rem;
-        }
-      }
-    }
-
-    $btn-color: #19bc8b;
-    $btn-shadow: #{adjust-hue($btn-color, 45deg)};
-
-    .dashboard-btn {
-      padding: 8px 14px 6px;
-      margin-left: 10px;
-      margin-right: 20px;
-      outline: none;
-
-      color: var(--tertiary-color);
-      font-size: .8rem;
-      text-align: center;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 1px;
-
-      &.active-route {
-        border-color: var(--secondary-color);
-
-        h1, span {
-          &:before,
-          &:after {
-            opacity: 1;
-            transform: translateY(2px);
-          }
-        }
-      }
-
-      @include to-md {
-        padding: 5px 8px;
-      }
-
-      @include to-xs {
-        display: none;
-      }
-    }
-
-    .sidenav-btn {
-      @include from-xs {
-        margin-right: 15px;
-      }
-
-      @include to-xs {
-        margin-right: 5px;
-      }
-    }
-
-    .sidenav-btn {
-      margin-top: 0;
-
-      .mat-icon {
-        @include to-xs {
-          font-size: 1.2rem;
-        }
-      }
-    }
   }
 }
 
-fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
-  display: flex;
-  justify-content: left;
-  background: transparent;
-  font-size: 1em;
-  text-decoration: none;
-  padding: 8px 13px;
-  flex-shrink: 0;
-  align-items: center;
+fe-header.fe-header .mat-toolbar .header-elements-wrapper .button-container .sidenav-btn {
+  margin-top: 0;
 
-  @include from-md {
-    width: 200px;
-  }
-
-  @include to-md {
-    width: 158px;
+  @include from-xs {
+    margin-right: 15px;
   }
 
   @include to-xs {
-    width: fit-content;
-    height: 36px;
-    align-self: center;
-    padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    fill: var(--tertiary-color);
+    margin-right: 5px;
   }
+}
 
-  .fe-icon-wrapper {
-
-    @include to-xs {
-      width: 28px;
-      margin-right: 0;
-    }
+.sidenav-btn .mat-icon {
+  @include to-xs {
+    font-size: 1.2rem;
   }
+}
 
-  .fe-app-name {
-    @include to-xs {
-      display: none;
-    }
-  }
+fe-header.fe-header .mat-toolbar .header-elements-wrapper .button-container .dashboard-btn {
+  padding: 8px 14px 6px;
+  margin-left: 10px;
+  margin-right: 20px;
+  outline: none;
+
+  color: var(--tertiary-color);
+  font-size: .8rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
 
   &.active-route {
-    .fe-icon-wrapper {
-      fill: var(--secondary-color);
-    }
-  }
+    border-color: var(--secondary-color);
 
-  &:hover .fe-app-name {
-    letter-spacing: 1px;
-    transition: letter-spacing 500ms ease-out;
-  }
-  &:active .fe-app-name {
-    letter-spacing: .5px;
-  }
-
-  .fe-app-name {
-    @include to-xs {
-      display: none;
-    }
-  }
-}
-
-mat-toolbar.header-toolbar.mat-toolbar .fe-logo-wrapper {
-  &:hover, &:focus {
-    .fe-icon-wrapper:not(.active-route) {
-      @include from-md {
-        fill: var(--secondary-color);
-        transition: letter-spacing 150ms ease-out;
+    h1, span {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(2px);
       }
     }
   }
-
-  &:focus {
-    outline: none;
-  }
-}
-
-fe-header.fe-header .mat-toolbar .searchbar-wrapper {
-  margin-left: 20px;
 
   @include to-md {
+    padding: 5px 8px;
+  }
+
+  @include to-xs {
     display: none;
-  }
-
-  mat-spinner.fe-loading-spinner.mat-spinner {
-    $size: 16px;
-    width: $size !important;
-    height: $size !important;
-    margin-right: 6px !important;
-
-    svg {
-      width: $size !important;
-      height: $size !important;
-
-      circle {
-        stroke: var(--tertiary-color);
-        stroke-width: 6px !important;
-      }
-    }
-  }
-
-  $searchbar-height: 33px;
-  .search-bar-form-field {
-    height: $searchbar-height;
-    width: 200px;
-    border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-
-    @include to-lg {
-      width: 180px;
-    }
-
-    @include to-md {
-      display: none;
-    }
-
-    .mat-form-field-outline {
-      opacity: 1;
-      color: var(--grey-3);
-    }
-
-    .mat-form-field-wrapper {
-      .mat-form-field-flex {
-        background: transparent;
-        padding: 0 1rem;
-        height: $searchbar-height;
-        align-items: center;
-        border-top-left-radius: var(--border-radius);
-        border-top-right-radius: var(--border-radius);
-        transition: background-color 100ms ease-in-out;
-      }
-
-      .mat-form-field-flex:hover, &.mat-form-field-should-float {
-        background-color: var(--button-hover-background);
-        transition: none;
-      }
-
-      .mat-form-field-infix {
-        padding: 0;
-        border-top: 0;
-
-        input {
-          font-size: .9rem;
-          vertical-align: middle;
-          color: var(--text-color-1);
-
-          &::placeholder {
-            color: var(--text-color-3);
-            opacity: 1; // firefox adds a lower opacity to the placeholder, reset to 1
-          }
-        }
-      }
-
-      .mat-form-field-suffix {
-        text-align: end;
-
-        .mat-icon {
-          font-size: 1.3rem;
-          line-height: 1.8rem;
-          color: var(--tertiary-color);
-          cursor: pointer;
-        }
-      }
-
-      .mat-form-field-underline {
-        display: none;
-      }
-    }
   }
 }
 
-fe-header.fe-header .mat-toolbar .searchbar-wrapper.is-searching {
-  .search-bar-form-field {
-    border-bottom: 1px solid var(--secondary-color);
+fe-header.fe-header .mat-toolbar .header-elements-wrapper .button-container .more-menu-btn {
+  margin-left: 0;
+  margin-right: 0;
+  transition: background-color 100ms ease-in-out;
+
+  @include from-xs {
+    &:hover {
+      background-color: var(--button-hover-background);
+      transition: none;
+    }
+  }
+
+  @include to-md {
+    margin-right: 10px;
+  }
+
+  .mat-icon {
+    @include to-xs {
+      font-size: 1.2rem;
+    }
   }
 }
 
