@@ -1,8 +1,9 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'fe-pagination-bar',
-  templateUrl: './pagination-bar.component.html'
+  templateUrl: './pagination-bar.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginationBarComponent implements OnInit {
 

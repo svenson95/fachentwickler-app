@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth/auth.service';
@@ -8,7 +8,8 @@ import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'fe-post-link',
-  templateUrl: './post-link.component.html'
+  templateUrl: './post-link.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostLinkComponent implements OnInit {
 

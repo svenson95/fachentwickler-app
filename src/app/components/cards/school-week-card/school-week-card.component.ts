@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 import { SchoolWeek, Weekdays } from '../../../models/school-week';
 import { DataService } from '../../../services/data/data.service';
@@ -6,7 +6,8 @@ import { subjects } from '../../../../data/menu-items';
 
 @Component({
   selector: 'fe-school-week-card',
-  templateUrl: './school-week-card.component.html'
+  templateUrl: './school-week-card.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SchoolWeekCardComponent implements OnInit {
 

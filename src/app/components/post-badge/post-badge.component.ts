@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 import { PostType } from '../../models/post-type';
 import { Post } from '../../models/post';
@@ -7,7 +7,8 @@ import { Matching } from '../../models/matching-piece';
 
 @Component({
   selector: 'fe-post-badge',
-  templateUrl: './post-badge.component.html'
+  templateUrl: './post-badge.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostBadgeComponent implements OnInit {
 

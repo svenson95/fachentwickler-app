@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 import { subjects } from 'src/data/menu-items';
 import { MenuItem } from '../../models/menu-item';
@@ -6,7 +6,8 @@ import { Schedule } from '../../models/schedule';
 
 @Component({
   selector: 'fe-schedule',
-  templateUrl: './schedule.component.html'
+  templateUrl: './schedule.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScheduleComponent implements OnInit {
 
