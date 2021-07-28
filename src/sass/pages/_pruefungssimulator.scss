@@ -18,9 +18,16 @@
     }
 
     .question-image {
+      display: flex;
+      margin: auto;
+
       @include to-md {
         width: 100%;
       }
+    }
+
+    .fe-loading-spinner {
+      margin-block: 80px;
     }
 
     .choice-container {
@@ -33,33 +40,41 @@
       }
 
       .choice-button {
-        cursor: pointer;
+        width: 100%;
+        padding: 6px 8px;
+        background-color: transparent;
         border: none;
         border-radius: var(--border-radius);
-        width: 100%;
-        padding: 10px;
+        cursor: pointer;
         color: var(--text-color-1);
         text-align: left;
-        background: rgba(var(--tertiary-color-rgb), .2);
-        transition: background 100ms ease-in-out;
-
-        &:not(:last-of-type) {
-          margin-bottom: 10px;
-        }
+        transition: background-color 100ms ease-in-out;
 
         &:hover {
-          background: rgba(var(--tertiary-color-rgb), .3);
-          transition: background 100ms ease-in-out;
+          background: rgba(var(--tertiary-color-rgb), .1);
+          transition: none;
         }
 
         &.correct {
-          background-color: rgba(50, 205, 50, .4);
-          transition: background 100ms ease-in-out;
+          background-color: rgba(50, 205, 50, .2);
+          transition: none;
         }
 
         &.wrong {
-          background-color: rgba(255, 0, 0, .4);
-          transition: background 100ms ease-in-out;
+          background-color: rgba(255, 0, 0, .2);
+          transition: none;
+        }
+
+        .button-index {
+          height: 26px;
+          width: 26px;
+          display: inline-flex;
+          background: var(--background-secondary);
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          text-align: center;
+          border: 1px solid black;
         }
       }
     }

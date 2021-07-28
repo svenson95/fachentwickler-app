@@ -15,6 +15,7 @@ import { auditQuestions } from '../../../data/pruefungsfragen';
 export class PruefungsSimulatorComponent implements OnInit {
 
   @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
+  @ViewChild('choiceButton') choiceButton: ElementRef;
 
   AuditState = AuditState;
   auditQuestions = auditQuestions;
@@ -22,6 +23,8 @@ export class PruefungsSimulatorComponent implements OnInit {
   round = 0;
   isLoading: boolean;
   isCorrect: boolean;
+  selectedAnswer: number;
+
   choiceInput: string;
   image: boolean | string = false;
 
@@ -45,31 +48,28 @@ export class PruefungsSimulatorComponent implements OnInit {
     this.state = AuditState.PLAY;
   }
 
-  checkAnswer(event): void {
+  checkAnswer(event, choice): void {
     if (this.isCorrect !== undefined) {
       return;
     }
 
     if (this.currentQuestion.choices) {
-      const selectedAnswer = event.target.innerText;
-      const correctAnswer = Number(this.currentQuestion.answer) - 1;
-      this.isCorrect = selectedAnswer === this.currentQuestion.choices[correctAnswer];
+      this.selectedAnswer = this.currentQuestion.choices.indexOf(choice);
+      const correctAnswer = this.currentQuestion.choices[Number(this.currentQuestion.answer) - 1];
+      this.isCorrect = choice === correctAnswer;
     } else {
       const inputAnswer = this.choiceInput;
       this.isCorrect = inputAnswer === this.currentQuestion.answer;
     }
 
-    event.target.classList.add(this.isCorrect ? 'correct' : 'wrong');
-
     setTimeout(() => {
-      event.target.classList.remove(this.isCorrect ? 'correct' : 'wrong');
-
       if (this.isCorrect) {
         this.nextRound();
         this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
         setTimeout(() => this.slideInWrapper.nativeElement.classList.remove('slide-in-animation'), 400);
       }
       this.isCorrect = undefined;
+      this.selectedAnswer = undefined;
     }, 1000);
   }
 
