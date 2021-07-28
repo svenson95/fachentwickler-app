@@ -2,6 +2,7 @@ import { SchoolWeek } from '../app/models/school-week';
 import { DashboardData } from '../app/models/dashboard-data';
 import { User, UserRole } from '../app/models/user';
 import { Schedule } from '../app/models/schedule';
+import * as moment from 'moment';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const testSchoolWeek: SchoolWeek = {
@@ -17,7 +18,7 @@ export const testSchoolWeek: SchoolWeek = {
 };
 
 const inThreeDays = () => {
-    let day: string | number = new Date().getDate() + 3;
+    let day: string | number = new Date().getDate();
     let month: string | number = new Date().getMonth() + 1;
     const year = new Date().getFullYear();
 
@@ -29,7 +30,15 @@ const inThreeDays = () => {
         month = '0' + month;
     }
 
-    return `${year}-${month}-${day}`;
+    const todayDateString = `${year}-${month}-${day}`;
+    let examDateString = moment(moment(todayDateString).add(3, 'days')).format('YYYY-MM-DD');
+    if (new Date(examDateString).getDay() === 6) {
+      examDateString = moment(moment(examDateString).add(2, 'days')).format('YYYY-MM-DD');
+    } else if (new Date(examDateString).getDay() === 0) {
+      examDateString = moment(moment(examDateString).add(1, 'days')).format('YYYY-MM-DD');
+    }
+
+    return examDateString;
 };
 
 export const testDashboard: DashboardData = {
