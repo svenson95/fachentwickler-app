@@ -2,11 +2,11 @@
   <div class="header-wrapper">
     <a class="fe-logo-wrapper"
        (click)="closeSidenav()"
-       [routerLink]="isMobile.matches ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
+       [routerLink]="isMobile ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
        [ngClass]="{'active-route':
             router.url === '/' ||
             router.url === '/login' ||
-            isMobile.matches && router.url === '/dashboard'
+            isMobile && router.url === '/dashboard'
           }"
     >
       <fe-icon></fe-icon>
@@ -18,9 +18,9 @@
         <span class="bracket">]</span>
       </div>
       <div class="header-elements-wrapper">
-        <fe-searchbar *ngIf="!isMobile.matches"></fe-searchbar>
+        <fe-searchbar *ngIf="!isMobile"></fe-searchbar>
         <div class="button-container">
-          <button class="sidenav-btn" mat-icon-button (click)="sidenav.toggle()" *ngIf="isMobile.matches">
+          <button class="sidenav-btn" mat-icon-button (click)="sidenavService.toggle()" *ngIf="isMobile">
             <mat-icon>menu</mat-icon>
           </button>
           <a class="fe-text-button dashboard-btn"
@@ -29,7 +29,7 @@
           >
             <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
           </a>
-          <fe-header-menu [isMobile]="isMobile"></fe-header-menu>
+          <fe-header-menu></fe-header-menu>
         </div>
       </div>
     </div>

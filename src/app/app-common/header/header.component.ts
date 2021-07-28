@@ -1,50 +1,44 @@
-import { Component, HostListener, Input, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { MatMenuTrigger } from '@angular/material/menu';
 import { delay } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
-import { UserRole } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
-import { ThemeService } from '../../services/theme.service';
-
-import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/logout-dialog.component';
-import { ImageManagerDialogComponent } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.component';
+import { MediaQueryService } from '../../services/media-query.service';
 
 @Component({
   selector: 'fe-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   isLoading: boolean;
-
-  @Input() isMobile;
-  @Input() sidenav;
-  @ViewChild(MatMenuTrigger) menuTrigger: MatMenuTrigger;
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event): void {
-    // on mobile mat-menu should close on scroll
-    this.menuTrigger.closeMenu();
-  }
+  isMobile: boolean;
+  isMobile$: Subscription;
 
   constructor(public router: Router,
               public headerService: HeaderService,
               public authService: AuthService,
               public loadingService: LoadingService,
-              private sidenavService: SidenavService
+              public sidenavService: SidenavService,
+              private mediaQueryService: MediaQueryService
   ) {
-    this.loadingService.loading$.pipe(delay(0)).subscribe(
-      (status: boolean) => this.isLoading = status
-    );
+    this.loadingService.loading$.pipe(delay(0)).subscribe(value => this.isLoading = value);
+  }
+
+  ngOnInit(): void {
+    this.isMobile$ = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
+  }
+
+  ngOnDestroy(): void {
+    this.isMobile$.unsubscribe();
   }
 
   closeSidenav(): void {
-    if (this.sidenavService.isOpen() && this.isMobile.matches) {
+    if (this.sidenavService.isOpen() && this.isMobile) {
       this.sidenavService.close();
     }
   }

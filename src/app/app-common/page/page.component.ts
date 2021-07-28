@@ -1,11 +1,12 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
+import { Subscription } from 'rxjs';
 
 import { SidenavService } from '../../services/sidenav.service';
 import { ThemeService } from '../../services/theme.service';
+import { MediaQueryService } from '../../services/media-query.service';
 
 /** @title Responsive sidenav */
 @Component({
@@ -14,32 +15,27 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  /* -- Component template variables -- */
   @ViewChild('sidenav') public sidenav: MatSidenav;
   @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
-  /* -- Media query variables -- */
-  isMobile: MediaQueryList;
-  IS_MOBILE_LISTENER: () => void;
+  isMobile: boolean;
+  isMobile$: Subscription;
 
-  constructor(private breakpointObserver: BreakpointObserver,
-              private changeDetectorRef: ChangeDetectorRef,
-              private media: MediaMatcher,
-              private sidenavService: SidenavService,
+  constructor(private sidenavService: SidenavService,
               public themeService: ThemeService,
               public router: Router,
               private elementRef: ElementRef,
-              private renderer: Renderer2
-  ) {
-  }
+              private renderer: Renderer2,
+              private mediaQueryService: MediaQueryService
+  ) {}
 
   ngOnInit(): void {
-    this.setupComponent();
+    this.isMobile$ = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
   }
 
   ngOnDestroy(): void {
-    this.isMobile.removeListener(this.IS_MOBILE_LISTENER);
+    this.isMobile$.unsubscribe();
     this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
       .removeEventListener('scroll', this.onScroll.bind(this), true);
   }
@@ -48,7 +44,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
     this.sidenavService.setSidenav(this.sidenav);
 
     const body = this.elementRef.nativeElement.querySelector('.fe-body');
-    if (this.isMobile.matches && body) {
+    if (this.isMobile && body) {
       body.addEventListener('scroll', this.onScroll.bind(this), true);
     } else {
       this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
@@ -58,7 +54,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   onScroll(event: any): any {
     if (!this.isCurriculumPage()) {
-      if (this.isMobile.matches) {
+      if (this.isMobile) {
         const container = this.elementRef.nativeElement.querySelector('.fe-body');
         if (container.scrollTop > 100  && !container.classList.contains('scrolled')) {
           container.classList.add('scrolled');
@@ -76,20 +72,8 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-  /* -- Component Functions -- */
-  setupComponent(): void {
-    this.isMobile = this.media.matchMedia('(max-width: 820px)');
-
-    this.IS_MOBILE_LISTENER = () => this.changeDetectorRef.detectChanges();
-    this.isMobile.addListener(this.IS_MOBILE_LISTENER);
-  }
-
-  showActions(): void {
-    this.actionMenu.openMenu();
-  }
-
   onSideMenuToggled(isOpen: boolean): void {
-    if (isOpen && this.isMobile.matches) {
+    if (isOpen && this.isMobile) {
       this.renderer.addClass(document.body, 'scroll-locked');
     } else {
       this.renderer.removeClass(document.body, 'scroll-locked');

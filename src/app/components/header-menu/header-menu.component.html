@@ -2,7 +2,7 @@
   <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu class="more-menu" #menu="matMenu">
-  <a class="menu-btn" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile.matches"
+  <a class="menu-btn" mat-menu-item routerLink="dashboard" *ngIf="authService.isAuthenticated && isMobile"
      [disabled]="router.url.startsWith('/dashboard')"
   >
     <mat-icon>dashboard</mat-icon>
@@ -26,7 +26,7 @@
     <mat-icon>feedback</mat-icon>
     <span class="label">Feedback</span>
   </a>
-  <button class="menu-btn" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile.matches && authService.user?.role === UserRole.ADMIN">
+  <button class="menu-btn" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile && authService.user?.role === UserRole.ADMIN">
     <!--            *ngIf="authService.user.role === UserRole.ADMIN"-->
     <mat-icon>perm_media</mat-icon>
     <span class="label">Image-Manager</span>
