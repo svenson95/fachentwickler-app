@@ -7,7 +7,7 @@ import { HeaderService } from '../../services/header.service';
 import { subjects } from '../../../data/menu-items';
 
 @Component({
-  selector: 'fe-quiz',
+  selector: 'fe-matching',
   templateUrl: './matching.component.html'
 })
 export class MatchingComponent implements OnInit {
