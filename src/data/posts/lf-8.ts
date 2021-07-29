@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF8_POSTS: Post[] = [
+export const LF8_POSTS: PostArticle[] = [
     {
         "url": "uebertragungstechnik/produktpolitik_und_marketing_1",
         "title": "Produktpolitik & Marketing (1) (ENTWURF)",

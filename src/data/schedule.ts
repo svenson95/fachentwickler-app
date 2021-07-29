@@ -2,8 +2,8 @@ import { Schedule } from '../app/models/schedule';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const schedule: Schedule = {
-  "weekBegin": '2021-06-07',
-  "weekEnd": '2021-06-11',
+  "weekBegin": '2021-08-23',
+  "weekEnd": '2021-08-27',
   "days": [
     {
       "day": '0',

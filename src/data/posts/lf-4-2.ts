@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF4_2_POSTS: Post[] = [
+export const LF4_2_POSTS: PostArticle[] = [
     {
         "url": "einfache_it_systeme/potentielle_energie",
         "title": "Potentielle Energie (ENTWURF)",

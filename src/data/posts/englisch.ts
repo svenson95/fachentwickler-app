@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const ENGLISCH_POSTS: Post[] = [
+const ENGLISH_POSTS: PostArticle[] = [
     {
         "url": "basics/introductions",
         "title": "Introductions",

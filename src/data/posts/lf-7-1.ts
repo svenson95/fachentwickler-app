@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF7_1_POSTS: Post[] = [
+export const LF7_1_POSTS: PostArticle[] = [
     {
         "url": "e_technik/einfuehrung",
         "title": "Einführung",
@@ -42,17 +42,35 @@ export const LF7_1_POSTS: Post[] = [
     },
     {
         "url": "e_technik/schaltungen_widerstaende_berechnen",
+        "_id": "5f6f661b819cd4bad66c53fb",
+        "topicId": "6056854807c61731b8d162ec",
         "title": "Schaltungen - Widerstände berechnen",
         "description": "Mitschrift vom 01.09.2020",
         "subject": "lf-7-1",
         "type": "tasks",
         "lessonDate": "2020-09-01",
-        "lastUpdate": "2020-09-26",
+        "lastUpdate": "2021-07-04",
         "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Bauteile, wie zum Beispiel der Widerstand oder der Kondensator, lassen sich unterschiedlich in einen Stromkreis einbauen. Einmal kann man sie zum Beispiel so einbauen, dass die Teile in Reihe, also hintereinander geschaltet sind. Das wäre dann die sogenannte Reihenschaltung. Ebenfalls kannst du die Bauteile so einbauen, dass sie im Stromkreis zueinander parallel sind, also sich gegenüber liegen. Das wäre die Parallelschaltung."
+            },
+            {
+                "type": "subtitle",
                 "content": "Reihenschaltung"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Reihenschaltung bleibt der Strom gleich, er fließt zuerst durch den ersten Widerstand und dann direkt zum nächsten. Eine Reihenschaltung ist eine Hintereinanderschaltung zweier oder mehrerer Bauelemente in einer Schaltung, dass einen Strompfad bildet. Zwei Bauelemente sind in Reihe geschaltet, wenn deren Verbindung keine Abzweigung aufweist."
+            },
+            {
+                "type": "text",
+                "content": ""
             },
             {
                 "type": "image",
@@ -63,17 +81,28 @@ export const LF7_1_POSTS: Post[] = [
                 "content": "",
                 "list": [
                     "<b>Strom I überall gleich</b>",
+                    "I<sub>ges</sub> = I<sub>1</sub> = I<sub>2</sub> = I<sub>3</sub>",
+                    "<b>Spannung U nicht überall gleich</b>",
+                    "U<sub>ges</sub> = U<sub>1</sub> + U<sub>2</sub> + U<sub>3</sub>",
+                    "<b>Widerstand R nicht überall gleich</b>",
                     "R<sub>ges</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub>",
                     "Addition aller Widerstände ergibt Gesamtwiderstand",
                     "Umso kleiner der Widerstand desto größer der Strom",
-                    "U = U<sub>1</sub> + U<sub>2</sub> + U<sub>3</sub>",
                     "Am größten fällt die größte Spannung ab",
                     "Spannungen verhalten sich wie die dazugehörigen Widerstände"
                 ]
             },
             {
-                "type": "title",
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
                 "content": "Parallelschaltung"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Parallelschaltung teilt sich der Strom auf, die Spannung ist überall gleich groß. Die Spannung ist konstant und die Stromstärke lässt sich durch die Aufteilung zu einer Gesamtstromstärke aufaddieren."
             },
             {
                 "type": "image",
@@ -83,10 +112,11 @@ export const LF7_1_POSTS: Post[] = [
                 "type": "list",
                 "content": "",
                 "list": [
-                    "U = U<sub>1</sub> = U<sub>2</sub> = U<sub>3</sub>",
+                    "<b>Strom I nicht überall gleich</b>",
+                    "I<sub>ges</sub> = I<sub>1</sub> + I<sub>2</sub> + I<sub>3</sub>",
                     "<b>Spannung U überall gleich</b>",
-                    "I = I<sub>1</sub> + I<sub>2</sub> + I<sub>3</sub>",
-                    "I nicht überall gleich",
+                    "U<sub>ges</sub> = U<sub>1</sub> = U<sub>2</sub> = U<sub>3</sub>",
+                    "<b>Widerstand R überall gleich</b>",
                     "1 / R<sub>ges</sub> = (1 / R<sub>1</sub>) + (1 / R<sub>2</sub>) + (1 / R<sub>3</sub>)",
                     "Geringster Widerstand / kleinster Widerstand hat den größten Strom",
                     "Gesamtwiderstand ist kleiner als der kleinste Teilwiderstand"
@@ -98,7 +128,7 @@ export const LF7_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Taschenrechner Funktion: x<sup>-1</sup> Taste → 1000<sub>-1</sub> + 100<sub>-1</sub> + 10<sub>-1</sub> = x<sub>-1</sub> = <u>9,009 Ω</u>"
+                "content": "Taschenrechner Kehrwert-Funktion (1/x bzw. x<sup>-1</sup> Taste) für Berechnungen von Parallelschaltungen. <br/> Beispiel: 1000<sub>-1</sub> + 100<sub>-1</sub> + 10<sub>-1</sub> = 0,111<sub>-1</sub> = <u>9,009 Ω</u>"
             },
             {
                 "type": "line",
@@ -108,37 +138,44 @@ export const LF7_1_POSTS: Post[] = [
                 "type": "title",
                 "content": "Ohmsches Gesetz"
             },
+          {
+            "type": "subtitle",
+            "content": "Formeln"
+          },
             {
                 "type": "text",
-                "content": "U = R X I <br/> R = U / I <br/> I = U / R"
+                "content": "Spannung U = R x I <br/> Widerstand R = U / I <br/> Stromstärke I = U / R"
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe - Komplexe Schaltungen umstellen"
+                "content": "<span class='list-number'>1</span> Aufgabe - Komplexe Schaltungen umstellen"
             },
             {
                 "type": "text",
-                "content": "Bei komplexeren Schaltungen können diese auch in mehrere Teilschaltungen aufgeteilt werden, dies macht zum besseren Verständnis der ganzen Schaltung."
-            },
-            {
-                "type": "subtitle",
-                "content": "Umstellung 1"
+                "content": "Komplexere Schaltungen können auch in mehrere Teilschaltungen aufgeteilt werden, dies führt zum besseren Verständnis der ganzen Schaltung. Stelle die nachfolgende Schaltung so um, dass sie für den Laien besser nachvollziehbar ist."
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9cf559df30501b5d0d61"
+                "content": "http://159.65.105.150:3000/images/60d8b4bedcb27d3620a11249",
+                "size": "m"
             },
             {
-                "type": "subtitle",
-                "content": "Umstellung 2"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9cfd59df30501b5d0d63"
-            },
-            {
-                "type": "text",
-                "content": "12 und 8 in Reihe <br/> 12 und 8 zu 30 parallel <br/> 12 und 8 und 30 zu 5 in Reihe"
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
+                                        {
+                        "type": "subtitle",
+                        "content": "Umstellungsmöglichkeit"
+                    },
+                    {
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/5f6f9cfd59df30501b5d0d63"
+                    },
+                    {
+                        "type": "text",
+                        "content": "12 und 8 in Reihe <br/> 12 und 8 zu 30 parallel <br/> 12 und 8 und 30 zu 5 in Reihe"
+                    }
+                ]
             },
             {
                 "type": "line",
@@ -146,61 +183,63 @@ export const LF7_1_POSTS: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 2 - Widerstand & Strom berechnen"
+                "content": "<span class='list-number'>2</span> Aufgabe - Widerstand & Strom berechnen"
             },
             {
                 "type": "text",
                 "content": "Wie groß ist der Gesamtwiderstand und Gesamtstrom?"
             },
             {
-                "type": "list",
-                "content": "",
-                "ordered": true,
-                "list": [
-                    "12 + 8 = 20 Ω",
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60d8b4bedcb27d3620a11249",
+                "size": "l"
+            },
+            {
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
                     {
-                        "content": "20<sub>-1</sub> + 30<sub>-1</sub> = 0,0833 Ω",
-                        "sublist": [
-                            "Ergebnis<sub>-1</sub> = 12 Ω"
+                        "type": "subtitle",
+                        "content": "Gesamtwiderstand"
+                    },
+                    {
+                        "type": "list",
+                        "content": "",
+                        "ordered": true,
+                        "list": [
+                            "Reihenschaltung: 12 + 8 = 20 Ω",
+                            "Parallelschaltung: 20<sub>-1</sub> + 30<sub>-1</sub> = 0,0833 | 0,0833<sub>-1</sub> = 12 Ω",
+                            "Reihenschaltung: 12 + 5 = 17 Ω",
+                            "Parallelschaltung: 17<sub>-1</sub> + 20<sub>-1</sub> = 0,10 | 0,10<sub>-1</sub> = 9,189 Ω",
+                            "Reihenschaltung: 9,189 Ω + 14 = 23,1891 Ω",
+                            "R<sub>ges</sub> = <u>23,1891 Ω</u>"
                         ]
                     },
-                    "12 Ω + 5 = 17 Ω",
                     {
-                        "content": "17<sub>-1</sub> + 20<sub>-1</sub> = 0,10 Ω",
-                        "sublist": [
-                            "Ergebnis Kehrwert nehmen = 9,189 Ω"
-                        ]
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/60d8b4d0dcb27d3620a1124b"
                     },
-                    "9,189 Ω + 14 = 23,1891 Ω"
+                    {
+                        "type": "subtitle",
+                        "content": "Gesamtstrom"
+                    },
+                    {
+                        "type": "text",
+                        "content": "I<sub>ges</sub> = U / R<sub>ges</sub> <br/> I<sub>ges</sub> = 24 V / 23,19 Ω = <u>1,03 A</u>"
+                    }
                 ]
             },
             {
-                "type": "text",
-                "content": "I = U / R<sub>ges</sub> = 24 V / 23,19 Ω = <u>1,03 A</u>"
-            },
-            {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 3 - ?"
+                "content": "<span class='list-number'>3</span> Aufgabe - Widerstand berechnen & Schaltung umstellen"
             },
             {
                 "type": "text",
-                "content": "14 Ω = R x I = 1,03 x 14 = <u>14,42 V</u>"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Aufgabe 4 - Widerstand berechnen & Schaltung umstellen"
-            },
-            {
-                "type": "text",
-                "content": "Wie groß ist der Gesamtwiderstand?"
+                "content": "Berechne den Gesamtwiderstand dieser gemischten Schaltung"
             },
             {
                 "type": "image",
@@ -211,85 +250,71 @@ export const LF7_1_POSTS: Post[] = [
                 "content": "R<sub>1</sub> = 80 Ω <br/> R<sub>2</sub> = 60 Ω <br/> R<sub>3</sub> = 40 Ω <br/> R<sub>4</sub> = 120 Ω <br/> R<sub>5</sub> = 120 Ω <br/> R<sub>6</sub> = 160 Ω <br/> R<sub>7</sub> = 180 Ω <br/> R<sub>8</sub> = 200 Ω"
             },
             {
-                "type": "text",
-                "content": "Fehler: Erst R4 dann R3 dazurechnen, Rechnung korrigieren!"
+                "type": "line",
+                "content": "<hr/>"
             },
             {
-                "type": "list",
-                "content": "",
-                "ordered": true,
-                "list": [
-                    "R<sub>6</sub> + R<sub>8</sub> = 160 + 200 = 360 Ω",
-                    "(R<sub>6</sub> + R<sub>8</sub>) + R<sub>5</sub> = 360<sub>-1</sub> + 120<sub>-1</sub> <br/> = 0,011<sub>-1</sub> <br/> = 90 Ω",
-                    "(R<sub>6</sub> + R<sub>8</sub> + R<sub>5</sub>) + R<sub>7</sub> = 90<sub>-1</sub> + 180<sub>-1</sub> <br/> = 0,016<sub>-1</sub> <br/> = 60 Ω",
-                    "(R<sub>6</sub> + R<sub>8</sub> + R<sub>5</sub> + R<sub>7</sub>) + R<sub>3</sub> = 60<sub>-1</sub> + 40<sub>-1</sub> <br/> = 0,042<sub>-1</sub> <br/> = 24 Ω",
-                    "(R<sub>6</sub> + R<sub>8</sub> + R<sub>5</sub> + R<sub>7</sub> + R<sub>3</sub>) + R<sub>4</sub> = 24 + 120 <br/> = 144 Ω",
-                    "(R<sub>6</sub> + R<sub>8</sub> + R<sub>5</sub> + R<sub>7</sub> + R<sub>3</sub> + R<sub>4</sub>) + R<sub>2</sub> + R<sub>1</sub> = 144 + 60 + 80 <br/> = <u>284 Ω</u>"
+                "type": "subtitle",
+                "content": "Rechnung"
+            },
+            {
+                "type": "answer-group",
+                "hidden": true,
+                "elements": [
+                    {
+                        "type": "text",
+                        "content": "(R<sub>1</sub> + R<sub>2</sub>) + (R<sub>6</sub> + R<sub>8</sub>) <br/> = (80 + 60) + (160 + 200) <br/> = 140 Ω + 360 Ω = 500 Ω"
+                    },
+                    {
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/5f6f9d1359df30501b5d0d67"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(R<sub>6/8</sub>) + R<sub>5</sub> + R<sub>7</sub> = 360<sub>-1</sub> + 120<sub>-1</sub> + 180<sub>-1</sub> <br/> = 0,016<sub>-1</sub> <br/> = 60 Ω"
+                    },
+                    {
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/60d8a5bfdcb27d3620a11241",
+                        "size": "m"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(R<sub>5/6/7/8</sub>) + R<sub>4</sub> = 60 + 120 <br/> = 180 Ω"
+                    },
+                    {
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/5f6f9d2159df30501b5d0d6b"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(R<sub>4/5/6/7/8</sub>) + R<sub>3</sub> = 180<sub>-1</sub> + 40<sub>-1</sub> <br/> = 0,030555555<sub>-1</sub> <br/> = 32,72727273 Ω"
+                    },
+                    {
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/60d8a5d1dcb27d3620a11243"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(R<sub>1/2</sub> + R<sub>3/4/5/6/7/8</sub>) = 140 + 32,72727273 <br/> = <u>172,72727273 Ω</u>"
+                    },
+                    {
+                        "type": "image",
+                        "content": "http://159.65.105.150:3000/images/5f6f9d2e59df30501b5d0d6f",
+                        "size": "m"
+                    }
                 ]
             },
             {
-                "type": "subtitle",
-                "content": "1."
+                "type": "line",
+                "content": "<hr/>"
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9d1359df30501b5d0d67"
-            },
-            {
-                "type": "subtitle",
-                "content": "2."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9d1959df30501b5d0d69"
-            },
-            {
-                "type": "text",
-                "content": "I3 = U3 / R3 = 20,82 / 40 = <u>0,52 A</u>"
-            },
-            {
-                "type": "subtitle",
-                "content": "3."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9d2159df30501b5d0d6b"
-            },
-            {
-                "type": "text",
-                "content": "U<sub>1/2</sub> = I x R<sub>ges</sub> = 89,18 V"
-            },
-            {
-                "type": "text",
-                "content": "U3 = U<sub>ges</sub> - U<sub>1/2</sub> = 20,82 V"
-            },
-            {
-                "type": "subtitle",
-                "content": "4."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9d2759df30501b5d0d6d"
-            },
-            {
-                "type": "text",
-                "content": "I = U / R<sub>ges</sub> = <u>0,64 A</u>"
-            },
-            {
-                "type": "subtitle",
-                "content": "5."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f6f9d2e59df30501b5d0d6f"
-            },
-            {
-                "type": "text",
-                "content": "R<sub>ges</sub> = 172,73 Ω"
-            },
-            {
-                "type": "text",
-                "content": "I<sub>pu</sub> = I<sub>ges</sub> - I<sub>3</sub> = 0,12 A <br/> U<sub>p</sub> = U<sub>5</sub> = I<sub>pu</sub> x R<sub>p</sub> = 7,2 V"
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Reihenschaltung und Parallelschaltung | 27.06.2021 | <a href='https://studyflix.de/elektrotechnik/reihen-und-parallelschaltung-260'>https://studyflix.de/elektrotechnik/reihen-und-parallelschaltung-260</a>"
+                ]
             }
         ]
     },
@@ -558,43 +583,128 @@ export const LF7_1_POSTS: Post[] = [
     {
         "url": "e_technik/grundlagen_der_uebertragungstechnik_1",
         "_id": "603eb6efb0c00c20f201d122",
+        "topicId": "6056854807c61731b8d162ec",
         "title": "Aufgaben - Grundlagen der Übertragungstechnik",
         "description": "Mitschrift vom 02.03.2021",
         "subject": "lf-7-1",
         "type": "tasks",
         "lessonDate": "2021-03-02",
-        "lastUpdate": "2021-03-19",
+        "lastUpdate": "2021-06-29",
         "schoolWeek": "22",
         "elements": [
-            {
-                "type": "title",
-                "content": "LF-7-1"
-            },
             {
                 "type": "title",
                 "content": "Aufgaben"
             },
             {
-                "type": "list",
-                "content": "",
-                "list": [
-                    "Worin besteht das Prinzip der elektrischen Nachrichten-Übertragungstechnik?",
-                    "Formulieren Sie in Stichworten die Aufgaben der Nachrichtentechnik.",
-                    "Welche Aufgabe hat das Signal in der Nachrichten-Übertragungstechnik?",
-                    "Warum wird bei jedem Übertragungssystem ein Sender benötigt?",
-                    "In welchem Verhältnis müssen Nutzsignal und Störsignal stehen, um eine möglichst hohe Qualität einer Übertragung zu bewirken? Begründen Sie Ihre Antwort!",
-                    "Beschreiben Sie die wesentlichen Unterschiede zwischen den verschiedenen Übertragunsarten?"
-                ]
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>1</span>"
             },
             {
                 "type": "text",
-                "content": "<a href='http://159.65.105.150/lf-7/e_technik/grundlagen_der_uebertragungstechnik_2'>Aufgabe gelöst? Zur Musterlösung</a>"
+                "content": "<b>Worin besteht das Prinzip der elektrischen Nachrichtenübertragungstechnik?</b>"
+            },
+            {
+                "type": "text",
+                "content": "Übertragung von Nachrichten über Entfernungen mit Hilfe elektrischer und magnetischer Größen",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>2</span>"
+            },
+            {
+                "type": "text",
+                "content": "<b>Formulieren Sie in Stichworten die Aufgaben der Nachrichtentechnik</b>"
+            },
+            {
+                "type": "text",
+                "content": "<u>Übertragung</u>, <u>Verarbeitung</u> und <u>Speicherung</u> von Signalen.",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>3</span>"
+            },
+            {
+                "type": "text",
+                "content": "<b>Welche Aufgabe hat das Signal in der Nachrichtenübertragungstechnik</b>"
+            },
+            {
+                "type": "text",
+                "content": "Das Signal ist die physikalische Repräsentation der Information, welche die Nachrichten beinhaltet",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>4</span>"
+            },
+            {
+                "type": "text",
+                "content": "<b>Warum wird bei jedem Übertragungssystem ein Sender benötigt?</b>"
+            },
+            {
+                "type": "text",
+                "content": "Er dient zur Anpassung des Signals an die Eigenschaften des Übertragungskanals. Dient zur Aufnahme, Umwandlung, Modulation, Codierung und Verarbeitung",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>5</span>"
+            },
+            {
+                "type": "text",
+                "content": "<b>In welchem Verhältnis müssen Nutzsignal und Störsignal stehen, um eine möglichst hohe Qualität einer Übertragung zu bewirken? Begründen Sie Ihre Antwort!</b>"
+            },
+            {
+                "type": "text",
+                "content": "Das Störsignal soll gegenüber dem Nutzsignal möglichst klein sein, da nur das Nutzsignal für die Nachrichtensenke interessante Nachrichten enthält",
+                "hidden": true
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe <span class='list-number'>6</span>"
+            },
+            {
+                "type": "text",
+                "content": "<b>Beschreiben Sie die wesentlichen Unterschiede zwischen den verschiedenen Übertragungsarten</b>"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "hidden": true,
+                "list": [
+                    "Geführte Übertragung",
+                    "Ungeführte Übertragung",
+                    "Materielle Übertragung"
+                ]
             }
         ]
     },
     {
         "url": "e_technik/grundlagen_der_uebertragungstechnik",
         "_id": "60428445b0c00c20f201d168",
+        "topicId": "6056854807c61731b8d162ec",
         "title": "Grundlagen der Übertragungstechnik",
         "description": "Mitschrift vom 02.03.2021",
         "subject": "lf-7-1",
@@ -732,55 +842,6 @@ export const LF7_1_POSTS: Post[] = [
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/60a2e09163931e24491ca43b",
                 "size": "s"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "list",
-                "content": "Lösungen der Aufgaben",
-                "list": [
-                    {
-                        "content": "Frage: <b>Worin besteht das Prinzip der elektrischen Nachrichtenübertragungstechnik?</b>",
-                        "sublist": [
-                            "Übertragung von Nachrichten über Entfernungen mit Hilfe elektrischer und magnetischer Größen"
-                        ]
-                    },
-                    {
-                        "content": "Frage: <b>Formulieren Sie in Stichworten die Aufgaben der Nachrichtentechnik</b>",
-                        "sublist": [
-                            "<u>Übertragung</u>, <u>Verarbeitung</u> und <u>Speicherung</u> von Signalen."
-                        ]
-                    },
-                    {
-                        "content": "Frage: <b>Welche Aufgabe hat das Signal in der Nachrichtenübertragungstechnik</b>",
-                        "sublist": [
-                            "Das Signal ist die physikalische Repräsentation der Information, welche die Nachrichten beinhaltet"
-                        ]
-                    },
-                    {
-                        "content": "Frage: <b>Warum wird bei jedem Übertragungssystem ein Sender benötigt?</b>",
-                        "sublist": [
-                            "Er dient zur Anpassung des Signals an die Eigenschaften des Übertragungskanals",
-                            "Zur Aufnahme, Umwandlung, Modulation, Codierung und Verarbeitung"
-                        ]
-                    },
-                    {
-                        "content": "Frage: <b>In welchem Verhältnis müssen Nutzsignal und Störsignal stehen, um eine möglichst hohe Qualität einer Übertragung zu bewirken? Begründen Sie Ihre Antwort!</b>",
-                        "sublist": [
-                            "Das Störsignal soll gegenüber dem Nutzsignal möglichst klein sein, da nur das Nutzsignal für die Nachrichtensenke interessante Nachrichten enthält"
-                        ]
-                    },
-                    {
-                        "content": "Frage: <b>Beschreiben Sie die wesentlichen Unterschiede zwischen den verschiedenen Übertragungsarten</b>",
-                        "sublist": [
-                            "Geführte Übertragung",
-                            "Ungeführte Übertragung",
-                            "Materielle Übertragung"
-                        ]
-                    }
-                ]
             },
             {
                 "type": "line",
@@ -1795,7 +1856,7 @@ export const LF7_1_POSTS: Post[] = [
         ]
     },
     {
-        "url": "e_technik/test",
+        "url": "e_technik/leistungskontrolle_uebertragungstechnik_grundlagen",
         "_id": "60a412f459a0005b1c634b17",
         "topicId": "6056854807c61731b8d162ec",
         "title": "Leistungskontrolle - Übertragungstechnik Grundlagen",
@@ -1803,7 +1864,7 @@ export const LF7_1_POSTS: Post[] = [
         "subject": "lf-7-1",
         "type": "test",
         "lessonDate": "2021-05-18",
-        "lastUpdate": "2021-05-18",
+        "lastUpdate": "2021-06-29",
         "schoolWeek": "25",
         "elements": [
             {
@@ -1837,6 +1898,28 @@ export const LF7_1_POSTS: Post[] = [
             {
                 "type": "subtitle",
                 "content": "<span class='list-number'>4</span> Was versteht man unter Terminierung?"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            }
+        ]
+    },
+    {
+        "url": "e_technik/pegeldiagramme",
+        "_id": "60dae94d783bfa623e8bb392",
+        "topicId": "6056854807c61731b8d162ec",
+        "title": "Pegel-Diagramme",
+        "description": "Mitschrift vom 08.06.2021",
+        "subject": "lf-7-1",
+        "type": "article",
+        "lessonDate": "2021-06-08",
+        "lastUpdate": "2021-06-29",
+        "schoolWeek": "26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
             },
             {
                 "type": "text",

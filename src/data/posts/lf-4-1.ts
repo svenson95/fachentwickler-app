@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF4_1_POSTS: Post[] = [
+export const LF4_1_POSTS: PostArticle[] = [
     {
         "url": "einfache_it_systeme/grundbegriffe_der_elektronen",
         "title": "Grundbegriffe der Elektronen - ENTWURF",
@@ -1140,12 +1140,13 @@ export const LF4_1_POSTS: Post[] = [
     },
     {
         "url": "grundlagen_e_technik/test",
+        "_id": "5f429ad5165d0ab470bc57d6",
         "title": "Leistungskontrolle - Grundlagen E-Technik",
         "description": "Test vom 26.09.2019",
         "subject": "lf-4-1",
         "type": "test",
         "lessonDate": "2019-09-26",
-        "lastUpdate": "2020-12-22",
+        "lastUpdate": "2021-07-27",
         "schoolWeek": "3",
         "elements": [
             {
@@ -1162,6 +1163,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Elektrische Ladung kann zum Beispiel durch Reibung entstehen. <br/> Hat ein Atom einen Protonenüberschuss dann ist es positiv geladen. <br/> Bei einem Elektronenüberschuss ist es negativ geladen."
             },
             {
@@ -1171,6 +1173,7 @@ export const LF4_1_POSTS: Post[] = [
             {
                 "type": "table",
                 "content": "",
+                "hidden": true,
                 "rows": [
                     {
                         "type": "default",
@@ -1202,7 +1205,109 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Man kann das Potenzial mit der Spannung vergleichen, weil das Potenzial die potentielle Energie eines beliebigen Punktes in einem elektrischen Feld beschreibt."
+            },
+            {
+                "type": "text",
+                "content": "b) Ermitteln Sie die Werte für die Punkte 1-4 aus dem Liniendiagramm möglichst genau und tragen Sie diese in die Tabelle ein:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60ffde820290861fbb3d476c"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Punkt" },
+                            { "align": "middle", "content": "Ω in V" },
+                            { "align": "middle", "content": "s in cm" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "hidden": true,
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Punkt" },
+                            { "align": "middle", "content": "Ω in V" },
+                            { "align": "middle", "content": "s in cm" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "1,5" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "22" },
+                            { "align": "middle", "content": "3,5" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "27" },
+                            { "align": "middle", "content": "4,5" }
+                        ]
+                    }
+                ]
             },
             {
                 "type": "line",
@@ -1218,6 +1323,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Die <u>Elektrische Spannung liegt zwischen zwei ungleichen Ladungen an</u>, sie ist die Ursache für den Strom."
             },
             {
@@ -1226,6 +1332,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Gleichspannung = U <br/> Wechselspannung = u"
             },
             {
@@ -1234,6 +1341,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Volt"
             },
             {
@@ -1250,6 +1358,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "<u>Die in einer Ladung fließenden Elektronen sind der Strom.</u>"
             },
             {
@@ -1258,6 +1367,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Gleichstrom = I <br/> Wechselstrom = i"
             },
             {
@@ -1266,6 +1376,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Ampere"
             },
             {
@@ -1282,6 +1393,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "In der <b>technischen Stromrichtung</b> geht man davon aus, dass die Flußrichtung <u>vom Plus zum Minus Pol</u> geht. Messgeräte unterstützen diese Annahme."
             },
             {
@@ -1290,6 +1402,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "In der <b>physikalischen Stromrichtung</b> fließt der Strom <u>vom Minus zum Plus Pol</u>. So fließen die Elektronen in der Realität."
             },
             {
@@ -1301,8 +1414,30 @@ export const LF4_1_POSTS: Post[] = [
                 "content": "<span class='list-number'>6</span> Spannungsarten identifizieren"
             },
             {
+                "type": "text",
+                "content": "Ordnen Sie die Begriffe den jeweiligen Spannungs-/Zeit-Diagramm zu! Verwenden Sie dazu die Nummerierung aus der folgenden Liste!"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "ordered": true,
+                "list": [
+                    "Rechteckspannung",
+                    "Sinusspannung",
+                    "Gleichspannung",
+                    "3-Phasen-Wechselspannung",
+                    "Sägezahnspannung",
+                    "Dreieckspannung"
+                ]
+            },
+            {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3e6543e558d35d3d9022e"
+                "content": "http://159.65.105.150:3000/images/60ffdc710290861fbb3d4768"
+            },
+            {
+                "type": "image",
+                "hidden": true,
+                "content": "http://159.65.105.150:3000/images/60ffdc880290861fbb3d476a"
             },
             {
                 "type": "line",
@@ -1318,6 +1453,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "U = J x R"
             },
             {
@@ -1326,6 +1462,7 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Rechnerisch ergibt sich V / A, es wird durch Ω ersetzt."
             },
             {
@@ -1342,7 +1479,8 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Bei einer Parallelschaltung mit Widerständen ergeben sich Knotenpunkte. Der Satz besagt, dass die Summe aller in diesem Punkt zufließenden Ströme gleich die Summe aller ausfließenden Ströme ist."
+                "hidden": true,
+                "content": "Bei einer Parallelschaltung mit Widerständen ergeben sich Knotenpunkte. Der Knotenpunkt-Satz besagt, dass die Summe aller in diesem Punkt zufließenden Ströme gleich die Summe aller ausfließenden Ströme ist."
             },
             {
                 "type": "text",
@@ -1350,7 +1488,8 @@ export const LF4_1_POSTS: Post[] = [
             },
             {
                 "type": "text",
-                "content": "In einer geschlossenen Schaltung ist die Summe der ursprünglichen / Quellspannung gleich die Summe aller Teilspannungen (Überarbeiten)."
+                "hidden": true,
+                "content": "In einer geschlossenen Schaltung ist die Summe der aller Quellspannungen gleich die Summe aller Teilspannungen."
             }
         ]
     },

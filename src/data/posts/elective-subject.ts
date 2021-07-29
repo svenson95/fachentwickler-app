@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const WP_POSTS: Post[] = [
+const WP_POSTS: PostArticle[] = [
     {
         "url": "vernetzte_steuerungssysteme/grundlagen_speicherprogrammierte_steuerungen",
         "_id": "5f429fa0165d0ab470bc5800",
@@ -454,7 +454,7 @@ export const WP_POSTS: Post[] = [
         "subject": "wp",
         "type": "tasks",
         "lessonDate": "2020-10-28",
-        "lastUpdate": "2021-06-26",
+        "lastUpdate": "2021-06-27",
         "schoolWeek": "17",
         "elements": [
             {
@@ -540,7 +540,7 @@ export const WP_POSTS: Post[] = [
                 "content": "Autowaschanlage"
             },
             {
-                "type": "subtitle",
+                "type": "text",
                 "content": "Der Kunde gibt ihnen folgende Ablaufbeschreibung, aus der Sie eine GRAFCET Ablaufbeschreibung erstellen sollen."
             },
             {
@@ -1924,6 +1924,67 @@ export const WP_POSTS: Post[] = [
                         "language": "java",
                         "content": "package com.company;\n\nimport java.util.Scanner;\n\npublic class Main {\n\n  static boolean m1 = false;\n  static boolean m2 = false;\n  static boolean m3 = false;\n  static boolean p1 = false;\n  static int power = 0;\n\n  // value in kW\n  static int m1_consumption = 7;\n  static int m2_consumption = 5;\n  static int m3_consumption = 2;\n\n  public static void main(String[] args) {\n    start();\n  }\n\n  public static void start() {\n    System.out.println();\n    System.out.println(\"Notstromversorgung\");\n    System.out.println(\"M1 = \" + m1);\n    System.out.println(\"M2 = \" + m2);\n    System.out.println(\"M3 = \" + m3);\n    System.out.println(\"Leistung: \" + power);\n    System.out.println(\"P1: \" + p1);\n\n    Scanner input = new Scanner(Scanner.in);\n    System.out.println();\n    System.out.println(\"Enter s1 / s2 / s3\");\n    String control = input.nextLine().toUpperCase();\n    String[] args = new String[0];\n\n    switch(control) {\n      case \"S1\":\n        m1 = !m1;\n        System.out.println(\"M1 gestartet\");\n        updatePower();\n        main(args);\n      case \"S2\":\n        m2 = !m2;\n        System.out.println(\"M2 gestartet\");\n        updatePower();\n        main(args);\n      case \"S3\":\n        m3 = !m3;\n        System.out.println(\"M3 gestartet\");\n        updatePower();\n        main(args);\n      default:\n        System.out.println(\"Störung\");\n    }\n  }\n\n  public static void updatePower() {\n    int value = 0;\n    if (m1) value = value + m1_consumption;\n    if (m2) value = value + m2_consumption;\n    if (m3) value = value + m3_consumption;\n    power = value;\n\n    if (power > 7) {\n      p1 = true;\n    } else {\n      p1 = false;\n    }\n  }\n\n}"
                     }
+                ]
+            }
+        ]
+    },
+    {
+        "url": "vernetzte_steuerungssysteme/digitaltechnik_zahlensysteme",
+        "_id": "60e57904956e5a156b702e5c",
+        "topicId": "6056906307c61731b8d162f1",
+        "title": "Digitaltechnik - Zahlensysteme",
+        "description": "Aufgabe vom 09.06.2021",
+        "subject": "wp",
+        "type": "article",
+        "lessonDate": "2021-06-09",
+        "lastUpdate": "2021-07-07",
+        "schoolWeek": "26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Mathematische Grundlagen"
+            },
+            {
+                "type": "text",
+                "content": "Mathematik ist die Grundlage für die Programmierung und Funktion eines Computer und somit auch einer SPS. Die Menschen denken im Dezimalsystem, dessen Ziffernvorrat aus 0 bis 9 besteht. Das hat sich so ergeben, weil der Mensch 10 Finger hat und beim Zählen häufig die Finger benutzt wurden. Im Dezimalsystem kann man Rechenoperationen wie Addition, Subtraktion, Multiplikation, Division, Potenzen usw. durchführen und den Menschen ist der Umgang mit dem Dezimalsystem bekannt."
+            },
+            {
+                "type": "text",
+                "content": "Ein Computer, wozu auch eine SPS zählt, arbeitet jedoch nicht mit dem Dezimalsystem. Die Ursache hierfür liegt im technischen Grundaufbau eines Computers, der eben nur erkennen kann, ob Strom fließt oder nicht fließt. Für den Computer ist daher nur erkennbar, ob das Signal 1 (Strom fließt) oder 0 (Strom fließt nicht) ist."
+            },
+            {
+                "type": "text",
+                "content": "Daher benötigt eine SPS ein Zahlensystem, mit dem gearbeitet werden kann und das ist grundsätzlich das Dualsystem. Das Dualsystem kennt nur 2 Ziffern (0, 1) und eignet sich daher sehr gut für die interne Verarbeitung von Zahlen in einer SPS. Das Dualsystem hat jedoch einen großen Nachteil. Für selbst kleinste Zahlen benötigt man riesige Ziffernfolgen. Daher haben sich zwei weitere Zahlensysteme etabliert, mit denen bei der SPS-Programmierung gearbeitet wird. Das sind die Zahlensysteme Hexadezimalsystem und BCD Code."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zahlensysteme"
+            },
+            {
+                "type": "text",
+                "content": "Ein SPS-Programmierer sollte sich daher mit diesen 3 Zahlensystemen vertraut machen. Häufig werden Eingaben in BCD-Format, als Hexadezimalzahl oder als Dualzahl erwartet oder man muss die entsprechenden Ziffernfolgen auswerten können. Intern wird jedoch immer mit dem Dualsystem gearbeitet, da eine SPS nur die logischen Zustände 0 und 1 (An und Aus) kennt und die Arbeitsweise einer Schaltung durch diese beiden logischen Zustände beschrieben werden kann. Auch bei der SPS-Programmierung werden diese beiden logischen Zustände verwendet."
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "SPS-Lehrgang.de > SPS Grundlagen > Zahlensysteme | 07.07.2021 | <a href='https://www.sps-lehrgang.de/zahlensysteme/'>https://www.sps-lehrgang.de/zahlensysteme/</a>"
                 ]
             }
         ]

@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF9_POSTS: Post[] = [
+export const LF9_POSTS: PostArticle[] = [
     {
         "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einstieg_in_das_lernfeld",
         "title": "Kommunikationstechnik - Einstieg in das Lernfeld",

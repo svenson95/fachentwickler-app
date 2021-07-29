@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const WISO_POSTS: Post[] = [
+export const WISO_POSTS: PostArticle[] = [
     {
         "url": "berufsbildung_und_arbeitswelt/geschichte_der_beruflichen_ausbildung",
         "title": "Geschichte der beruflichen Ausbildung (ENTWURF)",
@@ -2037,7 +2037,7 @@ export const WISO_POSTS: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/6059048c1197a87e0b452a28",
+                "content": "http://159.65.105.150:3000/images/6101b156fb917e446c9a3a4b",
                 "size": "l"
             },
             {

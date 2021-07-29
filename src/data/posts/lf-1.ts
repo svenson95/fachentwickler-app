@@ -1,8 +1,7 @@
-import { ArticleData } from '../../app/new-post-models/post-article';
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF1_POSTS: Post[] = [
+export const LF1_POSTS: PostArticle[] = [
     {
         "url": "der_betrieb_und_sein_umfeld/umsatzrendite_berechnen",
         "_id": "5f429107165d0ab470bc57ca",

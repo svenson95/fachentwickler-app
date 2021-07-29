@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const DEUTSCH_POSTS: Post[] = [
+const DEUTSCH_POSTS: PostArticle[] = [
     {
         "url": "kommunikation_und_informationsquellen/sender_empfänger_modell",
         "title": "Sender-Empfänger-Modell",

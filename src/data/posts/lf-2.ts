@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF2_POSTS: Post[] = [
+export const LF2_POSTS: PostArticle[] = [
     {
         "url": "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "_id": "5f4295f6220657ed697dc56b",
@@ -401,15 +401,20 @@ export const LF2_POSTS: Post[] = [
         "subject": "lf-2",
         "type": "test",
         "lessonDate": "2020-09-02",
-        "lastUpdate": "2020-10-29",
+        "lastUpdate": "2021-07-27",
         "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
                 "content": "<span class='list-number'>1</span> Was versteht man unter einem Geschäftsprozess?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Eine Folge von zusammenhängenden Tätigkeiten zum Erledigen einer Aufgabe."
             },
             {
@@ -417,11 +422,12 @@ export const LF2_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='list-number'>2</span> Was versteht man unter Kernprozessen und unter Supports?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Kernprozesse gehören zum Hauptgeschäft, sind kundennah und wertschöpfend."
             },
             {
@@ -429,11 +435,12 @@ export const LF2_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='list-number'>3</span> Was ist ein Workflow?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Ein Workflow ist ein Ablauf von Teilprozessen, zb mittels maschinengestützter Automatisierung von Tätigkeiten."
             },
             {
@@ -441,12 +448,13 @@ export const LF2_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='list-number'>4</span> Handelt es sich bei den folgenden Prozessen um einen Geschäftsprozess, wenn ja dann um welchen?"
             },
             {
                 "type": "list",
                 "content": "",
+                "hidden": true,
                 "list": [
                     "a) Bearbeitung einer Eingangsrechnung <br/> -> Ja, gehört zu den Kernprozessen, da es sich um einen Wertschöpfenden Prozess handelt.",
                     "b) Geschäftsführer <br/> Nein, der Üpste selbst ist kein Prozess.",
@@ -460,11 +468,12 @@ export const LF2_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='list-number'>5</span> Was versteht man unter einem Organigramm?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Ein Organigramm ist ein Diagramm - daher auch der Name - welches den Aufbau und die Struktur eines Unternehmens darstellt. In diesem sind auch die Abteilungen, Bereichsleiter und dessen Befugnisse zur Verteilung von Aufgaben sichtbar. Hierbei lässt sich auch erkennen, welche Abteilungen aufeinander angewiesen sind bzw. zusammenarbeiten."
             },
             {
@@ -472,11 +481,12 @@ export const LF2_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='list-number'>6</span> Was unterscheidet die Stelle von der Instanz und der Stabsstelle?"
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "Eine Instanz ist weisungsberechtigt, eine Stelle ist NICHT weisungsberechtigt → <br/> Geschäftsführer = Instanz <br/>> Azubi / Praktikant = Stelle"
             },
             {
@@ -488,12 +498,13 @@ export const LF2_POSTS: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<span class='list-number'>7</span> Nennen Sie zwei Beispiele für einen Kernprozess und zwei Beispiele für einen Support in Ihrem Unternehmen."
             },
             {
                 "type": "list",
                 "content": "",
+                "hidden": true,
                 "list": [
                     {
                         "content": "Kernprozesse",

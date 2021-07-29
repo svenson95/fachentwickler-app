@@ -6,14 +6,74 @@ import * as moment from 'moment';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const testSchoolWeek: SchoolWeek = {
-    schoolWeek: '8',
+    schoolWeek: '15',
     posts: [
-        {description: 'Mitschrift vom 10.02.2020', lessonDate: '2020-02-10', _id: '5f429f28165d0ab470bc57fc', schoolWeek: '8', subject: 'deutsch', title: 'Präsentieren - Einleitung', type: 'article', url: 'kommunikation_und_informationsquellen/praesentieren_einleitung'},
-        {description: 'Mitschrift vom 11.02.2020', lessonDate: '2020-02-11', _id: '5f429ccb165d0ab470bc57e6', schoolWeek: '8', subject: 'lf-6', title: 'Statische Methoden (in Java)', type: 'article', url: 'entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden'},
-        {description: 'Mitschrift vom 11.02.2020', lessonDate: '2020-02-11', _id: '5f429f13165d0ab470bc57fb', schoolWeek: '8', subject: 'deutsch', title: 'Testvorbereitung - Zusammenfassung (Blätter)', type: 'article', url: 'kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_blaetter'},
-        {description: 'Aufgaben vom 12.02.2020', lessonDate: '2020-02-12', _id: '5f429c0f165d0ab470bc57e0', schoolWeek: '8', subject: 'lf-4-2', title: 'Aufgaben Gesetze der Boolschen Algebra', type: 'tasks', url: 'boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra'},
-        {description: 'Mitschrift vom 12.02.2020', lessonDate: '2020-02-12', _id: '5f429f3d165d0ab470bc57fd', schoolWeek: '8', subject: 'deutsch', title: 'Foliengesetz (Bullet-Chart)', type: 'article', url: 'grammatik/foliengesetz_bullet_chart'},
-        {description: 'Aufgaben vom 14.02.2020', lessonDate: '2020-02-14', _id: '5f4294d0220657ed697dc566', schoolWeek: '8', subject: 'lf-1', title: 'Übung zur Berechnung der Wirtschaftlichkeit (1/2)', type: 'tasks', url: 'wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_1'}
+        {
+            "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme",
+            "_id": "5f67ad91257ec895e489e34c",
+            "topicId": "6056629db0623029d4a68f6b",
+            "title": "Datenbanken und Datenbanksysteme",
+            "description": "Thema vom 31.08.2020",
+            "subject": "lf-6",
+            "type": "article",
+            "lessonDate": "2020-08-31",
+            "lastUpdate": "2021-06-26",
+            "schoolWeek": "15"
+        },
+        {
+            "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_und_datentypen_mysql",
+            "title": "Relationale Datenbanken und Datentypen - MySQL",
+            "description": "Thema vom 31.08.2020",
+            "subject": "lf-6",
+            "type": "article",
+            "lessonDate": "2020-08-31",
+            "lastUpdate": "2020-12-15",
+            "schoolWeek": "15"
+        },
+        {
+            "url": "e_technik/schaltungen_widerstaende_berechnen",
+            "_id": "5f6f661b819cd4bad66c53fb",
+            "topicId": "6056854807c61731b8d162ec",
+            "title": "Schaltungen - Widerstände berechnen",
+            "description": "Mitschrift vom 01.09.2020",
+            "subject": "lf-7-1",
+            "type": "tasks",
+            "lessonDate": "2020-09-01",
+            "lastUpdate": "2021-06-28",
+            "schoolWeek": "15"
+        },
+        {
+            "url": "versicherungen_und_sozialabgaben/lohnberechnung_uebung",
+            "title": "Lohnberechnung - Übung",
+            "description": "Aufgaben vom 01.09.2020",
+            "subject": "wiso",
+            "type": "tasks",
+            "lessonDate": "2020-09-01",
+            "lastUpdate": "2020-09-26",
+            "schoolWeek": "15",
+        },
+        {
+            "url": "vernetzte_steuerungssysteme/sensoren_und_schrittketten_aufbau_und_befehle",
+            "_id": "5f6fcb16539ea9f7ca3856ed",
+            "topicId": "6056906307c61731b8d162f1",
+            "title": "Sensoren & Schrittketten - Aufbau und Befehle",
+            "description": "Mitschrift vom 02.09.2020",
+            "subject": "wp",
+            "type": "article",
+            "lessonDate": "2020-09-02",
+            "lastUpdate": "2021-05-15",
+            "schoolWeek": "15"
+        },
+        {
+            "url": "e_technik/bauteile_im_wechselstromkreis",
+            "title": "Bauteile im Wechselstromkreis",
+            "description": "Mitschrift vom 04.09.2020",
+            "subject": "lf-7-1",
+            "type": "article",
+            "lessonDate": "2020-09-04",
+            "lastUpdate": "2020-10-03",
+            "schoolWeek": "15"
+        },
     ]
 };
 
@@ -103,20 +163,14 @@ export const testSchedule: Schedule = {
                 {
                     "subject": 'lf-9',
                     "teacher": 'Foo',
-                    "room": 'A111',
+                    "room": 'A131',
                     "block": '1'
                 },
                 {
                     "subject": 'lf-9',
                     "teacher": 'Foo1',
-                    "room": 'A111',
+                    "room": 'A131',
                     "block": '2'
-                },
-                {
-                    "subject": 'sport',
-                    "teacher": 'Foo9',
-                    "room": 'A022',
-                    "block": '3'
                 }
             ]
         },
@@ -147,21 +201,21 @@ export const testSchedule: Schedule = {
             "day": '2',
             "lessons": [
                 {
-                    "subject": 'wp',
-                    "teacher": 'Foo6',
-                    "room": 'A212',
+                    "subject": null,
+                    "teacher": null,
+                    "room": null,
                     "block": '1'
                 },
                 {
                     "subject": 'lf-6',
                     "teacher": 'Foo3',
-                    "room": 'A213',
+                    "room": 'A042',
                     "block": '2'
                 },
                 {
-                    "subject": 'wp',
-                    "teacher": 'Foo6',
-                    "room": 'A212',
+                    "subject": 'lf-6',
+                    "teacher": 'Foo3',
+                    "room": 'A042',
                     "block": '3'
                 }
             ]
@@ -178,20 +232,14 @@ export const testSchedule: Schedule = {
                 {
                     "subject": 'lf-8',
                     "teacher": 'Foo4',
-                    "room": 'A022',
+                    "room": 'A020',
                     "block": '2'
                 },
                 {
                     "subject": 'lf-6',
                     "teacher": 'Foo3',
-                    "room": 'A213',
+                    "room": 'A042',
                     "block": '3'
-                },
-                {
-                    "subject": 'sport',
-                    "teacher": 'Foo9',
-                    "room": 'A022',
-                    "block": '4'
                 }
             ]
         },
@@ -202,18 +250,12 @@ export const testSchedule: Schedule = {
                     "subject": "lf-7-2",
                     "teacher": "Foo2",
                     "room": "A113",
-                    "block": '1'
-                },
-                {
-                    "subject": "lf-7-2",
-                    "teacher": "Foo2",
-                    "room": "A113",
                     "block": '2'
                 },
                 {
                     "subject": 'lf-6',
                     "teacher": 'Foo3',
-                    "room": 'A213',
+                    "room": 'A042',
                     "block": '3'
                 }
             ]

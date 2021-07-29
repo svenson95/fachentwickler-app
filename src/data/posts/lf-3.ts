@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF3_POSTS: Post[] = [
+export const LF3_POSTS: PostArticle[] = [
     {
         "url": "netzplantechnik/regeln_der_netzplantechnik",
         "title": "Regeln der Netzplantechnik",

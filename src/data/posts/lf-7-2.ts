@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF7_2_POSTS: Post[] = [
+export const LF7_2_POSTS: PostArticle[] = [
     {
         "url": "netze_und_dienste/ports",
         "_id": "5f6fe46a539ea9f7ca3856ef",

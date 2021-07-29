@@ -1,7 +1,7 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const LF6_POSTS: Post[] = [
+export const LF6_POSTS: PostArticle[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/objektorientierung_und_vererbung",
         "_id": "60bc2b8b2e26a059c20d3597",
@@ -2213,6 +2213,8 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
+        "_id": "5f429cdf165d0ab470bc57e7",
+        "topicId": "6056629db0623029d4a68f6b",
         "title": "Eulersche Phi-Funktion",
         "description": "Thema vom 02.03.2020",
         "subject": "lf-6",
@@ -2334,12 +2336,14 @@ export const LF6_POSTS: Post[] = [
     },
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
+        "_id": "5f429cf5165d0ab470bc57e8",
+        "topicId": "6056629db0623029d4a68f6b",
         "title": "Aktienkurs Berechnung (in PHP)",
         "description": "Aufgaben vom 24.03.2020",
         "subject": "lf-6",
         "type": "tasks",
         "lessonDate": "2020-03-24",
-        "lastUpdate": "2021-01-06",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "10",
         "elements": [
             {
@@ -2447,7 +2451,7 @@ export const LF6_POSTS: Post[] = [
             {
                 "type": "code",
                 "language": "php",
-                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 1</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfor ($i = 0; $i <count($history); $i++) {\n   $current = 0;\n\n   for ($j = $i; $j <count($history); $j++) {\n      $current += $history[$j];\n      $differences[$i][$j] = $current;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1,\n            -8, 2, -1, 4, -5, 2, 1, 3, 2, -3,\n            5, -7, 2, -3, 2, -1, -1, 2, 1];\n\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 1</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfor ($i = 0; $i <count($history); $i++) {\n   $current = 0;\n\n   for ($j = $i; $j <count($history); $j++) {\n      $current += $history[$j];\n      $differences[$i][$j] = $current;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
             },
             {
                 "type": "line",
@@ -2464,7 +2468,7 @@ export const LF6_POSTS: Post[] = [
             {
                 "type": "code",
                 "language": "php",
-                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\n// Funktion aus Aufgabe 1\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 2</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfillDifferencesRecursive($history, $differences);\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\nfunction fillDifferencesRecursive($history, &$differences, $currentDifference = 0, $currentStart = 0, $currentEnd = 0) {\n\n   if ($currentStart>= count($history)) {\n      return;\n   }\n\n   if ($currentEnd>= count($history)) {\n      fillDifferencesRecursive($history, $differences, 0, $currentStart + 1, $currentStart + 1);\n      return;\n   }\n\n   $currentDifference += $history[$currentEnd];\n   $differences[$currentStart][$currentEnd] = $currentDifference;\n\n   fillDifferencesRecursive($history, $differences, $currentDifference, $currentStart, $currentEnd + 1);\n}\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1,\n            -8, 2, -1, 4, -5, 2, 1, 3, 2, -3,\n            5, -7, 2, -3, 2, -1, -1, 2, 1];\n\n// Funktion aus Aufgabe 1\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 2</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfillDifferencesRecursive($history, $differences);\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\nfunction fillDifferencesRecursive($history, &$differences, $currentDifference = 0, $currentStart = 0, $currentEnd = 0) {\n\n   if ($currentStart>= count($history)) {\n      return;\n   }\n\n   if ($currentEnd>= count($history)) {\n      fillDifferencesRecursive($history, $differences, 0, $currentStart + 1, $currentStart + 1);\n      return;\n   }\n\n   $currentDifference += $history[$currentEnd];\n   $differences[$currentStart][$currentEnd] = $currentDifference;\n\n   fillDifferencesRecursive($history, $differences, $currentDifference, $currentStart, $currentEnd + 1);\n}\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
             },
             {
                 "type": "line",
@@ -2481,7 +2485,7 @@ export const LF6_POSTS: Post[] = [
             {
                 "type": "code",
                 "language": "php",
-                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\necho '<h1>Aufgabe 3</h1>';\n\n$startTime = microtime(true);\n$maximum = 0;\n$maxRight = 0;\n\nfor ($i = 0; $i <count($history); $i++) {\n\n   $tmpMaxRight = $maxRight + $history[$i];\n\n   if ($tmpMaxRight> 0) {\n      $maxRight = $tmpMaxRight;\n   }\n\n   if ($maxRight> $maximum) {\n      $maximum = $maxRight;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\necho '<br/>';\necho $maximum;\n\n?>"
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1,\n            -8, 2, -1, 4, -5, 2, 1, 3, 2, -3,\n            5, -7, 2, -3, 2, -1, -1, 2, 1];\n\necho '<h1>Aufgabe 3</h1>';\n\n$startTime = microtime(true);\n$maximum = 0;\n$maxRight = 0;\n\nfor ($i = 0; $i <count($history); $i++) {\n\n   $tmpMaxRight = $maxRight + $history[$i];\n\n   if ($tmpMaxRight> 0) {\n      $maxRight = $tmpMaxRight;\n   }\n\n   if ($maxRight> $maximum) {\n      $maximum = $maxRight;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\necho '<br/>';\necho $maximum;\n\n?>"
             },
             {
                 "type": "line",
