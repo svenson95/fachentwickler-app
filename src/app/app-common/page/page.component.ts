@@ -8,7 +8,6 @@ import { SidenavService } from '../../services/sidenav.service';
 import { ThemeService } from '../../services/theme.service';
 import { MediaQueryService } from '../../services/media-query.service';
 
-/** @title Responsive sidenav */
 @Component({
   selector: 'fe-page',
   templateUrl: 'page.component.html'

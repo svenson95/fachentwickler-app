@@ -5,28 +5,9 @@ import { ExamDate } from '../../models/exam-date';
 import { Post } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
 
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
-
 @Component({
   selector: 'fe-exam-item',
-  templateUrl: './exam-item.component.html'
-  // animations: [
-  //   trigger('listAnimation', [
-  //     transition('* => *', [ // each time the binding value changes
-  //       query(':leave', [
-  //         stagger(100, [
-  //           animate('1.5s', style({ opacity: 0 }))
-  //         ])
-  //       ]),
-  //       query(':enter', [
-  //         style({ opacity: 0 }),
-  //         stagger(100, [
-  //           animate('1.5s', style({ opacity: 1 }))
-  //         ])
-  //       ])
-  //     ])
-  //   ])
-  // ]
+  templateUrl: './exam-item.component.html',
 })
 export class ExamItemComponent implements OnInit {
 

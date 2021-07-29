@@ -1,6 +1,17 @@
 .fe-post-item {
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    height: var(--scrollbar-width);
+    overflow-y: scroll;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 0;
+  }
+
   .fe-text-button {
     padding-top: 4px;
     height: fit-content;
@@ -147,17 +158,9 @@
     }
 
     @include from-lg {
-      .small {
-        max-width: 40%;
-      }
-
-      .medium {
-        max-width: 60%;
-      }
-
-      .large {
-        max-width: 80%;
-      }
+      .small { max-width: 40%; }
+      .medium { max-width: 60%; }
+      .large { max-width: 80%; }
     }
 
     .fe-loading-spinner {
@@ -165,8 +168,6 @@
     }
   }
 
-  .post-table-title {
-  }
   .post-table {
     border-collapse: collapse;
     table-layout: fixed;
@@ -208,12 +209,24 @@
 
   .post-code {
     margin: 0;
+
     code {
       padding: 20px;
       font-size: .9em;
 
       @include to-xs {
         font-size: .8em;
+      }
+
+      &::-webkit-scrollbar {
+        height: var(--scrollbar-width);
+        overflow-y: scroll;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--tertiary-color);
+        border-radius: 0;
       }
     }
   }

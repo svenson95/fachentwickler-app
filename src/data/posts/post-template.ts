@@ -235,6 +235,10 @@ export const testArticle: Post = {
             ]
         },
         {
+            "type": "line",
+            "content": "<hr/>"
+        },
+        {
             "type": "list",
             "content": "Quellen:",
             "list": [
