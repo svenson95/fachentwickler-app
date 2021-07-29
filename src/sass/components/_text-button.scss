@@ -23,12 +23,11 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 
-  transition: transform 100ms ease, background 100ms ease-in-out;
+  transition: background 100ms ease-in-out;
 
   &:hover:not(:disabled) {
     background: var(--button-hover-background);
     cursor: pointer;
-    transition: transform 100ms ease;
   }
 
   &.secondary {
@@ -49,7 +48,6 @@
     &:hover {
       background: rgba(var(--grey-4-rgb), .1);
       color: var(--grey-4);
-      transition: transform 100ms ease;
     }
   }
 
@@ -59,10 +57,6 @@
     span, .drop-icon {
       color: rgba(var(--grey-4-rgb), .5);
     }
-  }
-
-  &:active:not(:disabled) {
-    transform: translateY(1px);
   }
 
 }

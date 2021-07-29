@@ -43,6 +43,7 @@
     font-family: Nunito-Light, sans-serif;
     letter-spacing: .5px;
     margin-top: 20px;
+    margin-bottom: 20px;
 
     @include to-xs {
       font-size: 1.1em;
@@ -85,7 +86,6 @@
 
   .post-list-ordered,
   .post-list {
-    margin-top: 20px;
     margin-bottom: 20px;
   }
 

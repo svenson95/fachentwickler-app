@@ -95,30 +95,28 @@
         cursor: pointer;
         outline: none;
         margin-top: 4px;
+      }
 
+      .show-lessons-btn:hover span {
+        background: rgba(var(--tertiary-color-rgb), .1);
+      }
+
+      .show-lessons-btn span {
+        font-size: .9em;
+        color: var(--tertiary-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
+        padding: 3px 10px;
+        flex-shrink: 0;
+        transition: background 100ms ease-out, letter-spacing 200ms ease-out;
+      }
+
+      .show-lessons-btn.is-open span {
+        background: rgba(var(--tertiary-color-rgb), .1);
         letter-spacing: 1px;
-        transition: background 200ms ease-out;
-
-        &:hover:not(:active) span {
-          background: rgba(var(--tertiary-color-rgb), .1);
-          transition: background 200ms ease-out;
-        }
-
-        span {
-          font-size: .9em;
-          color: var(--tertiary-color);
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-          padding: 3px 10px;
-          flex-shrink: 0;
-          transition: letter-spacing 600ms ease;
-        }
-
-        &.is-open span {
-          color: var(--text-color-3);
-          border-bottom: 1px solid rgba(var(--grey-4-rgb), .3);
-        }
+        border-bottom: 1px solid rgba(var(--grey-4-rgb), .3);
+        transition: background 100ms ease-out, letter-spacing 100ms ease-out;
       }
     }
 

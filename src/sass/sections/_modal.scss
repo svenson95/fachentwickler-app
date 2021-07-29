@@ -1,7 +1,8 @@
 .mat-dialog-container {
   background: var(--background-secondary);
   color: var(--text-color-1);
-  border-radius: var(--border-radius);
+  border: 3px solid var(--tertiary-color);
+  border-radius: var(--border-radius) !important;
 
   .mat-dialog-content {
     margin-bottom: 10px;
