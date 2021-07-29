@@ -4,7 +4,7 @@
 
   color: var(--text-color-1);
   font-family: Nunito-Light, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 100;
   text-align: left;
   line-height: 14px;
@@ -20,7 +20,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-right: 6px;
   fill: var(--tertiary-color);
 
   svg {
@@ -36,7 +35,12 @@
   }
 
   @include from-xs {
+    margin-right: 5px;
     fill: var(--tertiary-color);
+  }
+
+  @include to-xs {
+    margin-right: 8px;
   }
 }
 
@@ -82,10 +86,6 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
     }
   }
 
-  .fe-app-name {
-    font-size: 1rem;
-  }
-
   &:hover .fe-app-name {
     letter-spacing: 1px;
     transition: letter-spacing 500ms ease-out;
@@ -102,18 +102,19 @@ fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-logo-wr
     align-self: center;
     padding: 5px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     fill: var(--tertiary-color);
 
     .fe-app-name {
-      @include to-xs {
-        display: none;
-      }
+      display: none;
     }
   }
 }
 
 fe-header.fe-header .mat-toolbar .header-wrapper.sidenav--open {
+  .fe-app-name {
+    @include logoMoveInLeftAnimation;
+  }
   .page-title {
     display: none;
   }
