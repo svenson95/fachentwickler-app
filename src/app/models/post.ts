@@ -1,46 +1,50 @@
-import { ElementType } from './element-type';
 import { PostType } from './post-type';
+import { PostElement } from './post-element';
 
 export interface Post {
   _id?: string;
   topicId?: string;
   url: string;
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   subject: string;
   type: PostType | string;
   lessonDate: string;
-  lastUpdate?: string;
+  lastUpdate: string;
   schoolWeek: string;
-  elements?: PostElement[];
+  elements?: PostElement[] | IndexCardQuestion[] | MatchingPair[][] | QuizQuestion[];
 }
 
-export interface PostElement {
-  type: ElementType | string;
-  content?: string;
-  hidden?: boolean;
-  language?: 'java' | 'php' | 'javascript' | 'sql';
-  list?: Array<string | SublistItem>;
-  ordered?: boolean;
-  rows?: TableRow[];
-  object?: object;
-  size?: string;
-  elements?: PostElement[];
+export interface PostArticle extends Post {
+  elements: PostElement[];
 }
 
-interface SublistItem {
-  content?: string;
-  sublist: string[];
+export interface PostQuiz extends Post {
+  elements: QuizQuestion[];
 }
 
-interface TableRow {
-  type: 'header' | 'default';
-  columns: TableColumn[];
+interface QuizQuestion {
+  question: string;
+  answer: number;
+  choice1: string;
+  choice2: string;
 }
 
-interface TableColumn {
-  align: 'left' | 'middle' | 'right';
-  content: string;
-  colSpan?: number;
-  rowSpan?: number;
+export interface PostIndexCards extends Post {
+  elements: IndexCardQuestion[];
+}
+
+interface IndexCardQuestion {
+  question: string;
+  answer: string;
+}
+
+export interface PostMatching extends Post {
+  elements: MatchingPair[][];
+}
+
+export interface MatchingPair {
+  leftpart: string;
+  rightpart: string;
+  pairNumber: number;
 }

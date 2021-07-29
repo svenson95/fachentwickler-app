@@ -1,10 +1,10 @@
-import { Matching } from '../app/models/matching-piece';
+import { PostMatching } from '../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const matchings: Matching[] = [
+export const matchings: PostMatching[] = [
     {
         "url": "steuern_und_sozialversicherungen/sozialversicherungssysteme/matching",
-        "_id": "6066f38840e2d4160425a70e",
+        "_id": "61028adc73f9f2545fa75f33",
         "topicId": "6056969907c61731b8d162f4",
         "title": "Sozialversicherungssysteme",
         "description": "Übung vom 04.03.2021",
@@ -12,8 +12,8 @@ export const matchings: Matching[] = [
         "schoolWeek": "22",
         "type": "matching",
         "lessonDate": "2021-03-04",
-        "lastUpdate": "2021-04-19",
-        "pairs": [
+        "lastUpdate": "2021-07-29",
+        "elements": [
             [
                 {
                     "leftpart": "Krankenversicherungs-Leistung",

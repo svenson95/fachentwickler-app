@@ -1,4 +1,4 @@
-import { PostElement } from './post';
+import { PostElement } from './post-element';
 
 export interface SchoolNews {
   title: string;

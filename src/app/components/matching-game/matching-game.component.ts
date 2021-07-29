@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Subject } from 'rxjs';
 
-import { Matching, MatchingPair } from '../../models/matching-piece';
+import { PostMatching, MatchingPair } from '../../models/post';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class MatchingGameComponent implements OnInit {
 
-  @Input() matching: Matching;
+  @Input() matching: PostMatching;
 
   round = 0;
   isCorrect: boolean;
@@ -44,7 +44,7 @@ export class MatchingGameComponent implements OnInit {
 
     let mistakes = 0;
 
-    for (let i = 0; i < this.matching.pairs.length; i++) {
+    for (let i = 0; i < this.matching.elements.length; i++) {
       if (leftPairs[i].pairNumber !== rightPairs[i].pairNumber) {
         mistakes++;
       }
@@ -82,13 +82,13 @@ export class MatchingGameComponent implements OnInit {
       this.gameView.nativeElement.classList.add('game-started');
     }
 
-    if (this.state === 'play' && this.matching.pairs[this.round + 1] === undefined) {
+    if (this.state === 'play' && this.matching.elements[this.round + 1] === undefined) {
       this.state = 'end';
     } else {
       this.round++;
     }
 
-    if (this.matching.pairs[this.round] !== undefined) {
+    if (this.matching.elements[this.round] !== undefined) {
       this.setupMatchings();
     }
 
@@ -106,7 +106,7 @@ export class MatchingGameComponent implements OnInit {
 
   setupMatchings(): void {
     this.unsolvedPairs = [];
-    this.matching.pairs[this.round].forEach(pair => {
+    this.matching.elements[this.round].forEach(pair => {
       this.unsolvedPairs.push(pair);
     });
     this.leftSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);

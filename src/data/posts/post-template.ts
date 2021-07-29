@@ -1,8 +1,8 @@
-import { Post } from '../../app/models/post';
+import { PostArticle } from '../../app/models/post';
 import { PostType } from '../../app/models/post-type';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const testArticle: Post = {
+export const testArticle: PostArticle = {
     "url": "test",
     "_id": "5f429107165d0ab470bxxxxx",
     "topicId": "6056185736ac2b24829xxxxx",

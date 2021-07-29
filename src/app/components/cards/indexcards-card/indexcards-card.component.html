@@ -11,17 +11,17 @@
         <div class="fe-index-card--front">
           <div class="card-header">
             <p class="label">Frage</p>
-            <p class="label">{{level+1}} von {{indexCards.questions.length}}</p>
+            <p class="label">{{level+1}} von {{indexCards.elements.length}}</p>
           </div>
-          <p class="content" [innerHTML]="indexCards.questions[this.level].question"></p>
+          <p class="content" [innerHTML]="indexCards.elements[this.level].question"></p>
         </div>
         <div class="fe-index-card--back">
           <div class="card-header">
             <p class="label">Antwort</p>
-            <p class="label">{{level+1}} von {{indexCards.questions.length}}</p>
+            <p class="label">{{level+1}} von {{indexCards.elements.length}}</p>
           </div>
-          <p class="content" [innerHTML]="indexCards.questions[this.level].answer"
-             [ngClass]="{'shortAnswer': stripHtml(indexCards.questions[this.level].answer).length < 400}">
+          <p class="content" [innerHTML]="indexCards.elements[this.level].answer"
+             [ngClass]="{'shortAnswer': stripHtml(indexCards.elements[this.level].answer).length < 400}">
           </p>
         </div>
       </div>

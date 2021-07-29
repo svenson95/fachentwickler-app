@@ -11,7 +11,7 @@
         <div class="quiz-details">
           <div class="quiz-level">
             <p class="key">Frage</p>
-            <p class="value">{{level+1}} von {{quiz.questions.length}}</p>
+            <p class="value">{{level+1}} von {{quiz.elements.length}}</p>
           </div>
           <div class="fe-answer-indicator" [class.correct]="isCorrectAnswer === true" [class.wrong]="isCorrectAnswer === false">
             <svg class="correct" *ngIf="isCorrectAnswer === true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
@@ -30,15 +30,15 @@
           </div>
         </div>
         <div class="quiz-question" *ngIf="!end" #slideInWrapper>
-          <p class="label" [innerHTML]="quiz.questions[level].question"></p>
+          <p class="label" [innerHTML]="quiz.elements[level].question"></p>
           <div class="fe-quiz-answers-wrapper" [class.is-checking-answer]="answer !== undefined">
-            <button class="fe-quiz-answer answer-1" [innerHTML]="quiz.questions[level].choice1" (click)="checkAnswer(1)"
-               [class.correct]="answer === 1 && quiz.questions[level].answer === 1"
-               [class.wrong]="answer === 1 && quiz.questions[level].answer === 2"
+            <button class="fe-quiz-answer answer-1" [innerHTML]="quiz.elements[level].choice1" (click)="checkAnswer(1)"
+               [class.correct]="answer === 1 && quiz.elements[level].answer === 1"
+               [class.wrong]="answer === 1 && quiz.elements[level].answer === 2"
             ></button>
-            <button class="fe-quiz-answer answer-2" [innerHTML]="quiz.questions[level].choice2" (click)="checkAnswer(2)"
-               [class.correct]="answer === 2 && quiz.questions[level].answer === 2"
-               [class.wrong]="answer === 2 && quiz.questions[level].answer === 1"
+            <button class="fe-quiz-answer answer-2" [innerHTML]="quiz.elements[level].choice2" (click)="checkAnswer(2)"
+               [class.correct]="answer === 2 && quiz.elements[level].answer === 2"
+               [class.wrong]="answer === 2 && quiz.elements[level].answer === 1"
             ></button>
           </div>
         </div>

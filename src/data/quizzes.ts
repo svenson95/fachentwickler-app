@@ -1,19 +1,19 @@
-import { Quiz } from '../app/models/quiz';
+import { PostQuiz } from '../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const quizzes: Quiz[] = [
+export const quizzes: PostQuiz[] = [
     {
         "url": "beduerfnisse_und_gueter/wirtschaftsgueter_bedarf_und_nachfrage/quiz",
-        "_id": "5f083a88757f87cdceba18be",
+        "_id": "61028eb673f9f2545fa75f35",
         "topicId": "6056185f36ac2b24829ca2f5",
         "title": "Wirtschaftsgüter, Bedarf & Nachfrage",
         "description": "Thema vom 22.11.2019",
         "subject": "lf-1",
         "type": "quiz",
         "lessonDate": "2019-11-22",
-        "lastUpdate": "2021-05-15",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "5",
-        "questions": [
+        "elements": [
             {
                 "question": "Wie kann man den Begriff Bedürfnis definieren?",
                 "choice1": "Ein Bedürfnis ist eine Mangelerscheinung mit dem Ziel diese zu beseitigen",
@@ -54,16 +54,16 @@ export const quizzes: Quiz[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/vertraege_und_vorraussetzungen/quiz",
-        "_id": "5f085932286ad9151bdd46b3",
+        "_id": "61028ef273f9f2545fa75f38",
         "topicId": "6056968e07c61731b8d162f3",
         "title": "Verträge und Vorraussetzungen",
         "description": "Vorbereitung vom 12.12.2019",
         "subject": "wiso",
         "type": "quiz",
         "lessonDate": "2019-12-12",
-        "lastUpdate": "2021-05-14",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "6",
-        "questions": [
+        "elements": [
             {
                 "question": "Wann kommt ein Ausbildungsvertrag zustande?",
                 "choice1": "Muss spätestens vor Beginn der Ausbildung schriftlich abgeschlossen werden",
@@ -140,16 +140,16 @@ export const quizzes: Quiz[] = [
     },
     {
         "url": "netze_und_dienste/oeffentliche_netze_und_dienste/quiz",
-        "_id": "5fa1173ffb7df8ef19c6439f",
+        "_id": "61028f1e73f9f2545fa75f39",
         "topicId": "6056856207c61731b8d162ed",
         "title": "Öffentliche Netze und Dienste",
         "description": "Thema vom 24.09.2020",
         "subject": "lf-7-2",
         "type": "quiz",
         "lessonDate": "2020-09-24",
-        "lastUpdate": "2021-05-14",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "16",
-        "questions": [
+        "elements": [
             {
                 "question": "Was ist ein Telekommunikationsnetzbetreiber?",
                 "choice1": "Betreibt ein Telekommunikationsnetz, stellt Netz für Unternehmen und Kunden über einen Zugang zur Verfügung. Wenn Kundenbeziehungen bestehen fungiert es als TK-Dienstleister (Telekommunikations-)",
@@ -178,16 +178,16 @@ export const quizzes: Quiz[] = [
     },
     {
         "url": "markt_und_kundenbeziehungen/fragen_zum_marketing_mix/quiz",
-        "_id": "60ad74d3e5eb3378a74bc830",
+        "_id": "61028f2973f9f2545fa75f3a",
         "topicId": "60568ab607c61731b8d162ef",
         "title": "Fragen zum Marketing Mix",
         "description": "Thema vom 18.05.2021",
         "subject": "lf-8",
         "type": "quiz",
         "lessonDate": "2021-05-18",
-        "lastUpdate": "2021-05-25",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "25",
-        "questions": [
+        "elements": [
             {
                 "question": "Die Distributions-, Preis-, Kommunikations- und Produktpolitik sind die vier Instrumente des ...",
                 "choice1": "Marketing-Mix",

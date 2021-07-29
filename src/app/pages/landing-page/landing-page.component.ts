@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 
-import { Quiz } from '../../models/quiz';
-import { IndexCards } from '../../models/index-cards';
-import { Matching } from '../../models/matching-piece';
+import { PostIndexCards, PostMatching, PostQuiz } from '../../models/post';
 import { User } from '../../models/user';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 import { Schedule } from '../../models/schedule';
-
 import { HeaderService } from '../../services/header.service';
 
 import { quizzes } from '../../../data/quizzes';
@@ -25,9 +22,9 @@ export class LandingPageComponent {
   testSchedule: Schedule = testSchedule;
   testDashboard: DashboardData = testDashboard;
   testSchoolWeek: SchoolWeek = testSchoolWeek;
-  testQuiz: Quiz = quizzes[2];
-  testIndexCards: IndexCards = indexCards[1];
-  testMatching: Matching = matchings[0];
+  testQuiz: PostQuiz = quizzes[2];
+  testIndexCards: PostIndexCards = indexCards[1];
+  testMatching: PostMatching = matchings[0];
 
   constructor(private headerService: HeaderService) {
     this.headerService.setPageTitle('Start');

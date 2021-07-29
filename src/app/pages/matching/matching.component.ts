@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { PostMatching } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
-import { Matching } from '../../models/matching-piece';
 import { subjects } from '../../../data/menu-items';
 
 @Component({
@@ -12,7 +12,7 @@ import { subjects } from '../../../data/menu-items';
 })
 export class MatchingComponent implements OnInit {
 
-  matching: Matching;
+  matching: PostMatching;
 
   constructor(private headerService: HeaderService,
               private dataService: DataService,
@@ -23,15 +23,10 @@ export class MatchingComponent implements OnInit {
         0, router.url.indexOf('/', 1)
       ))?.title
     );
-    this.dataService.getMatching(router.url.substring(
-        router.url.indexOf('/', 1), router.url.length
-    )).subscribe(
-      (data) => {
-        this.matching = data;
-      },
-      (error) => {
-        console.log('Error while GET quiz', error);
-      }
+
+    this.dataService.getPost(router.url.substring(router.url.indexOf('/', 1), router.url.length)).subscribe(
+      (data) => this.matching = data as PostMatching,
+      (error) => console.log('Error while GET matching', error)
     );
   }
 

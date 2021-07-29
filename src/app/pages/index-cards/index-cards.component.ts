@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../../services/header.service';
-import { subjects } from '../../../data/menu-items';
-import { DataService } from '../../services/data/data.service';
 import { Router } from '@angular/router';
-import { IndexCards } from '../../models/index-cards';
+
+import { PostIndexCards } from '../../models/post';
+import { HeaderService } from '../../services/header.service';
+import { DataService } from '../../services/data/data.service';
+import { subjects } from '../../../data/menu-items';
 
 @Component({
   selector: 'fe-index-cards',
@@ -11,7 +12,7 @@ import { IndexCards } from '../../models/index-cards';
 })
 export class IndexCardsComponent implements OnInit {
 
-  indexCards: IndexCards;
+  indexCards: PostIndexCards;
 
   constructor(private headerService: HeaderService,
               private dataService: DataService,
@@ -22,13 +23,9 @@ export class IndexCardsComponent implements OnInit {
         0, router.url.indexOf('/', 1)
       ))?.title
     );
-    this.dataService.getIndexCards(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
-      (data) => {
-        this.indexCards = data;
-      },
-      (error) => {
-        console.log('Error while GET index-cards', error);
-      }
+    this.dataService.getPost(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
+      (data) => this.indexCards = data as PostIndexCards,
+      (error) => console.log('Error while GET index-cards', error)
     );
   }
 

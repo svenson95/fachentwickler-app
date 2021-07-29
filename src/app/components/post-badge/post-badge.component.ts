@@ -2,8 +2,6 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 
 import { PostType } from '../../models/post-type';
 import { Post } from '../../models/post';
-import { IndexCards } from '../../models/index-cards';
-import { Matching } from '../../models/matching-piece';
 
 @Component({
   selector: 'fe-post-badge',
@@ -12,7 +10,7 @@ import { Matching } from '../../models/matching-piece';
 })
 export class PostBadgeComponent implements OnInit {
 
-  @Input('post') post: Post | IndexCards | Matching;
+  @Input('post') post: Post;
   PostType = PostType;
 
   constructor() { }

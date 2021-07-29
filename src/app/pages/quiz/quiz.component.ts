@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Quiz } from '../../models/quiz';
+import { PostQuiz } from '../../models/post';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
 import { subjects } from '../../../data/menu-items';
@@ -12,7 +12,7 @@ import { subjects } from '../../../data/menu-items';
 })
 export class QuizComponent implements OnInit {
 
-  quiz: Quiz;
+  quiz: PostQuiz;
 
   constructor(private headerService: HeaderService,
               private dataService: DataService,
@@ -23,13 +23,10 @@ export class QuizComponent implements OnInit {
         0, router.url.indexOf('/', 1)
       ))?.title
     );
-    this.dataService.getQuiz(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
-      (data) => {
-        this.quiz = data;
-      },
-      (error) => {
-        console.log('Error while GET quiz', error);
-      }
+
+    this.dataService.getPost(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
+      (data) => this.quiz = data as PostQuiz,
+      (error) => console.log('Error while GET quiz', error)
     );
   }
 

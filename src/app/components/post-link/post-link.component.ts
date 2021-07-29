@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { Post } from '../../models/post';
-import { Quiz } from '../../models/quiz';
-import { IndexCards } from '../../models/index-cards';
 
 @Component({
   selector: 'fe-post-link',
@@ -13,7 +11,7 @@ import { IndexCards } from '../../models/index-cards';
 })
 export class PostLinkComponent implements OnInit {
 
-  @Input('post') post: Post | Quiz | IndexCards;
+  @Input('post') post: Post;
   @Input('title') title;
 
   constructor(private authService: AuthService,

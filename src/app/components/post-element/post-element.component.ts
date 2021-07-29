@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { PostElement } from '../../models/post';
+import { PostElement } from '../../models/post-element';
 import { ElementType } from '../../models/element-type';
 import { ImageChunk } from '../../models/image-data';
 import { DataService } from '../../services/data/data.service';

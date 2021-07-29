@@ -1,6 +1,7 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+
 import { DataService } from '../../../services/data/data.service';
-import { Quiz } from '../../../models/quiz';
+import { PostQuiz } from '../../../models/post';
 
 @Component({
   selector: 'fe-quiz-card',
@@ -8,7 +9,7 @@ import { Quiz } from '../../../models/quiz';
 })
 export class QuizCardComponent implements OnInit {
 
-  @Input() quiz: Quiz;
+  @Input() quiz: PostQuiz;
 
   level = 0;
   wrongAnswers = 0;
@@ -53,16 +54,16 @@ export class QuizCardComponent implements OnInit {
 
       this.answer = undefined;
       this.isCorrectAnswer = null;
-      if (this.quiz.questions[this.level + 1] !== undefined) {
+      if (this.quiz.elements[this.level + 1] !== undefined) {
         this.level++;
-      } else if (this.quiz.questions[this.level + 1] === undefined) {
+      } else if (this.quiz.elements[this.level + 1] === undefined) {
         this.end = true;
       }
     }, 2000);
   }
 
   isCorrect(answer): boolean {
-    return this.quiz.questions[this.level].answer === answer;
+    return this.quiz.elements[this.level].answer === answer;
   }
 
   resetLevel(): void {

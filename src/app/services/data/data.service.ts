@@ -7,9 +7,6 @@ import { environment } from '../../../environments/environment';
 import { Subject } from '../../models/subject';
 import { Post } from '../../models/post';
 import { ImageData } from '../../models/image-data';
-import { IndexCards } from '../../models/index-cards';
-import { Quiz } from '../../models/quiz';
-import { Matching } from '../../models/matching-piece';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 import { ExamDate } from '../../models/exam-date';
@@ -23,9 +20,6 @@ export class DataService {
     private SUBJECTS_ENDPOINT = environment.baseUrl + '/subjects';
     private POSTS_ENDPOINT = environment.baseUrl + '/posts';
     private IMAGES_ENDPOINT = environment.baseUrl + '/images';
-    private QUIZ_ENDPOINT = environment.baseUrl + '/quiz';
-    private INDEX_CARDS_ENDPOINT = environment.baseUrl + '/index-cards';
-    private MATCHING_ENDPOINT = environment.baseUrl + '/matching';
     private SCHOOL_WEEK_ENDPOINT = environment.baseUrl + '/school-week';
     private EXAM_DATES_ENDPOINT = environment.baseUrl + '/exam-dates';
     private NEWS_ENDPOINT = environment.baseUrl + '/news';
@@ -132,30 +126,6 @@ export class DataService {
         return this.httpClient.delete<any>(`${this.IMAGES_ENDPOINT}/${id}/delete`)
             .pipe(map((response) => {
                 console.log('response DELETE image', response);
-                return response;
-            }));
-    }
-
-    getQuiz(url: string): Observable<Quiz> {
-        return this.httpClient.get<Quiz>(`${this.QUIZ_ENDPOINT}/${url}`)
-            .pipe(map((response) => {
-                // console.log('response GET quiz', response);
-                return response;
-            }));
-    }
-
-    getIndexCards(url: string): Observable<IndexCards> {
-        return this.httpClient.get<IndexCards>(`${this.INDEX_CARDS_ENDPOINT}/${url}`)
-            .pipe(map((response) => {
-                // console.log('response GET index-cards', response);
-                return response;
-            }));
-    }
-
-    getMatching(url: string): Observable<Matching> {
-        return this.httpClient.get<Matching>(`${this.MATCHING_ENDPOINT}/${url}`)
-            .pipe(map((response) => {
-                // console.log('response GET matchings', response);
                 return response;
             }));
     }

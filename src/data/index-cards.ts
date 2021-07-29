@@ -1,19 +1,19 @@
-import { IndexCards } from '../app/models/index-cards';
+import { PostIndexCards } from '../app/models/post';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const indexCards: IndexCards[] = [
+export const indexCards: PostIndexCards[] = [
     {
         "url": "beduerfnisse_und_gueter/vorbereitung_fuer_test/karteikarten",
-        "_id": "5fcb0032248e32ecd46ac13c",
+        "_id": "610283741fd8f0478e381f2c",
         "topicId": "6056185f36ac2b24829ca2f5",
         "title": "Bedürfnisse und Güter - Karteikarten für Test",
         "description": "Vorbereitung vom 22.11.2019",
         "subject": "lf-1",
         "type": "index-cards",
         "lessonDate": "2019-11-22",
-        "lastUpdate": "2020-12-05",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "5",
-        "questions": [
+        "elements": [
             {
                 "question": "Wie kann man den Begriff Bedürfnis definieren?",
                 "answer": "Ein Bedürfnis ist eine Mangelerscheinung mit dem Ziel diese zu beseitigen"
@@ -42,16 +42,16 @@ export const indexCards: IndexCards[] = [
     },
     {
         "url": "netze_und_dienste/kollisionsdomaene_duplexing/karteikarten",
-        "_id": "5f917a9b99d66f66e8a9b053",
+        "_id": "6102891e73f9f2545fa75f2e",
         "topicId": "6056856207c61731b8d162ed",
         "title": "Kollisionsdomäne / Duplexing",
         "description": "Thema vom 25.09.2020",
         "subject": "lf-7-2",
         "type": "index-cards",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2021-05-15",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "16",
-        "questions": [
+        "elements": [
             {
                 "question": "Was ist eine Kollisionsdomäne?",
                 "answer": "Eine Kollisionsdomäne ist das geteilte Medium, auf dem die gleichen physikalischen Größen miteinander kollidieren. Sie umfasst alle Geräte die mit einem gemeinsamen Medium verbunden sind."

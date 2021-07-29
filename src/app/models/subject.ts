@@ -1,15 +1,9 @@
-import { Quiz } from './quiz';
-import { IndexCards } from './index-cards';
-import { Matching } from './matching-piece';
-import { PostElement } from './post';
+import { PostElement } from './post-element';
 
 export interface Subject {
   subject: string;
   description: Array<PostElement>;
   topics: string[] | Topic[];
-  quizzes?: string[] | Quiz[];
-  indexcards?: string[] | IndexCards[];
-  matchings?: string[] | Matching[];
   tests?: string[];
 }
 

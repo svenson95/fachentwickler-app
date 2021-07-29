@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { PostIndexCards } from '../../../models/post';
 import { DataService } from '../../../services/data/data.service';
-import { IndexCards } from '../../../models/index-cards';
 
 @Component({
   selector: 'fe-indexcards-card',
@@ -9,7 +9,7 @@ import { IndexCards } from '../../../models/index-cards';
 })
 export class IndexcardsCardComponent implements OnInit {
 
-  @Input() indexCards: IndexCards;
+  @Input() indexCards: PostIndexCards;
 
   level = 0;
   isAnswerVisible = false;
@@ -33,7 +33,7 @@ export class IndexcardsCardComponent implements OnInit {
 
   increaseLevel(): void {
     this.isAnswerVisible = false;
-    if (this.indexCards.questions[this.level + 1] !== undefined) {
+    if (this.indexCards.elements[this.level + 1] !== undefined) {
       setTimeout(() => this.level++, 200);
     }
   }
@@ -45,7 +45,7 @@ export class IndexcardsCardComponent implements OnInit {
   }
 
   isLastQuestion(): boolean {
-    return this.indexCards.questions[this.level + 1] === undefined;
+    return this.indexCards.elements[this.level + 1] === undefined;
   }
 
   stripHtml(html): string {
