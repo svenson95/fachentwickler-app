@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   isLoading: boolean;
   isMobile: boolean;
-  isMobile$: Subscription;
+  subscription: Subscription = new Subscription();
 
   constructor(public router: Router,
               public headerService: HeaderService,
@@ -26,15 +26,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
               public sidenavService: SidenavService,
               private mediaQueryService: MediaQueryService
   ) {
-    this.loadingService.loading$.pipe(delay(0)).subscribe(value => this.isLoading = value);
   }
 
   ngOnInit(): void {
-    this.isMobile$ = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
+    this.subscription.add(this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value));
+    this.subscription.add(this.loadingService.loading$.pipe(delay(0)).subscribe(value => this.isLoading = value));
   }
 
   ngOnDestroy(): void {
-    this.isMobile$.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   closeSidenav(): void {

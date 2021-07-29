@@ -1,8 +1,9 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+import { Subscription } from 'rxjs';
 
 import { RegisterUser, UserRole } from '../../models/user';
 import { HeaderService } from '../../services/header.service';
@@ -14,7 +15,7 @@ import { ThemeService } from '../../services/theme.service';
   selector: 'fe-register',
   templateUrl: './register.component.html'
 })
-export class RegisterComponent implements OnInit, OnChanges {
+export class RegisterComponent implements OnInit, OnDestroy {
 
   formGroup: FormGroup;
   name: FormControl;
@@ -22,6 +23,7 @@ export class RegisterComponent implements OnInit, OnChanges {
   password: FormControl;
 
   isLoading: boolean;
+  loadingSubscription: Subscription;
 
   nameAlreadyTaken: boolean;
   emailAlreadyTaken: boolean;
@@ -50,15 +52,21 @@ export class RegisterComponent implements OnInit, OnChanges {
               private loadService: LoadingService,
               private themeService: ThemeService
   ) {
-    if (authService.isAuthenticated) {
-      this.router.navigate(['dashboard']);
-    }
+    if (authService.isAuthenticated) this.router.navigate(['dashboard']);
 
     this.headerService.setPageTitle('Registrieren');
-    this.loadService.loading$.subscribe(value => {
-      this.isLoading = value;
-    });
+    this.initFormGroup();
+  }
 
+  ngOnInit(): void {
+    this.loadingSubscription = this.loadService.loading$.subscribe(value => this.isLoading = value);
+  }
+
+  ngOnDestroy(): void {
+    this.loadingSubscription.unsubscribe();
+  }
+
+  initFormGroup(): void {
     this.name = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken],
       updateOn: 'submit'
@@ -71,17 +79,11 @@ export class RegisterComponent implements OnInit, OnChanges {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
     });
-    this.formGroup = formBuilder.group({
+    this.formGroup = this.formBuilder.group({
       name: this.name,
       email: this.email,
       password: this.password
     });
-  }
-
-  ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
   }
 
   register(event): void {

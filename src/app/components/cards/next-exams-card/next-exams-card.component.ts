@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 import { ExamDate } from '../../../models/exam-date';
 import { DataService } from '../../../services/data/data.service';
@@ -9,22 +10,23 @@ import { LoadingService } from '../../../services/loading.service';
   selector: 'fe-next-exams-card',
   templateUrl: './next-exams-card.component.html'
 })
-export class NextExamsCardComponent implements OnInit {
+export class NextExamsCardComponent implements OnInit, OnDestroy {
 
   @Input() nextExams: ExamDate[];
   isLoading: boolean;
+  loadingSubscription: Subscription;
 
   constructor(private dataService: DataService,
               private loadingService: LoadingService
   ) {
-    this.loadingService.loading$.pipe(delay(0)).subscribe(
-      (status: boolean) => {
-        this.isLoading = status;
-      }
-    );
   }
 
   ngOnInit(): void {
+    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(status => this.isLoading = status);
+  }
+
+  ngOnDestroy(): void {
+    this.loadingSubscription.unsubscribe();
   }
 
 }

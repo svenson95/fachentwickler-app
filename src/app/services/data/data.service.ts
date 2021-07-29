@@ -138,7 +138,7 @@ export class DataService {
             }));
     }
 
-    getAllWeeks(): Observable<SchoolWeek[]> {
+    getAllSchoolWeeks(): Observable<SchoolWeek[]> {
         return this.httpClient.get<SchoolWeek[]>(`${this.SCHOOL_WEEK_ENDPOINT}/all`)
             .pipe(map((response) => {
                 // console.log('response GET posts/all-school-weeks', response);

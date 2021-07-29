@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Subscription } from 'rxjs';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
 import { AuthUser } from '../../models/user';
@@ -14,13 +15,14 @@ import { ThemeService } from '../../services/theme.service';
   selector: 'fe-login',
   templateUrl: './login.component.html'
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   @ViewChild('passwordInput') passwordInput;
 
   formGroup: FormGroup;
   username: FormControl;
   password: FormControl;
   isLoading: boolean;
+  loadingSubscription: Subscription;
 
   invalidPassword: boolean;
   InvalidPassword: ValidatorFn = (ac): ValidationErrors => {
@@ -44,10 +46,20 @@ export class LoginComponent implements OnInit {
     }
 
     this.headerService.setPageTitle('Login');
-    this.loadService.loading$.subscribe(value => {
+    this.initFormGroup();
+  }
+
+  ngOnInit(): void {
+    this.loadingSubscription = this.loadService.loading$.subscribe(value => {
       this.isLoading = value;
     });
+  }
 
+  ngOnDestroy(): void {
+    this.loadingSubscription.unsubscribe();
+  }
+
+  initFormGroup(): void {
     this.username = new FormControl('', {
       validators: [Validators.required, Validators.minLength(4)],
       updateOn: 'submit'
@@ -56,13 +68,10 @@ export class LoginComponent implements OnInit {
       validators: [Validators.required, Validators.minLength(4), this.InvalidPassword],
       updateOn: 'submit'
     });
-    this.formGroup = formBuilder.group({
+    this.formGroup = this.formBuilder.group({
       username: this.username,
       password: this.password
     });
-  }
-
-  ngOnInit(): void {
   }
 
   login(event): void {

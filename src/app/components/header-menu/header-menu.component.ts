@@ -21,7 +21,7 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
 
   UserRole = UserRole;
   isMobile: boolean;
-  isMobile$: Subscription;
+  mobileSubscription: Subscription;
 
   @ViewChild(MatMenuTrigger) menuTrigger: MatMenuTrigger;
 
@@ -40,11 +40,11 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.isMobile$ = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
+    this.mobileSubscription = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
   }
 
   ngOnDestroy(): void {
-    this.isMobile$.unsubscribe();
+    this.mobileSubscription.unsubscribe();
   }
 
   async openLogoutDialog(): Promise<void> {

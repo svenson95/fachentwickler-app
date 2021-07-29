@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 import { SchoolWeek } from '../../models/school-week';
 import { HeaderService } from '../../services/header.service';
@@ -15,11 +16,12 @@ interface SchoolYear {
   selector: 'fe-curriculum',
   templateUrl: './curriculum.component.html'
 })
-export class CurriculumComponent implements OnInit {
+export class CurriculumComponent implements OnInit, OnDestroy {
 
   allWeeks: number[];
   schoolYears: SchoolYear[];
   isLoading: boolean;
+  subscription: Subscription = new Subscription();
 
   selectedYear = 0;
   selectedWeek = 1;
@@ -32,14 +34,11 @@ export class CurriculumComponent implements OnInit {
     this.allWeeks = Array.from(Array(this.dataService.currentSchoolWeek + 1).keys());
     this.allWeeks.shift();      // remove school-week 0
     this.headerService.setPageTitle('Lehrplan');
+  }
 
-    this.loadingService.loading$.pipe(delay(0)).subscribe(
-        (status: boolean) => {
-          this.isLoading = status;
-        }
-    );
-
-    this.dataService.getAllWeeks().subscribe(response => {
+  ngOnInit(): void {
+    this.subscription.add(this.loadingService.loading$.pipe(delay(0)).subscribe(status => this.isLoading = status));
+    this.subscription.add(this.dataService.getAllSchoolWeeks().subscribe(response => {
       const schoolYears = [
         { year: 1, weeks: [] },
         { year: 2, weeks: [] },
@@ -57,10 +56,11 @@ export class CurriculumComponent implements OnInit {
       });
       this.schoolYears = schoolYears;
       console.log(this.schoolYears);
-    });
+    }));
   }
 
-  ngOnInit(): void {
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   toNumber(stringNumber): number {

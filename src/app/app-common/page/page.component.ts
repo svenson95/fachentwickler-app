@@ -19,7 +19,7 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
   isMobile: boolean;
-  isMobile$: Subscription;
+  mobileSubscription: Subscription;
 
   constructor(private sidenavService: SidenavService,
               public themeService: ThemeService,
@@ -30,11 +30,11 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.isMobile$ = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
+    this.mobileSubscription = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
   }
 
   ngOnDestroy(): void {
-    this.isMobile$.unsubscribe();
+    this.mobileSubscription.unsubscribe();
     this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
       .removeEventListener('scroll', this.onScroll.bind(this), true);
   }

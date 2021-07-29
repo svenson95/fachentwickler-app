@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 import { UserRole } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
@@ -10,10 +11,11 @@ import { LoadingService } from '../../services/loading.service';
   selector: 'fe-lesson-footer',
   templateUrl: './lesson-footer.component.html'
 })
-export class LessonFooterComponent implements OnInit {
+export class LessonFooterComponent implements OnInit, OnDestroy {
 
   @Input() postId: string;
   isLoading: boolean;
+  loadingSubscription: Subscription;
 
   UserRole = UserRole;
 
@@ -21,12 +23,14 @@ export class LessonFooterComponent implements OnInit {
               public dataService: DataService,
               private loadService: LoadingService,
   ) {
-    this.loadService.loading$.pipe(delay(0)).subscribe((status: boolean) => {
-      this.isLoading = status;
-    });
   }
 
   ngOnInit(): void {
+    this.loadingSubscription = this.loadService.loading$.pipe(delay(0)).subscribe(status => this.isLoading = status);
+  }
+
+  ngOnDestroy(): void {
+    this.loadingSubscription.unsubscribe();
   }
 
   alreadyRead(): boolean {
