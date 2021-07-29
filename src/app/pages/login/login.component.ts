@@ -47,12 +47,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     this.headerService.setPageTitle('Login');
     this.initFormGroup();
-  }
-
-  ngOnInit(): void {
     this.loadingSubscription = this.loadService.loading$.subscribe(value => {
       this.isLoading = value;
     });
+  }
+
+  ngOnInit(): void {
   }
 
   ngOnDestroy(): void {
