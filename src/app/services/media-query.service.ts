@@ -21,7 +21,7 @@ export class MediaQueryService {
   }
 
   private isMobile(): boolean {
-    return this.media.matchMedia('(max-width: 820px)').matches;
+    return this.media.matchMedia('(max-width: 800px)').matches;
   }
 
 }
