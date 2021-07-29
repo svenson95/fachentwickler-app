@@ -12,9 +12,9 @@
     </a>
     <div class="header-content">
       <div class="page-title" (click)="goToSubject()">
-        <span class="bracket">[</span>
+        <span class="bracket" *ngIf="!isMobile">[</span>
         <p class="title" [innerHTML]="headerService.pageTitle"></p>
-        <span class="bracket">]</span>
+        <span class="bracket" *ngIf="!isMobile">]</span>
       </div>
       <div class="header-elements-wrapper">
         <fe-searchbar *ngIf="!isMobile"></fe-searchbar>

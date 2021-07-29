@@ -60,15 +60,15 @@ fe-header.fe-header .mat-toolbar .header-content {
     }
 
     @include to-tiny {
-      font-size: .9em;
+      font-size: .8em;
     }
 
     .title {
       margin-top: 2px;
       margin-bottom: 0;
       white-space: pre-line;
-      line-height: 16px;
-      text-align: center;
+      line-height: 12px;
+      text-align: left;
 
       @include from-xs {
         padding: 0 5px;
@@ -76,7 +76,7 @@ fe-header.fe-header .mat-toolbar .header-content {
       }
 
       @include to-xs {
-        padding: 0 3px;
+        padding: 0;
       }
     }
 
