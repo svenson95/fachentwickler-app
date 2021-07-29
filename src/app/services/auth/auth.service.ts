@@ -156,8 +156,7 @@ export class AuthService {
     }
 
     fetchNextLesson(lessons: string[]): void {
-        // '605a469942f5481a20c97627' is a test article
-        const nextLessonId = lessons.find(lessonId => lessonId !== '605a469942f5481a20c97627' && !this.user.progress.includes(lessonId));
+        const nextLessonId = lessons.find(lessonId => !this.user.progress.includes(lessonId));
 
         this.dataService.getPostById(nextLessonId).subscribe(
             (nextLesson) => {

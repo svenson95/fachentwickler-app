@@ -9,8 +9,7 @@ export const topics: Topic[] = [
         "subject": "lf-1",
         "links": [
             "5f429107165d0ab470bc57ca",
-            "5f429451165d0ab470bc57cf",
-            "605a469942f5481a20c97627"
+            "5f429451165d0ab470bc57cf"
         ]
     },
     {

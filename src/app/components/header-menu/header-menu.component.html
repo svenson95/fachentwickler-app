@@ -39,4 +39,13 @@
     <mat-icon>logout</mat-icon>
     <span class="label">Ausloggen</span>
   </button>
+  <ng-container *ngIf="authService.user?.role === UserRole.ADMIN">
+    <hr/>
+    <a class="menu-btn" mat-menu-item routerLink="/lf-1/topic/testarticle"
+       [disabled]="router.url.startsWith('/feedback')"
+    >
+      <mat-icon>preview</mat-icon>
+      <span class="label">Testartikel</span>
+    </a>
+  </ng-container>
 </mat-menu>

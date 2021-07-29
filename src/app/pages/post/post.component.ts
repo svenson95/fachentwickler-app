@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { subjects } from '../../../data/menu-items';
+import { Post } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { Post } from '../../models/post';
+import { subjects } from '../../../data/menu-items';
+import { testArticle } from '../../../data/posts/post-template';
 
 @Component({
   selector: 'fe-post',
@@ -25,13 +26,15 @@ export class PostComponent implements OnInit {
     )?.title);
 
     const postUrl = router.url.substr(router.url.indexOf('/', 2) + 1, router.url.length);
+
+    if (postUrl === 'topic/testarticle') {
+      this.post = testArticle;
+      return;
+    }
+
     this.dataService.getPost(postUrl).subscribe(
-      (data) => {
-        this.post = data;
-      },
-      (error) => {
-        console.log('Error while GET post', error);
-      }
+      (data) => this.post = data,
+      (error) => console.log('Error while GET post', error)
     );
   }
 
