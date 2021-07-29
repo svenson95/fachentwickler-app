@@ -27,7 +27,8 @@
     }
 
     .fe-loading-spinner {
-      margin-block: 80px;
+      margin-top: 80px;
+      margin-bottom: 80px;
     }
 
     .choice-container {
@@ -51,8 +52,10 @@
         transition: background-color 100ms ease-in-out;
 
         &:hover {
-          background: rgba(var(--tertiary-color-rgb), .1);
-          transition: none;
+          @include from-md {
+            background: rgba(var(--tertiary-color-rgb), .1);
+            transition: none;
+          }
         }
 
         &.correct {
