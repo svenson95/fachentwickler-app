@@ -1,13 +1,12 @@
 <mat-toolbar class="header-toolbar">
-  <div class="header-wrapper">
-    <a class="fe-logo-wrapper"
-       (click)="closeSidenav()"
-       [routerLink]="isMobile ? (authService.isAuthenticated ? '/dashboard' : '/login') : '/'"
-       [ngClass]="{'active-route':
-            router.url === '/' ||
-            router.url === '/login' ||
-            isMobile && router.url === '/dashboard'
-          }"
+  <div class="header-wrapper" [class.sidenav--open]="isMobile && sidenavService.isOpen()">
+    <a class="fe-logo-wrapper" (click)="closeSidenav()"
+       [routerLink]="!isMobile ? '/' : (sidenavService.isOpen() ? '/' : (authService.isAuthenticated ? '/dashboard' : '/login'))"
+       [class.active-route]="
+          router.url === '/' ||
+          router.url === '/login' ||
+          (isMobile && !sidenavService.isOpen() &&
+          router.url === '/dashboard' || router.url === '/')"
     >
       <fe-icon></fe-icon>
     </a>

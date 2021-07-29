@@ -16,6 +16,7 @@ fe-header.fe-header .mat-toolbar {
     display: flex;
     width: 100%;
     max-width: 1350px;
+    justify-content: space-between;
   }
 
   @include from-md {
@@ -28,10 +29,13 @@ fe-header.fe-header .mat-toolbar {
   }
 }
 
+fe-header.fe-header .mat-toolbar :not(.sidenav--open) .header-content {
+  width: 100%;
+}
+
 fe-header.fe-header .mat-toolbar .header-content {
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
 
   .page-title {

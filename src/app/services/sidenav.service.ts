@@ -11,6 +11,7 @@ export class SidenavService {
   constructor() { }
 
   public isOpen(): boolean {
+    if (this.sidenav === undefined) return false;
     return this.sidenav.opened;
   }
 
