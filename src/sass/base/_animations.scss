@@ -123,6 +123,31 @@
 
 //
 
+@keyframes titleMoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes titleMoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+//
+
 @keyframes moveInLeft_matching {
   0% {
     opacity: 0;

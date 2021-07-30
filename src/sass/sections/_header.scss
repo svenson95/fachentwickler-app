@@ -1,16 +1,14 @@
 fe-header.fe-header {
-  box-shadow: var(--box-shadow);
   z-index: 3;
 }
 
 fe-header.fe-header .mat-toolbar {
   height: 80px;
   width: 100%;
-  background: -moz-linear-gradient(left, var(--background-primary) 0%, var(--background-secondary) 100%);
-  background: -webkit-linear-gradient(left, var(--background-primary) 0%, var(--background-secondary) 100%);
-  background: linear-gradient(to left, var(--background-primary) 0%, var(--background-secondary) 100%);
+  background-color: var(--background-primary);
   justify-content: space-between;
   transition: height 250ms ease-out;
+  box-shadow: var(--box-shadow);
 
   .header-wrapper {
     display: flex;
@@ -47,24 +45,22 @@ fe-header.fe-header .mat-toolbar .header-content {
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 6px 10px;
+    padding: 8px;
 
     color: var(--text-color-1);
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 1px;
+    @include titleMoveInRightAnimation;
 
     @include to-md {
       flex-shrink: 1;
     }
 
     @include to-xs {
+      font-size: .8em;
       margin-left: 0;
       padding: 0;
-    }
-
-    @include to-tiny {
-      font-size: .8em;
     }
 
     .title {
@@ -198,7 +194,7 @@ fe-header.fe-header .header-toolbar {
 }
 
 fe-header.fe-header .header-progress-bar {
-  height: var(--progressbar-height);
+  height: 1px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -216,10 +212,6 @@ fe-header.fe-header .header-progress-bar {
   fe-header.fe-header .header-toolbar {
     height: 60px;
     transition: height 300ms ease-out;
-
-    @include to-xs {
-      height: 50px;
-    }
   }
 }
 

@@ -10,7 +10,7 @@
       <fe-icon></fe-icon>
     </a>
     <div class="header-content">
-      <div class="page-title" (click)="goToSubject()">
+      <div class="page-title" (click)="goToSubject()" *ngIf="!isMobile || (isMobile && !sidenavService.isOpen())">
         <span class="bracket" *ngIf="!isMobile">[</span>
         <p class="title" [innerHTML]="headerService.pageTitle"></p>
         <span class="bracket" *ngIf="!isMobile">]</span>
