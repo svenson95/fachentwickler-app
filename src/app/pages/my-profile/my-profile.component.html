@@ -16,7 +16,7 @@
           <button class="discard-change-btn" (click)="toggleChangeName()" *ngIf="name.enabled && name.value === authService.user.name">
             Abbrechen
           </button>
-          <button class="save-change-btn" (click)="saveChangeName()" *ngIf="name.enabled && name.value !== authService.user.name" [disabled]="email.enabled || password.enabled">
+          <button class="save-change-btn" (click)="saveChangeName()" *ngIf="name.enabled && name.value !== authService.user.name" [disabled]="email.enabled || password.enabled || isLoading">
             Speichern
           </button>
         </div>
@@ -34,7 +34,7 @@
             <button class="discard-change-btn" (click)="toggleChangeEmail()" *ngIf="email.enabled && email.value === authService.user.email">
               Abbrechen
             </button>
-            <button class="save-change-btn" type="submit" *ngIf="email.enabled && email.value !== authService.user.email" [disabled]="name.enabled || password.enabled">
+            <button class="save-change-btn" type="submit" *ngIf="email.enabled && email.value !== authService.user.email" [disabled]="name.enabled || password.enabled || isLoading">
               Speichern
             </button>
           </ng-container>
@@ -45,7 +45,7 @@
               <mat-error *ngIf="verificationCode.hasError('required') && verificationCode.touched">Verifizierungscode ist erforderlich</mat-error>
               <mat-error *ngIf="verificationCode.hasError('incorrect') && verificationCode.touched">Verifizierungscode ungültig</mat-error>
             </mat-form-field>
-            <button class="save-change-btn" type="submit" *ngIf="isConfirmingEmail">
+            <button class="save-change-btn" type="submit" *ngIf="isConfirmingEmail" [disabled]="isLoading">
               Bestätigen
             </button>
           </ng-container>
@@ -70,7 +70,7 @@
           <button class="discard-change-btn" (click)="toggleChangePassword()" *ngIf="password.value.length === 0">
             Abbrechen
           </button>
-          <button class="save-change-btn" type="submit" *ngIf="password.enabled && password.value.length > 0" [disabled]="name.enabled || email.enabled">
+          <button class="save-change-btn" type="submit" *ngIf="password.enabled && password.value.length > 0" [disabled]="name.enabled || email.enabled || isLoading">
             Speichern
           </button>
         </form>
@@ -93,7 +93,7 @@
             <mat-slide-toggle class="fe-theme-toggle" [checked]="themeService.isDarkTheme()" (change)="toggleTheme()">
             </mat-slide-toggle>
           </mat-form-field>
-          <button class="save-change-btn" (click)="saveChangeTheme()" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme" [disabled]="isConfirmingEmail">
+          <button class="save-change-btn" (click)="saveChangeTheme()" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme" [disabled]="isConfirmingEmail || isLoading">
             Speichern
           </button>
         </div>

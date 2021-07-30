@@ -1,24 +1,30 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Subscription } from 'rxjs';
 
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 import { ThemeService } from '../../services/theme.service';
+import { LoadingService } from '../../services/loading.service';
+
 import { inputsMatch } from '../../validators/match.validator';
 
 @Component({
   selector: 'fe-my-profile',
   templateUrl: './my-profile.component.html'
 })
-export class MyProfileComponent implements OnInit {
+export class MyProfileComponent implements OnInit, OnDestroy {
 
   isConfirmingEmail: boolean;
   isConfirmingPassword: boolean;
   progressPercentage: number;
+
+  isLoading: boolean;
+  loadingSubscription: Subscription;
 
   emailFormGroup: FormGroup;
   passwordFormGroup: FormGroup;
@@ -40,6 +46,7 @@ export class MyProfileComponent implements OnInit {
               public authService: AuthService,
               public themeService: ThemeService,
               private dataService: DataService,
+              private loadingService: LoadingService,
               private matSnackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
@@ -50,6 +57,11 @@ export class MyProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.initUserProgress();
+    this.loadingSubscription = this.loadingService.loading$.subscribe(value => this.isLoading = value);
+  }
+
+  ngOnDestroy(): void {
+    this.loadingSubscription.unsubscribe();
   }
 
   initUserProgress(): void {
