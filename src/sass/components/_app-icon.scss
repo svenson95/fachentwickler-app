@@ -45,7 +45,7 @@
 }
 
 fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-icon-wrapper {
-  @include to-md {
+  @include to-xs {
     margin-right: 0;
   }
 }
@@ -102,7 +102,7 @@ fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-logo-wr
     align-self: center;
     padding: 5px;
     margin-left: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
     fill: var(--tertiary-color);
 
     .fe-app-name {
@@ -112,11 +112,13 @@ fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-logo-wr
 }
 
 fe-header.fe-header .mat-toolbar .header-wrapper.sidenav--open {
-  .fe-app-name {
-    @include logoMoveInLeftAnimation;
-  }
-  .page-title {
-    display: none;
+  @include to-xs {
+    .fe-app-name {
+      @include logoMoveInLeftAnimation;
+    }
+    .page-title {
+      display: none;
+    }
   }
 }
 

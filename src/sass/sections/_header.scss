@@ -38,6 +38,10 @@ fe-header.fe-header .mat-toolbar .header-content {
   align-items: center;
   justify-content: space-between;
 
+  @include from-xs {
+    width: 100%;
+  }
+
   .page-title {
     display: flex;
     align-items: center;
