@@ -1,7 +1,7 @@
 ::ng-deep .cdk-overlay-container .more-menu {
   background-color: var(--background-primary);
   border-radius: var(--border-radius);
-  border: var(--progressbar-height) solid var(--grey-1);
+  border: 1px solid var(--grey-1);
   box-shadow: var(--box-shadow);
 
   .menu-btn .label {

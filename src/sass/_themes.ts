@@ -25,7 +25,7 @@ export const light: Theme = {
         "--grey-5": "#707070",
         "--grey-5-rgb": "112,112,112",
 
-        "--box-shadow": "rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px",
+        "--box-shadow": "rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(200, 200, 200, 0.2) 0px 4px 4px",
         "--button-shadow": "rgba(200, 200, 200, 0.4) 0px 4px 4px, rgba(220, 220, 220, 0.5) 0px 4px 4px",
 
         "--exam-background": "rgba(148, 170, 197, 0.15)",

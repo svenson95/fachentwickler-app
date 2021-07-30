@@ -43,17 +43,16 @@ p.fe-card-title {
   letter-spacing: 1.5px;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
+  margin-bottom: 2px;
 
   @include from-xs {
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 24px;
-    margin-bottom: 6px;
   }
 
   @include to-xs {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 20px;
-    margin-bottom: 5px;
   }
 }
 
@@ -67,6 +66,6 @@ p.fe-card-description {
   margin: 0;
 
   @include to-xs {
-    font-size: 1em;
+    font-size: .9em;
   }
 }

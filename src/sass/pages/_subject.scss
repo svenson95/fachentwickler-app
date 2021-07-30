@@ -38,14 +38,14 @@
   }
 
   .fe-topic-title {
-    background: -moz-linear-gradient(to right, var(--grey-1) 0%, var(--background-primary) 75%);
-    background: -webkit-linear-gradient(to right, var(--grey-1) 0%, var(--background-primary) 75%);
-    background: linear-gradient(to right, var(--grey-1) 0%, var(--background-primary) 75%);
+    background: -moz-linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
+    background: -webkit-linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
+    background: linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
     padding: 10px 12px;
     font-family: Nunito-Bold, sans-serif;
     line-height: 20px;
     border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
 
     @include from-md {
       margin-bottom: 0;
