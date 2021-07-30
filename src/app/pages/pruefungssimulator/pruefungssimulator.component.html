@@ -22,7 +22,7 @@
         <div class="input-wrapper" *ngIf="!currentQuestion.choices">
           <mat-form-field class="input choice-input">
             <mat-label>Antwort</mat-label>
-            <input matInput type="number" autocomplete="off" [(ngModel)]="choiceInput" />
+            <input matInput type="number" autocomplete="off" [(ngModel)]="choiceInput" inputmode="numeric" />
             <span matSuffix>&nbsp; EUR</span>
           </mat-form-field>
           <button class="fe-text-button" (click)="checkAnswer($event, null)"

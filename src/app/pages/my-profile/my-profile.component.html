@@ -41,7 +41,9 @@
           <ng-container *ngIf="isConfirmingEmail">
             <mat-form-field class="input verification-code mat-form-field-should-float" appearance="legacy">
               <mat-label>Verifizierungscode</mat-label>
-              <input matInput type="text" autocomplete="off" [formControl]="verificationCode" #verificationCodeInput="matInput" (keyup)="verificationCode.setValue(verificationCodeInput.value)" />
+              <input matInput type="number" autocomplete="off" inputmode="numeric" pattern="[0-9]*"
+                     [formControl]="verificationCode" #verificationCodeInput="matInput"
+                     (keyup)="verificationCode.setValue(verificationCodeInput.value)" />
               <mat-error *ngIf="verificationCode.hasError('required') && verificationCode.touched">Verifizierungscode ist erforderlich</mat-error>
               <mat-error *ngIf="verificationCode.hasError('incorrect') && verificationCode.touched">Verifizierungscode ungültig</mat-error>
             </mat-form-field>

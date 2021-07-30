@@ -7,7 +7,7 @@
           <p>Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem Verifizierungscode zugeschickt. </p>
           <mat-form-field class="input code">
             <mat-label>Verifizierungscode</mat-label>
-            <input matInput type="text" pattern="\d*" autocomplete="off" [formControl]="verificationCode" #codeInput/>
+            <input matInput type="number" inputmode="numeric" pattern="[0-9]*" autocomplete="off" [formControl]="verificationCode" #codeInput/>
             <mat-error *ngIf="verificationCode.hasError('required')">
               Verifizierungscode erforderlich
             </mat-error>
