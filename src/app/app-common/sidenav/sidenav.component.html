@@ -2,7 +2,7 @@
 
   <div class="section apps" *ngIf="authService.isAuthenticated">
     <button class="fe-text-button fe-pruefungssimulator-btn" routerLink="pruefungssimulator"
-            [class.active-route]="router.url.startsWith('/pruefungssimulator')" (click)="closeSidebar()"
+            [class.active-route]="router.url.startsWith('/pruefungssimulator')"
     >
       Prüfungssimulator
     </button>
@@ -14,7 +14,6 @@
       <div class="fe-nav-item-wrapper" *ngFor="let navItem of myClassSection">
         <a class="fe-nav-item" mat-list-item disableRipple
            *ngIf="navItem.url.startsWith('http://')"
-           (click)="closeSidebar()"
            [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
            [href]="navItem.url"
            target="_blank"
@@ -24,7 +23,6 @@
         </a>
         <a class="fe-nav-item" mat-list-item disableRipple
            *ngIf="!navItem.url.startsWith('http://')"
-           (click)="closeSidebar()"
            [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
            [routerLink]="'/' + navItem.url"
         >
@@ -41,7 +39,6 @@
       <a class="fe-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of subjectsSection"
          [routerLink]="'/' + navItem.url"
-         (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
       >
         <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
@@ -56,7 +53,6 @@
       <a class="fe-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of studySection"
          [routerLink]="'/' + navItem.url"
-         (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
          disabled
       >
@@ -72,7 +68,6 @@
       <a class="fe-nav-item" mat-list-item disableRipple
          *ngFor="let navItem of languageSection"
          [routerLink]="'/' + navItem.url"
-         (click)="closeSidebar()"
          [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
          disabled
       >

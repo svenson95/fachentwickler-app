@@ -37,12 +37,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  closeSidenav(): void {
-    if (this.sidenavService.isOpen() && this.isMobile) {
-      this.sidenavService.close();
-    }
-  }
-
   goToSubject(): void {
     const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
     if (subjectUrl && this.router.url !== subjectUrl) {
@@ -50,4 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
+  mobileLogoLink(): string {
+    return this.sidenavService.isOpen() ? '/' : (this.authService.isAuthenticated ? '/dashboard' : '/login');
+  }
 }
