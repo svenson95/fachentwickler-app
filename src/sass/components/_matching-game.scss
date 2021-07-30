@@ -305,9 +305,9 @@ $easeIn-duration: 400ms;
 }
 
 .fe-matching .container .slide-in-left {
-  @include moveInLeftAnimation_matching;
+  @include matchingMoveInLeftAnimation;
 }
 
 .fe-matching .container .slide-in-right {
-  @include moveInRightAnimation_matching;
+  @include matchingMoveInRightAnimation;
 }
