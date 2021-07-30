@@ -5,8 +5,13 @@
     margin-top: 40px;
     font-size: 1.2em;
 
+    @include from-xs {
+      margin-top: 40px;
+    }
+
     @include to-xs {
       font-size: 1em;
+      margin-top: 20px;
     }
 
     hr {
@@ -31,18 +36,35 @@
       }
     }
   }
+
+  .user-details .detail {
+    @include to-xs {
+      &:not(.theme) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .theme {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
 .fe-page.my-profile {
-  .start-change-btn,
-  .discard-change-btn,
-  .save-change-btn {
+  button.start-change,
+  button.discard-change,
+  button.save-change {
     width: 100px;
     border: none;
     outline: none;
     border-radius: 5px;
     padding: 5px 10px;
-    margin-left: 20px;
 
     font-size: .6em;
     text-transform: uppercase;
@@ -51,9 +73,13 @@
     &:hover:not([disabled]) {
       cursor: pointer;
     }
+
+    @include from-xs {
+      margin-left: 20px;
+    }
   }
 
-  .start-change-btn, .discard-change-btn {
+  button.start-change, button.discard-change {
     color: var(--text-color-1);
 
     &:disabled {
@@ -61,7 +87,7 @@
     }
   }
 
-  .start-change-btn {
+  button.start-change {
     background: rgba(var(--grey-4-rgb), .2);
 
     &:hover:not([disabled]) {
@@ -69,11 +95,11 @@
     }
   }
 
-  .discard-change-btn {
+  button.discard-change {
     background: rgba(var(--tertiary-color-rgb), .6);
   }
 
-  .save-change-btn {
+  button.save-change {
     background: rgba(var(--primary-color-rgb), 0.9);
     color: white;
 
@@ -85,8 +111,7 @@
 
 .fe-page.my-profile {
 
-  .input {
-
+  mat-form-field.fe-form-field {
     margin-bottom: .5rem;
 
     @include from-lg {
@@ -98,14 +123,6 @@
 
       &:disabled {
         opacity: 1;
-      }
-    }
-
-    &.theme {
-      line-height: normal;
-
-      .mat-form-field-infix {
-        display: flex;
       }
     }
 
@@ -141,6 +158,14 @@
       .mat-form-field-label-wrapper .mat-form-field-label {
         color: var(--text-color-3);
       }
+    }
+  }
+
+  mat-form-field.theme {
+    line-height: normal;
+
+    .mat-form-field-infix {
+      display: flex;
     }
   }
 }

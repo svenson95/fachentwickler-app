@@ -5,18 +5,22 @@ import { dark, light, Theme } from '../../sass/_themes';
     providedIn: 'root'
 })
 export class ThemeService {
-    private active: Theme = light;
+    private theme: Theme = light;
 
     constructor() {
         this.setActiveTheme(this.getActiveTheme());
     }
 
     getActiveTheme(): Theme {
-        return this.active;
+        return this.theme;
+    }
+
+    getActiveThemeTranslated(): string {
+      return this.theme.name === 'light' ? 'Hell' : 'Dunkel';
     }
 
     isDarkTheme(): boolean {
-        return this.active.name === dark.name;
+        return this.theme.name === dark.name;
     }
 
     setDarkTheme(): void {
@@ -28,15 +32,10 @@ export class ThemeService {
     }
 
     setActiveTheme(theme: Theme): void {
-        this.active = theme;
+        this.theme = theme;
 
-        // set css dark/light variables
-        const themeVariables = Object.keys(this.active.properties);
-        themeVariables.forEach(property => {
-            document.documentElement.style.setProperty(
-                property,
-                this.active.properties[property]
-            );
+        Object.keys(this.theme.properties).forEach(prop => {
+            document.documentElement.style.setProperty(prop, this.theme.properties[prop]);
         });
     }
 

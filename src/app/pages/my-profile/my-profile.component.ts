@@ -107,7 +107,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
     this.progress = new FormControl({ value: 0, disabled: true }, {
       updateOn: 'submit'
     });
-    this.theme = new FormControl({ value: this.themeService.getActiveTheme().name, disabled: true });
+    this.theme = new FormControl({ value: this.themeService.getActiveThemeTranslated(), disabled: true });
   }
 
   initFormGroups(): void {
@@ -269,7 +269,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
 
   toggleTheme(): void {
     this.themeService.toggleTheme();
-    this.theme.setValue(this.themeService.getActiveTheme().name);
+    this.theme.setValue(this.themeService.getActiveThemeTranslated());
   }
 
   saveChangeTheme(): void {
