@@ -2,14 +2,14 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Subject } from 'rxjs';
 
-import { PostMatching, MatchingPair } from '../../models/post';
-import { AuthService } from '../../services/auth/auth.service';
+import { PostMatching, MatchingPair } from '../../../models/post';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'fe-matching-game',
-  templateUrl: './matching-game.component.html'
+  templateUrl: './matching-card.component.html'
 })
-export class MatchingGameComponent implements OnInit {
+export class MatchingCardComponent implements OnInit {
 
   @Input() matching: PostMatching;
 

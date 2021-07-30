@@ -81,7 +81,7 @@ $easeIn-duration: 400ms;
     }
   }
 
-  .pair_items {
+  .match-pair-side {
     display: flex;
     flex-direction: column;
     transition: all 500ms ease;
@@ -97,7 +97,7 @@ $easeIn-duration: 400ms;
     &.left {
       padding-right: 0;
 
-      .btn-wrapper {
+      button.match-card {
         position: relative;
       }
     }
@@ -105,7 +105,7 @@ $easeIn-duration: 400ms;
     &.right {
       padding-left: 0;
 
-      .btn-wrapper {
+      button.match-card {
         flex-direction: row-reverse;
       }
     }
@@ -132,42 +132,9 @@ $easeIn-duration: 400ms;
     font-family: Nunito-Light, sans-serif;
   }
 
-  .btn-wrapper {
+  button.match-card {
     display: flex;
     align-items: center;
-
-    .left-connector {
-      height: 25px;
-      width: $connector-width;
-      background: $item-background;
-    }
-
-    .connector-wrapper {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-
-      .right-connector {
-        width: $connector-width;
-
-        &.top-bar {
-          background: $item-background;
-          flex: 1;
-        }
-
-        &.center-bar {
-          height: 25px;
-        }
-
-        &.bottom-bar {
-          background: $item-background;
-          flex: 1;
-        }
-      }
-    }
-  }
-
-  .item {
     justify-content: center;
     min-height: 100px;
     padding: 10px;
@@ -209,6 +176,35 @@ $easeIn-duration: 400ms;
     }
   }
 
+  .connector-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .left-connector {
+      height: 25px;
+      width: $connector-width;
+      background: $item-background;
+    }
+
+    .right-connector {
+      width: $connector-width;
+
+      &.top-bar {
+        background: $item-background;
+        flex: 1;
+      }
+
+      &.center-bar {
+        height: 25px;
+      }
+
+      &.bottom-bar {
+        background: $item-background;
+        flex: 1;
+      }
+    }
+  }
+
   .fe-text-button {
     display: flex;
     margin: 20px auto auto;
@@ -242,7 +238,7 @@ $easeIn-duration: 400ms;
 }
 
 #game {
-  .btn-wrapper:not(:last-of-type),
+  button.match-card:not(:last-of-type),
   .connector-container .connector-wrapper:not(:last-of-type) {
     margin-bottom: 10px;
   }
@@ -252,7 +248,7 @@ $easeIn-duration: 400ms;
   &.correct, &.wrong {
     transition: all $easeIn-duration ease-out;
 
-    .pair_items {
+    .match-pair-side {
       &.left {
         padding-right: 0;
         margin-right: 0;
@@ -304,10 +300,10 @@ $easeIn-duration: 400ms;
   }
 }
 
-.fe-matching .container .slide-in-left {
+#game .container .slide-in-left {
   @include matchingMoveInLeftAnimation;
 }
 
-.fe-matching .container .slide-in-right {
+#game .container .slide-in-right {
   @include matchingMoveInRightAnimation;
 }

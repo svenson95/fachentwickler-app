@@ -119,7 +119,7 @@
   }
 
   .fe-index-card--front {
-    background-image: url("../../assets/images/indexcard-background.png");
+    background-image: url("../../../assets/images/indexcard-background.png");
 
     .card-header, .content {
       margin-left: 80px;
@@ -135,7 +135,7 @@
   }
 
   .fe-index-card--back {
-    background-image: url("../../assets/images/indexcard-background-flipped.png");
+    background-image: url("../../../assets/images/indexcard-background-flipped.png");
     transform: rotateY(180deg);
 
     .card-header, .content {

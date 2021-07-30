@@ -10,7 +10,7 @@ import { UserProgressCardModule } from '../../components/cards/user-progress-car
 import { SchoolWeekCardModule } from '../../components/cards/school-week-card/school-week-card.module';
 import { QuizCardModule } from '../../components/cards/quiz-card/quiz-card.module';
 import { IndexCardModule } from '../../components/cards/index-card/index-card.module';
-import { MatchingGameModule } from '../../components/matching-game/matching-game.module';
+import { MatchingCardModule } from '../../components/cards/matching-card/matching-card.module';
 import { ScheduleCardModule } from '../../components/cards/schedule-card/schedule-card.module';
 
 
@@ -27,7 +27,7 @@ import { ScheduleCardModule } from '../../components/cards/schedule-card/schedul
     SchoolWeekCardModule,
     QuizCardModule,
     IndexCardModule,
-    MatchingGameModule,
+    MatchingCardModule,
     ScheduleCardModule,
   ]
 })

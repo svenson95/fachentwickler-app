@@ -18,27 +18,29 @@
 @import 'src/sass/components/card';
 @import 'src/sass/components/exam-item';
 @import 'src/sass/components/image-manager';
-@import 'src/sass/components/index-card';
 @import 'src/sass/components/lesson-footer';
 @import 'src/sass/components/list-number';
 @import 'src/sass/components/loading-spinner';
 @import 'src/sass/components/logout-dialog';
 @import 'src/sass/components/mat-form-field';
 @import 'src/sass/components/mat-snackbar';
-@import 'src/sass/components/matching-game';
-@import 'src/sass/components/news-card';
-@import 'src/sass/components/next-exams-card';
 @import 'src/sass/components/ngx-highlightjs';
 @import 'src/sass/components/pagination-bar';
 @import 'src/sass/components/post-badge';
 @import 'src/sass/components/post-element';
 @import 'src/sass/components/post-link';
-@import 'src/sass/components/quiz-card';
 @import 'src/sass/components/schedule';
-@import 'src/sass/components/school-week-card';
 @import 'src/sass/components/searchbar';
 @import 'src/sass/components/text-button';
-@import 'src/sass/components/user-progress-card';
+
+/* Components - Cards */
+@import 'src/sass/components/cards/index-card';
+@import 'src/sass/components/cards/matching-card';
+@import 'src/sass/components/cards/news-card';
+@import 'src/sass/components/cards/next-exams-card';
+@import 'src/sass/components/cards/quiz-card';
+@import 'src/sass/components/cards/school-week-card';
+@import 'src/sass/components/cards/user-progress-card';
 
 /* Sections */
 @import 'src/sass/sections/content';
