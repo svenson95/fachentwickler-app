@@ -236,18 +236,18 @@
       }
 
       fe-quiz-card,
-      fe-indexcards-card,
+      fe-index-card,
       fe-matching-game {
         min-width: 80%;
       }
 
-      fe-indexcards-card {
+      fe-index-card {
         @include to-md {
           width: 100%;
         }
       }
 
-      fe-indexcards-card,
+      fe-index-card,
       fe-matching-game {
         margin-top: 20px;
       }

@@ -1,7 +1,7 @@
-<div class="fe-page">
+<div class="fe-page index-cards">
 
   <mat-spinner class="fe-loading-spinner" *ngIf="indexCards === undefined"></mat-spinner>
-  <fe-indexcards-card [indexCards]="indexCards" *ngIf="indexCards !== undefined"></fe-indexcards-card>
+  <fe-index-card [indexCards]="indexCards" *ngIf="indexCards !== undefined"></fe-index-card>
   <fe-lesson-footer [postId]="indexCards._id" *ngIf="indexCards !== undefined"></fe-lesson-footer>
 
 </div>

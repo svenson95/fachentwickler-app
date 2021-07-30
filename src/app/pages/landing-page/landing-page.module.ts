@@ -9,7 +9,7 @@ import { NewsCardModule } from '../../components/cards/news-card/news-card.modul
 import { UserProgressCardModule } from '../../components/cards/user-progress-card/user-progress-card.module';
 import { SchoolWeekCardModule } from '../../components/cards/school-week-card/school-week-card.module';
 import { QuizCardModule } from '../../components/cards/quiz-card/quiz-card.module';
-import { IndexcardsCardModule } from '../../components/cards/indexcards-card/indexcards-card.module';
+import { IndexCardModule } from '../../components/cards/index-card/index-card.module';
 import { MatchingGameModule } from '../../components/matching-game/matching-game.module';
 import { ScheduleCardModule } from '../../components/cards/schedule-card/schedule-card.module';
 
@@ -26,7 +26,7 @@ import { ScheduleCardModule } from '../../components/cards/schedule-card/schedul
     UserProgressCardModule,
     SchoolWeekCardModule,
     QuizCardModule,
-    IndexcardsCardModule,
+    IndexCardModule,
     MatchingGameModule,
     ScheduleCardModule,
   ]

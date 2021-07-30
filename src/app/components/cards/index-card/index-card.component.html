@@ -1,11 +1,11 @@
-<mat-card class="fe-card indexcards-card">
-  <p class="fe-card-title" *ngIf="indexCards !== undefined"
+<mat-card class="fe-card index-card">
+  <p class="fe-card-title"
      [innerHTML]="indexCards.title"></p>
-  <p class="fe-card-description" *ngIf="indexCards !== undefined">
+  <p class="fe-card-description">
     <span [innerHTML]="indexCards.description"></span>
     <fe-post-badge [post]="indexCards"></fe-post-badge>
   </p>
-  <mat-card-content class="fe-card-content" *ngIf="indexCards !== undefined">
+  <mat-card-content class="fe-card-content">
     <div class="fe-index-card" [class.show-back]="isAnswerVisible">
       <div class="fe-index-card-inner">
         <div class="fe-index-card--front">

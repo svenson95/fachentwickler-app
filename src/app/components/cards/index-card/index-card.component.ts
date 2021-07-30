@@ -1,13 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { PostIndexCards } from '../../../models/post';
-import { DataService } from '../../../services/data/data.service';
 
 @Component({
-  selector: 'fe-indexcards-card',
-  templateUrl: './indexcards-card.component.html'
+  selector: 'fe-index-card',
+  templateUrl: './index-card.component.html'
 })
-export class IndexcardsCardComponent implements OnInit {
+export class IndexCardComponent implements OnInit {
 
   @Input() indexCards: PostIndexCards;
 
@@ -15,7 +14,7 @@ export class IndexcardsCardComponent implements OnInit {
   isAnswerVisible = false;
   end = false;
 
-  constructor(public dataService: DataService) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
