@@ -107,7 +107,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
     this.progress = new FormControl({ value: 0, disabled: true }, {
       updateOn: 'submit'
     });
-    this.theme = new FormControl({ value: this.themeService.getActiveThemeTranslated(), disabled: true });
+    this.theme = new FormControl({ value: this.themeService.getActiveTheme().name, disabled: true });
   }
 
   initFormGroups(): void {
@@ -255,7 +255,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
           this.isConfirmingPassword = undefined;
           this.matSnackBar.openFromComponent(SnackbarComponent, {
             duration: 3000,
-            data: 'Passwort geändert'
+            data: 'Passwort erfolgreich geändert'
           });
         }, (errorRes) => {
           this.matSnackBar.openFromComponent(SnackbarComponent, {
@@ -269,7 +269,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
 
   toggleTheme(): void {
     this.themeService.toggleTheme();
-    this.theme.setValue(this.themeService.getActiveThemeTranslated());
+    this.theme.setValue(this.themeService.getActiveTheme().name);
   }
 
   saveChangeTheme(): void {
