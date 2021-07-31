@@ -70,13 +70,20 @@ export class VerifyComponent implements OnInit {
         this.router.navigateByUrl('/dashboard');
         this.isSubmitLoading = false;
       }, (error) => {
-        console.log(error);
+        if (error.error.code === 'TokenNotFoundException') {
+          this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: 2500,
+            data: 'Der Verifizierungscode ist ungültig, klicke auf nochmal senden um einen neuen Code zu erhalten.'
+          });
+        } else {
+          this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: 2500,
+            data: 'Fehler aufgetreten! ' + error.error.message
+          });
+        }
+
         this.isSubmitLoading = false;
         this.codeInput.nativeElement.blur();
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
-        });
       }
     );
   }
@@ -102,6 +109,11 @@ export class VerifyComponent implements OnInit {
     this.authService.resendVerificationCode(this.authService.user.email).subscribe(
     (result) => {
       this.isResendLoading = false;
+      this.snackBar.openFromComponent(SnackbarComponent, {
+        duration: 2500,
+        data: 'Verifizierungscode erfolgreich versendet.'
+      });
+
       setTimeout(() => {
         this.resendTimeout = undefined;
       }, 2500);
@@ -110,7 +122,7 @@ export class VerifyComponent implements OnInit {
       console.log(this.authService.token);
       this.snackBar.openFromComponent(SnackbarComponent, {
         duration: 2500,
-        data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
+        data: 'Fehler auftreten. ' + error.error.message
       });
 
       this.isResendLoading = false;
