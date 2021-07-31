@@ -18,3 +18,7 @@ mat-card.fe-card mat-spinner.fe-loading-spinner.mat-spinner {
     }
   }
 }
+
+.fe-spinner-wrapper {
+  max-width: var(--max-width);
+}
