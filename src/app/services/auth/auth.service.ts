@@ -223,7 +223,7 @@ export class AuthService {
             }));
     }
 
-    authenticated(): Observable<TokenResponse> {
+    refresh(): Observable<TokenResponse> {
         const headers = new HttpHeaders()
             .set('Content-Type', 'application/json')
             .set('Authorization', this.token);
@@ -234,6 +234,7 @@ export class AuthService {
                 if (response.success) {
                     this.user = response.user;
                     this.isAuthenticated = true;
+                    this.token = response.token;
                     this.storeData();
                 }
                 return response;
@@ -242,37 +243,32 @@ export class AuthService {
 
     async restore(): Promise<boolean | TokenResponse> {
         const stored = localStorage.getItem(CREDENTIALS_STORAGE_KEY);
-        if (stored === null) {
-            return;
-        }
+        if (stored === null) return;
 
         const data = JSON.parse(stored);
         this.user = data.user;
         this.token = data.token;
         this.isAuthenticated = true;
-        if (this.themeService.getActiveTheme().name !== data.theme) {
-            this.themeService.toggleTheme();
-        }
+        if (this.themeService.getActiveTheme().name !== data.theme) this.themeService.toggleTheme();
+        if (this.token === undefined) return;
 
-        if (this.token === undefined) {
-            return;
-        }
-
-        await this.authenticated().subscribe(
+        await this.refresh().subscribe(
         (response) => {
             if (response.user) {
                 this.user = response.user;
                 this.token = response.token;
                 this.isAuthenticated = true;
-                if (this.themeService.getActiveTheme().name !== response.user.theme) {
-                    this.themeService.toggleTheme();
-                }
+                if (this.themeService.getActiveTheme().name !== response.user.theme) this.themeService.toggleTheme();
                 this.storeData();
                 return response;
             }
         }, (error) => {
+            this.matSnackBar.openFromComponent(SnackbarComponent, {
+                duration: 3000,
+                data: 'Fehler aufgetreten!' + error.error.message
+            });
             // console.log('ERROR authenticated', error);
-            this.invalidate();
+            // this.invalidate();
         });
 
     }
