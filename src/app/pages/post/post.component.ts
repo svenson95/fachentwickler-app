@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 import { Post } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
@@ -25,7 +26,16 @@ export class PostComponent implements OnInit {
       subjects.find(sub => sub.url === this.router.url.substring(0, this.router.url.indexOf('/', 2))
     )?.title);
 
-    const postUrl = router.url.substr(router.url.indexOf('/', 2) + 1, router.url.length);
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => this.loadData());
+  }
+
+  ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData(): void {
+    const postUrl = this.router.url.substr(this.router.url.indexOf('/', 2) + 1, this.router.url.length);
 
     if (postUrl === 'topic/testarticle') {
       this.post = testArticle;
@@ -36,9 +46,6 @@ export class PostComponent implements OnInit {
       (data) => this.post = data,
       (error) => console.log('Error while GET post', error)
     );
-  }
-
-  ngOnInit(): void {
   }
 
 }
