@@ -1,7 +1,7 @@
 <mat-card class="fe-card news-card">
   <div class="fe-card-header">
     <p class="fe-card-title">Ankündigungen</p>
-    <a class="fe-text-button secondary show-more" routerLink="/mitteilungen" *ngIf="onlyLastOne === true">
+    <a class="fe-text-button secondary show-more" routerLink="/mitteilungen" *ngIf="news && !allNewsLength">
       <span>Mitteilungen</span>
     </a>
   </div>
@@ -17,7 +17,7 @@
           <span>Lesen</span>
         </a>
       </div>
-      <fe-pagination-bar *ngIf="onlyLastOne === false && news !== undefined" [totalItems]="allNewsLength" [currentPage]="currentPage" (changePage)="loadPage($event)"></fe-pagination-bar>
+      <fe-pagination-bar *ngIf="news && allNewsLength" [totalItems]="allNewsLength" [currentPage]="currentPage" (changePage)="loadPage($event)"></fe-pagination-bar>
     </div>
   </mat-card-content>
 </mat-card>

@@ -10,9 +10,9 @@ import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { NextExamsCardModule } from '../../components/cards/next-exams-card/next-exams-card.module';
 import { ScheduleCardModule } from '../../components/cards/schedule-card/schedule-card.module';
 import { SchoolWeekCardModule } from '../../components/cards/school-week-card/school-week-card.module';
-import { NewsCardModule } from '../../components/cards/news-card/news-card.module';
 import { UserProgressCardModule } from '../../components/cards/user-progress-card/user-progress-card.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
+import { NewsCardContainerModule } from '../../containers/news-card-container/news-card-container.module';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -25,9 +25,9 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     SchoolWeekCardModule,
     NextExamsCardModule,
     ScheduleCardModule,
-    NewsCardModule,
     UserProgressCardModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    NewsCardContainerModule
   ]
 })
 export class DashboardModule { }

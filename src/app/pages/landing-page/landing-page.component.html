@@ -53,10 +53,10 @@
       </div>
     </div>
     <div class="fe-components-wrapper">
+      <fe-user-progress-card [user]="testUser" [dashboard]="testDashboard"></fe-user-progress-card>
       <fe-next-exams-card [nextExams]="testDashboard.nextExams"></fe-next-exams-card>
       <fe-schedule-card [schedule]="testSchedule"></fe-schedule-card>
-      <fe-user-progress-card [user]="testUser" [dashboard]="testDashboard"></fe-user-progress-card>
-      <fe-news-card [news]="testDashboard.schoolNews" [onlyLastOne]="true"></fe-news-card>
+      <fe-news-card-container [news]="testDashboard.schoolNews" [onlyNewest]="true"></fe-news-card-container>
       <fe-school-week-card [week]="testSchoolWeek"></fe-school-week-card>
     </div>
   </div>

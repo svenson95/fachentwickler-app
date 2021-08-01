@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../../models/user';
 import { DashboardData } from '../../models/dashboard-data';
+import { SchoolNews } from '../../models/school-news';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
@@ -13,29 +13,29 @@ import { schedule } from '../../../data/schedule';
 })
 export class DashboardComponent implements OnInit {
 
-  user: User;
   schedule = schedule;
 
   constructor(private headerService: HeaderService,
-              private authService: AuthService,
+              public authService: AuthService,
               public dataService: DataService
   ) {
     this.headerService.setPageTitle('Dashboard');
-    this.user = this.authService.user;
   }
 
   ngOnInit(): void {
     this.setupComponent();
   }
 
-  /* -- Component functions -- */
+  getLatest(): SchoolNews[] {
+    if (this.dataService.dashboard.schoolNews === undefined) return;
+    return [this.dataService.dashboard.schoolNews[0]];
+  }
+
   setupComponent(): void {
     if (!this.dataService.dashboard) {
 
       this.dataService.dashboard = {} as DashboardData;
-      this.dataService.getAllNews().subscribe(response => {
-        this.dataService.dashboard.schoolNews = response;
-      });
+      this.dataService.getAllNews().subscribe(response => this.dataService.dashboard.schoolNews = response);
       this.fetchNextExams();
       this.authService.fetchAllLessons();
     }

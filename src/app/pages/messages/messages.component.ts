@@ -14,8 +14,6 @@ import { DataService } from '../../services/data/data.service';
 export class MessagesComponent implements OnInit, OnDestroy {
 
   news: SchoolNews[];
-  allNewsLength: number;
-  currentPage = 0;
   isLoading: boolean;
   subscription: Subscription = new Subscription();
 
@@ -27,30 +25,12 @@ export class MessagesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription.add(this.loadService.loading$.pipe(delay(0)).subscribe((status: boolean) => {
-      this.isLoading = status;
-    }));
-    this.subscription.add(this.dataService.getAllNewsLength().subscribe(value => {
-      this.allNewsLength = value;
-    }));
-    this.subscription.add(this.dataService.getAllNews().subscribe(res => {
-      this.news = res;
-    }));
+    this.subscription.add(this.loadService.loading$.pipe(delay(0)).subscribe(value => this.isLoading = value));
+    this.subscription.add(this.dataService.getAllNews().subscribe(res => this.news = res));
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-  }
-
-  loadPage(page): void {
-    if (this.isLoading) {
-      return;
-    }
-
-    this.currentPage = page;
-    this.dataService.getAllNews(page).subscribe(res => {
-      this.news = res;
-    });
   }
 
 }

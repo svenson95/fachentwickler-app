@@ -5,17 +5,17 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 import { MessagesComponent } from './messages.component';
 import { MessagesPageRoutingModule } from './messages-routing.module';
 
-import { NewsCardModule } from '../../components/cards/news-card/news-card.module';
+import { NewsCardContainerModule } from '../../containers/news-card-container/news-card-container.module';
 
 
 
 @NgModule({
   declarations: [MessagesComponent],
-    imports: [
-      CommonModule,
-      MessagesPageRoutingModule,
-      AngularMaterialModule,
-      NewsCardModule
-    ]
+  imports: [
+    CommonModule,
+    MessagesPageRoutingModule,
+    AngularMaterialModule,
+    NewsCardContainerModule
+  ]
 })
 export class MessagesModule { }
