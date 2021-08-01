@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -8,14 +8,16 @@ import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { subjects } from '../../../data/menu-items';
 import { testArticle } from '../../../data/posts/post-template';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'fe-post',
   templateUrl: './post.component.html'
 })
-export class PostComponent implements OnInit {
+export class PostComponent implements OnInit, OnDestroy {
 
   post: Post;
+  subscription: Subscription = new Subscription();
 
   constructor(private dataService: DataService,
               private router: Router,
@@ -25,13 +27,16 @@ export class PostComponent implements OnInit {
     this.headerService.setPageTitle(
       subjects.find(sub => sub.url === this.router.url.substring(0, this.router.url.indexOf('/', 2))
     )?.title);
-
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => this.loadData());
   }
 
   ngOnInit(): void {
+    this.subscription.add(this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => this.loadData()));
     this.loadData();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   loadData(): void {

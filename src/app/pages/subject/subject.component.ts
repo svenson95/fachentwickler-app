@@ -17,7 +17,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
   data: any;
   subject: Subject;
   subjectTitle: string;
-  ROUTER_EVENT: Subscription;
+  subscription: Subscription = new Subscription();
   PostType = PostType;
 
   constructor(private router: Router,
@@ -25,27 +25,29 @@ export class SubjectComponent implements OnInit, OnDestroy {
               private dataService: DataService,
               private headerService: HeaderService
   ) {
-    this.ROUTER_EVENT = this.router.events.subscribe((nav) => {
-      if (nav instanceof NavigationEnd) {
-        this.subjectTitle = subjects.find(sub => sub.url === nav.url)?.title;
-        this.headerService.setPageTitle(this.subjectTitle);
-        this.dataService.getSubject(nav.url.substr(1)).subscribe(
-          (data) => {
-            this.subject = data;
-          },
-          (error) => {
-            console.log('Error while GET subject', error);
-          }
-        );
-      }
-    });
+    const subject = subjects.find(sub => sub.url === router.url);
+    this.headerService.setPageTitle(subject.title);
+    this.subjectTitle = subject.title;
   }
 
   ngOnInit(): void {
+    this.loadSubjectBy(this.router.url);
+    this.subscription.add(this.router.events.subscribe((nav) => {
+      if (nav instanceof NavigationEnd) {
+        this.loadSubjectBy(nav.url);
+      }
+    }));
   }
 
   ngOnDestroy(): void {
-    this.ROUTER_EVENT.unsubscribe();
+    this.subscription.unsubscribe();
+  }
+
+  loadSubjectBy(url): void {
+    this.dataService.getSubject(url).subscribe(
+      (data) => this.subject = data,
+      (error) => console.log('Error while GET subject', error)
+    );
   }
 
 }
