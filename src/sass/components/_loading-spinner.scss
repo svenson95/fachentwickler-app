@@ -1,27 +1,12 @@
 /* LOADING SPINNER */
-mat-spinner.fe-loading-spinner.mat-spinner,
-mat-card.fe-card mat-spinner.fe-loading-spinner.mat-spinner {
-  margin: 50px auto;
-  $size: 30px;
-
-  width: $size !important;
-  height: $size !important;
-
-  svg {
-    width: $size !important;
-    height: $size !important;
-
-    circle {
-      stroke: var(--tertiary-color);
-      stroke-width: 6px !important;
-    }
-  }
-}
-
-.fe-spinner-wrapper {
-  max-width: var(--max-width);
-}
-
 .fe-loading-indicator {
   max-width: var(--max-width);
+
+  mat-spinner.fe-loading-spinner.mat-spinner {
+    margin: 50px auto;
+
+    svg circle {
+      stroke: var(--tertiary-color);
+    }
+  }
 }

@@ -1,6 +1,6 @@
-<button class="fe-text-button" [type]="type" [disabled]="disabled">
-  <span [class.hidden]="isLoading">
+<button class="fe-text-button fe-state-button" [type]="type" [disabled]="disabled">
+  <span class="label" [class.hidden]="isLoading">
     <ng-content></ng-content>
   </span>
-  <fe-loading-spinner *ngIf="isLoading"></fe-loading-spinner>
+  <fe-loading-spinner *ngIf="isLoading" size="18"></fe-loading-spinner>
 </button>

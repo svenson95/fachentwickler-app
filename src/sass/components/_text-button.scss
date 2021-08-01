@@ -62,28 +62,27 @@
 }
 
 // Button state
-mat-card .fe-text-button,
-.mat-dialog-container .fe-text-button {
+.fe-state-button {
   position: relative;
   font-size: 0.9rem;
 
-  mat-spinner.fe-loading-spinner.mat-spinner {
-    margin: 0 !important;
-    $size: 18px;
-    width: $size !important;
-    height: $size !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .label {
+    display: flex;
 
-    svg {
-      width: $size !important;
-      height: $size !important;
+    span {
+      align-self: center;
     }
   }
 
   .hidden {
     opacity: 0;
+  }
+
+  mat-spinner.fe-loading-spinner.mat-spinner {
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

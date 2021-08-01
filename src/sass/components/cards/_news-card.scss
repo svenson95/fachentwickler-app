@@ -78,16 +78,3 @@
     color: var(--tertiary-color);
   }
 }
-
-.fe-card.news-card .fe-news-container .fe-loading-spinner {
-
-  @include from-xs {
-    margin-top: -12px !important;
-    margin-bottom: 4px !important;
-  }
-
-  @include to-xs {
-    margin-top: 20px !important;
-    margin-bottom: 2px !important;
-  }
-}

@@ -26,15 +26,11 @@
       }
     }
 
-    .fe-loading-spinner {
-      margin-top: 80px;
-      margin-bottom: 80px;
-    }
-
     .choice-container {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 20px;
 
       @include from-lg {
         max-width: 400px;

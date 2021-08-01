@@ -86,22 +86,6 @@ mat-dialog-content.fe-image-manager {
         outline: none;
       }
     }
-
-    .fe-text-button {
-      width: 200px;
-
-      .fe-loading-spinner {
-        margin: 0 auto !important;
-        $size: 18px;
-        width: $size !important;
-        height: $size !important;
-
-        svg {
-          width: $size !important;
-          height: $size !important;
-        }
-      }
-    }
   }
 
   .fe-im-recent-images {
@@ -240,15 +224,9 @@ mat-dialog-content.fe-image-manager {
     }
   }
 
-  .fe-text-button {
-    height: fit-content;
-    display: flex;
-    align-items: center;
-
-    ion-icon {
-      font-size: 1.5em;
-      margin-left: 5px;
-    }
+  .fe-text-button ion-icon {
+    font-size: 1.5em;
+    margin-left: 5px;
   }
 }
 

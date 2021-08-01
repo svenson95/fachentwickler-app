@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../../app-common/snackbar/snackbar.component';
 
@@ -15,9 +15,10 @@ export class DeleteImageDialogComponent implements OnInit {
 
   isLoadingDelete: boolean;
 
-  constructor(public authService: AuthService,
+  constructor(@Inject(MAT_DIALOG_DATA) private data: any,
+              public dialogRef: MatDialogRef<DeleteImageDialogComponent>,
+              public authService: AuthService,
               private dataService: DataService,
-              @Inject(MAT_DIALOG_DATA) private data: any,
               private snackBar: MatSnackBar
   ) { }
 
@@ -27,16 +28,21 @@ export class DeleteImageDialogComponent implements OnInit {
   deleteRequest(): void {
     this.isLoadingDelete = true;
     this.dataService.deleteImageById(this.data.postId).subscribe(
-        (response) => {
-        }, (error) => {
-          console.log('Delete image failed', error);
-          this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Fehler beim Löschen: ' + error
-          });
-        }, () => {
-          this.isLoadingDelete = false;
-        }
+      (response) => {
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: 'Bild erfolgreich gelöscht'
+        });
+      }, (error) => {
+        console.log('Delete image failed', error);
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Fehler beim Löschen: ' + error
+        });
+      }, () => {
+        this.isLoadingDelete = undefined;
+        this.dialogRef.close();
+      }
     );
   }
 

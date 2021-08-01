@@ -1,7 +1,7 @@
 <div class="searchbar-wrapper" [class.is-searching]="router.url.startsWith('/search')">
   <mat-form-field class="search-bar-form-field" appearance="fill">
     <mat-icon class="unselectable" matSuffix (click)="searchForPost()" *ngIf="!searchPostService.isSearching">search</mat-icon>
-    <mat-spinner matSuffix class="fe-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
+    <fe-loading-spinner matSuffix *ngIf="searchPostService.isSearching" size="18"></fe-loading-spinner>
     <input matInput type="text" autocomplete="off" [(ngModel)]="searchPostService.searchTerm" placeholder="Suchbegriff" #searchInput>
   </mat-form-field>
 </div>

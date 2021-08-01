@@ -13,7 +13,7 @@
       </p>
     </div>
     <div class="button-wrapper" *ngIf="isDashboardPage">
-      <fe-loading-spinner *ngIf="isLoading"></fe-loading-spinner>
+      <fe-loading-spinner *ngIf="isLoading" size="24"></fe-loading-spinner>
       <button class="previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week === 1 || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
