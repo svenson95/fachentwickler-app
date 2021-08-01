@@ -55,10 +55,10 @@
         </p>
       </div>
     </div>
-    <button class="fe-text-button" *ngIf="authService.user.role === UserRole.ADMIN" (click)="deleteImage(selectedImage.file._id)" [disabled]="!selectedImage">
+    <fe-button-state *ngIf="authService.user.role === UserRole.ADMIN" [disabled]="!selectedImage" (click)="deleteImage(selectedImage.file._id)">
       <span>Bild löschen</span>
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
-    </button>
+    </fe-button-state>
   </div>
   <hr class="fe-divider-line"/>
   <div class="title-wrapper">

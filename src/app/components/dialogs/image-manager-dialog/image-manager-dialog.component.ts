@@ -1,14 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { SnackbarComponent } from '../../../app-common/snackbar/snackbar.component';
-import { delay } from 'rxjs/operators';
 
 import { ImageData } from '../../../models/image-data';
 import { UserRole } from '../../../models/user';
 import { AuthService } from '../../../services/auth/auth.service';
 import { DataService } from '../../../services/data/data.service';
 import { LoadingService } from '../../../services/loading.service';
+
 import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-dialog.component';
 
 @Component({
@@ -33,21 +31,20 @@ export class ImageManagerDialogComponent implements OnInit {
   constructor(public authService: AuthService,
               private dataService: DataService,
               private loadingService: LoadingService,
-              private dialog: MatDialog,
-              private snackBar: MatSnackBar
+              private dialog: MatDialog
   ) {
-    this.dataService.getAllImagesLength().subscribe(
-        (data) => {
-          this.allImagesLength = data;
-        },
-        (error) => {
-          console.log('Error while GET images count', error);
-        }
-    );
+    this.loadAllImagesCount();
+    this.getImages();
   }
 
   ngOnInit(): void {
-    this.getImages();
+  }
+
+  loadAllImagesCount(): void {
+    this.dataService.getAllImagesLength().subscribe(
+      (data) => this.allImagesLength = data,
+      (error) => console.log('Error while GET images count', error)
+    );
   }
 
   onSelect(event): void {
@@ -75,6 +72,7 @@ export class ImageManagerDialogComponent implements OnInit {
           await this.dataService.getImageById(response.file.id).subscribe(
               (image) => {
                 this.images.unshift(image);
+                this.images.pop();
                 this.dropzoneFile = [];
                 this.selectedImage = image;
                 this.allImagesLength += 1;
@@ -100,17 +98,9 @@ export class ImageManagerDialogComponent implements OnInit {
       autoFocus: false,
       data: { postId: id }
     });
-    dialogRef.afterClosed().subscribe((confirmed: any) => {
-      if (confirmed) {
-        this.images = this.images.filter(el => el.file._id !== id);
-        this.selectedImage = undefined;
-        this.allImagesLength -= 1;
-
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: 'Bild erfolgreich gelöscht'
-        });
-      }
+    dialogRef.afterClosed().subscribe(() => {
+      this.getImages();
+      this.allImagesLength -= 1;
     });
   }
 
@@ -163,10 +153,7 @@ export class ImageManagerDialogComponent implements OnInit {
     this.dataService.getMultipleImages(page, undefined, this.isSortedAscending ? 'ascending' : 'descending').subscribe(data => {
       this.images = data;
       this.isLoadingImages = false;
-
-      if (!this.selectedImage) {
-        this.selectedImage = data[0];
-      }
+      this.selectedImage = data[0];
     });
   }
 }
