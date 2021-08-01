@@ -9,7 +9,7 @@
     <div class="fe-exam-item-wrapper" *ngFor="let exam of nextExams">
       <fe-exam-item [exam]="exam"></fe-exam-item>
     </div>
-    <mat-spinner class="fe-loading-spinner" *ngIf="isLoading && !nextExams"></mat-spinner>
+    <fe-loading-spinner *ngIf="isLoading && !nextExams"></fe-loading-spinner>
     <p class="fe-no-data" *ngIf="nextExams?.length === 0">Keine anstehenden Klausuren</p>
   </mat-card-content>
 </mat-card>

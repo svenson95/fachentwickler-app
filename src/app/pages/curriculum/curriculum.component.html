@@ -23,7 +23,5 @@
       <fe-school-week-card [class]="'week-' + week.schoolWeek" *ngFor="let week of schoolYears[selectedYear]?.weeks" [week]="week"></fe-school-week-card>
     </div>
   </div>
-  <div class="fe-spinner-wrapper">
-    <mat-spinner class="fe-loading-spinner" *ngIf="schoolYears === undefined"></mat-spinner>
-  </div>
+  <fe-loading-spinner *ngIf="schoolYears === undefined"></fe-loading-spinner>
 </div>

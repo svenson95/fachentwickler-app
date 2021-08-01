@@ -4,7 +4,9 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 
 import { SearchComponent } from './search.component';
 import { SearchRoutingModule } from './search-routing.module';
-import {PostLinkModule} from '../../components/post-link/post-link.module';
+
+import { PostLinkModule } from '../../components/post-link/post-link.module';
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 
 
 
@@ -14,7 +16,8 @@ import {PostLinkModule} from '../../components/post-link/post-link.module';
     CommonModule,
     AngularMaterialModule,
     SearchRoutingModule,
-    PostLinkModule
+    PostLinkModule,
+    LoadingSpinnerModule
   ]
 })
 export class SearchModule { }

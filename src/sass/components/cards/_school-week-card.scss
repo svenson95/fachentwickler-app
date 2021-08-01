@@ -8,12 +8,18 @@ mat-card.fe-card.school-week-card {
     .fe-card-title {
     }
 
-    .fe-loading-spinner {
-      margin: 0 20px 0 auto !important;
+    .fe-loading-indicator {
+      margin-right: 20px;
+
+      .fe-loading-spinner {
+        margin: 0 !important;
+      }
     }
 
     .button-wrapper {
       height: fit-content;
+      display: flex;
+      align-items: center;
 
       .previous-week-btn,
       .next-week-btn {

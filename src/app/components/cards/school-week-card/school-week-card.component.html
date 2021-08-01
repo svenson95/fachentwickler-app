@@ -12,8 +12,8 @@
         </span>
       </p>
     </div>
-    <mat-spinner class="fe-loading-spinner" *ngIf="isLoading"></mat-spinner>
     <div class="button-wrapper" *ngIf="isDashboardPage">
+      <fe-loading-spinner *ngIf="isLoading"></fe-loading-spinner>
       <button class="previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week === 1 || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <mat-card-content class="fe-view-wrapper">
-    <mat-spinner class="fe-loading-spinner" *ngIf="week === undefined"></mat-spinner>
+    <fe-loading-spinner *ngIf="week === undefined"></fe-loading-spinner>
     <div class="weekday-group" *ngIf="week !== undefined">
 
       <div class="weekday-item" *ngFor="let week of weekdays">

@@ -17,7 +17,7 @@
         <p class="description" *ngIf="currentQuestion.description" [innerHTML]="currentQuestion.description"></p>
         <ng-container *ngIf="currentQuestion.image">
           <img class="question-image" *ngIf="image" [src]="image" alt="question-image">
-          <mat-spinner class="fe-loading-spinner" *ngIf="isLoading"></mat-spinner>
+          <fe-loading-spinner *ngIf="isLoading"></fe-loading-spinner>
         </ng-container>
         <div class="input-wrapper" *ngIf="!currentQuestion.choices">
           <mat-form-field class="input choice-input">

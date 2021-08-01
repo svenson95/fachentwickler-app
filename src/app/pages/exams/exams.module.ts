@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AngularMaterialModule } from '../../app-common/angular-material.module';
+
 import { ExamsComponent } from './exams.component';
 import { ExamsRoutingModule } from './exams-routing.module';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
+
 import { ExamItemModule } from '../../components/exam-item/exam-item.module';
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 
 
 
@@ -13,7 +16,8 @@ import { ExamItemModule } from '../../components/exam-item/exam-item.module';
     CommonModule,
     ExamsRoutingModule,
     AngularMaterialModule,
-    ExamItemModule
+    ExamItemModule,
+    LoadingSpinnerModule
   ]
 })
 export class ExamsModule { }

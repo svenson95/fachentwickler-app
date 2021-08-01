@@ -69,9 +69,7 @@
     </button>
   </div>
   <div class="fe-im-recent-images">
-    <div class="fe-spinner-wrapper" *ngIf="images.length === 0 || isLoadingImages">
-      <mat-spinner class="fe-loading-spinner"></mat-spinner>
-    </div>
+    <fe-loading-spinner *ngIf="images.length === 0 || isLoadingImages"></fe-loading-spinner>
     <div class="images-list" *ngIf="!isLoadingImages">
       <button class="list-item" [class.is-selected]="image === selectedImage" *ngFor="let image of images" (click)="selectedImage = image">
         <span>{{image.file.filename}}</span>

@@ -1,8 +1,7 @@
 <div class="fe-page quiz-page">
 
-  <mat-spinner class="fe-loading-spinner" *ngIf="quiz === undefined"></mat-spinner>
-
+  <fe-loading-spinner *ngIf="quiz === undefined"></fe-loading-spinner>
   <fe-quiz-card [quiz]="quiz" *ngIf="quiz !== undefined"></fe-quiz-card>
-
   <fe-lesson-footer [postId]="quiz._id" *ngIf="quiz !== undefined"></fe-lesson-footer>
+
 </div>

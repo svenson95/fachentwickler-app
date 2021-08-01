@@ -12,20 +12,22 @@ import { ScheduleCardModule } from '../../components/cards/schedule-card/schedul
 import { SchoolWeekCardModule } from '../../components/cards/school-week-card/school-week-card.module';
 import { NewsCardModule } from '../../components/cards/news-card/news-card.module';
 import { UserProgressCardModule } from '../../components/cards/user-progress-card/user-progress-card.module';
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 
 @NgModule({
   declarations: [DashboardComponent],
-    imports: [
-      CommonModule,
-      FormsModule,
-      DashboardRoutingModule,
-      AngularMaterialModule,
-      PostLinkModule,
-      SchoolWeekCardModule,
-      NextExamsCardModule,
-      ScheduleCardModule,
-      NewsCardModule,
-      UserProgressCardModule
-    ]
+  imports: [
+    CommonModule,
+    FormsModule,
+    DashboardRoutingModule,
+    AngularMaterialModule,
+    PostLinkModule,
+    SchoolWeekCardModule,
+    NextExamsCardModule,
+    ScheduleCardModule,
+    NewsCardModule,
+    UserProgressCardModule,
+    LoadingSpinnerModule
+  ]
 })
 export class DashboardModule { }

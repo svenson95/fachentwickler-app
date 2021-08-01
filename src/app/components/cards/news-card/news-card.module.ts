@@ -6,6 +6,7 @@ import { AngularMaterialModule } from '../../../app-common/angular-material.modu
 import { NewsCardComponent } from './news-card.component';
 
 import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
+import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
 
 
 
@@ -16,7 +17,8 @@ import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module'
     CommonModule,
     AngularMaterialModule,
     RouterModule,
-    PaginationBarModule
+    PaginationBarModule,
+    LoadingSpinnerModule
   ]
 })
 export class NewsCardModule { }

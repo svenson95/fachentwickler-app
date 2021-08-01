@@ -10,7 +10,7 @@
         {{ searchResults.length === 1 ? 'Suchergebnis' : searchResults.length !== 1 ? 'Suchergebnisse' : null }}
       </p>
     </div>
-    <mat-spinner class="fe-loading-spinner" *ngIf="searchPostService.isSearching"></mat-spinner>
+    <fe-loading-spinner *ngIf="searchPostService.isSearching"></fe-loading-spinner>
     <p class="fe-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchTerm === ''">
       Suchbegriff eingeben
     </p>

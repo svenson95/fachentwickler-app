@@ -25,6 +25,6 @@
       <hr class="vertical-line">
       <fe-post-link [post]="lesson"></fe-post-link>
     </div>
-    <mat-spinner class="fe-loading-spinner" *ngIf="lessonsVisible && examLessons === undefined"></mat-spinner>
+    <fe-loading-spinner *ngIf="lessonsVisible && examLessons === undefined"></fe-loading-spinner>
   </div>
 </div>

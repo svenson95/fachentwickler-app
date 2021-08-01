@@ -4,6 +4,8 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 
 import { ButtonStateComponent } from './button-state.component';
 
+import { LoadingSpinnerModule } from '../loading-spinner/loading-spinner.module';
+
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { ButtonStateComponent } from './button-state.component';
   exports: [ButtonStateComponent],
   imports: [
     CommonModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    LoadingSpinnerModule
   ]
 })
 export class ButtonStateModule { }

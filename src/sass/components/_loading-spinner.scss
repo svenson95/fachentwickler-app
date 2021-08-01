@@ -2,8 +2,7 @@
 mat-spinner.fe-loading-spinner.mat-spinner,
 mat-card.fe-card mat-spinner.fe-loading-spinner.mat-spinner {
   margin: 50px auto;
-
-  $size: 32px;
+  $size: 30px;
 
   width: $size !important;
   height: $size !important;
@@ -20,5 +19,9 @@ mat-card.fe-card mat-spinner.fe-loading-spinner.mat-spinner {
 }
 
 .fe-spinner-wrapper {
+  max-width: var(--max-width);
+}
+
+.fe-loading-indicator {
   max-width: var(--max-width);
 }

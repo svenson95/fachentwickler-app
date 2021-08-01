@@ -16,7 +16,7 @@
     </div>
 
     <fe-post-link class="fe-next-lesson" *ngIf="dashboard !== undefined" [post]="dashboard?.nextLesson" [title]="'Nächste Lektion'"></fe-post-link>
-    <mat-spinner class="fe-loading-spinner" *ngIf="dashboard?.nextLesson === undefined"></mat-spinner>
+    <fe-loading-spinner *ngIf="dashboard?.nextLesson === undefined"></fe-loading-spinner>
 
   </mat-card-content>
 </mat-card>

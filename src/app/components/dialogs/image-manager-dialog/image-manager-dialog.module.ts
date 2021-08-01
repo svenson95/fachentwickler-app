@@ -7,6 +7,7 @@ import { ImageManagerDialogComponent } from './image-manager-dialog.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { ButtonStateModule } from '../../button-state/button-state.module';
 import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
+import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
 
 
 
@@ -18,7 +19,8 @@ import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module'
     AngularMaterialModule,
     NgxDropzoneModule,
     ButtonStateModule,
-    PaginationBarModule
+    PaginationBarModule,
+    LoadingSpinnerModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

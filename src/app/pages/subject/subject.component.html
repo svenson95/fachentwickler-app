@@ -1,7 +1,7 @@
 <div class="fe-page subjects">
   <mat-card class="fe-card">
     <p class="fe-card-title">Themen</p>
-    <mat-spinner class="fe-loading-spinner" *ngIf="subject === undefined"></mat-spinner>
+    <fe-loading-spinner *ngIf="subject === undefined"></fe-loading-spinner>
     <mat-card-content *ngIf="subject !== undefined">
       <div class="topic-description" *ngIf="subject.description !== undefined">
         <fe-post-element *ngFor="let el of subject.description" [element]="el"></fe-post-element>

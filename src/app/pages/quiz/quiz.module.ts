@@ -4,21 +4,22 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 
 import { QuizComponent } from './quiz.component';
 import { QuizRoutingModule } from './quiz-routing.module';
+
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
-import {QuizCardModule} from '../../components/cards/quiz-card/quiz-card.module';
+import { QuizCardModule } from '../../components/cards/quiz-card/quiz-card.module';
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 
 
 @NgModule({
-    declarations: [QuizComponent],
-    exports: [
-        QuizComponent
-    ],
+  declarations: [QuizComponent],
+  exports: [QuizComponent],
   imports: [
     CommonModule,
     QuizRoutingModule,
     AngularMaterialModule,
     LessonFooterModule,
-    QuizCardModule
+    QuizCardModule,
+    LoadingSpinnerModule
   ]
 })
 export class QuizModule { }

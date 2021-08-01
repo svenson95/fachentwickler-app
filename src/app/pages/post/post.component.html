@@ -10,7 +10,7 @@
       {{post.description}}
       <fe-post-badge [post]="post"></fe-post-badge>
     </p>
-    <mat-spinner class="fe-loading-spinner" *ngIf="post === undefined"></mat-spinner>
+    <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
     <mat-card-content class="fe-post-content" *ngIf="post !== undefined">
       <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
     </mat-card-content>

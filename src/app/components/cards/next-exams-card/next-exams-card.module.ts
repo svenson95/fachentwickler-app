@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../../../app-common/angular-material.module';
 
 import { NextExamsCardComponent } from './next-exams-card.component';
+
 import { ExamItemModule } from '../../exam-item/exam-item.module';
+import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
 
 
 
@@ -17,7 +19,8 @@ import { ExamItemModule } from '../../exam-item/exam-item.module';
     CommonModule,
     RouterModule,
     AngularMaterialModule,
-    ExamItemModule
+    ExamItemModule,
+    LoadingSpinnerModule
   ]
 })
 export class NextExamsCardModule { }

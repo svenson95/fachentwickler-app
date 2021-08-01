@@ -52,7 +52,7 @@
       <img class="post-image" *ngIf="image" [src]="image" alt="image"
            [class.small]="element.size === 's'" [class.medium]="element.size === 'm'" [class.large]="element.size === 'l'"
       />
-    <mat-spinner class="fe-loading-spinner" *ngIf="image === false"></mat-spinner>
+    <fe-loading-spinner *ngIf="image === false"></fe-loading-spinner>
     <p style="color: grey !important;" *ngIf="image === null">no image found</p>
   </div>
   <!-- TABLE -->

@@ -6,8 +6,6 @@
   <fe-user-progress-card [user]="user" [dashboard]="dataService.dashboard"></fe-user-progress-card>
 
   <fe-school-week-card *ngIf="dataService.schoolWeek !== undefined" [week]="dataService.schoolWeek" [isDashboardPage]="true"></fe-school-week-card>
-  <div class="spinner-wrapper" *ngIf="dataService.schoolWeek === undefined">
-    <mat-spinner class="fe-loading-spinner"></mat-spinner>
-  </div>
+  <fe-loading-spinner *ngIf="dataService.schoolWeek === undefined"></fe-loading-spinner>
 
 </div>
