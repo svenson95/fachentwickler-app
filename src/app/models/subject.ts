@@ -1,10 +1,11 @@
 import { PostElement } from './post-element';
+import { Post, PostArticle } from './post';
 
 export interface Subject {
   subject: string;
   description: Array<PostElement>;
   topics: string[] | Topic[];
-  tests?: string[];
+  tests?: string[] | PostArticle[];
 }
 
 export interface Topic {
@@ -12,5 +13,5 @@ export interface Topic {
   _id: string;
   url: string;
   subject: string;
-  links: string[];
+  links: string[] | Post[];
 }

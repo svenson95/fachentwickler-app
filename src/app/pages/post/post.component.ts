@@ -50,7 +50,7 @@ export class PostComponent implements OnInit, OnDestroy {
     }
 
     this.dataService.getPost(postUrl).subscribe(
-      (data) => this.post = data,
+      (data) => this.post = data as PostArticle,
       (error) => console.log('Error while GET post', error)
     );
   }
