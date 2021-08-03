@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { PostIndexCards } from '../../models/post';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
+import { LoadingService } from '../../services/loading.service';
 import { subjects } from '../../../data/menu-items';
 
 @Component({
@@ -16,6 +17,7 @@ export class IndexCardsComponent implements OnInit {
 
   constructor(private headerService: HeaderService,
               private dataService: DataService,
+              public loadingService: LoadingService,
               private router: Router
   ) {
     this.headerService.setPageTitle(

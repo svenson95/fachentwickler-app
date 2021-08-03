@@ -19,5 +19,5 @@
     </p>
   </mat-card>
 
-  <fe-lesson-footer [postId]="post._id" *ngIf="authService.isAuthenticated && post"></fe-lesson-footer>
+  <fe-lesson-footer [postId]="post._id" [isLoading]="loadingService.loading$ | async" *ngIf="authService.isAuthenticated && post"></fe-lesson-footer>
 </div>
