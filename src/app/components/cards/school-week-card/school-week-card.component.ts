@@ -38,24 +38,6 @@ export class SchoolWeekCardComponent implements OnInit {
     this.weekdays = weekArray;
   }
 
-  weekdayAsString(day): string {
-    if (day === 1) {
-      return 'Montag';
-    } else if (day === 2) {
-      return 'Dienstag';
-    } else if (day === 3) {
-      return 'Mittwoch';
-    } else if (day === 4) {
-      return 'Donnerstag';
-    } else if (day === 5) {
-      return 'Freitag';
-    }
-  }
-
-  fullSubjectName = (subject: string) => {
-    return subjects.find(el => el.url.substring(1) === subject)?.title;
-  }
-
   /* -- Calendar buttons --*/
   getPreviousWeek(): void {
     this.isLoading = true;

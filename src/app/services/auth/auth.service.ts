@@ -281,10 +281,6 @@ export class AuthService {
         }));
     }
 
-    alreadyRead(lesson: string): boolean {
-        return this.user.progress.includes(lesson);
-    }
-
     setLessonSolved(id): void {
         const lesson = {
             userId: this.user._id,

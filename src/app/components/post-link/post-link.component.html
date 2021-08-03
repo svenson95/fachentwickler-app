@@ -1,6 +1,6 @@
 <div class="fe-post-link-wrapper" *ngIf="post !== undefined">
   <a class="fe-post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url"
-     [ngClass]="{isCompleted: isAlreadyCompleted(post._id)}">
+     [ngClass]="{ isCompleted: post._id | alreadyRead }">
     <div class="fe-title-wrapper">
       <p class="fe-title" [ngClass]="{exam: post.url?.includes('test')}">
         {{post.title}}

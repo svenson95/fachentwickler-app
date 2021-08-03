@@ -14,10 +14,10 @@
     </div>
     <div class="button-wrapper" *ngIf="isDashboardPage">
       <fe-loading-spinner *ngIf="isLoading" size="24"></fe-loading-spinner>
-      <button class="previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week === 1 || isLoading" mat-icon-button>
+      <button class="previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week.schoolWeek == 1 || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
-      <button class="next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || week === dataService.currentSchoolWeek || isLoading" mat-icon-button>
+      <button class="next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
@@ -28,10 +28,10 @@
 
       <div class="weekday-item" *ngFor="let week of weekdays">
         <div class="label-wrapper">
-          <p class="weekday-label">{{weekdayAsString(week.day)}}</p>
+          <p class="weekday-label">{{week.day | weekdayString}}</p>
           <hr class="weekday-spacer"/>
         </div>
-        <fe-post-link *ngFor="let post of week.lessons" [post]="post" [title]="fullSubjectName(post.subject)"></fe-post-link>
+        <fe-post-link *ngFor="let post of week.lessons" [post]="post" [title]="post.subject | longSubjectName"></fe-post-link>
       </div>
 
     </div>

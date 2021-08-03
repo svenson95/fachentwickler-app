@@ -6,6 +6,7 @@ import { SchoolWeekCardComponent } from './school-week-card.component';
 
 import { PostLinkModule } from '../../post-link/post-link.module';
 import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
+import { PipesModule } from '../../../pipes/pipes.module';
 
 
 
@@ -16,7 +17,8 @@ import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.modu
     CommonModule,
     AngularMaterialModule,
     PostLinkModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    PipesModule
   ]
 })
 export class SchoolWeekCardModule { }

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { PostLinkComponent } from './post-link.component';
 import { PostBadgeModule } from '../post-badge/post-badge.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 
 
@@ -13,7 +14,8 @@ import { PostBadgeModule } from '../post-badge/post-badge.module';
   imports: [
     CommonModule,
     PostBadgeModule,
-    RouterModule
+    RouterModule,
+    PipesModule
   ]
 })
 export class PostLinkModule { }
