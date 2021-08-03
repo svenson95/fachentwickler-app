@@ -52,15 +52,6 @@
       justify-content: space-between;
       text-align: center;
 
-      .fe-answer-indicator {
-        //flex-shrink: 0;
-        align-self: center;
-
-        svg {
-          width: 48px;
-        }
-      }
-
       .quiz-level, .quiz-wrong-answers {
         background: var(--background-secondary);
         border-radius: var(--border-radius);

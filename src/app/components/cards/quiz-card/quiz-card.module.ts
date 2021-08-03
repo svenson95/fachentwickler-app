@@ -7,21 +7,21 @@ import { QuizCardComponent } from './quiz-card.component';
 import { ExamItemModule } from '../../exam-item/exam-item.module';
 import { PostLinkModule } from '../../post-link/post-link.module';
 import { PostBadgeModule } from '../../post-badge/post-badge.module';
+import { AnswerIndicatorModule } from '../../answer-indicator/answer-indicator.module';
 
 
 
 @NgModule({
   declarations: [QuizCardComponent],
-  exports: [
-    QuizCardComponent
-  ],
-    imports: [
-        CommonModule,
-        RouterModule,
-        AngularMaterialModule,
-        ExamItemModule,
-        PostLinkModule,
-        PostBadgeModule
-    ]
+  exports: [QuizCardComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    AngularMaterialModule,
+    ExamItemModule,
+    PostLinkModule,
+    PostBadgeModule,
+    AnswerIndicatorModule
+  ]
 })
 export class QuizCardModule { }
