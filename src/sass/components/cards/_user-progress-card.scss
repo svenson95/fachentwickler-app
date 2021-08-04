@@ -11,6 +11,7 @@ mat-card.fe-card.user-progress-card {
         margin-bottom: 8px;
 
         @include to-xs {
+          font-size: .8rem;
           margin-bottom: 3px;
         }
       }

@@ -59,13 +59,13 @@ p.fe-card-title {
 p.fe-card-description {
   display: flex;
   align-items: center;
-  font-size: 1.1em;
+  font-size: .9rem;
   font-family: Nunito-Light, sans-serif;
   color: var(--grey-3);
   letter-spacing: .5px;
   margin: 0;
 
   @include to-xs {
-    font-size: .9em;
+    font-size: .8rem;
   }
 }

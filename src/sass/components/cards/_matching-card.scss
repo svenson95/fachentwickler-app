@@ -137,7 +137,6 @@ $easeIn-duration: 400ms;
     align-items: center;
     justify-content: center;
     min-height: 100px;
-    padding: 10px;
     border: none;
     border-radius: var(--border-radius);
     background: var(--tertiary-color);
@@ -220,9 +219,18 @@ $easeIn-duration: 400ms;
   }
 }
 
+#game button.match-card,
+.cdk-drag-preview {
+  padding: 10px;
+}
+
+.cdk-drop-list-dragging .cdk-drag-preview {
+  opacity: 1;
+}
+
 .cdk-drag-preview {
   color: var(--background-primary);
-  background: $item-background;
+  background: var(--tertiary-color);
   border: none;
   box-shadow: var(--button-shadow);
 

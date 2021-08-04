@@ -32,7 +32,7 @@
   @include to-md {
     width: 360px;
     height: 258px;
-    font-size: .9em;
+    font-size: .65rem;
   }
 
   @include to-xs {
@@ -74,8 +74,8 @@
       }
 
       @include to-xs {
-        margin-top: 15px;
-        margin-bottom: 5px;
+        margin-top: 18px;
+        margin-bottom: 4px;
       }
 
       p {

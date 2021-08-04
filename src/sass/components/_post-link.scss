@@ -92,6 +92,10 @@
         margin: 0;
         line-height: 16px;
         transition: letter-spacing 400ms ease-out;
+
+        @include to-xs {
+          font-size: 0.8rem;
+        }
       }
     }
 

@@ -70,6 +70,10 @@
     @include from-lg {
       flex-shrink: 0;
     }
+
+    @include to-xs {
+      font-size: .8rem;
+    }
   }
 }
 
