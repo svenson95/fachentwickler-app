@@ -1,10 +1,10 @@
 <hr class="pagination-bar-divider"/>
 <div class="pagination-bar">
     <ng-container *ngIf="!(this.isFirstPaginationPage && this.isLastPaginationPage)">
-        <button class="first-btn" (click)="goToFirstPage()" [disabled]="isFirstPaginationPage" [style.opacity]="isFirstPaginationPage ? 0 : null">
+        <button class="first-btn" (click)="goToFirstPage()" [disabled]="isFirstPaginationPage" [style.opacity]="isFirstPaginationPage ? disabledOpacity : null">
             <ion-icon class="delete-icon" name="play-back"></ion-icon>
         </button>
-        <button class="back-btn" (click)="goToPreviousPage()" [disabled]="isFirstPaginationPage" [style.opacity]="isFirstPaginationPage ? 0 : null">
+        <button class="back-btn" (click)="goToPreviousPage()" [disabled]="isFirstPaginationPage" [style.opacity]="isFirstPaginationPage ? disabledOpacity : null">
             <ion-icon class="delete-icon" name="caret-back"></ion-icon>
         </button>
     </ng-container>
@@ -13,10 +13,10 @@
         {{page + 1}}
     </button>
     <ng-container *ngIf="!(this.isFirstPaginationPage && this.isLastPaginationPage)">
-        <button class="forward-btn" (click)="goToNextPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? 0 : null">
+        <button class="forward-btn" (click)="goToNextPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? disabledOpacity : null">
             <ion-icon class="delete-icon" name="caret-forward-outline"></ion-icon>
         </button>
-        <button class="last-btn" (click)="goToLastPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? 0 : null">
+        <button class="last-btn" (click)="goToLastPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? disabledOpacity : null">
             <ion-icon class="delete-icon" name="play-forward"></ion-icon>
         </button>
     </ng-container>

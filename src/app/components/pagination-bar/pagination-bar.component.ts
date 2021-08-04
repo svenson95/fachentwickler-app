@@ -15,6 +15,8 @@ export class PaginationBarComponent implements OnInit {
   paginationPage = 0;
   rowsPerPage = 7;
 
+  disabledOpacity = 0.4;
+
   constructor() { }
 
   ngOnInit(): void {}

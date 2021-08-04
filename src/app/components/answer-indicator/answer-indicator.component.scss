@@ -1,6 +1,6 @@
 $red: red;
-$green: #7ac142;
-$size: 48px;
+$green: springgreen;
+$size: 40px;
 
 .crossmark__circle.animateElement {
   stroke-dasharray: 166;
@@ -33,7 +33,7 @@ $size: 48px;
 }
 
 .cross__path.animateElement {
-  stroke: #ffffff;
+  stroke: var(--background-primary);
   stroke-width: 3;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
@@ -89,7 +89,7 @@ $size: 48px;
   border-radius: 50%;
   display: block;
   stroke-width: 2;
-  stroke: #fff;
+  stroke: var(--background-primary);
   stroke-miterlimit: 10;
   margin: 10% auto;
   box-shadow: inset 0px 0px 0px $green;

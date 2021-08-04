@@ -139,10 +139,11 @@ $easeIn-duration: 400ms;
     min-height: 100px;
     padding: 10px;
     border: none;
-    background: $item-background;
+    border-radius: var(--border-radius);
+    background: var(--tertiary-color);
     cursor: pointer;
     outline: none;
-    color: var(--text-color-1);
+    color: var(--background-primary);
 
     @include from-xs {
       width: 220px;
@@ -160,13 +161,9 @@ $easeIn-duration: 400ms;
       -ms-hyphens: auto;
     }
 
-    &:disabled {
-      color: var(--text-color-1);
-    }
-
     &:not(:disabled) {
       &:hover, &:active {
-        background: $item-hover-background;
+        box-shadow: var(--button-shadow);
 
         & + .left-connector,
         & + .connector-wrapper .right-connector:not(.center-bar) {
@@ -224,6 +221,7 @@ $easeIn-duration: 400ms;
 }
 
 .cdk-drag-preview {
+  color: var(--background-primary);
   background: $item-background;
   border: none;
   box-shadow: var(--button-shadow);
@@ -265,6 +263,12 @@ $easeIn-duration: 400ms;
     }
   }
 
+  &.correct, &.wrong {
+    button.fe-text-button span, button.fe-text-button:disabled span {
+      color: var(--tertiary-color);
+    }
+  }
+
   &.correct {
     #horizontal-connector,
     .vertical-connector {
@@ -275,10 +279,7 @@ $easeIn-duration: 400ms;
     }
 
     .fe-text-button {
-      background-color: rgba(50, 205, 50, .6);
-      span {
-        color: var(--text-color-1);
-      }
+      background-color: rgba(50, 205, 50, .2);
     }
   }
 
@@ -292,10 +293,7 @@ $easeIn-duration: 400ms;
     }
 
     .fe-text-button {
-      background-color: rgba(255, 0, 0, .6);
-      span {
-        color: var(--text-color-1);
-      }
+      background-color: rgba(255, 0, 0, .2);
     }
   }
 }

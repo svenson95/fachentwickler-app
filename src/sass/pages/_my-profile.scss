@@ -89,6 +89,10 @@
       cursor: pointer;
     }
 
+    &:disabled {
+      border-color: rgba(var(--grey-4-rgb), .3);
+    }
+
     @include from-xs {
       width: 100px;
       margin-left: 20px;
@@ -130,6 +134,7 @@
 
     &:disabled {
       background: rgba(var(--grey-4-rgb), .6);
+      border-color: rgba(var(--grey-4-rgb), .6);
     }
   }
 }
