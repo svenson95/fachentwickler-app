@@ -25,6 +25,14 @@
 
   transition: background 100ms ease-in-out;
 
+  @include from-xs {
+    font-size: .9rem;
+  }
+
+  @include to-xs {
+    font-size: .7rem;
+  }
+
   &:hover:not(:disabled) {
     background: var(--button-hover-background);
     cursor: pointer;
@@ -64,7 +72,6 @@
 // Button state
 .fe-state-button {
   position: relative;
-  font-size: 0.9rem;
 
   .label {
     display: flex;
