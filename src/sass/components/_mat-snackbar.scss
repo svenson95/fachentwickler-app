@@ -2,6 +2,7 @@
 .mat-snack-bar-container {
   background: var(--tertiary-color);
   color: white;
+  margin-bottom: calc(24px + env(safe-area-inset-bottom)) !important;
 
   @include from-md {
     max-width: 40vw !important;
