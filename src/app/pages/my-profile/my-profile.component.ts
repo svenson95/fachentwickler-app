@@ -135,6 +135,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
       this.name.enable();
       this.nameInput.focus();
     } else {
+      this.name.reset();
       this.name.setValue(this.authService.user.name);
       this.name.disable();
     }
@@ -167,8 +168,12 @@ export class MyProfileComponent implements OnInit, OnDestroy {
       this.email.enable();
       this.emailInput.focus();
     } else {
+      this.email.reset();
       this.email.setValue(this.authService.user.email);
       this.email.disable();
+      this.verificationCode.reset();
+      this.verificationCode.setValue('');
+      this.isConfirmingEmail = undefined;
     }
   }
 
@@ -202,7 +207,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
     }
     const {email, verificationCode} = this.emailFormGroup.value;
 
-    this.authService.verifyUser(this.authService.user.email, verificationCode, email)
+    this.authService.verifyUser(this.authService.user.email, String(verificationCode), email)
       .subscribe(
         (response) => {
           if (response.success) {
@@ -227,8 +232,12 @@ export class MyProfileComponent implements OnInit, OnDestroy {
       this.password.enable();
       this.passwordInput.focus();
     } else {
+      this.password.reset();
       this.password.setValue(this.authService.user.password.substring(0, 8));
       this.password.disable();
+      this.confirmPassword.reset();
+      this.confirmPassword.setValue('');
+      this.isConfirmingPassword = undefined;
     }
   }
 

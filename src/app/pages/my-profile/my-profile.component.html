@@ -3,24 +3,26 @@
     <p class="fe-card-title">Benutzerdaten</p>
     <mat-card-content class="fe-view-wrapper">
       <div class="user-details">
-        <div class="detail name-control">
+        <div class="user-attribute name-control">
           <mat-form-field class="fe-form-field name" appearance="legacy">
             <mat-label>Benutzername</mat-label>
             <input matInput type="text" autocomplete="off" [formControl]="name" #nameInput="matInput" (keyup)="name.setValue(nameInput.value)" />
-            <mat-error *ngIf="name.hasError('required') && name.touched">Benutzername ist erforderlich</mat-error>
-            <mat-error *ngIf="name.hasError('minlength') && name.touched">Benutzername muss mindestens 4 Zeichen lang sein</mat-error>
+            <mat-error *ngIf="name.hasError('required')">Benutzername ist erforderlich</mat-error>
+            <mat-error *ngIf="name.hasError('minlength')">Benutzername muss mindestens 4 Zeichen lang sein</mat-error>
           </mat-form-field>
-          <button class="start-change" (click)="toggleChangeName()" *ngIf="name.disabled" [disabled]="email.enabled || password.enabled || isConfirmingEmail">
-            Bearbeiten
-          </button>
-          <button class="discard-change" (click)="toggleChangeName()" *ngIf="name.enabled && name.value === authService.user.name">
-            Abbrechen
-          </button>
-          <button class="save-change" (click)="saveChangeName()" *ngIf="name.enabled && name.value !== authService.user.name" [disabled]="email.enabled || password.enabled || isLoading">
-            Speichern
-          </button>
+          <div class="button-container">
+            <button class="start-change" (click)="toggleChangeName()" *ngIf="name.disabled" [disabled]="email.enabled || password.enabled || isConfirmingEmail">
+              Bearbeiten
+            </button>
+            <button class="discard-change" (click)="toggleChangeName()" *ngIf="name.enabled">
+              Abbrechen
+            </button>
+            <button class="save-change" (click)="saveChangeName()" *ngIf="name.enabled && name.value !== authService.user.name" [disabled]="email.enabled || password.enabled || isLoading">
+              Speichern
+            </button>
+          </div>
         </div>
-        <form class="detail email-form" [formGroup]="emailFormGroup" (ngSubmit)="isConfirmingEmail ? confirmChangedEmail() : saveChangeEmail()">
+        <form class="user-attribute email-form" [formGroup]="emailFormGroup" (ngSubmit)="isConfirmingEmail ? confirmChangedEmail() : saveChangeEmail()">
           <ng-container *ngIf="!isConfirmingEmail">
             <mat-form-field class="fe-form-field email" appearance="legacy">
               <mat-label>E-Mail</mat-label>
@@ -28,17 +30,19 @@
               <mat-error *ngIf="email.hasError('required')">E-Mail Adresse ist erforderlich</mat-error>
               <mat-error *ngIf="email.hasError('email')">E-Mail Adresse ist ungültig</mat-error>
             </mat-form-field>
-            <button class="start-change" (click)="toggleChangeEmail()" *ngIf="email.disabled" [disabled]="name.enabled || password.enabled">
-              Bearbeiten
-            </button>
-            <button class="discard-change" (click)="toggleChangeEmail()" *ngIf="email.enabled && email.value === authService.user.email">
-              Abbrechen
-            </button>
-            <button class="save-change" type="submit" *ngIf="email.enabled && email.value !== authService.user.email" [disabled]="name.enabled || password.enabled || isLoading">
-              Speichern
-            </button>
+            <div class="button-container">
+              <button class="start-change" (click)="toggleChangeEmail()" *ngIf="email.disabled" [disabled]="name.enabled || password.enabled">
+                Bearbeiten
+              </button>
+              <button class="discard-change" (click)="toggleChangeEmail()" *ngIf="email.enabled">
+                Abbrechen
+              </button>
+              <button class="save-change" type="submit" *ngIf="email.enabled && email.value !== authService.user.email" [disabled]="name.enabled || password.enabled || isLoading">
+                Speichern
+              </button>
+            </div>
           </ng-container>
-          <div class="detail verification-code-control" *ngIf="isConfirmingEmail">
+          <div class="user-attribute verification-code-control" *ngIf="isConfirmingEmail">
             <mat-form-field class="fe-form-field verification-code mat-form-field-should-float" appearance="legacy">
               <mat-label>Verifizierungscode</mat-label>
               <input matInput type="number" autocomplete="off" inputmode="numeric" pattern="[0-9]*"
@@ -47,12 +51,14 @@
               <mat-error *ngIf="verificationCode.hasError('required') && verificationCode.touched">Verifizierungscode ist erforderlich</mat-error>
               <mat-error *ngIf="verificationCode.hasError('incorrect') && verificationCode.touched">Verifizierungscode ungültig</mat-error>
             </mat-form-field>
-            <button class="save-change" type="submit" *ngIf="isConfirmingEmail" [disabled]="isLoading">
-              Bestätigen
-            </button>
+            <div class="button-container">
+              <button class="save-change" type="submit" *ngIf="isConfirmingEmail" [disabled]="isLoading">
+                Bestätigen
+              </button>
+            </div>
           </div>
         </form>
-        <form class="detail password-form" [formGroup]="passwordFormGroup" (ngSubmit)="saveChangePassword()">
+        <form class="user-attribute password-form" [formGroup]="passwordFormGroup" (ngSubmit)="saveChangePassword()">
           <mat-form-field class="fe-form-field password mat-form-field-should-float" appearance="legacy" *ngIf="!isConfirmingPassword">
             <mat-label>{{password.disabled ? 'Passwort' : 'Neues Passwort'}}</mat-label>
             <input matInput type="password" [formControl]="password" #passwordInput="matInput" (keyup)="password.setValue(passwordInput.value)" />
@@ -60,44 +66,48 @@
             <mat-error *ngIf="password.hasError('minlength') && password.touched">Neues Passwort muss mindestens 4 Zeichen lang sein</mat-error>
           </mat-form-field>
           <mat-form-field class="fe-form-field confirm-password mat-form-field-should-float" appearance="legacy" *ngIf="isConfirmingPassword">
-            <mat-label>Neues Passwort bestätigen</mat-label>
+            <mat-label>Passwort bestätigen</mat-label>
             <input matInput type="password" [formControl]="confirmPassword" #confirmPasswordInput="matInput" (keyup)="confirmPassword.setValue(confirmPasswordInput.value)" />
-            <mat-error *ngIf="confirmPassword.hasError('required') && confirmPassword.touched">Neues Passwort bestätigen ist erforderlich</mat-error>
-            <mat-error *ngIf="confirmPassword.hasError('minlength') && confirmPassword.touched">Neues Passwort bestätigen muss mindestens 4 Zeichen lang sein</mat-error>
+            <mat-error *ngIf="confirmPassword.hasError('required') && confirmPassword.touched">Passwort bestätigen ist erforderlich</mat-error>
+            <mat-error *ngIf="confirmPassword.hasError('minlength') && confirmPassword.touched">Passwort bestätigen muss mindestens 4 Zeichen lang sein</mat-error>
             <mat-error *ngIf="confirmPassword.hasError('match') && confirmPassword.touched">Neues Passwort und Passwort bestätigen stimmen nicht überein</mat-error>
           </mat-form-field>
-          <button class="start-change" (click)="toggleChangePassword()" *ngIf="password.disabled" [disabled]="name.enabled || email.enabled || isConfirmingEmail">
-            Bearbeiten
-          </button>
-          <button class="discard-change" (click)="toggleChangePassword()" *ngIf="password.value.length === 0">
-            Abbrechen
-          </button>
-          <button class="save-change" type="submit" *ngIf="password.enabled && password.value.length > 0" [disabled]="name.enabled || email.enabled || isLoading">
-            Speichern
-          </button>
+          <div class="button-container">
+            <button class="start-change" (click)="toggleChangePassword()" *ngIf="password.disabled" [disabled]="name.enabled || email.enabled || isConfirmingEmail">
+              Bearbeiten
+            </button>
+            <button class="discard-change" (click)="toggleChangePassword()" *ngIf="password.enabled">
+              Abbrechen
+            </button>
+            <button class="save-change" type="submit" *ngIf="password.enabled && password.value.length > 0" [disabled]="name.enabled || email.enabled || isLoading">
+              Speichern
+            </button>
+          </div>
         </form>
-        <div class="detail role">
+        <div class="user-attribute role">
           <mat-form-field class="fe-form-field role" appearance="legacy">
             <mat-label>Gruppe</mat-label>
             <input matInput type="text" [formControl]="role"/>
           </mat-form-field>
         </div>
-        <div class="detail progress">
+        <div class="user-attribute progress">
           <mat-form-field class="fe-form-field progress" appearance="legacy">
             <mat-label>Fortschritt</mat-label>
             <input matInput type="text" [formControl]="progress"/>
           </mat-form-field>
         </div>
-        <div class="detail theme">
+        <div class="user-attribute theme">
           <mat-form-field class="fe-form-field theme" appearance="legacy">
             <mat-label>Standard-Theme</mat-label>
             <input matInput type="text" [formControl]="theme"/>
             <mat-slide-toggle class="fe-theme-toggle" [checked]="themeService.isDarkTheme()" (change)="toggleTheme()">
             </mat-slide-toggle>
           </mat-form-field>
-          <button class="save-change" (click)="saveChangeTheme()" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme" [disabled]="isConfirmingEmail || isLoading">
-            Speichern
-          </button>
+          <div class="button-container">
+            <button class="save-change" (click)="saveChangeTheme()" *ngIf="themeService.getActiveTheme().name !== authService.user?.theme" [disabled]="isConfirmingEmail || isLoading">
+              Speichern
+            </button>
+          </div>
         </div>
       </div>
 

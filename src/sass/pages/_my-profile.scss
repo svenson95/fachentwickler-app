@@ -37,20 +37,37 @@
     }
   }
 
-  .user-details .detail {
+  .user-details .user-attribute {
+    @include from-xs {
+      display: flex;
+      align-items: center;
+    }
     @include to-xs {
-      &:not(.theme) {
-        display: flex;
-        flex-direction: column-reverse;
-      }
+      position: relative;
 
       .theme {
         display: flex;
         flex-direction: column;
       }
 
-      button {
-        margin-bottom: 10px;
+      &:not(.theme) {
+        flex-direction: column-reverse;
+      }
+
+      .button-container {
+        position: absolute;
+        display: flex;
+        flex-direction: row-reverse;
+        top: -8px;
+        right: 0;
+
+        button {
+          font-family: 'Nunito-Bold', sans-serif;
+
+          &:first-child {
+            margin-left: 10px;
+          }
+        }
       }
     }
   }
@@ -60,13 +77,11 @@
   button.start-change,
   button.discard-change,
   button.save-change {
-    width: 100px;
-    border: none;
     outline: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 4px;
+    border: 1px solid;
 
-    font-size: .6em;
     text-transform: uppercase;
     letter-spacing: 1px;
 
@@ -75,7 +90,14 @@
     }
 
     @include from-xs {
+      width: 100px;
       margin-left: 20px;
+      font-size: .6rem;
+    }
+
+    @include to-xs {
+      width: 80px;
+      font-size: .4rem;
     }
   }
 
@@ -88,19 +110,22 @@
   }
 
   button.start-change {
-    background: rgba(var(--grey-4-rgb), .2);
+    border-color: rgba(var(--grey-4-rgb), .1);
+    background: rgba(var(--grey-4-rgb), .1);
 
     &:hover:not([disabled]) {
-      background: rgba(var(--secondary-color-rgb), .8);
+      background: rgba(var(--secondary-color-rgb), .3);
     }
   }
 
   button.discard-change {
-    background: rgba(var(--tertiary-color-rgb), .6);
+    border-color: rgba(var(--tertiary-color-rgb), .3);
+    background: rgba(var(--tertiary-color-rgb), .3);
   }
 
   button.save-change {
-    background: rgba(var(--primary-color-rgb), 0.9);
+    border-color: rgba(var(--primary-color-rgb), .7);
+    background: rgba(var(--primary-color-rgb), .7);
     color: white;
 
     &:disabled {
@@ -116,6 +141,10 @@
 
     @include from-lg {
       width: 350px;
+    }
+
+    @include to-xs {
+      width: 100%;
     }
 
     .mat-input-element {
@@ -159,6 +188,12 @@
         color: var(--text-color-3);
       }
     }
+    .mat-form-field-infix {
+      @include from-xs {
+        width: 300px;
+      }
+    }
+
   }
 
   mat-form-field.theme {
