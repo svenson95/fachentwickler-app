@@ -20,11 +20,8 @@ export class IndexCardsComponent implements OnInit {
               public loadingService: LoadingService,
               private router: Router
   ) {
-    this.headerService.setPageTitle(
-      subjects.find(sub => sub.url === router.url.substring(
-        0, router.url.indexOf('/', 1)
-      ))?.title
-    );
+    const subject = router.url.substring(0, router.url.indexOf('/', 1));
+    this.headerService.setPageTitle(subjects.find(sub => sub.url === subject)?.title);
     this.dataService.getPost(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe(
       (data) => this.indexCards = data as PostIndexCards,
       (error) => console.log('Error while GET index-cards', error)

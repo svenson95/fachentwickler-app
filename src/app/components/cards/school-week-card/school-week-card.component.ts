@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 
 import { SchoolWeek, Weekdays } from '../../../models/school-week';
 import { DataService } from '../../../services/data/data.service';
-import { subjects } from '../../../../data/menu-items';
 
 @Component({
   selector: 'fe-school-week-card',
@@ -23,7 +22,6 @@ export class SchoolWeekCardComponent implements OnInit {
     this.initWeekdays();
   }
 
-  /* -- Component functions -- */
   initWeekdays(): void {
     const weekArray: Weekdays[] = [];
     this.week.posts.forEach(post => {

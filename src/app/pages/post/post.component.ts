@@ -26,9 +26,8 @@ export class PostComponent implements OnInit, OnDestroy {
               public authService: AuthService,
               public loadingService: LoadingService
   ) {
-    this.headerService.setPageTitle(
-      subjects.find(sub => sub.url === this.router.url.substring(0, this.router.url.indexOf('/', 2))
-    )?.title);
+    const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
+    this.headerService.setPageTitle(subjects.find(sub => sub.url === subjectUrl)?.title);
   }
 
   ngOnInit(): void {

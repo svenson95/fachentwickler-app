@@ -7,8 +7,6 @@ import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy
 })
 export class PaginationBarComponent implements OnInit {
 
-  @Output() changePage = new EventEmitter<number>();
-
   @Input() currentPage: number;
   @Input() totalItems: number;
 
@@ -16,6 +14,8 @@ export class PaginationBarComponent implements OnInit {
   rowsPerPage = 7;
 
   disabledOpacity = 0.4;
+
+  @Output() changePage = new EventEmitter<number>();
 
   constructor() { }
 
