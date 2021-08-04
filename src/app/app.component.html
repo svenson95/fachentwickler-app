@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
 <div class="mat-app-background basic-container">
-  <fe-page>
+  <fe-page [isMobile]="mediaQueryService.isMobile$ | async" [isTiny]="mediaQueryService.isTiny$ | async">
     loading...
   </fe-page>
 </div>

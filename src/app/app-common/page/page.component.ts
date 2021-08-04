@@ -1,12 +1,12 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
-import { Subscription } from 'rxjs';
 
 import { SidenavService } from '../../services/sidenav.service';
 import { ThemeService } from '../../services/theme.service';
 import { MediaQueryService } from '../../services/media-query.service';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'fe-page',
@@ -14,27 +14,26 @@ import { MediaQueryService } from '../../services/media-query.service';
 })
 export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
+  @Input() isMobile: boolean;
+  @Input() isTiny: boolean;
+
   @ViewChild('sidenav') public sidenav: MatSidenav;
   @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
   @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
-  isMobile: boolean;
-  mobileSubscription: Subscription;
-
-  constructor(private sidenavService: SidenavService,
-              public themeService: ThemeService,
-              public router: Router,
-              private elementRef: ElementRef,
+  constructor(private elementRef: ElementRef,
               private renderer: Renderer2,
-              private mediaQueryService: MediaQueryService
+              private sidenavService: SidenavService,
+              public router: Router,
+              public themeService: ThemeService,
+              public mediaQueryService: MediaQueryService,
+              public loadingService: LoadingService
   ) {}
 
   ngOnInit(): void {
-    this.mobileSubscription = this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
   }
 
   ngOnDestroy(): void {
-    this.mobileSubscription.unsubscribe();
     this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
       .removeEventListener('scroll', this.onScroll.bind(this), true);
   }

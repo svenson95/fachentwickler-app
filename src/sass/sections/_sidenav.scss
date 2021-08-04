@@ -71,8 +71,11 @@ mat-sidenav.fe-sidenav.mat-sidenav {
 
     .section-title,
     .fe-nav-item.mat-list-item {
-      margin-left: 30px;
-      margin-right: 30px;
+
+      @include from-md {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
 
       @include to-md {
         margin-left: 15px;

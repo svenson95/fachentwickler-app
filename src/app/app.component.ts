@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(private router: Router,
               private viewportScroller: ViewportScroller,
               private sidenavService: SidenavService,
-              private mediaQueryService: MediaQueryService
+              public mediaQueryService: MediaQueryService
   ) {
     this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value);
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))

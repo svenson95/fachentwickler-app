@@ -1,5 +1,9 @@
 <div class="fe-page-container" [class.is-mobile]="isMobile" [ngClass]="themeService.getActiveTheme().name">
-  <fe-header class="fe-header"></fe-header>
+  <fe-header class="fe-header"
+             [isLoading]="loadingService.loading$ | async"
+             [isMobile]="mediaQueryService.isMobile$ | async"
+             [isTiny]="mediaQueryService.isTiny$ | async"
+  ></fe-header>
 
   <mat-sidenav-container class="fe-sidenav-content-wrapper"
                          [style.marginTop.px]="isMobile ? 56 : 0"

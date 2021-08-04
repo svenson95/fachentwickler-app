@@ -17,7 +17,8 @@
           <span>Lesen</span>
         </a>
       </div>
-      <fe-pagination-bar *ngIf="news && allNewsLength" [totalItems]="allNewsLength" [currentPage]="currentPage" (changePage)="loadPage($event)"></fe-pagination-bar>
+      <fe-pagination-bar *ngIf="news && allNewsLength" [totalItems]="allNewsLength" [currentPage]="currentPage"
+                         (changePage)="loadPage($event)"></fe-pagination-bar>
     </div>
   </mat-card-content>
 </mat-card>

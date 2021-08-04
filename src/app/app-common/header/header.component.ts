@@ -1,40 +1,28 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { delay } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
 
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { LoadingService } from '../../services/loading.service';
 import { SidenavService } from '../../services/sidenav.service';
-import { MediaQueryService } from '../../services/media-query.service';
 
 @Component({
   selector: 'fe-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
 
-  isLoading: boolean;
-  isMobile: boolean;
-  subscription: Subscription = new Subscription();
+  @Input() isLoading: boolean;
+  @Input() isMobile: boolean;
+  @Input() isTiny: boolean;
 
   constructor(public router: Router,
               public headerService: HeaderService,
               public authService: AuthService,
-              public loadingService: LoadingService,
-              public sidenavService: SidenavService,
-              private mediaQueryService: MediaQueryService
+              public sidenavService: SidenavService
   ) {
   }
 
   ngOnInit(): void {
-    this.subscription.add(this.mediaQueryService.isMobile$.subscribe(value => this.isMobile = value));
-    this.subscription.add(this.loadingService.loading$.pipe(delay(0)).subscribe(value => this.isLoading = value));
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 
   goToSubject(): void {
