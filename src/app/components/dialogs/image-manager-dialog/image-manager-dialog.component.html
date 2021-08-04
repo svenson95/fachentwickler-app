@@ -29,33 +29,36 @@
   <div class="image-preview">
     <div class="details">
       <div class="image-container">
-        <img class="image" [src]="encode(selectedImage)" alt="image" (click)="showPreview()" *ngIf="selectedImage"/>
+        <img class="image" [src]="encode(selectedImageData)" alt="image" (click)="showPreview()" *ngIf="selectedImageData"/>
+        <fe-loading-spinner *ngIf="!selectedImageData"></fe-loading-spinner>
       </div>
       <div class="image-attributes-list">
         <p>
           <span class="key">ID: </span>
-          <span class="value">{{selectedImage?.file._id}}</span>
+          <span class="value">{{selectedImage?._id}}</span>
         </p>
         <p>
           <span class="key">Name: </span>
-          <span class="value">{{selectedImage?.file.filename}}</span>
+          <span class="value">{{selectedImage?.filename}}</span>
         </p>
         <p>
           <span class="key">Content-Type: </span>
-          <span class="value">{{selectedImage?.file.contentType}}</span>
+          <span class="value">{{selectedImage?.contentType}}</span>
         </p>
         <p>
           <span class="key">Length: </span>
-          <span class="value">{{ formatBytes(selectedImage?.file.length) }}</span>
-          <span class="chunks-length" *ngIf="selectedImage?.file">({{selectedImage?.chunks.length}} {{selectedImage?.chunks.length > 1 ? 'Chunks' : 'Chunk'}})</span>
+          <span class="value">{{ formatBytes(selectedImage?.length) }} </span>
+          <span class="chunks-length" *ngIf="selectedImageData">
+            ({{selectedImageData?.chunks.length}} {{selectedImageData?.chunks.length > 1 ? 'Chunks' : 'Chunk'}})
+          </span>
         </p>
         <p>
           <span class="key">Upload Date: </span>
-          <span class="value">{{selectedImage?.file.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
+          <span class="value">{{selectedImage?.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
         </p>
       </div>
     </div>
-    <fe-button-state *ngIf="authService.user.role === UserRole.ADMIN" [disabled]="!selectedImage" (click)="deleteImage(selectedImage.file._id)">
+    <fe-button-state *ngIf="authService.user.role === UserRole.ADMIN" [disabled]="!selectedImage" (click)="deleteImage(selectedImage._id)">
       <span>Bild löschen</span>
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
     </fe-button-state>
@@ -71,9 +74,9 @@
   <div class="fe-im-recent-images">
     <fe-loading-spinner *ngIf="images.length === 0 || isLoadingImages"></fe-loading-spinner>
     <div class="images-list" *ngIf="!isLoadingImages">
-      <button class="list-item" [class.is-selected]="image === selectedImage" *ngFor="let image of images" (click)="selectedImage = image">
-        <span>{{image.file.filename}}</span>
-        <span>{{image.file.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
+      <button class="list-item" [class.is-selected]="image._id === selectedImage?._id" *ngFor="let image of images; trackBy: trackByFn" (click)="setSelectedImage(image)">
+        <span>{{image.filename}}</span>
+        <span>{{image.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
       </button>
     </div>
   </div>

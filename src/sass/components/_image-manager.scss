@@ -187,6 +187,15 @@ mat-dialog-content.fe-image-manager {
       width: 200px;
       display: flex;
       align-items: center;
+
+      fe-loading-spinner {
+        width: 100%;
+        justify-content: center;
+
+        mat-spinner.fe-loading-spinner.mat-spinner {
+          margin: auto;
+        }
+      }
     }
 
     .image-wrapper {

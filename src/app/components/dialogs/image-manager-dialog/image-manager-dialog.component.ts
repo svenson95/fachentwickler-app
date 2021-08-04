@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-import { ImageData } from '../../../models/image-data';
+import { ImageData, ImageFile } from '../../../models/image-data';
 import { UserRole } from '../../../models/user';
 import { AuthService } from '../../../services/auth/auth.service';
 import { DataService } from '../../../services/data/data.service';
@@ -20,11 +20,12 @@ export class ImageManagerDialogComponent implements OnInit {
   isUploadingImage: boolean;
   isLoadingImages: boolean;
 
-  images: ImageData[] = [];
+  images: ImageFile[] = [];
   currentPage = 0;
   allImagesLength: number;
   isSortedAscending = false;
-  selectedImage: ImageData;
+  selectedImage: ImageFile;
+  selectedImageData: ImageData;
 
   @ViewChild('fileInput') fileInput;
 
@@ -38,6 +39,10 @@ export class ImageManagerDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  trackByFn(index, item): any {
+    return item.id;
   }
 
   loadAllImagesCount(): void {
@@ -71,10 +76,10 @@ export class ImageManagerDialogComponent implements OnInit {
         async (response) => {
           await this.dataService.getImageById(response.file.id).subscribe(
               (image) => {
-                this.images.unshift(image);
+                this.images.unshift(image.file);
                 this.images.pop();
                 this.dropzoneFile = [];
-                this.selectedImage = image;
+                this.selectedImageData = image;
                 this.allImagesLength += 1;
               }, (err) => {
                 console.log('Get image by id failed');
@@ -147,13 +152,23 @@ export class ImageManagerDialogComponent implements OnInit {
     this.getImages();
   }
 
-  getImages(page = 0): void {
+  getImages(page = null): void {
     this.isLoadingImages = true;
 
-    this.dataService.getMultipleImages(page, undefined, this.isSortedAscending ? 'ascending' : 'descending').subscribe(data => {
+    this.dataService.getMultipleImages(page || 0, undefined, this.isSortedAscending ? 'ascending' : 'descending').subscribe(data => {
       this.images = data;
       this.isLoadingImages = false;
-      this.selectedImage = data[0];
+
+      if (page === null) {
+        this.selectedImage = data[0];
+        this.dataService.getImageById(data[0]._id).subscribe(value => this.selectedImageData = value);
+      }
     });
+  }
+
+  setSelectedImage(image: ImageFile): void {
+    this.selectedImageData = undefined;
+    this.selectedImage = image;
+    this.dataService.getImageById(image._id).subscribe(value => this.selectedImageData = value);
   }
 }

@@ -1,21 +1,21 @@
 export interface ImageData {
-    file: ImageFile;
-    chunks: ImageChunk[];
+  file: ImageFile;
+  chunks: ImageChunk[];
 }
 
-interface ImageFile {
-    _id: string;
-    filename: string;
-    chunkSize: number;
-    contentType: string;
-    length: number;
-    md5: string;
-    uploadDate: string;
+export interface ImageFile {
+  _id: string;
+  filename: string;
+  chunkSize: number;
+  contentType: string;
+  length: number;
+  md5: string;
+  uploadDate: string;
 }
 
 export interface ImageChunk {
-    _id: string;
-    files_id: string;
-    data: string;
-    n: number;
+  _id: string;
+  files_id: string;
+  data: string;
+  n: number;
 }

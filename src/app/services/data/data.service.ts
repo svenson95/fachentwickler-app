@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { Subject } from '../../models/subject';
 import { Post } from '../../models/post';
-import { ImageData } from '../../models/image-data';
+import { ImageData, ImageFile } from '../../models/image-data';
 import { DashboardData } from '../../models/dashboard-data';
 import { SchoolWeek } from '../../models/school-week';
 import { ExamDate } from '../../models/exam-date';
@@ -88,7 +88,7 @@ export class DataService {
             }));
     }
 
-    getMultipleImages(page = 0, imagesPerPage = 10, sorting = 'descending'): Observable<ImageData[]> {
+    getMultipleImages(page = 0, imagesPerPage = 10, sorting = 'descending'): Observable<ImageFile[]> {
         const headers = new HttpHeaders()
             .set('Content-Type', 'application/json');
         const params = new HttpParams()
@@ -96,7 +96,7 @@ export class DataService {
             .set('size', String(imagesPerPage))
             .set('sort', sorting);
 
-        return this.httpClient.get<ImageData[]>(`${this.IMAGES_ENDPOINT}/all`, {headers, params})
+        return this.httpClient.get<ImageFile[]>(`${this.IMAGES_ENDPOINT}/all`, {headers, params})
             .pipe(map((response) => {
                 // console.log('response GET images', response);
                 return response;
