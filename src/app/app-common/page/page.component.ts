@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatMenuTrigger } from '@angular/material/menu';
-import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
+import { MatSidenav } from '@angular/material/sidenav';
 
 import { SidenavService } from '../../services/sidenav.service';
 import { ThemeService } from '../../services/theme.service';
@@ -18,8 +17,6 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() isTiny: boolean;
 
   @ViewChild('sidenav') public sidenav: MatSidenav;
-  @ViewChild('sidenavContainer') public sidenavContainer: MatSidenavContainer;
-  @ViewChild(MatMenuTrigger) actionMenu: MatMenuTrigger;
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2,

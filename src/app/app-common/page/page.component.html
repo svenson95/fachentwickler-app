@@ -1,25 +1,11 @@
 <div class="fe-page-container" [class.is-mobile]="isMobile" [ngClass]="themeService.getActiveTheme().name">
-  <fe-header class="fe-header"
-             [isLoading]="loadingService.loading$ | async"
-             [isMobile]="mediaQueryService.isMobile$ | async"
-             [isTiny]="mediaQueryService.isTiny$ | async"
-  ></fe-header>
-
-  <mat-sidenav-container class="fe-sidenav-content-wrapper"
-                         [style.marginTop.px]="isMobile ? 56 : 0"
-                         autosize
-                         #sidenavContainer
-  >
-    <mat-sidenav class="fe-sidenav" #sidenav
-                 [mode]="isMobile ? 'over' : 'side'"
-                 [opened]="!isMobile"
-                 [fixedInViewport]="isMobile"
-                 fixedTopGap="56"
-                 (openedChange)="onSideMenuToggled(sidenav.opened)"
-    >
+  <fe-header class="fe-header" [isLoading]="loadingService.loading$ | async"
+             [isMobile]="mediaQueryService.isMobile$ | async" [isTiny]="mediaQueryService.isTiny$ | async"></fe-header>
+  <mat-sidenav-container autosize>
+    <mat-sidenav class="fe-sidenav" [mode]="isMobile ? 'over' : 'side'" [opened]="!isMobile" [fixedInViewport]="isMobile"
+                 (openedChange)="onSideMenuToggled(sidenav.opened)" #sidenav>
       <fe-sidenav></fe-sidenav>
     </mat-sidenav>
     <fe-content></fe-content>
-
   </mat-sidenav-container>
 </div>
