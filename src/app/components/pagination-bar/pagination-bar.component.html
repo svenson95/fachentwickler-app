@@ -8,7 +8,7 @@
             <ion-icon class="delete-icon" name="caret-back"></ion-icon>
         </button>
     </ng-container>
-    <button class="page-btn unselectable" *ngFor="let page of pageButtons"
+    <button class="page-btn unselectable" *ngFor="let page of paginationPage | pageButtons: this.buttonsPerPage : this.totalPages"
             [class.is-selected]="page === currentPage" (click)="goTo(page)">
         {{page + 1}}
     </button>

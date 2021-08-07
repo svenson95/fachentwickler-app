@@ -1,4 +1,20 @@
-import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy, Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: 'pageButtons' })
+export class PageButtonsPipe implements PipeTransform {
+  transform(page: number, buttonsPerPage: number, total: number): any {
+    const trimStart = (page) * buttonsPerPage;
+    let trimEnd = trimStart + buttonsPerPage;
+    trimEnd = trimEnd <= total ? trimEnd : total;
+
+    const pages = [];
+    for (let i = trimStart; i < trimEnd; i++) {
+      pages.push(i);
+    }
+
+    return pages;
+  }
+}
 
 @Component({
   selector: 'fe-pagination-bar',
@@ -11,7 +27,7 @@ export class PaginationBarComponent implements OnInit {
   @Input() totalItems: number;
 
   paginationPage = 0;
-  rowsPerPage = 7;
+  buttonsPerPage = 7;
 
   disabledOpacity = 0.4;
 
@@ -19,20 +35,7 @@ export class PaginationBarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
-
-  get pageButtons(): number[] {
-    const trimStart = (this.paginationPage) * this.rowsPerPage;
-    let trimEnd = trimStart + this.rowsPerPage;
-
-    trimEnd = trimEnd <= this.totalPages ? trimEnd : this.totalPages;
-
-    const trimmedPages = [];
-    for (let i = trimStart; i < trimEnd; i++) {
-      trimmedPages.push(i);
-    }
-
-    return trimmedPages;
+  ngOnInit(): void {
   }
 
   get totalPages(): number {
@@ -47,7 +50,6 @@ export class PaginationBarComponent implements OnInit {
     this.changePage.emit(pageNumber);
   }
 
-  /* Pagination Pages */
   goToPreviousPage(): void {
     if (this.paginationPage - 1 >= 0) {
       this.paginationPage -= 1;
@@ -55,7 +57,7 @@ export class PaginationBarComponent implements OnInit {
   }
 
   goToNextPage(): void {
-    if (this.paginationPage + 1 <= Math.floor(this.totalPages / this.rowsPerPage)) {
+    if (this.paginationPage + 1 <= Math.floor(this.totalPages / this.buttonsPerPage)) {
       this.paginationPage += 1;
     }
   }
@@ -65,7 +67,7 @@ export class PaginationBarComponent implements OnInit {
   }
 
   goToLastPage(): void {
-    this.paginationPage = Math.floor(this.totalPages / this.rowsPerPage);
+    this.paginationPage = Math.floor(this.totalPages / this.buttonsPerPage);
   }
 
   get isFirstPaginationPage(): boolean {
@@ -73,6 +75,6 @@ export class PaginationBarComponent implements OnInit {
   }
 
   get isLastPaginationPage(): boolean {
-    return !(this.paginationPage + 1 <= Math.floor(this.totalPages / this.rowsPerPage));
+    return !(this.paginationPage + 1 <= Math.floor(this.totalPages / this.buttonsPerPage));
   }
 }
