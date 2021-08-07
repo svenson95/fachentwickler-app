@@ -25,20 +25,17 @@
         <div class="quiz-question" *ngIf="!end" #slideInWrapper>
           <p class="label" [innerHTML]="quiz.elements[level].question"></p>
           <div class="fe-quiz-answers-wrapper" [class.is-checking-answer]="answer !== undefined">
-            <button class="fe-quiz-answer answer-1" [innerHTML]="quiz.elements[level].choice1" (click)="checkAnswer(1)"
-               [class.correct]="answer === 1 && quiz.elements[level].answer === 1"
-               [class.wrong]="answer === 1 && quiz.elements[level].answer === 2"
-            ></button>
-            <button class="fe-quiz-answer answer-2" [innerHTML]="quiz.elements[level].choice2" (click)="checkAnswer(2)"
-               [class.correct]="answer === 2 && quiz.elements[level].answer === 2"
-               [class.wrong]="answer === 2 && quiz.elements[level].answer === 1"
-            ></button>
+            <button class="fe-quiz-answer answer-1" [innerHTML]="quiz.elements[level].choice1"
+                    (click)="checkAnswer(1)" [class.selected]="answer === 1" matRipple></button>
+            <button class="fe-quiz-answer answer-2" [innerHTML]="quiz.elements[level].choice2"
+                    (click)="checkAnswer(2)" [class.selected]="answer === 2" matRipple></button>
           </div>
         </div>
         <div class="fe-quiz-end" *ngIf="end">
           <p class="fe-quiz-done-label">Lektion abgeschlossen</p>
           <div class="fe-quiz-end-wrapper">
-            <p [innerHTML]="wrongAnswers > 6 ? finishTexts[6] : finishTexts[wrongAnswers]"></p>
+            <p *ngIf="wrongAnswers === 0">Du hast das Quiz ohne Fehler abgeschlossen</p>
+            <p *ngIf="wrongAnswers > 0">Du hattest {{wrongAnswers}} Fehler</p>
             <span class="fe-emoji" *ngIf="wrongAnswers > 0">{{finishEmojis[wrongAnswers > 6 ? 6 : wrongAnswers]}}</span>
             <div class="congrat-emoji" *ngIf="wrongAnswers === 0">
               <div class="success-animation">
@@ -49,7 +46,7 @@
               </div>
             </div>
           </div>
-          <button class="fe-text-button" (click)="resetLevel()">
+          <button class="fe-text-button" (click)="resetLevel()" matRipple>
             <span>Neustarten</span>
           </button>
         </div>

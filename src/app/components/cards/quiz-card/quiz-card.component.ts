@@ -10,6 +10,7 @@ import { PostQuiz } from '../../../models/post';
 export class QuizCardComponent implements OnInit {
 
   @Input() quiz: PostQuiz;
+  @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
 
   level = 0;
   wrongAnswers = 0;
@@ -17,17 +18,6 @@ export class QuizCardComponent implements OnInit {
   isCorrectAnswer: boolean;
   end = false;
 
-  @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
-
-  finishTexts = [
-    'Du hast das Quiz ohne Fehler abgeschlossen',
-    'Du hattest einen Fehler',
-    'Du hattest zwei Fehler',
-    'Du hattest drei Fehler',
-    'Du hattest vier Fehler',
-    'Du hattest fünf Fehler',
-    'Du hattest mehr als 5 Fehler',
-  ];
   finishEmojis = ['⭐', '👍', '😐', '😲', '🤨', '😦', '😵'];
 
   constructor(public dataService: DataService) {}
@@ -36,9 +26,7 @@ export class QuizCardComponent implements OnInit {
   }
 
   checkAnswer(answer: number): void {
-    if (this.answer !== undefined) {
-      return;
-    }
+    if (this.answer !== undefined) return;
     this.answer = answer;
 
     if (this.isCorrect(answer)) {

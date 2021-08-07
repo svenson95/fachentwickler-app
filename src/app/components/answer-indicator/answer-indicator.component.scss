@@ -1,6 +1,17 @@
+.fe-answer-indicator {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 200ms ease;
+
+  &.correct, &.wrong {
+    opacity: 1;
+  }
+}
+
 $red: red;
 $green: springgreen;
-$size: 40px;
+$size: 52px;
 
 .crossmark__circle.animateElement {
   stroke-dasharray: 166;
