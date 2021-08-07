@@ -7,6 +7,10 @@
   @include to-md {
     flex-direction: column;
   }
+
+  .fe-text-button:hover span {
+    color: var(--tertiary-color);
+  }
 }
 
 .fe-page.login-page .login-form {
@@ -38,10 +42,6 @@
     .fe-text-button:first-child {
       margin-bottom: 20px;
     }
-
-    //.fe-forgot-password-btn {
-    //  margin-top: 15px;
-    //}
   }
 }
 
@@ -67,9 +67,7 @@
     margin: 20px 0;
   }
 
-  .fe-text-button:hover {
-    span {
-      color: var(--tertiary-color);
-    }
+  .fe-text-button {
+    display: flex;
   }
 }

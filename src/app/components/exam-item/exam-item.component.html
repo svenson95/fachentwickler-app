@@ -8,8 +8,7 @@
           <p class="days-left" *ngIf="daysLeft !== null">{{daysLeft(exam.date)}}</p>
         </div>
         <button class="show-lessons-btn" (click)="showLessons()" [class.is-open]="lessonsVisible"
-                [disabled]="lessonsVisible && examLessons === undefined"
-        >
+                [disabled]="lessonsVisible && examLessons === undefined" matRipple>
           <span>Lektionen anzeigen</span>
         </button>
       </div>

@@ -28,12 +28,12 @@
                     </button>
                 </div>
             </div>
-            <button class="fe-text-button" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined">
+            <button class="fe-text-button" *ngIf="state === 'play'" (click)="checkResult()" [disabled]="isCorrect !== undefined" matRipple>
                 <span>Verbinden</span>
             </button>
             <ng-container *ngIf="state === 'end'">
                 <h1 class="finish-label">Lektion abgeschlossen</h1>
-                <button class="fe-text-button" (click)="restartGame()">
+                <button class="fe-text-button" (click)="restartGame()" matRipple>
                     <span>Neustarten</span>
                 </button>
             </ng-container>

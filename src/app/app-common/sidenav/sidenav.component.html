@@ -2,7 +2,7 @@
 
   <div class="section apps" *ngIf="authService.isAuthenticated">
     <button class="fe-text-button fe-pruefungssimulator-btn" routerLink="pruefungssimulator"
-            [class.active-route]="router.url.startsWith('/pruefungssimulator')"
+            [class.active-route]="router.url.startsWith('/pruefungssimulator')" matRipple
     >
       Prüfungssimulator
     </button>

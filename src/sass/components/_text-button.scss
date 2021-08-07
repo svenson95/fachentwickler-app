@@ -57,6 +57,10 @@
       background: rgba(var(--grey-4-rgb), .1);
       color: var(--grey-4);
     }
+
+    .mat-ripple-element {
+      background-color: rgba(var(--grey-4-rgb), 0.15);
+    }
   }
 
   &:disabled {

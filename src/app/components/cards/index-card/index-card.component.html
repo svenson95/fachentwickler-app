@@ -27,15 +27,13 @@
       </div>
     </div>
     <div class="fe-buttons-container">
-      <button class="fe-text-button" (click)="showAnswer()"
-              [disabled]="isAnswerVisible">
+      <button class="fe-text-button" (click)="showAnswer()" [disabled]="isAnswerVisible" matRipple>
         <span>Weiter</span>
       </button>
-      <button class="fe-text-button" (click)="increaseLevel()"
-              [disabled]="!isAnswerVisible || end">
+      <button class="fe-text-button" (click)="increaseLevel()" [disabled]="!isAnswerVisible || end" matRipple>
         <span>Nächste Frage</span>
       </button>
-      <button class="fe-text-button disabled" (click)="resetLevel()" [disabled]="!end">
+      <button class="fe-text-button disabled" (click)="resetLevel()" [disabled]="!end" matRipple>
         <span>Zurück zum Anfang</span>
       </button>
     </div>

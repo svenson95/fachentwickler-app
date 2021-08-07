@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MAT_RIPPLE_GLOBAL_OPTIONS, MatNativeDateModule, RippleGlobalOptions } from '@angular/material/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AngularMaterialModule } from './app-common/angular-material.module';
 
@@ -21,6 +21,13 @@ import { environment } from '../environments/environment';
 
 import localeDe from '@angular/common/locales/de';
 registerLocaleData(localeDe);
+
+const globalRippleConfig: RippleGlobalOptions = {
+  animation: {
+    enterDuration: 200,
+    exitDuration: 500
+  }
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -50,6 +57,7 @@ registerLocaleData(localeDe);
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}},
     {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
     {provide: HIGHLIGHT_OPTIONS, useValue: {fullLibraryLoader: () => import('highlight.js')}},
+    {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig}
   ],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]

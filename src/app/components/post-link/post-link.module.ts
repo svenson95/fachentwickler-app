@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
 import { PostLinkComponent } from './post-link.component';
 import { PostBadgeModule } from '../post-badge/post-badge.module';
@@ -13,9 +14,10 @@ import { PipesModule } from '../../pipes/pipes.module';
   exports: [PostLinkComponent],
   imports: [
     CommonModule,
-    PostBadgeModule,
+    AngularMaterialModule,
     RouterModule,
-    PipesModule
+    PostBadgeModule,
+    PipesModule,
   ]
 })
 export class PostLinkModule { }

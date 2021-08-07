@@ -34,15 +34,15 @@
         </div>
         <div class="buttons-wrapper">
           <fe-button-state type="submit" [isLoading]="isLoading">Anmelden</fe-button-state>
-          <button class="fe-text-button" routerLink="/forgot-password">
+          <a class="fe-text-button" routerLink="/forgot-password" matRipple>
             <span>Passwort vergessen?</span>
-          </button>
+          </a>
         </div>
       </form>
       <hr class="fe-divider-line"/>
       <div class="register-form">
         <p class="no-account-hint">Noch nicht registriert?</p>
-        <a class="fe-text-button" routerLink="/register">
+        <a class="fe-text-button" routerLink="/register" matRipple>
           <span>Account erstellen</span>
         </a>
       </div>

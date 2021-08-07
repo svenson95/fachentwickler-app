@@ -1,7 +1,7 @@
 <mat-card class="fe-card news-card">
   <div class="fe-card-header">
     <p class="fe-card-title">Ankündigungen</p>
-    <a class="fe-text-button secondary show-more" routerLink="/mitteilungen" *ngIf="news && !allNewsLength">
+    <a class="fe-text-button secondary show-more" routerLink="/mitteilungen" *ngIf="news && !allNewsLength" matRipple>
       <span>Mitteilungen</span>
     </a>
   </div>
@@ -13,7 +13,7 @@
           <p class="date">{{post.date | date:'dd.MM.yyyy'}}</p>
           <p class="title">{{post.title}}</p>
         </div>
-        <a class="fe-text-button secondary" [routerLink]="'/mitteilungen/' + post.url">
+        <a class="fe-text-button secondary" [routerLink]="'/mitteilungen/' + post.url" matRipple>
           <span>Lesen</span>
         </a>
       </div>

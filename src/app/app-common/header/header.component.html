@@ -21,7 +21,7 @@
           <button class="sidenav-btn" mat-icon-button (click)="sidenavService.toggle()" *ngIf="isMobile">
             <mat-icon>menu</mat-icon>
           </button>
-          <a class="fe-text-button dashboard-btn"
+          <a class="fe-text-button dashboard-btn" matRipple
              [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
              [ngClass]="{'active-route': router.url.startsWith('/dashboard') || router.url.startsWith('/login')}"
           >
