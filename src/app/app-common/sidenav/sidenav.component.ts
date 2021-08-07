@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { MenuItem } from '../../models/menu-item';
 import { AuthService } from '../../services/auth/auth.service';
-import { study, languages, myClass, subjects } from '../../../data/menu-items';
+import { study, languages, myClass, subjects } from '../../data/menu-items';
 
 @Component({
   selector: 'fe-sidenav',

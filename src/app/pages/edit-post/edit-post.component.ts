@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { subjects } from '../../../data/menu-items';
+import { Post } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { Post } from '../../models/post';
+import { subjects } from '../../data/menu-items';
 
 @Component({
   selector: 'fe-post',

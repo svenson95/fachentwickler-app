@@ -1,4 +1,4 @@
-import { AuditQuestion } from '../app/models/audit-question';
+import { AuditQuestion } from '../models/audit-question';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const auditQuestions: AuditQuestion[] = [

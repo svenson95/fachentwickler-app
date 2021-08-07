@@ -10,7 +10,7 @@ import { HeaderService } from '../../services/header.service';
 import { quizzes } from '../../../data/quizzes';
 import { indexCards } from '../../../data/index-cards';
 import { matchings } from '../../../data/matchings';
-import { testDashboard, testSchoolWeek, testUser, testSchedule } from '../../../data/landing-page-data';
+import { testDashboard, testSchoolWeek, testUser, testSchedule } from '../../data/landing-page-data';
 
 @Component({
   selector: 'fe-landing-page',

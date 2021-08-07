@@ -26,7 +26,7 @@ import {
   terminalOutline,
   todayOutline,
 } from 'ionicons/icons';
-import { MenuItem } from '../app/models/menu-item';
+import { MenuItem } from '../models/menu-item';
 
 export const subjects: MenuItem[] = [
   {

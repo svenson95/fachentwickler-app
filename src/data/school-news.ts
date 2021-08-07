@@ -1,7 +1,7 @@
 import { SchoolNews } from '../app/models/school-news';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const schoolNewsData: SchoolNews[] = [
+const schoolNewsData: SchoolNews[] = [
   {
     "title": "Informationen zum Schulbetrieb zwischen dem 04.-08.01.2021",
     "date": "2020-12-20",

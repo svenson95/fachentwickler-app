@@ -5,7 +5,7 @@ import { SchoolNews } from '../../models/school-news';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { schedule } from '../../../data/schedule';
+import { schedule } from '../../data/schedule';
 
 @Component({
   selector: 'fe-dashboard',

@@ -5,7 +5,7 @@ import { PostIndexCards } from '../../models/post';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
-import { subjects } from '../../../data/menu-items';
+import { subjects } from '../../data/menu-items';
 
 @Component({
   selector: 'fe-index-cards',

@@ -1,4 +1,4 @@
-import { Schedule } from '../app/models/schedule';
+import { Schedule } from '../models/schedule';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 export const schedule: Schedule = {

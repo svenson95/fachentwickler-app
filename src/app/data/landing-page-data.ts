@@ -1,7 +1,7 @@
-import { SchoolWeek } from '../app/models/school-week';
-import { DashboardData } from '../app/models/dashboard-data';
-import { User, UserRole } from '../app/models/user';
-import { Schedule } from '../app/models/schedule';
+import { SchoolWeek } from '../models/school-week';
+import { DashboardData } from '../models/dashboard-data';
+import { User, UserRole } from '../models/user';
+import { Schedule } from '../models/schedule';
 import * as moment from 'moment';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 

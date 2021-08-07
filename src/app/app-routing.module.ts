@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route, PreloadAllModules } from '@angular/router';
 
-import { subjectsData } from '../data/subjects';
+import { subjects } from './data/menu-items';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 
 const subjectsPaths = (): Array<Route> => {
-  const subjects: Route[] = [];
-  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
-    subjects.push({
-      path: sub,
+  const subjectPaths: Route[] = [];
+  subjects.forEach(sub => {
+    subjectPaths.push({
+      path: sub.url.substr(1),
       loadChildren: () => import('src/app/pages/subject/subject.module').then(m => m.SubjectModule)
     });
   });
-  return subjects;
+  return subjectPaths;
 };
 
 const postPaths = (): Array<Route> => {
   const posts: Route[] = [];
-  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+  subjects.forEach(sub => {
     posts.push({
-      path: sub + '/:topic/:post',
+      path: sub.url.substr(1) + '/:topic/:post',
       loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostModule)
     });
   });
@@ -28,9 +28,9 @@ const postPaths = (): Array<Route> => {
 
 const editPostPaths = (): Array<Route> => {
   const posts: Route[] = [];
-  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+  subjects.forEach(sub => {
     posts.push({
-      path: sub + '/:topic/:post/edit',
+      path: sub.url.substr(1) + '/:topic/:post/edit',
       loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostModule),
       canActivate: [AuthGuardService]
     });
@@ -40,9 +40,9 @@ const editPostPaths = (): Array<Route> => {
 
 const indexCardsPaths = (): Array<Route> => {
   const indexCards: Route[] = [];
-  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+  subjects.forEach(sub => {
     indexCards.push({
-      path: sub + '/:topic/:title/karteikarten',
+      path: sub.url.substr(1) + '/:topic/:title/karteikarten',
       loadChildren: () => import('src/app/pages/index-cards/index-cards.module').then(m => m.IndexCardsModule)
     });
   });
@@ -51,9 +51,9 @@ const indexCardsPaths = (): Array<Route> => {
 
 const quizPaths = (): Array<Route> => {
   const quizzes: Route[] = [];
-  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+  subjects.forEach(sub => {
     quizzes.push({
-      path: sub + '/:topic/:title/quiz',
+      path: sub.url.substr(1) + '/:topic/:title/quiz',
       loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizModule)
     });
   });
@@ -62,9 +62,9 @@ const quizPaths = (): Array<Route> => {
 
 const matchingPaths = (): Array<Route> => {
   const matchings: Route[] = [];
-  subjectsData.map(sub => sub.subject).forEach((sub: string) => {
+  subjects.forEach(sub => {
     matchings.push({
-      path: sub + '/:topic/:title/matching',
+      path: sub.url.substr(1) + '/:topic/:title/matching',
       loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingModule)
     });
   });

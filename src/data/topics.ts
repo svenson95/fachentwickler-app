@@ -1,7 +1,7 @@
 import { Topic } from '../app/models/subject';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
-export const topics: Topic[] = [
+const topics: Topic[] = [
     {
         "title": "Der Betrieb und sein Umfeld",
         "_id": "6056185736ac2b24829ca2f4",

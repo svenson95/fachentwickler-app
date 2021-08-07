@@ -8,7 +8,7 @@ import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { LoadingService } from '../../services/loading.service';
-import { subjects } from '../../../data/menu-items';
+import { subjects } from '../../data/menu-items';
 import { testArticle } from '../../../data/posts/post-template';
 
 @Component({
