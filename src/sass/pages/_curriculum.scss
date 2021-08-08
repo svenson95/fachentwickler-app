@@ -15,7 +15,7 @@
     align-items: center;
 
     .fe-year-toggle {
-      margin-right: 20px;
+      margin-left: 20px;
     }
 
     .fe-card-title {
@@ -48,6 +48,7 @@
 
 .fe-page.curriculum .fe-week-cards-wrapper {
   display: flex;
+  flex-direction: row-reverse;
   position: relative;
   max-width: var(--max-width);
 
@@ -59,9 +60,6 @@
       flex-shrink: 0;
 
       @include to-md {
-        width: 32px;
-        font-size: .9em;
-
         .mat-button-toggle .mat-button-toggle-label-content {
           padding: 0;
         }
@@ -76,9 +74,9 @@
 
   .fe-weeks-container {
     position: absolute;
-    left: 120px;
+    left: 0;
     top: 0;
-    right: 0;
+    right: 120px;
     bottom: 0;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -92,12 +90,11 @@
     }
 
     @include to-md {
-      margin-right: 20px;
-      left: 110px;
+      right: 120px;
     }
 
-    @include to-md {
-      left: 90px;
+    @include to-xs {
+      right: 80px;
     }
 
     fe-school-week-card:last-of-type mat-card {
@@ -106,9 +103,28 @@
   }
 }
 
+$toggleSize: 42px;
 .fe-year-toggle,
 .fe-week-toggle {
   mat-button-toggle {
-    width: 42px;
+
+    @include from-xs {
+      width: $toggleSize;
+    }
+
+    @include to-xs {
+      width: $toggleSize - 10;
+    }
+
+    .mat-button-toggle-label-content {
+      @include from-xs {
+        line-height: $toggleSize;
+      }
+
+      @include to-xs {
+        line-height: $toggleSize - 10;
+        font-size: .7rem;
+      }
+    }
   }
 }

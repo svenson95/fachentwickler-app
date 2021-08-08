@@ -39,28 +39,31 @@ export class CurriculumComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription.add(this.loadingService.loading$.pipe(delay(0)).subscribe(status => this.isLoading = status));
     this.subscription.add(this.dataService.getAllSchoolWeeks().subscribe(response => {
-      const schoolYears = [
-        { year: 1, weeks: [] },
-        { year: 2, weeks: [] },
-        { year: 3, weeks: [] }
-      ];
-
-      response.forEach(week => {
-        if (Number(week.schoolWeek) <= 13) {
-          schoolYears.find(year => year.year === 1).weeks.push(week);
-        } else if (Number(week.schoolWeek) <= 26) {
-          schoolYears.find(year => year.year === 2).weeks.push(week);
-        } else if (Number(week.schoolWeek) > 26) {
-          schoolYears.find(year => year.year === 2).weeks.push(week);
-        }
-      });
-      this.schoolYears = schoolYears;
-      console.log(this.schoolYears);
+      this.schoolYears = this.initSchoolYears(response);
     }));
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  initSchoolYears(schoolWeeks: SchoolWeek[]): SchoolYear[] {
+    const schoolYears = [
+      { year: 1, weeks: [] },
+      { year: 2, weeks: [] },
+      { year: 3, weeks: [] }
+    ];
+
+    schoolWeeks.forEach(week => {
+      if (Number(week.schoolWeek) <= 13) {
+        schoolYears.find(year => year.year === 1).weeks.push(week);
+      } else if (Number(week.schoolWeek) <= 26) {
+        schoolYears.find(year => year.year === 2).weeks.push(week);
+      } else if (Number(week.schoolWeek) > 26) {
+        schoolYears.find(year => year.year === 2).weeks.push(week);
+      }
+    });
+    return schoolYears;
   }
 
   toNumber(stringNumber): number {
