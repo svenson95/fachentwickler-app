@@ -7,6 +7,10 @@
   box-sizing: inherit;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html, body {
   font-size: 100%;           /* defines what 1rem is */
 }

@@ -14,7 +14,7 @@
   }
 
   .mat-menu-item:hover {
-    background: rgba(var(--secondary-color-rgb), .5);
+    background: var(--secondary-color);
 
     mat-icon {
       color : var(--background-primary) !important;
