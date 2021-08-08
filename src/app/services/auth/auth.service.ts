@@ -282,6 +282,8 @@ export class AuthService {
     }
 
     setLessonSolved(id): void {
+        if (this.user.progress.includes(id)) return;
+
         const lesson = {
             userId: this.user._id,
             postId: id
