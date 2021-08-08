@@ -1,23 +1,24 @@
-<mat-card class="fe-card school-week-card">
+<fe-loading-spinner *ngIf="week === undefined"></fe-loading-spinner>
+<mat-card class="fe-card school-week-card" *ngIf="week !== undefined">
   <div class="fe-card-header">
     <div class="fe-title-description-wrapper">
       <p class="fe-card-title">Schulwoche #{{week.schoolWeek}}</p>
       <p class="fe-card-description">
         <span>
-          {{(week?.posts[0]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
+          {{(week.posts[0].lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
         </span>
         <span> - </span>
         <span>
-          {{(week?.posts[week.posts.length-1]?.lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
+          {{(week.posts[week.posts.length-1].lessonDate | date:'dd.MM.yyyy') || '00.00.0000'}}
         </span>
       </p>
     </div>
-    <div class="button-wrapper" *ngIf="isDashboardPage">
+    <div class="button-wrapper" *ngIf="showNavigation">
       <fe-loading-spinner *ngIf="isLoading" size="24"></fe-loading-spinner>
-      <button class="previous-week-btn" (click)="getPreviousWeek()" [disabled]="week === undefined || week.schoolWeek == 1 || isLoading" mat-icon-button>
+      <button class="previous-week-btn" (click)="getWeek(-1)" [disabled]="week === undefined || week.schoolWeek == 1 || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
-      <button class="next-week-btn" (click)="getNextWeek()" [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek || isLoading" mat-icon-button>
+      <button class="next-week-btn" (click)="getWeek(1)" [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek || isLoading" mat-icon-button>
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
@@ -26,12 +27,12 @@
     <fe-loading-spinner *ngIf="week === undefined"></fe-loading-spinner>
     <div class="weekday-group" *ngIf="week !== undefined">
 
-      <div class="weekday-item" *ngFor="let week of weekdays">
+      <div class="weekday-item" *ngFor="let el of week | schoolDays">
         <div class="label-wrapper">
-          <p class="weekday-label">{{week.day | weekdayString}}</p>
+          <p class="weekday-label">{{el.day | weekdayString}}</p>
           <hr class="weekday-spacer"/>
         </div>
-        <fe-post-link *ngFor="let post of week.lessons" [post]="post" [title]="post.subject | longSubjectName"></fe-post-link>
+        <fe-post-link *ngFor="let post of el.lessons" [post]="post" [title]="post.subject | longSubjectName"></fe-post-link>
       </div>
 
     </div>

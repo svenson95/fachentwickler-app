@@ -5,7 +5,7 @@ export interface SchoolWeek {
   posts: Post[];
 }
 
-export interface Weekdays {
+export interface WeekDays {
   day: number;
   lessons: Post[];
 }

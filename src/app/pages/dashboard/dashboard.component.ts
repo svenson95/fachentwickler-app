@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getLatest(): SchoolNews[] {
-    if (this.dataService.dashboard.schoolNews === undefined) return;
+    if (this.dataService.dashboard?.schoolNews === undefined) return;
     return [this.dataService.dashboard.schoolNews[0]];
   }
 

@@ -46,6 +46,10 @@ mat-card.fe-card.school-week-card {
         mat-icon {
           color: var(--tertiary-color);
         }
+
+        .mat-ripple-element {
+          background-color: var(--tertiary-color);
+        }
       }
 
       .previous-week-btn {

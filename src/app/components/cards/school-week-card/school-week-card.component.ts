@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
-import { SchoolWeek, Weekdays } from '../../../models/school-week';
+import { SchoolWeek } from '../../../models/school-week';
 import { DataService } from '../../../services/data/data.service';
 
 @Component({
@@ -8,50 +8,38 @@ import { DataService } from '../../../services/data/data.service';
   templateUrl: './school-week-card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SchoolWeekCardComponent implements OnInit {
+export class SchoolWeekCardComponent implements OnInit, OnChanges {
 
   @Input() week: SchoolWeek;
-  @Input() isDashboardPage?: boolean;
-
-  weekdays: Weekdays[];
+  @Input() showNavigation?: boolean;
+  weeks: SchoolWeek[];
   isLoading: boolean;
 
   constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
-    this.initWeekdays();
   }
 
-  initWeekdays(): void {
-    const weekArray: Weekdays[] = [];
-    this.week.posts.forEach(post => {
-      const postDay = new Date(post.lessonDate).getDay();
-      const dayLessons = weekArray.find(week => week.day === postDay);
-      if (dayLessons) {
-        dayLessons.lessons.push(post);
-      } else if (postDay) {
-        weekArray.push({ day: postDay, lessons: [post] });
-      }
-    });
-    this.weekdays = weekArray;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.showNavigation && this.weeks === undefined && this.week !== undefined) {
+      this.weeks = [this.week];
+    }
   }
 
-  /* -- Calendar buttons --*/
-  getPreviousWeek(): void {
+  getWeek(value: number): void {
+    const schoolWeek = Number(this.week.schoolWeek);
+
+    const previousWeek = this.weeks.find(el => Number(el.schoolWeek) === (schoolWeek + value));
+    if (previousWeek) {
+      this.week = previousWeek;
+      this.dataService.schoolWeek = previousWeek;
+      return;
+    }
+
     this.isLoading = true;
-    this.dataService.getSchoolWeek(Number(this.week.schoolWeek) - 1).subscribe(response => {
+    this.dataService.getSchoolWeek(schoolWeek + value).subscribe(response => {
+      this.weeks.push(response);
       this.week = response;
-      this.initWeekdays();
-      this.dataService.schoolWeek = response;
-      this.isLoading = false;
-    });
-  }
-
-  getNextWeek(): void {
-    this.isLoading = true;
-    this.dataService.getSchoolWeek(Number(this.week.schoolWeek) + 1).subscribe(response => {
-      this.week = response;
-      this.initWeekdays();
       this.dataService.schoolWeek = response;
       this.isLoading = false;
     });
