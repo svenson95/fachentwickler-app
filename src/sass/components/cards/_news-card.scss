@@ -26,7 +26,17 @@
   }
 
   fe-pagination-bar .pagination-bar {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
+
+    fe-loading-spinner {
+      margin-left: 20px;
+
+      .fe-loading-indicator .fe-loading-spinner {
+        margin: 0;
+      }
+    }
   }
 }
 

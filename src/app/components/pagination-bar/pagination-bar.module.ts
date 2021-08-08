@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { PaginationBarComponent, PageButtonsPipe } from './pagination-bar.component';
 
+import { LoadingSpinnerModule } from '../loading-spinner/loading-spinner.module';
+
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { PaginationBarComponent, PageButtonsPipe } from './pagination-bar.compon
   exports: [PaginationBarComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    LoadingSpinnerModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -12,6 +12,7 @@ export class NewsCardComponent implements OnInit {
   @Input() news: SchoolNews[];
   @Input() currentPage = 0;
   @Input() allNewsLength?: number;
+  @Input() isLoading?: boolean;
   @Output() changePage = new EventEmitter<number>();
 
   constructor() {}

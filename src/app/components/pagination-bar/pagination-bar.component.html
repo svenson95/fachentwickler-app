@@ -12,6 +12,9 @@
             [class.is-selected]="page === currentPage" (click)="goTo(page)">
         {{page + 1}}
     </button>
+    <ng-container *ngIf="this.isFirstPaginationPage && this.isLastPaginationPage">
+      <fe-loading-spinner size="24" *ngIf="isLoading"></fe-loading-spinner>
+    </ng-container>
     <ng-container *ngIf="!(this.isFirstPaginationPage && this.isLastPaginationPage)">
         <button class="forward-btn" (click)="goToNextPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? disabledOpacity : null">
             <ion-icon class="delete-icon" name="caret-forward-outline"></ion-icon>

@@ -25,6 +25,7 @@ export class PaginationBarComponent implements OnInit {
 
   @Input() currentPage: number;
   @Input() totalItems: number;
+  @Input() isLoading?: boolean;
 
   paginationPage = 0;
   buttonsPerPage = 7;
