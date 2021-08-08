@@ -1,11 +1,7 @@
-.mat-dialog-container {
+mat-dialog-container.mat-dialog-container {
   background: var(--background-secondary);
   color: var(--text-color-1);
-  border-radius: var(--border-radius) !important;
-
-  .mat-dialog-content {
-    margin-bottom: 10px;
-  }
+  border-radius: var(--border-radius);
 
   .mat-dialog-actions {
     min-height: inherit;

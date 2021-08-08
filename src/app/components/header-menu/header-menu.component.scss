@@ -10,24 +10,20 @@
   }
 
   .menu-btn mat-icon {
-    color: var(--tertiary-color) !important;
+    color: var(--tertiary-color);
   }
 
   .mat-menu-item:hover {
     background: var(--secondary-color);
 
     mat-icon {
-      color : var(--background-primary) !important;
+      color : var(--background-primary);
     }
-  }
-
-  .mat-ripple-element {
-    background-color: rgba(var(--background-primary-rgb),.2);
   }
 
   .mat-menu-item[disabled] {
     mat-icon {
-      color: var(--secondary-color) !important;
+      color: var(--secondary-color);
     }
 
     .label {

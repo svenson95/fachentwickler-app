@@ -102,17 +102,17 @@
 
   .fe-view-wrapper .exam-details-wrapper {
     flex-direction: column-reverse;
-    align-items: self-end !important;
+    align-items: self-end;
 
     .exam-date-block {
-      margin-left: -20px !important;
+      margin-left: -20px;
     }
 
     .exam-title-wrapper {
       margin-bottom: 5px;
 
       .exam-subject, .exam-title {
-        margin-left: 10px !important;
+        margin-left: 10px;
       }
     }
   }

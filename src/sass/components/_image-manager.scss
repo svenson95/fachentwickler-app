@@ -2,8 +2,7 @@ mat-dialog-content.fe-image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
   height: 90vh;
-  max-height: 800px;
-  margin: 0;
+  max-height: 750px;
 
   &::-webkit-scrollbar {
     width: var(--scrollbar-width);
@@ -17,7 +16,7 @@ mat-dialog-content.fe-image-manager {
   }
 
   .fe-im-header {
-    margin: 24px 0;
+    margin-bottom: 20px;
 
     .fe-card-title {
       margin-bottom: 2px;
@@ -153,19 +152,11 @@ mat-dialog-content.fe-image-manager {
   }
 
   .fe-pagination-bar {
-    margin-bottom: 24px;
-
     hr {
       margin-top: 0;
       margin-bottom: 10px;
     }
   }
-}
-
-.image-manager-modal .mat-dialog-container {
-  background: var(--background-secondary);
-  border-radius: 0;
-  padding: 0;
 }
 
 .image-manager-modal.cdk-overlay-pane {

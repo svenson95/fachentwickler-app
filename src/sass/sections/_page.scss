@@ -43,7 +43,7 @@
   flex: 1 0 auto;
 }
 
-.fe-sidenav {
+mat-sidenav.fe-sidenav {
   background: var(--background-secondary);
   overflow-x: hidden;
   border-right: 0;
@@ -54,7 +54,7 @@
 
 .mat-drawer-container {
   @include to-md {
-    margin-top: 60px !important;
+    margin-top: 60px;
   }
 }
 

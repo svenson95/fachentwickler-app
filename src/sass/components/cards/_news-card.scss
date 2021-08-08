@@ -6,11 +6,11 @@
 .fe-card.news-card .fe-news-container {
 
   @include from-xs {
-    margin-top: 20px !important;
+    margin-top: 20px;
   }
 
   @include to-xs {
-    margin-top: 10px !important;
+    margin-top: 10px;
   }
 
   .fe-news-item {

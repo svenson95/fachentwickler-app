@@ -1,10 +1,10 @@
 /* MAT-SNACKBAR */
-.mat-snack-bar-container {
+snack-bar-container.mat-snack-bar-container {
   background: var(--tertiary-color);
   color: white;
-  margin-bottom: calc(24px + env(safe-area-inset-bottom)) !important;
+  margin-bottom: calc(24px + env(safe-area-inset-bottom));
 
   @include from-md {
-    max-width: 40vw !important;
+    max-width: 40vw;
   }
 }

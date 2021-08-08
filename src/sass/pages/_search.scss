@@ -1,9 +1,9 @@
-.fe-search-results {
-  margin-top: 20px !important;
-}
-
-.search-page {
+.fe-page.search-page {
   .card-title-wrapper {
+  }
+
+  .fe-search-results {
+    margin-top: 20px;
   }
 
   .close-search-btn {
