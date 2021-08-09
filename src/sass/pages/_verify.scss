@@ -1,20 +1,31 @@
-.fe-page.verify .verify-form {
-  text-align: center;
-  margin: 40px auto;
-
-  @include from-xs {
-    max-width: 50%;
+.fe-page.verify {
+  .fe-view-wrapper {
+    margin-top: 20px;
   }
 
-  .input {
-    margin-bottom: 10px;
-  }
-
-  .buttons-wrapper {
+  .verify-form {
+    text-align: center;
     margin: auto;
 
-    p {
-      margin-top: 40px;
+    @include from-xs {
+      max-width: 50%;
     }
+
+    .input {
+      margin-bottom: 10px;
+    }
+
+    .buttons-wrapper {
+      margin: auto;
+
+      p {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .verification-succeed-container p {
+    text-align: center;
+    margin-top: 20px;
   }
 }

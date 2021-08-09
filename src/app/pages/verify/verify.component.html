@@ -1,8 +1,8 @@
 <div class="fe-page verify">
   <mat-card class="fe-card">
-    <p class="fe-card-title">Registrierung abschließen</p>
+    <p class="fe-card-title">{{verificationSucceed ? 'Registrierung abgeschlossen' : 'Registrierung abschließen'}}</p>
     <mat-card-content class="fe-view-wrapper">
-      <form class="verify-form" [formGroup]="formGroup" (ngSubmit)="verifyUser($event)" (change)="onFormChange($event)">
+      <form class="verify-form" [formGroup]="formGroup" (ngSubmit)="verifyUser($event)" (change)="onFormChange($event)" *ngIf="!verificationSucceed">
         <div class="form-inputs">
           <p>Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem Verifizierungscode zugeschickt. </p>
           <mat-form-field class="input code">
@@ -19,6 +19,10 @@
           <fe-button-state type="button" [isLoading]="isResendLoading" (click)="resendVerificationMail()">Nochmal senden</fe-button-state>
         </div>
       </form>
+      <div class="verification-succeed-container" *ngIf="verificationSucceed">
+        <fe-checkmark></fe-checkmark>
+        <p>Erfolgreich verifiziert!</p>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

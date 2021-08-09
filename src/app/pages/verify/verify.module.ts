@@ -7,6 +7,7 @@ import { VerifyComponent } from './verify.component';
 import { VerifyPageRoutingModule } from './verify-routing.module';
 
 import { ButtonStateModule } from '../../components/button-state/button-state.module';
+import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
 
 @NgModule({
   declarations: [VerifyComponent],
@@ -16,7 +17,8 @@ import { ButtonStateModule } from '../../components/button-state/button-state.mo
     ReactiveFormsModule,
     AngularMaterialModule,
     VerifyPageRoutingModule,
-    ButtonStateModule
+    ButtonStateModule,
+    CheckmarkModule
   ],
 })
 export class VerifyModule { }
