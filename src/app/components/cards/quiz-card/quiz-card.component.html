@@ -38,12 +38,7 @@
             <p *ngIf="wrongAnswers > 0">Du hattest {{wrongAnswers}} Fehler</p>
             <span class="fe-emoji" *ngIf="wrongAnswers > 0">{{finishEmojis[wrongAnswers > 6 ? 6 : wrongAnswers]}}</span>
             <div class="congrat-emoji" *ngIf="wrongAnswers === 0">
-              <div class="success-animation">
-                <svg class="success-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" fill="transparent">
-                  <circle class="success-mark__circle" cx="26" cy="26" r="25"/>
-                  <path class="success-mark__check" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                </svg>
-              </div>
+              <fe-checkmark></fe-checkmark>
             </div>
           </div>
           <button class="fe-text-button" (click)="resetLevel()" matRipple>

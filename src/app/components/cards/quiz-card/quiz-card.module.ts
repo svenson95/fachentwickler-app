@@ -8,6 +8,7 @@ import { ExamItemModule } from '../../exam-item/exam-item.module';
 import { PostLinkModule } from '../../post-link/post-link.module';
 import { PostBadgeModule } from '../../post-badge/post-badge.module';
 import { AnswerIndicatorModule } from '../../answer-indicator/answer-indicator.module';
+import { CheckmarkModule } from '../../checkmark/checkmark.module';
 
 
 
@@ -21,7 +22,8 @@ import { AnswerIndicatorModule } from '../../answer-indicator/answer-indicator.m
     ExamItemModule,
     PostLinkModule,
     PostBadgeModule,
-    AnswerIndicatorModule
+    AnswerIndicatorModule,
+    CheckmarkModule
   ]
 })
 export class QuizCardModule { }
