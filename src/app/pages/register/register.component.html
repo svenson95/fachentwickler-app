@@ -51,7 +51,7 @@
           </mat-form-field>
         </div>
         <div class="buttons-wrapper">
-          <fe-button-state type="submit" [disabled]="form.invalid" [isLoading]="isLoading">Bestätigen</fe-button-state>
+          <fe-button-state type="submit" [disabled]="form.invalid || isLoading" [isLoading]="isLoading">Bestätigen</fe-button-state>
         </div>
       </form>
     </mat-card-content>
