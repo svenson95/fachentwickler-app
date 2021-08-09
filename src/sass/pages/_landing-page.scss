@@ -1,20 +1,20 @@
 
 .fe-page.landing-page {
 
-  .fe-description {
+  .description {
     color: var(--text-color-3);
     margin-top: 0;
     margin-bottom: 3px;
   }
 
-  .fe-welcome-banner {
+  .welcome-banner {
     margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
 
-    .fe-app-icon {
+    .app-icon {
       width: 220px;
       height: 220px;
       flex-shrink: 0;
@@ -39,7 +39,7 @@
       }
     }
 
-    .fe-labels {
+    .banner-labels {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -71,7 +71,7 @@
     }
   }
 
-  .fe-landing-row {
+  .row {
     display: flex;
     max-width: 1135px;
     flex-direction: column;
@@ -97,16 +97,16 @@
       }
     }
 
-    .fe-text-row {
+    .row-labels-wrapper {
       display: flex;
       align-self: center;
     }
 
-    .fe-text-column {
+    .row-labels {
       display: flex;
       flex-direction: column;
 
-      .fe-title {
+      .title {
         font-size: 1.6em;
         letter-spacing: 1px;
         line-height: 30px;
@@ -128,30 +128,17 @@
         margin-right: 40px;
       }
     }
-
-    .fe-component-wrapper {
-      .fe-card-title {
-        line-height: 20px;
-      }
-    }
   }
 
-  .fe-landing-row.first {
+  .row.first {
     justify-content: space-between;
 
-    .fe-components-wrapper {
+    .components-container {
       align-self: center;
-
-      @include from-xs {
-        width: 90%;
-      }
-
-      @include to-xs {
-        width: 100%;
-      }
+      width: 100%;
     }
 
-    .fe-text-row {
+    .row-labels-wrapper {
       margin-top: 50px;
       margin-bottom: 20px;
 
@@ -160,16 +147,16 @@
       }
     }
 
-    .fe-text-column {
+    .row-labels {
       align-items: center;
       align-self: center;
       max-width: 350px;
 
-      .fe-eduaction-svg {
+      .education-svg {
         width: 120px;
       }
 
-      .fe-reading-svg {
+      .reading-svg {
         width: 120px;
 
         @include to-xs {
@@ -179,10 +166,10 @@
     }
   }
 
-  .fe-landing-row.second {
+  .row.second {
     align-items: center;
 
-    .fe-text-row {
+    .row-labels-wrapper {
       margin-top: 30px;
       margin-bottom: 20px;
 
@@ -191,7 +178,7 @@
       }
     }
 
-    .fe-text-column {
+    .row-labels {
       align-self: center;
       max-width: 400px;
 
@@ -200,13 +187,13 @@
         margin-top: 20px;
       }
 
-      .fe-title {
+      .title {
         @include to-lg {
           align-self: baseline;
         }
       }
 
-      .fe-game-svg {
+      .game-svg {
         width: 100px;
         margin-left: 20px;
 
@@ -215,7 +202,7 @@
         }
       }
 
-      .fe-online-course-svg {
+      .online-course-svg {
         width: 100px;
         margin-left: 20px;
 
@@ -225,49 +212,23 @@
       }
     }
 
-    .fe-component-wrapper {
+    .components-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
 
-      @include from-md {
-        min-width: 500px;
-      }
-
       fe-quiz-card,
       fe-index-card,
       fe-matching-game {
-        min-width: 80%;
-      }
-
-      fe-index-card {
-        @include to-md {
-          width: 100%;
-        }
-      }
-
-      fe-index-card,
-      fe-matching-game {
-        margin-top: 20px;
-      }
-
-      .fe-divider-line {
-        height: 1px;
-        width: 80%;
-        border: none;
-        background: var(--grey-2);
+        width: 100%;
       }
     }
   }
 
-  .fe-landing-row.school {
+  .row.school {
 
-    .fe-component-wrapper {
-      width: 90%;
-    }
-
-    .fe-text-row {
+    .row-labels-wrapper {
       margin-top: 40px;
       margin-bottom: 20px;
 
@@ -276,7 +237,7 @@
       }
     }
 
-    .fe-text-column {
+    .row-labels {
       display: flex;
       align-items: center;
       align-self: center;
@@ -289,33 +250,33 @@
         }
       }
 
-      .fe-hardware-svg {
+      .hardware-svg {
         vertical-align: top;
         margin-right: 5px;
       }
 
-      .fe-hardware-svg, .fe-world-grid-svg {
+      .hardware-svg, .world-grid-svg {
         width: 64px;
         height: 64px;
       }
 
-      .fe-datenbankspeicher-svg {
+      .datenbankspeicher-svg {
         width: 96px;
         height: 96px;
       }
 
-      .fe-world-grid-svg {
+      .world-grid-svg {
         margin-left: 5px;
         align-self: flex-end;
       }
 
-      .fe-question-svg {
+      .question-svg {
         width: 80px;
         height: 80px;
         color: var(--secondary-color);
       }
 
-      .fe-title {
+      .title {
         align-self: start;
 
         @include to-lg {
@@ -324,7 +285,7 @@
       }
     }
 
-    .fe-component-wrapper {
+    .components-container {
       align-self: center;
 
       @include from-lg {
@@ -341,28 +302,30 @@
     }
   }
 
-  .fe-rocket-svg,
-  .fe-eduaction-svg,
-  .fe-reading-svg,
-  .fe-game-svg,
-  .fe-online-course-svg,
-  .fe-question-svg,
-  .fe-hardware-svg, .fe-datenbankspeicher-svg, .fe-world-grid-svg {
-    opacity: .5;
+  .rocket-svg,
+  .education-svg,
+  .reading-svg,
+  .game-svg,
+  .online-course-svg,
+  .question-svg,
+  .hardware-svg,
+  .datenbankspeicher-svg,
+  .world-grid-svg {
+    opacity: .6;
   }
 
-  .fe-landing-row.start {
+  .row.start {
     display: block;
     text-align: center;
 
-    .fe-text-column {
+    .row-labels {
       align-items: center;
 
       @include to-lg {
         margin-top: 40px;
       }
 
-      .fe-rocket-svg {
+      .rocket-svg {
         width: 100px;
         height: 100px;
         font-size: 100px;
@@ -374,25 +337,53 @@
       margin-top: 10px;
     }
   }
+
+  .component-name-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    .component-name {
+      font-size: 1rem;
+      letter-spacing: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: .2;
+      margin: 0 20px;
+
+      @include to-xs {
+        font-size: 1rem;
+      }
+    }
+
+    hr {
+      height: 1px;
+      width: 100%;
+      background: var(--text-color-1);
+      opacity: .1;
+    }
+  }
 }
 
-.fe-landing-row.first {
+.row.first {
   .weekday-group {
     .weekday-item:nth-child(1), .weekday-item:nth-child(2) {
-      .fe-post-link-wrapper .fe-post-link {
+      .fe-post-link-wrapper .post-link {
         border-right: 2px solid var(--secondary-color);
       }
     }
 
     .weekday-item:nth-child(3), .weekday-item:nth-child(4) {
-      .fe-post-link-wrapper .fe-post-link {
+      .fe-post-link-wrapper .post-link {
         border-right: 2px solid var(--tertiary-color);
       }
     }
   }
 
   .fe-next-lesson {
-    .fe-post-link-wrapper .fe-post-link.isCompleted {
+    .fe-post-link-wrapper .post-link.isCompleted {
       border-right: 2px solid var(--tertiary-color);
     }
   }

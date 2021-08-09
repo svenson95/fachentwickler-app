@@ -42,7 +42,7 @@
     }
   }
 
-  .fe-post-link {
+  .post-link {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -70,13 +70,13 @@
         transition: none;
       }
 
-      &:hover .fe-title {
+      &:hover .title {
         text-decoration: underline;
         text-decoration-color: var(--secondary-color);
       }
     }
 
-    .fe-title-wrapper {
+    .title-wrapper {
       margin: auto 0;
       margin-right: 5px;
 
@@ -88,7 +88,7 @@
         align-self: start;
       }
 
-      .fe-title {
+      .title {
         margin: 0;
         line-height: 16px;
         transition: letter-spacing 400ms ease-out;
@@ -99,7 +99,7 @@
       }
     }
 
-    .fe-description-wrapper {
+    .description-wrapper {
       display: flex;
       align-items: center;
       flex-shrink: 0;
@@ -118,7 +118,7 @@
         align-items: flex-end;
       }
 
-      .fe-description {
+      .description {
         color: var(--grey-4);
         font-size: .9em;
         margin: 0;

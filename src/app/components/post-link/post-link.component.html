@@ -1,13 +1,13 @@
 <div class="fe-post-link-wrapper" *ngIf="post !== undefined">
-  <a class="fe-post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url"
+  <a class="post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url"
      [ngClass]="{ isCompleted: post._id | alreadyRead }" matRipple>
-    <div class="fe-title-wrapper">
-      <p class="fe-title" [ngClass]="{exam: post.url?.includes('test')}">
+    <div class="title-wrapper">
+      <p class="title" [ngClass]="{exam: post.url?.includes('test')}">
         {{post.title}}
       </p>
     </div>
-    <div class="fe-description-wrapper">
-      <p class="fe-description">{{post.lessonDate | date: 'dd.MM.yyyy'}}</p>
+    <div class="description-wrapper">
+      <p class="description">{{post.lessonDate | date: 'dd.MM.yyyy'}}</p>
       <fe-post-badge [post]="post"></fe-post-badge>
     </div>
   </a>
