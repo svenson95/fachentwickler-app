@@ -31,10 +31,14 @@ mat-card.mat-card.fe-card {
   }
 
   .fe-post-last-update {
-    font-size: .9em;
+    font-size: .8rem;
     color: var(--grey-3);
     text-align: right;
     margin-top: 40px;
+
+    @include to-xs {
+      font-size: .7rem;
+    }
   }
 }
 
