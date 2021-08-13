@@ -1,26 +1,26 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MAT_RIPPLE_GLOBAL_OPTIONS, MatNativeDateModule, RippleGlobalOptions } from '@angular/material/core';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { AngularMaterialModule } from './app-common/angular-material.module';
 
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { ThemeModule } from './services/theme.module';
 import { PageComponentModule } from './app-common/page/page.module';
 import { SnackbarModule } from './app-common/snackbar/snackbar.module';
 import { environment } from '../environments/environment';
-
-import localeDe from '@angular/common/locales/de';
-registerLocaleData(localeDe);
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {
@@ -62,4 +62,8 @@ const globalRippleConfig: RippleGlobalOptions = {
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeDe);
+  }
+}
