@@ -71,6 +71,15 @@
   -webkit-animation-timing-function: ease-in-out;
 }
 
+@mixin moveInBottomAnimation {
+  animation-name: moveInBottom;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: moveInBottom;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
 @mixin moveInLeftAnimation {
   animation-name: moveInLeft;
   animation-duration: 400ms;

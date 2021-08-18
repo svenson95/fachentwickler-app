@@ -1,12 +1,12 @@
 /* ANIMATIONS */
 @keyframes moveInTop {
   0% {
-    opacity: 0;
-    transform: translateY(-5rem);
+    opacity: 0.5;
+    transform: translateY(-4rem);
   }
 
   40% {
-    transform: translateY(2rem);
+    transform: translateY(1rem);
   }
 
   100% {
@@ -17,11 +17,11 @@
 @-webkit-keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(-5rem);
+    transform: translateY(-4rem);
   }
 
   40% {
-    transform: translateY(2rem);
+    transform: translateY(1rem);
   }
 
   100% {
@@ -35,11 +35,11 @@
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(5rem);
+    transform: translateY(3rem);
   }
 
   40% {
-    transform: translateY(-2rem);
+    transform: translateY(-1rem);
   }
 
   100% {
@@ -50,11 +50,11 @@
 @-webkit-keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(5rem);
+    transform: translateY(3rem);
   }
 
   40% {
-    transform: translateY(-2rem);
+    transform: translateY(-1rem);
   }
 
   100% {

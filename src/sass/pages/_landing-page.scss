@@ -136,6 +136,7 @@
     .components-container {
       align-self: center;
       width: 100%;
+      max-width: var(--max-width);
     }
 
     .row-labels-wrapper {
@@ -217,6 +218,7 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
+      max-width: var(--max-width);
 
       fe-quiz-card,
       fe-index-card,
