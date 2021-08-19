@@ -4,7 +4,6 @@ import localeDe from '@angular/common/locales/de';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -36,10 +35,8 @@ const globalRippleConfig: RippleGlobalOptions = {
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     AngularMaterialModule,
-    ReactiveFormsModule,
     ThemeModule,
     PageComponentModule,
     SnackbarModule,

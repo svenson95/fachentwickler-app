@@ -1,29 +1,20 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
-import {inputsMatch} from '../../validators/match.validator';
+import { inputsMatch } from '../../validators/match.validator';
 
 @Component({
   selector: 'fe-forgot-password',
   templateUrl: './forgot-password.component.html'
 })
 export class ForgotPasswordComponent implements OnInit {
-  @ViewChild('emailInput') emailInput;
-  @ViewChild('verificationCodeInput') verificationCodeInput;
-
-  emailFormGroup: FormGroup;
-  email: FormControl;
-
-  passwordFormGroup: FormGroup;
-  verificationCode: FormControl;
-  password: FormControl;
-  confirmPassword: FormControl;
-
+  emailForm: FormGroup;
+  passwordForm: FormGroup;
   isEmailSent = false;
   isSubmitLoading = false;
   resendTimeout: boolean;
@@ -36,60 +27,36 @@ export class ForgotPasswordComponent implements OnInit {
               private snackBar: MatSnackBar
   ) {
     this.headerService.setPageTitle('Passwort vergessen');
-    if (authService.isAuthenticated) {
-      router.navigate(['dashboard']);
-    }
-
     this.initFormGroups();
   }
 
   initFormGroups(): void {
-    this.email = new FormControl('', {
-      validators: [Validators.required, Validators.email],
-      updateOn: 'submit'
+    this.emailForm = this.formBuilder.group({
+      email: [null as string, { validators: [Validators.required, Validators.email] }]
     });
 
-    this.emailFormGroup = this.formBuilder.group({
-      email: this.email
-    });
-
-    this.verificationCode = new FormControl('', {
-      validators: [Validators.required],
-      updateOn: 'submit'
-    });
-
-    this.password = new FormControl('', {
-      validators: [Validators.required],
-      updateOn: 'submit'
-    });
-
-    this.confirmPassword = new FormControl('', {
-      validators: [Validators.required, inputsMatch('password')],
-      updateOn: 'submit'
-    });
-
-    this.passwordFormGroup = this.formBuilder.group({
-      verificationCode: this.verificationCode,
-      password: this.password,
-      confirmPassword: this.confirmPassword
+    this.passwordForm = this.formBuilder.group({
+      verificationCode: [null as number, { validators: [Validators.required] }],
+      password: [null as string, { validators: [Validators.required] }],
+      confirmPassword: [null as string, { validators: [Validators.required, inputsMatch('password')] }]
     });
   }
 
   ngOnInit(): void {}
 
   onFormChange(event): void {
-    this.email.setErrors(null);
-    this.verificationCode.setErrors(null);
-    this.password.setErrors(null);
-    this.confirmPassword.setErrors(null);
+    this.emailForm.controls.email.setErrors(null);
+    this.passwordForm.controls.verificationCode.setErrors(null);
+    this.passwordForm.controls.password.setErrors(null);
+    this.passwordForm.controls.confirmPassword.setErrors(null);
   }
 
   sendVerificationCode(): void {
-    if (this.emailFormGroup.invalid) {
+    if (this.emailForm.invalid) {
       return;
     }
 
-    const email = this.emailFormGroup.get('email').value;
+    const email = this.emailForm.get('email').value;
     this.isSubmitLoading = true;
 
     this.authService.forgotPassword(email).subscribe(
@@ -122,11 +89,11 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   changeUserPassword(): void {
-    if (this.passwordFormGroup.invalid) {
+    if (this.passwordForm.invalid) {
       return;
     }
 
-    const {verificationCode, confirmPassword} = this.passwordFormGroup.value;
+    const {verificationCode, confirmPassword} = this.passwordForm.value;
 
     this.authService.changePassword(verificationCode, confirmPassword).subscribe(
       (result) => {
@@ -138,7 +105,7 @@ export class ForgotPasswordComponent implements OnInit {
       },
       (response) => {
         if (response.error.code === 'TokenNotFoundException') {
-          return this.verificationCode.setErrors({ incorrect: true });
+          return this.passwordForm.controls.verificationCode.setErrors({ incorrect: true });
         }
 
         this.snackBar.openFromComponent(SnackbarComponent, {

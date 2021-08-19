@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
@@ -13,11 +13,9 @@ import { ThemeService } from '../../services/theme.service';
   templateUrl: './verify.component.html'
 })
 export class VerifyComponent implements OnInit {
-  @ViewChild('codeInput') codeInput;
+  @ViewChild('verificationCodeInput') verificationCodeInput;
 
   formGroup: FormGroup;
-  verificationCode: FormControl;
-
   isSubmitLoading = false;
   isResendLoading = false;
   resendTimeout: boolean;
@@ -31,26 +29,16 @@ export class VerifyComponent implements OnInit {
               private snackBar: MatSnackBar,
               private formBuilder: FormBuilder
   ) {
-    if (authService.isAuthenticated) {
-      router.navigate(['dashboard']);
-    }
-
     this.headerService.setPageTitle('Verifizierung');
-    this.verificationCode = new FormControl(null as number, {
-      validators: [Validators.required],
-      updateOn: 'submit'
-    });
     this.formGroup = formBuilder.group({
-      verificationCode: this.verificationCode
+      verificationCode: [null as number, { validators: [Validators.required], updateOn: 'submit' }]
     });
   }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      const {code} = params;
-
-      if (code) {
-        this.formGroup.controls.verificationCode.setValue(code);
+      if (params.code) {
+        this.formGroup.controls.verificationCode.setValue(params.code);
 
         this.verifyUser();
       }
@@ -88,19 +76,19 @@ export class VerifyComponent implements OnInit {
         }
 
         this.isSubmitLoading = false;
-        this.codeInput.nativeElement.blur();
+        this.verificationCodeInput.nativeElement.blur();
       }
     );
   }
 
   onFormChange(event): void {
-    this.verificationCode.setErrors(null);
+    this.formGroup.controls['verification-code'].setErrors(null);
   }
 
   usernameFieldKeyPress(event): void {
     if (event.key === 'Enter') {
       event.preventDefault();
-      this.codeInput.nativeElement.focus();
+      this.verificationCodeInput.nativeElement.focus();
     }
   }
 

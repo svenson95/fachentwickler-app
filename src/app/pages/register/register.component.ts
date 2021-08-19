@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { Subscription } from 'rxjs';
@@ -17,13 +17,9 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class RegisterComponent implements OnInit, OnDestroy {
 
-  formGroup: FormGroup;
-  name: FormControl;
-  email: FormControl;
-  password: FormControl;
-
+  form: FormGroup;
   isLoading: boolean;
-  loadingSubscription: Subscription;
+  subscription: Subscription = new Subscription();
 
   nameAlreadyTaken: boolean;
   emailAlreadyTaken: boolean;
@@ -45,56 +41,42 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
 
   constructor(private router: Router,
-              private formBuilder: FormBuilder,
+              private fb: FormBuilder,
               private snackBar: MatSnackBar,
               private headerService: HeaderService,
               private authService: AuthService,
               private loadService: LoadingService,
               private themeService: ThemeService
   ) {
-    if (authService.isAuthenticated) this.router.navigate(['dashboard']);
-
     this.headerService.setPageTitle('Registrieren');
     this.initFormGroup();
   }
 
   ngOnInit(): void {
-    this.loadingSubscription = this.loadService.loading$.subscribe(value => this.isLoading = value);
+    this.subscription.add(this.loadService.loading$.subscribe(value => this.isLoading = value));
   }
 
   ngOnDestroy(): void {
-    this.loadingSubscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   initFormGroup(): void {
-    this.name = new FormControl('', {
-      validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken],
-      updateOn: 'submit'
-    });
-    this.email = new FormControl('', {
-      validators: [Validators.required, Validators.email, this.EmailAlreadyTaken],
-      updateOn: 'submit'
-    });
-    this.password = new FormControl('', {
-      validators: [Validators.required, Validators.minLength(4)],
-      updateOn: 'submit'
-    });
-    this.formGroup = this.formBuilder.group({
-      name: this.name,
-      email: this.email,
-      password: this.password
+    this.form = this.fb.group({
+      name: [null as string, { validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken] }],
+      email: [null as string, { validators: [Validators.required, Validators.email, this.EmailAlreadyTaken] }],
+      password: [null as string, { validators: [Validators.required, Validators.minLength(4)] }]
     });
   }
 
   register(event): void {
 
-    if (this.formGroup.invalid) {
+    if (this.form.invalid) {
       return;
     }
 
-    const name = this.name.value.toLowerCase();
-    const email = this.email.value.toLowerCase();
-    const password = this.password.value.toLowerCase();
+    const name = this.form.controls.name.value.toLowerCase();
+    const email = this.form.controls.email.value.toLowerCase();
+    const password = this.form.controls.password.value.toLowerCase();
     const user = {
       name, email, password,
       theme: this.themeService.getActiveTheme().name,
@@ -120,13 +102,13 @@ export class RegisterComponent implements OnInit, OnDestroy {
       return 'Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)';
     } else if (response.error.message === 'Username is already taken') {
       this.nameAlreadyTaken = true;
-      this.formGroup.setErrors({ alreadyTaken: true });
-      this.formGroup.markAsDirty({onlySelf: false});
+      this.form.setErrors({ alreadyTaken: true });
+      this.form.markAsDirty({ onlySelf: false });
       return 'Der Benutzername ist bereits vergeben';
     } else if (response.error.message === 'E-Mail is already taken') {
       this.emailAlreadyTaken = true;
-      this.formGroup.setErrors({ alreadyTaken: true });
-      this.formGroup.markAsDirty({onlySelf: false});
+      this.form.setErrors({ alreadyTaken: true });
+      this.form.markAsDirty({ onlySelf: false });
       return 'Die E-Mail Adresse ist bereits vergeben';
     } else {
       return 'Unbekannter Fehler: ' + response.error.message;

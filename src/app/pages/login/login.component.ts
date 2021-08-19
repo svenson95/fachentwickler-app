@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
@@ -18,9 +18,7 @@ import { ThemeService } from '../../services/theme.service';
 export class LoginComponent implements OnInit, OnDestroy {
   @ViewChild('passwordInput') passwordInput;
 
-  formGroup: FormGroup;
-  username: FormControl;
-  password: FormControl;
+  form: FormGroup;
   isLoading: boolean;
   loadingSubscription: Subscription;
 
@@ -39,7 +37,7 @@ export class LoginComponent implements OnInit, OnDestroy {
               private themeService: ThemeService,
               private loadService: LoadingService,
               private snackBar: MatSnackBar,
-              private formBuilder: FormBuilder
+              private fb: FormBuilder
   ) {
     if (authService.isAuthenticated) {
       this.router.navigate(['dashboard']);
@@ -60,28 +58,22 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   initFormGroup(): void {
-    this.username = new FormControl('', {
-      validators: [Validators.required, Validators.minLength(4)],
-      updateOn: 'submit'
-    });
-    this.password = new FormControl('', {
-      validators: [Validators.required, Validators.minLength(4), this.InvalidPassword],
-      updateOn: 'submit'
-    });
-    this.formGroup = this.formBuilder.group({
-      username: this.username,
-      password: this.password
+    const passwordValidators = [Validators.required, Validators.minLength(4)];
+
+    this.form = this.fb.group({
+      username: [null as string, { validators: [...passwordValidators] }],
+      password: [null as string, { validators: [...passwordValidators, this.InvalidPassword] }]
     });
   }
 
   login(event): void {
 
-    if (this.formGroup.invalid) {
+    if (this.form.invalid) {
       return;
     }
 
-    const username = this.formGroup.get('username').value.toLowerCase();
-    const password = this.formGroup.get('password').value;
+    const username = this.form.get('username').value.toLowerCase();
+    const password = this.form.get('password').value;
 
     this.authService.login({username, password} as AuthUser).subscribe(
       (response) => {
@@ -92,7 +84,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if (this.authService.redirectUrl) {
           this.redirectTo(this.authService.redirectUrl);
         } else {
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigate(['dashboard']);
         }
       }, (error) => {
         console.log(error);
@@ -107,8 +99,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   onFormChange(event): void {
-    this.username.setErrors(null);
-    this.password.setErrors(null);
+    this.form.controls.username.setErrors(null);
+    this.form.controls.password.setErrors(null);
     this.invalidPassword = false;
   }
 

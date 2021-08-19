@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../angular-material.module';
 
 import { PageComponent } from './page.component';
@@ -31,7 +30,6 @@ import { HeaderMenuModule } from '../../components/header-menu/header-menu.modul
     CommonModule,
     AngularMaterialModule,
     RouterModule,
-    FormsModule,
     ImageManagerDialogModule,
     DeleteImageDialogModule,
     SearchbarModule,

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
 import { DashboardComponent } from './dashboard.component';
@@ -18,7 +17,6 @@ import { NewsCardContainerModule } from '../../containers/news-card-container/ne
   declarations: [DashboardComponent],
   imports: [
     CommonModule,
-    FormsModule,
     DashboardRoutingModule,
     AngularMaterialModule,
     PostLinkModule,
