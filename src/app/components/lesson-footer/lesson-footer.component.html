@@ -3,7 +3,7 @@
     <fe-button-state *ngIf="postId !== undefined" [isLoading]="isLoading && !(postId | alreadyRead)" [disabled]="isLoading || (postId | alreadyRead)" (click)="authService.setLessonSolved(postId)">
       Als gelesen markieren
     </fe-button-state>
-    <button class="fe-text-button" *ngIf="authService.user.role === UserRole.ADMIN" routerLink="edit">
+    <button class="fe-text-button" *ngIf="authService.user && authService.user.role === UserRole.ADMIN" routerLink="edit">
       <span>Artikel bearbeiten</span>
     </button>
   </div>

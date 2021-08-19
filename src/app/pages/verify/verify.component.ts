@@ -82,7 +82,7 @@ export class VerifyComponent implements OnInit {
   }
 
   onFormChange(event): void {
-    this.formGroup.controls['verification-code'].setErrors(null);
+    this.formGroup.controls.verificationCode.setErrors(null);
   }
 
   usernameFieldKeyPress(event): void {
