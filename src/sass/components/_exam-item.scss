@@ -109,10 +109,9 @@
       }
 
       .show-lessons-btn.is-open span {
-        background: rgba(var(--tertiary-color-rgb), .1);
         letter-spacing: 2px;
         border-bottom: 1px solid rgba(var(--grey-4-rgb), .3);
-        transition: background 100ms ease-out, letter-spacing 100ms ease-out;
+        transition: letter-spacing 100ms ease-out;
       }
     }
 
@@ -165,7 +164,7 @@
 
   .lessons-container {
     padding-top: 10px;
-    margin-left: 65px;
+    margin-left: 55px;
     position: relative;
 
     @include to-xs {

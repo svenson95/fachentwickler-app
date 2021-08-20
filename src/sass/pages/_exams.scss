@@ -87,6 +87,19 @@
       width: 100%;
       margin-top: 20px;
 
+      .lesson-container {
+        margin-left: 45px;
+
+        .horizontal-line {
+          width: 10px;
+          left: -10px;
+        }
+
+        .vertical-line {
+          left: -13px;
+        }
+      }
+
       fe-exam-item:not(:last-of-type) {
         .fe-exam-item {
           margin-bottom: 20px;

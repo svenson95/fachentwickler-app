@@ -138,7 +138,7 @@ $easeIn-duration: 400ms;
     cursor: pointer;
     outline: none;
     color: var(--background-primary);
-    transition: box-shadow 300ms ease;
+    transition: box-shadow 300ms ease, transform 100ms ease-in-out;
 
     @include from-xs {
       width: 220px;
@@ -160,7 +160,7 @@ $easeIn-duration: 400ms;
       &:hover {
         transform: translateY(-1px);
         box-shadow: var(--button-shadow);
-        transition: box-shadow 300ms ease;
+        transition: box-shadow 300ms ease, transform 100ms ease-in-out;
 
         & + .left-connector,
         & + .connector-wrapper .right-connector:not(.center-bar) {
@@ -171,7 +171,7 @@ $easeIn-duration: 400ms;
       &:active {
         transform: translateY(1px);
         box-shadow: var(--box-shadow);
-        transition: box-shadow 300ms ease;
+        transition: box-shadow 300ms ease, transform 100ms ease-in-out;
       }
     }
   }

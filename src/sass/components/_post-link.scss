@@ -1,9 +1,7 @@
 .fe-post-link-wrapper {
   display: flex;
   flex-direction: row-reverse;
-  padding: 0 40px;
-  margin-left: -40px;
-  margin-right: -40px;
+  padding: 0;
 
   @include to-md {
     flex-direction: column;
