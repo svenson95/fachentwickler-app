@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route, PreloadAllModules } from '@angular/router';
 
 import { AuthGuardService } from './services/auth/auth-guard.service';
+import { NotAuthGuardService } from './services/auth/not-auth-guard.service';
+import { VerifyGuardService } from './services/auth/verify-guard.service';
 import { subjects } from './constants/menu-items';
 
 const subjectsPaths = (): Array<Route> => {
@@ -100,20 +102,24 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('src/app/pages/login/login.module').then(m => m.LoginModule),
+    canActivate: [NotAuthGuardService],
     data: { animation: 'LoginPage' }
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('src/app/pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule),
+    canActivate: [NotAuthGuardService]
   },
   {
     path: 'register',
     loadChildren: () => import('src/app/pages/register/register.module').then(m => m.RegisterModule),
+    canActivate: [NotAuthGuardService],
     data: { animation: 'RegisterPage' }
   },
   {
     path: 'verify',
-    loadChildren: () => import('src/app/pages/verify/verify.module').then(m => m.VerifyModule)
-  },
-  {
-    path: 'forgot-password',
-    loadChildren: () => import('src/app/pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule)
+    loadChildren: () => import('src/app/pages/verify/verify.module').then(m => m.VerifyModule),
+    canActivate: [VerifyGuardService]
   },
   {
     path: 'dashboard',
@@ -164,12 +170,13 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: 'search',
-    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule)
+    path: 'pruefungssimulator',
+    loadChildren: () => import('src/app/pages/pruefungssimulator/pruefungssimulator.module').then(m => m.PruefungssimulatorModule),
+    canActivate: [AuthGuardService]
   },
   {
-    path: 'pruefungssimulator',
-    loadChildren: () => import('src/app/pages/pruefungssimulator/pruefungssimulator.module').then(m => m.PruefungssimulatorModule)
+    path: 'search',
+    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule)
   },
   // {
   //   path: '**',
@@ -180,10 +187,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled',
-    preloadingStrategy: PreloadAllModules,
-    relativeLinkResolution: 'legacy'
-})
+      scrollPositionRestoration: 'enabled',
+      preloadingStrategy: PreloadAllModules,
+      relativeLinkResolution: 'legacy'
+    })
   ],
   exports: [RouterModule]
 })

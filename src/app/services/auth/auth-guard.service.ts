@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
 
 import { AuthService } from './auth.service';
 
@@ -9,38 +8,24 @@ import { AuthService } from './auth.service';
 })
 export class AuthGuardService implements CanActivate {
 
-  constructor(private authService: AuthService,
-              private router: Router
-  ) {}
+  constructor(private auth: AuthService, private router: Router) {}
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree
-  {
-    return this.userIsAuthenticated(state.url).then((authState) => {
-      return authState;
-    });
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree {
+    return this.userIsAuthenticated(state.url);
   }
 
   /* -- Auth validation on route load -- */
-  async userIsAuthenticated(url: string): Promise<boolean> {
+  userIsAuthenticated(url: string): boolean | UrlTree {
 
     // Store the attempted URL for redirecting
-    this.authService.redirectUrl = url;
+    this.auth.redirectUrl = url;
 
-    if (this.authService.isAuthenticated && !this.authService.user.active) {
-      this.router.navigateByUrl('/verify');
-    }
-
-    if (this.authService.isAuthenticated && this.authService.user.active || this.isTestDataRequest(url)) {
+    if (this.auth.isAuthenticated && this.auth.user.active || this.isTestDataRequest(url)) {
       return true;
-    } else if (!this.authService.isAuthenticated) {
-      if (this.router.url !== '/login') {
-        this.router.navigateByUrl('/login');
-      }
-      return false;
+    } else if (this.auth.isAuthenticated && !this.auth.user.active) {
+      return this.router.parseUrl('/verify');
+    } else if (!this.auth.isAuthenticated) {
+      return this.router.parseUrl('/login');
     }
 
   }
