@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { PostMatching } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
-import { subjects } from '../../data/menu-items';
+import { subjects } from '../../constants/menu-items';
 
 @Component({
   selector: 'fe-matching',

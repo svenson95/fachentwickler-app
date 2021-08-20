@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { subjects } from '../../data/menu-items';
+import { subjects } from '../../constants/menu-items';
 import { ExamDate } from '../../models/exam-date';
 import { Post } from '../../models/post';
 import { DataService } from '../../services/data/data.service';

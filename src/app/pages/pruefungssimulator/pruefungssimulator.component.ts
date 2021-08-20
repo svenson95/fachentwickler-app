@@ -7,7 +7,7 @@ import { AuditState } from '../../models/audit-state';
 import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
 import { DataService } from '../../services/data/data.service';
-import { auditQuestions } from '../../data/pruefungsfragen';
+import { auditQuestions } from '../../constants/pruefungsfragen';
 
 @Component({
   selector: 'fe-pruefungssimluator',

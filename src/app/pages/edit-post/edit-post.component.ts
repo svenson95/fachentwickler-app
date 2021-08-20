@@ -5,7 +5,7 @@ import { Post } from '../../models/post';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
-import { subjects } from '../../data/menu-items';
+import { subjects } from '../../constants/menu-items';
 
 @Component({
   selector: 'fe-post',

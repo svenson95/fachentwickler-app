@@ -95,6 +95,24 @@ export const subjects: MenuItem[] = [
     url: '/lf-9',
     icon: globeOutline,
   },
+  // {
+  //   title: 'Lernfeld 10-1',
+  //   shortTitle: 'LF-10-1',
+  //   url: '/lf-10-1',
+  //   icon: globeOutline,
+  // },
+  // {
+  //   title: 'Lernfeld 10-2',
+  //   shortTitle: 'LF-10-1',
+  //   url: '/lf-10-2',
+  //   icon: globeOutline,
+  // },
+  // {
+  //   title: 'Lernfeld 11',
+  //   shortTitle: 'LF-11',
+  //   url: '/lf-11',
+  //   icon: globeOutline,
+  // },
   {
     title: 'Wahlpflicht',
     shortTitle: 'WP',

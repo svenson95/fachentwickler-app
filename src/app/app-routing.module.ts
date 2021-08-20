@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route, PreloadAllModules } from '@angular/router';
 
-import { subjects } from './data/menu-items';
 import { AuthGuardService } from './services/auth/auth-guard.service';
+import { subjects } from './constants/menu-items';
 
 const subjectsPaths = (): Array<Route> => {
   const subjectPaths: Route[] = [];

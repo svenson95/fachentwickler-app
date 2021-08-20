@@ -6,7 +6,7 @@ import { Subject } from '../../models/subject';
 import { PostType } from '../../models/post-type';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
-import { subjects } from '../../data/menu-items';
+import { subjects } from '../../constants/menu-items';
 
 @Component({
   selector: 'fe-subject',

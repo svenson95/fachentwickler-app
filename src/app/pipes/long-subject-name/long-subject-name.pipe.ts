@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { subjects } from '../../data/menu-items';
+import { subjects } from '../../constants/menu-items';
 
 @Pipe({
   name: 'longSubjectName'
