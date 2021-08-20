@@ -26,7 +26,8 @@ export class SchoolWeekCardComponent implements OnInit, OnChanges {
     }
   }
 
-  getWeek(value: number): void {
+  setWeek(value: number): void {
+    if (this.isLoading) return;
     const schoolWeek = Number(this.week.schoolWeek);
 
     const previousWeek = this.weeks.find(el => Number(el.schoolWeek) === (schoolWeek + value));

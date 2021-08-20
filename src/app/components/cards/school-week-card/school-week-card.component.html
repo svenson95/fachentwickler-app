@@ -15,10 +15,10 @@
     </div>
     <div class="button-wrapper" *ngIf="showNavigation">
       <fe-loading-spinner *ngIf="isLoading" size="24"></fe-loading-spinner>
-      <button class="previous-week-btn" (click)="getWeek(-1)" [disabled]="week === undefined || week.schoolWeek == 1 || isLoading" mat-icon-button>
+      <button class="previous-week-btn" (click)="setWeek(-1)" [disabled]="week === undefined || week.schoolWeek == 1" mat-icon-button>
         <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
-      <button class="next-week-btn" (click)="getWeek(1)" [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek || isLoading" mat-icon-button>
+      <button class="next-week-btn" (click)="setWeek(1)" [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek" mat-icon-button>
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
