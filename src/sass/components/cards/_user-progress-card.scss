@@ -43,7 +43,12 @@ mat-card.fe-card.user-progress-card {
 
     .fe-loading-spinner {
       margin-top: 35px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
+
+      @include to-xs {
+        margin-top: 50px;
+        margin-bottom: 26px;
+      }
     }
 
   }

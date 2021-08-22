@@ -6,11 +6,11 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 
-import { environment } from '../../../environments/environment';
 import { User, AuthUser, RegisterUser, EditUser, UserProgress } from '../../models/user';
 import { BasicResponse, AuthResponse, TokenResponse, UserProgressResponse } from '../../models/fetch-response';
 import { ThemeService } from '../theme.service';
 import { DataService } from '../data/data.service';
+import { environment } from '../../../environments/environment';
 /* tslint:disable: quotemark object-literal-key-quotes max-line-length */
 
 const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';

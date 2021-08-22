@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { delay } from 'rxjs/operators';
 
 import { HeaderService } from '../../services/header.service';
 import { SearchPostService } from '../../services/data/search-post.service';
 import { LoadingService } from '../../services/loading.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'fe-search',
