@@ -3,221 +3,220 @@ fe-header.fe-header {
 }
 
 fe-header.fe-header .mat-toolbar {
-  height: 80px;
+  height: 70px;
   width: 100%;
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
   justify-content: space-between;
-  transition: height 250ms ease-out;
-  box-shadow: var(--box-shadow);
-
-  .header-wrapper {
-    display: flex;
-    width: 100%;
-    max-width: 1350px;
-    justify-content: space-between;
-  }
+  transition: height 200ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
+  position: relative;
 
   @include from-md {
     padding: 0 20px;
+  }
+
+  @include to-md {
+    background-color: var(--background-primary);
+    box-shadow: var(--box-shadow);
   }
 
   @include to-xs {
     height: 60px;
     padding: 0 5px;
   }
-}
 
-fe-header.fe-header .mat-toolbar :not(.sidenav--open) .header-content {
-  width: 100%;
-}
-
-fe-header.fe-header .mat-toolbar .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @include from-xs {
+  &:not(.sidenav--open) .header-content {
     width: 100%;
   }
 
-  .page-title {
+  .header-wrapper {
     display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 8px;
+    width: 100%;
+    max-width: calc(220px + var(--max-width));
+    justify-content: space-between;
 
-    color: var(--text-color-1);
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    @include titleMoveInRightAnimation;
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    @include to-md {
-      flex-shrink: 1;
-    }
-
-    @include to-xs {
-      font-size: .8em;
-      margin-left: 0;
-      padding: 0;
-    }
-
-    .title {
-      margin-top: 2px;
-      margin-bottom: 0;
-      white-space: pre-line;
-      line-height: 12px;
-      text-align: left;
-
-      @include from-xs {
-        padding: 0 5px;
-        margin-top: 3px;
+      @include from-md {
+        margin-left: 20px;
       }
 
-      @include to-xs {
-        padding: 0;
+      .page-title {
+        display: flex;
+        align-items: center;
+
+        color: var(--text-color-1);
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include titleMoveInRightAnimation;
+
+        @include to-md {
+          flex-shrink: 1;
+        }
+
+        @include to-xs {
+          font-size: .8em;
+          margin-left: 0;
+          padding: 0;
+        }
+
+        .title {
+          margin-top: 2px;
+          margin-bottom: 0;
+          white-space: pre-line;
+          line-height: 12px;
+          text-align: left;
+
+          @include from-xs {
+            padding: 0 5px;
+            margin-top: 3px;
+          }
+
+          @include to-xs {
+            padding: 0;
+          }
+        }
+
+        .bracket {
+          font-size: 1.3em;
+          font-family: Nunito-Light, sans-serif;
+          color: var(--primary-color);
+
+          @include to-xs {
+            font-size: 1.2em;
+          }
+
+          &:first-of-type {
+            margin-right: 1px;
+          }
+
+          &:last-of-type {
+            margin-left: 1px;
+          }
+        }
+      }
+
+      .header-elements-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        z-index: 2;
+
+        .button-container {
+          display: flex;
+          line-height: normal;
+          color: var(--tertiary-color);
+          align-items: center;
+
+          .sidenav-btn {
+            margin-top: 0;
+
+            @include from-xs {
+              margin-right: 15px;
+            }
+
+            @include to-xs {
+              margin-right: 5px;
+            }
+
+            .mat-icon {
+              @include to-xs {
+                font-size: 1.2rem;
+              }
+            }
+          }
+
+          .dashboard-btn {
+            padding: 8px 14px 6px;
+            margin-left: 10px;
+            margin-right: 20px;
+            outline: none;
+
+            color: var(--tertiary-color);
+            font-size: .8rem;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+
+            &.active-route {
+              border-color: var(--secondary-color);
+
+              h1, span {
+                &:before,
+                &:after {
+                  opacity: 1;
+                  transform: translateY(2px);
+                }
+              }
+            }
+
+            @include to-md {
+              padding: 5px 8px;
+            }
+
+            @include to-xs {
+              display: none;
+            }
+          }
+
+          .more-menu-btn {
+            margin-left: 0;
+            margin-right: 0;
+            transition: background-color 100ms ease-in-out;
+
+            @include from-xs {
+              &:hover {
+                background-color: var(--button-hover-background);
+                transition: none;
+              }
+            }
+
+            @include to-md {
+              margin-right: 10px;
+            }
+
+            .mat-icon {
+              @include to-xs {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
       }
     }
+  }
 
-    .bracket {
-      font-size: 1.3em;
-      font-family: Nunito-Light, sans-serif;
-      color: var(--primary-color);
+  .header-progress-bar {
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
 
-      @include to-xs {
-        font-size: 1.2em;
-      }
-
-      &:first-of-type {
-        margin-right: 1px;
-      }
-
-      &:last-of-type {
-        margin-left: 1px;
-      }
+    .mat-progress-bar-fill::after {
+      background-color: var(--primary-color);
+    }
+    .mat-progress-bar-buffer {
+      background: var(--background-secondary);
     }
   }
 }
 
-fe-header.fe-header .mat-toolbar .header-elements-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  z-index: 2;
-
-  .button-container {
-    display: flex;
-    line-height: normal;
-    color: var(--tertiary-color);
-    align-items: center;
-  }
-}
-
-fe-header.fe-header .mat-toolbar .header-elements-wrapper .button-container .sidenav-btn {
-  margin-top: 0;
-
-  @include from-xs {
-    margin-right: 15px;
-  }
-
-  @include to-xs {
-    margin-right: 5px;
-  }
-}
-
-.sidenav-btn .mat-icon {
-  @include to-xs {
-    font-size: 1.2rem;
-  }
-}
-
-fe-header.fe-header .mat-toolbar .header-elements-wrapper .button-container .dashboard-btn {
-  padding: 8px 14px 6px;
-  margin-left: 10px;
-  margin-right: 20px;
-  outline: none;
-
-  color: var(--tertiary-color);
-  font-size: .8rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-
-  &.active-route {
-    border-color: var(--secondary-color);
-
-    h1, span {
-      &:before,
-      &:after {
-        opacity: 1;
-        transform: translateY(2px);
-      }
-    }
-  }
-
-  @include to-md {
-    padding: 5px 8px;
-  }
-
-  @include to-xs {
-    display: none;
-  }
-}
-
-fe-header.fe-header .mat-toolbar .header-elements-wrapper .button-container .more-menu-btn {
-  margin-left: 0;
-  margin-right: 0;
-  transition: background-color 100ms ease-in-out;
-
-  @include from-xs {
-    &:hover {
-      background-color: var(--button-hover-background);
-      transition: none;
-    }
-  }
-
-  @include to-md {
-    margin-right: 10px;
-  }
-
-  .mat-icon {
-    @include to-xs {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-fe-header.fe-header .header-toolbar {
-  position: relative;
-}
-
-fe-header.fe-header .header-progress-bar {
-  height: 1px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-
-  .mat-progress-bar-fill::after {
-    background-color: var(--primary-color);
-  }
-  .mat-progress-bar-buffer {
-    background: #b3cbe7;
-  }
-}
-
-.scrolled {
-  fe-header.fe-header .header-toolbar {
+.fe-page-container {
+  &.scrolled fe-header.fe-header .header-toolbar {
     height: 60px;
-    transition: height 300ms ease-out;
+    transition: height 200ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
+    background-color: var(--background-primary);
+    box-shadow: var(--box-shadow);
   }
-}
 
-
-.is-mobile fe-header.fe-header .mat-toolbar {
-  position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 999;
+  &.is-mobile fe-header.fe-header .header-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 999;
+  }
 }

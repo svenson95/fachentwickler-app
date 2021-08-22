@@ -32,5 +32,5 @@
       </div>
     </div>
   </div>
-  <mat-progress-bar class="header-progress-bar" value="100" [mode]="isLoading ? 'indeterminate' : 'determinate'"></mat-progress-bar>
+  <mat-progress-bar *ngIf="isLoading" class="header-progress-bar" value="100" mode="indeterminate"></mat-progress-bar>
 </mat-toolbar>

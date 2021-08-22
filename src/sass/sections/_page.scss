@@ -48,7 +48,7 @@ mat-sidenav.fe-sidenav {
   overflow-x: hidden;
   border-right: 0;
 
-  @include to-md { top: 80px !important; }
+  @include to-md { top: 70px !important; }
   @include to-xs { top: 60px !important; }
 }
 

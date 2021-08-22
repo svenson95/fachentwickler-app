@@ -73,7 +73,7 @@
 
   .row {
     display: flex;
-    max-width: 1135px;
+    max-width: var(--max-width);
     flex-direction: column;
 
     animation-name: moveInBottom;
