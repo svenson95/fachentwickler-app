@@ -6,7 +6,7 @@
         <div class="user-attribute name-control">
           <mat-form-field class="fe-form-field name" appearance="legacy">
             <mat-label>Benutzername</mat-label>
-            <input matInput type="text" autocomplete="off" [formControl]="name" #nameInput="matInput" (keyup)="name.setValue(nameInput.value)" />
+            <input matInput type="text" autocomplete="off" [formControl]="name" #nameInput="matInput" />
             <mat-error *ngIf="name.hasError('required')">Benutzername ist erforderlich</mat-error>
             <mat-error *ngIf="name.hasError('minlength')">Benutzername muss mindestens 4 Zeichen lang sein</mat-error>
           </mat-form-field>
@@ -26,9 +26,9 @@
           <ng-container *ngIf="!isConfirmingEmail">
             <mat-form-field class="fe-form-field email" appearance="legacy">
               <mat-label>E-Mail</mat-label>
-              <input matInput type="email" autocomplete="off" [formControl]="email" #emailInput="matInput" (keyup)="email.setValue(emailInput.value)" />
-              <mat-error *ngIf="email.hasError('required')">E-Mail Adresse ist erforderlich</mat-error>
-              <mat-error *ngIf="email.hasError('email')">E-Mail Adresse ist ungültig</mat-error>
+              <input matInput type="email" autocomplete="off" [formControl]="email" #emailInput="matInput" />
+              <mat-error *ngIf="email.errors?.required">E-Mail Adresse ist erforderlich</mat-error>
+              <mat-error *ngIf="email.errors?.email">E-Mail Adresse ist ungültig</mat-error>
             </mat-form-field>
             <div class="button-container">
               <button class="start-change" (click)="toggleChangeEmail()" *ngIf="email.disabled" [disabled]="name.enabled || password.enabled">
@@ -46,8 +46,7 @@
             <mat-form-field class="fe-form-field verification-code mat-form-field-should-float" appearance="legacy">
               <mat-label>Verifizierungscode</mat-label>
               <input matInput type="number" autocomplete="off" inputmode="numeric" pattern="[0-9]*"
-                     [formControl]="verificationCode" #verificationCodeInput="matInput"
-                     (keyup)="verificationCode.setValue(verificationCodeInput.value)" />
+                     [formControl]="verificationCode" />
               <mat-error *ngIf="verificationCode.hasError('required') && verificationCode.touched">Verifizierungscode ist erforderlich</mat-error>
               <mat-error *ngIf="verificationCode.hasError('incorrect') && verificationCode.touched">Verifizierungscode ungültig</mat-error>
             </mat-form-field>
@@ -61,7 +60,7 @@
         <form class="user-attribute password-form" [formGroup]="passwordFormGroup" (ngSubmit)="saveChangePassword()">
           <mat-form-field class="fe-form-field password mat-form-field-should-float" appearance="legacy" *ngIf="!isConfirmingPassword">
             <mat-label>{{password.disabled ? 'Passwort' : 'Neues Passwort'}}</mat-label>
-            <input matInput type="password" [formControl]="password" #passwordInput="matInput" (keyup)="password.setValue(passwordInput.value)" />
+            <input matInput type="password" [formControl]="password" #passwordInput="matInput"/>
             <mat-error *ngIf="password.hasError('required') && password.touched">Neues Passwort ist erforderlich</mat-error>
             <mat-error *ngIf="password.hasError('minlength') && password.touched">Neues Passwort muss mindestens 4 Zeichen lang sein</mat-error>
           </mat-form-field>

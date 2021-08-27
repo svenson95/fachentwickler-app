@@ -21,7 +21,6 @@ export class MyProfileComponent implements OnInit, OnDestroy {
 
   isConfirmingEmail: boolean;
   isConfirmingPassword: boolean;
-  progressPercentage: number;
 
   isLoading: boolean;
   loadingSubscription: Subscription;
@@ -67,46 +66,35 @@ export class MyProfileComponent implements OnInit, OnDestroy {
   initUserProgress(): void {
     if (this.dataService.dashboard === undefined) {
       this.dataService.getAllLessons().subscribe(
-        (lessons) => {
-          this.progressPercentage = Math.floor((this.authService.user.progress.length / lessons.length) * 100);
-          this.progress.setValue(this.progressPercentage + ' %');
-        }, (error) => {
-          console.log('error while GET all-lessons', error);
-        }
+        (lessons) => this.progress.setValue(this.getProgressPercentage(lessons.length))
       );
     } else {
-      this.progressPercentage = Math.floor((this.authService.user.progress.length / this.dataService.dashboard.allLessons.length) * 100);
-      this.progress.setValue(this.progressPercentage + ' %');
+      this.progress.setValue(this.getProgressPercentage(this.dataService.dashboard.allLessons.length));
     }
+  }
+
+  getProgressPercentage(progressLength): string {
+    return ((this.authService.user.progress.length / progressLength) * 100).toFixed(2) + ' %';
   }
 
   initFormControls(): void {
     this.name = new FormControl({ value: this.authService.user.name, disabled: true }, {
-      validators: [Validators.required, Validators.minLength(4)],
-      updateOn: 'submit'
+      validators: [Validators.required, Validators.minLength(4)]
     });
     this.email = new FormControl({ value: this.authService.user.email, disabled: true }, {
-      validators: [Validators.required, Validators.email],
-      updateOn: 'submit'
+      validators: [Validators.required, Validators.email]
     });
     this.verificationCode = new FormControl('', {
-      validators: [Validators.required],
-      updateOn: 'submit'
+      validators: [Validators.required]
     });
     this.password = new FormControl({ value: 'xxxxxxxx', disabled: true }, {
-      validators: [Validators.required, Validators.minLength(4)],
-      updateOn: 'submit'
+      validators: [Validators.required, Validators.minLength(4)]
     });
     this.confirmPassword = new FormControl('', {
-      validators: [inputsMatch('password')],
-      updateOn: 'submit'
+      validators: [inputsMatch('password')]
     });
-    this.role = new FormControl({ value: this.authService.user.role, disabled: true }, {
-      updateOn: 'submit'
-    });
-    this.progress = new FormControl({ value: 0, disabled: true }, {
-      updateOn: 'submit'
-    });
+    this.role = new FormControl({ value: this.authService.user.role, disabled: true });
+    this.progress = new FormControl({ value: 0, disabled: true });
     this.theme = new FormControl({ value: this.themeService.getActiveTheme().name, disabled: true });
   }
 
@@ -151,7 +139,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
         this.name.disable();
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Benutzername geändert'
+          data: 'Benutzername wurde geändert'
         });
       }, (errorRes) => {
         this.name.setValue(this.authService.user.name);
@@ -207,14 +195,14 @@ export class MyProfileComponent implements OnInit, OnDestroy {
     }
     const {email, verificationCode} = this.emailFormGroup.value;
 
-    this.authService.verifyUser(this.authService.user.email, String(verificationCode), email)
+    this.authService.verifyUser(this.authService.user.email, verificationCode, email)
       .subscribe(
         (response) => {
           if (response.success) {
             this.email.disable();
             this.matSnackBar.openFromComponent(SnackbarComponent, {
               duration: 3000,
-              data: 'E-Mail geändert'
+              data: 'E-Mail wurde geändert'
             });
             this.isConfirmingEmail = undefined;
           }
@@ -264,7 +252,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
           this.isConfirmingPassword = undefined;
           this.matSnackBar.openFromComponent(SnackbarComponent, {
             duration: 3000,
-            data: 'Passwort erfolgreich geändert'
+            data: 'Passwort wurde geändert'
           });
         }, (errorRes) => {
           this.matSnackBar.openFromComponent(SnackbarComponent, {
@@ -286,7 +274,7 @@ export class MyProfileComponent implements OnInit, OnDestroy {
       (response) => {
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: 'Standard-Theme geändert'
+          data: 'Standard-Theme wurde geändert'
         });
       }, (errorRes) => {
         this.matSnackBar.openFromComponent(SnackbarComponent, {
