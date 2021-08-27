@@ -14,6 +14,7 @@ import { ImageManagerDialogModule } from '../../components/dialogs/image-manager
 import { DeleteImageDialogModule } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.module';
 import { SearchFieldModule } from '../../components/search-field/search-field.module';
 import { HeaderMenuModule } from '../../components/header-menu/header-menu.module';
+import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { HeaderMenuModule } from '../../components/header-menu/header-menu.modul
     ImageManagerDialogModule,
     DeleteImageDialogModule,
     SearchFieldModule,
-    HeaderMenuModule
+    HeaderMenuModule,
+    LoadingSpinnerModule
   ]
 })
 export class PageComponentModule { }

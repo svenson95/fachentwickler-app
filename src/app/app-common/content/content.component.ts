@@ -1,19 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouterEvent } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'fe-content',
   templateUrl: './content.component.html'
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent implements OnInit, OnDestroy {
+  isLoading: boolean;
+  subscription: Subscription = new Subscription();
 
-  constructor() { }
+  constructor(private router: Router) {
+    const routerLoadingSubscription = this.router.events.subscribe((event: RouterEvent) => {
+      if (event instanceof RouteConfigLoadStart) {
+        this.isLoading = true;
+      } else if (event instanceof RouteConfigLoadEnd) {
+        this.isLoading = false;
+      }
+    });
+    this.subscription.add(routerLoadingSubscription);
+  }
 
   ngOnInit(): void {
   }
 
-  prepareRoute(outlet: RouterOutlet): any {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }

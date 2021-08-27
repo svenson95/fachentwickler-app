@@ -1,4 +1,12 @@
 .fe-content {
+  .router-loader {
+    .fe-loading-indicator {
+      height: 200px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .fe-page-footer {
     height: fit-content;
     position: relative;

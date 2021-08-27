@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class HeaderService {
 
-  public pageTitle: string;
+  public pageTitle = 'Loading';
 
   constructor() { }
 
