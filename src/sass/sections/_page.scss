@@ -1,5 +1,5 @@
 /* PAGE */
-.fe-page-container {
+.page-container {
   display: flex;
   flex-direction: column;
   background-color: var(--background-primary);
@@ -15,10 +15,6 @@
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
   background-color: var(--background-primary);
-
-  .fe-page-content {
-    background: var(--background-primary);
-  }
 
   .mat-drawer-content {
     background-color: var(--background-primary);
@@ -58,7 +54,7 @@ mat-sidenav.fe-sidenav {
   }
 }
 
-.fe-page-container .fe-page {
+.page-container .page {
   background: var(--background-secondary);
   padding: 20px 20px 20px 0;
 

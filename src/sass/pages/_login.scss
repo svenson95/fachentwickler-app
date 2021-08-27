@@ -1,73 +1,75 @@
-.fe-page.login-page .fe-view-wrapper {
-  display: flex;
-  width: fit-content;
-  margin: 40px auto;
-  padding-bottom: 40px;
-
-  @include to-md {
-    flex-direction: column;
-  }
-
-  .fe-text-button:hover span {
-    color: var(--tertiary-color);
-  }
-}
-
-.fe-page.login-page .login-form {
-  text-align: center;
-
-  .form-inputs {
+.page.login {
+  .fe-view-wrapper {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+    width: fit-content;
+    margin: 40px auto;
+    padding-bottom: 40px;
 
-    .name {
-      margin-bottom: 8px;
+    @include to-md {
+      flex-direction: column;
+    }
 
-      ::placeholder {
-        color: var(--grey-4);
+    .fe-text-button:hover span {
+      color: var(--tertiary-color);
+    }
+  }
+
+  .login-form {
+    text-align: center;
+
+    .form-inputs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      .name {
+        margin-bottom: 8px;
+
+        ::placeholder {
+          color: var(--grey-4);
+        }
+      }
+
+      .password {
+        margin-bottom: 8px;
       }
     }
 
-    .password {
-      margin-bottom: 8px;
+
+    .buttons-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .fe-text-button:first-child {
+        margin-bottom: 20px;
+      }
     }
   }
 
+  .fe-divider-line {
+    border: none;
 
-  .buttons-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include from-md {
+      width: 1px;
+      margin: 0 50px;
+    }
 
-    .fe-text-button:first-child {
-      margin-bottom: 20px;
+    @include to-md {
+      display: none;
     }
   }
-}
 
-.fe-page.login-page .fe-divider-line {
-  border: none;
-
-  @include from-md {
-    width: 1px;
-    margin: 0 50px;
-  }
-
-  @include to-md {
-    display: none;
-  }
-}
-
-.fe-page.login-page .register-form {
-  text-align: center;
-  align-self: center;
-
-  .no-account-hint {
+  .register-form {
     text-align: center;
-    margin: 20px 0;
-  }
+    align-self: center;
 
-  .fe-text-button {
-    display: flex;
+    .no-account-hint {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .fe-text-button {
+      display: flex;
+    }
   }
 }

@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { ForgotPasswordComponent } from './forgot-password.component';
+import { ForgotPasswordPage } from './forgot-password.page';
 import { ForgotPasswordPageRoutingModule } from './forgot-password-routing.module';
 
 import { ButtonStateModule } from '../../components/button-state/button-state.module';
 
 @NgModule({
-  declarations: [ForgotPasswordComponent],
+  declarations: [ForgotPasswordPage],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -18,4 +18,4 @@ import { ButtonStateModule } from '../../components/button-state/button-state.mo
     ButtonStateModule
   ],
 })
-export class ForgotPasswordModule { }
+export class ForgotPasswordPageModule { }

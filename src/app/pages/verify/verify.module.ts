@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { VerifyComponent } from './verify.component';
+import { VerifyPage } from './verify.page';
 import { VerifyPageRoutingModule } from './verify-routing.module';
 
 import { ButtonStateModule } from '../../components/button-state/button-state.module';
 import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
 
 @NgModule({
-  declarations: [VerifyComponent],
+  declarations: [VerifyPage],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -20,4 +20,4 @@ import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
     CheckmarkModule
   ],
 })
-export class VerifyModule { }
+export class VerifyPageModule { }

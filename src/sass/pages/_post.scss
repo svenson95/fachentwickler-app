@@ -1,14 +1,11 @@
-.fe-page.post-page .fe-card {
-  .fe-card-title {
-  }
-  .fe-card-description {
-  }
+.page.post .fe-card {
 
-  .fe-post-content {
+  .post-content {
     fe-post-element:first-child {
       .fe-post-item:not(.table) {
         margin-top: 20px;
       }
     }
   }
+
 }

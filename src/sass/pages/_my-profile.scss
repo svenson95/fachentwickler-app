@@ -1,79 +1,79 @@
-.fe-page.my-profile .fe-card {
-  .fe-card-title {
-  }
-  .fe-view-wrapper {
-    margin-top: 40px;
-    font-size: 1.2em;
-
-    @include from-xs {
+.page.my-profile {
+  mat-card.fe-card {
+    .fe-card-title {
+    }
+    .fe-view-wrapper {
       margin-top: 40px;
-    }
+      font-size: 1.2em;
 
-    @include to-xs {
-      font-size: 1em;
-      margin-top: 20px;
-    }
+      @include from-xs {
+        margin-top: 40px;
+      }
 
-    hr {
-      height: 1px;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
+      @include to-xs {
+        font-size: 1em;
+        margin-top: 20px;
+      }
 
-    .fe-edit-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      text-align: right;
+      hr {
+        height: 1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
 
-      .fe-edit-user-btn {
-        font-size: .8em;
-        width: fit-content;
+      .fe-edit-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
 
-        &:not(:first-of-type) {
-          margin-top: 15px;
+        .fe-edit-user-btn {
+          font-size: .8em;
+          width: fit-content;
+
+          &:not(:first-of-type) {
+            margin-top: 15px;
+          }
         }
       }
     }
-  }
 
-  .user-details .user-attribute {
-    @include from-xs {
-      display: flex;
-      align-items: center;
-    }
-    @include to-xs {
-      position: relative;
-
-      .theme {
+    .user-details .user-attribute {
+      @include from-xs {
         display: flex;
-        flex-direction: column;
+        align-items: center;
       }
+      @include to-xs {
+        position: relative;
 
-      &:not(.theme) {
-        flex-direction: column-reverse;
-      }
+        .theme {
+          display: flex;
+          flex-direction: column;
+        }
 
-      .button-container {
-        position: absolute;
-        display: flex;
-        flex-direction: row-reverse;
-        top: -8px;
-        right: 0;
+        &:not(.theme) {
+          flex-direction: column-reverse;
+        }
 
-        button {
-          font-family: 'Nunito-Bold', sans-serif;
+        .button-container {
+          position: absolute;
+          display: flex;
+          flex-direction: row-reverse;
+          top: -8px;
+          right: 0;
 
-          &:first-child {
-            margin-left: 10px;
+          button {
+            font-family: 'Nunito-Bold', sans-serif;
+
+            &:first-child {
+              margin-left: 10px;
+            }
           }
         }
       }
     }
   }
-}
 
-.fe-page.my-profile {
   button.start-change,
   button.discard-change,
   button.save-change {
@@ -135,9 +135,6 @@
       border-color: rgba(var(--grey-4-rgb), .6);
     }
   }
-}
-
-.fe-page.my-profile {
 
   mat-form-field.fe-form-field {
     margin-bottom: .5rem;

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { ExamsComponent } from './exams.component';
+import { ExamsPage } from './exams.page';
 import { ExamsRoutingModule } from './exams-routing.module';
 
 import { ExamItemModule } from '../../components/exam-item/exam-item.module';
@@ -11,7 +11,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
 
 
 @NgModule({
-  declarations: [ExamsComponent],
+  declarations: [ExamsPage],
   imports: [
     CommonModule,
     ExamsRoutingModule,
@@ -20,4 +20,4 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     LoadingSpinnerModule
   ]
 })
-export class ExamsModule { }
+export class ExamsPageModule { }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { PostComponent } from './post.component';
+import { PostPage } from './post.page';
 import { PostPageRoutingModule } from './post-routing.module';
 
 import { PostElementModule } from '../../components/post-element/post-element.module';
@@ -13,8 +13,8 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
 
 
 @NgModule({
-  declarations: [PostComponent],
-  exports: [PostComponent],
+  declarations: [PostPage],
+  exports: [PostPage],
   imports: [
     CommonModule,
     PostPageRoutingModule,
@@ -25,4 +25,4 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     LoadingSpinnerModule
   ]
 })
-export class PostModule { }
+export class PostPageModule { }

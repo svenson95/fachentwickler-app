@@ -6,12 +6,14 @@ import { NotAuthGuardService } from './services/auth/not-auth-guard.service';
 import { VerifyGuardService } from './services/auth/verify-guard.service';
 import { subjects } from './constants/menu-items';
 
+/* tslint:disable: max-line-length */
+
 const subjectsPaths = (): Array<Route> => {
   const subjectPaths: Route[] = [];
   subjects.forEach(sub => {
     subjectPaths.push({
       path: sub.url.substr(1),
-      loadChildren: () => import('src/app/pages/subject/subject.module').then(m => m.SubjectModule)
+      loadChildren: () => import('src/app/pages/subject/subject.module').then(m => m.SubjectPageModule)
     });
   });
   return subjectPaths;
@@ -22,7 +24,7 @@ const postPaths = (): Array<Route> => {
   subjects.forEach(sub => {
     posts.push({
       path: sub.url.substr(1) + '/:topic/:post',
-      loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostModule)
+      loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostPageModule)
     });
   });
   return posts;
@@ -33,7 +35,7 @@ const editPostPaths = (): Array<Route> => {
   subjects.forEach(sub => {
     posts.push({
       path: sub.url.substr(1) + '/:topic/:post/edit',
-      loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostModule),
+      loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostPageModule),
       canActivate: [AuthGuardService]
     });
   });
@@ -45,7 +47,7 @@ const indexCardsPaths = (): Array<Route> => {
   subjects.forEach(sub => {
     indexCards.push({
       path: sub.url.substr(1) + '/:topic/:title/karteikarten',
-      loadChildren: () => import('src/app/pages/index-cards/index-cards.module').then(m => m.IndexCardsModule)
+      loadChildren: () => import('src/app/pages/index-card/index-card.module').then(m => m.IndexCardPageModule)
     });
   });
   return indexCards;
@@ -56,7 +58,7 @@ const quizPaths = (): Array<Route> => {
   subjects.forEach(sub => {
     quizzes.push({
       path: sub.url.substr(1) + '/:topic/:title/quiz',
-      loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizModule)
+      loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizPageModule)
     });
   });
   return quizzes;
@@ -67,7 +69,7 @@ const matchingPaths = (): Array<Route> => {
   subjects.forEach(sub => {
     matchings.push({
       path: sub.url.substr(1) + '/:topic/:title/matching',
-      loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingModule)
+      loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingPageModule)
     });
   });
   return matchings;
@@ -82,101 +84,95 @@ const routes: Routes = [
   ...matchingPaths(),
   {
     path: '',
-    loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),
+    loadChildren: () => import('src/app/pages/landing/landing.module').then(m => m.LandingPageModule),
     data: { animation: 'StartPage' }
   },
   {
     path: 'about',
-    loadChildren: () => import('src/app/pages/about/about.module').then(m => m.AboutModule),
+    loadChildren: () => import('src/app/pages/about/about.module').then(m => m.AboutPageModule),
     data: { animation: 'AboutPage' }
   },
   {
     path: 'feedback',
-    loadChildren: () => import('src/app/pages/feedback/feedback.module').then(m => m.FeedbackModule)
+    loadChildren: () => import('src/app/pages/feedback/feedback.module').then(m => m.FeedbackPageModule)
   },
   {
     path: 'impressum',
-    loadChildren: () => import('src/app/pages/legal/legal.module').then(m => m.LegalModule),
+    loadChildren: () => import('src/app/pages/legal/legal.module').then(m => m.LegalPageModule),
     data: { animation: 'LegalPage' }
   },
   {
     path: 'login',
-    loadChildren: () => import('src/app/pages/login/login.module').then(m => m.LoginModule),
+    loadChildren: () => import('src/app/pages/login/login.module').then(m => m.LoginPageModule),
     canActivate: [NotAuthGuardService],
     data: { animation: 'LoginPage' }
   },
   {
     path: 'forgot-password',
-    loadChildren: () => import('src/app/pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule),
+    loadChildren: () => import('src/app/pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule),
     canActivate: [NotAuthGuardService]
   },
   {
     path: 'register',
-    loadChildren: () => import('src/app/pages/register/register.module').then(m => m.RegisterModule),
+    loadChildren: () => import('src/app/pages/register/register.module').then(m => m.RegisterPageModule),
     canActivate: [NotAuthGuardService],
     data: { animation: 'RegisterPage' }
   },
   {
     path: 'verify',
-    loadChildren: () => import('src/app/pages/verify/verify.module').then(m => m.VerifyModule),
+    loadChildren: () => import('src/app/pages/verify/verify.module').then(m => m.VerifyPageModule),
     canActivate: [VerifyGuardService]
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+    loadChildren: () => import('src/app/pages/dashboard/dashboard.module').then(m => m.DashboardPageModule),
     data: { animation: 'DashboardPage' },
     canActivate: [AuthGuardService]
   },
   {
     path: 'mein-profil',
-    loadChildren: () => import('src/app/pages/my-profile/my-profile.module').then(m => m.MyProfileModule),
+    loadChildren: () => import('src/app/pages/my-profile/my-profile.module').then(m => m.MyProfilePageModule),
     data: { animation: 'MyProfilePage' },
     canActivate: [AuthGuardService]
   },
   {
-    path: 'einstellungen',
-    loadChildren: () => import('src/app/pages/settings/settings.module').then(m => m.SettingsModule),
-    data: { animation: 'SettingsPage' },
-    canActivate: [AuthGuardService]
-  },
-  {
     path: 'lehrmaterial',
-    loadChildren: () => import('src/app/pages/teacher-files/teacher-files.module').then(m => m.TeacherFilesModule),
+    loadChildren: () => import('src/app/pages/teacher-files/teacher-files.module').then(m => m.TeacherFilesPageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'mitteilungen',
-    loadChildren: () => import('src/app/pages/messages/messages.module').then(m => m.MessagesModule),
+    loadChildren: () => import('src/app/pages/messages/messages.module').then(m => m.MessagesPageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'mitteilungen/:url',
-    loadChildren: () => import('src/app/pages/news-article/news-article.module').then(m => m.NewsArticleModule),
+    loadChildren: () => import('src/app/pages/news-article/news-article.module').then(m => m.NewsArticlePageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'lehrplan',
-    loadChildren: () => import('src/app/pages/curriculum/curriculum.module').then(m => m.CurriculumModule),
+    loadChildren: () => import('src/app/pages/curriculum/curriculum.module').then(m => m.CurriculumPageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'vertretungsplan',
-    loadChildren: () => import('src/app/pages/substitution-schedule/substitution-schedule.module').then(m => m.SubstitutionScheduleModule),
+    loadChildren: () => import('src/app/pages/substitution-schedule/substitution-schedule.module').then(m => m.SubstitutionSchedulePageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'klausuren',
-    loadChildren: () => import('src/app/pages/exams/exams.module').then(m => m.ExamsModule),
+    loadChildren: () => import('src/app/pages/exams/exams.module').then(m => m.ExamsPageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'pruefungssimulator',
-    loadChildren: () => import('src/app/pages/pruefungssimulator/pruefungssimulator.module').then(m => m.PruefungssimulatorModule),
+    loadChildren: () => import('src/app/pages/audit-simulator/audit-simulator.module').then(m => m.AuditSimulatorPageModule),
     canActivate: [AuthGuardService]
   },
   {
     path: 'search',
-    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchModule)
+    loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchPageModule)
   },
   // {
   //   path: '**',

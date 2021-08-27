@@ -1,58 +1,60 @@
-.fe-page.subjects .fe-card-title {
-  margin-bottom: 20px;
-}
-
-.fe-page.subjects .topic-description {
-  display: inline-flex;
-  flex-flow: wrap;
-  margin-bottom: 10px;
-
-  > fe-post-element:not(:first-of-type) {
-    margin-right: 40px;
+.page.subjects {
+  .fe-card-title {
     margin-bottom: 20px;
   }
 
-  fe-post-element {
-    p, ul {
-      color: var(--text-color-2);
+  .topic-description {
+    display: inline-flex;
+    flex-flow: wrap;
+    margin-bottom: 10px;
+
+    > fe-post-element:not(:first-of-type) {
+      margin-right: 40px;
+      margin-bottom: 20px;
     }
 
-    p:first-of-type {
-      margin-top: 0;
-    }
+    fe-post-element {
+      p, ul {
+        color: var(--text-color-2);
+      }
 
-    .post-ul-content {
-      display: flex;
-      text-decoration: underline;
-    }
+      p:first-of-type {
+        margin-top: 0;
+      }
 
-    .post-list {
-      margin-top: 0;
-    }
-  }
-}
+      .post-ul-content {
+        display: flex;
+        text-decoration: underline;
+      }
 
-.fe-page.subjects .fe-topic {
-  &:not(:last-of-type) {
-    margin-bottom: 30px;
-  }
-
-  .fe-topic-title {
-    background: -moz-linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
-    background: -webkit-linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
-    background: linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
-    padding: 10px 12px;
-    font-family: Nunito-Bold, sans-serif;
-    line-height: 20px;
-    border-top-left-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-
-    @include from-md {
-      margin-bottom: 0;
+      .post-list {
+        margin-top: 0;
+      }
     }
   }
 
-  .fe-links {
-    margin-top: 10px;
+  .fe-topic {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+
+    .fe-topic-title {
+      background: -moz-linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
+      background: -webkit-linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
+      background: linear-gradient(to right, var(--background-secondary) 0%, var(--background-primary) 75%);
+      padding: 10px 12px;
+      font-family: Nunito-Bold, sans-serif;
+      line-height: 20px;
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+
+      @include from-md {
+        margin-bottom: 0;
+      }
+    }
+
+    .fe-links {
+      margin-top: 10px;
+    }
   }
 }

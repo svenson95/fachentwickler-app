@@ -1,130 +1,134 @@
-.fe-page.curriculum .school-week-card {
+.page.curriculum {
 
-  @include from-lg {
-    margin-bottom: 30px !important;
+  .school-week-card {
+
+    @include from-lg {
+      margin-bottom: 30px !important;
+    }
+
+    @include to-lg {
+      margin-bottom: 20px !important;
+    }
   }
 
-  @include to-lg {
-    margin-bottom: 20px !important;
-  }
-}
+  .fe-card.school-year {
+    .fe-card-header {
+      display: flex;
+      align-items: center;
 
-.fe-page.curriculum .fe-card.school-year {
-  .fe-card-header {
+      .fe-year-toggle {
+        margin-left: 20px;
+      }
+
+      .fe-card-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  mat-button-toggle-group {
+    border-radius: var(--border-radius);
+    border: none;
+    border-color: rgba(var(--tertiary-color-rgb), .2);
+    background-color: var(--background-primary);
+
+    mat-button-toggle {
+      background-color: rgba(var(--tertiary-color-rgb), .2);
+      color: var(--text-color-1);
+    }
+
+    .mat-button-toggle-disabled {
+      color: var(--text-color-3);
+    }
+
+    .mat-button-toggle-checked {
+      background-color: var(--tertiary-color);
+      color: var(--background-primary);
+      font-family: Nunito-Bold, sans-serif;
+    }
+  }
+
+  .week-cards-wrapper {
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    max-width: var(--max-width);
 
-    .fe-year-toggle {
-      margin-left: 20px;
-    }
-
-    .fe-card-title {
+    .week-toggle-card {
       margin-bottom: 0;
-    }
-  }
-}
 
-.fe-page.curriculum mat-button-toggle-group {
-  border-radius: var(--border-radius);
-  border: none;
-  border-color: rgba(var(--tertiary-color-rgb), .2);
-  background-color: var(--background-primary);
+      .fe-week-toggle {
+        flex-direction: column;
+        flex-shrink: 0;
 
-  mat-button-toggle {
-    background-color: rgba(var(--tertiary-color-rgb), .2);
-    color: var(--text-color-1);
-  }
+        @include to-md {
+          .mat-button-toggle .mat-button-toggle-label-content {
+            padding: 0;
+          }
+        }
 
-  .mat-button-toggle-disabled {
-    color: var(--text-color-3);
-  }
-
-  .mat-button-toggle-checked {
-    background-color: var(--tertiary-color);
-    color: var(--background-primary);
-    font-family: Nunito-Bold, sans-serif;
-  }
-}
-
-.fe-page.curriculum .fe-week-cards-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
-  max-width: var(--max-width);
-
-  .week-toggle-card {
-    margin-bottom: 0;
-
-    .fe-week-toggle {
-      flex-direction: column;
-      flex-shrink: 0;
-
-      @include to-md {
-        .mat-button-toggle .mat-button-toggle-label-content {
-          padding: 0;
+        .mat-button-toggle + .mat-button-toggle {
+          border-left: none;
+          border-top: solid 1px rgba(var(--tertiary-color-rgb), .2);
         }
       }
-
-      .mat-button-toggle + .mat-button-toggle {
-        border-left: none;
-        border-top: solid 1px rgba(var(--tertiary-color-rgb), .2);
-      }
-    }
-  }
-
-  .fe-weeks-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 120px;
-    bottom: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    -webkit-appearance: none;
-    scrollbar-width: none;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-
-    &::-webkit-scrollbar {
-      display: none;
     }
 
-    @include to-md {
+    .weeks-container {
+      position: absolute;
+      left: 0;
+      top: 0;
       right: 120px;
-    }
+      bottom: 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
 
-    @include to-xs {
-      right: 80px;
-    }
+      -webkit-appearance: none;
+      scrollbar-width: none;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
 
-    fe-school-week-card:last-of-type mat-card {
-      margin-bottom: 0 !important;
-    }
-  }
-}
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
-$toggleSize: 42px;
-.fe-year-toggle,
-.fe-week-toggle {
-  mat-button-toggle {
-
-    @include from-xs {
-      width: $toggleSize;
-    }
-
-    @include to-xs {
-      width: $toggleSize - 10;
-    }
-
-    .mat-button-toggle-label-content {
-      @include from-xs {
-        line-height: $toggleSize;
+      @include to-md {
+        right: 120px;
       }
 
       @include to-xs {
-        line-height: $toggleSize - 10;
-        font-size: .7rem;
+        right: 80px;
+      }
+
+      fe-school-week-card:last-of-type mat-card {
+        margin-bottom: 0 !important;
       }
     }
   }
+
+  $toggleSize: 42px;
+  .fe-year-toggle,
+  .fe-week-toggle {
+    mat-button-toggle {
+
+      @include from-xs {
+        width: $toggleSize;
+      }
+
+      @include to-xs {
+        width: $toggleSize - 10;
+      }
+
+      .mat-button-toggle-label-content {
+        @include from-xs {
+          line-height: $toggleSize;
+        }
+
+        @include to-xs {
+          line-height: $toggleSize - 10;
+          font-size: .7rem;
+        }
+      }
+    }
+  }
+
 }

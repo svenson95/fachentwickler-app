@@ -206,7 +206,7 @@ fe-header.fe-header .mat-toolbar {
   }
 }
 
-.fe-page-container {
+.page-container {
   &.scrolled fe-header.fe-header .header-toolbar {
     height: 60px;
     transition: height 200ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;

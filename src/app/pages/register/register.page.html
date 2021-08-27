@@ -1,0 +1,59 @@
+<div class="page register">
+  <mat-card class="fe-card register">
+    <p class="fe-card-title">Account erstellen</p>
+    <mat-card-content class="fe-view-wrapper">
+      <div class="fe-text-button fe-back-to-login-btn" routerLink="/login" matRipple>
+        <span>Zurück zum Login</span>
+      </div>
+      <hr class="fe-divider-line"/>
+      <form class="register-form" [formGroup]="form" (ngSubmit)="register($event)" (change)="onFormChange($event)">
+        <div class="form-inputs">
+          <mat-form-field class="input name">
+            <mat-label>Benutzername</mat-label>
+            <input matInput type="text" autocomplete="off" formControlName="name"/>
+            <mat-error *ngIf="form.controls.name.hasError('name') && !form.controls.name.hasError('required')">
+              Benutzername ungültig
+            </mat-error>
+            <mat-error *ngIf="form.controls.name.hasError('required')">
+              Benutzername erforderlich
+            </mat-error>
+            <mat-error *ngIf="form.controls.name.hasError('alreadyTaken')">
+              Der Benutzername ist bereits vergeben
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input email">
+            <mat-label>E-Mail</mat-label>
+            <input matInput type="email" autocomplete="email" formControlName="email"/>
+            <mat-error *ngIf="form.controls.email.hasError('email') && !form.controls.email.hasError('required')">
+              E-Mail ungültig
+            </mat-error>
+            <mat-error *ngIf="form.controls.email.hasError('required')">
+              E-Mail erforderlich
+            </mat-error>
+            <mat-error *ngIf="form.controls.email.hasError('alreadyTaken')">
+              Die E-Mail Adresse ist bereits vergeben
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input password">
+            <mat-label>Passwort</mat-label>
+            <input matInput type="password" autocomplete="password" formControlName="password"/>
+            <mat-error *ngIf="form.controls.password.hasError('password') && !form.controls.password.hasError('required')">
+              Passwort ungültig
+            </mat-error>
+            <mat-error *ngIf="form.controls.password.hasError('minlength')">
+              Passwort zu kurz (min. 4 Zeichen)
+            </mat-error>
+            <mat-error *ngIf="form.controls.password.hasError('required')">
+              Passwort erforderlich
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="buttons-wrapper">
+          <fe-button-state type="submit" [disabled]="form.invalid || isLoading" [isLoading]="isLoading">Bestätigen</fe-button-state>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

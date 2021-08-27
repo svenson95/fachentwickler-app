@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { VerifyComponent } from './verify.component';
+import { VerifyPage } from './verify.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: VerifyComponent
+    component: VerifyPage
   }
 ];
 

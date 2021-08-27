@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { DashboardComponent } from './dashboard.component';
+import { DashboardPage } from './dashboard.page';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
 import { PostLinkModule } from '../../components/post-link/post-link.module';
@@ -14,7 +14,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
 import { NewsCardContainerModule } from '../../containers/news-card-container/news-card-container.module';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardPage],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -28,4 +28,4 @@ import { NewsCardContainerModule } from '../../containers/news-card-container/ne
     NewsCardContainerModule
   ]
 })
-export class DashboardModule { }
+export class DashboardPageModule { }

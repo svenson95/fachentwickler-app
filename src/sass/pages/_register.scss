@@ -1,74 +1,76 @@
-.fe-page.register .fe-view-wrapper {
-  display: flex;
-  width: fit-content;
-  margin: 40px auto;
-  padding-bottom: 40px;
+.page.register {
+  .fe-view-wrapper {
+    display: flex;
+    width: fit-content;
+    margin: 40px auto;
+    padding-bottom: 40px;
 
-  @include to-md {
-    flex-direction: column;
-  }
+    @include to-md {
+      flex-direction: column;
+    }
 
-  .fe-back-to-login-btn {
-    align-self: center;
+    .fe-back-to-login-btn {
+      align-self: center;
 
-    @include from-md {
-      margin-right: 0;
+      @include from-md {
+        margin-right: 0;
+      }
     }
   }
-}
 
-.fe-page.register .register-form {
-  text-align: center;
+  .register-form {
+    text-align: center;
 
-  @include from-lg {
-    margin-right: 150px;
-  }
+    @include from-lg {
+      margin-right: 150px;
+    }
 
-  .form-inputs {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+    .form-inputs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
 
-    .name,
-    .email {
-      margin-bottom: 15px;
+      .name,
+      .email {
+        margin-bottom: 15px;
 
-      ::placeholder {
-        color: var(--grey-4);
+        ::placeholder {
+          color: var(--grey-4);
+        }
+      }
+
+      .password {
+        margin-bottom: 8px;
       }
     }
 
-    .password {
-      margin-bottom: 8px;
+
+    .buttons-wrapper {
+      display: flex;
+      flex-direction: column;
     }
   }
 
+  .fe-divider-line {
+    border: none;
 
-  .buttons-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-}
+    @include from-md {
+      width: 1px;
+      margin: 0 50px;
+    }
 
-.fe-page.register .fe-divider-line {
-  border: none;
-
-  @include from-md {
-    width: 1px;
-    margin: 0 50px;
+    @include to-md {
+      display: none;
+    }
   }
 
-  @include to-md {
-    display: none;
-  }
-}
+  .register-form {
+    text-align: center;
+    align-self: center;
+    margin: 30px 50px 0 auto;
 
-.register-form {
-  text-align: center;
-  align-self: center;
-  margin: 30px 50px 0 auto;
-
-  @include to-lg {
-    margin: 30px auto 0;
+    @include to-lg {
+      margin: 30px auto 0;
+    }
   }
 }

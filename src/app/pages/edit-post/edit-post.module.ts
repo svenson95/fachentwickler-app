@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { EditPostComponent } from './edit-post.component';
+import { EditPostPage } from './edit-post.page';
 import { EditPostRoutingModule } from './edit-post-routing.module';
 
 import { PostElementModule } from '../../components/post-element/post-element.module';
@@ -12,8 +12,8 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
 
 
 @NgModule({
-  declarations: [EditPostComponent],
-  exports: [EditPostComponent],
+  declarations: [EditPostPage],
+  exports: [EditPostPage],
   imports: [
     CommonModule,
     EditPostRoutingModule,
@@ -23,4 +23,4 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     LoadingSpinnerModule
   ]
 })
-export class EditPostModule { }
+export class EditPostPageModule { }

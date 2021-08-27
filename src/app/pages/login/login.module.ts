@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { LoginComponent } from './login.component';
+import { LoginPage } from './login.page';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { ButtonStateModule } from '../../components/button-state/button-state.module';
@@ -16,6 +16,6 @@ import { ButtonStateModule } from '../../components/button-state/button-state.mo
     LoginPageRoutingModule,
     ButtonStateModule
   ],
-  declarations: [LoginComponent],
+  declarations: [LoginPage],
 })
-export class LoginModule { }
+export class LoginPageModule { }

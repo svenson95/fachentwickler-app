@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { SearchComponent } from './search.component';
+import { SearchPage } from './search.page';
 import { SearchRoutingModule } from './search-routing.module';
 
 import { PostLinkModule } from '../../components/post-link/post-link.module';
@@ -12,7 +12,7 @@ import { SearchFieldModule } from '../../components/search-field/search-field.mo
 
 
 @NgModule({
-  declarations: [SearchComponent],
+  declarations: [SearchPage],
   imports: [
     CommonModule,
     AngularMaterialModule,
@@ -22,4 +22,4 @@ import { SearchFieldModule } from '../../components/search-field/search-field.mo
     SearchFieldModule
   ]
 })
-export class SearchModule { }
+export class SearchPageModule { }

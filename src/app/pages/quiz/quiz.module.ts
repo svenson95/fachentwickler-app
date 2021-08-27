@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
 
-import { QuizComponent } from './quiz.component';
+import { QuizPage } from './quiz.page';
 import { QuizRoutingModule } from './quiz-routing.module';
 
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
@@ -11,8 +11,8 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
 
 
 @NgModule({
-  declarations: [QuizComponent],
-  exports: [QuizComponent],
+  declarations: [QuizPage],
+  exports: [QuizPage],
   imports: [
     CommonModule,
     QuizRoutingModule,
@@ -22,4 +22,4 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     LoadingSpinnerModule
   ]
 })
-export class QuizModule { }
+export class QuizPageModule { }

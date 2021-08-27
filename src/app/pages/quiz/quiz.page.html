@@ -1,0 +1,7 @@
+<div class="page quiz">
+
+  <fe-loading-spinner *ngIf="quiz === undefined"></fe-loading-spinner>
+  <fe-quiz-card [quiz]="quiz" *ngIf="quiz !== undefined"></fe-quiz-card>
+  <fe-lesson-footer [postId]="quiz._id" [isLoading]="loadingService.loading$ | async" *ngIf="quiz !== undefined"></fe-lesson-footer>
+
+</div>

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SubstitutionScheduleComponent } from './substitution-schedule.component';
+import { SubstitutionSchedulePage } from './substitution-schedule.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SubstitutionScheduleComponent
+    component: SubstitutionSchedulePage
   }
 ];
 
