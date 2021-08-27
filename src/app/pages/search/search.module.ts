@@ -7,6 +7,7 @@ import { SearchRoutingModule } from './search-routing.module';
 
 import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
+import { SearchFieldModule } from '../../components/search-field/search-field.module';
 
 
 
@@ -17,7 +18,8 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     AngularMaterialModule,
     SearchRoutingModule,
     PostLinkModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    SearchFieldModule
   ]
 })
 export class SearchModule { }

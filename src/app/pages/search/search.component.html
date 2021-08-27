@@ -4,18 +4,19 @@
       <button class="close-search-btn" mat-icon-button (click)="closeSearchView()">
         <mat-icon>close</mat-icon>
       </button>
-      <p class="fe-card-title">Suche nach <b>{{searchPostService.searchedTerm}}</b></p>
-      <p class="fe-card-description" *ngIf="searchResults">
-        {{ searchResults.length }}
-        {{ searchResults.length === 1 ? 'Suchergebnis' : searchResults.length !== 1 ? 'Suchergebnisse' : null }}
+      <p class="fe-card-title">
+        <ng-container *ngIf="!isMobile; else mobile">
+          Suche nach <b>{{searchPostService.searchedTerm}}</b>
+        </ng-container>
+        <ng-template #mobile>
+          <fe-search-field></fe-search-field>
+        </ng-template>
       </p>
+      <p class="fe-card-description" *ngIf="searchResults">{{ searchResults.length | i18nPlural: resultsMapping }}</p>
     </div>
     <fe-loading-spinner *ngIf="searchPostService.isSearching"></fe-loading-spinner>
-    <p class="fe-no-data" *ngIf="searchResults.length === 0 && searchPostService.searchTerm === ''">
-      Suchbegriff eingeben
-    </p>
     <mat-card-content>
-      <div class="fe-search-results" *ngIf="!searchPostService.isSearching">
+      <div class="search-results" *ngIf="!searchPostService.isSearching">
         <fe-post-link *ngFor="let post of searchResults" [post]="post"></fe-post-link>
       </div>
     </mat-card-content>

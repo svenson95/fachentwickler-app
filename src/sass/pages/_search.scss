@@ -1,22 +1,35 @@
 .fe-page.search-page {
-  .card-title-wrapper {
+
+  @include to-md {
+    .search-bar-form-field {
+      border-color: var(--grey-2);
+
+      .mat-form-field-flex {
+        background: transparent;
+        padding: 0;
+      }
+    }
   }
 
-  .fe-search-results {
+  .search-results {
     margin-top: 20px;
   }
 
   .close-search-btn {
     float: right;
+    transition: background-color 100ms ease-out;
 
     mat-icon {
-      color: var(--text-color-1);
+      color: var(--tertiary-color);
       font-size: 1.4rem;
     }
 
-    &:hover {
-      mat-icon {
-        color: var(--primary-color);
+    &:not(&:disabled) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--button-hover-background);
+        transition: none;
       }
     }
   }

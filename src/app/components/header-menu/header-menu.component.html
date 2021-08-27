@@ -2,7 +2,7 @@
   <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu class="more-menu" #menu="matMenu">
-  <a class="menu-btn" mat-menu-item *ngIf="isMobile" disableRipple>
+  <a class="menu-btn" mat-menu-item routerLink="search" *ngIf="isMobile" disableRipple>
     <mat-icon>search</mat-icon>
     <span class="label">Suche</span>
   </a>

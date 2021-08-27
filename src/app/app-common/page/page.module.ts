@@ -12,7 +12,7 @@ import { AppIconComponent } from '../app-icon/app-icon.component';
 import { LogoutDialogComponent } from '../../components/dialogs/logout-dialog/logout-dialog.component';
 import { ImageManagerDialogModule } from '../../components/dialogs/image-manager-dialog/image-manager-dialog.module';
 import { DeleteImageDialogModule } from '../../components/dialogs/delete-image-dialog/delete-image-dialog.module';
-import { SearchbarModule } from '../../components/searchbar/searchbar.module';
+import { SearchFieldModule } from '../../components/search-field/search-field.module';
 import { HeaderMenuModule } from '../../components/header-menu/header-menu.module';
 
 
@@ -32,7 +32,7 @@ import { HeaderMenuModule } from '../../components/header-menu/header-menu.modul
     RouterModule,
     ImageManagerDialogModule,
     DeleteImageDialogModule,
-    SearchbarModule,
+    SearchFieldModule,
     HeaderMenuModule
   ]
 })

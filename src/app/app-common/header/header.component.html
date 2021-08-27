@@ -16,7 +16,7 @@
         <span class="bracket" *ngIf="!isMobile">]</span>
       </div>
       <div class="header-elements-wrapper">
-        <fe-searchbar *ngIf="!isMobile"></fe-searchbar>
+        <fe-search-field *ngIf="!isMobile"></fe-search-field>
         <div class="button-container">
           <button class="sidenav-btn" mat-icon-button (click)="sidenavService.toggle()" *ngIf="isMobile">
             <mat-icon>menu</mat-icon>
