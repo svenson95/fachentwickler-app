@@ -15,6 +15,12 @@ import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-
 })
 export class ImageManagerDialogComponent implements OnInit {
 
+  chunksMapping = {
+    '=0': 'Keine Chunks',
+    '=1': '1 Chunk',
+    other: '# Chunks'
+  };
+
   UserRole = UserRole;
   dropzoneFile: File[] = [];
   isUploadingImage: boolean;

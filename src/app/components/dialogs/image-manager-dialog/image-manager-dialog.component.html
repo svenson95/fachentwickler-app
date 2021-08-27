@@ -49,7 +49,7 @@
           <span class="key">Length: </span>
           <span class="value">{{ formatBytes(selectedImage?.length) }} </span>
           <span class="chunks-length" *ngIf="selectedImageData">
-            ({{selectedImageData?.chunks.length}} {{selectedImageData?.chunks.length > 1 ? 'Chunks' : 'Chunk'}})
+            ({{ selectedImageData.chunks.length | i18nPlural: chunksMapping }})
           </span>
         </p>
         <p>
