@@ -54,10 +54,9 @@
     @include from-md {
       min-width: 70px;
 
-      padding-left: 10px;
       padding-right: 10px;
       margin-right: 10px;
-      border-right: 1px solid var(--grey-1);
+      border-right: 1px solid var(--grey-2);
     }
 
     @include to-md {

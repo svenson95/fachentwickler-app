@@ -62,15 +62,15 @@
       outline: none;
     }
 
-    @media screen and (min-width: 1000px) {
+    @media (pointer: fine) {
       &:hover {
         background: var(--button-hover-background);
         transition: none;
-      }
 
-      &:hover .title {
-        text-decoration: underline;
-        text-decoration-color: var(--secondary-color);
+        .title {
+          text-decoration: underline;
+          text-decoration-color: var(--secondary-color);
+        }
       }
     }
 

@@ -5,10 +5,10 @@ fe-header.fe-header {
 fe-header.fe-header .mat-toolbar {
   height: 70px;
   width: 100%;
-  background-color: var(--background-secondary);
   justify-content: space-between;
-  transition: height 200ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
+  background-color: var(--background-secondary);
   position: relative;
+  transition: height 200ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
 
   @include from-md {
     padding: 0 20px;
@@ -24,15 +24,17 @@ fe-header.fe-header .mat-toolbar {
     padding: 0 5px;
   }
 
-  &:not(.sidenav--open) .header-content {
-    width: 100%;
-  }
-
   .header-wrapper {
     display: flex;
     width: 100%;
     max-width: calc(220px + var(--max-width));
     justify-content: space-between;
+
+    @include to-xs {
+      &:not(.sidenav--open) .header-content {
+        width: 100%;
+      }
+    }
 
     .header-content {
       display: flex;
@@ -41,6 +43,10 @@ fe-header.fe-header .mat-toolbar {
 
       @include from-md {
         margin-left: 20px;
+      }
+
+      @include from-xs {
+        width: 100%;
       }
 
       .page-title {
