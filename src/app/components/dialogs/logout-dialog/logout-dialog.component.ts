@@ -20,15 +20,16 @@ export class LogoutDialogComponent implements OnInit {
   }
 
   logout(): void {
+    const guardRoutes = this.router.config.filter(r => r.canActivate).map(r => r.path);
     this.authService.invalidate().subscribe(
       response => {
-        this.router.navigateByUrl('/');
+        if (guardRoutes.includes(this.router.url.substr(1))) this.router.navigateByUrl('/');
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Du hast dich erfolgreich abgemeldet'
         });
       }, error => {
-        this.router.navigateByUrl('/');
+        if (guardRoutes.includes(this.router.url.substr(1))) this.router.navigateByUrl('/');
         console.log('error logout', error);
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
