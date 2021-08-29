@@ -1,11 +1,9 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material/sidenav';
 
 import { SidenavService } from '../../services/sidenav.service';
 import { ThemeService } from '../../services/theme.service';
 import { MediaQueryService } from '../../services/media-query.service';
-import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'fe-page',
@@ -21,10 +19,8 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(private elementRef: ElementRef,
               private renderer: Renderer2,
               private sidenavService: SidenavService,
-              public router: Router,
               public themeService: ThemeService,
-              public mediaQueryService: MediaQueryService,
-              public loadingService: LoadingService
+              public mediaQueryService: MediaQueryService
   ) {}
 
   ngOnInit(): void {
