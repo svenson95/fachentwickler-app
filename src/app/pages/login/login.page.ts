@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
@@ -20,16 +20,7 @@ export class LoginPage implements OnInit, OnDestroy {
 
   form: FormGroup;
   isLoading: boolean;
-  loadingSubscription: Subscription;
-
-  invalidPassword: boolean;
-  InvalidPassword: ValidatorFn = (ac): ValidationErrors => {
-    if (this.invalidPassword) {
-      return { invalidPassword: true };
-    } else {
-      return null;
-    }
-  }
+  private loadingSubscription: Subscription;
 
   constructor(private router: Router,
               private authService: AuthService,
@@ -57,13 +48,18 @@ export class LoginPage implements OnInit, OnDestroy {
     this.loadingSubscription.unsubscribe();
   }
 
-  initFormGroup(): void {
+  private initFormGroup(): void {
     const passwordValidators = [Validators.required, Validators.minLength(4)];
 
     this.form = this.fb.group({
-      username: [null as string, { validators: [...passwordValidators] }],
-      password: [null as string, { validators: [...passwordValidators, this.InvalidPassword] }]
+      username: [null as string, { validators: passwordValidators, updateOn: 'submit' }],
+      password: [null as string, { validators: passwordValidators, updateOn: 'submit' }]
     });
+  }
+
+  private redirectTo(url): void {
+    this.router.navigateByUrl(url);
+    this.authService.redirectUrl = undefined;
   }
 
   login(event): void {
@@ -88,7 +84,6 @@ export class LoginPage implements OnInit, OnDestroy {
         }
       }, (error) => {
         console.log(error);
-        this.invalidPassword = true;
         this.passwordInput.nativeElement.blur();
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
@@ -98,10 +93,9 @@ export class LoginPage implements OnInit, OnDestroy {
     );
   }
 
-  onFormChange(event): void {
+  resetErrors(event): void {
     this.form.controls.username.setErrors(null);
     this.form.controls.password.setErrors(null);
-    this.invalidPassword = false;
   }
 
   usernameFieldKeyPress(event): void {
@@ -109,11 +103,6 @@ export class LoginPage implements OnInit, OnDestroy {
       event.preventDefault();
       this.passwordInput.nativeElement.focus();
     }
-  }
-
-  redirectTo(url): void {
-    this.router.navigateByUrl(url);
-    this.authService.redirectUrl = undefined;
   }
 
 }

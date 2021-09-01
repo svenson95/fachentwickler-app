@@ -2,13 +2,16 @@
   <mat-card class="fe-card">
     <p class="fe-card-title">Schülerbereich</p>
     <mat-card-content class="fe-view-wrapper">
-      <form class="login-form" [formGroup]="form" (ngSubmit)="login($event)" (change)="onFormChange($event)">
+      <form class="login-form" [formGroup]="form" (ngSubmit)="login($event)" (change)="resetErrors($event)">
         <div class="form-inputs">
           <mat-form-field class="input name">
             <mat-label>Benutzername</mat-label>
             <input matInput type="text" autocomplete="off" formControlName="username" (keypress)="usernameFieldKeyPress($event)"/>
             <mat-error *ngIf="form.controls.username.hasError('username') && !form.controls.username.hasError('required')">
               Benutzername ungültig
+            </mat-error>
+            <mat-error *ngIf="form.controls.username.hasError('minlength')">
+              Benutzername zu kurz (min. 4 Zeichen)
             </mat-error>
             <mat-error *ngIf="form.controls.username.hasError('required')">
               Benutzername erforderlich
