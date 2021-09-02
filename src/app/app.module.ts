@@ -9,15 +9,13 @@ import localeDe from '@angular/common/locales/de';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MAT_RIPPLE_GLOBAL_OPTIONS, MatNativeDateModule, RippleGlobalOptions } from '@angular/material/core';
 import { AngularMaterialModule } from './app-common/angular-material.module';
-import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
+import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { ThemeModule } from './services/theme.module';
 import { PageComponentModule } from './app-common/page/page.module';
-import { SnackbarModule } from './app-common/snackbar/snackbar.module';
 import { environment } from '../environments/environment';
 
 const globalRippleConfig: RippleGlobalOptions = {
@@ -36,10 +34,7 @@ const globalRippleConfig: RippleGlobalOptions = {
     AppRoutingModule,
     HttpClientModule,
     AngularMaterialModule,
-    ThemeModule,
     PageComponentModule,
-    SnackbarModule,
-    HighlightModule,
     MatNativeDateModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

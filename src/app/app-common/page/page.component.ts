@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Subscription } from 'rxjs';
 
 import { SidenavService } from '../../services/sidenav.service';
 import { ThemeService } from '../../services/theme.service';
@@ -11,8 +12,9 @@ import { MediaQueryService } from '../../services/media-query.service';
 })
 export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  @Input() isMobile: boolean;
-  @Input() isTiny: boolean;
+  isMobile: boolean;
+  isTiny: boolean;
+  subscription: Subscription = new Subscription();
 
   @ViewChild('sidenav') public sidenav: MatSidenav;
 
@@ -24,11 +26,14 @@ export class PageComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
+    this.subscription.add(this.mediaQueryService.isMobile$.subscribe(v => this.isMobile = v));
+    this.subscription.add(this.mediaQueryService.isTiny$.subscribe(v => this.isTiny = v));
   }
 
   ngOnDestroy(): void {
     this.elementRef.nativeElement.querySelector('.mat-sidenav-content')
       .removeEventListener('scroll', this.onScroll.bind(this), true);
+    this.subscription.unsubscribe();
   }
 
   ngAfterViewInit(): void {

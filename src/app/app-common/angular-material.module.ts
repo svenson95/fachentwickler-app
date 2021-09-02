@@ -93,8 +93,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     RouterModule
-  ],
-  declarations: []
+  ]
 })
 export class AngularMaterialModule {}
 
