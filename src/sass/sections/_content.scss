@@ -47,6 +47,7 @@
 
       a.is-active {
         color: var(--secondary-color);
+        text-decoration: none;
       }
 
       @include to-md {

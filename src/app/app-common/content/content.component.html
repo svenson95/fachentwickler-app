@@ -8,7 +8,7 @@
         <fe-icon></fe-icon>
       </div>
       <div class="footer-buttons">
-        <a class="start" routerLink="/" [class.is-active]="router.url.startsWith('/')">Start</a>
+        <a class="start" routerLink="/" [class.is-active]="router.url === '/'">Start</a>
         <span class="footer-divider">|</span>
         <a class="about" routerLink="about" [class.is-active]="router.url.startsWith('/about')">About</a>
         <span class="footer-divider">|</span>

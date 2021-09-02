@@ -46,10 +46,6 @@ fe-header.fe-header .mat-toolbar {
       align-items: center;
       justify-content: space-between;
 
-      @include from-md {
-        margin-left: 20px;
-      }
-
       @include from-xs {
         width: 100%;
       }

@@ -19,6 +19,10 @@ $searchbar-height: 33px;
     border-bottom: 1px solid var(--secondary-color);
   }
 
+  &.mat-focused {
+    background: var(--button-hover-background);
+  }
+
   .mat-form-field-outline {
     opacity: 1;
     color: var(--grey-3);

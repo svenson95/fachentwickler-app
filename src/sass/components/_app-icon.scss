@@ -55,7 +55,7 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
   flex: 0 0 auto;
 
   @include from-md {
-    width: 198px;
+    width: 220px;
   }
 
   @include to-xs {
@@ -72,19 +72,14 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
+    padding-right: 15px;
 
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 
-    @include from-md {
-      padding-right: 13px;
+    @include from-xs {
       padding-left: 33px;
       transform: translateX(-20px);
-    }
-
-    @include to-md {
-      padding-left: 15px;
-      padding-right: 15px;
     }
 
     @include to-xs {

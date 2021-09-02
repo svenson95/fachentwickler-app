@@ -51,7 +51,7 @@ export class ImageManagerDialogComponent implements OnInit {
     return item.id;
   }
 
-  loadAllImagesCount(): void {
+  private loadAllImagesCount(): void {
     this.dataService.getAllImagesLength().subscribe(
       (data) => this.allImagesLength = data,
       (error) => console.log('Error while GET images count', error)
@@ -85,6 +85,7 @@ export class ImageManagerDialogComponent implements OnInit {
                 this.images.unshift(image.file);
                 this.images.pop();
                 this.dropzoneFile = [];
+                this.selectedImage = image.file;
                 this.selectedImageData = image;
                 this.allImagesLength += 1;
               }, (err) => {
