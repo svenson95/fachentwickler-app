@@ -2,7 +2,7 @@
 mat-card.mat-card.fe-card {
   max-width: var(--max-width);
   background: var(--background-primary);
-  box-shadow: var(--box-shadow);
+  box-shadow: none;
   border-radius: var(--border-radius);
   margin-bottom: 20px;
   margin-right: 0;
@@ -47,7 +47,7 @@ p.fe-card-title {
   letter-spacing: 1.5px;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
-  margin-bottom: 2px;
+  margin-bottom: 0;
 
   @include from-xs {
     font-size: 1.4em;

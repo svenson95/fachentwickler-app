@@ -1,4 +1,4 @@
-<button class="more-menu-btn" mat-icon-button [matMenuTriggerFor]="menu">
+<button class="more-menu-btn" mat-icon-button [matMenuTriggerFor]="menu" [class.is-active]="menuTrigger.menuOpen">
   <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu class="more-menu" #menu="matMenu">
@@ -13,10 +13,6 @@
   <a class="menu-btn" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated" [disabled]="router.url.startsWith('/login')" disableRipple>
     <mat-icon>login</mat-icon>
     <span class="label">Einloggen</span>
-  </a>
-  <a class="menu-btn" mat-menu-item routerLink="feedback" [disabled]="router.url.startsWith('/feedback')" disableRipple>
-    <mat-icon>feedback</mat-icon>
-    <span class="label">Feedback</span>
   </a>
   <button class="menu-btn" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile && authService.user?.role === UserRole.ADMIN" disableRipple>
     <mat-icon>perm_media</mat-icon>

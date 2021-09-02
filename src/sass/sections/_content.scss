@@ -43,7 +43,11 @@
       }
     }
 
-    .buttons {
+    .footer-buttons {
+
+      a.is-active {
+        color: var(--secondary-color);
+      }
 
       @include to-md {
         display: flex;

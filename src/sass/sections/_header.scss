@@ -2,6 +2,12 @@ fe-header.fe-header {
   z-index: 3;
 }
 
+.mat-toolbar.scrolled {
+  @include to-md {
+    box-shadow: var(--box-shadow);
+  }
+}
+
 fe-header.fe-header .mat-toolbar {
   height: 70px;
   width: 100%;
@@ -16,7 +22,6 @@ fe-header.fe-header .mat-toolbar {
 
   @include to-md {
     background-color: var(--background-primary);
-    box-shadow: var(--box-shadow);
   }
 
   @include to-xs {
@@ -55,7 +60,6 @@ fe-header.fe-header .mat-toolbar {
 
         color: var(--text-color-1);
         font-weight: 200;
-        text-transform: uppercase;
         letter-spacing: 1px;
         @include titleMoveInRightAnimation;
 
@@ -69,39 +73,18 @@ fe-header.fe-header .mat-toolbar {
           padding: 0;
         }
 
+        mat-icon {
+          margin-right: 6px;
+          transform: scale(.8);
+          color: var(--tertiary-color);
+        }
+
         .title {
           margin-top: 2px;
           margin-bottom: 0;
           white-space: pre-line;
           line-height: 12px;
           text-align: left;
-
-          @include from-xs {
-            padding: 0 5px;
-            margin-top: 3px;
-          }
-
-          @include to-xs {
-            padding: 0;
-          }
-        }
-
-        .bracket {
-          font-size: 1.3em;
-          font-family: Nunito-Light, sans-serif;
-          color: var(--primary-color);
-
-          @include to-xs {
-            font-size: 1.2em;
-          }
-
-          &:first-of-type {
-            margin-right: 1px;
-          }
-
-          &:last-of-type {
-            margin-left: 1px;
-          }
         }
       }
 
@@ -116,6 +99,16 @@ fe-header.fe-header .mat-toolbar {
           line-height: normal;
           color: var(--tertiary-color);
           align-items: center;
+
+          @include to-md {
+            margin-right: 10px;
+          }
+
+          .sidenav-btn, .more-menu-btn {
+            &.is-active {
+              background: rgba(var(--tertiary-color-rgb), 0.1);
+            }
+          }
 
           .sidenav-btn {
             margin-top: 0;
@@ -179,10 +172,6 @@ fe-header.fe-header .mat-toolbar {
                 background-color: var(--button-hover-background);
                 transition: none;
               }
-            }
-
-            @include to-md {
-              margin-right: 10px;
             }
 
             .mat-icon {

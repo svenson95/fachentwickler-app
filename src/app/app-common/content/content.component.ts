@@ -10,7 +10,7 @@ export class ContentComponent implements OnInit, OnDestroy {
   isLoading: boolean;
   subscription: Subscription = new Subscription();
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
     const routerLoadingSubscription = this.router.events.subscribe((event: RouterEvent) => {
       if (event instanceof RouteConfigLoadStart) {
         this.isLoading = true;

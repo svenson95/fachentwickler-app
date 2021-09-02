@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import {Component, Input, OnInit, OnDestroy, AfterViewInit, HostListener} from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
@@ -19,6 +19,15 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() isTiny: boolean;
   isLoading: boolean;
   subscription: Subscription = new Subscription();
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(event: Event): void {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      document.getElementById('header-toolbar').classList.add('scrolled');
+    } else {
+      document.getElementById('header-toolbar').classList.remove('scrolled');
+    }
+  }
 
   constructor(public router: Router,
               public headerService: HeaderService,

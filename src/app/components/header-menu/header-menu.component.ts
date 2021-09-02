@@ -23,13 +23,11 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   isMobile: boolean;
   mobileSubscription: Subscription;
 
-  @ViewChild(MatMenuTrigger) menuTrigger: MatMenuTrigger;
+  @ViewChild(MatMenuTrigger, { static: true }) menuTrigger: MatMenuTrigger;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
-    if (this.isMobile) {
-      this.menuTrigger.closeMenu();
-    }
+    if (this.isMobile && this.menuTrigger.menuOpen) this.menuTrigger.closeMenu();
   }
 
   constructor(public authService: AuthService,

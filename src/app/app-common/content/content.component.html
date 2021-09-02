@@ -7,12 +7,14 @@
       <div class="fe-logo">
         <fe-icon></fe-icon>
       </div>
-      <div class="buttons">
-        <a class="start" routerLink="/">Start</a>
+      <div class="footer-buttons">
+        <a class="start" routerLink="/" [class.is-active]="router.url.startsWith('/')">Start</a>
         <span class="footer-divider">|</span>
-        <a class="about" routerLink="/about">About</a>
+        <a class="about" routerLink="about" [class.is-active]="router.url.startsWith('/about')">About</a>
         <span class="footer-divider">|</span>
-        <a class="legal" routerLink="/impressum">Impressum</a>
+        <a class="about" routerLink="feedback" [class.is-active]="router.url.startsWith('/feedback')">Feedback</a>
+        <span class="footer-divider">|</span>
+        <a class="legal" routerLink="/impressum" [class.is-active]="router.url.startsWith('/impressum')">Impressum</a>
       </div>
     </div>
   </mat-toolbar>

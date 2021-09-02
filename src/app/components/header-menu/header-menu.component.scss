@@ -13,11 +13,13 @@
     color: var(--tertiary-color);
   }
 
-  .mat-menu-item:hover {
-    background: var(--secondary-color);
+  .mat-menu-item {
+    &:hover, &:active {
+      background: var(--secondary-color);
 
-    mat-icon {
-      color : var(--background-primary);
+      mat-icon {
+        color : var(--background-primary);
+      }
     }
   }
 

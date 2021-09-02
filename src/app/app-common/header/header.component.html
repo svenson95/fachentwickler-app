@@ -1,27 +1,27 @@
-<mat-toolbar class="header-toolbar">
+<mat-toolbar class="header-toolbar" id="header-toolbar">
   <div class="header-wrapper" [class.sidenav--open]="isMobile && sidenavService.isOpen()">
-    <a class="fe-logo-wrapper" [routerLink]="isMobile ? mobileLogoLink() : '/'"
-       [class.active-route]="
+    <div class="sidenav-section">
+      <a class="fe-logo-wrapper" [routerLink]="isMobile ? mobileLogoLink() : '/'" matRipple
+         [class.active-route]="
           router.url === '/' ||
           router.url === '/login' ||
           (isMobile && !sidenavService.isOpen() && router.url === '/dashboard')"
-    >
-      <fe-icon></fe-icon>
-    </a>
+      >
+        <fe-icon></fe-icon>
+      </a>
+    </div>
     <div class="header-content">
       <div class="page-title" (click)="goToSubject()" *ngIf="!isTiny || (isTiny && !sidenavService.isOpen())">
-        <span class="bracket" *ngIf="!isMobile">[</span>
+        <mat-icon class="unselectable" *ngIf="!isMobile">chevron_right</mat-icon>
         <p class="title" [innerHTML]="headerService.pageTitle"></p>
-        <span class="bracket" *ngIf="!isMobile">]</span>
       </div>
       <div class="header-elements-wrapper">
         <fe-search-field *ngIf="!isMobile"></fe-search-field>
         <div class="button-container">
-          <button class="sidenav-btn" mat-icon-button (click)="sidenavService.toggle()" *ngIf="isMobile">
+          <button class="sidenav-btn" mat-icon-button (click)="sidenavService.toggle()" *ngIf="isMobile" [class.is-active]="sidenavService.isOpen()">
             <mat-icon>menu</mat-icon>
           </button>
-          <a class="fe-text-button dashboard-btn" matRipple [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
-             [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')">
+          <a class="fe-text-button dashboard-btn" matRipple [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'" [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')">
             <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
           </a>
           <fe-header-menu></fe-header-menu>

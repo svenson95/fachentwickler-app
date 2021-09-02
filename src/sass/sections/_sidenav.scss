@@ -11,28 +11,9 @@ mat-sidenav.fe-sidenav.mat-sidenav .mat-drawer-inner-container {
   }
 }
 
-mat-sidenav.fe-sidenav.mat-sidenav .fe-sidenav-content {
-
-  .section.areas {
-    margin-bottom: 50px;
-
-    @include to-xs {
-      margin-bottom: 40px;
-    }
-  }
-}
-
 mat-sidenav.fe-sidenav.mat-sidenav {
-  .section:not(:first-child) {
-    @include to-xs {
-      margin-top: 20px;
-    }
-  }
-
   .section.apps {
     margin-left: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 
     @include to-md {
       margin-left: 15px;
@@ -55,10 +36,6 @@ mat-sidenav.fe-sidenav.mat-sidenav {
   .section.subjects,
   .section.study,
   .section.areas {
-
-    @include from-xs {
-      margin-top: 20px;
-    }
 
     @include from-md {
       width: fit-content;
@@ -87,7 +64,6 @@ mat-sidenav.fe-sidenav.mat-sidenav {
       color: var(--text-color-1);
       font-family: Nunito-Light, sans-serif;
       padding: 8px 10px 3px;
-      margin-bottom: 0;
       letter-spacing: 2px;
       width: fit-content;
       border-bottom: 1px solid var(--primary-color);
@@ -96,6 +72,10 @@ mat-sidenav.fe-sidenav.mat-sidenav {
     mat-nav-list.mat-nav-list {
       @include from-md {
         margin-left: 10px;
+      }
+
+      @include to-md {
+        padding-top: 15px;
       }
     }
 
@@ -145,7 +125,7 @@ mat-sidenav.fe-sidenav.mat-sidenav {
         }
       }
 
-      &.active-route {
+      &.active-route, &:active {
         color: var(--secondary-color);
 
         .fe-nav-item-icon {
@@ -162,13 +142,18 @@ mat-sidenav.fe-sidenav.mat-sidenav {
   }
 }
 
-mat-sidenav.fe-sidenav.mat-sidenav .fe-sidenav-content:first-child {
+mat-sidenav.fe-sidenav.mat-sidenav .fe-sidenav-content {
+  margin-top: 20px;
+  margin-bottom: 50px;
+
   @include to-xs {
-    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
-  @include from-xs {
-    margin-top: 0;
+  .section {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
   }
 }
 

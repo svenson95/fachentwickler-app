@@ -1,13 +1,5 @@
 <div class="fe-sidenav-content">
 
-  <div class="section apps" *ngIf="authService.isAuthenticated">
-    <button class="fe-text-button fe-pruefungssimulator-btn" routerLink="pruefungssimulator"
-            [class.active-route]="router.url.startsWith('/pruefungssimulator')" matRipple
-    >
-      Prüfungssimulator
-    </button>
-  </div>
-
   <div class="section my-class" *ngIf="authService.isAuthenticated">
     <label class="section-title">Meine Klasse</label>
     <mat-nav-list>
@@ -75,6 +67,14 @@
         <span [innerHTML]="navItem.title"></span>
       </a>
     </mat-nav-list>
+  </div>
+
+  <div class="section apps" *ngIf="authService.isAuthenticated">
+    <button class="fe-text-button fe-pruefungssimulator-btn" routerLink="pruefungssimulator"
+            [class.active-route]="router.url.startsWith('/pruefungssimulator')" matRipple
+    >
+      Prüfungssimulator
+    </button>
   </div>
 
 </div>

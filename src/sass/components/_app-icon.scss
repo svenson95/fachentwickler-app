@@ -4,7 +4,7 @@
 
   color: var(--text-color-1);
   font-family: Nunito-Light, sans-serif;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 100;
   text-align: left;
   line-height: 14px;
@@ -50,59 +50,82 @@ fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-icon-wr
   }
 }
 
-fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
+fe-header.fe-header .mat-toolbar .sidenav-section {
   display: flex;
-  justify-content: left;
-  background: transparent;
-  font-size: 1em;
-  text-decoration: none;
-  flex-shrink: 0;
-  align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  flex: 0 0 auto;
 
   @include from-md {
-    width: 200px;
-    padding-left: 13px;
-    padding-right: 13px;
+    width: 198px;
   }
 
-  @include to-md {
-    width: 158px;
-    padding-left: 15px;
-    padding-right: 15px;
+  @include to-xs {
+    transform: translateX(-5px);
   }
 
-  .fe-icon-wrapper {
+  .fe-logo-wrapper {
+    display: flex;
+    justify-content: left;
+    background: rgba(var(--tertiary-color-rgb), .1);
+    font-size: 1em;
+    text-decoration: none;
+    flex-shrink: 0;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @include from-md {
+      padding-right: 13px;
+      padding-left: 33px;
+      transform: translateX(-20px);
+    }
+
+    @include to-md {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     @include to-xs {
-      width: 28px;
+      padding-left: 22px;
+      padding-top: 2px;
+      padding-bottom: 2px;
     }
-  }
 
-  &.active-route {
     .fe-icon-wrapper {
-      fill: var(--secondary-color);
-    }
-  }
 
-  &:hover .fe-app-name {
-    letter-spacing: 1px;
-    transition: letter-spacing 500ms ease-out;
-  }
-  &:active .fe-app-name {
-    letter-spacing: .5px;
+      @include to-xs {
+        width: 28px;
+      }
+    }
+
+    &.active-route {
+      .fe-icon-wrapper {
+        fill: var(--secondary-color);
+      }
+    }
+
+    &:hover .fe-app-name {
+      letter-spacing: 1px;
+      transition: letter-spacing 500ms ease-out;
+    }
+    &:active .fe-app-name {
+      letter-spacing: .5px;
+    }
   }
 }
 
 fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-logo-wrapper {
   @include to-xs {
+    background: rgba(var(--tertiary-color-rgb), .1);
+    border-radius: 8px;
     width: fit-content;
-    height: 36px;
+    height: 42px;
     align-self: center;
-    padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 7px;
+    margin-left: 15px;
+    margin-right: 5px;
     fill: var(--tertiary-color);
 
     .fe-app-name {
