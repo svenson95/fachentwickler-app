@@ -65,17 +65,17 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
   .fe-logo-wrapper {
     display: flex;
     justify-content: left;
-    background: rgba(var(--tertiary-color-rgb), .1);
+    background: rgba(var(--tertiary-color-rgb), .2);
     font-size: 1em;
     text-decoration: none;
     flex-shrink: 0;
     align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-right: 15px;
 
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 
     @include from-xs {
       padding-left: 33px;
@@ -92,12 +92,6 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
 
       @include to-xs {
         width: 28px;
-      }
-    }
-
-    &.active-route {
-      .fe-icon-wrapper {
-        fill: var(--secondary-color);
       }
     }
 
@@ -141,7 +135,6 @@ fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
   &:hover, &:focus {
     .fe-icon-wrapper:not(.active-route) {
       @include from-md {
-        fill: var(--secondary-color);
         transition: letter-spacing 150ms ease-out;
       }
     }

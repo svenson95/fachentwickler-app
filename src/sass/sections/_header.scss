@@ -9,7 +9,7 @@ fe-header.fe-header {
 }
 
 fe-header.fe-header .mat-toolbar {
-  height: 70px;
+  height: 80px;
   width: 100%;
   justify-content: space-between;
   background-color: var(--background-secondary);
@@ -53,8 +53,7 @@ fe-header.fe-header .mat-toolbar {
       .page-title {
         display: flex;
         align-items: center;
-
-        color: var(--text-color-1);
+        color: var(--tertiary-color);
         font-weight: 200;
         letter-spacing: 1px;
         @include titleMoveInRightAnimation;
@@ -70,17 +69,23 @@ fe-header.fe-header .mat-toolbar {
         }
 
         mat-icon {
-          margin-right: 6px;
           transform: scale(.8);
-          color: var(--tertiary-color);
+          color: var(--text-color-3);
         }
 
         .title {
+          color: var(--text-color-3);
           margin-top: 2px;
           margin-bottom: 0;
-          white-space: pre-line;
+          font-family: "Nunito-Light", sans-serif;
           line-height: 12px;
           text-align: left;
+          text-transform: uppercase;
+          white-space: pre-line;
+
+          @include from-md {
+            margin-left: 5px;
+          }
         }
       }
 
@@ -89,6 +94,11 @@ fe-header.fe-header .mat-toolbar {
         flex-direction: row-reverse;
         align-items: center;
         z-index: 2;
+
+        .search-bar-form-field.mat-focused, .search-bar-form-field:hover {
+          background-color: var(--button-hover-background);
+          transition: none;
+        }
 
         .button-container {
           display: flex;
@@ -182,24 +192,30 @@ fe-header.fe-header .mat-toolbar {
   }
 
   .header-progress-bar {
-    height: 1px;
+    height: 2px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     z-index: 999;
 
     .mat-progress-bar-fill::after {
-      background-color: var(--primary-color);
+      background-color: var(--tertiary-color);
     }
     .mat-progress-bar-buffer {
-      background: var(--background-secondary);
+      @include from-xs {
+        background: var(--background-secondary);
+      }
+
+      @include to-xs {
+        background: var(--background-primary);
+      }
     }
   }
 }
 
 .page-container {
   &.scrolled fe-header.fe-header .header-toolbar {
-    height: 60px;
+    height: 65px;
     transition: height 200ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
     background-color: var(--background-primary);
     box-shadow: var(--box-shadow);

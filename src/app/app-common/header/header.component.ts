@@ -1,24 +1,19 @@
-import {Component, Input, OnInit, OnDestroy, AfterViewInit, HostListener} from '@angular/core';
+import { Component, Input, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { delay } from 'rxjs/operators';
 
 import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { SidenavService } from '../../services/sidenav.service';
-import { LoadingService } from '../../services/loading.service';
 
 
 @Component({
   selector: 'fe-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HeaderComponent implements OnInit {
 
   @Input() isMobile: boolean;
   @Input() isTiny: boolean;
-  isLoading: boolean;
-  subscription: Subscription = new Subscription();
 
   @HostListener('window:scroll', [])
   onWindowScroll(event: Event): void {
@@ -32,19 +27,10 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(public router: Router,
               public headerService: HeaderService,
               public authService: AuthService,
-              public sidenavService: SidenavService,
-              private loadingService: LoadingService
+              public sidenavService: SidenavService
   ) {}
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
-    this.subscription.add(this.loadingService.loading$.pipe(delay(0)).subscribe(value => this.isLoading = value));
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 
   goToSubject(): void {
