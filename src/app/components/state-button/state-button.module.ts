@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatRippleModule } from '@angular/material/core';
 
 import { StateButtonComponent } from './state-button.component';
 
@@ -12,7 +13,8 @@ import { LoadingSpinnerModule } from '../loading-spinner/loading-spinner.module'
   exports: [StateButtonComponent],
   imports: [
     CommonModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    MatRippleModule
   ]
 })
 export class StateButtonModule { }
