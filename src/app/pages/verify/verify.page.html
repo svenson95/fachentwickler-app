@@ -14,9 +14,9 @@
           </mat-form-field>
         </div>
         <div class="buttons-wrapper">
-          <fe-button-state type="submit" [isLoading]="isSubmitLoading">Bestätigen</fe-button-state>
+          <fe-state-button type="submit" [isLoading]="isSubmitLoading">Bestätigen</fe-state-button>
           <p>Du hast keine E-Mail erhalten?</p>
-          <fe-button-state type="button" [isLoading]="isResendLoading" (click)="resendVerificationMail()">Nochmal senden</fe-button-state>
+          <fe-state-button type="button" [isLoading]="isResendLoading" (click)="resendVerificationMail()">Nochmal senden</fe-state-button>
         </div>
       </form>
       <div class="verification-succeed-container" *ngIf="verificationSucceed">

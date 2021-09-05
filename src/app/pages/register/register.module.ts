@@ -5,7 +5,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterPage } from './register.page';
-import { ButtonStateModule } from '../../components/button-state/button-state.module';
+import { StateButtonModule } from '../../components/state-button/state-button.module';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ButtonStateModule } from '../../components/button-state/button-state.mo
     ReactiveFormsModule,
     AngularMaterialModule,
     RegisterRoutingModule,
-    ButtonStateModule
+    StateButtonModule
   ]
 })
 export class RegisterPageModule { }

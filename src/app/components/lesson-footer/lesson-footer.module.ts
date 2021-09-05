@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { LessonFooterComponent } from './lesson-footer.component';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-import { ButtonStateModule } from '../button-state/button-state.module';
+import { StateButtonModule } from '../state-button/state-button.module';
 import { PipesModule } from '../../pipes/pipes.module';
 
 
@@ -16,7 +16,7 @@ import { PipesModule } from '../../pipes/pipes.module';
     CommonModule,
     AngularMaterialModule,
     RouterModule,
-    ButtonStateModule,
+    StateButtonModule,
     PipesModule
   ]
 })

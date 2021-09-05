@@ -6,7 +6,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 import { LoginPage } from './login.page';
 import { LoginPageRoutingModule } from './login-routing.module';
 
-import { ButtonStateModule } from '../../components/button-state/button-state.module';
+import { StateButtonModule } from '../../components/state-button/state-button.module';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { ButtonStateModule } from '../../components/button-state/button-state.mo
     ReactiveFormsModule,
     AngularMaterialModule,
     LoginPageRoutingModule,
-    ButtonStateModule
+    StateButtonModule
   ],
   declarations: [LoginPage],
 })

@@ -4,7 +4,7 @@ import { AngularMaterialModule } from '../../../app-common/angular-material.modu
 
 import { DeleteImageDialogComponent } from './delete-image-dialog.component';
 
-import { ButtonStateModule } from '../../button-state/button-state.module';
+import { StateButtonModule } from '../../state-button/state-button.module';
 import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
 
 
@@ -15,7 +15,7 @@ import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module'
   imports: [
     CommonModule,
     AngularMaterialModule,
-    ButtonStateModule,
+    StateButtonModule,
     PaginationBarModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

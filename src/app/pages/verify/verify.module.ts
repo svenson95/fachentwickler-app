@@ -6,7 +6,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 import { VerifyPage } from './verify.page';
 import { VerifyPageRoutingModule } from './verify-routing.module';
 
-import { ButtonStateModule } from '../../components/button-state/button-state.module';
+import { StateButtonModule } from '../../components/state-button/state-button.module';
 import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
     ReactiveFormsModule,
     AngularMaterialModule,
     VerifyPageRoutingModule,
-    ButtonStateModule,
+    StateButtonModule,
     CheckmarkModule
   ],
 })

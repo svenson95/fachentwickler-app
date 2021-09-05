@@ -22,7 +22,7 @@
         <ngx-dropzone-label>{{ f.name }} <br/> {{ f.type }} <br/> {{ formatBytes(f.size) }}</ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
-    <fe-button-state type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)">Hochladen</fe-button-state>
+    <fe-state-button type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)">Hochladen</fe-state-button>
   </form>
   <hr class="fe-divider-line"/>
   <p class="title">Details</p>
@@ -58,10 +58,10 @@
         </p>
       </div>
     </div>
-    <fe-button-state *ngIf="authService.user.role === UserRole.ADMIN" [disabled]="!selectedImage" (click)="deleteImage(selectedImage._id)">
+    <fe-state-button *ngIf="authService.user.role === UserRole.ADMIN" [disabled]="!selectedImage" (click)="deleteImage(selectedImage._id)">
       <span>Bild löschen</span>
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
-    </fe-button-state>
+    </fe-state-button>
   </div>
   <hr class="fe-divider-line"/>
   <div class="title-wrapper">

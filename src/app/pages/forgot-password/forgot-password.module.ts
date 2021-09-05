@@ -6,7 +6,7 @@ import { AngularMaterialModule } from '../../app-common/angular-material.module'
 import { ForgotPasswordPage } from './forgot-password.page';
 import { ForgotPasswordPageRoutingModule } from './forgot-password-routing.module';
 
-import { ButtonStateModule } from '../../components/button-state/button-state.module';
+import { StateButtonModule } from '../../components/state-button/state-button.module';
 
 @NgModule({
   declarations: [ForgotPasswordPage],
@@ -15,7 +15,7 @@ import { ButtonStateModule } from '../../components/button-state/button-state.mo
     ReactiveFormsModule,
     AngularMaterialModule,
     ForgotPasswordPageRoutingModule,
-    ButtonStateModule
+    StateButtonModule
   ],
 })
 export class ForgotPasswordPageModule { }

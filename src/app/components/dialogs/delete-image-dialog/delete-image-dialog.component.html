@@ -3,8 +3,8 @@
 </mat-dialog-content>
 <mat-dialog-actions>
   <button class="fe-text-button close" mat-dialog-close>Nein</button>
-  <fe-button-state [isLoading]="isLoadingDelete" (click)="deleteRequest()">
+  <fe-state-button [isLoading]="isLoadingDelete" (click)="deleteRequest()">
     Ja
     <ion-icon class="delete-icon" name="backspace"></ion-icon>
-  </fe-button-state>
+  </fe-state-button>
 </mat-dialog-actions>

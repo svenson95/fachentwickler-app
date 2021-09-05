@@ -5,7 +5,7 @@ import { AngularMaterialModule } from '../../../app-common/angular-material.modu
 import { ImageManagerDialogComponent } from './image-manager-dialog.component';
 
 import { NgxDropzoneModule } from 'ngx-dropzone';
-import { ButtonStateModule } from '../../button-state/button-state.module';
+import { StateButtonModule } from '../../state-button/state-button.module';
 import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
 import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
 
@@ -18,7 +18,7 @@ import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.modu
     CommonModule,
     AngularMaterialModule,
     NgxDropzoneModule,
-    ButtonStateModule,
+    StateButtonModule,
     PaginationBarModule,
     LoadingSpinnerModule
   ],
