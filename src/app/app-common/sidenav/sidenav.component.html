@@ -1,12 +1,12 @@
-<div class="fe-sidenav-content">
+<div class="sidenav-content">
 
   <div class="section my-class" *ngIf="authService.isAuthenticated">
     <label class="section-title">Meine Klasse</label>
     <mat-nav-list>
-      <div class="fe-nav-item-wrapper" *ngFor="let navItem of myClass">
+      <ng-container *ngFor="let navItem of myClass">
         <fe-nav-link *ngIf="!navItem.url.startsWith('http://')" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
         <fe-nav-link *ngIf="navItem.url.startsWith('http://')" [item]="navItem" [href-link]="navItem.url"></fe-nav-link>
-      </div>
+      </ng-container>
     </mat-nav-list>
   </div>
 

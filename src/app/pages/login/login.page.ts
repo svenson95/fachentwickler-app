@@ -30,11 +30,8 @@ export class LoginPage implements OnInit, OnDestroy {
               private snackBar: MatSnackBar,
               private fb: FormBuilder
   ) {
-    if (authService.isAuthenticated) {
-      this.router.navigate(['dashboard']);
-    }
-
     this.headerService.setPageTitle('Login');
+
     this.initFormGroup();
     this.loadingSubscription = this.loadService.loading$.subscribe(value => {
       this.isLoading = value;
