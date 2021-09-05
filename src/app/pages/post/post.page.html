@@ -14,7 +14,7 @@
     <mat-card-content class="post-content" *ngIf="post !== undefined">
       <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
     </mat-card-content>
-    <p class="fe-post-last-update" *ngIf="post && post.lastUpdate !== undefined">
+    <p class="post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
     </p>
   </mat-card>

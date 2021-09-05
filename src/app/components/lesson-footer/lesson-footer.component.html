@@ -1,5 +1,5 @@
 <mat-card class="fe-card lesson-footer" *ngIf="authService.user !== null">
-  <div class="fe-button-container">
+  <div class="button-container">
     <fe-button-state *ngIf="postId !== undefined" [isLoading]="isLoading && !(postId | alreadyRead)" [disabled]="isLoading || (postId | alreadyRead)" (click)="authService.setLessonSolved(postId)">
       Als gelesen markieren
     </fe-button-state>
