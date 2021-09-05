@@ -1,13 +1,24 @@
 .page.search {
 
-  @include to-md {
-    .search-bar-form-field {
+  .fe-card-description {
+    @include to-md {
+      margin-left: 8px;
+      margin-top: 5px;
+    }
+  }
+
+  .search-bar-form-field {
+    @include to-md {
       border-color: var(--grey-2);
 
       .mat-form-field-flex {
         background: transparent;
         padding: 0;
       }
+    }
+
+    .mat-form-field-wrapper {
+      padding: 0 8px;
     }
   }
 

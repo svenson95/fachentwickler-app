@@ -19,16 +19,14 @@ $searchbar-height: 33px;
     border-bottom: 1px solid var(--secondary-color);
   }
 
-  &.mat-focused {
-    background: var(--button-hover-background);
-  }
-
   .mat-form-field-outline {
     opacity: 1;
     color: var(--grey-3);
   }
 
   .mat-form-field-wrapper {
+    padding-bottom: 0;
+
     .mat-form-field-flex {
       background: transparent;
       padding: 0 1rem;
@@ -37,11 +35,6 @@ $searchbar-height: 33px;
       border-top-left-radius: var(--border-radius);
       border-top-right-radius: var(--border-radius);
       transition: background-color 100ms ease-in-out;
-    }
-
-    .mat-form-field-flex:hover, &.mat-form-field-should-float {
-      background-color: var(--button-hover-background);
-      transition: none;
     }
 
     .mat-form-field-infix {

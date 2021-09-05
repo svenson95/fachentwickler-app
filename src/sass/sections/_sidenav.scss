@@ -42,7 +42,7 @@ mat-sidenav.fe-sidenav.mat-sidenav {
     }
 
     @include to-md {
-      font-size: .9rem;
+      font-size: .8rem;
       min-width: 125px;
     }
 
@@ -84,8 +84,8 @@ mat-sidenav.fe-sidenav.mat-sidenav {
       height: fit-content;
       width: fit-content;
       max-width: 170px;
-      margin-top: 2px;
-      margin-bottom: 2px;
+      margin-top: 3px;
+      margin-bottom: 3px;
 
       font-size: .8rem;
       color: var(--text-color-1);
