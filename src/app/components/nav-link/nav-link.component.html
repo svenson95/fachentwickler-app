@@ -1,0 +1,14 @@
+<a class="fe-nav-link" *ngIf="routerLink" mat-list-item disableRipple
+   [class.active-route]="router.url.startsWith(item.url)"
+   [routerLink]="'/' + item.url"
+>
+  <ion-icon class="nav-item-icon" [icon]="item.icon"></ion-icon>
+  <span [innerHTML]="item.title"></span>
+</a>
+<a class="fe-nav-link" *ngIf="hrefLink" mat-list-item disableRipple
+   [class.active-route]="router.url.startsWith(item.url)"
+   [href]="item.url" target="_blank"
+>
+  <ion-icon class="nav-item-icon" [icon]="item.icon"></ion-icon>
+  <span [innerHTML]="item.title"></span>
+</a>

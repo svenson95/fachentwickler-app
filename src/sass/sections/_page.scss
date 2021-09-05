@@ -39,19 +39,19 @@
   flex: 1 0 auto;
 }
 
+.mat-sidenav-container {
+  @include to-md {
+    margin-top: 60px;
+  }
+}
+
 mat-sidenav.fe-sidenav {
   background: var(--background-secondary);
   overflow-x: hidden;
   border-right: 0;
 
-  @include to-md { top: 70px !important; }
+  @include to-md { top: 80px !important; }
   @include to-xs { top: 60px !important; }
-}
-
-.mat-drawer-container {
-  @include to-md {
-    margin-top: 60px;
-  }
 }
 
 .page-container .page {

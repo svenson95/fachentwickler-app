@@ -3,24 +3,9 @@
   <div class="section my-class" *ngIf="authService.isAuthenticated">
     <label class="section-title">Meine Klasse</label>
     <mat-nav-list>
-      <div class="fe-nav-item-wrapper" *ngFor="let navItem of myClassSection">
-        <a class="fe-nav-item" mat-list-item disableRipple
-           *ngIf="navItem.url.startsWith('http://')"
-           [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
-           [href]="navItem.url"
-           target="_blank"
-        >
-          <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
-          <span [innerHTML]="navItem.title"></span>
-        </a>
-        <a class="fe-nav-item" mat-list-item disableRipple
-           *ngIf="!navItem.url.startsWith('http://')"
-           [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
-           [routerLink]="'/' + navItem.url"
-        >
-          <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
-          <span [innerHTML]="navItem.title"></span>
-        </a>
+      <div class="fe-nav-item-wrapper" *ngFor="let navItem of myClass">
+        <fe-nav-link *ngIf="!navItem.url.startsWith('http://')" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
+        <fe-nav-link *ngIf="navItem.url.startsWith('http://')" [item]="navItem" [href-link]="navItem.url"></fe-nav-link>
       </div>
     </mat-nav-list>
   </div>
@@ -28,44 +13,21 @@
   <div class="section subjects">
     <label class="section-title">Lernfelder</label>
     <mat-nav-list>
-      <a class="fe-nav-item" mat-list-item disableRipple
-         *ngFor="let navItem of subjectsSection"
-         [routerLink]="'/' + navItem.url"
-         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
-      >
-        <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
-        <span [innerHTML]="navItem.title"></span>
-      </a>
+      <fe-nav-link *ngFor="let navItem of subjects" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
     </mat-nav-list>
   </div>
 
   <div class="section study">
     <label class="section-title">Studium</label>
     <mat-nav-list>
-      <a class="fe-nav-item" mat-list-item disableRipple
-         *ngFor="let navItem of studySection"
-         [routerLink]="'/' + navItem.url"
-         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
-         disabled
-      >
-        <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
-        <span [innerHTML]="navItem.title"></span>
-      </a>
+      <fe-nav-link *ngFor="let navItem of study" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
     </mat-nav-list>
   </div>
 
   <div class="section areas">
     <label class="section-title">Bereiche</label>
     <mat-nav-list>
-      <a class="fe-nav-item" mat-list-item disableRipple
-         *ngFor="let navItem of languageSection"
-         [routerLink]="'/' + navItem.url"
-         [ngClass]="{'active-route': router.url.startsWith(navItem.url)}"
-         disabled
-      >
-        <ion-icon class="fe-nav-item-icon" [icon]="navItem.icon"></ion-icon>
-        <span [innerHTML]="navItem.title"></span>
-      </a>
+      <fe-nav-link *ngFor="let navItem of language" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
     </mat-nav-list>
   </div>
 

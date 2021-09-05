@@ -10,12 +10,11 @@ import { study, languages, myClass, subjects } from '../../constants/menu-items'
   templateUrl: './sidenav.component.html'
 })
 export class SidenavComponent {
+  myClass: MenuItem[] = myClass;
+  subjects: MenuItem[] = subjects;
+  study: MenuItem[] = study;
+  language: MenuItem[] = languages;
 
-  subjectsSection: MenuItem[] = subjects;
-  studySection: MenuItem[] = study;
-  languageSection: MenuItem[] = languages;
-  myClassSection: MenuItem[] = myClass;
-
-  constructor(public router: Router, public authService: AuthService) { }
+  constructor(public router: Router, public authService: AuthService) {}
 
 }

@@ -15,6 +15,7 @@ import { DeleteImageDialogModule } from '../../components/dialogs/delete-image-d
 import { SearchFieldModule } from '../../components/search-field/search-field.module';
 import { HeaderMenuModule } from '../../components/header-menu/header-menu.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
+import { NavLinkModule } from '../../components/nav-link/nav-link.module';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     DeleteImageDialogModule,
     SearchFieldModule,
     HeaderMenuModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    NavLinkModule
   ]
 })
 export class PageComponentModule { }

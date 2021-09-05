@@ -1,0 +1,127 @@
+@import 'src/sass/abstracts/mixins';
+@import 'src/sass/abstracts/breakpoints';
+
+.fe-nav-link.mat-list-item {
+  background: transparent;
+  height: fit-content;
+  width: fit-content;
+  max-width: 170px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+  font-size: .8rem;
+  color: var(--text-color-1);
+  letter-spacing: 1px;
+
+  @include from-md {
+    .mat-list-item-content {
+      padding: 0;
+    }
+  }
+
+  @media not all and (min-resolution:.001dpcm){
+    @supports (-webkit-appearance:none) {
+      font-weight: 400;
+    }
+  }
+
+  $nav-link-icon-fade-duration: color 100ms ease-in-out;
+
+  .nav-item-icon {
+    margin-right: 10px;
+    $size: 1.5em;
+    width: $size;
+    height: $size;
+    color: var(--tertiary-color);
+    transition: none;
+    flex-shrink: 0;
+  }
+
+  &:hover, &:focus {
+
+    @include from-md {
+      .nav-item-icon {
+        color: var(--text-color-1);
+        transition: $nav-link-icon-fade-duration;
+      }
+    }
+  }
+
+  &.active-route, &:active {
+    color: var(--secondary-color);
+
+    .nav-item-icon {
+      color: var(--text-color-1);
+    }
+  }
+
+  .mat-list-item-content {
+    @include to-xs {
+      padding: 0 10px;
+    }
+  }
+
+  span {
+    padding: 6px 2px;
+
+    @include from-xs {
+      line-height: 16px;
+    }
+
+    @include to-xs {
+      padding: 7px 2px;
+      line-height: 14px;
+    }
+  }
+
+  $duration: .2s;
+  $distance: 8px;
+  $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
+
+  @include from-md {
+    &:not(.active-route) span {
+      position: relative;
+
+      &:focus,
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        left: 0; right: 0;
+        height: 1px;
+        background-color: rgba(var(--secondary-color-rgb), .8);
+      }
+      &:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+      }
+      &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      color: var(--text-color-1);
+
+      span {
+        &:before,
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(-3px);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+      }
+    }
+  }
+}
