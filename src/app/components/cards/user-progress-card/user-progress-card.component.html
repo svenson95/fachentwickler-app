@@ -5,7 +5,7 @@
     <div class="current-lesson">
       <p class="label">
         <span>Lektion </span>
-        <span>{{ user?.progress?.length || '...' }} </span>
+        <span>{{ user?.progress ? user.progress?.length : '...' }} </span>
         <span>von </span>
         <span>{{ dashboard?.allLessons?.length || '...' }}</span>
       </p>
