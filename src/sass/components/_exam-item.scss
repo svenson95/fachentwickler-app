@@ -87,27 +87,25 @@
         cursor: pointer;
         outline: none;
         margin-top: 4px;
-      }
 
-      .show-lessons-btn:hover span {
-        background: rgba(var(--tertiary-color-rgb), .1);
-      }
+        &:hover span {
+          background: rgba(var(--tertiary-color-rgb), .1);
+        }
 
-      .show-lessons-btn span {
-        font-size: .9em;
-        color: var(--tertiary-color);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-        padding: 3px 10px;
-        flex-shrink: 0;
-        transition: background 100ms ease-out, letter-spacing 200ms ease-out;
-      }
+        span {
+          width: 160px;
+          font-size: .9em;
+          color: var(--tertiary-color);
+          letter-spacing: 1px;
+          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
+          padding: 3px 10px;
+          flex-shrink: 0;
+          transition: background 100ms ease-out;
+        }
 
-      .show-lessons-btn.is-open span {
-        letter-spacing: 2px;
-        border-bottom: 1px solid rgba(var(--grey-4-rgb), .3);
-        transition: letter-spacing 100ms ease-out;
+        &.is-open span {
+          border-bottom: 1px solid rgba(var(--grey-4-rgb), .3);
+        }
       }
     }
 
@@ -160,11 +158,11 @@
 
   .lessons-container {
     padding-top: 10px;
-    margin-left: 55px;
+    margin-left: 30px;
     position: relative;
 
     @include to-xs {
-      margin-left: 35px;
+      margin-left: 20px;
     }
 
     .lesson-wrapper {
@@ -174,29 +172,14 @@
         border: none;
         position: absolute;
         background: var(--exam-background);
-
-        @include from-xs {
-          left: -38px;
-        }
-
-        @include to-xs {
-          left: -27px;
-        }
+        left: -13px;
       }
 
       .horizontal-line {
         height: 1px;
         bottom: 0;
-        left: -35px;
-
-        @include from-xs {
-          width: 35px;
-        }
-
-        @include to-xs {
-          width: 24px;
-          left: -24px;
-        }
+        width: 10px;
+        left: -10px;
       }
 
       .vertical-line {
