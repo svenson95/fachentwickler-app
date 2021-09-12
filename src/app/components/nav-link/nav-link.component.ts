@@ -15,4 +15,8 @@ export class NavLinkComponent {
 
   constructor(public router: Router) { }
 
+  isCurrentRoute(route): boolean {
+    return this.router.url.startsWith(route);
+  }
+
 }

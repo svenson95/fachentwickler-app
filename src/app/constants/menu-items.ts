@@ -1,31 +1,3 @@
-import {
-  bodyOutline,
-  businessOutline,
-  calendarOutline,
-  codeSlashOutline,
-  colorPaletteOutline,
-  desktopOutline,
-  earthOutline,
-  fileTrayFullOutline,
-  flashOutline,
-  folderOutline,
-  gitNetworkOutline,
-  globeOutline,
-  hardwareChipOutline,
-  languageOutline,
-  libraryOutline,
-  mailOutline,
-  pencilOutline,
-  phonePortraitOutline,
-  pieChartOutline,
-  radioOutline,
-  rocketOutline,
-  schoolOutline,
-  serverOutline,
-  swapHorizontalOutline,
-  terminalOutline,
-  todayOutline,
-} from 'ionicons/icons';
 import { MenuItem } from '../models/menu-item';
 
 export const subjects: MenuItem[] = [
@@ -33,67 +5,67 @@ export const subjects: MenuItem[] = [
     title: 'Lernfeld 1',
     shortTitle: 'LF-1',
     url: '/lf-1',
-    icon: earthOutline
+    icon: 'earth-outline'
   },
   {
     title: 'Lernfeld 2',
     shortTitle: 'LF-2',
     url: '/lf-2',
-    icon: businessOutline
+    icon: 'business-outline'
   },
   {
     title: 'Lernfeld 3',
     shortTitle: 'LF-3',
     url: '/lf-3',
-    icon: pieChartOutline,
+    icon: 'pie-chart-outline',
   },
   {
     title: 'Lernfeld 4-1',
     shortTitle: 'LF-4-1',
     url: '/lf-4-1',
-    icon: flashOutline,
+    icon: 'flash-outline',
   },
   {
     title: 'Lernfeld 4-2',
     shortTitle: 'LF-4-2',
     url: '/lf-4-2',
-    icon: hardwareChipOutline,
+    icon: 'hardware-chip-outline',
   },
   {
     title: 'Lernfeld 5',
     shortTitle: 'LF-5',
     url: '/lf-5',
-    icon: languageOutline,
+    icon: 'language-outline',
   },
   {
     title: 'Lernfeld 6',
     shortTitle: 'LF-6',
     url: '/lf-6',
-    icon: codeSlashOutline,
+    icon: 'code-slash-outline',
   },
   {
     title: 'Lernfeld 7-1',
     shortTitle: 'LF-7-1',
     url: '/lf-7-1',
-    icon: gitNetworkOutline,
+    icon: 'git-network-outline',
   },
   {
     title: 'Lernfeld 7-2',
     shortTitle: 'LF-7-2',
     url: '/lf-7-2',
-    icon: radioOutline,
+    icon: 'radio-outline',
   },
   {
     title: 'Lernfeld 8',
     shortTitle: 'LF-8',
     url: '/lf-8',
-    icon: swapHorizontalOutline,
+    icon: 'swap-horizontal-outline',
   },
   {
     title: 'Lernfeld 9',
     shortTitle: 'LF-9',
     url: '/lf-9',
-    icon: globeOutline,
+    icon: 'globe-outline',
   },
   // {
   //   title: 'Lernfeld 10-1',
@@ -117,19 +89,19 @@ export const subjects: MenuItem[] = [
     title: 'Wahlpflicht',
     shortTitle: 'WP',
     url: '/wp',
-    icon: serverOutline,
+    icon: 'server-outline',
   },
   {
     title: 'WiSo',
     shortTitle: 'WiSo',
     url: '/wiso',
-    icon: bodyOutline,
+    icon: 'body-outline',
   },
   {
     title: 'Deutsch',
     shortTitle: 'De',
     url: '/deutsch',
-    icon: pencilOutline,
+    icon: 'pencil-outline',
   },
 ];
 
@@ -138,25 +110,25 @@ export const study: MenuItem[] = [
     title: 'Angewandte Informatik',
     shortTitle: 'Ang. Inf.',
     url: '/angewandte-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   },
   {
     title: 'Technische Informatik',
     shortTitle: 'Tech. Inf.',
     url: '/technische-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   },
   {
     title: 'Praktische Informatik',
     shortTitle: 'Prak. Inf.',
     url: '/praktische-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   },
   {
     title: 'Theoretische Informatik',
     shortTitle: 'Theo. Inf.',
     url: '/theoretische-informatik',
-    icon: libraryOutline,
+    icon: 'library-outline',
   }
 ];
 
@@ -165,37 +137,37 @@ export const languages: MenuItem[] = [
     title: 'Assembler',
     shortTitle: 'assembler',
     url: '/assembler',
-    icon: rocketOutline,
+    icon: 'rocket-outline',
   },
   {
     title: 'Systemsprachen',
     shortTitle: 'System',
     url: '/systemsprachen',
-    icon: terminalOutline,
+    icon: 'terminal-outline',
   },
   {
     title: 'Backend',
     shortTitle: 'Backend',
     url: '/backend',
-    icon: serverOutline,
+    icon: 'server-outline',
   },
   {
     title: 'Frontend',
     shortTitle: 'Frontend',
     url: '/frontend',
-    icon: desktopOutline,
+    icon: 'desktop-outline',
   },
   {
     title: 'App',
     shortTitle: 'App',
     url: '/app',
-    icon: phonePortraitOutline,
+    icon: 'phone-portrait-outline',
   },
   {
     title: 'Skriptsprachen',
     shortTitle: 'Skript',
     url: '/skriptsprachen',
-    icon: colorPaletteOutline,
+    icon: 'color-palette-outline',
   }
 ];
 
@@ -204,37 +176,37 @@ export const myClass: MenuItem[] = [
     title: 'Mitteilungen',
     shortTitle: 'Mitteilungen',
     url: '/mitteilungen',
-    icon: mailOutline,
+    icon: 'mail-outline',
   },
   {
     title: 'Klausuren',
     shortTitle: 'Klausuren',
     url: '/klausuren',
-    icon: schoolOutline,
+    icon: 'school-outline',
   },
   {
     title: 'Lehrplan',
     shortTitle: 'Lehrplan',
     url: '/lehrplan',
-    icon: fileTrayFullOutline,
+    icon: 'file-tray-full-outline',
   },
   {
     title: 'Lehrmaterial',
     shortTitle: 'Lehrmaterial',
     url: '/lehrmaterial',
-    icon: folderOutline,
+    icon: 'folder-outline',
   },
   {
     title: 'Vertretungs<wbr/>plan',
     shortTitle: 'Vertretungs<wbr/>plan',
     url: '/vertretungsplan',
-    icon: todayOutline,
+    icon: 'today-outline',
   },
   {
     title: 'Schuljahresplan',
     shortTitle: 'Schuljahresplan',
     url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/21_22/se-fi_21-22.pdf',
-    icon: calendarOutline,
+    icon: 'calendar-outline',
   }
 ];
 

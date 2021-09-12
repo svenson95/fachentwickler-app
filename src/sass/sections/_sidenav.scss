@@ -28,8 +28,6 @@ mat-sidenav.fe-sidenav.mat-sidenav {
   }
 
   .section.apps {
-    margin-left: 30px;
-
     @include to-md {
       margin-left: 15px;
     }
@@ -73,6 +71,10 @@ mat-sidenav.fe-sidenav.mat-sidenav {
     mat-nav-list.mat-nav-list {
       @include to-md {
         padding-top: 15px;
+      }
+
+      .fe-nav-link.active-route {
+        color: var(--text-color-3);
       }
     }
   }

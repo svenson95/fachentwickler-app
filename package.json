@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "~11.2.8",
     "@angular/router": "~11.2.8",
     "@angular/service-worker": "~11.2.8",
-    "ionicons": "^5.2.3",
     "moment": "^2.29.1",
     "ngx-dropzone": "^3.0.0",
     "ngx-highlightjs": "^4.1.3",
