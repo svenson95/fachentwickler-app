@@ -111,6 +111,8 @@ export class ImageManagerDialogComponent implements OnInit {
       data: { postId: id }
     });
     dialogRef.afterClosed().subscribe(() => {
+      this.selectedImage = undefined;
+      this.selectedImageData = undefined;
       this.getImages();
       this.allImagesLength -= 1;
     });

@@ -2,7 +2,7 @@ mat-dialog-content.fe-image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
   height: 90vh;
-  max-height: 750px;
+  max-height: 770px;
 
   &::-webkit-scrollbar {
     width: var(--scrollbar-width);
@@ -178,6 +178,7 @@ mat-dialog-content.fe-image-manager {
       width: 200px;
       display: flex;
       align-items: center;
+      justify-content: center;
 
       fe-loading-spinner {
         width: 100%;
@@ -196,8 +197,8 @@ mat-dialog-content.fe-image-manager {
     }
 
     .image {
-      width: 180px;
-      height: 100px;
+      max-width: 180px;
+      max-height: 100px;
       object-fit: contain;
       padding: 10px;
       outline: 0 solid transparent;
@@ -212,6 +213,7 @@ mat-dialog-content.fe-image-manager {
         display: inline-block;
         text-align: end;
         margin-right: 10px;
+        font-size: .8rem;
       }
     }
 
