@@ -98,7 +98,7 @@
 
         .hour-subject {
           color: var(--tertiary-color);
-          font-family: Nunito-Bold, sans-serif;
+          font-weight: 600;
 
           @include from-lg {
             min-width: 50px;
@@ -114,12 +114,13 @@
         }
 
         .hour-teacher {
-          font-family: Nunito-Light, sans-serif;
           color: var(--grey-3);
         }
 
         .hour-room,
         .hour-teacher {
+          font-weight: 300;
+
           @include to-md {
             line-height: 14px;
           }

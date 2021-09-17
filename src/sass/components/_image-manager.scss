@@ -30,7 +30,6 @@ mat-dialog-content.fe-image-manager {
     display: flex;
     width: 100%;
     color: var(--grey-4);
-    font-family: Nunito-Light, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
@@ -292,10 +291,6 @@ ngx-dropzone-label.dropzone-labels {
     ion-icon {
       font-size: 1.5em;
       margin-right: 10px;
-    }
-
-    h2, p {
-      font-family: Nunito-Light, sans-serif;
     }
 
     h2 {

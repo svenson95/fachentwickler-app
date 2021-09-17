@@ -1,30 +1,6 @@
 
-@font-face {
-  font-family: 'Nunito-Light';
-  src: url('../../assets/fonts/Nunito-Light.ttf');
-}
-
-@font-face {
-  font-family: 'Nunito-Regular';
-  src: url('../../assets/fonts/Nunito-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Nunito-Bold';
-  src: url('../../assets/fonts/Nunito-Bold.ttf');
-}
-
-body {
-  /* Clean set general font, custom font imported in header */
-  font-size: 26px;
-  font-family: Nunito-Regular, sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
 b, strong {
-  font-family: Nunito-Bold, sans-serif;
-  font-weight: initial; // firefox font-weight too bold without font-weight: initial;
+  font-weight: 600;
 }
 
 u {
@@ -45,10 +21,6 @@ p {
 
 mat-card.fe-card {
   color: var(--text-color-1);
-}
-
-button {
-  font-family: Nunito-Regular, sans-serif;
 }
 
 ul {

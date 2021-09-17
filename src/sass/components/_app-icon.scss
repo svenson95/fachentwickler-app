@@ -1,16 +1,19 @@
 .app-icon .fe-app-name {
   display: inline-block;
   align-self: center;
-
-  color: var(--text-color-1);
-  font-family: Nunito-Light, sans-serif;
-  font-size: .9rem;
-  font-weight: 100;
   text-align: left;
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 14px;
 
   transition: letter-spacing 600ms ease;
   z-index: 1;
+
+  @include to-xs {
+    font-size: .9rem;
+  }
 }
 
 .fe-icon-wrapper {
@@ -27,10 +30,6 @@
 
     g {
       transform: scale(0.04);
-
-      text {
-        font-family: Nunito-regular, sans-serif;
-      }
     }
   }
 

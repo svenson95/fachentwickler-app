@@ -13,9 +13,20 @@
   }
 
   .fe-text-button {
-    padding-top: 4px;
     height: fit-content;
     align-self: center;
+
+    @include from-xs {
+      width: 145px;
+    }
+
+    @include to-xs {
+      width: 130px;
+    }
+
+    &:not(.is-open) {
+      margin-bottom: 20px;
+    }
   }
 
   &.is-open {
@@ -28,32 +39,21 @@
 
   .post-title {
     font-size: 1.5em;
-    font-weight: 600;
-    font-family: Nunito-Light, sans-serif;
     margin-top: 10px;
-
-    @include to-xs {
-      font-size: 1.3em;
-    }
   }
 
   .post-subtitle {
     font-size: 1.3em;
-    font-weight: 600;
-    font-family: Nunito-Light, sans-serif;
     letter-spacing: .5px;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    @include to-xs {
-      font-size: 1.1em;
-    }
   }
 
-  .post-text,
-  .post-hint,
-  .post-list,
-  .post-table {
+  &.text,
+  &.hint,
+  &.list,
+  &.table {
+    font-size: 1.1em;
   }
 
   .post-text {
@@ -178,14 +178,14 @@
       color: var(--text-color-1);
 
       th {
-        font-family: Nunito-Bold, sans-serif;
+        font-weight: 500;
         background: var(--background-secondary);
       }
 
       th, td {
         text-align: left;
         padding: 8px;
-        border: 1px solid var(--grey-1);
+        border: 1px solid var(--grey-2);
       }
 
       .left { text-align: left; }

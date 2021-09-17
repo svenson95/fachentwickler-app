@@ -2,7 +2,7 @@
 .fe-text-button {
   background: transparent;
   color: var(--tertiary-color);
-  font-family: Nunito-Light, sans-serif;
+  font-weight: 500;
   text-decoration: none;
   letter-spacing: 1px;
   padding: 12px 20px 10px;
@@ -25,11 +25,11 @@
   transition: background 100ms ease-in-out;
 
   @include from-xs {
-    font-size: .9rem;
+    font-size: 1rem;
   }
 
   @include to-xs {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 
   &:hover:not(:disabled) {
@@ -39,10 +39,10 @@
 
   &.secondary {
     padding: 4px 10px 2px;
-    font-size: .8em;
+    font-size: .9em;
 
     @include to-xs {
-      font-size: .7em;
+      font-size: .8em;
     }
   }
 

@@ -43,7 +43,6 @@ mat-card.mat-card.fe-card {
 }
 
 p.fe-card-title {
-  font-family: Nunito-Regular, sans-serif;
   letter-spacing: 1.5px;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
@@ -55,8 +54,8 @@ p.fe-card-title {
   }
 
   @include to-xs {
-    font-size: 1.2em;
-    line-height: 20px;
+    font-size: 1.3em;
+    line-height: 18px;
   }
 }
 
@@ -64,7 +63,7 @@ p.fe-card-description {
   display: flex;
   align-items: center;
   font-size: .9rem;
-  font-family: Nunito-Light, sans-serif;
+  font-weight: 300;
   color: var(--grey-3);
   letter-spacing: .5px;
   margin: 0;

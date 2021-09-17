@@ -33,8 +33,8 @@ mat-sidenav.fe-sidenav.mat-sidenav {
     }
 
     .fe-pruefungssimulator-btn {
-      font-family: Nunito-Regular, sans-serif;
       font-size: .9rem;
+      font-weight: 600;
       text-transform: initial;
       padding: 6px 10px 4px;
       color: var(--text-color-1);
@@ -61,7 +61,7 @@ mat-sidenav.fe-sidenav.mat-sidenav {
 
     .section-title {
       color: var(--text-color-1);
-      font-family: Nunito-Light, sans-serif;
+      font-weight: 500;
       padding: 8px 10px 3px;
       letter-spacing: 2px;
       width: fit-content;
