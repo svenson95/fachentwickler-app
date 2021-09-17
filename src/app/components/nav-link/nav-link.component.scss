@@ -38,7 +38,6 @@
   }
 
   &:hover, &:focus {
-
     @include from-md {
       .nav-item-icon {
         color: var(--text-color-1);
@@ -104,10 +103,8 @@
 
     &:focus,
     &:hover {
-      color: var(--text-color-1);
 
       span {
-        &:before,
         &:before,
         &:after {
           opacity: 1;

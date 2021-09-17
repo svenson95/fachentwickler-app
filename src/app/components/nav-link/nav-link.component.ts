@@ -10,6 +10,7 @@ import { MenuItem } from '../../models/menu-item';
 })
 export class NavLinkComponent {
   @Input() item: MenuItem;
+  @Input() disabled: boolean;
   @Input('router-link') routerLink: string;
   @Input('href-link') hrefLink: string;
 

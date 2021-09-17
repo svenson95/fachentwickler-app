@@ -7,6 +7,7 @@
   .menu-btn .label {
     color: var(--text-color-1);
     padding-right: 5px;
+    font-weight: 500;
   }
 
   .menu-btn mat-icon {
@@ -15,17 +16,13 @@
 
   .mat-menu-item {
     &:hover, &:active {
-      background: var(--secondary-color);
-
-      mat-icon {
-        color : var(--background-primary);
-      }
+      background: rgba(var(--tertiary-color-rgb), .25);
     }
   }
 
   .mat-menu-item[disabled] {
     mat-icon {
-      color: var(--secondary-color);
+      color : var(--text-color-3);
     }
 
     .label {

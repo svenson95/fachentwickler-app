@@ -20,14 +20,14 @@
   <div class="section study">
     <label class="section-title">Studium</label>
     <mat-nav-list>
-      <fe-nav-link *ngFor="let navItem of study" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
+      <fe-nav-link *ngFor="let navItem of study" [item]="navItem" [router-link]="navItem.url" [disabled]="true"></fe-nav-link>
     </mat-nav-list>
   </div>
 
   <div class="section areas">
     <label class="section-title">Bereiche</label>
     <mat-nav-list>
-      <fe-nav-link *ngFor="let navItem of language" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
+      <fe-nav-link *ngFor="let navItem of language" [item]="navItem" [router-link]="navItem.url" [disabled]="true"></fe-nav-link>
     </mat-nav-list>
   </div>
 

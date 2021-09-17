@@ -4,19 +4,21 @@ $searchbar-height: 33px;
   height: $searchbar-height;
   width: 200px;
   border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
 
   @include to-lg {
     width: 180px;
   }
 
-  @include from-md {
-    margin-left: 20px;
+  .mat-form-field-underline {
+    display: none;
+
+    &::before {
+      background-color: var(--tertiary-color);
+    }
   }
 
-  &.is-searching {
-    border-bottom: 1px solid var(--secondary-color);
+  &.is-searching .mat-form-field-underline::before {
+    background-color: var(--secondary-color);
   }
 
   .mat-form-field-outline {
@@ -28,13 +30,14 @@ $searchbar-height: 33px;
     padding-bottom: 0;
 
     .mat-form-field-flex {
-      background: transparent;
+      background: var(--background-primary);
       padding: 0 1rem;
       height: $searchbar-height;
       align-items: center;
-      border-top-left-radius: var(--border-radius);
-      border-top-right-radius: var(--border-radius);
-      transition: background-color 100ms ease-in-out;
+
+      @include from-md {
+        border-radius: var(--border-radius);
+      }
     }
 
     .mat-form-field-infix {
@@ -62,10 +65,6 @@ $searchbar-height: 33px;
         color: var(--tertiary-color);
         cursor: pointer;
       }
-    }
-
-    .mat-form-field-underline {
-      display: none;
     }
   }
 }

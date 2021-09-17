@@ -43,7 +43,7 @@
   }
 }
 
-fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-icon-wrapper {
+fe-header.fe-header .mat-toolbar:not(.sidenav--open) .fe-icon-wrapper {
   @include to-xs {
     margin-right: 0;
   }
@@ -54,7 +54,7 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
   flex: 0 0 auto;
 
   @include from-md {
-    width: 200px;
+    width: 190px;
   }
 
   @include to-xs {
@@ -64,7 +64,6 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
   .fe-logo-wrapper {
     display: flex;
     justify-content: left;
-    background: rgba(var(--tertiary-color-rgb), .2);
     font-size: 1em;
     text-decoration: none;
     flex-shrink: 0;
@@ -104,9 +103,9 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
   }
 }
 
-fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-logo-wrapper {
+fe-header.fe-header .mat-toolbar:not(.sidenav--open) .fe-logo-wrapper {
   @include to-xs {
-    background: rgba(var(--tertiary-color-rgb), .1);
+    background: var(--background-primary);
     border-radius: 8px;
     width: fit-content;
     height: 42px;
@@ -122,9 +121,10 @@ fe-header.fe-header .mat-toolbar .header-wrapper:not(.sidenav--open) .fe-logo-wr
   }
 }
 
-fe-header.fe-header .mat-toolbar .header-wrapper.sidenav--open {
+fe-header.fe-header .mat-toolbar.sidenav--open {
   @include to-xs {
     .fe-app-name {
+      color: var(--text-color-1);
       @include logoMoveInLeftAnimation;
     }
   }
