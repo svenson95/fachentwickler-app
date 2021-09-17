@@ -8,6 +8,7 @@ import { SubjectPageRoutingModule } from './subject-routing.module';
 import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 
 
@@ -19,7 +20,8 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     AngularMaterialModule,
     PostLinkModule,
     PostElementModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    PipesModule
   ]
 })
 export class SubjectPageModule { }

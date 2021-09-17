@@ -20,7 +20,7 @@ export class SubjectPage implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription();
   PostType = PostType;
 
-  constructor(private router: Router,
+  constructor(public router: Router,
               private elRef: ElementRef,
               private dataService: DataService,
               private headerService: HeaderService

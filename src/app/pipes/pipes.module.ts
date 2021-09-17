@@ -5,11 +5,25 @@ import { WeekdayStringPipe } from './weekday-string/weekday-string.pipe';
 import { AlreadyReadPipe } from './already-read/already-read.pipe';
 import { SchoolDaysPipe } from './school-days/school-days.pipe';
 import { DaysLeftPipe } from './days-left/days-left.pipe';
+import { SubjectIconPipe } from './subject-icon/subject-icon.pipe';
 
 
 @NgModule({
-  declarations: [LongSubjectNamePipe, WeekdayStringPipe, AlreadyReadPipe, SchoolDaysPipe, DaysLeftPipe],
-  exports: [LongSubjectNamePipe, WeekdayStringPipe, AlreadyReadPipe, SchoolDaysPipe, DaysLeftPipe],
+  declarations: [
+    LongSubjectNamePipe,
+    WeekdayStringPipe,
+    AlreadyReadPipe,
+    SchoolDaysPipe,
+    DaysLeftPipe,
+    SubjectIconPipe
+  ],
+  exports: [
+    LongSubjectNamePipe,
+    WeekdayStringPipe,
+    AlreadyReadPipe,
+    SchoolDaysPipe,
+    DaysLeftPipe,
+    SubjectIconPipe],
   imports: []
 })
 export class PipesModule { }

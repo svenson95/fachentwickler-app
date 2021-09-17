@@ -4,9 +4,18 @@
   }
 
   .topic-description {
-    display: inline-flex;
+    min-height: 120px;
+    display: block;
     flex-flow: wrap;
     margin-bottom: 10px;
+
+    ion-icon {
+      color: var(--background-secondary);
+      height: 100px;
+      width: 100px;
+      float: right;
+      margin-left: 10px;
+    }
 
     > fe-post-element:not(:first-of-type) {
       margin-right: 40px;
@@ -14,8 +23,10 @@
     }
 
     fe-post-element {
+
       p, ul {
         color: var(--text-color-2);
+        font-size: .9rem;
       }
 
       p:first-of-type {
@@ -30,6 +41,10 @@
       .post-list {
         margin-top: 0;
       }
+
+      .fe-post-item.text {
+        display: inline;
+      }
     }
   }
 
@@ -41,7 +56,7 @@
     .fe-topic-title {
       background: rgba(var(--grey-1-rgb), .6);
       padding: 10px 12px;
-      font-family: Nunito-Bold, sans-serif;
+      font-weight: 600;
       line-height: 20px;
       border-radius: var(--border-radius);
 

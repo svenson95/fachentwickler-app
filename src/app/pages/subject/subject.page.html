@@ -4,6 +4,7 @@
     <fe-loading-spinner *ngIf="subject === undefined"></fe-loading-spinner>
     <mat-card-content *ngIf="subject !== undefined">
       <div class="topic-description" *ngIf="subject.description !== undefined">
+        <ion-icon [name]="router.url | subjectIcon" alt="test"></ion-icon>
         <fe-post-element *ngFor="let el of subject.description" [element]="el"></fe-post-element>
       </div>
       <div class="fe-topic" *ngFor="let topic of subject.topics">
