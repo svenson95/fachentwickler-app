@@ -34,11 +34,6 @@
         .value {
           border-left: 1px solid var(--grey-1);
           outline: none;
-
-          &:hover {
-            color: var(--primary-color);
-            text-decoration-color: var(--primary-color);
-          }
         }
       }
     }

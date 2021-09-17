@@ -1,6 +1,6 @@
 <div class="fe-post-item" [ngSwitch]="element.type" [ngClass]="element.type" [class.answer]="element.hidden">
   <!-- SHOW ANSWER BUTTON -->
-  <button class="fe-text-button secondary" *ngIf="element.hidden" (click)="isVisible = !isVisible" [class.is-open]="isVisible">
+  <button class="fe-text-button secondary" *ngIf="element.hidden" (click)="isVisible = !isVisible" [class.is-open]="isVisible" matRipple>
     {{isVisible ? 'Ausblenden' : 'Lösung anzeigen'}}
   </button>
   <!-- TITLE -->

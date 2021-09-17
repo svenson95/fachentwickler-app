@@ -49,13 +49,6 @@
     margin-bottom: 20px;
   }
 
-  &.text,
-  &.hint,
-  &.list,
-  &.table {
-    font-size: 1.1em;
-  }
-
   .post-text {
     margin-top: 12px;
     margin-bottom: 12px;
@@ -174,6 +167,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
 
+    @include to-xs {
+      font-size: .9rem;
+    }
+
     .table-row {
       color: var(--text-color-1);
 
@@ -186,6 +183,10 @@
         text-align: left;
         padding: 8px;
         border: 1px solid var(--grey-2);
+
+        @include to-xs {
+          font-size: .7rem;
+        }
       }
 
       .left { text-align: left; }

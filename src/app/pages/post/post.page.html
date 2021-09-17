@@ -7,8 +7,8 @@
       {{post.title}}
     </p>
     <p class="fe-card-description" *ngIf="post !== undefined">
-      {{post.description}}
       <fe-post-badge [post]="post"></fe-post-badge>
+      <span>vom {{ post.lessonDate | date: 'MM.dd.yyyy' }}</span>
     </p>
     <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
     <mat-card-content class="post-content" *ngIf="post !== undefined">
