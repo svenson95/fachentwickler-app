@@ -18,6 +18,10 @@
 
       .fe-year-toggle {
         margin-left: 20px;
+
+        .mat-button-toggle + .mat-button-toggle {
+          border-left: solid 1px rgba(var(--tertiary-color-rgb), .2);
+        }
       }
 
       .fe-card-title {
@@ -28,12 +32,10 @@
 
   mat-button-toggle-group {
     border-radius: var(--border-radius);
-    border: none;
     border-color: rgba(var(--tertiary-color-rgb), .2);
-    background-color: var(--background-primary);
 
     mat-button-toggle {
-      background-color: rgba(var(--tertiary-color-rgb), .2);
+      background-color: transparent;
       color: var(--text-color-1);
     }
 
@@ -42,8 +44,7 @@
     }
 
     .mat-button-toggle-checked {
-      background-color: var(--tertiary-color);
-      color: var(--background-primary);
+      background-color: rgba(var(--secondary-color-rgb), .15);
       font-weight: 700;
     }
   }

@@ -2,10 +2,9 @@
 .fe-text-button {
   background: transparent;
   color: var(--tertiary-color);
-  font-weight: 500;
   text-decoration: none;
   letter-spacing: 1px;
-  padding: 12px 20px 10px;
+  padding: 8px 12px 6px;
 
   //.unselectable
   -webkit-touch-callout: none;
@@ -25,7 +24,7 @@
   transition: background 100ms ease-in-out;
 
   @include from-xs {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   @include to-xs {

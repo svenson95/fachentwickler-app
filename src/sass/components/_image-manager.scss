@@ -160,8 +160,6 @@ mat-dialog-content.fe-image-manager {
 
 .image-manager-modal.cdk-overlay-pane {
   width: 80vw;
-
-  @include moveInTopAnimation;
 }
 
 .image-preview {

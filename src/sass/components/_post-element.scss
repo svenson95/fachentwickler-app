@@ -17,7 +17,7 @@
     align-self: center;
 
     @include from-xs {
-      width: 145px;
+      width: 140px;
     }
 
     @include to-xs {
@@ -38,15 +38,23 @@
   }
 
   .post-title {
-    font-size: 1.5em;
+    font-size: 1.3rem;
     margin-top: 10px;
+
+    @include to-xs {
+      font-size: 1.15rem;
+    }
   }
 
   .post-subtitle {
-    font-size: 1.3em;
+    font-size: 1.2rem;
     letter-spacing: .5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include to-xs {
+      font-size: 1.05rem;
+    }
   }
 
   .post-text {
@@ -228,6 +236,28 @@
       &::-webkit-scrollbar-thumb {
         background: var(--tertiary-color);
         border-radius: 0;
+      }
+
+      .dark, .light {
+        .hljs-title {
+          color: #5491fe;
+        }
+      }
+
+      .light {
+        .hljs-keyword {
+          color: #9f00a9;
+        }
+      }
+
+      .dark {
+        .hljs-keyword {
+          color: #f000ff;
+        }
+
+        .hljs-title {
+          color: #5491fe;
+        }
       }
     }
   }

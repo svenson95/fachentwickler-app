@@ -28,9 +28,7 @@ mat-sidenav.fe-sidenav.mat-sidenav {
   }
 
   .section.apps {
-    @include to-md {
-      margin-left: 15px;
-    }
+    text-align: center;
 
     .fe-pruefungssimulator-btn {
       font-size: .9rem;
@@ -59,12 +57,14 @@ mat-sidenav.fe-sidenav.mat-sidenav {
     }
 
     .section-title {
-      color: var(--text-color-1);
-      font-weight: 500;
-      padding: 8px 10px 3px;
+      color: var(--text-color-3);
+      font-weight: 300;
+      text-transform: uppercase;
       letter-spacing: 2px;
+
       width: fit-content;
       border-bottom: 1px solid var(--primary-color);
+      padding: 8px 10px 3px;
     }
 
     mat-nav-list.mat-nav-list {

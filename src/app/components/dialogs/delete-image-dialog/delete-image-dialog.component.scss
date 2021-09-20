@@ -2,8 +2,6 @@
 @import 'src/sass/abstracts/mixins';
 
 ::ng-deep .delete-image-modal.cdk-overlay-pane {
-  @include moveInTopAnimation;
-
   .fe-text-button {
     span {
       display: flex;

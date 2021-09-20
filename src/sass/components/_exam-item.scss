@@ -18,6 +18,10 @@
       padding: 10px 10px 10px 25px;
       margin-left: -30px;
 
+      @include from-lg {
+        align-self: end;
+      }
+
       @include to-lg {
         padding: 10px 10px 10px 25px;
       }
@@ -30,17 +34,6 @@
         width: $size;
         height: $size;
         margin-right: 8px;
-
-        @include from-xs {
-        }
-
-        @include to-xs {
-          $size: 36px;
-          font-size: $size;
-          width: $size;
-          height: $size;
-          align-self: flex-start;
-        }
       }
     }
 
@@ -101,11 +94,11 @@
           transition: background 100ms ease-out;
 
           @include from-xs {
-            width: 175px;
+            width: 172px;
           }
 
           @include to-xs {
-            width: 165px;
+            width: 162px;
             font-size: .9em;
           }
         }
@@ -117,6 +110,7 @@
     }
 
     .exam-title-wrapper {
+      width: 100%;
 
       .exam-subject {
         color: var(--grey-4);
