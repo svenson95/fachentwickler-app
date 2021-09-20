@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, HostListener } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { HeaderService } from '../../services/header.service';
@@ -14,15 +14,6 @@ export class HeaderComponent implements OnInit {
 
   @Input() isMobile: boolean;
   @Input() isTiny: boolean;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll(event: Event): void {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-      document.getElementById('header-toolbar').classList.add('scrolled');
-    } else {
-      document.getElementById('header-toolbar').classList.remove('scrolled');
-    }
-  }
 
   constructor(public router: Router,
               public headerService: HeaderService,
