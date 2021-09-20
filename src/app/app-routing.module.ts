@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route, PreloadAllModules } from '@angular/router';
 
-import { AuthGuardService } from './services/auth/auth-guard.service';
-import { NotAuthGuardService } from './services/auth/not-auth-guard.service';
-import { VerifyGuardService } from './services/auth/verify-guard.service';
+import { AuthGuardService } from './services/guards/auth-guard.service';
+import { NotAuthGuardService } from './services/guards/not-auth-guard.service';
+import { VerifyGuardService } from './services/guards/verify-guard.service';
 import { subjects } from './constants/menu-items';
 
 /* tslint:disable: max-line-length */
