@@ -3,14 +3,10 @@ import { delay } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 
 import { SchoolWeek } from '../../models/school-week';
+import { SchoolYear } from '../../models/school-year';
 import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
 import { LoadingService } from '../../services/loading.service';
-
-interface SchoolYear {
-  year: number;
-  weeks: SchoolWeek[];
-}
 
 @Component({
   selector: 'fe-curriculum-page',
@@ -31,9 +27,8 @@ export class CurriculumPage implements OnInit, OnDestroy {
               private loadingService: LoadingService,
               private elementRef: ElementRef
   ) {
-    this.allWeeks = Array.from(Array(this.dataService.currentSchoolWeek + 1).keys());
-    this.allWeeks.shift();      // remove school-week 0
     this.headerService.setPageTitle('Lehrplan');
+    this.initAllWeeks();
   }
 
   ngOnInit(): void {
@@ -47,11 +42,16 @@ export class CurriculumPage implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  initAllWeeks(): void {
+    this.allWeeks = Array.from(Array(this.dataService.currentSchoolWeek + 1).keys());
+    this.allWeeks.shift(); // remove school-week 0
+  }
+
   initSchoolYears(schoolWeeks: SchoolWeek[]): SchoolYear[] {
     const schoolYears = [
-      { year: 1, weeks: [] },
-      { year: 2, weeks: [] },
-      { year: 3, weeks: [] }
+      new SchoolYear(1),
+      new SchoolYear(2),
+      new SchoolYear(3)
     ];
 
     schoolWeeks.forEach(week => {
@@ -66,15 +66,15 @@ export class CurriculumPage implements OnInit, OnDestroy {
     return schoolYears;
   }
 
-  toNumber(stringNumber): number {
-    return Number(stringNumber);
-  }
-
-  changeWeek(week): void {
+  onWeekChange(week): void {
     this.elementRef.nativeElement.querySelector('.week-' + week).scrollIntoView({
       behavior: 'auto',
       block: 'start'
     });
+  }
+
+  onYearChange(): void {
+    this.selectedWeek = Number(this.schoolYears[this.selectedYear].weeks[0].schoolWeek);
   }
 
   onScroll(): void {
@@ -86,7 +86,7 @@ export class CurriculumPage implements OnInit, OnDestroy {
     });
   }
 
-  isVisible = (el) => {
+  private isVisible = (el) => {
     const { bottom, height, top } = el.getBoundingClientRect();
     const weeksContainer = document.querySelector('.weeks-container');
     const containerRect = weeksContainer.getBoundingClientRect();
@@ -94,9 +94,5 @@ export class CurriculumPage implements OnInit, OnDestroy {
     return top <= containerRect.top
         ? (containerRect.top - top <= height)
         : (bottom - containerRect.bottom <= height);
-  }
-
-  setInitialWeek(): void {
-    this.selectedWeek = Number(this.schoolYears[this.selectedYear].weeks[0].schoolWeek);
   }
 }

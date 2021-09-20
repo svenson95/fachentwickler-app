@@ -4,7 +4,7 @@
       <div class="fe-title-description-wrapper">
         <p class="fe-card-title">Schuljahr</p>
       </div>
-      <mat-button-toggle-group class="fe-year-toggle" [(ngModel)]="selectedYear" aria-label="School Year" (ngModelChange)="setInitialWeek()">
+      <mat-button-toggle-group class="fe-year-toggle" [(ngModel)]="selectedYear" aria-label="School Year" (ngModelChange)="onYearChange()">
         <mat-button-toggle [value]="0">1</mat-button-toggle>
         <mat-button-toggle [value]="1">2</mat-button-toggle>
         <mat-button-toggle [value]="2" disabled>3</mat-button-toggle>
@@ -13,8 +13,8 @@
   </mat-card>
   <div class="week-cards-wrapper" *ngIf="schoolYears !== undefined">
     <mat-card class="fe-card week-toggle-card">
-      <mat-button-toggle-group class="fe-week-toggle" [(ngModel)]="selectedWeek" aria-label="School Week" (ngModelChange)="changeWeek(selectedWeek)">
-        <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="toNumber(week.schoolWeek)">
+      <mat-button-toggle-group class="fe-week-toggle" [(ngModel)]="selectedWeek" aria-label="School Week" (ngModelChange)="onWeekChange(selectedWeek)">
+        <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="week.schoolWeek">
           {{week.schoolWeek}}
         </mat-button-toggle>
       </mat-button-toggle-group>
