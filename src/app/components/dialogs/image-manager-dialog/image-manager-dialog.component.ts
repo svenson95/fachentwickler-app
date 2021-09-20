@@ -110,11 +110,13 @@ export class ImageManagerDialogComponent implements OnInit {
       autoFocus: false,
       data: { postId: id }
     });
-    dialogRef.afterClosed().subscribe(() => {
-      this.selectedImage = undefined;
-      this.selectedImageData = undefined;
-      this.getImages();
-      this.allImagesLength -= 1;
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.selectedImage = undefined;
+        this.selectedImageData = undefined;
+        this.getImages();
+        this.allImagesLength -= 1;
+      }
     });
   }
 

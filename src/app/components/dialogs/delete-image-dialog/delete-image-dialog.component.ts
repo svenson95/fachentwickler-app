@@ -41,7 +41,7 @@ export class DeleteImageDialogComponent implements OnInit {
         });
       }, () => {
         this.isLoadingDelete = undefined;
-        this.dialogRef.close();
+        this.dialogRef.close(true);
       }
     );
   }
