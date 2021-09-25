@@ -18,9 +18,7 @@
       <div class="header-elements-wrapper">
         <fe-search-field *ngIf="!isMobile"></fe-search-field>
         <div class="button-container">
-          <button class="rounded-btn sidenav-btn" (click)="sidenavService.toggle()" *ngIf="isMobile" [class.is-active]="sidenavService.isOpen()" matRipple>
-            <mat-icon>menu</mat-icon>
-          </button>
+          <fe-hamburger-icon class="sidenav-btn" [isOpen]="sidenavService.isOpen()" (click)="sidenavService.toggle()" *ngIf="isMobile"></fe-hamburger-icon>
           <a class="fe-text-button dashboard-btn" matRipple [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'" [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')">
             <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
           </a>

@@ -16,12 +16,14 @@ import { SearchFieldModule } from '../../components/search-field/search-field.mo
 import { HeaderMenuModule } from '../../components/header-menu/header-menu.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 import { NavLinkModule } from '../../components/nav-link/nav-link.module';
+import { HamburgerIconComponent } from '../hamburger-icon/hamburger-icon.component';
 
 
 @NgModule({
   declarations: [
     PageComponent,
     HeaderComponent,
+    HamburgerIconComponent,
     SidenavComponent,
     ContentComponent,
     AppIconComponent,

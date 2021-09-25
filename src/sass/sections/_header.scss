@@ -163,23 +163,21 @@ fe-header.fe-header .mat-toolbar {
           }
 
           .sidenav-btn {
-            margin-top: 0;
-
             @include from-xs {
-              margin-right: 15px;
+              margin-right: 12px;
             }
 
             @include to-xs {
-              margin-right: 5px;
+              margin-right: 10px;
             }
           }
 
           .dashboard-btn {
+            font-size: .9rem;
+            border-bottom: 1px solid rgba(255,255,255, .4);
             padding: 8px 14px 6px;
             margin-left: 10px;
             margin-right: 10px;
-
-            font-size: .9rem;
 
             &.active-route {
               border-color: var(--secondary-color);
