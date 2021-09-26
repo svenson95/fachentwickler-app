@@ -133,11 +133,11 @@ const routes: Routes = [
   {
     path: ':subject/:topic/:title/matching',
     loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('src/app/pages/not-found/not-found.module').then(m => m.NotFoundPageModule)
   }
-  // {
-  //   path: '**',
-  //   redirectTo: '/login'
-  // }
 ];
 
 @NgModule({
