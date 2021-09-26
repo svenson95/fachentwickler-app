@@ -19,69 +19,7 @@ const subjectsPaths = (): Array<Route> => {
   return subjectPaths;
 };
 
-const postPaths = (): Array<Route> => {
-  const posts: Route[] = [];
-  subjects.forEach(sub => {
-    posts.push({
-      path: sub.url.substr(1) + '/:topic/:post',
-      loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostPageModule)
-    });
-  });
-  return posts;
-};
-
-const editPostPaths = (): Array<Route> => {
-  const posts: Route[] = [];
-  subjects.forEach(sub => {
-    posts.push({
-      path: sub.url.substr(1) + '/:topic/:post/edit',
-      loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostPageModule),
-      canActivate: [AuthGuardService]
-    });
-  });
-  return posts;
-};
-
-const indexCardsPaths = (): Array<Route> => {
-  const indexCards: Route[] = [];
-  subjects.forEach(sub => {
-    indexCards.push({
-      path: sub.url.substr(1) + '/:topic/:title/karteikarten',
-      loadChildren: () => import('src/app/pages/index-card/index-card.module').then(m => m.IndexCardPageModule)
-    });
-  });
-  return indexCards;
-};
-
-const quizPaths = (): Array<Route> => {
-  const quizzes: Route[] = [];
-  subjects.forEach(sub => {
-    quizzes.push({
-      path: sub.url.substr(1) + '/:topic/:title/quiz',
-      loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizPageModule)
-    });
-  });
-  return quizzes;
-};
-
-const matchingPaths = (): Array<Route> => {
-  const matchings: Route[] = [];
-  subjects.forEach(sub => {
-    matchings.push({
-      path: sub.url.substr(1) + '/:topic/:title/matching',
-      loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingPageModule)
-    });
-  });
-  return matchings;
-};
-
 const routes: Routes = [
-  ...subjectsPaths(),
-  ...postPaths(),
-  ...editPostPaths(),
-  ...indexCardsPaths(),
-  ...quizPaths(),
-  ...matchingPaths(),
   {
     path: '',
     loadChildren: () => import('src/app/pages/landing/landing.module').then(m => m.LandingPageModule),
@@ -174,6 +112,28 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () => import('src/app/pages/search/search.module').then(m => m.SearchPageModule)
   },
+  ...subjectsPaths(),
+  {
+    path: ':subject/:topic/:post',
+    loadChildren: () => import('src/app/pages/post/post.module').then(m => m.PostPageModule)
+  },
+  {
+    path: ':subject/:topic/:post/edit',
+    loadChildren: () => import('src/app/pages/edit-post/edit-post.module').then(m => m.EditPostPageModule),
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: ':subject/:topic/:title/karteikarten',
+    loadChildren: () => import('src/app/pages/index-card/index-card.module').then(m => m.IndexCardPageModule)
+  },
+  {
+    path: ':subject/:topic/:title/quiz',
+    loadChildren: () => import('src/app/pages/quiz/quiz.module').then(m => m.QuizPageModule)
+  },
+  {
+    path: ':subject/:topic/:title/matching',
+    loadChildren: () => import('src/app/pages/matching/matching.module').then(m => m.MatchingPageModule)
+  }
   // {
   //   path: '**',
   //   redirectTo: '/login'
