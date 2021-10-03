@@ -8,14 +8,14 @@
   --secondary-color-light: #f4ac3178;
   --tertiary-color: #94aac5;
   --tertiary-color-rgb: 148, 170, 197;
-  --tertiary-color-light: #b2c8e2;
+  --tertiary-color-dark: #7a8fa8;
   --error-default: #f44336;
 
   --border-radius: 4px;
   --progressbar-height: 2px;
   --scrollbar-width: 4px;
   --max-width: 1200px;
-  --button-hover-background: rgba(var(--tertiary-color-rgb), .1);
+  --button-hover-background: rgba(var(--tertiary-color-rgb), .05);
 
   --font-normal: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }

@@ -18,8 +18,8 @@
       <p class="exam-title">{{exam.title}}</p>
     </div>
   </div>
-  <div class="lessons-container" *ngIf="lessonsVisible">
-    <div class="lesson-wrapper" *ngFor="let lesson of examLessons; let i = index;">
+  <div class="post-links-container" *ngIf="lessonsVisible">
+    <div class="post-link-wrapper" *ngFor="let lesson of examLessons; let i = index;">
       <hr class="horizontal-line">
       <hr class="vertical-line">
       <fe-post-link [post]="lesson"></fe-post-link>

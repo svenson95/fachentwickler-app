@@ -1,15 +1,13 @@
-<div class="fe-post-link-wrapper" *ngIf="post !== undefined">
-  <a class="post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url"
-     [ngClass]="{ isCompleted: post._id | alreadyRead }" matRipple>
-    <div class="title-wrapper">
-      <p class="title" [ngClass]="{exam: post.url?.includes('test')}">
-        {{post.title}}
-      </p>
-    </div>
-    <div class="description-wrapper">
-      <p class="description">{{post.lessonDate | date: 'dd.MM.yyyy'}}</p>
-      <fe-post-badge [post]="post"></fe-post-badge>
-    </div>
-  </a>
-  <p class="label" [innerHTML]="title" *ngIf="title"></p>
-</div>
+<a class="post-link" [routerLink]="'/' + (post.subject ? post.subject : router.url) + '/' + post.url"
+   [ngClass]="{ isCompleted: post._id | alreadyRead }" matRipple>
+  <div class="title-wrapper">
+    <p class="title" [ngClass]="{exam: post.url?.includes('test')}">
+      {{post.title}}
+    </p>
+  </div>
+  <div class="description-wrapper">
+    <p class="description">{{post.lessonDate | date: 'dd.MM.yyyy'}}</p>
+    <fe-post-badge [post]="post"></fe-post-badge>
+  </div>
+</a>
+<p class="label" [innerHTML]="title" *ngIf="title"></p>

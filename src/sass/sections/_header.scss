@@ -70,7 +70,7 @@ fe-header.fe-header .mat-toolbar {
   .header-wrapper {
     display: flex;
     width: 100%;
-    max-width: calc(200px + var(--max-width));
+    max-width: calc(190px + var(--max-width));
     justify-content: space-between;
 
     .page-title .title,
@@ -179,6 +179,10 @@ fe-header.fe-header .mat-toolbar {
             margin-left: 10px;
             margin-right: 10px;
 
+            &:hover {
+              background: rgba(240,240,240, .1);
+            }
+
             &.active-route {
               border-color: var(--secondary-color);
 
@@ -211,8 +215,8 @@ fe-header.fe-header .mat-toolbar {
             transition: background-color 100ms ease-in-out;
 
             @include from-xs {
-              &:hover {
-                background-color: var(--button-hover-background);
+              &:hover, &.is-active {
+                background: rgba(240,240,240, .1);
                 transition: none;
               }
             }

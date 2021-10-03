@@ -1,0 +1,67 @@
+@import 'src/sass/abstracts/breakpoints';
+@import 'src/sass/abstracts/mixins';
+
+:host {
+  margin-right: 6px;
+
+  @include to-md {
+    margin-right: 0;
+    margin-top: 2px;
+  }
+
+  p.label {
+    align-items: center;
+    width: fit-content;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    border-radius: 4px;
+
+    font-weight: 300;
+    font-size: .7em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    @include to-md {
+      padding: 0 8px;
+      float: right;
+    }
+
+    @include to-xs {
+      font-size: .65em;
+    }
+
+    @include to-tiny {
+      font-size: .5rem;
+      line-height: 15px;
+    }
+
+    @include from-md {
+      padding: 0 8px;
+    }
+
+    &.article {
+      background-color: rgba(var(--tertiary-color-rgb), .15);
+      color: var(--tertiary-color);
+    }
+    &.tasks {
+      background-color: rgba(var(--grey-4-rgb), .15);
+      color: var(--grey-4);
+    }
+    &.index-cards {
+      background-color: rgba(var(--secondary-color-rgb), .15);
+      color: var(--secondary-color);
+    }
+    &.quiz {
+      background-color: rgba(var(--primary-color-rgb), .15);
+      color: var(--primary-color);
+    }
+    &.matching {
+      background-color: rgba(limegreen, .15);
+      color: limegreen;
+    }
+    &.test {
+      background: rgba(var(--tertiary-color-rgb), .8);
+      color: var(--background-primary);
+    }
+  }
+}

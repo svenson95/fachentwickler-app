@@ -1,4 +1,4 @@
-<div class="fe-badge unselectable" [ngClass]="{
+<p class="label unselectable" [ngClass]="{
                 'article': post?.type === PostType.ARTICLE,
                 'tasks': post?.type === PostType.TASKS,
                 'index-cards': post?.type === PostType.INDEX_CARDS,
@@ -7,4 +7,4 @@
                 'test': post?.type === PostType.TEST
               }">
   {{badgeTranslator(post?.type)}}
-</div>
+</p>

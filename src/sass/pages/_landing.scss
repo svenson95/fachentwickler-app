@@ -372,13 +372,13 @@
 .row.first {
   .weekday-group {
     .weekday-item:nth-child(1), .weekday-item:nth-child(2) {
-      .fe-post-link-wrapper .post-link {
+      fe-post-link .post-link {
         border-right: 2px solid var(--secondary-color);
       }
     }
 
     .weekday-item:nth-child(3), .weekday-item:nth-child(4) {
-      .fe-post-link-wrapper .post-link {
+      fe-post-link .post-link {
         border-right: 2px solid var(--tertiary-color);
       }
     }

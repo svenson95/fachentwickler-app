@@ -6,6 +6,7 @@ import { Post } from '../../models/post';
 @Component({
   selector: 'fe-post-link',
   templateUrl: './post-link.component.html',
+  styleUrls: ['./post-link.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostLinkComponent implements OnInit {

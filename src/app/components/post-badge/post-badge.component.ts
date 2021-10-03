@@ -6,6 +6,7 @@ import { Post } from '../../models/post';
 @Component({
   selector: 'fe-post-badge',
   templateUrl: './post-badge.component.html',
+  styleUrls: ['./post-badge.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostBadgeComponent implements OnInit {

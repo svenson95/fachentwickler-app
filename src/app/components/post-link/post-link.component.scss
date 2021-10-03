@@ -1,4 +1,7 @@
-.fe-post-link-wrapper {
+@import 'src/sass/abstracts/breakpoints';
+@import 'src/sass/abstracts/mixins';
+
+:host {
   display: flex;
   flex-direction: row-reverse;
   padding: 0;
@@ -131,13 +134,6 @@
 
         @include from-lg {
           padding: 0 5px;
-        }
-      }
-
-      .fe-badge {
-        @include to-lg {
-          margin-top: 3px;
-          margin-right: 0;
         }
       }
     }
