@@ -523,15 +523,15 @@ export const LF8_POSTS: PostArticle[] = [
         ]
     },
     {
-        "url": "markt_und_kundenbeziehungen/preispolitk",
+        "url": "markt_und_kundenbeziehungen/preispolitk_1",
         "_id": "60aa84d96f1e34465948184b",
         "topicId": "60568ab607c61731b8d162ef",
-        "title": "Preispolitk",
+        "title": "Preispolitik (1)",
         "description": "Mitschrift vom 20.05.2021",
         "subject": "lf-8",
         "type": "article",
         "lessonDate": "2021-05-20",
-        "lastUpdate": "2021-05-26",
+        "lastUpdate": "2021-08-09",
         "schoolWeek": "25",
         "elements": [
             {
@@ -714,6 +714,39 @@ export const LF8_POSTS: PostArticle[] = [
                 "type": "text",
                 "hidden": true,
                 "content": "..."
+            }
+        ]
+    },
+    {
+        "url": "markt_und_kundenbeziehungen/preispolitk_2",
+        "_id": "6110ee6ed9a255605b45f1b5",
+        "topicId": "60568ab607c61731b8d162ef",
+        "title": "Preispolitik (2)",
+        "description": "Mitschrift vom 10.06.2021",
+        "subject": "lf-8",
+        "type": "article",
+        "lessonDate": "2021-06-10",
+        "lastUpdate": "2021-08-09",
+        "schoolWeek": "26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Marketing » Marketingmix » Preispolitik | 26.05.2021 | <a href='https://bwl-wissen.net/definition/preispolitik' target=\"_blank\" rel=\"noopener noreferrer\">https://bwl-wissen.net/definition/preispolitik</a>"
+                ]
             }
         ]
     },

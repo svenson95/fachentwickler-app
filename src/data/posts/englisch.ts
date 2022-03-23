@@ -6,7 +6,7 @@ const ENGLISH_POSTS: PostArticle[] = [
         "url": "basics/introductions",
         "title": "Introductions",
         "description": "Aufgabe vom 02.09.2019",
-        "subject": "englisch",
+        "subject": "lf-5",
         "type": "tasks",
         "lessonDate": "2019-09-02",
         "lastUpdate": "2020-06-14",
@@ -94,13 +94,15 @@ const ENGLISH_POSTS: PostArticle[] = [
         ]
     },
     {
-        "url": "basics/short_presentation_mariadb_mongodb_difference_between_sql_and_nosql",
+        "url": "fachliches_englisch/short_presentation_mariadb_mongodb_difference_between_sql_and_nosql",
+        "_id": "5fa416f62821ae28382ab27a",
+        "topicId": "6056973007c61731b8d162f5",
         "title": "Short-Presentation - MariaDB / MongoDB, Difference between SQL and NoSQL",
         "description": "Aufgabe 29.10.2020",
-        "subject": "englisch",
+        "subject": "lf-5",
         "type": "tasks",
         "lessonDate": "2020-10-29",
-        "lastUpdate": "2020-12-15",
+        "lastUpdate": "2021-09-17",
         "schoolWeek": "17",
         "elements": [
             {
@@ -129,7 +131,7 @@ const ENGLISH_POSTS: PostArticle[] = [
             },
             {
                 "type": "text",
-                "content": "<u>MariaDB is an SQL table based database system</u>. SQL (engl. <i>Structured Query Language</i>) is the standard language for dealing with relational databases. Relational values have connections to other values in different tables. Database systems like MariaDB are effectively used to interact with database values / objects - basically for insert, search, update or delete database objects. But can do even more like optimizing or providing convenient methods. SQL databases consists of multiple tables, a table has <b>columns</b> which represent the attributes and <b>rows</b> for each value."
+                "content": "<u>MariaDB is an SQL table based database system</u>. SQL (engl. <i>Structured Query Language</i>) is a very common language for dealing with relational databases. Relational values have connections to other values in different tables. Database systems like MariaDB are effectively used to interact with database values / objects - basically for insert, search, update or delete database objects. But can do even more like optimizing or providing convenient methods. SQL databases consists of multiple tables, a table has <b>columns</b> which represent the attributes and <b>rows</b> for each value."
             },
             {
                 "type": "table",

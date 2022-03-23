@@ -9,6 +9,12 @@ export const exams: ExamDate[] = [
         "lessons": ["5f429eb6165d0ab470bc57f7", "5f6f7e2c539ea9f7ca3856ea"]
     },
     {
+        "date": "2021-02-23",
+        "subject": "lf-7-1",
+        "title": "Test - Reihenschaltungen und Parallelschaltungen berechnen",
+        "lessons": ["5fa11212fb7df8ef19c6439b"]
+    },
+    {
         "date": "2021-03-30",
         "subject": "wp",
         "title": "Test - Ablaufsteuerungen, GRAFCET",

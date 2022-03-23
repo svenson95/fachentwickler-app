@@ -6,7 +6,7 @@ const WP_POSTS: PostArticle[] = [
         "url": "vernetzte_steuerungssysteme/grundlagen_speicherprogrammierte_steuerungen",
         "_id": "5f429fa0165d0ab470bc5800",
         "topicId": "6056906307c61731b8d162f1",
-        "title": "Grundlagen - Speicherprogrammierte Steuerungen",
+        "title": "SPS Grundlagen - Speicherprogrammierte Steuerungen",
         "description": "Mitschrift vom 11.08.2020",
         "subject": "wp",
         "type": "article",
@@ -15,8 +15,8 @@ const WP_POSTS: PostArticle[] = [
         "schoolWeek": "14",
         "elements": [
             {
-                "type": "subtitle",
-                "content": "<b><span class='list-number'>1</span> Grundlagen - SPS</b>"
+                "type": "title",
+                "content": "Defintion"
             },
             {
                 "type": "text",
@@ -39,8 +39,8 @@ const WP_POSTS: PostArticle[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "subtitle",
-                "content": "<b><span class='list-number'>2</span> EVA-Prinzip (Eingabe-Verarbeitung-Ausgabe)</b>"
+                "type": "title",
+                "content": "EVA-Prinzip (Eingabe-Verarbeitung-Ausgabe)"
             },
             {
                 "type": "text",
@@ -454,7 +454,7 @@ const WP_POSTS: PostArticle[] = [
         "subject": "wp",
         "type": "tasks",
         "lessonDate": "2020-10-28",
-        "lastUpdate": "2021-06-27",
+        "lastUpdate": "2021-08-16",
         "schoolWeek": "17",
         "elements": [
             {
@@ -496,16 +496,21 @@ const WP_POSTS: PostArticle[] = [
                 ]
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/60d71724c15b475f263c61c0"
-            },
-            {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
                 "type": "title",
                 "content": "Beispiele"
+            },
+            {
+                "type": "subtitle",
+                "content": "Paket-Hebe-Steuerung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/60d71724c15b475f263c61c0",
+                "size": "s"
             },
             {
                 "type": "subtitle",
@@ -517,7 +522,8 @@ const WP_POSTS: PostArticle[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5fce8bc7d58f4c4d8a43c0fa"
+                "content": "http://159.65.105.150:3000/images/5fce8bc7d58f4c4d8a43c0fa",
+                "size": "m"
             },
             {
                 "type": "line",
@@ -529,7 +535,8 @@ const WP_POSTS: PostArticle[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5fce8bdad58f4c4d8a43c0fc"
+                "content": "http://159.65.105.150:3000/images/5fce8bdad58f4c4d8a43c0fc",
+                "size": "m"
             },
             {
                 "type": "line",

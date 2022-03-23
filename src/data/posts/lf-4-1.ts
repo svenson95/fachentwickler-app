@@ -3,13 +3,15 @@ import { PostArticle } from '../../app/models/post';
 
 export const LF4_1_POSTS: PostArticle[] = [
     {
-        "url": "einfache_it_systeme/grundbegriffe_der_elektronen",
-        "title": "Grundbegriffe der Elektronen - ENTWURF",
+        "url": "einfache_it_systeme/grundbegriffe_der_elektronik",
+        "_id": "5f9d54856ff184d2ed5ed51a",
+        "topicId": "605650dbb0623029d4a68f67",
+        "title": "Grundbegriffe der Elektronik",
         "description": "Mitschrift vom 12.08.2019",
         "subject": "lf-4-1",
         "type": "article",
         "lessonDate": "2019-08-12",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2021-08-22",
         "schoolWeek": "1",
         "elements": [
             {
@@ -17,8 +19,103 @@ export const LF4_1_POSTS: PostArticle[] = [
                 "content": "Definition"
             },
             {
+                "type": "subtitle",
+                "content": "Atome"
+            },
+            {
                 "type": "text",
-                "content": "Entwurfstext"
+                "content": "Der detaillierte Aufbau von Atomen ist äußerst komplex. Daher vereinfachst du beim betrachten eines Atoms die realen Gegebenheiten mithilfe von verschiedenen Atommodellen. Atome sind zudem sehr klein, sodass du dich in Größenordnungen von gerade mal mehreren hundert Pikometern befindest. Früher wurde davon ausgegangen, dass ein Atom unteilbar wäre. Allerdings weißt du heute, dass Atome auf physikalischen Wegen teilbar sind. Atome bestehen aus Protonen, Neutronen und Elektronen. Protonen sind positiv, Neutronen neutral und Elektronen negativ geladen. Im neutralen Atom hast du zudem genau so viele Elektronen wie Protonen."
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufbau eines Atoms"
+            },
+            {
+                "type": "text",
+                "content": "Wie sind Protonen, Neutronen und Elektronen im Atom überhaupt angeordnet? Protonen und Neutronen befinden sich im Atomkern, also dem sogenannten Nucleus. Elektronen befinden sich in der Atomhülle und kreisen um den Atomkern. Der Atomkern ist zwar um ein vielfaches kleiner als die Atomhülle, beherbergt aber mehr als 99,9% der Masse des gesamten Atoms."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6116730113fbb856895058f1"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Gebundene Elektronen"
+            },
+            {
+                "type": "text",
+                "content": "Elektronen bewegen sich auf Kreisbahnen um ihren Atomkern mit einer sehr großen Geschwindigkeit (ca. 2200 km/s).  Trotz des geringen Elektronengewichts muß daher bei der Kreisbewegung eine relativ große Fliehkraft auftreten, die nach außen wirkt und versucht, die Elektronen aus der Kreisbahn zu befreien. Welche Kraft hält nun das Elektron auf seiner Kreisbahn um den Kern fest? Die Kraft, die die Erde auf ihrer Kreisbahn festhält, ist die Massenanziehung. Die Massenanziehung zwischen Elektronen und Atomkern reicht aber, wie sich rechnerisch nachweisen läßt, bei weitem nicht aus, um die Elektronen auf ihrer Kreisbahn zu halten. Es muß sich also hier um andere Kräfte handeln, nämlich elektrische Kräfte."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6116730b13fbb856895058f3",
+                "size": "s"
+            },
+            {
+                "type": "subtitle",
+                "content": "Ladung"
+            },
+            {
+                "type": "text",
+                "content": "Atomkerne tragen positive Ladungen. <br/> Elektronen tragen negative Ladung."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/6116731913fbb856895058f5",
+                "size": "s"
+            },
+            {
+                "type": "text",
+                "content": "Natur strebt stets Ausgleich an: Jede positive Ladung möchte durch eine negative Ladung kompensiert sein ➞ neutrales Atom."
+            },
+            {
+                "type": "text",
+                "content": "Den einfachsten Aufbau zeigt das Wasserstoffatom. Es setzt sich zusammen aus einem Elektron und einem Proton, das den Atomkern darstellt. Das Elektron trägt die kleinste vorkommende elektrische Ladung, die sogenannte Elementarladung."
+            },
+            {
+                "type": "text",
+                "content": "Die negative Elementarladung des Elektrons ist genauso groß wie die positive Elementarladung des Protons. Die Ladungen des Atoms heben sich daher in ihren Wirkungen genau auf. Das Atom ist nach außen elektrisch neutral."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Ionen"
+            },
+            {
+                "type": "text",
+                "content": "Entnimmt man einem Atom Elektronen, so besitzt das Atom mehr positive Ladungen als negative. Das Atom, das nun insgesamt positiv geladen ist, übt daher nach außen eine elektrische Wirkung aus, es zieht negative Ladungen an. Lagert man einem Atom Elektronen an, so ist es insgesamt negativ geladen und zieht positive Ladungen an. Solche geladenen Atome können umgekehrt auch von entgegengesetzten Ladungen angezogen, d. h. bewegt werden. Aus diesem Grund heißen solche Atome Ionen (griech. 'Ion' = der Wandernde)."
+            },
+            {
+                "type": "hint",
+                "content": "Positiv oder negativ geladene Atome oder Atomverbände heißen Ionen."
+            },
+            {
+                "type": "list",
+                "content": "Zusammenfassend lässt sich sagen:",
+                "list": [
+                    "Elektronenüberschuß ergibt negative Ladung",
+                    "Elektronenmangel ergibt positive Ladung"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Grundbegriffe der Chemie - Atome | 13.08.2021 | <a href='https://studyflix.de/chemie/atome-2396' target=\"_blank\" rel=\"noopener noreferrer\">https://studyflix.de/chemie/atome-2396</a>",
+                    "Angewandte Informatik II - Grundzüge der Elektronik | 13.08.2021 | <a href='https://www.fh-muenster.de/maschinenbau/downloads/inf_maschbau/ang_inf_II/06a.pdf' target=\"_blank\" rel=\"noopener noreferrer\">https://www.fh-muenster.de/maschinenbau/downloads/inf_maschbau/ang_inf_II/06a.pdf</a>",
+                    "Elektrotechnische Grundlagen | 13.08.2021 | <a href='https://vogel-fachbuch.de/media/pdf/ba/8b/45/sample-9783834332646.pdf' target=\"_blank\" rel=\"noopener noreferrer\">https://vogel-fachbuch.de/media/pdf/ba/8b/45/sample-9783834332646.pdf</a>"
+                ]
             }
         ]
     },

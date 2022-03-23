@@ -99,7 +99,7 @@ export const LF3_POSTS: PostArticle[] = [
         "subject": "lf-3",
         "type": "tasks",
         "lessonDate": "2019-09-05",
-        "lastUpdate": "2020-10-31",
+        "lastUpdate": "2021-08-15",
         "schoolWeek": "2",
         "elements": [
             {
@@ -269,7 +269,8 @@ export const LF3_POSTS: PostArticle[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3b77623064e287c3cc792"
+                "content": "http://159.65.105.150:3000/images/5ed3b77623064e287c3cc792",
+                "hidden": true
             },
             {
                 "type": "line",
@@ -293,7 +294,8 @@ export const LF3_POSTS: PostArticle[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3c502a68f9a3083a18dc5"
+                "content": "http://159.65.105.150:3000/images/5ed3c502a68f9a3083a18dc5",
+                "hidden": true
             }
         ]
     },

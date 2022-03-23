@@ -514,18 +514,32 @@ const DEUTSCH_POSTS: PostArticle[] = [
         ]
     },
     {
+        "_id": "5f6f8877539ea9f7ca3856eb",
+        "topicId": "60569a7d07c61731b8d162f7",
         "url": "grammatik/grundbegriffe_der_sprachtheorie",
         "title": "Grundbegriffe der Sprachtheorie",
         "description": "Aufgaben vom 01.09.2020",
         "subject": "deutsch",
         "type": "tasks",
         "lessonDate": "2020-09-01",
-        "lastUpdate": "2020-09-26",
+        "lastUpdate": "2021-09-02",
         "schoolWeek": "15",
         "elements": [
             {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Die Sprachtheorie ist eine Menge meist miteinander verbundener Aussagen über die Sprache und ihre Bedeutung für den Menschen. Sie befasst sich mit der Beschreibung und Erklärung aller Aspekte, die eine Sprache ausmachen oder mit ihr verbunden sind. <u>Linguistik</u> ist eine neuere internationalere Bezeichnung für den herkömmlichen Begriff <b>Sprachwissenschaft</b>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Begriffe"
+            },
+            {
                 "type": "table",
-                "content": "Begriffe",
+                "content": "",
                 "rows": [
                     {
                         "type": "default",
@@ -667,6 +681,18 @@ const DEUTSCH_POSTS: PostArticle[] = [
                             { "align": "left", "content": "..." }
                         ]
                     }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Allgemeine Grundbegriffe - 1.1 Was ist Linguistik? | 02.09.2021 | <a href='https://de.wikipedia.org/wiki/Sprachtheorie' target='_blank'>https://de.wikipedia.org/wiki/Sprachtheorie</a>",
+                    "Wikipedia - Sprachtheorie | 02.09.2021 | <a href='http://www.fb10.uni-bremen.de/khwagner/theorie/pdf/grundbegriffe.pdf' target='_blank'>http://www.fb10.uni-bremen.de/khwagner/theorie/pdf/grundbegriffe.pdf</a>"
                 ]
             }
         ]

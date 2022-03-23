@@ -932,25 +932,43 @@ export const WISO_POSTS: PostArticle[] = [
     },
     {
         "url": "versicherungen_und_sozialabgaben/lohnberechnung_uebung",
+        "_id": "5f6f7e2c539ea9f7ca3856ea",
+        "topicId": "6056969907c61731b8d162f4",
         "title": "Lohnberechnung - Übung",
         "description": "Aufgaben vom 01.09.2020",
         "subject": "wiso",
         "type": "tasks",
         "lessonDate": "2020-09-01",
-        "lastUpdate": "2020-09-26",
+        "lastUpdate": "2021-07-29",
         "schoolWeek": "15",
         "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
             {
                 "type": "subtitle",
                 "content": "Reihenfolge zur Berechnung des Gehalts"
             },
             {
                 "type": "text",
-                "content": "+ Grundlohn → Zeitlohn / AKkordlohn <br/> + Zulagen (in Euro) → Schmutzzulage <br/> + Zuschläge (in %) → Sonntags-, Wochenendarbeit <br/> + sonstige finanzielle Leistungen → Weihnachts- und Urlaubsgeld <br/> = <u>Bruttolohn</u>"
+                "content": "<span class='list-number'>1</span> Bruttolohn (Einkommen) berechnen"
+            },
+            {
+                "type": "text",
+                "content": "+ Grundlohn → Zeitlohn / Akkordlohn <br/> + Zulagen (in Euro) → Schmutzzulage <br/> + Zuschläge (in %) → Sonntags-, Wochenendarbeit <br/> + sonstige finanzielle Leistungen → Weihnachts- und Urlaubsgeld <br/> = <u>Bruttolohn</u>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>2</span> Nettolohn (Abzüge) vom Bruttolohn berechnen"
             },
             {
                 "type": "text",
                 "content": "- Gesetzliche Abzüge / Lohnsteuer <br/> - Solidaritätszuschlag (Nach Wiedervereingung ca. 1990 eingeführt) <br/> - Kirchensteuer (wenn Mitglied einer Kirche & im Kirchenregister eingetragen) <br/> - Krankenversicherung <br/> - Rentenversicherung <br/> - Arbeitslosenversicherung <br/> - Pflegeversicherung <br/> = <u>Nettogehalt</u>"
+            },
+            {
+                "type": "text",
+                "content": "<span class='list-number'>3</span> Auszahlungsbetrag (sonstige Abzüge) berechnen"
             },
             {
                 "type": "text",
@@ -961,12 +979,20 @@ export const WISO_POSTS: PostArticle[] = [
                 "content": "<hr/>"
             },
             {
+                "type": "title",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Übung zur Gehaltsabrechnung für Ost- und Westdeutschland in €"
+            },
+            {
                 "type": "subtitle",
-                "content": "Übungen zur Gehaltsabrechnung für Ost- und Westdeutschland in €"
+                "content": "Gegeben"
             },
             {
                 "type": "list",
-                "content": "Annahmen",
+                "content": "",
                 "list": [
                     "Krankenversicherungssatz (inkl. Zusatzbeitrag): 15,6 % <br/> Alle Arbeitnehmer haben Kinder (also kein Kinderlosenzuschlag bei der Pflegeversicherung)",
                     "Die Lohnsteuerbeträge wurden unterstellt, sie sind letztlich von der Lohnsteuerklasse abhängig",
@@ -978,7 +1004,7 @@ export const WISO_POSTS: PostArticle[] = [
             },
             {
                 "type": "table",
-                "content": "Daten",
+                "content": "",
                 "rows": [
                     {
                         "type": "header",
@@ -1014,46 +1040,42 @@ export const WISO_POSTS: PostArticle[] = [
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Kirchensteuersatz" },
-                            { "align": "left", "content": "8 % (Ost 9 %)", "colSpan": 4 }
+                            { "align": "middle", "content": "8 % (Ost 9 %)", "colSpan": 4 }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Vorschussverrechnung" },
-                            { "align": "left", "content": "-" },
-                            { "align": "left", "content": "-" },
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "-" },
                             { "align": "left", "content": "500,00 €" },
-                            { "align": "left", "content": "-" }
+                            { "align": "middle", "content": "-" }
                         ]
                     }
                 ]
-            },
-            {
-                "type": "title",
-                "content": "Aufgabe"
-            },
-            {
-                "type": "text",
-                "content": "Erstellen Sie die Gehaltsabrechnungen jeweils für die alten und neuen Bundesländer."
             },
             {
                 "type": "hint",
                 "content": "Nur in Baden-Württemberg und Bayern beträgt der <b>Kirchensteuersatz</b> 8 %, ansonsten bundesweit 9 %"
             },
             {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
                 "type": "list",
-                "content": "Gegeben",
+                "content": "",
                 "list": [
                     "Krankenversicherungsrate (inkl. Zusatzbetrag) = 15,6 %",
                     "VWS = 40,00 €",
                     "VWL vom Arbeitgeber = 20,00 €",
                     "Pflegeversicherungssatz = 1,525 %"
                 ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Auftrag"
+            },
+            {
+                "type": "text",
+                "content": "Erstellen Sie die Gehaltsabrechnungen jeweils für die alten und neuen Bundesländer."
             },
             {
                 "type": "line",
@@ -1065,6 +1087,7 @@ export const WISO_POSTS: PostArticle[] = [
             },
             {
                 "type": "text",
+                "hidden": true,
                 "content": "..."
             }
         ]

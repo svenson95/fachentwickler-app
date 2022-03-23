@@ -2093,4 +2093,38 @@ export const LF7_2_POSTS: PostArticle[] = [
             }
         ]
     },
+    {
+        "url": "netze_und_dienste/subnetze_subnetting",
+        "_id": "6110f01ad9a255605b45f1b6",
+        "topicId": "6056856207c61731b8d162ed",
+        "title": "Subnetze / Subnetting",
+        "description": "Mitschrift vom 11.06.2021",
+        "subject": "lf-7-2",
+        "type": "article",
+        "lessonDate": "2021-06-11",
+        "lastUpdate": "2021-08-09",
+        "schoolWeek": "26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Die Aufteilung eines zusammenhängenden Adressraums von IP-Adressen in mehrere kleinere Adressräume nennt man Subnetting. Ein Subnet, Subnetz bzw. Teilnetz ist ein physikalisches Segment eines Netzwerks, in dem IP-Adressen mit der gleichen Netzwerkadresse benutzt werden. Diese Teilnetze können über Routern miteinander verbunden werden und bilden dann ein großes zusammenhängendes Netzwerk."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Subnetting (Subnetmask / Subnetzmaske) | 09.08.2021 | <a href='https://www.elektronik-kompendium.de/sites/net/0907201.htm' target=\"_blank\" rel=\"noopener noreferrer\">https://www.elektronik-kompendium.de/sites/net/0907201.htm</a>",
+                    "SUBNETTING & SUPERNETTING | 09.08.2021 | <a href='http://muchowski.info/wp-content/uploads/2016/10/Subnetting.pdf' target=\"_blank\" rel=\"noopener noreferrer\">http://muchowski.info/wp-content/uploads/2016/10/Subnetting.pdf</a>"
+                ]
+            }
+        ]
+    },
 ];
