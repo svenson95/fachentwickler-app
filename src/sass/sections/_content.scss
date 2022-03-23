@@ -1,10 +1,5 @@
 .fe-content {
   .router-loader {
-    .fe-loading-indicator {
-      height: 200px;
-      display: flex;
-      align-items: center;
-    }
   }
 
   .page-footer {
@@ -45,31 +40,33 @@
 
     .footer-buttons {
 
-      a.is-active {
-        color: var(--text-color-3);
-        text-decoration: none;
-      }
-
       @include to-md {
         display: flex;
         flex-direction: column;
         margin-left: auto;
         margin-right: 30px;
         letter-spacing: 1px;
+      }
 
-        a {
+      a {
+        outline: none;
+        font-size: .9rem;
+        font-weight: 300;
+
+        @include to-md {
           font-size: .8rem;
           line-height: 26px;
         }
-      }
 
-      .legal, .about, .feedback, .start {
-        outline: none;
-        font-weight: 300;
+        &.is-active {
+          color: var(--text-color-3);
+          text-decoration: none;
+        }
       }
 
       .footer-divider {
         margin: 0 8px;
+        font-weight: 100;
 
         @include to-md {
           display: none;

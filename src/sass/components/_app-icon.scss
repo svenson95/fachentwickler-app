@@ -1,18 +1,17 @@
-.app-icon .fe-app-name {
-  display: inline-block;
+fe-icon {
+  display: flex;
   align-self: center;
   text-align: left;
 
-  color: white;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 14px;
-
-  transition: letter-spacing 600ms ease;
-  z-index: 1;
-
-  @include to-xs {
+  .fe-app-name {
+    margin-bottom: 0;
+    color: var(--text-color-1);
     font-size: .9rem;
+    line-height: 13px;
+    align-self: center;
+
+    transition: letter-spacing 600ms ease;
+    z-index: 1;
   }
 }
 
@@ -23,23 +22,22 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  fill: var(--tertiary-color);
+  margin-right: 5px;
+
+  @include from-xs {
+    fill: var(--secondary-color);
+  }
+
+  @include to-xs {
+    fill: var(--tertiary-color);
+  }
 
   svg {
-    height: 32px;
+    height: 30px;
 
     g {
       transform: scale(0.04);
     }
-  }
-
-  @include from-xs {
-    margin-right: 5px;
-    fill: var(--tertiary-color);
-  }
-
-  @include to-xs {
-    margin-right: 8px;
   }
 }
 
@@ -64,7 +62,6 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
   .fe-logo-wrapper {
     display: flex;
     justify-content: left;
-    font-size: 1em;
     text-decoration: none;
     flex-shrink: 0;
     align-items: center;
@@ -81,7 +78,7 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
     }
 
     @include to-xs {
-      padding-left: 22px;
+      padding-left: 20px;
       padding-top: 2px;
       padding-bottom: 2px;
     }
@@ -89,7 +86,7 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
     .fe-icon-wrapper {
 
       @include to-xs {
-        width: 28px;
+        width: 24px;
       }
     }
 
@@ -108,9 +105,9 @@ fe-header.fe-header .mat-toolbar:not(.sidenav--open) .fe-logo-wrapper {
     background: var(--background-primary);
     border-radius: 8px;
     width: fit-content;
-    height: 42px;
+    height: 36px;
     align-self: center;
-    padding: 7px;
+    padding: 6px;
     margin-left: 15px;
     margin-right: 5px;
     fill: var(--tertiary-color);
@@ -123,8 +120,11 @@ fe-header.fe-header .mat-toolbar:not(.sidenav--open) .fe-logo-wrapper {
 
 fe-header.fe-header .mat-toolbar.sidenav--open {
   @include to-xs {
+    .fe-icon-wrapper {
+      fill: var(--secondary-color);
+    }
+
     .fe-app-name {
-      color: var(--text-color-1);
       @include logoMoveInLeftAnimation;
     }
   }

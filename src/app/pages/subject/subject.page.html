@@ -7,10 +7,13 @@
         <ion-icon [name]="router.url | subjectIcon" alt="test"></ion-icon>
         <fe-post-element *ngFor="let el of subject.description" [element]="el"></fe-post-element>
       </div>
-      <div class="fe-topic" *ngFor="let topic of subject.topics">
-        <p class="fe-topic-title">{{topic.title}}</p>
-        <div class="fe-links">
-          <fe-post-link *ngFor="let post of topic.links" [post]="post"></fe-post-link>
+      <div class="topic-container" *ngFor="let topic of subject.topics">
+        <div class="header">
+          <p class="topic-title">{{topic.title}}</p>
+          <hr/>
+        </div>
+        <div class="post-links-container">
+          <fe-post-link *ngFor="let post of topic.links" [post]="post!"></fe-post-link>
         </div>
       </div>
     </mat-card-content>

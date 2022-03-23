@@ -29,11 +29,19 @@
       .date-icon {
         align-self: center;
         color: var(--tertiary-color);
+        margin-right: 8px;
+
         $size: 50px;
         font-size: $size;
         width: $size;
         height: $size;
-        margin-right: 8px;
+
+        @include to-xs {
+          $size-xs: 40px;
+          font-size: $size-xs;
+          width: $size-xs;
+          height: $size-xs;
+        }
       }
     }
 
@@ -47,6 +55,10 @@
         justify-content: space-between;
         font-size: .7rem;
 
+        @include to-xs {
+          font-size: .6rem;
+        }
+
         .date,
         .days-left {
           letter-spacing: 1px;
@@ -59,13 +71,17 @@
           width: 180px;
 
           @include to-xs {
-            width: 150px;
+            width: 140px;
           }
         }
 
         .days-left {
           width: 90px;
           text-align: right;
+
+          @include to-xs {
+            width: 80px;
+          }
         }
       }
 

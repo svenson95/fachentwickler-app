@@ -14,7 +14,7 @@ mat-sidenav.fe-sidenav.mat-sidenav .mat-drawer-inner-container {
 mat-sidenav.fe-sidenav.mat-sidenav {
 
   .sidenav-content {
-    margin: 20px 20px 50px;
+    margin: 20px 15px 50px;
 
     @include to-xs {
       margin-bottom: 40px;
@@ -57,14 +57,15 @@ mat-sidenav.fe-sidenav.mat-sidenav {
     }
 
     .section-title {
-      color: var(--text-color-3);
+      color: var(--text-color-2);
       font-weight: 300;
+      font-size: .8rem;
       text-transform: uppercase;
       letter-spacing: 2px;
 
       width: fit-content;
       border-bottom: 1px solid var(--primary-color);
-      padding: 8px 10px 3px;
+      padding: 8px 5px 3px;
     }
 
     mat-nav-list.mat-nav-list {
@@ -72,8 +73,14 @@ mat-sidenav.fe-sidenav.mat-sidenav {
         padding-top: 15px;
       }
 
-      .fe-nav-link.active-route {
+      .fe-nav-link {
         color: var(--text-color-3);
+        font-size: .8rem;
+        letter-spacing: 1px;
+
+        &.active-route {
+          color: var(--text-color-1);
+        }
       }
     }
   }

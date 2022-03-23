@@ -12,23 +12,25 @@ import { IndexCardModule } from '../../components/cards/index-card/index-card.mo
 import { MatchingCardModule } from '../../components/cards/matching-card/matching-card.module';
 import { ScheduleCardModule } from '../../components/cards/schedule-card/schedule-card.module';
 import { NewsCardContainerModule } from '../../containers/news-card-container/news-card-container.module';
+import {LoadingSpinnerModule} from '../../components/loading-spinner/loading-spinner.module';
 
 
 
 @NgModule({
   declarations: [LandingPage],
-  imports: [
-    CommonModule,
-    LandingRoutingModule,
-    AngularMaterialModule,
-    NextExamsCardModule,
-    UserProgressCardModule,
-    SchoolWeekCardModule,
-    QuizCardModule,
-    IndexCardModule,
-    MatchingCardModule,
-    ScheduleCardModule,
-    NewsCardContainerModule,
-  ]
+    imports: [
+        CommonModule,
+        LandingRoutingModule,
+        AngularMaterialModule,
+        NextExamsCardModule,
+        UserProgressCardModule,
+        SchoolWeekCardModule,
+        QuizCardModule,
+        IndexCardModule,
+        MatchingCardModule,
+        ScheduleCardModule,
+        NewsCardContainerModule,
+        LoadingSpinnerModule,
+    ]
 })
 export class LandingPageModule { }

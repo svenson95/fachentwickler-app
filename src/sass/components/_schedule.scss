@@ -27,7 +27,7 @@
         }
 
         @include to-xs {
-          width: 52px;
+          width: 50px;
           flex-shrink: 0;
         }
       }
@@ -133,6 +133,7 @@
 
       .schedule-header {
         color: var(--grey-3);
+        font-weight: 400;
       }
 
       .schedule-header,

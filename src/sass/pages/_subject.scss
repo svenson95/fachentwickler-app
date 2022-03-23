@@ -48,24 +48,35 @@
     }
   }
 
-  .fe-topic {
+  .topic-container {
     &:not(:last-of-type) {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
-    .fe-topic-title {
-      background: rgba(var(--grey-1-rgb), .6);
-      padding: 10px 12px;
-      font-weight: 600;
-      line-height: 20px;
-      border-radius: var(--border-radius);
+    .header {
+      display: flex;
 
-      @include from-md {
-        margin-bottom: 0;
+      .topic-title {
+        flex-shrink: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 12px;
+        border-radius: var(--border-radius);
+
+        @include from-md {
+          margin-bottom: 0;
+        }
+      }
+
+      hr {
+        height: 1px;
+        width: 100%;
+        margin: auto;
       }
     }
 
-    .fe-links {
+    .post-links-container {
       margin-top: 10px;
     }
   }

@@ -2,5 +2,5 @@
   <span class="label" [class.hidden]="isLoading">
     <ng-content></ng-content>
   </span>
-  <fe-loading-spinner *ngIf="isLoading" size="18"></fe-loading-spinner>
+  <mat-spinner diameter="18" *ngIf="isLoading"></mat-spinner>
 </button>

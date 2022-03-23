@@ -9,22 +9,6 @@
   margin-top: 3px;
   margin-bottom: 3px;
 
-  font-size: .8rem;
-  color: var(--text-color-1);
-  letter-spacing: 1px;
-
-  @include from-md {
-    .mat-list-item-content {
-      padding: 0;
-    }
-  }
-
-  @media not all and (min-resolution:.001dpcm){
-    @supports (-webkit-appearance:none) {
-      font-weight: 400;
-    }
-  }
-
   $nav-link-icon-fade-duration: color 100ms ease-in-out;
 
   .nav-item-icon {
@@ -52,12 +36,6 @@
     }
   }
 
-  .mat-list-item-content {
-    @include to-xs {
-      padding: 0 10px;
-    }
-  }
-
   span {
     padding: 6px 2px;
 
@@ -66,6 +44,7 @@
     }
 
     @include to-xs {
+      width: 100%;
       padding: 7px 2px;
       line-height: 14px;
     }

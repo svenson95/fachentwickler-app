@@ -13,7 +13,7 @@ export const light: Theme = {
         "--background-tertiary": "#d4d4d4",
         "--tertiary-color": "#94aac5",
 
-        "--text-color-1": "#000000",
+        "--text-color-1": "#3e3e3e",
         "--text-color-2": "#787878",
         "--text-color-3": "#b4b4b4",
 
