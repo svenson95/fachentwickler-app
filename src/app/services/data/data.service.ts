@@ -73,7 +73,9 @@ export class DataService {
     }
 
     getImage(imageUrl: string): Observable<ImageData> {
-        return this.httpClient.get<ImageData>(imageUrl)
+        const imageId = imageUrl.substr(imageUrl.lastIndexOf('/'), imageUrl.length);
+        const url = 'http://localhost:3000/images' + imageId;
+        return this.httpClient.get<ImageData>(url)
             .pipe(map((response) => {
                 // console.log('response GET image', response);
                 return response;
