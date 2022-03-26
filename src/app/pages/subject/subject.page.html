@@ -23,7 +23,7 @@
     <p class="fe-card-title">Tests</p>
     <mat-card-content>
       <div class="fe-test-container">
-        <fe-post-link *ngFor="let post of subject.tests" [post]="post"></fe-post-link>
+        <fe-post-link *ngFor="let post of subject.tests" [post]="post!"></fe-post-link>
       </div>
     </mat-card-content>
   </mat-card>

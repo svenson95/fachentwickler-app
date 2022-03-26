@@ -26,7 +26,7 @@
     <mat-icon>logout</mat-icon>
     <span class="label">Ausloggen</span>
   </button>
-  <ng-container *ngIf="authService.user?.role === UserRole.ADMIN">
+  <ng-container>
     <hr/>
     <a class="menu-btn" mat-menu-item routerLink="/lf-1/topic/testarticle" [disabled]="router.url.startsWith('/lf-1/topic/testarticle')" disableRipple>
       <mat-icon>preview</mat-icon>
