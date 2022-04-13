@@ -47,7 +47,15 @@ const globalRippleConfig: RippleGlobalOptions = {
     {provide: LOCALE_ID, useValue: 'de-DE'},
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}},
     {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
-    {provide: HIGHLIGHT_OPTIONS, useValue: {fullLibraryLoader: () => import('highlight.js')}},
+    {provide: HIGHLIGHT_OPTIONS, useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          java: () => import('highlight.js/lib/languages/java'),
+          javascript: () => import('highlight.js/lib/languages/javascript'),
+          sql: () => import('highlight.js/lib/languages/sql'),
+          php: () => import('highlight.js/lib/languages/php')
+        }
+      }},
     {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig}
   ],
   entryComponents: [AppComponent],
