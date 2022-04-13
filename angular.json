@@ -130,6 +130,12 @@
               "devServerTarget": "fachentwickler-app:serve:production"
             }
           }
+        },
+        "analyze": {
+          "builder": "@ngx-builders/analyze:analyze",
+          "options": {
+            "outputPath": "dist/fachentwickler-app"
+          }
         }
       }
     }
