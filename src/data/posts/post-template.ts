@@ -33,7 +33,7 @@ export const testArticle: PostArticle = {
     },
     {
       "type": "HINT",
-      "content": "test"
+      "content": "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     },
     {
       "type": "IMAGE",
@@ -45,15 +45,15 @@ export const testArticle: PostArticle = {
     },
     {
       "type": "LIST",
-      "content": "test title",
+      "content": "Unordered list title",
       "list": [
-        "test",
-        "test",
+        "Lorem",
+        "ipsum",
         {
-          "content": "test subtitle",
+          "content": "Unordered list subtitle",
           "sublist": [
-            "test",
-            "test"
+            "dolor",
+            "consectetur"
           ]
         }
       ]
@@ -66,15 +66,29 @@ export const testArticle: PostArticle = {
       "type": "LIST",
       "content": "",
       "list": [
-        "test",
-        "test",
+        "Adipisicing",
+        "Elit",
         {
           "content": "",
           "sublist": [
-            "test",
-            "test"
+            "Alias",
+            "Aliquam"
           ]
         }
+      ]
+    },
+    {
+      "type": "LINE",
+      "content": "<hr/>"
+    },
+    {
+      "type": "LIST",
+      "content": "Ordered list title",
+      "ordered": true,
+      "list": [
+        "Lorem",
+        "ipsum",
+        "dolor"
       ]
     },
     {

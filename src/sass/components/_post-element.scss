@@ -84,11 +84,6 @@
     margin-block-end: 2em;
   }
 
-  .post-list-ordered,
-  .post-list {
-    margin-bottom: 20px;
-  }
-
   .post-list-ordered {
     counter-reset: ordered-list-counter;
     list-style: none;
@@ -142,7 +137,6 @@
     margin-top: 10px;
   }
 
-  .post-ol-sublist,
   .post-ul-sublist {
     padding-inline-start: 0;
     padding-top: 3px;
@@ -274,9 +268,6 @@
       }
     }
   }
-}
-
-.fe-post-item.code {
 }
 
 .fe-post-item.answer button + p,
