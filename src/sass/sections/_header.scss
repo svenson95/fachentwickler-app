@@ -12,7 +12,6 @@ fe-header.fe-header {
   left: 0;
   right: 0;
   z-index: 333;
-  box-shadow: var(--box-shadow);
 }
 
 mat-sidenav-container.mat-drawer-container {
@@ -34,6 +33,7 @@ fe-header.fe-header .mat-toolbar {
   justify-content: space-between;
   background: var(--background-primary);
   position: relative;
+  box-shadow: var(--box-shadow);
 
   @include from-xs {
     padding: 5px 20px;
