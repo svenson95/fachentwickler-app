@@ -10,7 +10,7 @@ const ENGLISH_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2019-09-02",
     "lastUpdate": "2020-06-14",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TITLE",
@@ -46,7 +46,7 @@ const ENGLISH_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2019-09-26",
     "lastUpdate": "2020-06-14",
-    "schoolWeek": "3",
+    "schoolWeek": 3,
     "elements": [
       {
         "type": "TITLE",
@@ -103,7 +103,7 @@ const ENGLISH_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-10-29",
     "lastUpdate": "2021-09-17",
-    "schoolWeek": "17",
+    "schoolWeek": 17,
     "elements": [
       {
         "type": "TITLE",

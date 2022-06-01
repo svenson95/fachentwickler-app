@@ -10,7 +10,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-08-16",
     "lastUpdate": "2020-10-31",
-    "schoolWeek": "1",
+    "schoolWeek": 1,
     "elements": [
       {
         "type": "TITLE",
@@ -30,7 +30,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-11-19",
     "lastUpdate": "2020-05-28",
-    "schoolWeek": "5",
+    "schoolWeek": 5,
     "elements": [
       {
         "type": "TITLE",
@@ -158,7 +158,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-01-16",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "7",
+    "schoolWeek": 7,
     "elements": [
       {
         "type": "TITLE",
@@ -267,7 +267,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-01-13",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "7",
+    "schoolWeek": 7,
     "elements": [
       {
         "type": "TITLE",
@@ -380,7 +380,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-01-13",
     "lastUpdate": "2020-06-20",
-    "schoolWeek": "7",
+    "schoolWeek": 7,
     "elements": [
       {
         "type": "TITLE",
@@ -454,7 +454,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-10-28",
     "lastUpdate": "2020-11-05",
-    "schoolWeek": "17",
+    "schoolWeek": 17,
     "elements": [
       {
         "type": "TITLE",
@@ -523,7 +523,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-01-16",
     "lastUpdate": "2020-11-04",
-    "schoolWeek": "7",
+    "schoolWeek": 7,
     "elements": [
       {
         "type": "TITLE",
@@ -583,7 +583,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-02-13",
     "lastUpdate": "2020-10-19",
-    "schoolWeek": "8",
+    "schoolWeek": 8,
     "elements": [
       {
         "type": "TITLE",
@@ -603,7 +603,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-03-25",
     "lastUpdate": "2020-03-28",
-    "schoolWeek": "10",
+    "schoolWeek": 10,
     "elements": [
       {
         "type": "TITLE",
@@ -762,7 +762,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-05-18",
     "lastUpdate": "2020-06-25",
-    "schoolWeek": "12",
+    "schoolWeek": 12,
     "elements": [
       {
         "type": "TITLE",
@@ -940,7 +940,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-09-01",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "15",
+    "schoolWeek": 15,
     "elements": [
       {
         "type": "TITLE",
@@ -1102,7 +1102,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "test",
     "lessonDate": "2020-01-14",
     "lastUpdate": "2021-05-23",
-    "schoolWeek": "7",
+    "schoolWeek": 7,
     "elements": [
       {
         "type": "TITLE",
@@ -1242,7 +1242,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "test",
     "lessonDate": "2020-10-28",
     "lastUpdate": "2020-11-01",
-    "schoolWeek": "17",
+    "schoolWeek": 17,
     "elements": [
       {
         "type": "TITLE",
@@ -1408,7 +1408,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-11-16",
     "lastUpdate": "2020-12-20",
-    "schoolWeek": "18",
+    "schoolWeek": 18,
     "elements": [
       {
         "type": "TITLE",
@@ -1428,7 +1428,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-11-17",
     "lastUpdate": "2020-12-20",
-    "schoolWeek": "18",
+    "schoolWeek": 18,
     "elements": [
       {
         "type": "TITLE",
@@ -1448,7 +1448,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-11-19",
     "lastUpdate": "2020-12-20",
-    "schoolWeek": "18",
+    "schoolWeek": 18,
     "elements": [
       {
         "type": "TITLE",
@@ -1468,7 +1468,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-12-07",
     "lastUpdate": "2020-12-20",
-    "schoolWeek": "19",
+    "schoolWeek": 19,
     "elements": [
       {
         "type": "TITLE",
@@ -1488,7 +1488,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "test",
     "lessonDate": "2020-12-08",
     "lastUpdate": "2020-12-20",
-    "schoolWeek": "19",
+    "schoolWeek": 19,
     "elements": [
       {
         "type": "TITLE",
@@ -1508,7 +1508,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-01-11",
     "lastUpdate": "2021-01-12",
-    "schoolWeek": "20",
+    "schoolWeek": 20,
     "elements": [
       {
         "type": "TITLE",
@@ -1566,7 +1566,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-01-13",
     "lastUpdate": "2021-04-18",
-    "schoolWeek": "20",
+    "schoolWeek": 20,
     "elements": [
       {
         "type": "TITLE",
@@ -1628,7 +1628,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-02-08",
     "lastUpdate": "2021-02-25",
-    "schoolWeek": "21",
+    "schoolWeek": 21,
     "elements": [
       {
         "type": "TITLE",
@@ -1648,7 +1648,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-02-11",
     "lastUpdate": "2021-02-11",
-    "schoolWeek": "21",
+    "schoolWeek": 21,
     "elements": [
       {
         "type": "TITLE",
@@ -1668,7 +1668,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-03-04",
     "lastUpdate": "2021-03-19",
-    "schoolWeek": "22",
+    "schoolWeek": 22,
     "elements": [
       {
         "type": "TITLE",
@@ -1968,7 +1968,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-03-22",
     "lastUpdate": "2021-04-23",
-    "schoolWeek": "23",
+    "schoolWeek": 23,
     "elements": [
       {
         "type": "TITLE",
@@ -2313,7 +2313,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-03-25",
     "lastUpdate": "2021-05-24",
-    "schoolWeek": "23",
+    "schoolWeek": 23,
     "elements": [
       {
         "type": "TITLE",
@@ -2537,7 +2537,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-04-29",
     "lastUpdate": "2021-05-14",
-    "schoolWeek": "24",
+    "schoolWeek": 24,
     "elements": [
       {
         "type": "TITLE",
@@ -2559,7 +2559,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-05-20",
     "lastUpdate": "2021-05-24",
-    "schoolWeek": "25",
+    "schoolWeek": 25,
     "elements": [
       {
         "type": "TITLE",
@@ -2638,7 +2638,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "test",
     "lessonDate": "2021-05-21",
     "lastUpdate": "2021-05-23",
-    "schoolWeek": "25",
+    "schoolWeek": 25,
     "elements": [
       {
         "type": "TITLE",

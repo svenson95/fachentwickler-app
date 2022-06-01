@@ -12,7 +12,7 @@ export const LF6_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2019-09-02",
     "lastUpdate": "2021-03-26",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TITLE",
@@ -107,7 +107,7 @@ export const LF6_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-10-29",
     "lastUpdate": "2021-03-26",
-    "schoolWeek": "17",
+    "schoolWeek": 17,
     "elements": [
       {
         "type": "TITLE",

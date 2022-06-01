@@ -10,7 +10,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-09-05",
     "lastUpdate": "2020-05-07",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TITLE",
@@ -100,7 +100,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2019-09-05",
     "lastUpdate": "2021-08-15",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TITLE",
@@ -307,7 +307,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2019-09-25",
     "lastUpdate": "2020-05-08",
-    "schoolWeek": "3",
+    "schoolWeek": 3,
     "elements": [
       {
         "type": "TITLE",
@@ -409,7 +409,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-09-27",
     "lastUpdate": "2020-10-03",
-    "schoolWeek": "3",
+    "schoolWeek": 3,
     "elements": [
       {
         "type": "TABLE",
@@ -451,7 +451,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-06-08",
     "lastUpdate": "2020-10-03",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -611,7 +611,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-02-11",
     "lastUpdate": "2021-02-26",
-    "schoolWeek": "21",
+    "schoolWeek": 21,
     "elements": [
       {
         "type": "TITLE",
@@ -733,7 +733,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-03-02",
     "lastUpdate": "2020-05-08",
-    "schoolWeek": "9",
+    "schoolWeek": 9,
     "elements": [
       {
         "type": "TITLE",
@@ -753,7 +753,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-03-02",
     "lastUpdate": "2020-05-09",
-    "schoolWeek": "9",
+    "schoolWeek": 9,
     "elements": [
       {
         "type": "TITLE",
@@ -894,7 +894,7 @@ export const LF3_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-03-02",
     "lastUpdate": "2020-05-10",
-    "schoolWeek": "9",
+    "schoolWeek": 9,
     "elements": [
       {
         "type": "TITLE",

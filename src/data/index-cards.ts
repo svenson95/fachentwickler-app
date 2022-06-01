@@ -12,7 +12,7 @@ export const indexCards: PostIndexCards[] = [
     "type": "index-cards",
     "lessonDate": "2019-11-22",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "5",
+    "schoolWeek": 5,
     "elements": [
       {
         "question": "Wie kann man den Begriff Bedürfnis definieren?",
@@ -50,7 +50,7 @@ export const indexCards: PostIndexCards[] = [
     "type": "index-cards",
     "lessonDate": "2020-09-25",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "16",
+    "schoolWeek": 16,
     "elements": [
       {
         "question": "Was ist eine Kollisionsdomäne?",

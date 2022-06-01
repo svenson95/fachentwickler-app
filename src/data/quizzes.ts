@@ -12,7 +12,7 @@ export const quizzes: PostQuiz[] = [
     "type": "quiz",
     "lessonDate": "2019-11-22",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "5",
+    "schoolWeek": 5,
     "elements": [
       {
         "question": "Wie kann man den Begriff Bedürfnis definieren?",
@@ -62,7 +62,7 @@ export const quizzes: PostQuiz[] = [
     "type": "quiz",
     "lessonDate": "2019-12-12",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "6",
+    "schoolWeek": 6,
     "elements": [
       {
         "question": "Wann kommt ein Ausbildungsvertrag zustande?",
@@ -148,7 +148,7 @@ export const quizzes: PostQuiz[] = [
     "type": "quiz",
     "lessonDate": "2020-09-24",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "16",
+    "schoolWeek": 16,
     "elements": [
       {
         "question": "Was ist ein Telekommunikationsnetzbetreiber?",
@@ -186,7 +186,7 @@ export const quizzes: PostQuiz[] = [
     "type": "quiz",
     "lessonDate": "2021-05-18",
     "lastUpdate": "2021-07-29",
-    "schoolWeek": "25",
+    "schoolWeek": 25,
     "elements": [
       {
         "question": "Die Distributions-, Preis-, Kommunikations- und Produktpolitik sind die vier Instrumente des ...",

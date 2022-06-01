@@ -9,7 +9,7 @@ export const matchings: PostMatching[] = [
     "title": "Sozialversicherungssysteme",
     "description": "Übung vom 04.03.2021",
     "subject": "wiso",
-    "schoolWeek": "22",
+    "schoolWeek": 22,
     "type": "matching",
     "lessonDate": "2021-03-04",
     "lastUpdate": "2021-07-29",

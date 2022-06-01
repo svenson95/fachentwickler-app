@@ -12,7 +12,7 @@ export const testArticle: PostArticle = {
   "type": PostType.ARTICLE,
   "lessonDate": "2020-01-01",
   "lastUpdate": "2020-01-01",
-  "schoolWeek": "0",
+  "schoolWeek": 0,
   "elements": [
     {
       "type": "TITLE",
@@ -44,23 +44,42 @@ export const testArticle: PostArticle = {
       "content": "<hr/>"
     },
     {
-      "type": "TEXT",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-    },
-    {
       "type": "LIST",
-      "content": "test",
+      "content": "test title",
       "list": [
         "test",
         "test",
         {
-          "content": "test",
+          "content": "test subtitle",
           "sublist": [
             "test",
             "test"
           ]
         }
       ]
+    },
+    {
+      "type": "LINE",
+      "content": "<hr/>"
+    },
+    {
+      "type": "LIST",
+      "content": "",
+      "list": [
+        "test",
+        "test",
+        {
+          "content": "",
+          "sublist": [
+            "test",
+            "test"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LINE",
+      "content": "<hr/>"
     },
     {
       "type": "ANSWER_GROUP",
@@ -72,7 +91,7 @@ export const testArticle: PostArticle = {
         },
         {
           "type": "IMAGE",
-          "content": "http://159.65.105.150:3000/images/5f6f9cfd59df30501b5d0d63"
+          "content": "5f6f9cfd59df30501b5d0d63"
         },
         {
           "type": "TEXT",
@@ -242,7 +261,7 @@ export const testArticle: PostArticle = {
       "type": "LIST",
       "content": "Quellen:",
       "list": [
-        "TITLE | DATE | <a href='link' target=\"_blank\" rel=\"noopener noreferrer\">text</a>"
+        "TITLE | DATE | <a href='https://www.wikipedia.de/' target=\"_blank\" rel=\"noopener noreferrer\">https://www.wikipedia.de/</a>"
       ]
     }
   ]

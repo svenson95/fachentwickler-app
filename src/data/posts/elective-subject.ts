@@ -12,7 +12,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-08-11",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "14",
+    "schoolWeek": 14,
     "elements": [
       {
         "type": "TITLE",
@@ -160,7 +160,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-08-12",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "14",
+    "schoolWeek": 14,
     "elements": [
       {
         "type": "SUBTITLE",
@@ -330,7 +330,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-09-02",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "15",
+    "schoolWeek": 15,
     "elements": [
       {
         "type": "TITLE",
@@ -381,7 +381,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-09-23",
     "lastUpdate": "2021-06-26",
-    "schoolWeek": "16",
+    "schoolWeek": 16,
     "elements": [
       {
         "type": "TITLE",
@@ -455,7 +455,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-10-28",
     "lastUpdate": "2021-08-16",
-    "schoolWeek": "17",
+    "schoolWeek": 17,
     "elements": [
       {
         "type": "TITLE",
@@ -587,7 +587,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-01-13",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "20",
+    "schoolWeek": 20,
     "elements": [
       {
         "type": "TITLE",
@@ -609,7 +609,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-02-10",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "21",
+    "schoolWeek": 21,
     "elements": [
       {
         "type": "TITLE",
@@ -631,7 +631,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-03-02",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "22",
+    "schoolWeek": 22,
     "elements": [
       {
         "type": "TITLE",
@@ -978,7 +978,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-03-03",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "22",
+    "schoolWeek": 22,
     "elements": [
       {
         "type": "TITLE",
@@ -1000,7 +1000,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-03-03",
     "lastUpdate": "2021-05-26",
-    "schoolWeek": "22",
+    "schoolWeek": 22,
     "elements": [
       {
         "type": "TITLE",
@@ -1397,7 +1397,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-03-24",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "23",
+    "schoolWeek": 23,
     "elements": [
       {
         "type": "TITLE",
@@ -1446,7 +1446,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-04-28",
     "lastUpdate": "2021-05-15",
-    "schoolWeek": "24",
+    "schoolWeek": 24,
     "elements": [
       {
         "type": "TITLE",
@@ -1468,7 +1468,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-04-30",
     "lastUpdate": "2021-05-14",
-    "schoolWeek": "24",
+    "schoolWeek": 24,
     "elements": [
       {
         "type": "TITLE",
@@ -1490,7 +1490,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2021-05-19",
     "lastUpdate": "2021-05-26",
-    "schoolWeek": "25",
+    "schoolWeek": 25,
     "elements": [
       {
         "type": "TITLE",
@@ -1945,7 +1945,7 @@ const WP_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2021-06-09",
     "lastUpdate": "2021-07-07",
-    "schoolWeek": "26",
+    "schoolWeek": 26,
     "elements": [
       {
         "type": "TITLE",

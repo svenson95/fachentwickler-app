@@ -12,7 +12,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-08-12",
     "lastUpdate": "2021-08-22",
-    "schoolWeek": "1",
+    "schoolWeek": 1,
     "elements": [
       {
         "type": "TITLE",
@@ -127,7 +127,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-09-05",
     "lastUpdate": "2020-12-13",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TITLE",
@@ -1083,7 +1083,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-01-15",
     "lastUpdate": "2020-10-31",
-    "schoolWeek": "7",
+    "schoolWeek": 7,
     "elements": [
       {
         "type": "TITLE",
@@ -1163,7 +1163,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-03-04",
     "lastUpdate": "2020-05-12",
-    "schoolWeek": "9",
+    "schoolWeek": 9,
     "elements": [
       {
         "type": "TITLE",
@@ -1598,7 +1598,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "test",
     "lessonDate": "2019-11-21",
     "lastUpdate": "2020-05-13",
-    "schoolWeek": "5",
+    "schoolWeek": 5,
     "elements": [
       {
         "type": "TITLE",
@@ -1702,7 +1702,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-03-05",
     "lastUpdate": "2020-11-05",
-    "schoolWeek": "9",
+    "schoolWeek": 9,
     "elements": [
       {
         "type": "TITLE",
@@ -1920,7 +1920,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "tasks",
     "lessonDate": "2020-03-06",
     "lastUpdate": "2020-12-14",
-    "schoolWeek": "9",
+    "schoolWeek": 9,
     "elements": [
       {
         "type": "TITLE",
@@ -2016,7 +2016,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-04-27",
     "lastUpdate": "2020-09-03",
-    "schoolWeek": "11",
+    "schoolWeek": 11,
     "elements": [
       {
         "type": "TITLE",
@@ -2240,7 +2240,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-04-28",
     "lastUpdate": "2020-08-15",
-    "schoolWeek": "11",
+    "schoolWeek": 11,
     "elements": [
       {
         "type": "SUBTITLE",
@@ -2368,7 +2368,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-04-29",
     "lastUpdate": "2020-08-15",
-    "schoolWeek": "11",
+    "schoolWeek": 11,
     "elements": [
       {
         "type": "TITLE",
@@ -2581,7 +2581,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-04-30",
     "lastUpdate": "2020-08-15",
-    "schoolWeek": "11",
+    "schoolWeek": 11,
     "elements": [
       {
         "type": "TITLE",
@@ -2996,7 +2996,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-08",
     "lastUpdate": "2020-08-19",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -3116,7 +3116,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-08",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -3386,7 +3386,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-09",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -3743,7 +3743,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-09",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -4027,7 +4027,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-10",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -4309,7 +4309,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-11",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -4824,7 +4824,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-11",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",
@@ -5719,7 +5719,7 @@ export const LF4_1_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-06-12",
     "lastUpdate": "2020-09-04",
-    "schoolWeek": "13",
+    "schoolWeek": 13,
     "elements": [
       {
         "type": "TITLE",

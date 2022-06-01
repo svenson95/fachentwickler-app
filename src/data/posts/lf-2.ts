@@ -12,7 +12,7 @@ export const LF2_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-09-03",
     "lastUpdate": "2020-10-29",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TITLE",
@@ -74,7 +74,7 @@ export const LF2_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-09-03",
     "lastUpdate": "2020-05-07",
-    "schoolWeek": "2",
+    "schoolWeek": 2,
     "elements": [
       {
         "type": "TEXT",
@@ -136,7 +136,7 @@ export const LF2_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-09-22",
     "lastUpdate": "2020-11-04",
-    "schoolWeek": "16",
+    "schoolWeek": 16,
     "elements": [
       {
         "type": "TITLE",
@@ -402,7 +402,7 @@ export const LF2_POSTS: PostArticle[] = [
     "type": "test",
     "lessonDate": "2020-09-02",
     "lastUpdate": "2021-07-27",
-    "schoolWeek": "15",
+    "schoolWeek": 15,
     "elements": [
       {
         "type": "TITLE",
