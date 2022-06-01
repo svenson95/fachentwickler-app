@@ -1,26 +1,8 @@
 import { ElementType } from './element-type';
 
-export interface PostElement {
-  type: ElementType | string;
-  content?: string;
-  hidden?: boolean;
-  language?: 'java' | 'php' | 'javascript' | 'sql';
-  list?: Array<string | SublistItem>;
-  ordered?: boolean;
-  rows?: TableRow[];
-  object?: object;
-  size?: string;
-  elements?: PostElement[];
-}
-
-interface SublistItem {
+export interface SublistItem {
   content?: string;
   sublist: string[];
-}
-
-interface TableRow {
-  type: 'header' | 'default';
-  columns: TableColumn[];
 }
 
 interface TableColumn {
@@ -28,4 +10,22 @@ interface TableColumn {
   content: string;
   colSpan?: number;
   rowSpan?: number;
+}
+
+interface TableRow {
+  type: 'header' | 'default';
+  columns: TableColumn[];
+}
+
+export interface PostElement {
+  type: ElementType | string;
+  content?: string;
+  hidden?: boolean;
+  language?: 'java' | 'php' | 'javascript' | 'sql';
+  list?: Array<SublistItem | string>;
+  ordered?: boolean;
+  rows?: TableRow[];
+  object?: object;
+  size?: string;
+  elements?: PostElement[];
 }

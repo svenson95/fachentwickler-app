@@ -1,114 +1,115 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-
 import { ImageData, ImageFile } from '../../../models/image-data';
 import { UserRole } from '../../../models/user';
 import { AuthService } from '../../../services/auth/auth.service';
 import { DataService } from '../../../services/data/data.service';
 import { LoadingService } from '../../../services/loading.service';
-
 import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-dialog.component';
 
 @Component({
   selector: 'fe-image-manager-dialog',
-  templateUrl: './image-manager-dialog.component.html'
+  templateUrl: './image-manager-dialog.component.html',
 })
-export class ImageManagerDialogComponent implements OnInit {
-
-  chunksMapping = {
+export class ImageManagerDialogComponent {
+  public chunksMapping = {
     '=0': 'Keine Chunks',
     '=1': '1 Chunk',
-    other: '# Chunks'
+    other: '# Chunks',
   };
 
-  UserRole = UserRole;
-  dropzoneFile: File[] = [];
-  isUploadingImage: boolean;
-  isLoadingImages: boolean;
+  public UserRole = UserRole;
 
-  images: ImageFile[] = [];
-  currentPage = 0;
-  allImagesLength: number;
-  isSortedAscending = false;
-  selectedImage: ImageFile;
-  selectedImageData: ImageData;
+  public dropzoneFile: File[] = [];
 
-  @ViewChild('fileInput') fileInput;
+  public isUploadingImage: boolean;
 
-  constructor(public authService: AuthService,
-              private dataService: DataService,
-              private loadingService: LoadingService,
-              private dialog: MatDialog
+  public isLoadingImages: boolean;
+
+  public images: ImageFile[] = [];
+
+  public currentPage = 0;
+
+  public allImagesLength: number;
+
+  public isSortedAscending = false;
+
+  public selectedImage: ImageFile;
+
+  public selectedImageData: ImageData;
+
+  @ViewChild('fileInput') public fileInput;
+
+  constructor(
+    public authService: AuthService,
+    private dataService: DataService,
+    private loadingService: LoadingService,
+    private dialog: MatDialog,
   ) {
     this.loadAllImagesCount();
     this.getImages();
   }
 
-  ngOnInit(): void {
-  }
-
-  trackByFn(index, item): any {
+  // eslint-disable-next-line class-methods-use-this
+  public trackByFn(index, item): any {
     return item.id;
   }
 
   private loadAllImagesCount(): void {
-    this.dataService.getAllImagesLength().subscribe(
-      (data) => this.allImagesLength = data,
-      (error) => console.log('Error while GET images count', error)
-    );
+    this.dataService.getAllImagesLength().subscribe((data) => {
+      this.allImagesLength = data;
+    });
   }
 
-  onSelect(event): void {
+  public onSelect(event): void {
     this.dropzoneFile = [...event.addedFiles];
   }
 
-  onRemove(event): void {
+  public onRemove(event): void {
     this.dropzoneFile.splice(this.dropzoneFile.indexOf(event), 1);
   }
 
-  isEmpty(files): boolean {
+  // eslint-disable-next-line class-methods-use-this
+  public isEmpty(files): boolean {
     return files.length === 0;
   }
 
-  encode(image): string {
+  // eslint-disable-next-line class-methods-use-this
+  public encode(image): string {
     const dataStrings = image.chunks.map((chunk: any) => chunk.data);
-    return 'data:image/png;base64,' + dataStrings.join('');
+    return `data:image/png;base64,${dataStrings.join('')}`;
   }
 
-  uploadImage(event): void {
+  public uploadImage(event): void {
     event.preventDefault();
     this.isUploadingImage = true;
-    this.dataService.uploadImage(this.dropzoneFile[0]).subscribe(
-        async (response) => {
-          await this.dataService.getImageById(response.file.id).subscribe(
-              (image) => {
-                this.images.unshift(image.file);
-                this.images.pop();
-                this.dropzoneFile = [];
-                this.selectedImage = image.file;
-                this.selectedImageData = image;
-                this.allImagesLength += 1;
-              }, (err) => {
-                console.log('Get image by id failed');
-                console.log(err);
-              }, () => {
-                this.isUploadingImage = false;
-              }
-          );
+    this.dataService.uploadImage(this.dropzoneFile[0]).subscribe((response) => {
+      this.dataService.getImageById(response.file.id).subscribe(
+        (image) => {
+          this.images.unshift(image.file);
+          this.images.pop();
+          this.dropzoneFile = [];
+          this.selectedImage = image.file;
+          this.selectedImageData = image;
+          this.allImagesLength += 1;
         },
-        (error) => {
-          console.log('Uploading new image failed');
-          console.log(error);
-        }
-    );
+        (err) => {
+          // eslint-disable-next-line no-console
+          console.log('Get image by id failed', err);
+        },
+        () => {
+          this.isUploadingImage = false;
+        },
+      );
+    });
   }
 
-  deleteImage(id: string): void {
+  public deleteImage(id: string): void {
     const dialogRef = this.dialog.open(DeleteImageDialogComponent, {
       restoreFocus: true,
       panelClass: 'delete-image-modal',
       autoFocus: false,
-      data: { postId: id }
+      data: { postId: id },
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
@@ -120,9 +121,14 @@ export class ImageManagerDialogComponent implements OnInit {
     });
   }
 
-  formatBytes(bytes, decimals = 1): string {
-    if (bytes === null) { return ''; }
-    if (bytes === 0) { return '0 Bytes'; }
+  // eslint-disable-next-line class-methods-use-this
+  public formatBytes(bytes, decimals = 1): string {
+    if (bytes === null) {
+      return '';
+    }
+    if (bytes === 0) {
+      return '0 Bytes';
+    }
 
     const k = 1024;
     const dm = decimals < 0 ? 0 : decimals;
@@ -130,22 +136,14 @@ export class ImageManagerDialogComponent implements OnInit {
 
     const i = Math.floor(Math.log(bytes) / Math.log(k));
 
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    return `${parseFloat((bytes / k ** i).toFixed(dm))} ${sizes[i]}`;
   }
 
-  setIsLoadingImage(value: boolean): void {
-    this.isLoadingImages = value;
-  }
-
-  loadImages(pageNumber: number): void {
+  public loadImages(pageNumber: number): void {
     this.loadPage(pageNumber);
   }
 
-  showPreview(): void {
-    // TODO: install image-viewer package (fullscreen)
-  }
-
-  loadPage(page: number): void {
+  private loadPage(page: number): void {
     if (this.isLoadingImages) {
       return;
     }
@@ -154,7 +152,7 @@ export class ImageManagerDialogComponent implements OnInit {
     this.getImages(this.currentPage);
   }
 
-  changeSorting(): void {
+  public changeSorting(): void {
     if (this.isLoadingImages) {
       return;
     }
@@ -163,23 +161,39 @@ export class ImageManagerDialogComponent implements OnInit {
     this.getImages();
   }
 
-  getImages(page = null): void {
+  private getImages(page = null): void {
     this.isLoadingImages = true;
 
-    this.dataService.getMultipleImages(page || 0, undefined, this.isSortedAscending ? 'ascending' : 'descending').subscribe(data => {
-      this.images = data;
-      this.isLoadingImages = false;
+    this.dataService
+      .getMultipleImages(
+        page || 0,
+        undefined,
+        this.isSortedAscending ? 'ascending' : 'descending',
+      )
+      .subscribe((data) => {
+        this.images = data;
+        this.isLoadingImages = false;
 
-      if (page === null) {
-        this.selectedImage = data[0];
-        this.dataService.getImageById(data[0]._id).subscribe(value => this.selectedImageData = value);
-      }
+        if (page === null) {
+          // eslint-disable-next-line prefer-destructuring
+          this.selectedImage = data[0];
+          this.dataService.getImageById(data[0]._id).subscribe((value) => {
+            this.selectedImageData = value;
+          });
+        }
+      });
+  }
+
+  public setSelectedImage(image: ImageFile): void {
+    this.selectedImageData = undefined;
+    this.selectedImage = image;
+    this.dataService.getImageById(image._id).subscribe((value) => {
+      this.selectedImageData = value;
     });
   }
 
-  setSelectedImage(image: ImageFile): void {
-    this.selectedImageData = undefined;
-    this.selectedImage = image;
-    this.dataService.getImageById(image._id).subscribe(value => this.selectedImageData = value);
+  // eslint-disable-next-line class-methods-use-this
+  public showPreview(): void {
+    // TODO: install image-viewer package (fullscreen)
   }
 }

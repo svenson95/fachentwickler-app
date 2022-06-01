@@ -1,8 +1,3 @@
-export interface ImageData {
-  file: ImageFile;
-  chunks: ImageChunk[];
-}
-
 export interface ImageFile {
   _id: string;
   filename: string;
@@ -18,4 +13,9 @@ export interface ImageChunk {
   files_id: string;
   data: string;
   n: number;
+}
+
+export interface ImageData {
+  file: ImageFile;
+  chunks: ImageChunk[];
 }

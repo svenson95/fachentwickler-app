@@ -39,7 +39,6 @@
     }
 
     .footer-buttons {
-
       @include to-md {
         display: flex;
         flex-direction: column;
@@ -50,11 +49,11 @@
 
       a {
         outline: none;
-        font-size: .9rem;
+        font-size: 0.9rem;
         font-weight: 300;
 
         @include to-md {
-          font-size: .8rem;
+          font-size: 0.8rem;
           line-height: 26px;
         }
 
@@ -74,5 +73,4 @@
       }
     }
   }
-
 }

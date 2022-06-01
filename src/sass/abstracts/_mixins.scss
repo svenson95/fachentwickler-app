@@ -9,55 +9,55 @@
 /* Breakpoints */
 @mixin from($width) {
   @media screen and (min-width: $width) {
-    @content
+    @content;
   }
 }
 
 @mixin from-tiny() {
   @include from($breakpoint-tiny) {
-    @content
+    @content;
   }
 }
 
 @mixin to-tiny() {
   @media screen and (max-width: $breakpoint-tiny) {
-    @content
+    @content;
   }
 }
 
 @mixin from-xs() {
   @include from($breakpoint-xs) {
-    @content
+    @content;
   }
 }
 
 @mixin to-xs() {
   @media screen and (max-width: $breakpoint-xs) {
-    @content
+    @content;
   }
 }
 
 @mixin to-md() {
   @media screen and (max-width: $breakpoint-md) {
-    @content
+    @content;
   }
 }
 
 @mixin from-md() {
   @include from($breakpoint-md) {
-    @content
+    @content;
   }
 }
 
 @mixin from-lg() {
   @include from($breakpoint-lg) {
-    @content
+    @content;
   }
 }
 
 @mixin to-lg() {
   @media screen and (max-width: $breakpoint-lg) {
-    @content
+    @content;
   }
 }
 

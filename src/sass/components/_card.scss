@@ -31,13 +31,13 @@ mat-card.mat-card.fe-card {
   }
 
   .post-last-update {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--grey-2);
     text-align: right;
     margin-top: 40px;
 
     @include to-xs {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -61,13 +61,13 @@ p.fe-card-title {
 p.fe-card-description {
   display: flex;
   align-items: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 300;
   color: var(--grey-3);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   margin: 0;
 
   @include to-xs {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }

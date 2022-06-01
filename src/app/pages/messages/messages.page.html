@@ -1,5 +1,6 @@
 <div class="page messages">
   <fe-news-card-container [news]="news"></fe-news-card-container>
+  <p *ngIf="isLoading">loading...</p>
 
   <mat-card class="fe-card">
     <p class="fe-card-title">Lehrer</p>

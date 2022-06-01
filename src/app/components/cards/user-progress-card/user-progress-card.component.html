@@ -1,24 +1,27 @@
 <mat-card class="fe-card user-progress-card">
   <p class="fe-card-title">Fortschritt</p>
   <mat-card-content class="fe-view-wrapper">
-
     <div class="current-lesson">
       <p class="label">
         <span>Lektion </span>
-        <span>{{ user?.progress ? user.progress?.length : '...' }} </span>
+        <span>{{ user?.progress ? user.progress?.length : "..." }} </span>
         <span>von </span>
-        <span>{{ dashboard?.allLessons?.length || '...' }}</span>
+        <span>{{ dashboard?.allLessons?.length || "..." }}</span>
       </p>
       <mat-progress-bar [value]="dashboard?.lessonsPercentage"></mat-progress-bar>
     </div>
 
     <div class="current-week">
-      <p class="label">Schulwoche {{ dashboard?.nextLesson?.schoolWeek || '...' }} von {{ dataService.schoolWeeksLength }}</p>
-      <mat-progress-bar [value]="(dashboard?.nextLesson?.schoolWeek / dataService.schoolWeeksLength) * 100"></mat-progress-bar>
+      <p class="label">
+        Schulwoche {{ dashboard?.nextLesson?.schoolWeek || "..." }} von
+        {{ dataService.schoolWeeksLength }}
+      </p>
+      <mat-progress-bar
+        [value]="(asNumber(dashboard?.nextLesson?.schoolWeek) / dataService.schoolWeeksLength) * 100"
+      ></mat-progress-bar>
     </div>
 
     <fe-post-link *ngIf="dashboard?.nextLesson" [post]="dashboard?.nextLesson" title="Nächste Lektion"></fe-post-link>
     <fe-loading-spinner *ngIf="!dashboard?.nextLesson"></fe-loading-spinner>
-
   </mat-card-content>
 </mat-card>

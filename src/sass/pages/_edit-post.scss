@@ -20,7 +20,7 @@
       top: 20px;
       z-index: 3;
       outline: var(--progressbar-height) solid var(--tertiary-color);
-      outline-offset: calc(var(--progressbar-height)  * -1);
+      outline-offset: calc(var(--progressbar-height) * -1);
 
       .elements-label {
         font-size: 1.2em;

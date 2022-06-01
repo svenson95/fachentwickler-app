@@ -1,14 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { NewsArticlePage } from './news-article.page';
-import { NewsArticleRoutingModule } from './news-article-routing.module';
-
-import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
-
+import { PostElementModule } from '../../components/post-element/post-element.module';
+import { NewsArticleRoutingModule } from './news-article-routing.module';
+import { NewsArticlePage } from './news-article.page';
 
 @NgModule({
   declarations: [NewsArticlePage],
@@ -17,7 +13,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     AngularMaterialModule,
     NewsArticleRoutingModule,
     PostElementModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class NewsArticlePageModule { }
+export class NewsArticlePageModule {}

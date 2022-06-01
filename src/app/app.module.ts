@@ -1,28 +1,31 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { CommonModule, registerLocaleData } from '@angular/common';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import localeDe from '@angular/common/locales/de';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import {
+  MatNativeDateModule,
+  MAT_RIPPLE_GLOBAL_OPTIONS,
+  RippleGlobalOptions,
+} from '@angular/material/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import localeDe from '@angular/common/locales/de';
-
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MAT_RIPPLE_GLOBAL_OPTIONS, MatNativeDateModule, RippleGlobalOptions } from '@angular/material/core';
-import { AngularMaterialModule } from './app-common/angular-material.module';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-
-import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { PageComponentModule } from './app-common/page/page.module';
 import { environment } from '../environments/environment';
+import { AngularMaterialModule } from './app-common/angular-material.module';
+import { PageComponentModule } from './app-common/page/page.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {
     enterDuration: 200,
-    exitDuration: 500
-  }
+    exitDuration: 500,
+  },
 };
 
 @NgModule({
@@ -40,26 +43,32 @@ const globalRippleConfig: RippleGlobalOptions = {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'de-DE'},
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}},
-    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
-    {provide: HIGHLIGHT_OPTIONS, useValue: {
+    { provide: LOCALE_ID, useValue: 'de-DE' },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'fill' },
+    },
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
         coreLibraryLoader: () => import('highlight.js/lib/core'),
         languages: {
           java: () => import('highlight.js/lib/languages/java'),
           javascript: () => import('highlight.js/lib/languages/javascript'),
           sql: () => import('highlight.js/lib/languages/sql'),
-          php: () => import('highlight.js/lib/languages/php')
-        }
-      }},
-    {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig}
+          php: () => import('highlight.js/lib/languages/php'),
+        },
+      },
+    },
+    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
   ],
   entryComponents: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {

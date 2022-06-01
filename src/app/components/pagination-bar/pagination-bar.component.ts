@@ -1,81 +1,71 @@
-import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy, Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({ name: 'pageButtons' })
-export class PageButtonsPipe implements PipeTransform {
-  transform(page: number, buttonsPerPage: number, total: number): any {
-    const trimStart = (page) * buttonsPerPage;
-    let trimEnd = trimStart + buttonsPerPage;
-    trimEnd = trimEnd <= total ? trimEnd : total;
-
-    const pages = [];
-    for (let i = trimStart; i < trimEnd; i++) {
-      pages.push(i);
-    }
-
-    return pages;
-  }
-}
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'fe-pagination-bar',
   templateUrl: './pagination-bar.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PaginationBarComponent implements OnInit {
+export class PaginationBarComponent {
+  @Input() public currentPage: number;
 
-  @Input() currentPage: number;
-  @Input() totalItems: number;
-  @Input() isLoading?: boolean;
+  @Input() private totalItems: number;
 
-  paginationPage = 0;
-  buttonsPerPage = 7;
+  @Input() public isLoading?: boolean;
 
-  disabledOpacity = 0.4;
+  public paginationPage = 0;
 
-  @Output() changePage = new EventEmitter<number>();
+  public buttonsPerPage = 7;
 
-  constructor() { }
+  public disabledOpacity = 0.4;
 
-  ngOnInit(): void {
-  }
+  @Output() public changePage = new EventEmitter<number>();
 
-  get totalPages(): number {
+  public get totalPages(): number {
     const itemsPerPage = 10;
     return Math.ceil(this.totalItems / itemsPerPage);
   }
 
-  goTo(pageNumber): void {
+  public goTo(pageNumber): void {
     if (this.currentPage === pageNumber) {
       return;
     }
     this.changePage.emit(pageNumber);
   }
 
-  goToPreviousPage(): void {
-    if (this.paginationPage - 1 >= 0) {
+  public goToPreviousPage(): void {
+    const previousPage = this.paginationPage - 1;
+    if (previousPage >= 0) {
       this.paginationPage -= 1;
     }
   }
 
-  goToNextPage(): void {
-    if (this.paginationPage + 1 <= Math.floor(this.totalPages / this.buttonsPerPage)) {
+  public goToNextPage(): void {
+    const nextPage = this.paginationPage + 1;
+    if (nextPage <= Math.floor(this.totalPages / this.buttonsPerPage)) {
       this.paginationPage += 1;
     }
   }
 
-  goToFirstPage(): void {
+  public goToFirstPage(): void {
     this.paginationPage = 0;
   }
 
-  goToLastPage(): void {
+  public goToLastPage(): void {
     this.paginationPage = Math.floor(this.totalPages / this.buttonsPerPage);
   }
 
-  get isFirstPaginationPage(): boolean {
+  public get isFirstPaginationPage(): boolean {
     return !(this.paginationPage - 1 >= 0);
   }
 
-  get isLastPaginationPage(): boolean {
-    return !(this.paginationPage + 1 <= Math.floor(this.totalPages / this.buttonsPerPage));
+  public get isLastPaginationPage(): boolean {
+    const nextPage = this.paginationPage + 1;
+    return !(nextPage <= Math.floor(this.totalPages / this.buttonsPerPage));
   }
 }

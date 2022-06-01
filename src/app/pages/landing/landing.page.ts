@@ -1,33 +1,40 @@
 import { Component } from '@angular/core';
-
-import { PostIndexCards, PostMatching, PostQuiz } from '../../models/post';
-import { User } from '../../models/user';
-import { DashboardData } from '../../models/dashboard-data';
-import { SchoolWeek } from '../../models/school-week';
-import { Schedule } from '../../models/schedule';
-import { HeaderService } from '../../services/header.service';
-
-import { quizzes } from '../../../data/quizzes';
 import { indexCards } from '../../../data/index-cards';
 import { matchings } from '../../../data/matchings';
-import { testDashboard, testSchoolWeek, testUser, testSchedule } from '../../constants/landing-page-data';
+import { quizzes } from '../../../data/quizzes';
+import {
+  testDashboard,
+  testSchedule,
+  testSchoolWeek,
+  testUser,
+} from '../../constants/landing-page-data';
+import { DashboardData } from '../../models/dashboard-data';
+import { PostIndexCards, PostMatching, PostQuiz } from '../../models/post';
+import { Schedule } from '../../models/schedule';
+import { SchoolWeek } from '../../models/school-week';
+import { User } from '../../models/user';
+import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'fe-landing-page',
-  templateUrl: './landing.page.html'
+  templateUrl: './landing.page.html',
 })
 export class LandingPage {
+  public testUser: User = testUser;
 
-  testUser: User = testUser;
-  testSchedule: Schedule = testSchedule;
-  testDashboard: DashboardData = testDashboard;
-  testSchoolWeek: SchoolWeek = testSchoolWeek;
-  testQuiz: PostQuiz = quizzes[2];
-  testIndexCards: PostIndexCards = indexCards[1];
-  testMatching: PostMatching = matchings[0];
+  public testSchedule: Schedule = testSchedule;
+
+  public testDashboard: DashboardData = testDashboard;
+
+  public testSchoolWeek: SchoolWeek = testSchoolWeek;
+
+  public testQuiz: PostQuiz = quizzes[2];
+
+  public testIndexCards: PostIndexCards = indexCards[1];
+
+  public testMatching: PostMatching = matchings[0];
 
   constructor(private headerService: HeaderService) {
     this.headerService.setPageTitle('Start');
   }
-
 }

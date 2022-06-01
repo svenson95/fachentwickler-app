@@ -1,7 +1,5 @@
 .page.my-profile {
   mat-card.fe-card {
-    .fe-card-title {
-    }
     .fe-view-wrapper {
       margin-top: 40px;
       font-size: 1.2em;
@@ -28,7 +26,7 @@
         text-align: right;
 
         .fe-edit-user-btn {
-          font-size: .8em;
+          font-size: 0.8em;
           width: fit-content;
 
           &:not(:first-of-type) {
@@ -89,7 +87,7 @@
     @include from-xs {
       width: 100px;
       padding: 4px;
-      font-size: .6rem;
+      font-size: 0.6rem;
       margin-left: 20px;
       margin-bottom: 12px;
     }
@@ -97,11 +95,12 @@
     @include to-xs {
       width: 80px;
       padding: 3px 4px;
-      font-size: .45rem;
+      font-size: 0.45rem;
     }
   }
 
-  button.start-change, button.discard-change {
+  button.start-change,
+  button.discard-change {
     color: var(--text-color-1);
 
     &:disabled {
@@ -110,32 +109,32 @@
   }
 
   button.start-change {
-    border-color: rgba(var(--grey-4-rgb), .1);
-    background: rgba(var(--grey-4-rgb), .1);
+    border-color: rgba(var(--grey-4-rgb), 0.1);
+    background: rgba(var(--grey-4-rgb), 0.1);
 
     &:hover:not([disabled]) {
-      background: rgba(var(--secondary-color-rgb), .3);
+      background: rgba(var(--secondary-color-rgb), 0.3);
     }
   }
 
   button.discard-change {
-    border-color: rgba(var(--tertiary-color-rgb), .3);
-    background: rgba(var(--tertiary-color-rgb), .3);
+    border-color: rgba(var(--tertiary-color-rgb), 0.3);
+    background: rgba(var(--tertiary-color-rgb), 0.3);
   }
 
   button.save-change {
-    border-color: rgba(var(--primary-color-rgb), .7);
-    background: rgba(var(--primary-color-rgb), .7);
+    border-color: rgba(var(--primary-color-rgb), 0.7);
+    background: rgba(var(--primary-color-rgb), 0.7);
     color: white;
 
     &:disabled {
-      background: rgba(var(--grey-4-rgb), .6);
-      border-color: rgba(var(--grey-4-rgb), .6);
+      background: rgba(var(--grey-4-rgb), 0.6);
+      border-color: rgba(var(--grey-4-rgb), 0.6);
     }
   }
 
   mat-form-field.fe-form-field {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 
     @include from-lg {
       width: 350px;
@@ -167,12 +166,16 @@
     }
 
     .mat-form-field-underline {
-      background-image: linear-gradient(to right, rgba(var(--grey-4), 1) 0%, rgba(var(--grey-4), 1) 0%);
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--grey-4), 1) 0%,
+        rgba(var(--grey-4), 1) 0%
+      );
       background-color: rgba(var(--tertiary-color-rgb), 0.3);
     }
 
     .mat-error {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
 
     &.mat-form-field-disabled {
@@ -190,7 +193,6 @@
         width: 300px;
       }
     }
-
   }
 
   mat-form-field.theme {

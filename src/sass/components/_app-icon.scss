@@ -6,7 +6,7 @@ fe-icon {
   .fe-app-name {
     margin-bottom: 0;
     color: var(--text-color-1);
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 13px;
     align-self: center;
 
@@ -84,7 +84,6 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
     }
 
     .fe-icon-wrapper {
-
       @include to-xs {
         width: 24px;
       }
@@ -95,7 +94,7 @@ fe-header.fe-header .mat-toolbar .sidenav-section {
       transition: letter-spacing 500ms ease-out;
     }
     &:active .fe-app-name {
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
     }
   }
 }
@@ -131,7 +130,8 @@ fe-header.fe-header .mat-toolbar.sidenav--open {
 }
 
 fe-header.fe-header .mat-toolbar .fe-logo-wrapper {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .fe-icon-wrapper:not(.active-route) {
       @include from-md {
         transition: letter-spacing 150ms ease-out;

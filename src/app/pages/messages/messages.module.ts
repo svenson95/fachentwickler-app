@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { MessagesPage } from './messages.page';
-import { MessagesPageRoutingModule } from './messages-routing.module';
-
 import { NewsCardContainerModule } from '../../containers/news-card-container/news-card-container.module';
-
-
+import { MessagesPageRoutingModule } from './messages-routing.module';
+import { MessagesPage } from './messages.page';
 
 @NgModule({
   declarations: [MessagesPage],
@@ -15,7 +11,7 @@ import { NewsCardContainerModule } from '../../containers/news-card-container/ne
     CommonModule,
     MessagesPageRoutingModule,
     AngularMaterialModule,
-    NewsCardContainerModule
-  ]
+    NewsCardContainerModule,
+  ],
 })
-export class MessagesPageModule { }
+export class MessagesPageModule {}

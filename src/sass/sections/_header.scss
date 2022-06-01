@@ -12,11 +12,12 @@ fe-header.fe-header {
   left: 0;
   right: 0;
   z-index: 333;
+  box-shadow: var(--box-shadow);
 }
 
 mat-sidenav-container.mat-drawer-container {
-
-  .fe-content, .sidenav-content {
+  .fe-content,
+  .sidenav-content {
     @include from-xs {
       padding-top: 64px;
     }
@@ -56,7 +57,7 @@ fe-header.fe-header .mat-toolbar {
     .dashboard-btn,
     .sidenav-btn,
     .more-menu-btn {
-      color: var(--text-color-1);
+      color: var(--text-color-2);
     }
 
     .header-content {
@@ -78,18 +79,19 @@ fe-header.fe-header .mat-toolbar {
         }
 
         @include to-xs {
-          font-size: .8em;
+          font-size: 0.8em;
           margin-left: 0;
           padding: 0;
         }
 
         mat-icon {
           color: var(--secondary-color);
-          transform: scale(.8);
+          transform: scale(0.8);
         }
 
         .title {
-          font-size: .9rem;
+          font-size: 0.9rem;
+          font-weight: 400;
           text-transform: uppercase;
           line-height: 12px;
           letter-spacing: 1px;
@@ -112,7 +114,8 @@ fe-header.fe-header .mat-toolbar {
         .search-bar-form-field {
           margin-left: 15px;
 
-          &.mat-focused, .search-bar-form-field:hover {
+          &.mat-focused,
+          .search-bar-form-field:hover {
             background-color: var(--button-hover-background);
             transition: none;
           }
@@ -139,20 +142,23 @@ fe-header.fe-header .mat-toolbar {
           }
 
           .dashboard-btn {
-            font-size: .9rem;
-            border-bottom: 1px solid rgba(var(--grey-4-rgb), .4);
+            font-size: 0.9rem;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(var(--grey-4-rgb), 0.4);
             padding: 8px 14px 6px;
             margin-left: 10px;
             margin-right: 10px;
 
-            &:hover {
-              background: rgba(240,240,240, .1);
+            &:hover,
+            &.active-route {
+              background: var(--button-hover-background);
             }
 
             &.active-route {
               border-color: var(--secondary-color);
 
-              h1, span {
+              h1,
+              span {
                 &:before,
                 &:after {
                   opacity: 1;
@@ -181,8 +187,9 @@ fe-header.fe-header .mat-toolbar {
             transition: background-color 100ms ease-in-out;
 
             @include from-xs {
-              &:hover, &.is-active {
-                background: rgba(240,240,240, .1);
+              &:hover,
+              &.is-active {
+                background: rgba(240, 240, 240, 0.1);
                 transition: none;
               }
             }

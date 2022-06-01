@@ -1,4 +1,3 @@
-
 .fe-card.lesson-footer {
   .button-container {
     display: flex;
@@ -10,7 +9,7 @@
 
     .fe-text-button {
       @include to-xs {
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
     }
   }

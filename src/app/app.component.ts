@@ -2,10 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'fe-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
-export class AppComponent {
-  title = 'fachentwickler-app';
-
-  constructor() {}
-}
+export class AppComponent {}

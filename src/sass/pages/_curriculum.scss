@@ -1,7 +1,5 @@
 .page.curriculum {
-
   .school-week-card {
-
     @include from-lg {
       margin-bottom: 30px !important;
     }
@@ -20,7 +18,7 @@
         margin-left: 20px;
 
         .mat-button-toggle + .mat-button-toggle {
-          border-left: solid 1px rgba(var(--tertiary-color-rgb), .2);
+          border-left: solid 1px rgba(var(--tertiary-color-rgb), 0.2);
         }
       }
 
@@ -32,7 +30,7 @@
 
   mat-button-toggle-group {
     border-radius: var(--border-radius);
-    border-color: rgba(var(--tertiary-color-rgb), .2);
+    border-color: rgba(var(--tertiary-color-rgb), 0.2);
 
     mat-button-toggle {
       background-color: transparent;
@@ -44,7 +42,7 @@
     }
 
     .mat-button-toggle-checked {
-      background-color: rgba(var(--secondary-color-rgb), .15);
+      background-color: rgba(var(--secondary-color-rgb), 0.15);
       font-weight: 700;
     }
   }
@@ -70,7 +68,7 @@
 
         .mat-button-toggle + .mat-button-toggle {
           border-left: none;
-          border-top: solid 1px rgba(var(--tertiary-color-rgb), .2);
+          border-top: solid 1px rgba(var(--tertiary-color-rgb), 0.2);
         }
       }
     }
@@ -110,7 +108,6 @@
   .fe-year-toggle,
   .fe-week-toggle {
     mat-button-toggle {
-
       @include from-xs {
         width: $toggleSize;
       }
@@ -126,10 +123,9 @@
 
         @include to-xs {
           line-height: $toggleSize - 10;
-          font-size: .7rem;
+          font-size: 0.7rem;
         }
       }
     }
   }
-
 }

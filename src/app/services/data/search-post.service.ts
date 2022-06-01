@@ -1,35 +1,41 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 import { Post } from '../../models/post';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SearchPostService {
+  public searchTerm = '';
 
-  searchTerm = '';
-  searchedTerm: string;
-  searchResults$: Subject<Post[]> = new Subject();
-  redirectUrl: string;
-  isSearching = false;
+  public searchedTerm: string;
 
-  constructor(private httpClient: HttpClient) { }
+  public searchResults$: Subject<Post[]> = new Subject();
 
-  searchPosts(searchTerm: string): Observable<Post[]> {
+  public redirectUrl: string;
+
+  public isSearching = false;
+
+  constructor(private httpClient: HttpClient) {}
+
+  public searchPosts(searchTerm: string): Observable<Post[]> {
     this.isSearching = true;
     this.searchedTerm = searchTerm;
-    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search?query=${searchTerm}`)
-      .pipe(map((response) => {
-        // console.log('response GET search post', response);
-        this.isSearching = false;
-        return response;
-      }));
+    return this.httpClient
+      .get<Post[]>(`${environment.baseUrl}/search?query=${searchTerm}`)
+      .pipe(
+        map((response) => {
+          // console.log('response GET search post', response);
+          this.isSearching = false;
+          return response;
+        }),
+      );
   }
 
-  setRedirectUrl(url): void {
-      this.redirectUrl = url;
+  public setRedirectUrl(url): void {
+    this.redirectUrl = url;
   }
 }

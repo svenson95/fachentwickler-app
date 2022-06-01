@@ -1,15 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { CurriculumPage } from './curriculum.page';
-import { CurriculumPageRoutingModule } from './curriculum-routing.module';
-
 import { SchoolWeekCardModule } from '../../components/cards/school-week-card/school-week-card.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
-
+import { CurriculumPageRoutingModule } from './curriculum-routing.module';
+import { CurriculumPage } from './curriculum.page';
 
 @NgModule({
   declarations: [CurriculumPage],
@@ -19,7 +15,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     AngularMaterialModule,
     SchoolWeekCardModule,
     FormsModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class CurriculumPageModule { }
+export class CurriculumPageModule {}

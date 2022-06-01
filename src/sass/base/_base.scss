@@ -3,7 +3,7 @@
 *::after,
 *::before {
   margin: 0;
-  padding: 0;                 /* set margin and padding of all elements to zero */
+  padding: 0; /* set margin and padding of all elements to zero */
   box-sizing: inherit;
 }
 
@@ -11,12 +11,13 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
-  font-size: 100%;           /* defines what 1rem is */
+html,
+body {
+  font-size: 100%; /* defines what 1rem is */
 }
 
 body {
-  box-sizing: border-box;     /* elements width and height should include margin and padding */
+  box-sizing: border-box; /* elements width and height should include margin and padding */
   background: var(--background-primary);
   &.scroll-locked {
     overflow: hidden;
@@ -37,7 +38,7 @@ body {
 
 /* MAT-RIPPLE-ELEMENT */
 .mat-ripple-element {
-  background-color: rgba(var(--tertiary-color-rgb), .2);
+  background-color: rgba(var(--tertiary-color-rgb), 0.2);
 }
 
 /* MAT-SLIDE-TOGGLE */
@@ -49,7 +50,7 @@ body {
   }
 
   .mat-slide-toggle-bar {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   &.mat-checked {
@@ -62,7 +63,7 @@ body {
     }
 
     .mat-slide-toggle-bar {
-      background-color: rgba(255,255,255,.5);
+      background-color: rgba(255, 255, 255, 0.5);
     }
   }
 }

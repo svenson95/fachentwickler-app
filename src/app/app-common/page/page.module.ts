@@ -18,7 +18,6 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
 import { NavLinkModule } from '../../components/nav-link/nav-link.module';
 import { HamburgerIconComponent } from '../hamburger-icon/hamburger-icon.component';
 
-
 @NgModule({
   declarations: [
     PageComponent,
@@ -27,7 +26,7 @@ import { HamburgerIconComponent } from '../hamburger-icon/hamburger-icon.compone
     SidenavComponent,
     ContentComponent,
     AppIconComponent,
-    LogoutDialogComponent
+    LogoutDialogComponent,
   ],
   exports: [PageComponent],
   imports: [
@@ -39,7 +38,7 @@ import { HamburgerIconComponent } from '../hamburger-icon/hamburger-icon.compone
     SearchFieldModule,
     HeaderMenuModule,
     LoadingSpinnerModule,
-    NavLinkModule
-  ]
+    NavLinkModule,
+  ],
 })
-export class PageComponentModule { }
+export class PageComponentModule {}

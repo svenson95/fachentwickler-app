@@ -1,16 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { SubjectPage } from './subject.page';
-import { SubjectPageRoutingModule } from './subject-routing.module';
-
-import { PostLinkModule } from '../../components/post-link/post-link.module';
-import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
+import { PostElementModule } from '../../components/post-element/post-element.module';
+import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { PipesModule } from '../../pipes/pipes.module';
-
-
+import { SubjectPageRoutingModule } from './subject-routing.module';
+import { SubjectPage } from './subject.page';
 
 @NgModule({
   declarations: [SubjectPage],
@@ -21,7 +17,8 @@ import { PipesModule } from '../../pipes/pipes.module';
     PostLinkModule,
     PostElementModule,
     LoadingSpinnerModule,
-    PipesModule
-  ]
+    PipesModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SubjectPageModule { }
+export class SubjectPageModule {}

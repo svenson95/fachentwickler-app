@@ -2,7 +2,7 @@ $searchbar-height: 35px;
 
 .search-bar-form-field {
   width: 200px;
-  border-bottom: 1px solid rgba(var(--tertiary-color-rgb), .3);
+  border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
 
   @include to-lg {
     width: 180px;
@@ -44,7 +44,7 @@ $searchbar-height: 35px;
       border-top: 0;
 
       input {
-        font-size: .9rem;
+        font-size: 0.9rem;
         vertical-align: middle;
         color: var(--text-color-1);
 

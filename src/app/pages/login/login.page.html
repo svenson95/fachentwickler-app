@@ -6,33 +6,41 @@
         <div class="form-inputs">
           <mat-form-field class="input name">
             <mat-label>Benutzername</mat-label>
-            <input matInput type="text" autocomplete="off" formControlName="username" (keypress)="usernameFieldKeyPress($event)"/>
-            <mat-error *ngIf="form.controls.username.hasError('username') && !form.controls.username.hasError('required')">
+            <input
+              matInput
+              type="text"
+              autocomplete="off"
+              formControlName="username"
+              (keypress)="usernameFieldKeyPress($event)"
+            />
+            <mat-error
+              *ngIf="form.controls.username.hasError('username') && !form.controls.username.hasError('required')"
+            >
               Benutzername ungültig
             </mat-error>
             <mat-error *ngIf="form.controls.username.hasError('minlength')">
               Benutzername zu kurz (min. 4 Zeichen)
             </mat-error>
-            <mat-error *ngIf="form.controls.username.hasError('required')">
-              Benutzername erforderlich
-            </mat-error>
+            <mat-error *ngIf="form.controls.username.hasError('required')"> Benutzername erforderlich </mat-error>
           </mat-form-field>
 
           <mat-form-field class="input password">
             <mat-label>Passwort</mat-label>
-            <input matInput type="password" formControlName="password" #passwordInput/>
-            <mat-error *ngIf="form.controls.password.hasError('invalidPassword') && !form.controls.password.hasError('required')">
+            <input matInput type="password" formControlName="password" #passwordInput />
+            <mat-error
+              *ngIf="form.controls.password.hasError('invalidPassword') && !form.controls.password.hasError('required')"
+            >
               Passwort falsch
             </mat-error>
-            <mat-error *ngIf="form.controls.password.hasError('password') && !form.controls.password.hasError('required')">
+            <mat-error
+              *ngIf="form.controls.password.hasError('password') && !form.controls.password.hasError('required')"
+            >
               Passwort ungültig
             </mat-error>
             <mat-error *ngIf="form.controls.password.hasError('minlength')">
               Passwort zu kurz (min. 4 Zeichen)
             </mat-error>
-            <mat-error *ngIf="form.controls.password.hasError('required')">
-              Passwort erforderlich
-            </mat-error>
+            <mat-error *ngIf="form.controls.password.hasError('required')"> Passwort erforderlich </mat-error>
           </mat-form-field>
         </div>
         <div class="buttons-wrapper">
@@ -42,7 +50,7 @@
           </a>
         </div>
       </form>
-      <hr class="fe-divider-line"/>
+      <hr class="fe-divider-line" />
       <div class="register-form">
         <p class="no-account-hint">Noch nicht registriert?</p>
         <a class="fe-text-button" routerLink="/register" matRipple>

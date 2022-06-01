@@ -1,33 +1,30 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-
-import { subjects } from 'src/app/constants/menu-items';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { subjects } from '../../constants/menu-items';
 import { MenuItem } from '../../models/menu-item';
 import { Schedule } from '../../models/schedule';
 
 @Component({
   selector: 'fe-schedule',
   templateUrl: './schedule.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ScheduleComponent implements OnInit {
+export class ScheduleComponent {
+  @Input() public schedule: Schedule;
 
-  @Input() schedule: Schedule;
+  // eslint-disable-next-line class-methods-use-this
+  public subjectName = (subject) => {
+    const sub = subjects.find(
+      (item: MenuItem) => item.url.substring(1) === subject,
+    );
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  /* -- Component functions -- */
-  subjectName = subject => {
-    const sub = subjects.find((item: MenuItem) => item.url.substring(1) === subject);
     if (sub) {
       return sub.shortTitle;
-    } else if (subject === 'sport') {
-      return 'Sport';
-    } else {
-      return subject;
     }
-  }
 
+    if (subject === 'sport') {
+      return 'Sport';
+    }
+
+    return subject;
+  };
 }

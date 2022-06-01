@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { IndexCardComponent } from './index-card.component';
 
 describe('IndexCardComponent', () => {
@@ -8,9 +7,8 @@ describe('IndexCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndexCardComponent ]
-    })
-    .compileComponents();
+      declarations: [IndexCardComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

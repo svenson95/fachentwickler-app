@@ -1,31 +1,31 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-
-import { DataService } from '../../../services/data/data.service';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { PostQuiz } from '../../../models/post';
+import { DataService } from '../../../services/data/data.service';
 
 @Component({
   selector: 'fe-quiz-card',
-  templateUrl: './quiz-card.component.html'
+  templateUrl: './quiz-card.component.html',
 })
-export class QuizCardComponent implements OnInit {
+export class QuizCardComponent {
+  @Input() public quiz: PostQuiz;
 
-  @Input() quiz: PostQuiz;
-  @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
+  @ViewChild('slideInWrapper') public slideInWrapper: ElementRef;
 
-  level = 0;
-  wrongAnswers = 0;
-  answer: number;
-  isCorrectAnswer: boolean;
-  end = false;
+  public level = 0;
 
-  finishEmojis = ['⭐', '👍', '😐', '😲', '🤨', '😦', '😵'];
+  public wrongAnswers = 0;
+
+  public answer: number;
+
+  public isCorrectAnswer: boolean;
+
+  public end = false;
+
+  public finishEmojis = ['⭐', '👍', '😐', '😲', '🤨', '😦', '😵'];
 
   constructor(public dataService: DataService) {}
 
-  ngOnInit(): void {
-  }
-
-  checkAnswer(answer: number): void {
+  public checkAnswer(answer: number): void {
     if (this.answer !== undefined) return;
     this.answer = answer;
 
@@ -33,33 +33,36 @@ export class QuizCardComponent implements OnInit {
       this.isCorrectAnswer = true;
     } else {
       this.isCorrectAnswer = false;
-      this.wrongAnswers++;
+      this.wrongAnswers += 1;
     }
 
     setTimeout(() => {
       this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
-      setTimeout(() => this.slideInWrapper.nativeElement.classList.remove('slide-in-animation'), 400);
+      setTimeout(() => {
+        this.slideInWrapper.nativeElement.classList.remove(
+          'slide-in-animation',
+        );
+      }, 400);
 
       this.answer = undefined;
       this.isCorrectAnswer = null;
       if (this.quiz.elements[this.level + 1] !== undefined) {
-        this.level++;
+        this.level += 1;
       } else if (this.quiz.elements[this.level + 1] === undefined) {
         this.end = true;
       }
     }, 2000);
   }
 
-  isCorrect(answer): boolean {
+  private isCorrect(answer): boolean {
     return this.quiz.elements[this.level].answer === answer;
   }
 
-  resetLevel(): void {
+  public resetLevel(): void {
     this.answer = undefined;
     this.isCorrectAnswer = null;
     this.level = 0;
     this.wrongAnswers = 0;
     this.end = false;
   }
-
 }

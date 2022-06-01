@@ -1,11 +1,7 @@
 <div class="page post">
   <mat-card class="fe-card">
-    <p class="fe-error-message" *ngIf="post && post.elements === undefined">
-      Artikel nicht gefunden
-    </p>
-    <p class="fe-card-title" *ngIf="post !== undefined">
-      {{post.title}}
-    </p>
+    <p class="fe-error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
+    <p class="fe-card-title" *ngIf="post !== undefined">{{post.title}}</p>
     <p class="fe-card-description" *ngIf="post !== undefined">
       <fe-post-badge [post]="post"></fe-post-badge>
       <span>vom {{ post.lessonDate | date: 'MM.dd.yyyy' }}</span>
@@ -19,5 +15,9 @@
     </p>
   </mat-card>
 
-  <fe-lesson-footer [postId]="post._id" [isLoading]="loadingService.loading$ | async" *ngIf="authService.isAuthenticated && post"></fe-lesson-footer>
+  <fe-lesson-footer
+    [postId]="post._id"
+    [isLoading]="loadingService.loading$ | async"
+    *ngIf="authService.isAuthenticated && post"
+  ></fe-lesson-footer>
 </div>

@@ -15,18 +15,16 @@
     </div>
   </mat-card>
   <mat-card class="fe-card">
-    <p class="error-message" *ngIf="post && post.elements === undefined">
-      Artikel nicht gefunden
-    </p>
-    <p class="fe-card-title" *ngIf="post !== undefined">
-      {{post.title}}
-    </p>
-    <p class="fe-card-description" *ngIf="post !== undefined">
-      {{post.description}}
-    </p>
+    <p class="error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
+    <p class="fe-card-title" *ngIf="post !== undefined">{{post.title}}</p>
+    <p class="fe-card-description" *ngIf="post !== undefined">{{post.description}}</p>
     <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
     <mat-card-content class="post-content" *ngIf="post !== undefined">
-      <fe-post-element *ngFor="let element of post.elements" [element]="element" [contentEditable]="true"></fe-post-element>
+      <fe-post-element
+        *ngFor="let element of post.elements"
+        [element]="element"
+        [contentEditable]="true"
+      ></fe-post-element>
     </mat-card-content>
     <p class="post-last-update" *ngIf="post && post.lastUpdate !== undefined">
       Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}

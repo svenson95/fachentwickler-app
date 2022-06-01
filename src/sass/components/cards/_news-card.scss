@@ -1,10 +1,4 @@
-.fe-card.news-card .fe-card-header {
-  .fe-card-title {
-  }
-}
-
 .fe-card.news-card .fe-news-container {
-
   @include from-xs {
     margin-top: 20px;
   }
@@ -63,7 +57,7 @@
       min-width: 55px;
       margin-right: auto;
       color: var(--text-color-3);
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 
@@ -73,7 +67,8 @@
     line-height: 16px;
   }
 
-  .date, .title {
+  .date,
+  .title {
     margin-top: 0;
     margin-bottom: 0;
 
@@ -82,7 +77,7 @@
     }
 
     @include to-xs {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 }

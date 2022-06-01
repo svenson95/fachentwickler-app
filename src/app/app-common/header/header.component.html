@@ -1,26 +1,55 @@
-<mat-toolbar class="header-toolbar" id="header-toolbar" [class.sidenav--open]="isMobile && sidenavService.isOpen()">
+<mat-toolbar
+  class="header-toolbar"
+  id="header-toolbar"
+  [class.sidenav--open]="isMobile && sidenavService.isOpen()"
+>
   <div class="header-wrapper">
     <div class="sidenav-section">
-      <a class="fe-logo-wrapper" [routerLink]="isMobile ? mobileLogoLink() : '/'" matRipple
-         [class.active-route]="
+      <a
+        class="fe-logo-wrapper"
+        [routerLink]="isMobile ? mobileLogoLink() : '/'"
+        matRipple
+        [class.active-route]="
           router.url === '/' ||
           router.url === '/login' ||
-          (isMobile && !sidenavService.isOpen() && router.url === '/dashboard')"
+          (isMobile && !sidenavService.isOpen() && router.url === '/dashboard')
+        "
       >
         <fe-icon></fe-icon>
       </a>
     </div>
     <div class="header-content">
-      <div class="page-title" (click)="goToSubject()" *ngIf="!isTiny || (isTiny && !sidenavService.isOpen())">
-        <mat-icon class="unselectable" *ngIf="!isMobile">chevron_right</mat-icon>
+      <div
+        class="page-title"
+        (click)="goToSubject()"
+        *ngIf="!isTiny || (isTiny && !sidenavService.isOpen())"
+      >
+        <mat-icon class="unselectable" *ngIf="!isMobile"
+          >chevron_right</mat-icon
+        >
         <p class="title" [innerHTML]="headerService.pageTitle"></p>
       </div>
       <div class="header-elements-wrapper">
         <fe-search-field *ngIf="!isMobile"></fe-search-field>
         <div class="button-container">
-          <fe-hamburger-icon class="sidenav-btn" [isOpen]="sidenavService.isOpen()" (click)="sidenavService.toggle()" *ngIf="isMobile"></fe-hamburger-icon>
-          <a class="fe-text-button dashboard-btn" matRipple [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'" [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')">
-            <span>{{authService.isAuthenticated ? 'Dashboard' : 'Schülerbereich'}}</span>
+          <fe-hamburger-icon
+            class="sidenav-btn"
+            [isOpen]="sidenavService.isOpen()"
+            (click)="sidenavService.toggle()"
+            *ngIf="isMobile"
+          ></fe-hamburger-icon>
+          <a
+            class="fe-text-button dashboard-btn"
+            matRipple
+            [routerLink]="authService.isAuthenticated ? '/dashboard' : '/login'"
+            [class.active-route]="
+              router.url.startsWith('/dashboard') ||
+              router.url.startsWith('/login')
+            "
+          >
+            <span>{{
+              authService.isAuthenticated ? "Dashboard" : "Schülerbereich"
+            }}</span>
           </a>
           <fe-header-menu></fe-header-menu>
         </div>

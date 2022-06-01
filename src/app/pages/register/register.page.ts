@@ -1,75 +1,105 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-
+import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { RegisterUser, UserRole } from '../../models/user';
-import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'fe-register-page',
-  templateUrl: './register.page.html'
+  templateUrl: './register.page.html',
 })
 export class RegisterPage implements OnInit, OnDestroy {
+  public form: FormGroup;
 
-  form: FormGroup;
-  isLoading: boolean;
-  subscription: Subscription = new Subscription();
+  public isLoading: boolean;
 
-  nameAlreadyTaken: boolean;
-  emailAlreadyTaken: boolean;
+  private subscription: Subscription = new Subscription();
 
-  NameAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
+  private nameAlreadyTaken: boolean;
+
+  private emailAlreadyTaken: boolean;
+
+  private NameAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
     if (this.nameAlreadyTaken) {
       return { alreadyTaken: true };
-    } else {
-      return null;
     }
-  }
+    return null;
+  };
 
-  EmailAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
+  private EmailAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
     if (this.emailAlreadyTaken) {
       return { alreadyTaken: true };
-    } else {
-      return null;
     }
-  }
+    return null;
+  };
 
-  constructor(private router: Router,
-              private fb: FormBuilder,
-              private snackBar: MatSnackBar,
-              private headerService: HeaderService,
-              private authService: AuthService,
-              private loadService: LoadingService,
-              private themeService: ThemeService
+  constructor(
+    private router: Router,
+    private fb: FormBuilder,
+    private snackBar: MatSnackBar,
+    private headerService: HeaderService,
+    private authService: AuthService,
+    private loadService: LoadingService,
+    private themeService: ThemeService,
   ) {
     this.headerService.setPageTitle('Registrieren');
     this.initFormGroup();
   }
 
-  ngOnInit(): void {
-    this.subscription.add(this.loadService.loading$.subscribe(value => this.isLoading = value));
+  public ngOnInit(): void {
+    this.subscription.add(
+      this.loadService.loading$.subscribe((value) => {
+        this.isLoading = value;
+      }),
+    );
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
-  initFormGroup(): void {
+  private initFormGroup(): void {
     this.form = this.fb.group({
-      name: [null as string, { validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken] }],
-      email: [null as string, { validators: [Validators.required, Validators.email, this.EmailAlreadyTaken] }],
-      password: [null as string, { validators: [Validators.required, Validators.minLength(4)] }]
+      name: [
+        null as string,
+        {
+          validators: [
+            Validators.required,
+            Validators.minLength(4),
+            this.NameAlreadyTaken,
+          ],
+        },
+      ],
+      email: [
+        null as string,
+        {
+          validators: [
+            Validators.required,
+            Validators.email,
+            this.EmailAlreadyTaken,
+          ],
+        },
+      ],
+      password: [
+        null as string,
+        { validators: [Validators.required, Validators.minLength(4)] },
+      ],
     });
   }
 
-  register(event): void {
-
+  public register(event): void {
     if (this.form.invalid) {
       return;
     }
@@ -78,44 +108,49 @@ export class RegisterPage implements OnInit, OnDestroy {
     const email = this.form.controls.email.value.toLowerCase();
     const password = this.form.controls.password.value.toLowerCase();
     const user = {
-      name, email, password,
+      name,
+      email,
+      password,
       theme: this.themeService.getActiveTheme().name,
-      role: UserRole.USER
+      role: UserRole.USER,
     } as RegisterUser;
 
     this.authService.register(user).subscribe(
-      (value) => {
+      () => {
         this.router.navigateByUrl('/dashboard');
-      }, (error) => {
+      },
+      (error) => {
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
-          data: this.showErrorMessage(error)
+          data: this.showErrorMessage(error),
         });
-      }
+      },
     );
   }
 
-  showErrorMessage(response): string {
+  private showErrorMessage(response): string {
     if (response.status === 401) {
       return 'Die eingegebenen Daten sind nicht korrekt';
-    } else if (response.status === 400) {
+    }
+    if (response.status === 400) {
       return 'Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)';
-    } else if (response.error.message === 'Username is already taken') {
+    }
+    if (response.error.message === 'Username is already taken') {
       this.nameAlreadyTaken = true;
       this.form.setErrors({ alreadyTaken: true });
       this.form.markAsDirty({ onlySelf: false });
       return 'Der Benutzername ist bereits vergeben';
-    } else if (response.error.message === 'E-Mail is already taken') {
+    }
+    if (response.error.message === 'E-Mail is already taken') {
       this.emailAlreadyTaken = true;
       this.form.setErrors({ alreadyTaken: true });
       this.form.markAsDirty({ onlySelf: false });
       return 'Die E-Mail Adresse ist bereits vergeben';
-    } else {
-      return 'Unbekannter Fehler: ' + response.error.message;
     }
+    return `Unbekannter Fehler: ${response.error.message}`;
   }
 
-  onFormChange(event): void {
+  public onFormChange(event): void {
     if (this.nameAlreadyTaken) {
       this.nameAlreadyTaken = false;
     }
@@ -123,5 +158,4 @@ export class RegisterPage implements OnInit, OnDestroy {
       this.emailAlreadyTaken = false;
     }
   }
-
 }

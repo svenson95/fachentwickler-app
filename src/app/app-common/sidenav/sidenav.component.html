@@ -1,11 +1,18 @@
 <div class="sidenav-content">
-
   <div class="section my-class" *ngIf="authService.isAuthenticated">
     <label class="section-title">Meine Klasse</label>
     <mat-nav-list>
       <ng-container *ngFor="let navItem of myClass">
-        <fe-nav-link *ngIf="!navItem.url.startsWith('http://')" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
-        <fe-nav-link *ngIf="navItem.url.startsWith('http://')" [item]="navItem" [href-link]="navItem.url"></fe-nav-link>
+        <fe-nav-link
+          *ngIf="!navItem.url.startsWith('http://')"
+          [item]="navItem"
+          [router-link]="navItem.url"
+        ></fe-nav-link>
+        <fe-nav-link
+          *ngIf="navItem.url.startsWith('http://')"
+          [item]="navItem"
+          [href-link]="navItem.url"
+        ></fe-nav-link>
       </ng-container>
     </mat-nav-list>
   </div>
@@ -13,32 +20,48 @@
   <div class="section subjects">
     <label class="section-title">Lernfelder</label>
     <mat-nav-list>
-      <fe-nav-link *ngFor="let navItem of subjects" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
+      <fe-nav-link
+        *ngFor="let navItem of subjects"
+        [item]="navItem"
+        [router-link]="navItem.url"
+      ></fe-nav-link>
     </mat-nav-list>
   </div>
 
   <div class="section study">
     <label class="section-title">Studium</label>
     <mat-nav-list>
-      <fe-nav-link *ngFor="let navItem of study" [item]="navItem" [router-link]="navItem.url" [disabled]="true"></fe-nav-link>
+      <fe-nav-link
+        *ngFor="let navItem of study"
+        [item]="navItem"
+        [router-link]="navItem.url"
+        [disabled]="true"
+      ></fe-nav-link>
     </mat-nav-list>
   </div>
 
   <div class="section areas">
     <label class="section-title">Bereiche</label>
     <mat-nav-list>
-      <fe-nav-link *ngFor="let navItem of language" [item]="navItem" [router-link]="navItem.url" [disabled]="true"></fe-nav-link>
+      <fe-nav-link
+        *ngFor="let navItem of language"
+        [item]="navItem"
+        [router-link]="navItem.url"
+        [disabled]="true"
+      ></fe-nav-link>
     </mat-nav-list>
   </div>
 
-  <hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px;"/>
+  <hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px" />
 
   <div class="section apps" *ngIf="authService.isAuthenticated">
-    <button class="fe-text-button fe-pruefungssimulator-btn" routerLink="pruefungssimulator"
-            [class.active-route]="router.url.startsWith('/pruefungssimulator')" matRipple
+    <button
+      class="fe-text-button fe-pruefungssimulator-btn"
+      routerLink="pruefungssimulator"
+      [class.active-route]="router.url.startsWith('/pruefungssimulator')"
+      matRipple
     >
       Prüfungssimulator
     </button>
   </div>
-
 </div>

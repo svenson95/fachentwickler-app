@@ -2,13 +2,10 @@ import { Injectable } from '@angular/core';
 import { MatDrawerToggleResult, MatSidenav } from '@angular/material/sidenav';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SidenavService {
-
   private sidenav: MatSidenav;
-
-  constructor() { }
 
   public isOpen(): boolean {
     if (this.sidenav === undefined) return false;

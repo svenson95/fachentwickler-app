@@ -1,5 +1,5 @@
-@import 'src/sass/abstracts/mixins';
-@import 'src/sass/abstracts/breakpoints';
+@import "src/sass/abstracts/mixins";
+@import "src/sass/abstracts/breakpoints";
 
 .fe-nav-link.mat-list-item {
   background: transparent;
@@ -21,7 +21,8 @@
     flex-shrink: 0;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @include from-md {
       .nav-item-icon {
         color: var(--text-color-1);
@@ -30,7 +31,8 @@
     }
   }
 
-  &.active-route, &:active {
+  &.active-route,
+  &:active {
     .nav-item-icon {
       color: var(--text-color-1);
     }
@@ -50,9 +52,9 @@
     }
   }
 
-  $duration: .2s;
+  $duration: 0.2s;
   $distance: 8px;
-  $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
+  $easeOutBack: cubic-bezier(0.175, 1.585, 0.32, 1.275);
 
   @include from-md {
     &:not(.active-route) span {
@@ -61,16 +63,17 @@
       &:focus,
       &:before,
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 1px;
-        left: 0; right: 0;
+        left: 0;
+        right: 0;
         height: 1px;
-        background-color: rgba(var(--secondary-color-rgb), .8);
+        background-color: rgba(var(--secondary-color-rgb), 0.8);
       }
       &:before {
         opacity: 0;
-        transform: translateY(- $distance);
+        transform: translateY(-$distance);
         transition: transform 0s $easeOutBack, opacity 0s;
       }
       &:after {
@@ -82,7 +85,6 @@
 
     &:focus,
     &:hover {
-
       span {
         &:before,
         &:after {

@@ -1,6 +1,5 @@
 <mat-card class="fe-card index-card">
-  <p class="fe-card-title"
-     [innerHTML]="indexCards.title"></p>
+  <p class="fe-card-title" [innerHTML]="indexCards.title"></p>
   <p class="fe-card-description">
     <span [innerHTML]="indexCards.description"></span>
     <fe-post-badge [post]="indexCards"></fe-post-badge>
@@ -11,34 +10,60 @@
         <div class="fe-index-card--front">
           <div class="card-header">
             <p class="label">Frage</p>
-            <p class="label">{{level+1}} von {{indexCards.elements.length}}</p>
+            <p class="label">
+              {{ level + 1 }} von {{ indexCards.elements.length }}
+            </p>
           </div>
-          <p class="content" [innerHTML]="indexCards.elements[this.level].question"></p>
+          <p
+            class="content"
+            [innerHTML]="indexCards.elements[level].question"
+          ></p>
         </div>
         <div class="fe-index-card--back">
           <div class="card-header">
             <p class="label">Antwort</p>
-            <p class="label">{{level+1}} von {{indexCards.elements.length}}</p>
+            <p class="label">
+              {{ level + 1 }} von {{ indexCards.elements.length }}
+            </p>
           </div>
-          <p class="content" [innerHTML]="indexCards.elements[this.level].answer"
-             [ngClass]="{'shortAnswer': stripHtml(indexCards.elements[this.level].answer).length < 400}">
-          </p>
+          <p
+            class="content"
+            [innerHTML]="indexCards.elements[level].answer"
+            [class.shortAnswer]="
+              stripHtml(indexCards.elements[level].answer).length < 400
+            "
+          ></p>
         </div>
       </div>
     </div>
     <div class="fe-buttons-container">
-      <button class="fe-text-button" (click)="showAnswer()" [disabled]="isAnswerVisible" matRipple>
+      <button
+        class="fe-text-button"
+        (click)="showAnswer()"
+        [disabled]="isAnswerVisible"
+        matRipple
+      >
         <span>Weiter</span>
       </button>
-      <button class="fe-text-button" (click)="increaseLevel()" [disabled]="!isAnswerVisible || end" matRipple>
+      <button
+        class="fe-text-button"
+        (click)="increaseLevel()"
+        [disabled]="!isAnswerVisible || end"
+        matRipple
+      >
         <span>Nächste Frage</span>
       </button>
-      <button class="fe-text-button disabled" (click)="resetLevel()" [disabled]="!end" matRipple>
+      <button
+        class="fe-text-button disabled"
+        (click)="resetLevel()"
+        [disabled]="!end"
+        matRipple
+      >
         <span>Zurück zum Anfang</span>
       </button>
     </div>
   </mat-card-content>
   <p class="post-last-update" *ngIf="indexCards !== undefined">
-    Letzte Aktualisierung: {{indexCards.lastUpdate | date:'dd.MM.yyyy'}}
+    Letzte Aktualisierung: {{ indexCards.lastUpdate | date: "dd.MM.yyyy" }}
   </p>
 </mat-card>

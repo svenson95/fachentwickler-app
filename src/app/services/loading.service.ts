@@ -2,19 +2,16 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoadingService {
+  public loading$: Subject<boolean> = new Subject();
 
-  loading$: Subject<boolean> = new Subject();
-
-  constructor() { }
-
-  startLoading(): void {
+  public startLoading(): void {
     this.loading$.next(true);
   }
 
-  stopLoading(): void {
+  public stopLoading(): void {
     this.loading$.next(false);
   }
 }

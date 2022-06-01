@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 import { DashboardData } from '../../../models/dashboard-data';
 import { User } from '../../../models/user';
 import { DataService } from '../../../services/data/data.service';
@@ -7,18 +6,20 @@ import { LoadingService } from '../../../services/loading.service';
 
 @Component({
   selector: 'fe-user-progress-card',
-  templateUrl: './user-progress-card.component.html'
+  templateUrl: './user-progress-card.component.html',
 })
-export class UserProgressCardComponent implements OnInit {
+export class UserProgressCardComponent {
+  @Input() public user: User;
 
-  @Input() user: User;
-  @Input() dashboard: DashboardData;
+  @Input() public dashboard: DashboardData;
 
-  constructor(public dataService: DataService,
-              public loadingService: LoadingService
+  constructor(
+    public dataService: DataService,
+    public loadingService: LoadingService,
   ) {}
 
-  ngOnInit(): void {
+  // eslint-disable-next-line class-methods-use-this
+  public asNumber(value: string): number {
+    return Number(value);
   }
-
 }

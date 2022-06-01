@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../../app-common/angular-material.module';
-import { ScheduleCardComponent } from './schedule-card.component';
 import { PostLinkModule } from '../../post-link/post-link.module';
 import { ScheduleModule } from '../../schedule/schedule.module';
-
-
+import { ScheduleCardComponent } from './schedule-card.component';
 
 @NgModule({
   declarations: [ScheduleCardComponent],
@@ -14,7 +12,7 @@ import { ScheduleModule } from '../../schedule/schedule.module';
     CommonModule,
     AngularMaterialModule,
     PostLinkModule,
-    ScheduleModule
-  ]
+    ScheduleModule,
+  ],
 })
-export class ScheduleCardModule { }
+export class ScheduleCardModule {}

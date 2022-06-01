@@ -1,13 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { VerifyPage } from './verify.page';
-import { VerifyPageRoutingModule } from './verify-routing.module';
-
-import { StateButtonModule } from '../../components/state-button/state-button.module';
 import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
+import { StateButtonModule } from '../../components/state-button/state-button.module';
+import { VerifyPageRoutingModule } from './verify-routing.module';
+import { VerifyPage } from './verify.page';
 
 @NgModule({
   declarations: [VerifyPage],
@@ -17,7 +15,7 @@ import { CheckmarkModule } from '../../components/checkmark/checkmark.module';
     AngularMaterialModule,
     VerifyPageRoutingModule,
     StateButtonModule,
-    CheckmarkModule
+    CheckmarkModule,
   ],
 })
-export class VerifyPageModule { }
+export class VerifyPageModule {}

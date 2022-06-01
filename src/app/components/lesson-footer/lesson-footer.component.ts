@@ -1,22 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 import { UserRole } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'fe-lesson-footer',
-  templateUrl: './lesson-footer.component.html'
+  templateUrl: './lesson-footer.component.html',
 })
-export class LessonFooterComponent implements OnInit {
+export class LessonFooterComponent {
+  @Input() public postId: string;
 
-  @Input() postId: string;
-  @Input() isLoading: boolean;
+  @Input() public isLoading: boolean;
 
-  UserRole = UserRole;
+  public UserRole = UserRole;
 
-  constructor(public authService: AuthService) {
-  }
-
-  ngOnInit(): void {
-  }
+  constructor(public authService: AuthService) {}
 }

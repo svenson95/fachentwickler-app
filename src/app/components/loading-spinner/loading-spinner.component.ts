@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'fe-loading-spinner',
@@ -31,6 +31,6 @@ import { Component, Input } from '@angular/core';
       </ul>
     </div>
   `,
-  styleUrls: ['./loading-spinner.component.scss']
+  styleUrls: ['./loading-spinner.component.scss'],
 })
 export class LoadingSpinnerComponent {}

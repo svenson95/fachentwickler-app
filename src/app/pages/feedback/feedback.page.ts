@@ -1,17 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {HeaderService} from '../../services/header.service';
+import { Component } from '@angular/core';
+import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'fe-feedback-page',
-  templateUrl: './feedback.page.html'
+  templateUrl: './feedback.page.html',
 })
-export class FeedbackPage implements OnInit {
-
+export class FeedbackPage {
   constructor(private headerService: HeaderService) {
     this.headerService.setPageTitle('Feedback');
   }
-
-  ngOnInit(): void {
-  }
-
 }

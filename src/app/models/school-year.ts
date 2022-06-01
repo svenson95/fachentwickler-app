@@ -4,6 +4,8 @@ export class SchoolYear {
   constructor(year: number) {
     this.year = year;
   }
-  year: number;
-  weeks: SchoolWeek[] = [];
+
+  public year: number;
+
+  public weeks: SchoolWeek[] = [];
 }

@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
+import { StateButtonModule } from '../../components/state-button/state-button.module';
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterPage } from './register.page';
-import { StateButtonModule } from '../../components/state-button/state-button.module';
-
 
 @NgModule({
   declarations: [RegisterPage],
@@ -15,7 +13,7 @@ import { StateButtonModule } from '../../components/state-button/state-button.mo
     ReactiveFormsModule,
     AngularMaterialModule,
     RegisterRoutingModule,
-    StateButtonModule
-  ]
+    StateButtonModule,
+  ],
 })
-export class RegisterPageModule { }
+export class RegisterPageModule {}

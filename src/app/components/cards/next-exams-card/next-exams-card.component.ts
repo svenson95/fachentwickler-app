@@ -1,32 +1,31 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { delay } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
-
+import { delay } from 'rxjs/operators';
 import { ExamDate } from '../../../models/exam-date';
-import { DataService } from '../../../services/data/data.service';
 import { LoadingService } from '../../../services/loading.service';
 
 @Component({
   selector: 'fe-next-exams-card',
-  templateUrl: './next-exams-card.component.html'
+  templateUrl: './next-exams-card.component.html',
 })
 export class NextExamsCardComponent implements OnInit, OnDestroy {
+  @Input() public nextExams: ExamDate[];
 
-  @Input() nextExams: ExamDate[];
-  isLoading: boolean;
-  loadingSubscription: Subscription;
+  public isLoading: boolean;
 
-  constructor(private dataService: DataService,
-              private loadingService: LoadingService
-  ) {
+  private loadingSubscription: Subscription;
+
+  constructor(private loadingService: LoadingService) {}
+
+  public ngOnInit(): void {
+    this.loadingSubscription = this.loadingService.loading$
+      .pipe(delay(0))
+      .subscribe((status) => {
+        this.isLoading = status;
+      });
   }
 
-  ngOnInit(): void {
-    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe(status => this.isLoading = status);
-  }
-
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
   }
-
 }

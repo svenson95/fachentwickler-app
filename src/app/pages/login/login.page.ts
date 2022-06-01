@@ -1,47 +1,46 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
-
 import { AuthUser } from '../../models/user';
-import { HeaderService } from '../../services/header.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'fe-login-page',
-  templateUrl: './login.page.html'
+  templateUrl: './login.page.html',
 })
-export class LoginPage implements OnInit, OnDestroy {
-  @ViewChild('passwordInput') passwordInput;
+export class LoginPage implements OnDestroy {
+  @ViewChild('passwordInput') public passwordInput;
 
-  form: FormGroup;
-  isLoading: boolean;
+  public form: FormGroup;
+
+  public isLoading: boolean;
+
   private loadingSubscription: Subscription;
 
-  constructor(private router: Router,
-              private authService: AuthService,
-              private headerService: HeaderService,
-              private themeService: ThemeService,
-              private loadService: LoadingService,
-              private snackBar: MatSnackBar,
-              private fb: FormBuilder
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private headerService: HeaderService,
+    private themeService: ThemeService,
+    private loadService: LoadingService,
+    private snackBar: MatSnackBar,
+    private fb: FormBuilder,
   ) {
     this.headerService.setPageTitle('Login');
 
     this.initFormGroup();
-    this.loadingSubscription = this.loadService.loading$.subscribe(value => {
+    this.loadingSubscription = this.loadService.loading$.subscribe((value) => {
       this.isLoading = value;
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
   }
 
@@ -49,8 +48,14 @@ export class LoginPage implements OnInit, OnDestroy {
     const passwordValidators = [Validators.required, Validators.minLength(4)];
 
     this.form = this.fb.group({
-      username: [null as string, { validators: passwordValidators, updateOn: 'submit' }],
-      password: [null as string, { validators: passwordValidators, updateOn: 'submit' }]
+      username: [
+        null as string,
+        { validators: passwordValidators, updateOn: 'submit' },
+      ],
+      password: [
+        null as string,
+        { validators: passwordValidators, updateOn: 'submit' },
+      ],
     });
   }
 
@@ -59,8 +64,7 @@ export class LoginPage implements OnInit, OnDestroy {
     this.authService.redirectUrl = undefined;
   }
 
-  login(event): void {
-
+  public login(event): void {
     if (this.form.invalid) {
       return;
     }
@@ -68,7 +72,7 @@ export class LoginPage implements OnInit, OnDestroy {
     const username = this.form.get('username').value.toLowerCase();
     const password = this.form.get('password').value;
 
-    this.authService.login({username, password} as AuthUser).subscribe(
+    this.authService.login({ username, password } as AuthUser).subscribe(
       (response) => {
         if (this.themeService.getActiveTheme().name !== response.user.theme) {
           this.themeService.toggleTheme();
@@ -79,27 +83,26 @@ export class LoginPage implements OnInit, OnDestroy {
         } else {
           this.router.navigate(['dashboard']);
         }
-      }, (error) => {
-        console.log(error);
+      },
+      () => {
         this.passwordInput.nativeElement.blur();
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
-          data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.'
+          data: 'Die eingegebenen Benutzerdaten sind falsch. Probiere es erneut.',
         });
-      }
+      },
     );
   }
 
-  resetErrors(event): void {
+  public resetErrors(event): void {
     this.form.controls.username.setErrors(null);
     this.form.controls.password.setErrors(null);
   }
 
-  usernameFieldKeyPress(event): void {
+  public usernameFieldKeyPress(event): void {
     if (event.key === 'Enter') {
       event.preventDefault();
       this.passwordInput.nativeElement.focus();
     }
   }
-
 }

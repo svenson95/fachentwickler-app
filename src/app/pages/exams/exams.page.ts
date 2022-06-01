@@ -1,71 +1,91 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
-import { MatCalendar, MatCalendarCellCssClasses } from '@angular/material/datepicker';
-
+import {
+  MatCalendar,
+  MatCalendarCellCssClasses,
+} from '@angular/material/datepicker';
 import { ExamDate } from '../../models/exam-date';
-import { HeaderService } from '../../services/header.service';
 import { DataService } from '../../services/data/data.service';
+import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'fe-exams',
-  templateUrl: './exams.page.html'
+  templateUrl: './exams.page.html',
 })
 export class ExamsPage implements OnInit, AfterViewInit {
+  @ViewChild('calendar') public calendar: MatCalendar<Date>;
 
-  @ViewChild('calendar') calendar: MatCalendar<Date>;
+  public allExams: ExamDate[];
 
-  allExams: ExamDate[];
-  calendarDate = new Date();
+  public calendarDate = new Date();
 
-  /* -- Calendar properties -- */
-  minDate = new Date(2019, 8, 1);
-  maxDate = new Date(2022, 9, 30);
+  public minDate = new Date(2019, 8, 1);
 
-  get monthExams(): ExamDate[] {
-    return this.allExams?.filter(exam => {
+  public maxDate = new Date(2022, 9, 30);
+
+  public get monthExams(): ExamDate[] {
+    return this.allExams?.filter((exam) => {
       const date = new Date(exam.date);
-      return date.getFullYear() === this.calendarDate.getFullYear() && date.getMonth() === this.calendarDate.getMonth();
+      return (
+        date.getFullYear() === this.calendarDate.getFullYear() &&
+        date.getMonth() === this.calendarDate.getMonth()
+      );
     });
   }
 
-  constructor(private headerService: HeaderService,
-              private dataService: DataService,
-              private renderer: Renderer2,
-              private dateAdapter: DateAdapter<Date>,
-              private elementRef: ElementRef
+  constructor(
+    private headerService: HeaderService,
+    private dataService: DataService,
+    private renderer: Renderer2,
+    private dateAdapter: DateAdapter<Date>,
+    private elementRef: ElementRef,
   ) {
     this.headerService.setPageTitle('Klausuren');
-    this.dateAdapter.getFirstDayOfWeek = () => 1;
+    this.dateAdapter.getFirstDayOfWeek = (): number => 1;
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.fetchData();
   }
 
-  ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     this.initializeCalendarButtons();
   }
 
-  /* -- Initial functions -- */
-  fetchData(): void {
+  private fetchData(): void {
     this.dataService.getAllExamDates().subscribe(
       (response) => {
         response.sort((a, b) => {
-          if (a.date > b.date) { return 1; }
-          if (a.date < b.date) { return -1; }
+          if (a.date > b.date) {
+            return 1;
+          }
+          if (a.date < b.date) {
+            return -1;
+          }
           return 0;
         });
         this.allExams = response;
-      }, (error) => {
+      },
+      () => {
         this.allExams = null;
-        console.log('error while GET exam-dates', error);
-      }
+      },
     );
   }
 
-  initializeCalendarButtons(): void {
-    const BACK_BUTTON = this.elementRef.nativeElement.querySelector('.mat-calendar-previous-button');
-    const FORWARD_BUTTON = this.elementRef.nativeElement.querySelector('.mat-calendar-next-button');
+  private initializeCalendarButtons(): void {
+    const BACK_BUTTON = this.elementRef.nativeElement.querySelector(
+      '.mat-calendar-previous-button',
+    );
+    const FORWARD_BUTTON = this.elementRef.nativeElement.querySelector(
+      '.mat-calendar-next-button',
+    );
     if (BACK_BUTTON) {
       this.renderer.listen(BACK_BUTTON, 'click', () => {
         const month = this.calendarDate.getMonth() as number;
@@ -90,23 +110,28 @@ export class ExamsPage implements OnInit, AfterViewInit {
     }
   }
 
-  /* -- Component functions -- */
-  dateClass(): (date: Date) => MatCalendarCellCssClasses {
+  public dateClass(): (date: Date) => MatCalendarCellCssClasses {
     return (date: Date): MatCalendarCellCssClasses => {
-      const highlightDate = this.allExams?.map(strDate => new Date(strDate.date))
-        .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
+      const highlightDate = this.allExams
+        ?.map((strDate) => new Date(strDate.date))
+        .some(
+          (d) =>
+            d.getDate() === date.getDate() &&
+            d.getMonth() === date.getMonth() &&
+            d.getFullYear() === date.getFullYear(),
+        );
       if (highlightDate) {
         return 'highlighted';
-      } else {
-        return '';
       }
+      return '';
     };
   }
 
-  disableWeekend(d: Date): boolean {
+  // eslint-disable-next-line class-methods-use-this
+  public disableWeekend(d: Date): boolean {
     if (d.getDay() !== 0 && d.getDay() !== 6) {
       return true;
     }
+    return false;
   }
-
 }

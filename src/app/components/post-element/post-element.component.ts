@@ -1,46 +1,49 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import { PostElement } from '../../models/post-element';
 import { ElementType } from '../../models/element-type';
 import { ImageChunk } from '../../models/image-data';
+import { PostElement, SublistItem } from '../../models/post-element';
 import { DataService } from '../../services/data/data.service';
 
 @Component({
   selector: 'fe-post-element',
-  templateUrl: './post-element.component.html'
+  templateUrl: './post-element.component.html',
 })
 export class PostElementComponent implements OnInit {
+  @Input() public element: PostElement;
 
-  @Input() element: PostElement;
+  public image: boolean | string = false;
 
-  image: boolean | string = false;
-  ElementType = ElementType;
-  isVisible = false;
+  public ElementType = ElementType;
 
-  constructor(private dataService: DataService) {
-  }
+  public isVisible = false;
 
-  ngOnInit(): void {
-    if (this.element.type === 'image') {
+  constructor(private dataService: DataService) {}
+
+  public ngOnInit(): void {
+    if (this.element.type === ElementType.IMAGE) {
       this.loadImage(this.element.content);
     }
   }
 
-  isString(value): boolean {
+  // eslint-disable-next-line class-methods-use-this
+  public isString(value): boolean {
     return typeof value === 'string';
   }
 
-  loadImage(url): void {
+  // eslint-disable-next-line class-methods-use-this
+  public isSublistItem(item: string | SublistItem): item is SublistItem {
+    return Object.prototype.hasOwnProperty.call(item, 'sublist');
+  }
+
+  private loadImage(url): void {
     this.dataService.getImage(url).subscribe(
       (data) => {
         const dataStrings = data.chunks.map((chunk: ImageChunk) => chunk.data);
-        this.image = 'data:image/png;base64,' + dataStrings.join('');
+        this.image = `data:image/png;base64,${dataStrings.join('')}`;
       },
-      (error) => {
+      () => {
         this.image = null;
-        console.log('Error while GET post image', error);
-      }
+      },
     );
   }
-
 }

@@ -1,5 +1,5 @@
-@import 'src/sass/abstracts/breakpoints';
-@import 'src/sass/abstracts/mixins';
+@import "src/sass/abstracts/breakpoints";
+@import "src/sass/abstracts/mixins";
 
 :host {
   display: flex;
@@ -33,7 +33,7 @@
       padding-right: 5px;
       margin-left: 8px;
 
-      font-size: .8em;
+      font-size: 0.8em;
       color: var(--grey-3);
       letter-spacing: 1px;
     }
@@ -117,13 +117,13 @@
 
       .description {
         color: var(--grey-4);
-        font-size: .9em;
+        font-size: 0.9em;
         margin: 0;
         text-align: right;
         line-height: 17px;
 
         @include to-xs {
-          font-size: .8em;
+          font-size: 0.8em;
           margin-top: 7px;
           line-height: 14px;
         }

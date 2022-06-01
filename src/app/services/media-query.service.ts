@@ -1,31 +1,35 @@
-import { Injectable } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
-import { distinctUntilChanged, map, shareReplay, startWith } from 'rxjs/operators';
+import {
+  distinctUntilChanged,
+  map,
+  shareReplay,
+  startWith,
+} from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MediaQueryService {
+  public isMobile$: Observable<boolean>;
 
-  isMobile$: Observable<boolean>;
-  isTiny$: Observable<boolean>;
+  public isTiny$: Observable<boolean>;
 
   constructor(private media: MediaMatcher) {
-    this.isMobile$ = fromEvent(window, 'resize')
-      .pipe(
-        startWith(this.isMobile()),
-        map(() => this.isMobile()),
-        distinctUntilChanged(),
-        shareReplay(1)
-      );
-    this.isTiny$ = fromEvent(window, 'resize')
-      .pipe(
-        startWith(this.isTiny()),
-        map(() => this.isTiny()),
-        distinctUntilChanged(),
-        shareReplay(1)
-      );
+    this.isMobile$ = fromEvent(window, 'resize').pipe(
+      startWith(this.isMobile()),
+      map(() => this.isMobile()),
+      distinctUntilChanged(),
+      shareReplay(1),
+    );
+
+    this.isTiny$ = fromEvent(window, 'resize').pipe(
+      startWith(this.isTiny()),
+      map(() => this.isTiny()),
+      distinctUntilChanged(),
+      shareReplay(1),
+    );
   }
 
   private isMobile(): boolean {
@@ -35,5 +39,4 @@ export class MediaQueryService {
   private isTiny(): boolean {
     return this.media.matchMedia('(max-width: 600px)').matches;
   }
-
 }

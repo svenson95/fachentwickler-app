@@ -2,10 +2,22 @@
   <tbody>
     <tr>
       <th class="schedule-header"></th>
-      <td class="schedule-time">07:15 - <br/> 08:45</td>
-      <td class="schedule-time">09:15 - <br/> 10:45</td>
-      <td class="schedule-time">11:10 - <br/> 12:40</td>
-      <td class="schedule-time">13:10 - <br/> 14:40</td>
+      <td class="schedule-time">
+        07:15 - <br />
+        08:45
+      </td>
+      <td class="schedule-time">
+        09:15 - <br />
+        10:45
+      </td>
+      <td class="schedule-time">
+        11:10 - <br />
+        12:40
+      </td>
+      <td class="schedule-time">
+        13:10 - <br />
+        14:40
+      </td>
     </tr>
     <tr *ngFor="let day of schedule.days; let i = index">
       <th *ngIf="i === 0" class="schedule-header">Mo</th>
@@ -14,9 +26,9 @@
       <th *ngIf="i === 3" class="schedule-header">Do</th>
       <th *ngIf="i === 4" class="schedule-header">Fr</th>
       <td *ngFor="let hour of day.lessons">
-        <span class="hour-subject">{{subjectName(hour.subject)}}</span>
-        <span class="hour-teacher">{{hour.teacher | titlecase}}</span>
-        <span class="hour-room">{{hour.room}}</span>
+        <span class="hour-subject">{{ subjectName(hour.subject) }}</span>
+        <span class="hour-teacher">{{ hour.teacher | titlecase }}</span>
+        <span class="hour-room">{{ hour.room }}</span>
       </td>
     </tr>
   </tbody>

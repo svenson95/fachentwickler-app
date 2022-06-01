@@ -1,22 +1,17 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { Post } from '../../models/post';
 
 @Component({
   selector: 'fe-post-link',
   templateUrl: './post-link.component.html',
   styleUrls: ['./post-link.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostLinkComponent implements OnInit {
+export class PostLinkComponent {
+  @Input('post') public post: Post;
 
-  @Input('post') post: Post;
-  @Input('title') title;
+  @Input('title') public title: string;
 
   constructor(public router: Router) {}
-
-  ngOnInit(): void {
-  }
-
 }

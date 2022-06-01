@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { MyProfilePage } from './my-profile.page';
 import { MyProfilePageRoutingModule } from './my-profile-routing.module';
-
-
+import { MyProfilePage } from './my-profile.page';
 
 @NgModule({
   declarations: [MyProfilePage],
@@ -14,7 +11,7 @@ import { MyProfilePageRoutingModule } from './my-profile-routing.module';
     CommonModule,
     ReactiveFormsModule,
     AngularMaterialModule,
-    MyProfilePageRoutingModule
-  ]
+    MyProfilePageRoutingModule,
+  ],
 })
-export class MyProfilePageModule { }
+export class MyProfilePageModule {}

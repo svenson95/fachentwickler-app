@@ -1,14 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { QuizPage } from './quiz.page';
-import { QuizRoutingModule } from './quiz-routing.module';
-
-import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
 import { QuizCardModule } from '../../components/cards/quiz-card/quiz-card.module';
+import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
+import { QuizRoutingModule } from './quiz-routing.module';
+import { QuizPage } from './quiz.page';
 
 @NgModule({
   declarations: [QuizPage],
@@ -19,7 +16,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     AngularMaterialModule,
     LessonFooterModule,
     QuizCardModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class QuizPageModule { }
+export class QuizPageModule {}

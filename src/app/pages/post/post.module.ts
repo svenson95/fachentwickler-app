@@ -1,16 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { PostPage } from './post.page';
-import { PostPageRoutingModule } from './post-routing.module';
-
-import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
-import { PostBadgeModule } from '../../components/post-badge/post-badge.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
-
+import { PostBadgeModule } from '../../components/post-badge/post-badge.module';
+import { PostElementModule } from '../../components/post-element/post-element.module';
+import { PostPageRoutingModule } from './post-routing.module';
+import { PostPage } from './post.page';
 
 @NgModule({
   declarations: [PostPage],
@@ -22,7 +18,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     PostElementModule,
     LessonFooterModule,
     PostBadgeModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class PostPageModule { }
+export class PostPageModule {}

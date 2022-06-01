@@ -1,15 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import {AnswerIndicatorComponent, SvgElementDirective} from './answer-indicator.component';
-
-
+import { NgModule } from '@angular/core';
+import { AnswerIndicatorComponent } from './answer-indicator.component';
+import { SvgAnimationDirective } from './svg-animation.directive';
 
 @NgModule({
-  declarations: [AnswerIndicatorComponent, SvgElementDirective],
+  declarations: [AnswerIndicatorComponent, SvgAnimationDirective],
   exports: [AnswerIndicatorComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class AnswerIndicatorModule { }
+export class AnswerIndicatorModule {}

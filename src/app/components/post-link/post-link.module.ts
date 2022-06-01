@@ -1,13 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { PostLinkComponent } from './post-link.component';
-import { PostBadgeModule } from '../post-badge/post-badge.module';
 import { PipesModule } from '../../pipes/pipes.module';
-
-
+import { PostBadgeModule } from '../post-badge/post-badge.module';
+import { PostLinkComponent } from './post-link.component';
 
 @NgModule({
   declarations: [PostLinkComponent],
@@ -18,6 +15,6 @@ import { PipesModule } from '../../pipes/pipes.module';
     RouterModule,
     PostBadgeModule,
     PipesModule,
-  ]
+  ],
 })
-export class PostLinkModule { }
+export class PostLinkModule {}

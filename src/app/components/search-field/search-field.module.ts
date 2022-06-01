@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { SearchFieldComponent } from './search-field.component';
-
 import { LoadingSpinnerModule } from '../loading-spinner/loading-spinner.module';
-
+import { SearchFieldComponent } from './search-field.component';
 
 @NgModule({
   declarations: [SearchFieldComponent],
@@ -15,7 +12,7 @@ import { LoadingSpinnerModule } from '../loading-spinner/loading-spinner.module'
     CommonModule,
     FormsModule,
     AngularMaterialModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class SearchFieldModule { }
+export class SearchFieldModule {}

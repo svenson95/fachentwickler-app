@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AuditSimulatorPage } from './audit-simulator.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AuditSimulatorPage
-  }
+    component: AuditSimulatorPage,
+  },
 ];
 
 @NgModule({

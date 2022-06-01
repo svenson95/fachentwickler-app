@@ -3,13 +3,14 @@
     <p class="fe-card-title">Termine</p>
     <mat-card-content class="fe-view-wrapper">
       <div class="calendar-column">
-        <mat-calendar (yearSelected)="calendarDate.setFullYear($event.getFullYear())"
-                      (monthSelected)="calendarDate.setMonth($event.getMonth())"
-                      [dateClass]="dateClass()"
-                      [minDate]="minDate"
-                      [maxDate]="maxDate"
-                      [dateFilter]="disableWeekend"
-                      #calendar
+        <mat-calendar
+          (yearSelected)="calendarDate.setFullYear($event.getFullYear())"
+          (monthSelected)="calendarDate.setMonth($event.getMonth())"
+          [dateClass]="dateClass()"
+          [minDate]="minDate"
+          [maxDate]="maxDate"
+          [dateFilter]="disableWeekend"
+          #calendar
         ></mat-calendar>
       </div>
       <div class="exams-column">

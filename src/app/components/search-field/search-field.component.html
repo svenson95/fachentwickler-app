@@ -1,4 +1,11 @@
 <mat-form-field class="search-bar-form-field" appearance="fill" [class.is-searching]="router.url.startsWith('/search')">
   <mat-icon class="unselectable" matSuffix (click)="searchForPost()">search</mat-icon>
-  <input matInput type="text" autocomplete="off" [(ngModel)]="searchPostService.searchTerm" placeholder="Suchbegriff" #searchInput>
+  <input
+    matInput
+    type="text"
+    autocomplete="off"
+    [(ngModel)]="searchPostService.searchTerm"
+    placeholder="Suchbegriff"
+    #searchInput
+  />
 </mat-form-field>

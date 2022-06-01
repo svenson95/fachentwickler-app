@@ -1,36 +1,46 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnChanges,
+} from '@angular/core';
 import { SchoolWeek } from '../../../models/school-week';
 import { DataService } from '../../../services/data/data.service';
 
 @Component({
   selector: 'fe-school-week-card',
   templateUrl: './school-week-card.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SchoolWeekCardComponent implements OnInit, OnChanges {
+export class SchoolWeekCardComponent implements OnChanges {
+  @Input() public week: SchoolWeek;
 
-  @Input() week: SchoolWeek;
-  @Input() showNavigation?: boolean;
-  weeks: SchoolWeek[];
-  isLoading: boolean;
+  @Input() public showNavigation?: boolean;
+
+  private weeks: SchoolWeek[];
+
+  public isLoading: boolean;
 
   constructor(public dataService: DataService) {}
 
-  ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.showNavigation && this.weeks === undefined && this.week !== undefined) {
+  public ngOnChanges(): void {
+    if (
+      this.showNavigation &&
+      this.weeks === undefined &&
+      this.week !== undefined
+    ) {
       this.weeks = [this.week];
     }
   }
 
-  setWeek(value: number): void {
+  public setWeek(value: number): void {
     if (this.isLoading) return;
     const schoolWeek = Number(this.week.schoolWeek);
 
-    const previousWeek = this.weeks.find(el => Number(el.schoolWeek) === (schoolWeek + value));
+    const previousWeek = this.weeks.find(
+      (el) => Number(el.schoolWeek) === schoolWeek + value,
+    );
+
     if (previousWeek) {
       this.week = previousWeek;
       this.dataService.schoolWeek = previousWeek;
@@ -38,7 +48,7 @@ export class SchoolWeekCardComponent implements OnInit, OnChanges {
     }
 
     this.isLoading = true;
-    this.dataService.getSchoolWeek(schoolWeek + value).subscribe(response => {
+    this.dataService.getSchoolWeek(schoolWeek + value).subscribe((response) => {
       this.weeks.push(response);
       this.week = response;
       this.dataService.schoolWeek = response;
@@ -46,4 +56,8 @@ export class SchoolWeekCardComponent implements OnInit, OnChanges {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  public asNumber(value: string): number {
+    return Number(value);
+  }
 }

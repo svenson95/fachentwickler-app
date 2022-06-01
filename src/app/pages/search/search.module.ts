@@ -1,15 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { SearchPage } from './search.page';
-import { SearchRoutingModule } from './search-routing.module';
-
-import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
+import { PostLinkModule } from '../../components/post-link/post-link.module';
 import { SearchFieldModule } from '../../components/search-field/search-field.module';
-
-
+import { SearchRoutingModule } from './search-routing.module';
+import { SearchPage } from './search.page';
 
 @NgModule({
   declarations: [SearchPage],
@@ -19,7 +15,7 @@ import { SearchFieldModule } from '../../components/search-field/search-field.mo
     SearchRoutingModule,
     PostLinkModule,
     LoadingSpinnerModule,
-    SearchFieldModule
-  ]
+    SearchFieldModule,
+  ],
 })
-export class SearchPageModule { }
+export class SearchPageModule {}

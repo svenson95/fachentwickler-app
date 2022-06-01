@@ -1,15 +1,11 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AngularMaterialModule } from '../../../app-common/angular-material.module';
-
-import { ImageManagerDialogComponent } from './image-manager-dialog.component';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NgxDropzoneModule } from 'ngx-dropzone';
-import { StateButtonModule } from '../../state-button/state-button.module';
-import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
+import { AngularMaterialModule } from '../../../app-common/angular-material.module';
 import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
-
-
+import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
+import { StateButtonModule } from '../../state-button/state-button.module';
+import { ImageManagerDialogComponent } from './image-manager-dialog.component';
 
 @NgModule({
   declarations: [ImageManagerDialogComponent],
@@ -20,8 +16,8 @@ import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.modu
     NgxDropzoneModule,
     StateButtonModule,
     PaginationBarModule,
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ImageManagerDialogModule { }
+export class ImageManagerDialogModule {}

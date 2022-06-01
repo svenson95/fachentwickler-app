@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { IndexCardPage } from './index-card.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexCardPage
-  }
+    component: IndexCardPage,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class IndexCardRoutingModule { }
+export class IndexCardRoutingModule {}

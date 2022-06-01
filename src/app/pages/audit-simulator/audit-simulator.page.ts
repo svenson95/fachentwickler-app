@@ -1,65 +1,84 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { delay } from 'rxjs/operators';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Subscription } from 'rxjs';
-
-import { ImageChunk } from '../../models/image-data';
+import { delay } from 'rxjs/operators';
+import { auditQuestions } from '../../constants/pruefungsfragen';
 import { AuditState } from '../../models/audit-state';
+import { ImageChunk } from '../../models/image-data';
+import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
-import { DataService } from '../../services/data/data.service';
-import { auditQuestions } from '../../constants/pruefungsfragen';
 
 @Component({
   selector: 'fe-audit-simulator-page',
-  templateUrl: './audit-simulator.page.html'
+  templateUrl: './audit-simulator.page.html',
 })
 export class AuditSimulatorPage implements OnInit, OnDestroy {
+  @ViewChild('slideInWrapper') public slideInWrapper: ElementRef;
 
-  @ViewChild('slideInWrapper') slideInWrapper: ElementRef;
-  @ViewChild('choiceButton') choiceButton: ElementRef;
+  @ViewChild('choiceButton') public choiceButton: ElementRef;
 
-  AuditState = AuditState;
-  auditQuestions = auditQuestions;
-  state: AuditState;
-  round = 0;
-  isCorrect: boolean;
-  selectedAnswer: number;
-  isLoading: boolean;
-  loadingSubscription: Subscription;
-  image: boolean | string = false;
-  choiceInput: string;
-  currentQuestion = this.auditQuestions[this.round];
+  public AuditState = AuditState;
 
-  constructor(private headerService: HeaderService,
-              private dataService: DataService,
-              private loadingService: LoadingService
+  public auditQuestions = auditQuestions;
+
+  public state: AuditState;
+
+  public round = 0;
+
+  public isCorrect: boolean;
+
+  public selectedAnswer: number;
+
+  public isLoading: boolean;
+
+  private loadingSubscription: Subscription;
+
+  public image: boolean | string = false;
+
+  public choiceInput: string;
+
+  public currentQuestion = this.auditQuestions[this.round];
+
+  constructor(
+    private headerService: HeaderService,
+    private dataService: DataService,
+    private loadingService: LoadingService,
   ) {
     this.headerService.setPageTitle('Audimulator');
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.state = AuditState.INTRODUCTION;
-    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe((status: boolean) => {
-      this.isLoading = status;
-    });
+    this.loadingSubscription = this.loadingService.loading$
+      .pipe(delay(0))
+      .subscribe((status: boolean) => {
+        this.isLoading = status;
+      });
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
   }
 
-  startAudit(): void {
+  public startAudit(): void {
     this.state = AuditState.PLAY;
   }
 
-  checkAnswer(event, choice): void {
+  public checkAnswer(event, choice): void {
     if (this.isCorrect !== undefined) {
       return;
     }
 
     if (this.currentQuestion.choices) {
       this.selectedAnswer = this.currentQuestion.choices.indexOf(choice);
-      const correctAnswer = this.currentQuestion.choices[Number(this.currentQuestion.answer) - 1];
+      const correctAnswer =
+        this.currentQuestion.choices[Number(this.currentQuestion.answer) - 1];
       this.isCorrect = choice === correctAnswer;
     } else {
       const inputAnswer = this.choiceInput;
@@ -70,18 +89,24 @@ export class AuditSimulatorPage implements OnInit, OnDestroy {
       if (this.isCorrect) {
         this.nextRound();
         this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
-        setTimeout(() => this.slideInWrapper.nativeElement.classList.remove('slide-in-animation'), 400);
+        setTimeout(
+          () =>
+            this.slideInWrapper.nativeElement.classList.remove(
+              'slide-in-animation',
+            ),
+          400,
+        );
       }
       this.isCorrect = undefined;
       this.selectedAnswer = undefined;
     }, 1000);
   }
 
-  nextRound(): void {
+  private nextRound(): void {
     if (auditQuestions[this.round + 1] === undefined) {
       this.state = AuditState.END;
     } else {
-      this.round++;
+      this.round += 1;
     }
 
     this.currentQuestion = this.auditQuestions[this.round];
@@ -91,17 +116,15 @@ export class AuditSimulatorPage implements OnInit, OnDestroy {
     }
   }
 
-  loadImage(url): void {
+  private loadImage(url): void {
     this.dataService.getImage(url).subscribe(
-        (data) => {
-          const dataStrings = data.chunks.map((chunk: ImageChunk) => chunk.data);
-          this.image = 'data:image/png;base64,' + dataStrings.join('');
-        },
-        (error) => {
-          this.image = null;
-          console.log('Error while GET audit question image', error);
-        }
+      (data) => {
+        const dataStrings = data.chunks.map((chunk: ImageChunk) => chunk.data);
+        this.image = `data:image/png;base64,${dataStrings.join('')}`;
+      },
+      () => {
+        this.image = null;
+      },
     );
   }
-
 }

@@ -1,14 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { ExamsPage } from './exams.page';
-import { ExamsRoutingModule } from './exams-routing.module';
-
 import { ExamItemModule } from '../../components/exam-item/exam-item.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
-
+import { ExamsRoutingModule } from './exams-routing.module';
+import { ExamsPage } from './exams.page';
 
 @NgModule({
   declarations: [ExamsPage],
@@ -17,7 +13,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     ExamsRoutingModule,
     AngularMaterialModule,
     ExamItemModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class ExamsPageModule { }
+export class ExamsPageModule {}

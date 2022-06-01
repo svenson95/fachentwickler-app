@@ -1,12 +1,28 @@
 <mat-dialog-content class="fe-image-manager">
   <div class="fe-im-header">
     <p class="fe-card-title">Image-Manager</p>
-    <p class="fe-card-description" *ngIf="allImagesLength === undefined">Bilder werden geladen ...</p>
-    <p class="fe-card-description" *ngIf="allImagesLength !== undefined">{{allImagesLength}} Bilder</p>
+    <p class="fe-card-description" *ngIf="allImagesLength === undefined">
+      Bilder werden geladen ...
+    </p>
+    <p class="fe-card-description" *ngIf="allImagesLength !== undefined">
+      {{ allImagesLength }} Bilder
+    </p>
   </div>
   <p class="title">Neues Bild hochladen</p>
-  <form class="fe-add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
-    <div class="upload-image-dropzone" id="upload-image-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)" #fileInput [multiple]="false">
+  <form
+    class="fe-add-image-form"
+    encType="multipart/form-data"
+    (submit)="uploadImage($event)"
+  >
+    <div
+      class="upload-image-dropzone"
+      id="upload-image-dropzone"
+      ngx-dropzone
+      [accept]="'image/*'"
+      (change)="onSelect($event)"
+      #fileInput
+      [multiple]="false"
+    >
       <ngx-dropzone-label class="dropzone-labels">
         <div class="drop-image">
           <ion-icon class="drop-icon" name="download-outline"></ion-icon>
@@ -18,32 +34,55 @@
           <h2>Bild auswählen</h2>
         </div>
       </ngx-dropzone-label>
-      <ngx-dropzone-image-preview class="dropzone-preview" ngProjectAs="ngx-dropzone-preview" *ngFor="let f of dropzoneFile" [file]="f" [removable]="true" (removed)="onRemove(f)">
-        <ngx-dropzone-label>{{ f.name }} <br/> {{ f.type }} <br/> {{ formatBytes(f.size) }}</ngx-dropzone-label>
+      <ngx-dropzone-image-preview
+        class="dropzone-preview"
+        ngProjectAs="ngx-dropzone-preview"
+        *ngFor="let f of dropzoneFile"
+        [file]="f"
+        [removable]="true"
+        (removed)="onRemove(f)"
+      >
+        <ngx-dropzone-label>
+          {{ f.name }} <br />
+          {{ f.type }} <br />
+          {{ formatBytes(f.size) }}
+        </ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
-    <fe-state-button type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)">Hochladen</fe-state-button>
+    <fe-state-button
+      type="submit"
+      [isLoading]="isUploadingImage"
+      [disabled]="isEmpty(dropzoneFile)"
+    >
+      Hochladen
+    </fe-state-button>
   </form>
-  <hr class="fe-divider-line"/>
+  <hr class="fe-divider-line" />
   <p class="title">Details</p>
   <div class="image-preview">
     <div class="details">
       <div class="image-container">
-        <img class="image" [src]="encode(selectedImageData)" alt="image" (click)="showPreview()" *ngIf="selectedImageData"/>
+        <img
+          class="image"
+          [src]="encode(selectedImageData)"
+          alt="image"
+          (click)="showPreview()"
+          *ngIf="selectedImageData"
+        />
         <fe-loading-spinner *ngIf="!selectedImageData"></fe-loading-spinner>
       </div>
       <div class="image-attributes-list">
         <p>
           <span class="key">ID: </span>
-          <span class="value">{{selectedImage?._id}}</span>
+          <span class="value">{{ selectedImage?._id }}</span>
         </p>
         <p>
           <span class="key">Name: </span>
-          <span class="value">{{selectedImage?.filename}}</span>
+          <span class="value">{{ selectedImage?.filename }}</span>
         </p>
         <p>
           <span class="key">Content-Type: </span>
-          <span class="value">{{selectedImage?.contentType}}</span>
+          <span class="value">{{ selectedImage?.contentType }}</span>
         </p>
         <p>
           <span class="key">Length: </span>
@@ -54,33 +93,54 @@
         </p>
         <p>
           <span class="key">Upload Date: </span>
-          <span class="value">{{selectedImage?.uploadDate | date: 'short' :'CET' : 'de'}}</span>
+          <span class="value">
+            {{ selectedImage?.uploadDate | date: "short":"CET":"de" }}
+          </span>
         </p>
       </div>
     </div>
-    <fe-state-button *ngIf="authService.user.role === UserRole.ADMIN" [disabled]="!selectedImage" (click)="deleteImage(selectedImage._id)">
+    <fe-state-button
+      *ngIf="authService.user.role === UserRole.ADMIN"
+      [disabled]="!selectedImage"
+      (click)="deleteImage(selectedImage._id)"
+    >
       <span>Bild löschen</span>
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
     </fe-state-button>
   </div>
-  <hr class="fe-divider-line"/>
+  <hr class="fe-divider-line" />
   <div class="title-wrapper">
     <p class="title">Hochgeladene Bilder</p>
     <button class="fe-text-button secondary" (click)="changeSorting()">
-      <span>{{isSortedAscending ? 'Aufsteigend' : 'Absteigend'}}</span>
-      <mat-icon>{{isSortedAscending ? 'expand_less' : 'expand_more'}}</mat-icon>
+      <span>{{ isSortedAscending ? "Aufsteigend" : "Absteigend" }}</span>
+      <mat-icon>
+        {{ isSortedAscending ? "expand_less" : "expand_more" }}
+      </mat-icon>
     </button>
   </div>
   <div class="fe-im-recent-images">
-    <fe-loading-spinner *ngIf="images.length === 0 || isLoadingImages"></fe-loading-spinner>
+    <fe-loading-spinner
+      *ngIf="images.length === 0 || isLoadingImages"
+    ></fe-loading-spinner>
     <div class="images-list" *ngIf="!isLoadingImages">
-      <button class="list-item" [class.is-selected]="image._id === selectedImage?._id" *ngFor="let image of images; trackBy: trackByFn" (click)="setSelectedImage(image)">
-        <span>{{image.filename}}</span>
-        <span>{{image.uploadDate | date: 'dd.MM.yyyy | H:mm:ss' :'CET' : 'de'}}</span>
+      <button
+        class="list-item"
+        [class.is-selected]="image._id === selectedImage?._id"
+        *ngFor="let image of images; trackBy: trackByFn"
+        (click)="setSelectedImage(image)"
+      >
+        <span>{{ image.filename }}</span>
+        <span>
+          {{ image.uploadDate | date: "dd.MM.yyyy | H:mm:ss":"CET":"de" }}
+        </span>
       </button>
     </div>
   </div>
   <div class="fe-pagination-bar" *ngIf="images.length > 0 && allImagesLength">
-    <fe-pagination-bar [totalItems]="allImagesLength" [currentPage]="currentPage" (changePage)="loadImages($event)"></fe-pagination-bar>
+    <fe-pagination-bar
+      [totalItems]="allImagesLength"
+      [currentPage]="currentPage"
+      (changePage)="loadImages($event)"
+    ></fe-pagination-bar>
   </div>
 </mat-dialog-content>

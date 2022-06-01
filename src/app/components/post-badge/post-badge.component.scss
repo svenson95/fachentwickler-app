@@ -1,5 +1,5 @@
-@import 'src/sass/abstracts/breakpoints';
-@import 'src/sass/abstracts/mixins';
+@import "src/sass/abstracts/breakpoints";
+@import "src/sass/abstracts/mixins";
 
 :host {
   margin-right: 6px;
@@ -17,7 +17,7 @@
     border-radius: 4px;
 
     font-weight: 300;
-    font-size: .7em;
+    font-size: 0.7em;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 
@@ -27,11 +27,11 @@
     }
 
     @include to-xs {
-      font-size: .65em;
+      font-size: 0.65em;
     }
 
     @include to-tiny {
-      font-size: .5rem;
+      font-size: 0.5rem;
       line-height: 15px;
     }
 
@@ -40,27 +40,27 @@
     }
 
     &.article {
-      background-color: rgba(var(--tertiary-color-rgb), .15);
+      background-color: rgba(var(--tertiary-color-rgb), 0.15);
       color: var(--tertiary-color);
     }
     &.tasks {
-      background-color: rgba(var(--grey-4-rgb), .15);
+      background-color: rgba(var(--grey-4-rgb), 0.15);
       color: var(--grey-4);
     }
     &.index-cards {
-      background-color: rgba(var(--secondary-color-rgb), .15);
+      background-color: rgba(var(--secondary-color-rgb), 0.15);
       color: var(--secondary-color);
     }
     &.quiz {
-      background-color: rgba(var(--primary-color-rgb), .15);
+      background-color: rgba(var(--primary-color-rgb), 0.15);
       color: var(--primary-color);
     }
     &.matching {
-      background-color: rgba(limegreen, .15);
+      background-color: rgba(limegreen, 0.15);
       color: limegreen;
     }
     &.test {
-      background: rgba(var(--tertiary-color-rgb), .8);
+      background: rgba(var(--tertiary-color-rgb), 0.8);
       color: var(--background-primary);
     }
   }

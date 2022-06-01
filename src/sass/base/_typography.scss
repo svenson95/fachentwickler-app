@@ -1,5 +1,5 @@
-
-b, strong {
+b,
+strong {
   font-weight: 600;
 }
 
@@ -28,21 +28,21 @@ ul {
 
   list-style: none;
   li::before {
-    content: '\25B8';
+    content: "\25B8";
     color: var(--tertiary-color);
     margin-left: -1rem;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
   li ul {
     list-style: none;
 
     li::before {
-      content: '\25B8';
+      content: "\25B8";
       color: var(--text-color-3);
-      opacity: .8;
+      opacity: 0.8;
       margin-left: 0.5rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 }

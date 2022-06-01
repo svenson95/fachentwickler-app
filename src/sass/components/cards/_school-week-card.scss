@@ -1,12 +1,8 @@
 mat-card.fe-card.school-week-card {
-
   .fe-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .fe-card-title {
-    }
 
     .fe-loading-spinner {
       margin: 0;
@@ -67,7 +63,7 @@ mat-card.fe-card.school-week-card {
 
         .weekday-label {
           color: var(--grey-2);
-          font-size: .8rem;
+          font-size: 0.8rem;
           width: fit-content;
           margin: 0;
           border-radius: 8px;
@@ -85,4 +81,3 @@ mat-card.fe-card.school-week-card {
     }
   }
 }
-

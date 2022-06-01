@@ -1,5 +1,5 @@
-import { Post } from './post';
 import { ExamDate } from './exam-date';
+import { Post } from './post';
 import { SchoolNews } from './school-news';
 
 export interface DashboardData {

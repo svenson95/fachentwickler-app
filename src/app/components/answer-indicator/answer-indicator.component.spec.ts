@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AnswerIndicatorComponent } from './answer-indicator.component';
 
 describe('AnswerIndicatorComponent', () => {
@@ -8,9 +7,8 @@ describe('AnswerIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnswerIndicatorComponent ]
-    })
-    .compileComponents();
+      declarations: [AnswerIndicatorComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

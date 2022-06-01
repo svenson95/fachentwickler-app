@@ -1,26 +1,50 @@
-<hr class="pagination-bar-divider"/>
+<hr class="pagination-bar-divider" />
 <div class="pagination-bar">
-    <ng-container *ngIf="!(this.isFirstPaginationPage && this.isLastPaginationPage)">
-        <button class="first-btn" (click)="goToFirstPage()" [disabled]="isFirstPaginationPage" [style.opacity]="isFirstPaginationPage ? disabledOpacity : null">
-            <ion-icon class="delete-icon" name="play-back"></ion-icon>
-        </button>
-        <button class="back-btn" (click)="goToPreviousPage()" [disabled]="isFirstPaginationPage" [style.opacity]="isFirstPaginationPage ? disabledOpacity : null">
-            <ion-icon class="delete-icon" name="caret-back"></ion-icon>
-        </button>
-    </ng-container>
-    <button class="page-btn unselectable" *ngFor="let page of paginationPage | pageButtons: this.buttonsPerPage : this.totalPages"
-            [class.is-selected]="page === currentPage" (click)="goTo(page)">
-        {{page + 1}}
+  <ng-container *ngIf="!(isFirstPaginationPage && isLastPaginationPage)">
+    <button
+      class="first-btn"
+      (click)="goToFirstPage()"
+      [disabled]="isFirstPaginationPage"
+      [style.opacity]="isFirstPaginationPage ? disabledOpacity : null"
+    >
+      <ion-icon class="delete-icon" name="play-back"></ion-icon>
     </button>
-    <ng-container *ngIf="this.isFirstPaginationPage && this.isLastPaginationPage">
-      <fe-loading-spinner size="24" *ngIf="isLoading"></fe-loading-spinner>
-    </ng-container>
-    <ng-container *ngIf="!(this.isFirstPaginationPage && this.isLastPaginationPage)">
-        <button class="forward-btn" (click)="goToNextPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? disabledOpacity : null">
-            <ion-icon class="delete-icon" name="caret-forward-outline"></ion-icon>
-        </button>
-        <button class="last-btn" (click)="goToLastPage()" [disabled]="isLastPaginationPage" [style.opacity]="isLastPaginationPage ? disabledOpacity : null">
-            <ion-icon class="delete-icon" name="play-forward"></ion-icon>
-        </button>
-    </ng-container>
+    <button
+      class="back-btn"
+      (click)="goToPreviousPage()"
+      [disabled]="isFirstPaginationPage"
+      [style.opacity]="isFirstPaginationPage ? disabledOpacity : null"
+    >
+      <ion-icon class="delete-icon" name="caret-back"></ion-icon>
+    </button>
+  </ng-container>
+  <button
+    class="page-btn unselectable"
+    *ngFor="let page of paginationPage | pageButtons: buttonsPerPage:totalPages"
+    [class.is-selected]="page === currentPage"
+    (click)="goTo(page)"
+  >
+    {{ page + 1 }}
+  </button>
+  <ng-container *ngIf="isFirstPaginationPage && isLastPaginationPage">
+    <fe-loading-spinner size="24" *ngIf="isLoading"></fe-loading-spinner>
+  </ng-container>
+  <ng-container *ngIf="!(isFirstPaginationPage && isLastPaginationPage)">
+    <button
+      class="forward-btn"
+      (click)="goToNextPage()"
+      [disabled]="isLastPaginationPage"
+      [style.opacity]="isLastPaginationPage ? disabledOpacity : null"
+    >
+      <ion-icon class="delete-icon" name="caret-forward-outline"></ion-icon>
+    </button>
+    <button
+      class="last-btn"
+      (click)="goToLastPage()"
+      [disabled]="isLastPaginationPage"
+      [style.opacity]="isLastPaginationPage ? disabledOpacity : null"
+    >
+      <ion-icon class="delete-icon" name="play-forward"></ion-icon>
+    </button>
+  </ng-container>
 </div>

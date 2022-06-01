@@ -1,3 +1,7 @@
+export enum UserRole {
+  ADMIN = 'admin',
+  USER = 'user',
+}
 
 export interface User {
   _id: string;
@@ -29,11 +33,6 @@ export interface EditUser {
   email?: string;
   password?: string;
   theme?: 'light' | 'dark';
-}
-
-export enum UserRole {
-  ADMIN = 'admin',
-  USER = 'user'
 }
 
 export interface UserProgress {

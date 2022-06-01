@@ -1,15 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { EditPostPage } from './edit-post.page';
-import { EditPostRoutingModule } from './edit-post-routing.module';
-
-import { PostElementModule } from '../../components/post-element/post-element.module';
 import { LessonFooterModule } from '../../components/lesson-footer/lesson-footer.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
-
+import { PostElementModule } from '../../components/post-element/post-element.module';
+import { EditPostRoutingModule } from './edit-post-routing.module';
+import { EditPostPage } from './edit-post.page';
 
 @NgModule({
   declarations: [EditPostPage],
@@ -20,7 +16,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     AngularMaterialModule,
     PostElementModule,
     LessonFooterModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class EditPostPageModule { }
+export class EditPostPageModule {}

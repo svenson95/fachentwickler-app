@@ -1,56 +1,55 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 import { PostIndexCards } from '../../../models/post';
 
 @Component({
   selector: 'fe-index-card',
-  templateUrl: './index-card.component.html'
+  templateUrl: './index-card.component.html',
 })
-export class IndexCardComponent implements OnInit {
+export class IndexCardComponent {
+  @Input() public indexCards: PostIndexCards;
 
-  @Input() indexCards: PostIndexCards;
+  public level = 0;
 
-  level = 0;
-  isAnswerVisible = false;
-  end = false;
+  public isAnswerVisible = false;
 
-  constructor() {}
+  public end = false;
 
-  ngOnInit(): void {
-  }
-
-  showAnswer(): void {
+  public showAnswer(): void {
     this.isAnswerVisible = true;
     if (this.isLastQuestion()) {
       this.end = true;
     }
   }
 
-  answerVisible(content): string {
-    return this.isAnswerVisible ? content.questions[this.level].answer : content.questions[this.level].question;
+  public answerVisible(content): string {
+    return this.isAnswerVisible
+      ? content.questions[this.level].answer
+      : content.questions[this.level].question;
   }
 
-  increaseLevel(): void {
+  public increaseLevel(): void {
     this.isAnswerVisible = false;
     if (this.indexCards.elements[this.level + 1] !== undefined) {
-      setTimeout(() => this.level++, 200);
+      setTimeout(() => {
+        this.level += 1;
+      }, 200);
     }
   }
 
-  resetLevel(): void {
+  public resetLevel(): void {
     this.level = 0;
     this.end = false;
     this.isAnswerVisible = false;
   }
 
-  isLastQuestion(): boolean {
+  public isLastQuestion(): boolean {
     return this.indexCards.elements[this.level + 1] === undefined;
   }
 
-  stripHtml(html): string {
+  // eslint-disable-next-line class-methods-use-this
+  public stripHtml(html: any): string {
     const tmp = document.createElement('div');
     tmp.innerHTML = html;
     return tmp.textContent || tmp.innerText || '';
   }
-
 }

@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeaderService {
-
   public pageTitle = 'Loading';
 
-  constructor() { }
-
-  setPageTitle(title): void {
+  public setPageTitle(title: string): void {
     this.pageTitle = title;
   }
 }

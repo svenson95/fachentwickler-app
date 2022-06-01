@@ -1,34 +1,85 @@
-<button class="rounded-btn more-menu-btn" [matMenuTriggerFor]="menu" [class.is-active]="menuTrigger.menuOpen" matRipple>
+<button
+  class="rounded-btn more-menu-btn"
+  [matMenuTriggerFor]="menu"
+  [class.is-active]="menuTrigger.menuOpen"
+  matRipple
+>
   <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu class="more-menu" #menu="matMenu">
-  <a class="menu-btn" mat-menu-item routerLink="search" *ngIf="isMobile" disableRipple>
+  <a
+    class="menu-btn"
+    mat-menu-item
+    routerLink="search"
+    *ngIf="isMobile"
+    disableRipple
+  >
     <mat-icon>search</mat-icon>
     <span class="label">Suche</span>
   </a>
-  <a class="menu-btn" mat-menu-item routerLink="mein-profil" *ngIf="authService.isAuthenticated" [disabled]="router.url.startsWith('/mein-profil')" disableRipple>
+  <a
+    class="menu-btn"
+    mat-menu-item
+    routerLink="mein-profil"
+    *ngIf="authService.isAuthenticated"
+    [disabled]="router.url.startsWith('/mein-profil')"
+    disableRipple
+  >
     <mat-icon>account_circle</mat-icon>
     <span class="label">Mein Profil</span>
   </a>
-  <a class="menu-btn" mat-menu-item routerLink="login" *ngIf="!authService.isAuthenticated" [disabled]="router.url.startsWith('/login')" disableRipple>
+  <a
+    class="menu-btn"
+    mat-menu-item
+    routerLink="login"
+    *ngIf="!authService.isAuthenticated"
+    [disabled]="router.url.startsWith('/login')"
+    disableRipple
+  >
     <mat-icon>login</mat-icon>
     <span class="label">Einloggen</span>
   </a>
-  <button class="menu-btn" mat-menu-item (click)="openImageManager()" *ngIf="!isMobile && authService.user?.role === UserRole.ADMIN" disableRipple>
+  <button
+    class="menu-btn"
+    mat-menu-item
+    (click)="openImageManager()"
+    *ngIf="!isMobile && authService.user?.role === UserRole.ADMIN"
+    disableRipple
+  >
     <mat-icon>perm_media</mat-icon>
     <span class="label">Image-Manager</span>
   </button>
-  <a class="menu-btn" mat-menu-item (click)="themeService.toggleTheme()" disableRipple>
+  <a
+    class="menu-btn"
+    mat-menu-item
+    (click)="themeService.toggleTheme()"
+    disableRipple
+  >
     <mat-icon>invert_colors</mat-icon>
-    <span class="label">{{themeService.isDarkTheme() ? 'Light': 'Dark'}} Theme aktivieren</span>
+    <span class="label"
+      >{{ themeService.isDarkTheme() ? "Light" : "Dark" }} Theme
+      aktivieren</span
+    >
   </a>
-  <button class="menu-btn" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated" disableRipple>
+  <button
+    class="menu-btn"
+    mat-menu-item
+    (click)="openLogoutDialog()"
+    *ngIf="authService.isAuthenticated"
+    disableRipple
+  >
     <mat-icon>logout</mat-icon>
     <span class="label">Ausloggen</span>
   </button>
   <ng-container>
-    <hr/>
-    <a class="menu-btn" mat-menu-item routerLink="/lf-1/topic/testarticle" [disabled]="router.url.startsWith('/lf-1/topic/testarticle')" disableRipple>
+    <hr />
+    <a
+      class="menu-btn"
+      mat-menu-item
+      routerLink="/lf-1/topic/testarticle"
+      [disabled]="router.url.startsWith('/lf-1/topic/testarticle')"
+      disableRipple
+    >
       <mat-icon>preview</mat-icon>
       <span class="label">Testartikel</span>
     </a>

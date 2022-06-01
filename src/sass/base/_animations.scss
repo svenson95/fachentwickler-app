@@ -1,4 +1,4 @@
-/* ANIMATIONS */
+/* Move in Top */
 @keyframes moveInTop {
   0% {
     opacity: 0.5;
@@ -30,8 +30,7 @@
   }
 }
 
-//
-
+/* Move in Bottom */
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -63,8 +62,7 @@
   }
 }
 
-//
-
+/* Move in Left */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -96,8 +94,7 @@
   }
 }
 
-//
-
+/* Logo Move in Left */
 @keyframes logoMoveInLeft {
   0% {
     opacity: 0;
@@ -121,8 +118,7 @@
   }
 }
 
-//
-
+/* Title Move in Right */
 @keyframes titleMoveInRight {
   0% {
     opacity: 0;
@@ -146,8 +142,7 @@
   }
 }
 
-//
-
+/* Move in Left - Matching */
 @keyframes moveInLeft_matching {
   0% {
     opacity: 0;
@@ -171,8 +166,7 @@
   }
 }
 
-//
-
+/* Move in Right - Matching */
 @keyframes moveInRight_matching {
   0% {
     opacity: 0;

@@ -1,13 +1,9 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../../app-common/angular-material.module';
-
-import { DeleteImageDialogComponent } from './delete-image-dialog.component';
-
-import { StateButtonModule } from '../../state-button/state-button.module';
 import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module';
-
-
+import { StateButtonModule } from '../../state-button/state-button.module';
+import { DeleteImageDialogComponent } from './delete-image-dialog.component';
 
 @NgModule({
   declarations: [DeleteImageDialogComponent],
@@ -16,8 +12,8 @@ import { PaginationBarModule } from '../../pagination-bar/pagination-bar.module'
     CommonModule,
     AngularMaterialModule,
     StateButtonModule,
-    PaginationBarModule
+    PaginationBarModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class DeleteImageDialogModule { }
+export class DeleteImageDialogModule {}

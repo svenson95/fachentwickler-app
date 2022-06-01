@@ -14,14 +14,15 @@
   }
 
   .mat-menu-item {
-    &:hover, &:active {
-      background: rgba(var(--tertiary-color-rgb), .25);
+    &:hover,
+    &:active {
+      background: rgba(var(--tertiary-color-rgb), 0.25);
     }
   }
 
   .mat-menu-item[disabled] {
     mat-icon {
-      color : var(--text-color-3);
+      color: var(--text-color-3);
     }
 
     .label {

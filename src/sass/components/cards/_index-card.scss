@@ -32,7 +32,7 @@
   @include to-md {
     width: 360px;
     height: 258px;
-    font-size: .65rem;
+    font-size: 0.65rem;
   }
 
   @include to-xs {
@@ -54,7 +54,8 @@
     transform: rotateY(180deg);
   }
 
-  .fe-index-card--front, .fe-index-card--back {
+  .fe-index-card--front,
+  .fe-index-card--back {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -92,11 +93,13 @@
       }
     }
 
-    .card-header, .content {
+    .card-header,
+    .content {
       width: 75%;
     }
 
-    .card-header .label, .content {
+    .card-header .label,
+    .content {
       color: black;
     }
 
@@ -121,7 +124,8 @@
   .fe-index-card--front {
     background-image: url("../../../assets/images/indexcard-background.png");
 
-    .card-header, .content {
+    .card-header,
+    .content {
       margin-left: 80px;
 
       @include to-md {
@@ -138,7 +142,8 @@
     background-image: url("../../../assets/images/indexcard-background-flipped.png");
     transform: rotateY(180deg);
 
-    .card-header, .content {
+    .card-header,
+    .content {
       margin-left: 40px;
 
       @include to-md {
@@ -150,7 +155,6 @@
       }
     }
   }
-
 }
 
 .fe-card.index-card .fe-buttons-container {
@@ -186,5 +190,4 @@
       margin-bottom: 15px;
     }
   }
-
 }

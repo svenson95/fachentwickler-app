@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { SubstitutionSchedulePage } from './substitution-schedule.page';
-import { SubstitutionScheduleRoutingModule } from './substitution-schedule-routing.module';
 import { ScheduleCardModule } from '../../components/cards/schedule-card/schedule-card.module';
-
-
+import { SubstitutionScheduleRoutingModule } from './substitution-schedule-routing.module';
+import { SubstitutionSchedulePage } from './substitution-schedule.page';
 
 @NgModule({
   declarations: [SubstitutionSchedulePage],
@@ -14,7 +11,7 @@ import { ScheduleCardModule } from '../../components/cards/schedule-card/schedul
     CommonModule,
     SubstitutionScheduleRoutingModule,
     AngularMaterialModule,
-    ScheduleCardModule
-  ]
+    ScheduleCardModule,
+  ],
 })
-export class SubstitutionSchedulePageModule { }
+export class SubstitutionSchedulePageModule {}

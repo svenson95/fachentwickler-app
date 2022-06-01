@@ -1,26 +1,29 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { SchoolNews } from '../../../models/school-news';
 
 @Component({
   selector: 'fe-news-card',
   templateUrl: './news-card.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NewsCardComponent implements OnInit {
+export class NewsCardComponent {
+  @Input() public news: SchoolNews[];
 
-  @Input() news: SchoolNews[];
-  @Input() currentPage = 0;
-  @Input() allNewsLength?: number;
-  @Input() isLoading?: boolean;
-  @Output() changePage = new EventEmitter<number>();
+  @Input() public currentPage = 0;
 
-  constructor() {}
+  @Input() public allNewsLength?: number;
 
-  ngOnInit(): void {
-  }
+  @Input() public isLoading?: boolean;
 
-  loadPage(pageNumber): number {
+  @Output() public changePage = new EventEmitter<number>();
+
+  public loadPage(pageNumber): number {
     if (this.currentPage === pageNumber) return;
     this.changePage.emit(pageNumber);
   }

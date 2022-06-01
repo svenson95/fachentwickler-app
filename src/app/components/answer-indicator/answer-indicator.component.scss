@@ -4,7 +4,8 @@
   opacity: 0;
   transition: opacity 200ms ease;
 
-  &.correct, &.wrong {
+  &.correct,
+  &.wrong {
     opacity: 1;
   }
 }
@@ -33,7 +34,8 @@ $size: 52px;
   stroke-miterlimit: 10;
   margin: 10% auto;
   box-shadow: inset 0px 0px 0px $red;
-  animation: fillred .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  animation: fillred 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
 }
 
 .crossmark__check.animateElement {
@@ -54,11 +56,12 @@ $size: 52px;
   animation: 0.3s ease 0.8s normal forwards 1 running stroke;
 }
 .cross__path--left.animateElement {
-  animation: .6s ease 0.8s normal forwards 1 running stroke;
+  animation: 0.6s ease 0.8s normal forwards 1 running stroke;
 }
 
 @keyframes scale {
-  0%, 100% {
+  0%,
+  100% {
     transform: none;
   }
   50% {
@@ -69,13 +72,11 @@ $size: 52px;
   100% {
     box-shadow: inset 0px 0px 0px 30px $green;
   }
-
 }
 @keyframes fillred {
   100% {
     box-shadow: inset 0px 0px 0px 30px $red;
   }
-
 }
 @keyframes stroke {
   100% {
@@ -104,7 +105,8 @@ $size: 52px;
   stroke-miterlimit: 10;
   margin: 10% auto;
   box-shadow: inset 0px 0px 0px $green;
-  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
 }
 
 .checkmark__check.animateElement {
@@ -120,7 +122,8 @@ $size: 52px;
   }
 }
 @keyframes scale {
-  0%, 100% {
+  0%,
+  100% {
     transform: none;
   }
   50% {

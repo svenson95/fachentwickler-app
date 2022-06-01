@@ -1,16 +1,14 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'fe-state-button',
   templateUrl: './state-button.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StateButtonComponent {
+  @Input() public isLoading: boolean;
 
-  @Input() isLoading: boolean;
-  @Input() type: 'button' | 'submit' | 'reset';
-  @Input() disabled: boolean;
+  @Input() public type: 'button' | 'submit' | 'reset';
 
-  constructor() { }
-
+  @Input() public disabled: boolean;
 }

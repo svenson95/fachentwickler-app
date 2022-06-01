@@ -1,13 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { LessonFooterComponent } from './lesson-footer.component';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-import { StateButtonModule } from '../state-button/state-button.module';
 import { PipesModule } from '../../pipes/pipes.module';
-
-
+import { StateButtonModule } from '../state-button/state-button.module';
+import { LessonFooterComponent } from './lesson-footer.component';
 
 @NgModule({
   declarations: [LessonFooterComponent],
@@ -17,7 +14,7 @@ import { PipesModule } from '../../pipes/pipes.module';
     AngularMaterialModule,
     RouterModule,
     StateButtonModule,
-    PipesModule
-  ]
+    PipesModule,
+  ],
 })
-export class LessonFooterModule { }
+export class LessonFooterModule {}

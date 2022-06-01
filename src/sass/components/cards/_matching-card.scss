@@ -1,5 +1,5 @@
-$item-background: rgba(var(--tertiary-color-rgb), .3);
-$item-hover-background: rgba(var(--tertiary-color-rgb), .5);
+$item-background: rgba(var(--tertiary-color-rgb), 0.3);
+$item-hover-background: rgba(var(--tertiary-color-rgb), 0.5);
 
 $connector-width: 7px;
 
@@ -27,19 +27,21 @@ $easeIn-duration: 400ms;
     0% {
       margin: 0;
       background: limegreen;
-      box-shadow:
-          0 0 2px rgba(limegreen, .6),
-          0 0 10px rgba(limegreen, .3);
+      box-shadow: 0 0 2px rgba(limegreen, 0.6), 0 0 10px rgba(limegreen, 0.3);
     }
     100% {
       margin: 10px;
-      background: rgba(var(--tertiary-color-rgb), .5);
+      background: rgba(var(--tertiary-color-rgb), 0.5);
       box-shadow: none;
     }
   }
 
-  #horizontal-connector { background: rgba(var(--tertiary-color-rgb), .8); }
-  .vertical-connector { background: rgba(var(--tertiary-color-rgb), .3); }
+  #horizontal-connector {
+    background: rgba(var(--tertiary-color-rgb), 0.8);
+  }
+  .vertical-connector {
+    background: rgba(var(--tertiary-color-rgb), 0.3);
+  }
 
   #horizontal-connector,
   .vertical-connector {
@@ -90,7 +92,8 @@ $easeIn-duration: 400ms;
       padding: 10px;
     }
 
-    &.left, &.right {
+    &.left,
+    &.right {
       display: flex;
     }
 
@@ -144,7 +147,7 @@ $easeIn-duration: 400ms;
     }
 
     @include to-xs {
-      font-size: .7em;
+      font-size: 0.7em;
       padding: 8px;
       width: 100px;
       height: 80px;
@@ -208,7 +211,7 @@ $easeIn-duration: 400ms;
     display: flex;
     margin: 20px auto auto;
 
-    border: 1px solid rgba(var(--tertiary-color-rgb),.3);
+    border: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
     border-radius: 0;
 
     &:hover {
@@ -238,7 +241,7 @@ $easeIn-duration: 400ms;
   box-shadow: var(--button-shadow);
 
   @include to-xs {
-    font-size: .7em;
+    font-size: 0.7em;
     hyphens: auto;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -254,7 +257,8 @@ $easeIn-duration: 400ms;
 }
 
 #game {
-  &.correct, &.wrong {
+  &.correct,
+  &.wrong {
     transition: all $easeIn-duration ease-out;
 
     .match-pair-side {
@@ -274,8 +278,10 @@ $easeIn-duration: 400ms;
     }
   }
 
-  &.correct, &.wrong {
-    button.fe-text-button span, button.fe-text-button:disabled span {
+  &.correct,
+  &.wrong {
+    button.fe-text-button span,
+    button.fe-text-button:disabled span {
       color: var(--tertiary-color);
     }
   }
@@ -284,9 +290,8 @@ $easeIn-duration: 400ms;
     #horizontal-connector,
     .vertical-connector {
       background: limegreen;
-      box-shadow:
-          0 0 2px rgba(50,205,50, .8),
-          0 0 10px rgba(50,205,50, .4);
+      box-shadow: 0 0 2px rgba(50, 205, 50, 0.8),
+        0 0 10px rgba(50, 205, 50, 0.4);
     }
   }
 
@@ -294,9 +299,7 @@ $easeIn-duration: 400ms;
     #horizontal-connector,
     .vertical-connector {
       background: red;
-      box-shadow:
-          0 0 2px rgba(255,0,0, .8),
-          0 0 10px rgba(255,0,0, .4);
+      box-shadow: 0 0 2px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.4);
     }
   }
 }

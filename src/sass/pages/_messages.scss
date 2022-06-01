@@ -1,4 +1,3 @@
-
 .page.messages {
   .fe-card {
     .fe-view-wrapper {
@@ -16,7 +15,8 @@
       .fe-teacher {
         display: flex;
 
-        .key, .value {
+        .key,
+        .value {
           margin: 0;
           padding: 10px;
         }
@@ -38,5 +38,4 @@
       }
     }
   }
-
 }

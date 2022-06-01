@@ -1,14 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../../app-common/angular-material.module';
-
-import { AuditSimulatorPage } from './audit-simulator.page';
-import { PruefungsSimulatorPageRoutingModule } from './audit-simulator-routing.module';
-
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
-
-
+import { PruefungsSimulatorPageRoutingModule } from './audit-simulator-routing.module';
+import { AuditSimulatorPage } from './audit-simulator.page';
 
 @NgModule({
   declarations: [AuditSimulatorPage],
@@ -17,7 +13,7 @@ import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-s
     PruefungsSimulatorPageRoutingModule,
     AngularMaterialModule,
     FormsModule,
-    LoadingSpinnerModule
-  ]
+    LoadingSpinnerModule,
+  ],
 })
-export class AuditSimulatorPageModule { }
+export class AuditSimulatorPageModule {}

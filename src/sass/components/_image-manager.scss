@@ -21,9 +21,6 @@ mat-dialog-content.fe-image-manager {
     .fe-card-title {
       margin-bottom: 2px;
     }
-
-    .fe-card-description {
-    }
   }
 
   .title {
@@ -46,7 +43,7 @@ mat-dialog-content.fe-image-manager {
     button {
       display: flex;
       align-items: center;
-      font-size: .7rem;
+      font-size: 0.7rem;
 
       span {
         margin-left: 8px;
@@ -126,7 +123,7 @@ mat-dialog-content.fe-image-manager {
       cursor: pointer;
 
       span:nth-of-type(2) {
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: var(--text-color-3);
       }
     }
@@ -143,7 +140,7 @@ mat-dialog-content.fe-image-manager {
       }
 
       &.is-selected {
-        background-color: rgba(var(--secondary-color-rgb), .1);
+        background-color: rgba(var(--secondary-color-rgb), 0.1);
         border-bottom: 1px solid var(--secondary-color);
         transition: border-bottom-color 150ms ease-in;
       }
@@ -210,7 +207,7 @@ mat-dialog-content.fe-image-manager {
         display: inline-block;
         text-align: end;
         margin-right: 10px;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
 
@@ -259,14 +256,14 @@ ngx-dropzone,
     ngx-dropzone-label {
       text-align: left !important;
       margin: 0 5px !important;
-      font-size: .8rem;
+      font-size: 0.8rem;
       width: 350px;
     }
   }
 }
 
 .upload-image-dropzone#upload-image-dropzone.ngx-dz-hovered {
-  background: rgba(var(--secondary-color-rgb), .1);
+  background: rgba(var(--secondary-color-rgb), 0.1);
   border: 1px solid var(--secondary-color);
   transition: all 250ms ease-in-out;
 }
@@ -274,15 +271,16 @@ ngx-dropzone,
 ngx-dropzone-label.dropzone-labels {
   display: flex;
   align-items: center;
-  font-size: .9em;
+  font-size: 0.9em;
 
   p {
     color: var(--text-color-3);
-    font-size: .8em;
+    font-size: 0.8em;
     margin: 0 20px;
   }
 
-  .drop-image, .choose-image {
+  .drop-image,
+  .choose-image {
     display: flex;
     align-items: center;
 
@@ -301,7 +299,9 @@ ngx-dropzone-label.dropzone-labels {
 ngx-dropzone-remove-badge {
   opacity: 1 !important;
   background-color: transparent !important;
-  svg line { stroke: var(--text-color-3) !important; }
+  svg line {
+    stroke: var(--text-color-3) !important;
+  }
 
   &:hover {
     background-color: var(--background-primary) !important;

@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'fe-checkmark',
   templateUrl: './checkmark.component.html',
-  styleUrls: ['./checkmark.component.scss']
+  styleUrls: ['./checkmark.component.scss'],
 })
-export class CheckmarkComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class CheckmarkComponent {}

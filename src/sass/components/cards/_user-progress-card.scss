@@ -5,13 +5,14 @@ mat-card.fe-card.user-progress-card {
   .fe-view-wrapper {
     padding-top: 10px;
 
-    .current-lesson, .current-week {
+    .current-lesson,
+    .current-week {
       .label {
         margin-top: 8px;
         margin-bottom: 8px;
 
         @include to-xs {
-          font-size: .8rem;
+          font-size: 0.8rem;
           margin-bottom: 3px;
         }
       }
@@ -20,7 +21,7 @@ mat-card.fe-card.user-progress-card {
     mat-progress-bar {
       height: var(--progressbar-height);
 
-      .mat-progress-bar-buffer  {
+      .mat-progress-bar-buffer {
         background: var(--background-secondary);
       }
     }
@@ -49,8 +50,5 @@ mat-card.fe-card.user-progress-card {
         margin-bottom: 10px;
       }
     }
-
   }
-
 }
-

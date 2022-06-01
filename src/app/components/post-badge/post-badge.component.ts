@@ -1,38 +1,38 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-
-import { PostType } from '../../models/post-type';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Post } from '../../models/post';
+import { PostType } from '../../models/post-type';
 
 @Component({
   selector: 'fe-post-badge',
   templateUrl: './post-badge.component.html',
   styleUrls: ['./post-badge.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostBadgeComponent implements OnInit {
+export class PostBadgeComponent {
+  @Input('post') public post: Post;
 
-  @Input('post') post: Post;
-  PostType = PostType;
+  public PostType = PostType;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  badgeTranslator(text: PostType): string {
+  // eslint-disable-next-line class-methods-use-this
+  public badgeTranslator(text: PostType | string): string {
     if (text === PostType.ARTICLE) {
       return 'Artikel';
-    } else if (text === PostType.TASKS) {
+    }
+    if (text === PostType.TASKS) {
       return 'Aufgaben';
-    } else if (text === PostType.INDEX_CARDS) {
+    }
+    if (text === PostType.INDEX_CARDS) {
       return 'Karteikarten';
-    } else if (text === PostType.QUIZ) {
+    }
+    if (text === PostType.QUIZ) {
       return 'Quiz';
-    } else if (text === PostType.MATCHING) {
+    }
+    if (text === PostType.MATCHING) {
       return 'Matchings';
-    } else if (text === PostType.TEST) {
+    }
+    if (text === PostType.TEST) {
       return 'Test';
     }
+    return '';
   }
-
 }

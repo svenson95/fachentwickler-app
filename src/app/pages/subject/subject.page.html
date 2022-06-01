@@ -10,7 +10,7 @@
       <div class="topic-container" *ngFor="let topic of subject.topics">
         <div class="header">
           <p class="topic-title">{{topic.title}}</p>
-          <hr/>
+          <hr />
         </div>
         <div class="post-links-container">
           <fe-post-link *ngFor="let post of topic.links" [post]="post!"></fe-post-link>
@@ -23,7 +23,7 @@
     <p class="fe-card-title">Tests</p>
     <mat-card-content>
       <div class="fe-test-container">
-        <fe-post-link *ngFor="let post of subject.tests" [post]="post!"></fe-post-link>
+        <fe-post-link *ngFor="let post of subject.tests" [post]="post"></fe-post-link>
       </div>
     </mat-card-content>
   </mat-card>

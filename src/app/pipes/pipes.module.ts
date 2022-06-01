@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
-
-import { LongSubjectNamePipe } from './long-subject-name/long-subject-name.pipe';
-import { WeekdayStringPipe } from './weekday-string/weekday-string.pipe';
 import { AlreadyReadPipe } from './already-read/already-read.pipe';
-import { SchoolDaysPipe } from './school-days/school-days.pipe';
 import { DaysLeftPipe } from './days-left/days-left.pipe';
+import { LongSubjectNamePipe } from './long-subject-name/long-subject-name.pipe';
+import { SchoolDaysPipe } from './school-days/school-days.pipe';
 import { SubjectIconPipe } from './subject-icon/subject-icon.pipe';
-
+import { WeekdayStringPipe } from './weekday-string/weekday-string.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +13,7 @@ import { SubjectIconPipe } from './subject-icon/subject-icon.pipe';
     AlreadyReadPipe,
     SchoolDaysPipe,
     DaysLeftPipe,
-    SubjectIconPipe
+    SubjectIconPipe,
   ],
   exports: [
     LongSubjectNamePipe,
@@ -23,7 +21,8 @@ import { SubjectIconPipe } from './subject-icon/subject-icon.pipe';
     AlreadyReadPipe,
     SchoolDaysPipe,
     DaysLeftPipe,
-    SubjectIconPipe],
-  imports: []
+    SubjectIconPipe,
+  ],
+  imports: [],
 })
-export class PipesModule { }
+export class PipesModule {}

@@ -1,5 +1,4 @@
 .pagination-bar {
-
   button {
     color: var(--text-color-1);
     background-color: transparent;
@@ -32,7 +31,9 @@
     margin-left: 10px;
   }
 
-  button.back-btn, button.last-btn, button.page-btn ~ button.page-btn {
+  button.back-btn,
+  button.last-btn,
+  button.page-btn ~ button.page-btn {
     border-left: 1px solid var(--grey-2-rgb);
   }
 

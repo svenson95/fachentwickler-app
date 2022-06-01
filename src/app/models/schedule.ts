@@ -1,14 +1,3 @@
-export interface Schedule {
-  weekBegin: string;
-  weekEnd: string;
-  days: SchoolDay[];
-}
-
-export interface SchoolDay {
-  day: string;
-  lessons: Lesson[];
-}
-
 interface Lesson {
   subject: string;
   teacher: string;
@@ -16,3 +5,13 @@ interface Lesson {
   room: string;
 }
 
+export interface SchoolDay {
+  day: string;
+  lessons: Lesson[];
+}
+
+export interface Schedule {
+  weekBegin: string;
+  weekEnd: string;
+  days: SchoolDay[];
+}
