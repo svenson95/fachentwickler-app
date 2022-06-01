@@ -6,7 +6,7 @@ import { User, UserRole } from '../models/user';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const testSchoolWeek: SchoolWeek = {
-  schoolWeek: '15',
+  schoolWeek: 15,
   posts: [
     {
       url: 'entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme',
@@ -18,7 +18,7 @@ export const testSchoolWeek: SchoolWeek = {
       type: 'article',
       lessonDate: '2020-08-31',
       lastUpdate: '2021-06-26',
-      schoolWeek: '15',
+      schoolWeek: 15,
     },
     {
       url: 'entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_und_datentypen_mysql',
@@ -28,7 +28,7 @@ export const testSchoolWeek: SchoolWeek = {
       type: 'article',
       lessonDate: '2020-08-31',
       lastUpdate: '2020-12-15',
-      schoolWeek: '15',
+      schoolWeek: 15,
     },
     {
       url: 'e_technik/schaltungen_widerstaende_berechnen',
@@ -40,7 +40,7 @@ export const testSchoolWeek: SchoolWeek = {
       type: 'tasks',
       lessonDate: '2020-09-01',
       lastUpdate: '2021-06-28',
-      schoolWeek: '15',
+      schoolWeek: 15,
     },
     {
       url: 'versicherungen_und_sozialabgaben/lohnberechnung_uebung',
@@ -50,7 +50,7 @@ export const testSchoolWeek: SchoolWeek = {
       type: 'tasks',
       lessonDate: '2020-09-01',
       lastUpdate: '2020-09-26',
-      schoolWeek: '15',
+      schoolWeek: 15,
     },
     {
       url: 'vernetzte_steuerungssysteme/sensoren_und_schrittketten_aufbau_und_befehle',
@@ -62,7 +62,7 @@ export const testSchoolWeek: SchoolWeek = {
       type: 'article',
       lessonDate: '2020-09-02',
       lastUpdate: '2021-05-15',
-      schoolWeek: '15',
+      schoolWeek: 15,
     },
     {
       url: 'e_technik/bauteile_im_wechselstromkreis',
@@ -72,7 +72,7 @@ export const testSchoolWeek: SchoolWeek = {
       type: 'article',
       lessonDate: '2020-09-04',
       lastUpdate: '2020-10-03',
-      schoolWeek: '15',
+      schoolWeek: 15,
     },
   ],
 };
@@ -450,7 +450,7 @@ export const testDashboard: DashboardData = {
     type: 'article',
     lessonDate: '2020-08-31',
     lastUpdate: '2020-09-20',
-    schoolWeek: '15',
+    schoolWeek: 15,
   },
   nextExams: [
     {

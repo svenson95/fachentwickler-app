@@ -55,9 +55,4 @@ export class SchoolWeekCardComponent implements OnChanges {
       this.isLoading = false;
     });
   }
-
-  // eslint-disable-next-line class-methods-use-this
-  public asNumber(value: string): number {
-    return Number(value);
-  }
 }

@@ -1,7 +1,7 @@
 import { Post } from './post';
 
 export interface SchoolWeek {
-  schoolWeek: string;
+  schoolWeek: number;
   posts: Post[];
 }
 

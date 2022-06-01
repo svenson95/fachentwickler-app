@@ -29,7 +29,7 @@ export interface Post {
   type: PostType | string;
   lessonDate: string;
   lastUpdate: string;
-  schoolWeek: string;
+  schoolWeek: number;
   elements?:
     | PostElement[]
     | IndexCardQuestion[]

@@ -17,9 +17,4 @@ export class UserProgressCardComponent {
     public dataService: DataService,
     public loadingService: LoadingService,
   ) {}
-
-  // eslint-disable-next-line class-methods-use-this
-  public asNumber(value: string): number {
-    return Number(value);
-  }
 }

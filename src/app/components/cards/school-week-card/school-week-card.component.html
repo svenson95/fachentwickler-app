@@ -18,7 +18,7 @@
       <button
         class="previous-week-btn"
         (click)="setWeek(-1)"
-        [disabled]="week === undefined || week.schoolWeek == '1'"
+        [disabled]="week === undefined || week.schoolWeek == 1"
         mat-icon-button
       >
         <mat-icon>keyboard_arrow_left</mat-icon>
@@ -26,7 +26,7 @@
       <button
         class="next-week-btn"
         (click)="setWeek(1)"
-        [disabled]="week === undefined || asNumber(week.schoolWeek) == dataService.currentSchoolWeek"
+        [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek"
         mat-icon-button
       >
         <mat-icon>keyboard_arrow_right</mat-icon>

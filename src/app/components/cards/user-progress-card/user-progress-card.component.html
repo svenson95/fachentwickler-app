@@ -17,7 +17,7 @@
         {{ dataService.schoolWeeksLength }}
       </p>
       <mat-progress-bar
-        [value]="(asNumber(dashboard?.nextLesson?.schoolWeek) / dataService.schoolWeeksLength) * 100"
+        [value]="(dashboard?.nextLesson?.schoolWeek / dataService.schoolWeeksLength) * 100"
       ></mat-progress-bar>
     </div>
 
