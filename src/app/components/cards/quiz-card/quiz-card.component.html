@@ -1,8 +1,8 @@
 <mat-card class="fe-card quiz-card">
   <p class="fe-card-title" *ngIf="quiz !== undefined" [innerHTML]="quiz.title"></p>
   <p class="fe-card-description" *ngIf="quiz !== undefined">
-    <span [innerHTML]="quiz.description"></span>
-    <fe-post-badge [post]="quiz"></fe-post-badge>
+    <fe-post-badge [type]="quiz.type"></fe-post-badge>
+    <span>vom {{ quiz.lessonDate | date: "dd.MM.yyyy" }}</span>
   </p>
   <mat-card-content class="fe-card-content" *ngIf="quiz !== undefined">
     <div class="fe-quiz">

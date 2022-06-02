@@ -7,6 +7,7 @@ import { SidenavService } from '../../services/sidenav.service';
 @Component({
   selector: 'fe-header',
   templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   @Input() public isMobile: boolean;

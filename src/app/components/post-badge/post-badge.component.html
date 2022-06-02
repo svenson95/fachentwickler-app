@@ -1,13 +1,3 @@
-<p
-  class="label unselectable"
-  [ngClass]="{
-    article: post?.type === PostType.ARTICLE,
-    tasks: post?.type === PostType.TASKS,
-    'index-cards': post?.type === PostType.INDEX_CARDS,
-    quiz: post?.type === PostType.QUIZ,
-    matching: post?.type === PostType.MATCHING,
-    test: post?.type === PostType.TEST
-  }"
->
-  {{ badgeTranslator(post?.type) }}
+<p class="label unselectable">
+  {{ typeString }}
 </p>

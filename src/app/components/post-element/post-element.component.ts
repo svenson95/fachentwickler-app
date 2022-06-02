@@ -7,6 +7,7 @@ import { DataService } from '../../services/data/data.service';
 @Component({
   selector: 'fe-post-element',
   templateUrl: './post-element.component.html',
+  styleUrls: ['./post-element.component.scss'],
 })
 export class PostElementComponent implements OnInit {
   @Input() public element: PostElement;

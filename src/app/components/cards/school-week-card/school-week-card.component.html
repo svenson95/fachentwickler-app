@@ -1,4 +1,3 @@
-<fe-loading-spinner *ngIf="week === undefined"></fe-loading-spinner>
 <mat-card class="fe-card school-week-card" *ngIf="week !== undefined">
   <div class="fe-card-header">
     <div class="fe-title-description-wrapper">
@@ -14,7 +13,7 @@
       </p>
     </div>
     <div class="button-wrapper" *ngIf="showNavigation">
-      <fe-loading-spinner *ngIf="isLoading" size="24"></fe-loading-spinner>
+      <mat-spinner *ngIf="isLoading" diameter="24"></mat-spinner>
       <button
         class="previous-week-btn"
         (click)="setWeek(-1)"

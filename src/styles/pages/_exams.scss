@@ -1,0 +1,158 @@
+.page.exams {
+  .fe-view-wrapper {
+    display: flex;
+
+    @include to-lg {
+      flex-direction: column;
+    }
+
+    .calendar-column {
+      width: 250px;
+      margin-right: 20px;
+      flex-shrink: 0;
+
+      @include from-lg {
+        padding-right: 20px;
+        border-right: 1px solid var(--grey-1);
+      }
+
+      @include to-lg {
+        margin-bottom: 20px;
+      }
+
+      .mat-calendar {
+        font-size: 0.9em;
+
+        .mat-calendar-previous-button {
+          margin-right: 10px;
+        }
+
+        .mat-calendar-period-button,
+        .mat-calendar-previous-button,
+        .mat-calendar-next-button {
+          color: var(--text-color-1);
+          background-color: var(--background-secondary);
+        }
+
+        .highlighted {
+          .mat-calendar-body-cell-content {
+            background: rgba(var(--secondary-color-rgb), 0.5);
+          }
+        }
+
+        .mat-calendar-table-header,
+        .mat-calendar-body-label {
+          color: var(--grey-3);
+        }
+
+        .mat-calendar-body-active .mat-calendar-body-cell-content {
+          border-color: var(--grey-3);
+        }
+
+        .mat-calendar-previous-button.mat-button-disabled,
+        .mat-calendar-next-button.mat-button-disabled {
+          color: var(--grey-3);
+        }
+
+        .mat-calendar-body-cell-content,
+        .mat-date-range-input-separator {
+          color: var(--text-color-1);
+          font-size: 0.9em;
+        }
+
+        .mat-calendar-body-cell:not(.mat-calendar-body-disabled)
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+        .cdk-keyboard-focused
+          .mat-calendar-body-active
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+        .cdk-program-focused
+          .mat-calendar-body-active
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+          transition: background-color 200ms ease-in-out;
+        }
+
+        .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+        .cdk-keyboard-focused
+          .mat-calendar-body-active
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical),
+        .cdk-program-focused
+          .mat-calendar-body-active
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+          background: rgba(var(--tertiary-color-rgb), 0.5);
+          transition: background-color 200ms ease-in-out;
+        }
+
+        .mat-calendar-body-disabled
+          > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+          color: var(--grey-2);
+        }
+
+        .mat-calendar-table-header-divider::after {
+          background: var(--grey-2);
+        }
+
+        .mat-calendar-arrow {
+          border-top-color: var(--text-color-1);
+        }
+      }
+    }
+    .exams-column {
+      width: 100%;
+      margin-top: 20px;
+
+      .lesson-container {
+        margin-left: 45px;
+
+        .horizontal-line {
+          width: 10px;
+          left: -10px;
+        }
+
+        .vertical-line {
+          left: -13px;
+        }
+      }
+
+      fe-exam-item:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      fe-exam-item {
+        .post-links-container {
+          @include from-lg {
+            margin-left: 40px;
+          }
+        }
+
+        @include to-lg {
+          .exam-date-block {
+            margin-left: -30px;
+            padding: 10px 10px 10px 25px;
+          }
+        }
+      }
+
+      .fe-no-data {
+        padding: 10px;
+      }
+    }
+  }
+
+  .fe-view-wrapper .exam-details-wrapper {
+    .exam-date-block {
+      margin-left: -20px;
+    }
+
+    .exam-title-wrapper {
+      margin-bottom: 5px;
+
+      .exam-subject,
+      .exam-title {
+        @include from-lg {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

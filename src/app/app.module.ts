@@ -12,13 +12,25 @@ import {
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { environment } from '../environments/environment';
 import { AngularMaterialModule } from './app-common/angular-material.module';
-import { PageComponentModule } from './app-common/page/page.module';
+import { AppIconComponent } from './app-common/app-icon/app-icon.component';
+import { ContentComponent } from './app-common/content/content.component';
+import { HamburgerIconComponent } from './app-common/hamburger-icon/hamburger-icon.component';
+import { HeaderComponent } from './app-common/header/header.component';
+import { SidenavComponent } from './app-common/sidenav/sidenav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DeleteImageDialogModule } from './components/dialogs/delete-image-dialog/delete-image-dialog.module';
+import { ImageManagerDialogModule } from './components/dialogs/image-manager-dialog/image-manager-dialog.module';
+import { LogoutDialogComponent } from './components/dialogs/logout-dialog/logout-dialog.component';
+import { HeaderMenuModule } from './components/header-menu/header-menu.module';
+import { LoadingSpinnerModule } from './components/loading-spinner/loading-spinner.module';
+import { NavLinkModule } from './components/nav-link/nav-link.module';
+import { SearchFieldModule } from './components/search-field/search-field.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
 const globalRippleConfig: RippleGlobalOptions = {
@@ -29,16 +41,30 @@ const globalRippleConfig: RippleGlobalOptions = {
 };
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HamburgerIconComponent,
+    SidenavComponent,
+    ContentComponent,
+    AppIconComponent,
+    LogoutDialogComponent,
+  ],
   imports: [
     CommonModule,
+    AngularMaterialModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularMaterialModule,
-    PageComponentModule,
     MatNativeDateModule,
+    RouterModule,
+    ImageManagerDialogModule,
+    DeleteImageDialogModule,
+    SearchFieldModule,
+    HeaderMenuModule,
+    LoadingSpinnerModule,
+    NavLinkModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

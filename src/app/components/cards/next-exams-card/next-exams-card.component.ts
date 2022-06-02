@@ -7,6 +7,7 @@ import { LoadingService } from '../../../services/loading.service';
 @Component({
   selector: 'fe-next-exams-card',
   templateUrl: './next-exams-card.component.html',
+  styleUrls: ['./next-exams-card.component.scss'],
 })
 export class NextExamsCardComponent implements OnInit, OnDestroy {
   @Input() public nextExams: ExamDate[];

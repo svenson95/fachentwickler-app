@@ -3,8 +3,8 @@
     <p class="fe-error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
     <p class="fe-card-title" *ngIf="post !== undefined">{{post.title}}</p>
     <p class="fe-card-description" *ngIf="post !== undefined">
-      <fe-post-badge [post]="post"></fe-post-badge>
-      <span>vom {{ post.lessonDate | date: 'MM.dd.yyyy' }}</span>
+      <fe-post-badge [type]="post.type"></fe-post-badge>
+      <span>vom {{ post.lessonDate | date: "dd.MM.yyyy" }}</span>
     </p>
     <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
     <mat-card-content class="post-content" *ngIf="post !== undefined">

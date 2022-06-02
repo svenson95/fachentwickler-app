@@ -1,19 +1,11 @@
 <mat-dialog-content class="fe-image-manager">
   <div class="fe-im-header">
     <p class="fe-card-title">Image-Manager</p>
-    <p class="fe-card-description" *ngIf="allImagesLength === undefined">
-      Bilder werden geladen ...
-    </p>
-    <p class="fe-card-description" *ngIf="allImagesLength !== undefined">
-      {{ allImagesLength }} Bilder
-    </p>
+    <p class="fe-card-description" *ngIf="allImagesLength === undefined">Bilder werden geladen ...</p>
+    <p class="fe-card-description" *ngIf="allImagesLength !== undefined">{{ allImagesLength }} Bilder</p>
   </div>
   <p class="title">Neues Bild hochladen</p>
-  <form
-    class="fe-add-image-form"
-    encType="multipart/form-data"
-    (submit)="uploadImage($event)"
-  >
+  <form class="fe-add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
     <div
       class="upload-image-dropzone"
       id="upload-image-dropzone"
@@ -49,11 +41,7 @@
         </ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
-    <fe-state-button
-      type="submit"
-      [isLoading]="isUploadingImage"
-      [disabled]="isEmpty(dropzoneFile)"
-    >
+    <fe-state-button type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)">
       Hochladen
     </fe-state-button>
   </form>
@@ -119,9 +107,7 @@
     </button>
   </div>
   <div class="fe-im-recent-images">
-    <fe-loading-spinner
-      *ngIf="images.length === 0 || isLoadingImages"
-    ></fe-loading-spinner>
+    <fe-loading-spinner *ngIf="images.length === 0 || isLoadingImages"></fe-loading-spinner>
     <div class="images-list" *ngIf="!isLoadingImages">
       <button
         class="list-item"

@@ -6,6 +6,7 @@ import { AuthService } from '../../../services/auth/auth.service';
 @Component({
   selector: 'fe-matching-game',
   templateUrl: './matching-card.component.html',
+  styleUrls: ['./matching-card.component.scss'],
 })
 export class MatchingCardComponent implements OnInit {
   @Input() public matching: PostMatching;

@@ -10,6 +10,7 @@ import { DataService } from '../../../services/data/data.service';
 @Component({
   selector: 'fe-school-week-card',
   templateUrl: './school-week-card.component.html',
+  styleUrls: ['./school-week-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SchoolWeekCardComponent implements OnChanges {

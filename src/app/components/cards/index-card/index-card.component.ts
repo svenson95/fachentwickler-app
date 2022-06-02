@@ -4,6 +4,7 @@ import { PostIndexCards } from '../../../models/post';
 @Component({
   selector: 'fe-index-card',
   templateUrl: './index-card.component.html',
+  styleUrls: ['./index-card.component.scss'],
 })
 export class IndexCardComponent {
   @Input() public indexCards: PostIndexCards;

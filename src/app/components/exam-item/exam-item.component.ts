@@ -6,6 +6,7 @@ import { DataService } from '../../services/data/data.service';
 @Component({
   selector: 'fe-exam-item',
   templateUrl: './exam-item.component.html',
+  styleUrls: ['./exam-item.component.scss'],
 })
 export class ExamItemComponent {
   @Input() public exam: ExamDate;

@@ -1,4 +1,10 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
@@ -7,6 +13,8 @@ import { SearchPostService } from '../../services/data/search-post.service';
 @Component({
   selector: 'fe-search-field',
   templateUrl: './search-field.component.html',
+  styleUrls: ['./search-field.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SearchFieldComponent implements AfterViewInit {
   @ViewChild('searchInput') public searchInput: ElementRef;

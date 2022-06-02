@@ -1,5 +1,5 @@
-@import "src/sass/abstracts/mixins";
-@import "src/sass/abstracts/breakpoints";
+@import "src/styles/mixins";
+@import "src/styles/breakpoints";
 
 .fe-nav-link.mat-list-item {
   background: transparent;
@@ -78,7 +78,7 @@
       }
       &:after {
         opacity: 0;
-        transform: translateY($distance/2);
+        transform: translateY(calc($distance / 2));
         transition: transform $duration $easeOutBack, opacity $duration;
       }
     }

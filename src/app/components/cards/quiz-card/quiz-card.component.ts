@@ -5,6 +5,7 @@ import { DataService } from '../../../services/data/data.service';
 @Component({
   selector: 'fe-quiz-card',
   templateUrl: './quiz-card.component.html',
+  styleUrls: ['./quiz-card.component.scss'],
 })
 export class QuizCardComponent {
   @Input() public quiz: PostQuiz;

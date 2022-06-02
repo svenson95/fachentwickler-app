@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { DashboardData } from '../../../models/dashboard-data';
 import { User } from '../../../models/user';
 import { DataService } from '../../../services/data/data.service';
@@ -7,6 +7,8 @@ import { LoadingService } from '../../../services/loading.service';
 @Component({
   selector: 'fe-user-progress-card',
   templateUrl: './user-progress-card.component.html',
+  styleUrls: ['./user-progress-card.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class UserProgressCardComponent {
   @Input() public user: User;

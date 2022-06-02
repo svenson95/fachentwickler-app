@@ -1,0 +1,70 @@
+@import "mixins";
+
+div.sidenav-content {
+  margin: 20px 15px 50px;
+
+  @include to-xs {
+    margin-bottom: 40px;
+  }
+
+  div.section:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  div.section.my-class,
+  div.section.subjects,
+  div.section.study,
+  div.section.areas {
+    @include from-md {
+      width: fit-content;
+    }
+
+    @include to-md {
+      font-size: 0.8rem;
+      min-width: 125px;
+    }
+
+    .section-title {
+      color: var(--text-color-2);
+      font-weight: 300;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      width: fit-content;
+      border-bottom: 1px solid var(--primary-color);
+      padding: 8px 5px 3px;
+    }
+
+    mat-nav-list.mat-nav-list {
+      @include to-md {
+        padding-top: 15px;
+      }
+
+      .fe-nav-link {
+        color: var(--text-color-3);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+
+        &.active-route {
+          color: var(--text-color-1);
+        }
+      }
+    }
+  }
+
+  div.section.apps {
+    text-align: center;
+
+    .fe-pruefungssimulator-btn {
+      font-size: 0.9rem;
+      text-transform: initial;
+      padding: 6px 10px 4px;
+      color: var(--text-color-1);
+
+      &.active-route {
+        border-color: var(--secondary-color);
+      }
+    }
+  }
+}

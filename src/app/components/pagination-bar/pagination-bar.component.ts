@@ -9,6 +9,7 @@ import {
 @Component({
   selector: 'fe-pagination-bar',
   templateUrl: './pagination-bar.component.html',
+  styleUrls: ['./pagination-bar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PaginationBarComponent {

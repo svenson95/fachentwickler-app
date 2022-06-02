@@ -1,64 +1,40 @@
 <mat-card class="fe-card index-card">
   <p class="fe-card-title" [innerHTML]="indexCards.title"></p>
   <p class="fe-card-description">
-    <span [innerHTML]="indexCards.description"></span>
-    <fe-post-badge [post]="indexCards"></fe-post-badge>
+    <fe-post-badge [type]="indexCards.type"></fe-post-badge>
+    <span>vom {{ indexCards.lessonDate | date: "dd.MM.yyyy" }}</span>
   </p>
   <mat-card-content class="fe-card-content">
-    <div class="fe-index-card" [class.show-back]="isAnswerVisible">
-      <div class="fe-index-card-inner">
-        <div class="fe-index-card--front">
+    <div class="indexcard" [class.show-back]="isAnswerVisible">
+      <div class="indexcard-inner">
+        <div class="indexcard--front">
           <div class="card-header">
             <p class="label">Frage</p>
-            <p class="label">
-              {{ level + 1 }} von {{ indexCards.elements.length }}
-            </p>
+            <p class="label">{{ level + 1 }} von {{ indexCards.elements.length }}</p>
           </div>
-          <p
-            class="content"
-            [innerHTML]="indexCards.elements[level].question"
-          ></p>
+          <p class="content" [innerHTML]="indexCards.elements[level].question"></p>
         </div>
-        <div class="fe-index-card--back">
+        <div class="indexcard--back">
           <div class="card-header">
             <p class="label">Antwort</p>
-            <p class="label">
-              {{ level + 1 }} von {{ indexCards.elements.length }}
-            </p>
+            <p class="label">{{ level + 1 }} von {{ indexCards.elements.length }}</p>
           </div>
           <p
             class="content"
             [innerHTML]="indexCards.elements[level].answer"
-            [class.shortAnswer]="
-              stripHtml(indexCards.elements[level].answer).length < 400
-            "
+            [class.shortAnswer]="stripHtml(indexCards.elements[level].answer).length < 400"
           ></p>
         </div>
       </div>
     </div>
     <div class="fe-buttons-container">
-      <button
-        class="fe-text-button"
-        (click)="showAnswer()"
-        [disabled]="isAnswerVisible"
-        matRipple
-      >
+      <button class="fe-text-button" (click)="showAnswer()" [disabled]="isAnswerVisible" matRipple>
         <span>Weiter</span>
       </button>
-      <button
-        class="fe-text-button"
-        (click)="increaseLevel()"
-        [disabled]="!isAnswerVisible || end"
-        matRipple
-      >
+      <button class="fe-text-button" (click)="increaseLevel()" [disabled]="!isAnswerVisible || end" matRipple>
         <span>Nächste Frage</span>
       </button>
-      <button
-        class="fe-text-button disabled"
-        (click)="resetLevel()"
-        [disabled]="!end"
-        matRipple
-      >
+      <button class="fe-text-button disabled" (click)="resetLevel()" [disabled]="!end" matRipple>
         <span>Zurück zum Anfang</span>
       </button>
     </div>

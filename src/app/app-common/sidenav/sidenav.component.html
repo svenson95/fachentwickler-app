@@ -8,11 +8,7 @@
           [item]="navItem"
           [router-link]="navItem.url"
         ></fe-nav-link>
-        <fe-nav-link
-          *ngIf="navItem.url.startsWith('http://')"
-          [item]="navItem"
-          [href-link]="navItem.url"
-        ></fe-nav-link>
+        <fe-nav-link *ngIf="navItem.url.startsWith('http://')" [item]="navItem" [href-link]="navItem.url"></fe-nav-link>
       </ng-container>
     </mat-nav-list>
   </div>
@@ -20,11 +16,7 @@
   <div class="section subjects">
     <label class="section-title">Lernfelder</label>
     <mat-nav-list>
-      <fe-nav-link
-        *ngFor="let navItem of subjects"
-        [item]="navItem"
-        [router-link]="navItem.url"
-      ></fe-nav-link>
+      <fe-nav-link *ngFor="let navItem of subjects" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
     </mat-nav-list>
   </div>
 

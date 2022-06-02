@@ -1,0 +1,19 @@
+@import "mixins";
+
+mat-card.fe-card.lesson-footer {
+  .button-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .fe-text-button,
+    fe-state-button {
+      margin-left: 20px;
+    }
+
+    .fe-text-button {
+      @include to-xs {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

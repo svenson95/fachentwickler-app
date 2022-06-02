@@ -164,6 +164,7 @@ export class DataService {
   }
 
   public getSchoolWeek(week: number): Observable<SchoolWeek> {
+    console.log(week);
     return this.httpClient
       .get<SchoolWeek>(`${this.SCHOOL_WEEK_ENDPOINT}/number/${week}`)
       .pipe(

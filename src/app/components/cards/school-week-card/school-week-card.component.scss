@@ -1,0 +1,94 @@
+@import "mixins";
+
+mat-card.fe-card.school-week-card {
+  .fe-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .fe-loading-spinner {
+      margin: 0;
+    }
+
+    .button-wrapper {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+
+      .previous-week-btn,
+      .next-week-btn {
+        width: 40px;
+        height: 40px;
+        outline: none;
+        line-height: initial;
+        position: relative;
+        transition: background-color 100ms ease-out;
+
+        &:not(&:disabled) {
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--button-hover-background);
+            transition: none;
+          }
+        }
+
+        &:disabled mat-icon {
+          color: var(--background-tertiary);
+        }
+
+        mat-icon {
+          color: var(--tertiary-color);
+        }
+
+        .mat-ripple-element {
+          background-color: var(--tertiary-color);
+        }
+      }
+
+      .previous-week-btn {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .weekday-group {
+    @include from-md {
+      margin-top: 10px;
+    }
+
+    .weekday-item {
+      .label-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 25px 0 20px;
+
+        .weekday-label {
+          color: var(--grey-2);
+          font-size: 0.8rem;
+          width: fit-content;
+          margin: 0;
+          border-radius: 8px;
+
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .weekday-spacer {
+          width: 100%;
+          height: 1px;
+          border: none;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+mat-spinner.mat-spinner {
+  margin-right: 20px;
+
+  svg circle {
+    stroke: var(--tertiary-color);
+    stroke-width: 6px !important;
+  }
+}

@@ -6,6 +6,7 @@ import { Schedule } from '../../models/schedule';
 @Component({
   selector: 'fe-schedule',
   templateUrl: './schedule.component.html',
+  styleUrls: ['./schedule.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScheduleComponent {

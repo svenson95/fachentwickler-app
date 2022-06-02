@@ -1,0 +1,213 @@
+@import "mixins";
+
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 333;
+
+  mat-toolbar.mat-toolbar.header-toolbar {
+    height: fit-content;
+    width: 100%;
+    justify-content: space-between;
+    background: var(--background-primary);
+    position: relative;
+    box-shadow: var(--box-shadow);
+
+    @include from-xs {
+      padding: 5px 20px;
+    }
+
+    @include to-xs {
+      padding: 5px;
+
+      &:not(.sidenav--open) .header-content {
+        width: 100%;
+      }
+    }
+
+    div.header-wrapper {
+      display: flex;
+      width: 100%;
+      max-width: calc(190px + var(--max-width));
+      justify-content: space-between;
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include from-xs {
+          width: 100%;
+        }
+
+        .page-title {
+          display: flex;
+          align-items: center;
+          @include titleMoveInRightAnimation;
+
+          @include to-md {
+            flex-shrink: 1;
+          }
+
+          @include to-xs {
+            font-size: 0.8em;
+            margin-left: 0;
+            padding: 0;
+          }
+
+          mat-icon {
+            color: var(--secondary-color);
+            transform: scale(0.8);
+          }
+
+          .title {
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 12px;
+            letter-spacing: 1px;
+            white-space: pre-line;
+            text-align: left;
+            margin-bottom: 0;
+
+            @include from-md {
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .header-elements-wrapper {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          z-index: 2;
+
+          .search-bar-form-field {
+            margin-left: 15px;
+
+            &.mat-focused,
+            .search-bar-form-field:hover {
+              background-color: var(--button-hover-background);
+              transition: none;
+            }
+          }
+
+          .button-container {
+            display: flex;
+            line-height: normal;
+            color: var(--tertiary-color);
+            align-items: center;
+
+            @include to-md {
+              margin-right: 10px;
+            }
+
+            .sidenav-btn {
+              @include from-xs {
+                margin-right: 12px;
+              }
+
+              @include to-xs {
+                margin-right: 10px;
+              }
+            }
+
+            .dashboard-btn {
+              font-size: 0.9rem;
+              font-weight: 400;
+              border-bottom: 1px solid rgba(var(--grey-4-rgb), 0.4);
+              padding: 8px 14px 6px;
+              margin-left: 10px;
+              margin-right: 10px;
+
+              &:hover,
+              &.active-route {
+                background: var(--button-hover-background);
+              }
+
+              &.active-route {
+                border-color: var(--secondary-color);
+
+                h1,
+                span {
+                  &:before,
+                  &:after {
+                    opacity: 1;
+                    transform: translateY(2px);
+                  }
+                }
+              }
+
+              @include to-md {
+                padding: 5px 8px;
+              }
+
+              @include to-xs {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep {
+  // TODO: host-context(.page-container)
+  .page-container.is-mobile {
+    fe-header.fe-header .header-toolbar {
+      position: fixed;
+      /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+      z-index: 999;
+    }
+  }
+
+  mat-sidenav-container.mat-drawer-container {
+    .fe-content,
+    .sidenav-content {
+      @include from-xs {
+        padding-top: 64px;
+      }
+
+      @include to-xs {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  div.header-wrapper {
+    .page-title .title,
+    .dashboard-btn,
+    .sidenav-btn,
+    .more-menu-btn {
+      color: var(--text-color-2);
+    }
+
+    .rounded-btn {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      transition: background-color 100ms ease-in-out;
+
+      @include from-xs {
+        &:hover,
+        &.is-active {
+          background: rgba(240, 240, 240, 0.1);
+          transition: none;
+        }
+      }
+
+      .mat-icon {
+        display: flex;
+        margin: auto;
+      }
+    }
+  }
+}

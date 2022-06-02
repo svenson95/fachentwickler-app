@@ -1,0 +1,61 @@
+div.pagination-bar {
+  button {
+    color: var(--text-color-1);
+    background-color: transparent;
+    width: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    transition: transform 150ms ease-out;
+    border-bottom: 1px solid var(--grey-2);
+  }
+
+  button:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: var(--button-hover-background);
+    border-bottom: 1px solid var(--tertiary-color);
+    transform: translateY(-1px);
+    transition: transform 100ms ease-in;
+  }
+
+  button:active:not(:disabled) {
+    transform: translateY(1px);
+    transition: transform 100ms ease-in;
+  }
+
+  button.back-btn {
+    margin-right: 10px;
+  }
+
+  button.forward-btn {
+    margin-left: 10px;
+  }
+
+  button.back-btn,
+  button.last-btn,
+  button.page-btn ~ button.page-btn {
+    border-left: 1px solid var(--grey-2-rgb);
+  }
+
+  button.page-btn.is-selected {
+    font-weight: 700;
+    background-color: rgba(var(--secondary-color-rgb), 0.1);
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  button:not(.page-btn) {
+    ion-icon {
+      transform: translateY(2px);
+    }
+  }
+
+  button:disabled {
+    color: var(--text-color-3);
+  }
+}
+
+hr.pagination-bar-divider {
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,8 +1,8 @@
 <mat-card class="fe-card matching">
   <p class="fe-card-title" *ngIf="matching !== undefined" [innerHTML]="matching.title"></p>
   <p class="fe-card-description" *ngIf="matching !== undefined">
-    <span [innerHTML]="matching.description"></span>
-    <fe-post-badge [post]="matching"></fe-post-badge>
+    <fe-post-badge [type]="matching.type"></fe-post-badge>
+    <span>vom {{ matching.lessonDate | date: "dd.MM.yyyy" }}</span>
   </p>
   <mat-card-content class="fe-card-content" *ngIf="matching !== undefined">
     <div id="game" #gameView [class.correct]="isCorrect === true" [class.wrong]="isCorrect === false">

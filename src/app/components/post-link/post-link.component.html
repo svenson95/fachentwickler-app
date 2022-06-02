@@ -11,7 +11,7 @@
   </div>
   <div class="description-wrapper">
     <p class="description">{{ post.lessonDate | date: "dd.MM.yyyy" }}</p>
-    <fe-post-badge [post]="post"></fe-post-badge>
+    <fe-post-badge [type]="post.type"></fe-post-badge>
   </div>
 </a>
 <p class="label" [innerHTML]="title" *ngIf="title"></p>

@@ -1,12 +1,30 @@
-@import "src/sass/abstracts/breakpoints";
-@import "src/sass/abstracts/mixins";
+@import "src/styles/breakpoints";
+@import "src/styles/mixins";
 
 :host {
-  margin-right: 6px;
-
-  @include to-md {
-    margin-right: 0;
-    margin-top: 2px;
+  &.article p {
+    background-color: rgba(var(--tertiary-color-rgb), 0.15);
+    color: var(--tertiary-color);
+  }
+  &.tasks p {
+    background-color: rgba(var(--grey-4-rgb), 0.15);
+    color: var(--grey-4);
+  }
+  &.index-cards p {
+    background-color: rgba(var(--secondary-color-rgb), 0.15);
+    color: var(--secondary-color);
+  }
+  &.quiz p {
+    background-color: rgba(var(--primary-color-rgb), 0.15);
+    color: var(--primary-color);
+  }
+  &.matching p {
+    background-color: rgba(limegreen, 0.15);
+    color: limegreen;
+  }
+  &.test p {
+    background: rgba(var(--tertiary-color-rgb), 0.8);
+    color: var(--background-primary);
   }
 
   p.label {
@@ -38,30 +56,19 @@
     @include from-md {
       padding: 0 8px;
     }
+  }
+}
 
-    &.article {
-      background-color: rgba(var(--tertiary-color-rgb), 0.15);
-      color: var(--tertiary-color);
-    }
-    &.tasks {
-      background-color: rgba(var(--grey-4-rgb), 0.15);
-      color: var(--grey-4);
-    }
-    &.index-cards {
-      background-color: rgba(var(--secondary-color-rgb), 0.15);
-      color: var(--secondary-color);
-    }
-    &.quiz {
-      background-color: rgba(var(--primary-color-rgb), 0.15);
-      color: var(--primary-color);
-    }
-    &.matching {
-      background-color: rgba(limegreen, 0.15);
-      color: limegreen;
-    }
-    &.test {
-      background: rgba(var(--tertiary-color-rgb), 0.8);
-      color: var(--background-primary);
+::ng-deep {
+  div.page.post,
+  div.page.edit-post,
+  div.page.index-cards,
+  div.page.matching,
+  div.page.quiz,
+  div.page.tasks,
+  div.page.test {
+    fe-post-badge {
+      margin-right: 6px;
     }
   }
 }

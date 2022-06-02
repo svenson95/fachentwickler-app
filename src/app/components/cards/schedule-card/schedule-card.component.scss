@@ -1,0 +1,11 @@
+@import "mixins";
+
+mat-card.schedule-card {
+  .fe-view-wrapper {
+    display: flex;
+
+    @include to-lg {
+      flex-direction: column;
+    }
+  }
+}

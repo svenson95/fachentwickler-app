@@ -10,6 +10,7 @@ import { SchoolNews } from '../../../models/school-news';
 @Component({
   selector: 'fe-news-card',
   templateUrl: './news-card.component.html',
+  styleUrls: ['./news-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NewsCardComponent {

@@ -1,9 +1,6 @@
 <div class="fe-content">
   <router-outlet>
-    <fe-loading-spinner
-      class="router-loader"
-      *ngIf="isLoading"
-    ></fe-loading-spinner>
+    <fe-loading-spinner class="router-loader" *ngIf="isLoading"></fe-loading-spinner>
   </router-outlet>
   <mat-toolbar class="page-footer">
     <div class="labels-wrapper">
@@ -11,33 +8,13 @@
         <fe-icon></fe-icon>
       </div>
       <div class="footer-buttons">
-        <a class="start" routerLink="/" [class.is-active]="router.url === '/'">
-          Start
-        </a>
+        <a class="start" routerLink="/" [class.is-active]="router.url === '/'"> Start </a>
         <span class="footer-divider">|</span>
-        <a
-          class="about"
-          routerLink="about"
-          [class.is-active]="router.url.startsWith('/about')"
-        >
-          About
-        </a>
+        <a class="about" routerLink="about" [class.is-active]="router.url.startsWith('/about')"> About </a>
         <span class="footer-divider">|</span>
-        <a
-          class="about"
-          routerLink="feedback"
-          [class.is-active]="router.url.startsWith('/feedback')"
-        >
-          Feedback
-        </a>
+        <a class="about" routerLink="feedback" [class.is-active]="router.url.startsWith('/feedback')"> Feedback </a>
         <span class="footer-divider">|</span>
-        <a
-          class="legal"
-          routerLink="/impressum"
-          [class.is-active]="router.url.startsWith('/impressum')"
-        >
-          Impressum
-        </a>
+        <a class="legal" routerLink="/impressum" [class.is-active]="router.url.startsWith('/impressum')"> Impressum </a>
       </div>
     </div>
   </mat-toolbar>

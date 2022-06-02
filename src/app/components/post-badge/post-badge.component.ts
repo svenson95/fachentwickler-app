@@ -1,5 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Post } from '../../models/post';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+} from '@angular/core';
 import { PostType } from '../../models/post-type';
 
 @Component({
@@ -9,30 +13,45 @@ import { PostType } from '../../models/post-type';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostBadgeComponent {
-  @Input('post') public post: Post;
+  @Input('type') public postType: PostType | string;
+
+  @HostBinding('class') public get _(): string {
+    switch (this.postType) {
+      case PostType.ARTICLE:
+        return 'article';
+      case PostType.TASKS:
+        return 'tasks';
+      case PostType.TEST:
+        return 'test';
+      case PostType.QUIZ:
+        return 'quiz';
+      case PostType.INDEX_CARDS:
+        return 'index-cards';
+      case PostType.MATCHING:
+        return 'matching';
+      default:
+        return 'unknown';
+    }
+  }
 
   public PostType = PostType;
 
-  // eslint-disable-next-line class-methods-use-this
-  public badgeTranslator(text: PostType | string): string {
-    if (text === PostType.ARTICLE) {
-      return 'Artikel';
+  public get typeString(): string {
+    switch (this.postType) {
+      case PostType.ARTICLE:
+        return 'Artikel';
+      case PostType.TASKS:
+        return 'Aufgaben';
+      case PostType.TEST:
+        return 'Test';
+      case PostType.QUIZ:
+        return 'Quiz';
+      case PostType.INDEX_CARDS:
+        return 'Karteikarten';
+      case PostType.MATCHING:
+        return 'Matchings';
+      default:
+        return 'unknown';
     }
-    if (text === PostType.TASKS) {
-      return 'Aufgaben';
-    }
-    if (text === PostType.INDEX_CARDS) {
-      return 'Karteikarten';
-    }
-    if (text === PostType.QUIZ) {
-      return 'Quiz';
-    }
-    if (text === PostType.MATCHING) {
-      return 'Matchings';
-    }
-    if (text === PostType.TEST) {
-      return 'Test';
-    }
-    return '';
   }
 }

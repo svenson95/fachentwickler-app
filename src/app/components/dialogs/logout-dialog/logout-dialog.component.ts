@@ -7,6 +7,7 @@ import { AuthService } from '../../../services/auth/auth.service';
 @Component({
   selector: 'fe-logout-dialog',
   templateUrl: './logout-dialog.component.html',
+  styleUrls: ['./logout-dialog.component.scss'],
 })
 export class LogoutDialogComponent {
   constructor(

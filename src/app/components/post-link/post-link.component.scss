@@ -1,5 +1,5 @@
-@import "src/sass/abstracts/breakpoints";
-@import "src/sass/abstracts/mixins";
+@import "src/styles/breakpoints";
+@import "src/styles/mixins";
 
 :host {
   display: flex;
@@ -134,6 +134,16 @@
 
         @include from-lg {
           padding: 0 5px;
+        }
+      }
+
+      fe-post-badge {
+        @include from-lg {
+          margin-right: 6px;
+        }
+
+        @include to-lg {
+          margin-top: 2px;
         }
       }
     }

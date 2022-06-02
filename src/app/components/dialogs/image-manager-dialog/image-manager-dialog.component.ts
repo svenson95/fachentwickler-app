@@ -10,6 +10,7 @@ import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-
 @Component({
   selector: 'fe-image-manager-dialog',
   templateUrl: './image-manager-dialog.component.html',
+  styleUrls: ['./image-manager-dialog.component.scss'],
 })
 export class ImageManagerDialogComponent {
   public chunksMapping = {

@@ -1,45 +1,43 @@
-<div class="fe-exam-item">
-  <div class="exam-details-wrapper">
-    <div class="exam-date-block">
-      <mat-icon class="date-icon">insert_invitation</mat-icon>
-      <div class="date-block-wrapper">
-        <div class="date-details">
-          <p class="date">
-            {{ exam.date | date: "dd.MM.yyyy" }}, {{ exam.date | date: "EEEE" }}
-          </p>
-          <p class="days-left" *ngIf="(exam.date | daysLeft) !== null">
-            {{ exam.date | daysLeft }}
-          </p>
-        </div>
-        <button
-          class="show-lessons-btn"
-          (click)="showLessons()"
-          [class.is-open]="lessonsVisible"
-          [disabled]="lessonsVisible && examLessons === undefined"
-          matRipple
-        >
-          <span>
-            {{ lessonsVisible ? "Lektionen ausblenden" : "Lektionen anzeigen" }}
-          </span>
-        </button>
+<div class="exam-details-wrapper">
+  <div class="exam-date-block">
+    <mat-icon class="date-icon">insert_invitation</mat-icon>
+    <div class="date-block-wrapper">
+      <div class="date-details">
+        <p class="date">
+          {{ exam.date | date: "dd.MM.yyyy" }}, {{ exam.date | date: "EEEE" }}
+        </p>
+        <p class="days-left" *ngIf="(exam.date | daysLeft) !== null">
+          {{ exam.date | daysLeft }}
+        </p>
       </div>
-    </div>
-    <div class="exam-title-wrapper">
-      <p class="exam-subject" [innerHTML]="exam.subject | longSubjectName"></p>
-      <p class="exam-title">{{ exam.title }}</p>
+      <button
+        class="show-lessons-btn"
+        (click)="showLessons()"
+        [class.is-open]="lessonsVisible"
+        [disabled]="lessonsVisible && examLessons === undefined"
+        matRipple
+      >
+        <span>
+          {{ lessonsVisible ? "Lektionen ausblenden" : "Lektionen anzeigen" }}
+        </span>
+      </button>
     </div>
   </div>
-  <div class="post-links-container" *ngIf="lessonsVisible">
-    <div
-      class="post-link-wrapper"
-      *ngFor="let lesson of examLessons; let i = index"
-    >
-      <hr class="horizontal-line" />
-      <hr class="vertical-line" />
-      <fe-post-link [post]="lesson"></fe-post-link>
-    </div>
-    <fe-loading-spinner
-      *ngIf="lessonsVisible && examLessons === undefined"
-    ></fe-loading-spinner>
+  <div class="exam-title-wrapper">
+    <p class="exam-subject" [innerHTML]="exam.subject | longSubjectName"></p>
+    <p class="exam-title">{{ exam.title }}</p>
   </div>
+</div>
+<div class="post-links-container" *ngIf="lessonsVisible">
+  <div
+    class="post-link-wrapper"
+    *ngFor="let lesson of examLessons; let i = index"
+  >
+    <hr class="horizontal-line" />
+    <hr class="vertical-line" />
+    <fe-post-link [post]="lesson"></fe-post-link>
+  </div>
+  <fe-loading-spinner
+    *ngIf="lessonsVisible && examLessons === undefined"
+  ></fe-loading-spinner>
 </div>
