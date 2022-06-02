@@ -1,7 +1,7 @@
 @import "mixins";
 
-mat-card.fe-card.quiz-card {
-  mat-card-content.fe-card-content {
+::ng-deep fe-card mat-card.quiz {
+  mat-card-content.card-content {
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px;
@@ -10,116 +10,116 @@ mat-card.fe-card.quiz-card {
   .slide-in-animation {
     @include moveInLeftAnimation;
   }
+}
 
-  div.fe-quiz {
-    @include from-lg {
-      width: 600px;
-      padding: 20px 0;
-    }
+div.quiz {
+  @include from-lg {
+    width: 600px;
+    padding: 20px 0;
+  }
 
-    @include to-lg {
-      width: 500px;
-    }
+  @include to-lg {
+    width: 500px;
+  }
+
+  @include to-xs {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .content-wrapper {
+    font-size: 1.1em;
 
     @include to-xs {
-      width: 100%;
+      font-size: 1em;
     }
 
-    p {
-      margin: 0;
+    .quiz-details {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+
+      .quiz-level,
+      .quiz-wrong-answers {
+        background: var(--background-secondary);
+        border-radius: var(--border-radius);
+        padding: 8px 20px;
+      }
+
+      .quiz-level,
+      .quiz-wrong-answers {
+        .key {
+          padding-top: 5px;
+        }
+        .value {
+          padding-top: 2px;
+          padding-bottom: 5px;
+        }
+      }
     }
 
-    .fe-content-wrapper {
-      font-size: 1.1em;
+    .quiz-question {
+      margin-top: 40px;
 
-      @include to-xs {
-        font-size: 1em;
+      .label {
+        padding: 10px 15px;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        font-size: 0.9em;
       }
 
-      .quiz-details {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
+      .quiz-answers-wrapper {
+        margin-top: 10px;
 
-        .quiz-level,
-        .quiz-wrong-answers {
-          background: var(--background-secondary);
+        .quiz-answer {
+          width: 100%;
+          text-align: left;
+          color: var(--text-color-1);
+          padding: 12px 15px;
+          background: rgba(var(--tertiary-color-rgb), 0.15);
           border-radius: var(--border-radius);
-          padding: 8px 20px;
+          border: none;
+          cursor: pointer;
+          transition: background 200ms ease-in-out;
+
+          &:first-of-type {
+            margin-bottom: 10px;
+          }
         }
 
-        .quiz-level,
-        .quiz-wrong-answers {
-          .key {
-            padding-top: 5px;
+        &:not(.is-checking-answer) .quiz-answer:hover {
+          @include from-lg {
+            background: rgba(var(--tertiary-color-rgb), 0.3);
+            transition: background 100ms ease-in-out;
           }
-          .value {
-            padding-top: 2px;
-            padding-bottom: 5px;
-          }
+        }
+
+        &.is-checking-answer .quiz-answer.selected {
+          background: rgba(var(--secondary-color-rgb), 0.4);
         }
       }
+    }
 
-      .quiz-question {
-        margin-top: 40px;
+    .quiz-end {
+      text-align: center;
+      margin-top: 20px;
 
-        .label {
-          padding: 10px 15px;
-          border: 1px solid var(--secondary-color);
-          border-radius: var(--border-radius);
-          font-weight: 600;
-          font-size: 0.9em;
-        }
-
-        .fe-quiz-answers-wrapper {
-          margin-top: 10px;
-
-          .fe-quiz-answer {
-            width: 100%;
-            text-align: left;
-            color: var(--text-color-1);
-            padding: 12px 15px;
-            background: rgba(var(--tertiary-color-rgb), 0.15);
-            border-radius: var(--border-radius);
-            border: none;
-            cursor: pointer;
-            transition: background 200ms ease-in-out;
-
-            &:first-of-type {
-              margin-bottom: 10px;
-            }
-          }
-
-          &:not(.is-checking-answer) .fe-quiz-answer:hover {
-            @include from-lg {
-              background: rgba(var(--tertiary-color-rgb), 0.3);
-              transition: background 100ms ease-in-out;
-            }
-          }
-
-          &.is-checking-answer .fe-quiz-answer.selected {
-            background: rgba(var(--secondary-color-rgb), 0.4);
-          }
-        }
+      .quiz-done-label {
+        font-size: 1.3em;
+        margin-bottom: 5px;
       }
 
-      .fe-quiz-end {
-        text-align: center;
-        margin-top: 20px;
+      .emoji {
+        font-size: 4em;
+        line-height: 100px;
+      }
 
-        .fe-quiz-done-label {
-          font-size: 1.3em;
-          margin-bottom: 5px;
-        }
-
-        .fe-emoji {
-          font-size: 4em;
-          line-height: 100px;
-        }
-
-        .congrat-emoji {
-          margin: 20px;
-        }
+      .congrat-emoji {
+        margin: 20px;
       }
     }
   }

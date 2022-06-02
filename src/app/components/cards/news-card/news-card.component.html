@@ -1,29 +1,21 @@
-<mat-card class="fe-card news-card">
-  <div class="fe-card-header">
-    <p class="fe-card-title">Ankündigungen</p>
-    <a class="fe-text-button secondary show-more" routerLink="/mitteilungen" *ngIf="news && !allNewsLength" matRipple>
-      <span>Mitteilungen</span>
-    </a>
-  </div>
-  <mat-card-content class="fe-view-wrapper">
-    <div class="fe-news-container">
-      <fe-loading-spinner *ngIf="news === undefined"></fe-loading-spinner>
-      <div class="fe-news-item" *ngFor="let post of news">
-        <div class="fe-news-header">
-          <p class="date">{{ post.date | date: "dd.MM.yyyy" }}</p>
-          <p class="title">{{ post.title }}</p>
-        </div>
-        <a class="fe-text-button secondary" [routerLink]="'/mitteilungen/' + post.url" matRipple>
-          <span>Lesen</span>
-        </a>
+<fe-card class="news" title="Ankündigungen" buttonLink="/mitteilungen" buttonLabel="Mitteilungen">
+  <div class="fe-news-container">
+    <fe-loading-spinner *ngIf="news === undefined"></fe-loading-spinner>
+    <div class="fe-news-item" *ngFor="let post of news">
+      <div class="fe-news-header">
+        <p class="date">{{ post.date | date: "dd.MM.yyyy" }}</p>
+        <p class="title">{{ post.title }}</p>
       </div>
-      <fe-pagination-bar
-        *ngIf="news && allNewsLength"
-        [totalItems]="allNewsLength"
-        [currentPage]="currentPage"
-        (changePage)="loadPage($event)"
-        [isLoading]="isLoading"
-      ></fe-pagination-bar>
+      <a class="fe-text-button secondary" [routerLink]="'/mitteilungen/' + post.url" matRipple>
+        <span>Lesen</span>
+      </a>
     </div>
-  </mat-card-content>
-</mat-card>
+    <fe-pagination-bar
+      *ngIf="news && allNewsLength"
+      [totalItems]="allNewsLength"
+      [currentPage]="currentPage"
+      (changePage)="loadPage($event)"
+      [isLoading]="isLoading"
+    ></fe-pagination-bar>
+  </div>
+</fe-card>

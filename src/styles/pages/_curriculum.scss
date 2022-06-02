@@ -9,12 +9,12 @@
     }
   }
 
-  .fe-card.school-year {
-    .fe-card-header {
+  .card.school-year {
+    .card-header {
       display: flex;
       align-items: center;
 
-      .fe-year-toggle {
+      .year-toggle {
         margin-left: 20px;
 
         .mat-button-toggle + .mat-button-toggle {
@@ -22,7 +22,7 @@
         }
       }
 
-      .fe-card-title {
+      .card-title {
         margin-bottom: 0;
       }
     }
@@ -56,7 +56,7 @@
     .week-toggle-card {
       margin-bottom: 0;
 
-      .fe-week-toggle {
+      .week-toggle {
         flex-direction: column;
         flex-shrink: 0;
 
@@ -105,8 +105,8 @@
   }
 
   $toggleSize: 42px;
-  .fe-year-toggle,
-  .fe-week-toggle {
+  .year-toggle,
+  .week-toggle {
     mat-button-toggle {
       @include from-xs {
         width: $toggleSize;

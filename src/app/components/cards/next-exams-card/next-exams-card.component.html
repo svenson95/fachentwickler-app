@@ -1,15 +1,7 @@
-<mat-card class="fe-card next-exams-card">
-  <div class="fe-card-header">
-    <p class="fe-card-title">Anstehende Klausuren</p>
-    <a class="fe-text-button secondary show-more" routerLink="/klausuren" matRipple>
-      <span>Klausuren</span>
-    </a>
+<fe-card title="Anstehende Klausuren" buttonLabel="Klausuren" buttonLink="/klausuren">
+  <div class="fe-exam-item-wrapper" *ngFor="let exam of nextExams">
+    <fe-exam-item [exam]="exam"></fe-exam-item>
   </div>
-  <mat-card-content class="fe-view-wrapper">
-    <div class="fe-exam-item-wrapper" *ngFor="let exam of nextExams">
-      <fe-exam-item [exam]="exam"></fe-exam-item>
-    </div>
-    <fe-loading-spinner *ngIf="isLoading && !nextExams"></fe-loading-spinner>
-    <p class="fe-no-data" *ngIf="nextExams?.length === 0">Keine anstehenden Klausuren</p>
-  </mat-card-content>
-</mat-card>
+  <fe-loading-spinner *ngIf="isLoading && !nextExams"></fe-loading-spinner>
+  <p class="no-data" *ngIf="nextExams?.length === 0">Keine anstehenden Klausuren</p>
+</fe-card>

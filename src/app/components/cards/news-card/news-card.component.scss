@@ -1,91 +1,93 @@
 @import "mixins";
 
-mat-card.fe-card.news-card .fe-news-container {
-  @include from-xs {
-    margin-top: 20px;
-  }
-
-  @include to-xs {
-    margin-top: 10px;
-  }
-
-  .fe-news-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &:not(:last-of-type) {
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--grey-1);
-    }
-  }
-
-  fe-pagination-bar .pagination-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-
-    fe-loading-spinner {
-      margin-left: 20px;
-
-      .fe-loading-spinner {
-        margin: 0;
-      }
-    }
-  }
-}
-
-.fe-card.news-card .fe-news-item .fe-news-header {
-  display: flex;
-
-  @include to-md {
-    flex-direction: column;
-  }
-
-  .date {
-    align-self: center;
-    flex-shrink: 0;
-
-    @include from-md {
-      min-width: 85px;
-
-      padding-right: 10px;
-      margin-right: 10px;
-      border-right: 1px solid var(--grey-2);
-    }
-
-    @include to-md {
-      min-width: 55px;
-      margin-right: auto;
-      color: var(--text-color-3);
-      font-size: 0.8rem;
-    }
-  }
-
-  .title {
-    margin-right: 10px;
-    align-self: center;
-    line-height: 16px;
-  }
-
-  .date,
-  .title {
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @include from-lg {
-      flex-shrink: 0;
+::ng-deep fe-card.news mat-card {
+  .fe-news-container {
+    @include from-xs {
+      margin-top: 20px;
     }
 
     @include to-xs {
-      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+
+    .fe-news-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--grey-1);
+      }
+    }
+
+    fe-pagination-bar .pagination-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      fe-loading-spinner {
+        margin-left: 20px;
+
+        .fe-loading-spinner {
+          margin: 0;
+        }
+      }
     }
   }
-}
 
-.fe-card.news-card .fe-news-item .fe-text-button {
-  &:hover {
-    color: var(--tertiary-color);
+  .fe-news-item .fe-news-header {
+    display: flex;
+
+    @include to-md {
+      flex-direction: column;
+    }
+
+    .date {
+      align-self: center;
+      flex-shrink: 0;
+
+      @include from-md {
+        min-width: 85px;
+
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid var(--grey-2);
+      }
+
+      @include to-md {
+        min-width: 55px;
+        margin-right: auto;
+        color: var(--text-color-3);
+        font-size: 0.8rem;
+      }
+    }
+
+    .title {
+      margin-right: 10px;
+      align-self: center;
+      line-height: 16px;
+    }
+
+    .date,
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      @include from-lg {
+        flex-shrink: 0;
+      }
+
+      @include to-xs {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .fe-news-item .fe-text-button {
+    &:hover {
+      color: var(--tertiary-color);
+    }
   }
 }

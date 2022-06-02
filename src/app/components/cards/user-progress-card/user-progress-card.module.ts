@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../../../app-common/angular-material.module';
-import { ExamItemModule } from '../../exam-item/exam-item.module';
+import { CardModule } from '../../card/card.module';
 import { LoadingSpinnerModule } from '../../loading-spinner/loading-spinner.module';
 import { PostLinkModule } from '../../post-link/post-link.module';
 import { UserProgressCardComponent } from './user-progress-card.component';
@@ -12,9 +11,8 @@ import { UserProgressCardComponent } from './user-progress-card.component';
   exports: [UserProgressCardComponent],
   imports: [
     CommonModule,
-    RouterModule,
+    CardModule,
     AngularMaterialModule,
-    ExamItemModule,
     PostLinkModule,
     LoadingSpinnerModule,
   ],

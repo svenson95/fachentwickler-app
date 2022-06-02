@@ -1,12 +1,15 @@
 <div class="page audit-simulator">
-  <mat-card class="fe-card">
-    <p class="fe-card-title">Zwischenprüfungs- / Abschlussprüfungs-Simulator</p>
-    <p class="fe-card-description" [ngSwitch]="state">
-      <ng-container *ngSwitchCase="AuditState.INTRODUCTION">Einleitung</ng-container>
-      <ng-container *ngSwitchCase="AuditState.PLAY">{{round+1}}/{{auditQuestions.length}}</ng-container>
-      <ng-container *ngSwitchCase="AuditState.END">Ende</ng-container>
-    </p>
-    <mat-card-content class="fe-view-wrapper" *ngIf="state === AuditState.INTRODUCTION">
+  <mat-card class="card">
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-title">Zwischenprüfungs- / Abschlussprüfungs-Simulator</mat-card-title>
+      <mat-card-subtitle class="card-description" [ngSwitch]="state">
+        <ng-container *ngSwitchCase="AuditState.INTRODUCTION">Einleitung</ng-container>
+        <ng-container *ngSwitchCase="AuditState.PLAY">{{round+1}}/{{auditQuestions.length}}</ng-container>
+        <ng-container *ngSwitchCase="AuditState.END">Ende</ng-container>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="card-content" *ngIf="state === AuditState.INTRODUCTION">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate delectus exercitationem fugit
         impedit, ipsa nihil sequi totam ullam vel? Aut magnam neque quisquam veritatis vitae! Culpa minima placeat
@@ -17,7 +20,7 @@
       </p>
       <button class="fe-text-button right" (click)="startAudit()">Start</button>
     </mat-card-content>
-    <mat-card-content class="fe-view-wrapper play" *ngIf="state === AuditState.PLAY" #slideInWrapper>
+    <mat-card-content class="card-content play" *ngIf="state === AuditState.PLAY" #slideInWrapper>
       <div>
         <p class="question">{{currentQuestion.question}}</p>
         <p class="description" *ngIf="currentQuestion.description" [innerHTML]="currentQuestion.description"></p>
@@ -54,7 +57,7 @@
         </div>
       </div>
     </mat-card-content>
-    <mat-card-content class="fe-view-wrapper" *ngIf="state === AuditState.END">
+    <mat-card-content class="card-content" *ngIf="state === AuditState.END">
       <p>Du hast alle Fragen beantwortet</p>
     </mat-card-content>
   </mat-card>

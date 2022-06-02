@@ -1,0 +1,26 @@
+<mat-card class="card" [ngClass]="className">
+  <mat-card-header class="card-header" *ngIf="title" [class.with-button]="buttonLink && buttonLabel">
+    <mat-card-title class="card-title" [innerHTML]="title"></mat-card-title>
+
+    <mat-card-subtitle class="card-description" *ngIf="date && type; else simpleText">
+      <fe-post-badge [type]="type" *ngIf="type"></fe-post-badge>
+      <div class="card-date">vom {{ date | date: "dd.MM.yyyy" }}</div>
+    </mat-card-subtitle>
+
+    <ng-template #simpleText>
+      <mat-card-subtitle class="card-date">{{ date }}</mat-card-subtitle>
+    </ng-template>
+
+    <a class="fe-text-button secondary show-more" [routerLink]="buttonLink" *ngIf="buttonLink && buttonLabel" matRipple>
+      <span>{{ buttonLabel }}</span>
+    </a>
+  </mat-card-header>
+
+  <mat-card-content class="card-content">
+    <ng-content></ng-content>
+  </mat-card-content>
+
+  <small class="card-last-update" *ngIf="lastUpdate">
+    Letzte Aktualisierung: {{ lastUpdate | date: "dd.MM.yyyy" }}
+  </small>
+</mat-card>

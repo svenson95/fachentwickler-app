@@ -80,4 +80,10 @@
       margin-top: 10px;
     }
   }
+
+  fe-card:nth-child(2) {
+    mat-card-title.card-title {
+      margin-bottom: 30px;
+    }
+  }
 }

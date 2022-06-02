@@ -1,5 +1,5 @@
 .page.register {
-  .fe-view-wrapper {
+  .card-content {
     display: flex;
     width: fit-content;
     margin: 40px auto;
@@ -50,7 +50,7 @@
     }
   }
 
-  .fe-divider-line {
+  .divider-line {
     border: none;
 
     @include from-md {

@@ -1,9 +1,13 @@
-<mat-dialog-content class="fe-image-manager">
-  <div class="fe-im-header">
-    <p class="fe-card-title">Image-Manager</p>
-    <p class="fe-card-description" *ngIf="allImagesLength === undefined">Bilder werden geladen ...</p>
-    <p class="fe-card-description" *ngIf="allImagesLength !== undefined">{{ allImagesLength }} Bilder</p>
-  </div>
+<mat-dialog-content class="image-manager">
+  <mat-card-header class="card-header">
+    <mat-card-title class="card-title">Image-Manager</mat-card-title>
+    <mat-card-subtitle class="card-description" *ngIf="allImagesLength === undefined">
+      Bilder werden geladen ...
+    </mat-card-subtitle>
+    <mat-card-subtitle class="card-description" *ngIf="allImagesLength !== undefined">
+      {{ allImagesLength }} Bilder
+    </mat-card-subtitle>
+  </mat-card-header>
   <p class="title">Neues Bild hochladen</p>
   <form class="fe-add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
     <div
@@ -45,7 +49,7 @@
       Hochladen
     </fe-state-button>
   </form>
-  <hr class="fe-divider-line" />
+  <hr class="divider-line" />
   <p class="title">Details</p>
   <div class="image-preview">
     <div class="details">
@@ -96,7 +100,7 @@
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
     </fe-state-button>
   </div>
-  <hr class="fe-divider-line" />
+  <hr class="divider-line" />
   <div class="title-wrapper">
     <p class="title">Hochgeladene Bilder</p>
     <button class="fe-text-button secondary" (click)="changeSorting()">

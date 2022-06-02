@@ -1,13 +1,6 @@
-<mat-card class="fe-card schedule-card">
-  <p class="fe-card-title">Stundenplan</p>
+<fe-card class="user-progress" title="Stundenplan" [date]="weekRange">
   <ng-container *ngIf="schedule">
-    <p class="fe-card-description">
-      {{ schedule.weekBegin | date: "dd.MM.yyyy" }} bis
-      {{ schedule.weekEnd | date: "dd.MM.yyyy" }}
-    </p>
-    <mat-card-content class="fe-view-wrapper">
-      <fe-schedule [schedule]="schedule"></fe-schedule>
-    </mat-card-content>
+    <fe-schedule [schedule]="schedule"></fe-schedule>
   </ng-container>
-  <p class="fe-no-data" *ngIf="!schedule">Kein Stundenplan verfügbar</p>
-</mat-card>
+  <p class="no-data" *ngIf="!schedule">Kein Stundenplan verfügbar</p>
+</fe-card>

@@ -1,4 +1,4 @@
-mat-dialog-content.fe-image-manager {
+mat-dialog-content.image-manager {
   color: var(--text-color-1);
   background: var(--background-secondary);
   height: 90vh;
@@ -15,7 +15,7 @@ mat-dialog-content.fe-image-manager {
     border-radius: 0;
   }
 
-  .fe-im-header {
+  .card-header {
     margin-bottom: 20px;
 
     .fe-card-title {

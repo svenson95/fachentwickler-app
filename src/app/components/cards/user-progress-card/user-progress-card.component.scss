@@ -1,50 +1,46 @@
 @import "mixins";
 
-mat-card.fe-card.user-progress-card {
-  overflow: hidden;
-  padding-bottom: 20px;
+::ng-deep fe-card.user-progress {
+  .current-lesson mat-progress-bar .mat-progress-bar-fill::after {
+    background-color: var(--secondary-color);
+  }
 
-  .fe-view-wrapper {
-    padding-top: 10px;
+  .current-week mat-progress-bar .mat-progress-bar-fill::after {
+    background-color: var(--primary-color);
+  }
 
-    .current-lesson,
-    .current-week {
-      margin-bottom: 20px;
-
-      .label {
-        margin-top: 8px;
-        margin-bottom: 8px;
-
-        @include to-xs {
-          font-size: 0.8rem;
-          margin-bottom: 3px;
-        }
-      }
+  .current-lesson,
+  .current-week {
+    .mat-progress-bar-buffer {
+      background: var(--background-secondary);
     }
+  }
+}
 
-    .current-lesson mat-progress-bar .mat-progress-bar-fill::after {
-      background-color: var(--secondary-color);
+.current-lesson,
+.current-week {
+  margin-bottom: 20px;
+
+  .label {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    @include to-xs {
+      font-size: 0.8rem;
+      margin-bottom: 3px;
     }
+  }
+}
 
-    .current-week mat-progress-bar .mat-progress-bar-fill::after {
-      background-color: var(--primary-color);
-    }
+mat-progress-bar {
+  height: var(--progressbar-height);
+}
 
-    mat-progress-bar {
-      height: var(--progressbar-height);
+.fe-loading-spinner {
+  margin: 30px auto 0;
 
-      .mat-progress-bar-buffer {
-        background: var(--background-secondary);
-      }
-    }
-
-    .fe-loading-spinner {
-      margin: 30px auto 0;
-
-      @include to-xs {
-        margin-top: 25px;
-        margin-bottom: 10px;
-      }
-    }
+  @include to-xs {
+    margin-top: 25px;
+    margin-bottom: 10px;
   }
 }

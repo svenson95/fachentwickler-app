@@ -1,5 +1,5 @@
 .page.audit-simulator {
-  .fe-view-wrapper {
+  mat-card-content.card-content {
     margin-top: 20px;
 
     .fe-text-button.right {
@@ -123,7 +123,7 @@
     }
   }
 
-  mat-card.fe-card .slide-in-animation {
+  mat-card.card .slide-in-animation {
     @include moveInLeftAnimation;
   }
 }

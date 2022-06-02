@@ -1,18 +1,13 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../../app-common/angular-material.module';
-import { PostLinkModule } from '../../post-link/post-link.module';
+import { CardModule } from '../../card/card.module';
 import { ScheduleModule } from '../../schedule/schedule.module';
 import { ScheduleCardComponent } from './schedule-card.component';
 
 @NgModule({
   declarations: [ScheduleCardComponent],
   exports: [ScheduleCardComponent],
-  imports: [
-    CommonModule,
-    AngularMaterialModule,
-    PostLinkModule,
-    ScheduleModule,
-  ],
+  imports: [CommonModule, CardModule, ScheduleModule],
+  providers: [DatePipe],
 })
 export class ScheduleCardModule {}

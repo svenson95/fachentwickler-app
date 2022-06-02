@@ -1,11 +1,10 @@
 <div class="page curriculum">
-  <mat-card class="fe-card school-year">
-    <div class="fe-card-header">
-      <div class="fe-title-description-wrapper">
-        <p class="fe-card-title">Schuljahr</p>
-      </div>
+  <mat-card class="card school-year">
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-title">Schuljahr</mat-card-title>
+
       <mat-button-toggle-group
-        class="fe-year-toggle"
+        class="year-toggle"
         [(ngModel)]="selectedYear"
         aria-label="School Year"
         (ngModelChange)="onYearChange()"
@@ -14,12 +13,13 @@
         <mat-button-toggle [value]="1">2</mat-button-toggle>
         <mat-button-toggle [value]="2" disabled>3</mat-button-toggle>
       </mat-button-toggle-group>
-    </div>
+    </mat-card-header>
   </mat-card>
+
   <div class="week-cards-wrapper" *ngIf="schoolYears !== undefined">
-    <mat-card class="fe-card week-toggle-card">
+    <mat-card class="card week-toggle-card">
       <mat-button-toggle-group
-        class="fe-week-toggle"
+        class="week-toggle"
         [(ngModel)]="selectedWeek"
         aria-label="School Week"
         (ngModelChange)="onWeekChange(selectedWeek)"

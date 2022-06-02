@@ -48,10 +48,6 @@
       text-align: right;
       text-transform: uppercase;
 
-      :not(:last-of-type) {
-        margin-bottom: 6px;
-      }
-
       @include to-lg {
         font-size: 1.1em;
         line-height: 16px;
@@ -59,8 +55,15 @@
 
       @include to-xs {
         letter-spacing: 1px;
-
         margin: 0;
+      }
+
+      p:not(:last-of-type) {
+        margin-bottom: 6px;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
       }
 
       .grey-1 {

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { CardModule } from '../../components/card/card.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 import { PostElementModule } from '../../components/post-element/post-element.module';
 import { NewsArticleRoutingModule } from './news-article-routing.module';
@@ -10,8 +10,8 @@ import { NewsArticlePage } from './news-article.page';
   declarations: [NewsArticlePage],
   imports: [
     CommonModule,
-    AngularMaterialModule,
     NewsArticleRoutingModule,
+    CardModule,
     PostElementModule,
     LoadingSpinnerModule,
   ],

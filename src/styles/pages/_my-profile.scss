@@ -1,69 +1,49 @@
 .page.my-profile {
-  mat-card.fe-card {
-    .fe-view-wrapper {
-      margin-top: 40px;
-      font-size: 1.2em;
-
-      @include from-xs {
+  fe-card.user-data {
+    mat-card.mat-card.card {
+      mat-card-content.card-content {
         margin-top: 40px;
-      }
+        font-size: 1.2em;
 
-      @include to-xs {
-        font-size: 1em;
-        margin-top: 20px;
-      }
+        @include from-xs {
+          margin-top: 40px;
+        }
 
-      hr {
-        height: 1px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-
-      .fe-edit-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        text-align: right;
-
-        .fe-edit-user-btn {
-          font-size: 0.8em;
-          width: fit-content;
-
-          &:not(:first-of-type) {
-            margin-top: 15px;
-          }
+        @include to-xs {
+          font-size: 1em;
+          margin-top: 20px;
         }
       }
     }
+  }
 
-    .user-details .user-attribute {
-      @include from-xs {
+  .user-details .user-attribute {
+    @include from-xs {
+      display: flex;
+      align-items: center;
+    }
+    @include to-xs {
+      position: relative;
+
+      .theme {
         display: flex;
-        align-items: center;
+        flex-direction: column;
       }
-      @include to-xs {
-        position: relative;
 
-        .theme {
-          display: flex;
-          flex-direction: column;
-        }
+      &:not(.theme) {
+        flex-direction: column-reverse;
+      }
 
-        &:not(.theme) {
-          flex-direction: column-reverse;
-        }
+      .button-container {
+        position: absolute;
+        display: flex;
+        flex-direction: row-reverse;
+        top: -8px;
+        right: 0;
 
-        .button-container {
-          position: absolute;
-          display: flex;
-          flex-direction: row-reverse;
-          top: -8px;
-          right: 0;
-
-          button {
-            &:first-child {
-              margin-left: 10px;
-            }
+        button {
+          &:first-child {
+            margin-left: 10px;
           }
         }
       }
@@ -133,7 +113,7 @@
     }
   }
 
-  mat-form-field.fe-form-field {
+  mat-form-field.form-field {
     margin-bottom: 0.5rem;
 
     @include from-lg {
@@ -200,6 +180,30 @@
 
     .mat-form-field-infix {
       display: flex;
+    }
+  }
+
+  fe-card.settings {
+    mat-card.mat-card.card {
+      mat-card-content.card-content {
+        margin-top: 0;
+      }
+    }
+
+    .edit-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+
+      .edit-user-btn {
+        font-size: 0.8em;
+        width: fit-content;
+
+        &:not(:first-of-type) {
+          margin-top: 15px;
+        }
+      }
     }
   }
 }

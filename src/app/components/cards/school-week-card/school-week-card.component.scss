@@ -1,7 +1,7 @@
 @import "mixins";
 
-mat-card.fe-card.school-week-card {
-  .fe-card-header {
+::ng-deep mat-card.mat-card.card.school-week {
+  .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;

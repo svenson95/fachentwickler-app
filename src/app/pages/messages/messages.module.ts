@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { CardModule } from '../../components/card/card.module';
 import { NewsCardContainerModule } from '../../containers/news-card-container/news-card-container.module';
 import { MessagesPageRoutingModule } from './messages-routing.module';
 import { MessagesPage } from './messages.page';
@@ -10,7 +10,7 @@ import { MessagesPage } from './messages.page';
   imports: [
     CommonModule,
     MessagesPageRoutingModule,
-    AngularMaterialModule,
+    CardModule,
     NewsCardContainerModule,
   ],
 })

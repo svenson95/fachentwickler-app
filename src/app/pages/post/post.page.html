@@ -1,23 +1,15 @@
 <div class="page post">
-  <mat-card class="fe-card">
-    <p class="fe-error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
-    <p class="fe-card-title" *ngIf="post !== undefined">{{post.title}}</p>
-    <p class="fe-card-description" *ngIf="post !== undefined">
-      <fe-post-badge [type]="post.type"></fe-post-badge>
-      <span>vom {{ post.lessonDate | date: "dd.MM.yyyy" }}</span>
-    </p>
+  <ng-container *ngIf="post">
     <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
-    <mat-card-content class="post-content" *ngIf="post !== undefined">
-      <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
-    </mat-card-content>
-    <p class="post-last-update" *ngIf="post && post.lastUpdate !== undefined">
-      Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
-    </p>
-  </mat-card>
 
-  <fe-lesson-footer
-    [postId]="post._id"
-    [isLoading]="loadingService.loading$ | async"
-    *ngIf="authService.isAuthenticated && post"
-  ></fe-lesson-footer>
+    <fe-card [title]="post.title" [date]="post.lessonDate" [type]="post.type" [lastUpdate]="post.lastUpdate">
+      <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
+    </fe-card>
+
+    <fe-lesson-footer
+      [postId]="post._id"
+      [isLoading]="loadingService.loading$ | async"
+      *ngIf="authService.isAuthenticated && post"
+    ></fe-lesson-footer>
+  </ng-container>
 </div>

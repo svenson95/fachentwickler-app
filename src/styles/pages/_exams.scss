@@ -1,5 +1,5 @@
 .page.exams {
-  .fe-view-wrapper {
+  .card-content {
     display: flex;
 
     @include to-lg {
@@ -133,13 +133,13 @@
         }
       }
 
-      .fe-no-data {
+      .no-data {
         padding: 10px;
       }
     }
   }
 
-  .fe-view-wrapper .exam-details-wrapper {
+  .card-content .exam-details-wrapper {
     .exam-date-block {
       margin-left: -20px;
     }

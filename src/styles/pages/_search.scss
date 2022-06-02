@@ -1,7 +1,11 @@
 .page.search {
-  .fe-card-description {
-    @include to-md {
-      margin-top: 5px;
+  mat-card.mat-card.card {
+    mat-card-header.card-header {
+      justify-content: space-between;
+
+      mat-card-title.card-title {
+        margin-bottom: 0px;
+      }
     }
   }
 

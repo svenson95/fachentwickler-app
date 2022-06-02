@@ -12,6 +12,7 @@
 
 /* Pages */
 @import "src/styles/pages/about";
+@import "src/styles/pages/audit-simulator";
 @import "src/styles/pages/curriculum";
 @import "src/styles/pages/dashboard";
 @import "src/styles/pages/edit-post";
@@ -22,14 +23,40 @@
 @import "src/styles/pages/messages";
 @import "src/styles/pages/my-profile";
 @import "src/styles/pages/post";
-@import "src/styles/pages/pruefungssimulator";
 @import "src/styles/pages/register";
 @import "src/styles/pages/search";
 @import "src/styles/pages/subject";
 @import "src/styles/pages/verify";
 
-/* global styles */
-mat-card.mat-card.fe-card {
+mat-card.mat-card.card,
+mat-dialog-content.image-manager {
+  .card-header {
+    &.with-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mat-card-header-text {
+      margin: 0;
+    }
+
+    .card-title {
+      letter-spacing: 1.5px;
+      text-decoration: underline;
+      text-decoration-color: var(--secondary-color);
+      font-weight: 400;
+    }
+
+    .card-description {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
+}
+
+mat-card.mat-card.card {
   max-width: var(--max-width);
   background: var(--background-primary);
   box-shadow: none;
@@ -40,66 +67,25 @@ mat-card.mat-card.fe-card {
 
   @include moveInTopAnimation;
 
-  &.mat-card {
-    @include from-xs {
-      padding: 30px;
-    }
-
-    @include to-xs {
-      padding: 20px;
-    }
+  @include from-xs {
+    padding: 30px;
   }
 
   @include to-xs {
+    padding: 20px;
     border-radius: 0;
   }
 
-  div.fe-card-header {
+  .card-date {
+    font-weight: 300;
+    color: var(--grey-3);
+    letter-spacing: 0.5px;
+  }
+
+  .card-last-update {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  p.post-last-update {
-    font-size: 0.8rem;
-    color: var(--grey-2);
-    text-align: right;
-    margin-top: 40px;
-
-    @include to-xs {
-      font-size: 0.7rem;
-    }
-  }
-}
-
-/* card title & subtitle (card components) */
-p.fe-card-title {
-  letter-spacing: 1.5px;
-  text-decoration: underline;
-  text-decoration-color: var(--secondary-color);
-  margin-bottom: 0;
-
-  @include from-xs {
-    font-size: 1.4em;
-    line-height: 24px;
-  }
-
-  @include to-xs {
-    font-size: 1.3em;
-  }
-}
-
-p.fe-card-description {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: var(--grey-3);
-  letter-spacing: 0.5px;
-  margin: 5px 0 0;
-
-  @include to-xs {
-    font-size: 0.8rem;
+    justify-content: flex-end;
+    color: var(--grey-3);
   }
 }
 
@@ -320,7 +306,7 @@ div.page-container .page {
     padding-right: 0;
   }
 
-  .fe-no-data {
+  .no-data {
     display: flex;
     color: var(--grey-3);
     margin-top: 10px;

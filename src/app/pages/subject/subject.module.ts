@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../app-common/angular-material.module';
+import { CardModule } from '../../components/card/card.module';
 import { LoadingSpinnerModule } from '../../components/loading-spinner/loading-spinner.module';
 import { PostElementModule } from '../../components/post-element/post-element.module';
 import { PostLinkModule } from '../../components/post-link/post-link.module';
@@ -13,7 +13,7 @@ import { SubjectPage } from './subject.page';
   imports: [
     CommonModule,
     SubjectPageRoutingModule,
-    AngularMaterialModule,
+    CardModule,
     PostLinkModule,
     PostElementModule,
     LoadingSpinnerModule,
