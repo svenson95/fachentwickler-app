@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { testArticle } from '../../../data/posts/post-template';
 import { subjects } from '../../constants/menu-items';
-import { Post, PostArticle } from '../../models/post';
+import { Post } from '../../models/post';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
@@ -49,7 +49,11 @@ export class PostPage implements OnInit, OnDestroy {
       this.post = testArticle;
     } else {
       this.dataService.getPost(postUrl).subscribe((data) => {
-        this.post = data as PostArticle;
+        if (data === null) {
+          this.router.navigate(['not-found']);
+        } else {
+          this.post = data;
+        }
       });
     }
   }
