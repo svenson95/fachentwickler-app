@@ -1,9 +1,7 @@
-<div class="page index-cards">
-  <fe-loading-spinner *ngIf="indexCards === undefined"></fe-loading-spinner>
-  <fe-index-card [indexCards]="indexCards" *ngIf="indexCards !== undefined"></fe-index-card>
-  <fe-lesson-footer
-    [postId]="indexCards._id"
-    [isLoading]="loadingService.loading$ | async"
-    *ngIf="indexCards !== undefined"
-  ></fe-lesson-footer>
-</div>
+<fe-loading-spinner *ngIf="indexCards === undefined"></fe-loading-spinner>
+<fe-index-card [indexCards]="indexCards" *ngIf="indexCards !== undefined"></fe-index-card>
+<fe-lesson-footer
+  [postId]="indexCards._id"
+  [isLoading]="loadingService.loading$ | async"
+  *ngIf="indexCards !== undefined"
+></fe-lesson-footer>

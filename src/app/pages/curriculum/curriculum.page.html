@@ -1,41 +1,39 @@
-<div class="page curriculum">
-  <mat-card class="card school-year">
-    <mat-card-header class="card-header">
-      <mat-card-title class="card-title">Schuljahr</mat-card-title>
+<mat-card class="card school-year">
+  <mat-card-header class="card-header">
+    <mat-card-title class="card-title">Schuljahr</mat-card-title>
 
-      <mat-button-toggle-group
-        class="year-toggle"
-        [(ngModel)]="selectedYear"
-        aria-label="School Year"
-        (ngModelChange)="onYearChange()"
-      >
-        <mat-button-toggle [value]="0">1</mat-button-toggle>
-        <mat-button-toggle [value]="1">2</mat-button-toggle>
-        <mat-button-toggle [value]="2" disabled>3</mat-button-toggle>
-      </mat-button-toggle-group>
-    </mat-card-header>
+    <mat-button-toggle-group
+      class="year-toggle"
+      [(ngModel)]="selectedYear"
+      aria-label="School Year"
+      (ngModelChange)="onYearChange()"
+    >
+      <mat-button-toggle [value]="0">1</mat-button-toggle>
+      <mat-button-toggle [value]="1">2</mat-button-toggle>
+      <mat-button-toggle [value]="2" disabled>3</mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-card-header>
+</mat-card>
+
+<div class="week-cards-wrapper" *ngIf="schoolYears !== undefined">
+  <mat-card class="card week-toggle-card">
+    <mat-button-toggle-group
+      class="week-toggle"
+      [(ngModel)]="selectedWeek"
+      aria-label="School Week"
+      (ngModelChange)="onWeekChange(selectedWeek)"
+    >
+      <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="week.schoolWeek">
+        {{week.schoolWeek}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
   </mat-card>
-
-  <div class="week-cards-wrapper" *ngIf="schoolYears !== undefined">
-    <mat-card class="card week-toggle-card">
-      <mat-button-toggle-group
-        class="week-toggle"
-        [(ngModel)]="selectedWeek"
-        aria-label="School Week"
-        (ngModelChange)="onWeekChange(selectedWeek)"
-      >
-        <mat-button-toggle *ngFor="let week of schoolYears[selectedYear]?.weeks" [value]="week.schoolWeek">
-          {{week.schoolWeek}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </mat-card>
-    <div class="weeks-container" (scroll)="onScroll()">
-      <fe-school-week-card
-        [class]="'week-' + week.schoolWeek"
-        *ngFor="let week of schoolYears[selectedYear]?.weeks"
-        [week]="week"
-      ></fe-school-week-card>
-    </div>
+  <div class="weeks-container" (scroll)="onScroll()">
+    <fe-school-week-card
+      [class]="'week-' + week.schoolWeek"
+      *ngFor="let week of schoolYears[selectedYear]?.weeks"
+      [week]="week"
+    ></fe-school-week-card>
   </div>
-  <fe-loading-spinner *ngIf="schoolYears === undefined"></fe-loading-spinner>
 </div>
+<fe-loading-spinner *ngIf="schoolYears === undefined"></fe-loading-spinner>

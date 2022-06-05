@@ -1,78 +1,76 @@
 @import "mixins";
 
-.page.login {
-  ::ng-deep {
-    mat-card-content.card-content {
-      display: flex;
-      width: fit-content;
-      margin: 40px auto;
-      padding-bottom: 40px;
-
-      @include to-md {
-        flex-direction: column;
-      }
-
-      .fe-text-button:hover span {
-        color: var(--tertiary-color);
-      }
-    }
-  }
-
-  .login-form {
-    text-align: center;
-
-    .form-inputs {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-
-      .name {
-        margin-bottom: 8px;
-
-        ::placeholder {
-          color: var(--grey-4);
-        }
-      }
-
-      .password {
-        margin-bottom: 8px;
-      }
-    }
-
-    .buttons-wrapper {
-      display: flex;
-      flex-direction: column;
-
-      .fe-text-button:first-child {
-        margin-bottom: 20px;
-      }
-    }
-  }
-
-  .divider-line {
-    border: none;
-
-    @include from-md {
-      width: 1px;
-      margin: 0 50px;
-    }
+:host ::ng-deep {
+  mat-card-content.card-content {
+    display: flex;
+    width: fit-content;
+    margin: 40px auto;
+    padding-bottom: 40px;
 
     @include to-md {
-      display: none;
+      flex-direction: column;
+    }
+
+    .fe-text-button:hover span {
+      color: var(--tertiary-color);
+    }
+  }
+}
+
+.login-form {
+  text-align: center;
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .name {
+      margin-bottom: 8px;
+
+      ::placeholder {
+        color: var(--grey-4);
+      }
+    }
+
+    .password {
+      margin-bottom: 8px;
     }
   }
 
-  .register-form {
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .fe-text-button:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.divider-line {
+  border: none;
+
+  @include from-md {
+    width: 1px;
+    margin: 0 50px;
+  }
+
+  @include to-md {
+    display: none;
+  }
+}
+
+.register-form {
+  text-align: center;
+  align-self: center;
+
+  .no-account-hint {
     text-align: center;
-    align-self: center;
+    margin: 20px 0;
+  }
 
-    .no-account-hint {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .fe-text-button {
-      display: flex;
-    }
+  .fe-text-button {
+    display: flex;
   }
 }

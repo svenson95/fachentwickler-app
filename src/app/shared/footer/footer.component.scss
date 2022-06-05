@@ -1,0 +1,72 @@
+@import "mixins";
+
+:host {
+  display: flex;
+  height: fit-content;
+  position: relative;
+  background: var(--background-primary);
+  padding: 35px 20px;
+  border-top-left-radius: var(--border-radius);
+}
+
+mat-toolbar.page-footer {
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  background: var(--background-primary);
+  justify-content: space-between;
+  z-index: 3;
+  padding: 0 5px;
+
+  @include moveInTopAnimation;
+
+  @include to-xs {
+    padding: 0 20px;
+    height: 120px;
+  }
+
+  ::ng-deep {
+    .fe-icon-wrapper {
+      fill: var(--grey-2);
+    }
+    .fe-app-name {
+      color: var(--grey-2);
+    }
+  }
+
+  div.button-container {
+    display: flex;
+
+    @include to-md {
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: 30px;
+      letter-spacing: 1px;
+    }
+
+    a {
+      cursor: pointer;
+      outline: none;
+      font-size: 0.9rem;
+      font-weight: 300;
+
+      @include to-md {
+        font-size: 0.8rem;
+        line-height: 26px;
+      }
+
+      &.is-active {
+        color: var(--text-color-3);
+      }
+    }
+
+    .footer-divider {
+      margin: 0 8px;
+      font-weight: 100;
+
+      @include to-md {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,214 +1,212 @@
 @import "mixins";
 
-.page.my-profile {
-  ::ng-deep {
-    fe-card.user-data {
-      mat-card.card {
-        mat-card-content.card-content {
-          margin-top: 40px;
-          font-size: 1.2em;
+:host ::ng-deep {
+  fe-card.user-data {
+    mat-card.card {
+      mat-card-content.card-content {
+        margin-top: 40px;
+        font-size: 1.2em;
 
-          @include from-xs {
-            margin-top: 40px;
-          }
-
-          @include to-xs {
-            font-size: 1em;
-            margin-top: 20px;
-          }
-        }
-      }
-    }
-
-    fe-card.settings {
-      mat-card.card {
-        mat-card-content.card-content {
-          margin-top: 0;
-        }
-      }
-    }
-
-    mat-form-field.form-field {
-      margin-bottom: 0.5rem;
-
-      @include from-lg {
-        width: 350px;
-      }
-
-      @include to-xs {
-        width: 100%;
-      }
-
-      .mat-input-element {
-        color: var(--text-color-1);
-
-        &:disabled {
-          opacity: 1;
-        }
-      }
-
-      .mat-form-field-flex {
-        transition: background-color 150ms ease-in-out;
-      }
-
-      .mat-form-field-outline {
-        color: var(--grey-4);
-        opacity: 1;
-      }
-
-      .mat-form-field-label {
-        color: var(--grey-4);
-      }
-
-      .mat-form-field-underline {
-        background-image: linear-gradient(
-          to right,
-          rgba(var(--grey-4), 1) 0%,
-          rgba(var(--grey-4), 1) 0%
-        );
-        background-color: rgba(var(--tertiary-color-rgb), 0.3);
-      }
-
-      .mat-error {
-        font-size: 0.7rem;
-      }
-
-      &.mat-form-field-disabled {
-        .mat-form-field-flex {
-          background-color: transparent;
-          transition: background-color 150ms ease-in-out;
-        }
-
-        .mat-form-field-label-wrapper .mat-form-field-label {
-          color: var(--text-color-3);
-        }
-      }
-      .mat-form-field-infix {
         @include from-xs {
-          width: 300px;
+          margin-top: 40px;
+        }
+
+        @include to-xs {
+          font-size: 1em;
+          margin-top: 20px;
         }
       }
-    }
-
-    mat-form-field.theme {
-      line-height: normal;
-
-      .mat-form-field-infix {
-        display: flex;
-      }
-    }
-  }
-
-  .user-details .user-attribute {
-    @include from-xs {
-      display: flex;
-      align-items: center;
-    }
-    @include to-xs {
-      position: relative;
-
-      .theme {
-        display: flex;
-        flex-direction: column;
-      }
-
-      &:not(.theme) {
-        flex-direction: column-reverse;
-      }
-
-      .button-container {
-        position: absolute;
-        display: flex;
-        flex-direction: row-reverse;
-        top: -8px;
-        right: 0;
-
-        button {
-          &:first-child {
-            margin-left: 10px;
-          }
-        }
-      }
-    }
-  }
-
-  button.start-change,
-  button.discard-change,
-  button.save-change {
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    &:hover:not([disabled]) {
-      cursor: pointer;
-    }
-
-    @include from-xs {
-      width: 100px;
-      padding: 4px;
-      font-size: 0.6rem;
-      margin-left: 20px;
-      margin-bottom: 12px;
-    }
-
-    @include to-xs {
-      width: 80px;
-      padding: 3px 4px;
-      font-size: 0.45rem;
-    }
-  }
-
-  button.start-change,
-  button.discard-change {
-    color: var(--text-color-1);
-
-    &:disabled {
-      color: var(--text-color-3);
-    }
-  }
-
-  button.start-change {
-    border-color: rgba(var(--grey-4-rgb), 0.1);
-    background: rgba(var(--grey-4-rgb), 0.1);
-
-    &:hover:not([disabled]) {
-      background: rgba(var(--secondary-color-rgb), 0.3);
-    }
-  }
-
-  button.discard-change {
-    border-color: rgba(var(--tertiary-color-rgb), 0.3);
-    background: rgba(var(--tertiary-color-rgb), 0.3);
-  }
-
-  button.save-change {
-    border-color: rgba(var(--primary-color-rgb), 0.7);
-    background: rgba(var(--primary-color-rgb), 0.7);
-    color: white;
-
-    &:disabled {
-      background: rgba(var(--grey-4-rgb), 0.6);
-      border-color: rgba(var(--grey-4-rgb), 0.6);
     }
   }
 
   fe-card.settings {
-    .edit-wrapper {
+    mat-card.card {
+      mat-card-content.card-content {
+        margin-top: 0;
+      }
+    }
+  }
+
+  mat-form-field.form-field {
+    margin-bottom: 0.5rem;
+
+    @include from-lg {
+      width: 350px;
+    }
+
+    @include to-xs {
+      width: 100%;
+    }
+
+    .mat-input-element {
+      color: var(--text-color-1);
+
+      &:disabled {
+        opacity: 1;
+      }
+    }
+
+    .mat-form-field-flex {
+      transition: background-color 150ms ease-in-out;
+    }
+
+    .mat-form-field-outline {
+      color: var(--grey-4);
+      opacity: 1;
+    }
+
+    .mat-form-field-label {
+      color: var(--grey-4);
+    }
+
+    .mat-form-field-underline {
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--grey-4), 1) 0%,
+        rgba(var(--grey-4), 1) 0%
+      );
+      background-color: rgba(var(--tertiary-color-rgb), 0.3);
+    }
+
+    .mat-error {
+      font-size: 0.7rem;
+    }
+
+    &.mat-form-field-disabled {
+      .mat-form-field-flex {
+        background-color: transparent;
+        transition: background-color 150ms ease-in-out;
+      }
+
+      .mat-form-field-label-wrapper .mat-form-field-label {
+        color: var(--text-color-3);
+      }
+    }
+    .mat-form-field-infix {
+      @include from-xs {
+        width: 300px;
+      }
+    }
+  }
+
+  mat-form-field.theme {
+    line-height: normal;
+
+    .mat-form-field-infix {
+      display: flex;
+    }
+  }
+}
+
+.user-details .user-attribute {
+  @include from-xs {
+    display: flex;
+    align-items: center;
+  }
+  @include to-xs {
+    position: relative;
+
+    .theme {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      text-align: right;
+    }
 
-      .edit-user-btn {
-        font-size: 0.8em;
-        width: fit-content;
+    &:not(.theme) {
+      flex-direction: column-reverse;
+    }
 
-        &:not(:first-of-type) {
-          margin-top: 15px;
+    .button-container {
+      position: absolute;
+      display: flex;
+      flex-direction: row-reverse;
+      top: -8px;
+      right: 0;
+
+      button {
+        &:first-child {
+          margin-left: 10px;
         }
+      }
+    }
+  }
+}
+
+button.start-change,
+button.discard-change,
+button.save-change {
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover:not([disabled]) {
+    cursor: pointer;
+  }
+
+  @include from-xs {
+    width: 100px;
+    padding: 4px;
+    font-size: 0.6rem;
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+
+  @include to-xs {
+    width: 80px;
+    padding: 3px 4px;
+    font-size: 0.45rem;
+  }
+}
+
+button.start-change,
+button.discard-change {
+  color: var(--text-color-1);
+
+  &:disabled {
+    color: var(--text-color-3);
+  }
+}
+
+button.start-change {
+  border-color: rgba(var(--grey-4-rgb), 0.1);
+  background: rgba(var(--grey-4-rgb), 0.1);
+
+  &:hover:not([disabled]) {
+    background: rgba(var(--secondary-color-rgb), 0.3);
+  }
+}
+
+button.discard-change {
+  border-color: rgba(var(--tertiary-color-rgb), 0.3);
+  background: rgba(var(--tertiary-color-rgb), 0.3);
+}
+
+button.save-change {
+  border-color: rgba(var(--primary-color-rgb), 0.7);
+  background: rgba(var(--primary-color-rgb), 0.7);
+  color: white;
+
+  &:disabled {
+    background: rgba(var(--grey-4-rgb), 0.6);
+    border-color: rgba(var(--grey-4-rgb), 0.6);
+  }
+}
+
+fe-card.settings {
+  .edit-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    .edit-user-btn {
+      font-size: 0.8em;
+      width: fit-content;
+
+      &:not(:first-of-type) {
+        margin-top: 15px;
       }
     }
   }

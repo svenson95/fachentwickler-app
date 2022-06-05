@@ -59,13 +59,11 @@
 }
 
 ::ng-deep {
-  div.page.post,
-  div.page.edit-post,
-  div.page.index-cards,
-  div.page.matching,
-  div.page.quiz,
-  div.page.tasks,
-  div.page.test {
+  fe-post-page,
+  fe-edit-post-page,
+  fe-index-card-page,
+  fe-matching-page,
+  fe-quiz-page {
     fe-post-badge {
       margin-right: 6px;
     }

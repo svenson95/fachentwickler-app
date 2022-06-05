@@ -1,44 +1,42 @@
-<div class="page verify">
-  <fe-card [title]="verificationSucceed ? 'Registrierung abgeschlossen' : 'Registrierung abschließen'">
-    <form
-      class="verify-form"
-      [formGroup]="formGroup"
-      (ngSubmit)="verifyUser($event)"
-      (change)="onFormChange($event)"
-      *ngIf="!verificationSucceed"
-    >
-      <div class="form-inputs">
-        <p>
-          Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem
-          Verifizierungscode zugeschickt.
-        </p>
-        <mat-form-field class="input code">
-          <mat-label>Verifizierungscode</mat-label>
-          <input
-            matInput
-            type="number"
-            inputmode="numeric"
-            pattern="[0-9]*"
-            autocomplete="off"
-            formControlName="verificationCode"
-            #verificationCodeInput
-          />
-          <mat-error *ngIf="formGroup.controls.verificationCode.hasError('required')">
-            Verifizierungscode erforderlich
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="buttons-wrapper">
-        <fe-state-button type="submit" [isLoading]="isSubmitLoading">Bestätigen</fe-state-button>
-        <p>Du hast keine E-Mail erhalten?</p>
-        <fe-state-button type="button" [isLoading]="isResendLoading" (click)="resendVerificationMail()">
-          Nochmal senden
-        </fe-state-button>
-      </div>
-    </form>
-    <div class="verification-succeed-container" *ngIf="verificationSucceed">
-      <fe-checkmark></fe-checkmark>
-      <p>Erfolgreich verifiziert!</p>
+<fe-card [title]="verificationSucceed ? 'Registrierung abgeschlossen' : 'Registrierung abschließen'">
+  <form
+    class="verify-form"
+    [formGroup]="formGroup"
+    (ngSubmit)="verifyUser($event)"
+    (change)="onFormChange($event)"
+    *ngIf="!verificationSucceed"
+  >
+    <div class="form-inputs">
+      <p>
+        Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem
+        Verifizierungscode zugeschickt.
+      </p>
+      <mat-form-field class="input code">
+        <mat-label>Verifizierungscode</mat-label>
+        <input
+          matInput
+          type="number"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          autocomplete="off"
+          formControlName="verificationCode"
+          #verificationCodeInput
+        />
+        <mat-error *ngIf="formGroup.controls.verificationCode.hasError('required')">
+          Verifizierungscode erforderlich
+        </mat-error>
+      </mat-form-field>
     </div>
-  </fe-card>
-</div>
+    <div class="buttons-wrapper">
+      <fe-state-button type="submit" [isLoading]="isSubmitLoading">Bestätigen</fe-state-button>
+      <p>Du hast keine E-Mail erhalten?</p>
+      <fe-state-button type="button" [isLoading]="isResendLoading" (click)="resendVerificationMail()">
+        Nochmal senden
+      </fe-state-button>
+    </div>
+  </form>
+  <div class="verification-succeed-container" *ngIf="verificationSucceed">
+    <fe-checkmark></fe-checkmark>
+    <p>Erfolgreich verifiziert!</p>
+  </div>
+</fe-card>

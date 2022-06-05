@@ -1,95 +1,93 @@
 @import "mixins";
 
-.page.subjects {
-  ::ng-deep {
-    mat-card.card {
-      mat-card-title.card-title {
-        margin-bottom: 20px;
-      }
-    }
-
-    fe-card:nth-child(2) {
-      mat-card-title.card-title {
-        margin-bottom: 30px;
-      }
-    }
-
-    fe-post-element {
-      p,
-      ul {
-        color: var(--text-color-2);
-        font-size: 0.9rem;
-      }
-
-      p:first-of-type {
-        margin-top: 0;
-      }
-
-      .post-ul-content {
-        display: flex;
-        text-decoration: underline;
-      }
-
-      .post-list {
-        margin-top: 0;
-      }
-
-      &.text {
-        display: inline;
-      }
-    }
-  }
-
-  .topic-description {
-    min-height: 120px;
-    display: block;
-    flex-flow: wrap;
-    margin-bottom: 10px;
-
-    ion-icon {
-      color: var(--background-secondary);
-      height: 100px;
-      width: 100px;
-      float: right;
-      margin-left: 10px;
-    }
-
-    > fe-post-element:not(:first-of-type) {
-      margin-right: 40px;
+:host ::ng-deep {
+  mat-card.card {
+    mat-card-title.card-title {
       margin-bottom: 20px;
     }
   }
 
-  .topic-container {
-    &:not(:last-of-type) {
-      margin-bottom: 40px;
+  fe-card:nth-child(2) {
+    mat-card-title.card-title {
+      margin-bottom: 30px;
+    }
+  }
+
+  fe-post-element {
+    p,
+    ul {
+      color: var(--text-color-2);
+      font-size: 0.9rem;
     }
 
-    .header {
+    p:first-of-type {
+      margin-top: 0;
+    }
+
+    .post-ul-content {
       display: flex;
+      text-decoration: underline;
+    }
 
-      .topic-title {
-        flex-shrink: 0;
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 20px;
-        padding: 12px;
-        border-radius: var(--border-radius);
+    .post-list {
+      margin-top: 0;
+    }
 
-        @include from-md {
-          margin-bottom: 0;
-        }
-      }
+    &.text {
+      display: inline;
+    }
+  }
+}
 
-      hr {
-        height: 1px;
-        width: 100%;
-        margin: auto;
+.topic-description {
+  min-height: 120px;
+  display: block;
+  flex-flow: wrap;
+  margin-bottom: 10px;
+
+  ion-icon {
+    color: var(--background-secondary);
+    height: 100px;
+    width: 100px;
+    float: right;
+    margin-left: 10px;
+  }
+
+  > fe-post-element:not(:first-of-type) {
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.topic-container {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  .header {
+    display: flex;
+
+    .topic-title {
+      flex-shrink: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 20px;
+      padding: 12px;
+      border-radius: var(--border-radius);
+
+      @include from-md {
+        margin-bottom: 0;
       }
     }
 
-    .post-links-container {
-      margin-top: 10px;
+    hr {
+      height: 1px;
+      width: 100%;
+      margin: auto;
     }
+  }
+
+  .post-links-container {
+    margin-top: 10px;
   }
 }

@@ -1,49 +1,47 @@
 @import "mixins";
 
-.page.search {
-  ::ng-deep {
-    mat-card.card {
-      mat-card-header.card-header {
-        justify-content: space-between;
+:host ::ng-deep {
+  mat-card.card {
+    mat-card-header.card-header {
+      justify-content: space-between;
 
-        mat-card-title.card-title {
-          margin-bottom: 0px;
-        }
-      }
-    }
-
-    mat-form-field.search-bar-form-field {
-      @include to-md {
-        border-color: var(--grey-2);
-
-        .mat-form-field-flex {
-          background: transparent;
-          padding: 0;
-        }
+      mat-card-title.card-title {
+        margin-bottom: 0px;
       }
     }
   }
 
-  .search-results {
-    margin-top: 20px;
+  mat-form-field.search-bar-form-field {
+    @include to-md {
+      border-color: var(--grey-2);
+
+      .mat-form-field-flex {
+        background: transparent;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.close-search-btn {
+  float: right;
+  transition: background-color 100ms ease-out;
+
+  mat-icon {
+    color: var(--tertiary-color);
+    font-size: 1.4rem;
   }
 
-  .close-search-btn {
-    float: right;
-    transition: background-color 100ms ease-out;
+  &:not(&:disabled) {
+    cursor: pointer;
 
-    mat-icon {
-      color: var(--tertiary-color);
-      font-size: 1.4rem;
-    }
-
-    &:not(&:disabled) {
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--button-hover-background);
-        transition: none;
-      }
+    &:hover {
+      background-color: var(--button-hover-background);
+      transition: none;
     }
   }
 }

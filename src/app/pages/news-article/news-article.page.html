@@ -1,7 +1,5 @@
-<div class="page news-article">
-  <fe-loading-spinner *ngIf="data === undefined"></fe-loading-spinner>
+<fe-loading-spinner *ngIf="data === undefined"></fe-loading-spinner>
 
-  <fe-card [title]="data.title" [date]="'Nachricht vom ' + data.date | date: 'dd.MM.yyyy'" *ngIf="data !== undefined">
-    <fe-post-element *ngFor="let element of data.content" [element]="element"></fe-post-element>
-  </fe-card>
-</div>
+<fe-card [title]="data.title" [date]="'Nachricht vom ' + data.date | date: 'dd.MM.yyyy'" *ngIf="data !== undefined">
+  <fe-post-element *ngFor="let element of data.content" [element]="element"></fe-post-element>
+</fe-card>

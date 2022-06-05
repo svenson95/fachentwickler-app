@@ -1,16 +1,12 @@
 <mat-toolbar class="page-footer">
-  <div class="labels-wrapper">
-    <div class="fe-logo">
-      <fe-icon></fe-icon>
-    </div>
-    <div class="footer-buttons">
-      <a class="start" routerLink="/" [class.is-active]="router.url === '/'"> Start </a>
-      <span class="footer-divider">|</span>
-      <a class="about" routerLink="about" [class.is-active]="router.url.startsWith('/about')"> About </a>
-      <span class="footer-divider">|</span>
-      <a class="about" routerLink="feedback" [class.is-active]="router.url.startsWith('/feedback')"> Feedback </a>
-      <span class="footer-divider">|</span>
-      <a class="legal" routerLink="/impressum" [class.is-active]="router.url.startsWith('/impressum')"> Impressum </a>
-    </div>
+  <fe-icon></fe-icon>
+  <div class="button-container">
+    <a class="start" routerLink="/" [class.is-active]="router.url === '/'"> Start </a>
+    <span class="footer-divider">|</span>
+    <a class="about" routerLink="about" [class.is-active]="router.url.startsWith('/about')"> About </a>
+    <span class="footer-divider">|</span>
+    <a class="about" routerLink="feedback" [class.is-active]="router.url.startsWith('/feedback')"> Feedback </a>
+    <span class="footer-divider">|</span>
+    <a class="legal" routerLink="/impressum" [class.is-active]="router.url.startsWith('/impressum')"> Impressum </a>
   </div>
 </mat-toolbar>

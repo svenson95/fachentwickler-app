@@ -7,7 +7,7 @@ import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 
 @Component({
-  selector: 'fe-post-page',
+  selector: 'fe-edit-post-page',
   templateUrl: './edit-post.page.html',
   styleUrls: ['./edit-post.page.scss'],
 })

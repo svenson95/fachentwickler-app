@@ -1,37 +1,22 @@
-.page.edit-post {
-  fe-card.elements {
-    .elements-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 20px;
-      z-index: 3;
-
-      .element-button {
-        background: transparent;
-        border: 1px solid var(--tertiary-color);
-        color: var(--tertiary-color);
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 4px 6px;
-
-        &:not(:last-of-type) {
-          margin-right: 10px;
-        }
-      }
-    }
+fe-card.elements {
+  div.elements-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+    z-index: 3;
   }
+}
 
-  mat-card.card.options {
-    .button-container {
-      display: flex;
-      flex-direction: row-reverse;
+mat-card.card.options {
+  .button-container {
+    display: flex;
+    flex-direction: row-reverse;
 
-      .fe-text-button:not(:first-of-type) {
-        margin-right: 10px;
-      }
+    .fe-text-button:not(:first-of-type) {
+      margin-right: 10px;
     }
   }
 }

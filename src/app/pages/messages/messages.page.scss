@@ -1,42 +1,40 @@
 @import "mixins";
 
-.page.messages {
-  ::ng-deep {
-    mat-card-content.card-content {
-      margin-top: 20px;
-      font-size: 1em;
+:host ::ng-deep {
+  mat-card-content.card-content {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+}
+
+div:not(:last-of-type) {
+  border-bottom: 1px solid var(--grey-1);
+}
+
+.teacher {
+  display: flex;
+
+  .key,
+  .value {
+    margin: 0;
+    padding-block: 10px;
+  }
+
+  .key {
+    padding-right: 10px;
+
+    @include from-xs {
+      min-width: 130px;
+    }
+
+    @include to-xs {
+      min-width: 90px;
     }
   }
 
-  div:not(:last-of-type) {
-    border-bottom: 1px solid var(--grey-1);
-  }
-
-  .teacher {
-    display: flex;
-
-    .key,
-    .value {
-      margin: 0;
-      padding-block: 10px;
-    }
-
-    .key {
-      padding-right: 10px;
-
-      @include from-xs {
-        min-width: 130px;
-      }
-
-      @include to-xs {
-        min-width: 90px;
-      }
-    }
-
-    .value {
-      padding-left: 10px;
-      border-left: 1px solid var(--grey-1);
-      outline: none;
-    }
+  .value {
+    padding-left: 10px;
+    border-left: 1px solid var(--grey-1);
+    outline: none;
   }
 }

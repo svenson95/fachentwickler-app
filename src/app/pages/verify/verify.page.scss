@@ -1,37 +1,35 @@
 @import "mixins";
 
-.page.verify {
-  ::ng-deep {
-    mat-card.card {
-      mat-card-content.card-content {
-        margin-top: 20px;
-      }
+:host ::ng-deep {
+  mat-card.card {
+    mat-card-content.card-content {
+      margin-top: 20px;
     }
   }
+}
 
-  .verify-form {
-    text-align: center;
+.verify-form {
+  text-align: center;
+  margin: auto;
+
+  @include from-xs {
+    max-width: 50%;
+  }
+
+  .input {
+    margin-bottom: 10px;
+  }
+
+  .buttons-wrapper {
     margin: auto;
 
-    @include from-xs {
-      max-width: 50%;
-    }
-
-    .input {
-      margin-bottom: 10px;
-    }
-
-    .buttons-wrapper {
-      margin: auto;
-
-      p {
-        margin-top: 40px;
-      }
+    p {
+      margin-top: 40px;
     }
   }
+}
 
-  .verification-succeed-container p {
-    text-align: center;
-    margin-top: 20px;
-  }
+.verification-succeed-container p {
+  text-align: center;
+  margin-top: 20px;
 }

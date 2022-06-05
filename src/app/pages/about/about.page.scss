@@ -1,15 +1,13 @@
-.page.about {
-  ::ng-deep {
-    mat-card.card {
-      mat-card-header.card-header {
-        mat-card-title.card-title {
-          margin-bottom: 30px;
-        }
+:host ::ng-deep {
+  mat-card.card {
+    mat-card-header.card-header {
+      mat-card-title.card-title {
+        margin-bottom: 30px;
       }
     }
   }
+}
 
-  ul {
-    margin-left: 16px;
-  }
+ul {
+  margin-left: 16px;
 }
