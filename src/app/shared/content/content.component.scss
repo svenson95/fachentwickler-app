@@ -1,6 +1,7 @@
 @import "mixins";
 
-div.main-content {
+:host {
+  display: block;
   background-color: var(--background-secondary);
 
   .ng-animating {

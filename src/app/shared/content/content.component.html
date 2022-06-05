@@ -1,9 +1,7 @@
-<div class="main-content">
-  <div class="page">
-    <router-outlet>
-      <fe-loading-spinner class="router-loader" *ngIf="isLoading"></fe-loading-spinner>
-    </router-outlet>
-  </div>
-
-  <fe-footer></fe-footer>
+<div class="page">
+  <router-outlet>
+    <fe-loading-spinner class="router-loader" *ngIf="isLoading"></fe-loading-spinner>
+  </router-outlet>
 </div>
+
+<fe-footer></fe-footer>

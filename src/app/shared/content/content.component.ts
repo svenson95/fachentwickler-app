@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -6,7 +6,6 @@ import { Subscription } from 'rxjs';
   selector: 'fe-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class ContentComponent implements OnDestroy {
   public isLoading: boolean;

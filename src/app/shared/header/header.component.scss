@@ -150,8 +150,8 @@
   }
 
   mat-sidenav-container.mat-drawer-container {
-    .main-content,
-    .sidenav-content {
+    fe-content,
+    fe-sidenav {
       @include from-xs {
         padding-top: 64px;
       }
