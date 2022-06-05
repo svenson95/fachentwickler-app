@@ -10,6 +10,7 @@ import { inputsMatch } from '../../validators/match.validator';
 @Component({
   selector: 'fe-forgot-password-page',
   templateUrl: './forgot-password.page.html',
+  styleUrls: ['./forgot-password.page.scss'],
 })
 export class ForgotPasswordPage {
   public emailForm: FormGroup;

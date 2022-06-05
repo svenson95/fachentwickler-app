@@ -4,6 +4,7 @@ import { HeaderService } from '../../services/header.service';
 @Component({
   selector: 'fe-legal-page',
   templateUrl: './legal.page.html',
+  styleUrls: ['./legal.page.scss'],
 })
 export class LegalPage {
   constructor(private headerService: HeaderService) {

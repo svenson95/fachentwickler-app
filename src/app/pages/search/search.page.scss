@@ -1,21 +1,25 @@
-.page.search {
-  mat-card.mat-card.card {
-    mat-card-header.card-header {
-      justify-content: space-between;
+@import "mixins";
 
-      mat-card-title.card-title {
-        margin-bottom: 0px;
+.page.search {
+  ::ng-deep {
+    mat-card.card {
+      mat-card-header.card-header {
+        justify-content: space-between;
+
+        mat-card-title.card-title {
+          margin-bottom: 0px;
+        }
       }
     }
-  }
 
-  .search-bar-form-field {
-    @include to-md {
-      border-color: var(--grey-2);
+    mat-form-field.search-bar-form-field {
+      @include to-md {
+        border-color: var(--grey-2);
 
-      .mat-form-field-flex {
-        background: transparent;
-        padding: 0;
+        .mat-form-field-flex {
+          background: transparent;
+          padding: 0;
+        }
       }
     }
   }

@@ -9,6 +9,7 @@ import { LoadingService } from '../../services/loading.service';
 @Component({
   selector: 'fe-index-card-page',
   templateUrl: './index-card.page.html',
+  styleUrls: ['./index-card.page.scss'],
 })
 export class IndexCardPage {
   public indexCards: PostIndexCards;

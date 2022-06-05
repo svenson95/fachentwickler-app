@@ -1,37 +1,30 @@
 <div class="page edit-post">
-  <mat-card class="fe-card elements-bar">
-    <p class="elements-label">Elemente</p>
+  <fe-card class="elements" title="Elemente">
     <div class="elements-bar">
-      <button class="element-button">Text</button>
-      <button class="element-button">Title</button>
-      <button class="element-button">Subtitle</button>
-      <button class="element-button">Hint</button>
-      <button class="element-button">Image</button>
-      <button class="element-button">Line</button>
-      <button class="element-button">List</button>
-      <button class="element-button">Table</button>
-      <button class="element-button">Code</button>
-      <button class="element-button">File</button>
+      <button class="fe-text-button">Text</button>
+      <button class="fe-text-button">Title</button>
+      <button class="fe-text-button">Subtitle</button>
+      <button class="fe-text-button">Hint</button>
+      <button class="fe-text-button">Image</button>
+      <button class="fe-text-button">Line</button>
+      <button class="fe-text-button">List</button>
+      <button class="fe-text-button">Table</button>
+      <button class="fe-text-button">Code</button>
+      <button class="fe-text-button">File</button>
     </div>
-  </mat-card>
-  <mat-card class="fe-card">
-    <p class="error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
-    <p class="fe-card-title" *ngIf="post !== undefined">{{post.title}}</p>
-    <p class="fe-card-description" *ngIf="post !== undefined">{{post.description}}</p>
-    <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
-    <mat-card-content class="post-content" *ngIf="post !== undefined">
-      <fe-post-element
-        *ngFor="let element of post.elements"
-        [element]="element"
-        [contentEditable]="true"
-      ></fe-post-element>
-    </mat-card-content>
-    <p class="post-last-update" *ngIf="post && post.lastUpdate !== undefined">
-      Letzte Aktualisierung: {{post.lastUpdate | date:'dd.MM.yyyy'}}
-    </p>
-  </mat-card>
+  </fe-card>
 
-  <mat-card class="fe-card" *ngIf="authService.user !== null">
+  <fe-card [title]="post.title" [date]="post.description" [lastUpdate]="post.lastUpdate">
+    <p class="error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
+    <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
+    <fe-post-element
+      *ngFor="let element of post.elements"
+      [element]="element"
+      [contentEditable]="true"
+    ></fe-post-element>
+  </fe-card>
+
+  <mat-card class="card options">
     <div class="button-container">
       <button class="fe-text-button" *ngIf="authService?.user?.role === 'admin'">
         <span>Speichern</span>

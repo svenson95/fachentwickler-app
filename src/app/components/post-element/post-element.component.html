@@ -1,129 +1,124 @@
-<div class="fe-post-item" [ngSwitch]="element.type" [ngClass]="element.type" [class.answer]="element.hidden">
-  <!-- SHOW ANSWER BUTTON -->
-  <button
-    class="fe-text-button secondary"
-    *ngIf="element.hidden"
-    (click)="isVisible = !isVisible"
-    [class.is-open]="isVisible"
-    matRipple
-  >
-    {{ isVisible ? "Ausblenden" : "Lösung anzeigen" }}
-  </button>
-  <!-- TITLE -->
-  <p
-    class="post-title"
-    *ngIf="element.type === ElementType.TITLE && (element.hidden ? isVisible : true)"
-    [innerHTML]="element.content"
-  ></p>
-  <!-- SUBTITLE -->
-  <p
-    class="post-subtitle"
-    *ngIf="element.type === ElementType.SUBTITLE && (element.hidden ? isVisible : true)"
-    [innerHTML]="element.content"
-  ></p>
-  <!-- TEXT -->
-  <p
-    class="post-text"
-    *ngIf="element.type === ElementType.TEXT && (element.hidden ? isVisible : true)"
-    [innerHTML]="element.content"
-  ></p>
-  <!-- HINT -->
-  <p
-    class="post-hint"
-    *ngIf="element.type === ElementType.HINT && (element.hidden ? isVisible : true)"
-    [innerHTML]="element.content"
-  ></p>
-  <!-- LINE -->
-  <hr class="post-line" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)" />
-  <!-- UNORDERED LIST -->
-  <ng-container *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
-    <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
-    <ul class="post-list">
-      <li class="post-ul-list" [class.sublist-container]="isSublistItem(item)" *ngFor="let item of element.list">
-        <span *ngIf="isString(item)" [innerHTML]="item"></span>
-        <span *ngIf="isSublistItem(item)" [innerHTML]="item.content"></span>
-        <ul class="post-ul-sublist" *ngIf="isSublistItem(item)">
-          <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">
-            <span [innerHTML]="subItem"></span>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </ng-container>
-  <!-- ORDERED LIST -->
-  <ng-container *ngIf="element.type === ElementType.LIST && element.ordered && (element.hidden ? isVisible : true)">
-    <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
-    <ol class="post-list-ordered">
-      <li class="post-ol-list" *ngFor="let item of element.list" [class.sublist-container]="isSublistItem(item)">
-        <span *ngIf="isString(item)" [innerHTML]="item"></span>
-      </li>
-    </ol>
-  </ng-container>
-  <!-- IMAGE -->
-  <div class="post-image-wrapper" *ngIf="element.type === ElementType.IMAGE && (element.hidden ? isVisible : true)">
-    <img
-      class="post-image"
-      *ngIf="image"
-      [src]="image"
-      alt="image"
-      [class.small]="element.size === 's'"
-      [class.medium]="element.size === 'm'"
-      [class.large]="element.size === 'l'"
-    />
-    <fe-loading-spinner *ngIf="image === false"></fe-loading-spinner>
-    <p style="color: grey !important" *ngIf="image === null">no image found</p>
-  </div>
-  <!-- TABLE -->
-  <p
-    class="post-table-title"
-    *ngIf="element.type === ElementType.TABLE && element.content !== '' && (element.hidden ? isVisible : true)"
-    [innerHTML]="element.content"
-  ></p>
-  <table class="post-table" *ngIf="element.type === ElementType.TABLE && (element.hidden ? isVisible : true)">
-    <tbody>
-      <tr class="table-row" *ngFor="let row of element.rows">
-        <ng-container *ngFor="let column of row.columns">
-          <th
-            *ngIf="row.type === 'header' && !column.rowSpan"
-            [colSpan]="column.colSpan"
-            [innerHTML]="column.content"
-            [class]="column.align"
-          ></th>
-          <th
-            *ngIf="row.type === 'header' && column.rowSpan"
-            [rowSpan]="column.rowSpan"
-            [innerHTML]="column.content"
-            [class]="column.align"
-          ></th>
-          <td
-            *ngIf="row.type === 'default' && !column.rowSpan"
-            [colSpan]="column.colSpan"
-            [innerHTML]="column.content"
-            [class]="column.align"
-          ></td>
-          <td
-            *ngIf="row.type === 'default' && column.rowSpan"
-            [rowSpan]="column.rowSpan"
-            [innerHTML]="column.content"
-            [class]="column.align"
-          ></td>
-        </ng-container>
-      </tr>
-    </tbody>
-  </table>
-  <!-- TABLE-GROUP -->
-  <div class="post-table-group" *ngIf="element.type === ElementType.TABLE_GROUP && (element.hidden ? isVisible : true)">
-    <fe-post-element *ngFor="let table of element.elements" [element]="table"></fe-post-element>
-  </div>
-  <!-- CODE -->
-  <pre class="post-code" *ngIf="element.type === ElementType.CODE && (element.hidden ? isVisible : true)">
+<!-- SHOW ANSWER BUTTON -->
+<button
+  class="fe-text-button secondary"
+  *ngIf="element.hidden"
+  (click)="isVisible = !isVisible"
+  [class.is-open]="isVisible"
+  matRipple
+>
+  {{ isVisible ? "Ausblenden" : "Lösung anzeigen" }}
+</button>
+<!-- TITLE -->
+<p
+  class="post-title"
+  *ngIf="element.type === ElementType.TITLE && (element.hidden ? isVisible : true)"
+  [innerHTML]="element.content"
+></p>
+<!-- SUBTITLE -->
+<p
+  class="post-subtitle"
+  *ngIf="element.type === ElementType.SUBTITLE && (element.hidden ? isVisible : true)"
+  [innerHTML]="element.content"
+></p>
+<!-- TEXT -->
+<p
+  class="post-text"
+  *ngIf="element.type === ElementType.TEXT && (element.hidden ? isVisible : true)"
+  [innerHTML]="element.content"
+></p>
+<!-- HINT -->
+<p
+  class="post-hint"
+  *ngIf="element.type === ElementType.HINT && (element.hidden ? isVisible : true)"
+  [innerHTML]="element.content"
+></p>
+<!-- LINE -->
+<hr class="post-line" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)" />
+<!-- UNORDERED LIST -->
+<ng-container *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
+  <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+  <ul class="post-list">
+    <li class="post-ul-list" [class.sublist-container]="isSublistItem(item)" *ngFor="let item of element.list">
+      <span *ngIf="isString(item)" [innerHTML]="item"></span>
+      <span *ngIf="isSublistItem(item)" [innerHTML]="item.content"></span>
+      <ul class="post-ul-sublist" *ngIf="isSublistItem(item)">
+        <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">
+          <span [innerHTML]="subItem"></span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</ng-container>
+<!-- ORDERED LIST -->
+<ng-container *ngIf="element.type === ElementType.LIST && element.ordered && (element.hidden ? isVisible : true)">
+  <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+  <ol class="post-list-ordered">
+    <li class="post-ol-list" *ngFor="let item of element.list" [class.sublist-container]="isSublistItem(item)">
+      <span *ngIf="isString(item)" [innerHTML]="item"></span>
+    </li>
+  </ol>
+</ng-container>
+<!-- IMAGE -->
+<div class="post-image-wrapper" *ngIf="element.type === ElementType.IMAGE && (element.hidden ? isVisible : true)">
+  <img
+    class="post-image"
+    *ngIf="image"
+    [src]="image"
+    alt="image"
+    [class.small]="element.size === 's'"
+    [class.medium]="element.size === 'm'"
+    [class.large]="element.size === 'l'"
+  />
+  <fe-loading-spinner *ngIf="image === false"></fe-loading-spinner>
+  <p style="color: grey !important" *ngIf="image === null">no image found</p>
+</div>
+<!-- TABLE -->
+<p
+  class="post-table-title"
+  *ngIf="element.type === ElementType.TABLE && element.content !== '' && (element.hidden ? isVisible : true)"
+  [innerHTML]="element.content"
+></p>
+<table class="post-table" *ngIf="element.type === ElementType.TABLE && (element.hidden ? isVisible : true)">
+  <tbody>
+    <tr class="table-row" *ngFor="let row of element.rows">
+      <ng-container *ngFor="let column of row.columns">
+        <th
+          *ngIf="row.type === 'header' && !column.rowSpan"
+          [colSpan]="column.colSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></th>
+        <th
+          *ngIf="row.type === 'header' && column.rowSpan"
+          [rowSpan]="column.rowSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></th>
+        <td
+          *ngIf="row.type === 'default' && !column.rowSpan"
+          [colSpan]="column.colSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></td>
+        <td
+          *ngIf="row.type === 'default' && column.rowSpan"
+          [rowSpan]="column.rowSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
+<!-- TABLE-GROUP -->
+<div class="post-table-group" *ngIf="element.type === ElementType.TABLE_GROUP && (element.hidden ? isVisible : true)">
+  <fe-post-element *ngFor="let table of element.elements" [element]="table"></fe-post-element>
+</div>
+<!-- CODE -->
+<pre class="post-code" *ngIf="element.type === ElementType.CODE && (element.hidden ? isVisible : true)">
     <code [highlight]="element.content" [ngClass]="'language-' + element.language"></code>
   </pre>
-  <!-- ANSWER-GROUP -->
-  <div
-    class="post-answer-group"
-    *ngIf="element.type === ElementType.ANSWER_GROUP && (element.hidden ? isVisible : true)"
-  >
-    <fe-post-element *ngFor="let el of element.elements" [element]="el"></fe-post-element>
-  </div>
+<!-- ANSWER-GROUP -->
+<div class="post-answer-group" *ngIf="element.type === ElementType.ANSWER_GROUP && (element.hidden ? isVisible : true)">
+  <fe-post-element *ngFor="let el of element.elements" [element]="el"></fe-post-element>
 </div>

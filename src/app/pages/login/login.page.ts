@@ -13,6 +13,7 @@ import { ThemeService } from '../../services/theme.service';
 @Component({
   selector: 'fe-login-page',
   templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnDestroy {
   @ViewChild('passwordInput') public passwordInput;

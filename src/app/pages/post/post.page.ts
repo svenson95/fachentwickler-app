@@ -13,6 +13,7 @@ import { LoadingService } from '../../services/loading.service';
 @Component({
   selector: 'fe-post-page',
   templateUrl: './post.page.html',
+  styleUrls: ['./post.page.scss'],
 })
 export class PostPage implements OnInit, OnDestroy {
   public post: Post;
@@ -26,20 +27,13 @@ export class PostPage implements OnInit, OnDestroy {
     public authService: AuthService,
     public loadingService: LoadingService,
   ) {
-    const subjectUrl = this.router.url.substring(
-      0,
-      this.router.url.indexOf('/', 2),
-    );
-    this.headerService.setPageTitle(
-      subjects.find((sub) => sub.url === subjectUrl)?.title,
-    );
+    const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
+    this.headerService.setPageTitle(subjects.find((sub) => sub.url === subjectUrl)?.title);
   }
 
   public ngOnInit(): void {
     this.subscription.add(
-      this.router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
-        .subscribe(() => this.loadData()),
+      this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => this.loadData()),
     );
     this.loadData();
   }
@@ -49,10 +43,7 @@ export class PostPage implements OnInit, OnDestroy {
   }
 
   private loadData(): void {
-    const postUrl = this.router.url.substr(
-      this.router.url.indexOf('/', 2) + 1,
-      this.router.url.length,
-    );
+    const postUrl = this.router.url.substr(this.router.url.indexOf('/', 2) + 1, this.router.url.length);
 
     if (postUrl === 'topic/testarticle') {
       this.post = testArticle;

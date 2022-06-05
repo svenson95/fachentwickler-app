@@ -1,25 +1,17 @@
+@import "mixins";
+
 .page.subjects {
-  .fe-card-title {
-    margin-bottom: 20px;
-  }
-
-  .topic-description {
-    min-height: 120px;
-    display: block;
-    flex-flow: wrap;
-    margin-bottom: 10px;
-
-    ion-icon {
-      color: var(--background-secondary);
-      height: 100px;
-      width: 100px;
-      float: right;
-      margin-left: 10px;
+  ::ng-deep {
+    mat-card.card {
+      mat-card-title.card-title {
+        margin-bottom: 20px;
+      }
     }
 
-    > fe-post-element:not(:first-of-type) {
-      margin-right: 40px;
-      margin-bottom: 20px;
+    fe-card:nth-child(2) {
+      mat-card-title.card-title {
+        margin-bottom: 30px;
+      }
     }
 
     fe-post-element {
@@ -42,9 +34,29 @@
         margin-top: 0;
       }
 
-      .fe-post-item.text {
+      &.text {
         display: inline;
       }
+    }
+  }
+
+  .topic-description {
+    min-height: 120px;
+    display: block;
+    flex-flow: wrap;
+    margin-bottom: 10px;
+
+    ion-icon {
+      color: var(--background-secondary);
+      height: 100px;
+      width: 100px;
+      float: right;
+      margin-left: 10px;
+    }
+
+    > fe-post-element:not(:first-of-type) {
+      margin-right: 40px;
+      margin-bottom: 20px;
     }
   }
 
@@ -78,12 +90,6 @@
 
     .post-links-container {
       margin-top: 10px;
-    }
-  }
-
-  fe-card:nth-child(2) {
-    mat-card-title.card-title {
-      margin-bottom: 30px;
     }
   }
 }

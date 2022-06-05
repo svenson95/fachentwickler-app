@@ -17,6 +17,7 @@ import { LoadingService } from '../../services/loading.service';
 @Component({
   selector: 'fe-audit-simulator-page',
   templateUrl: './audit-simulator.page.html',
+  styleUrls: ['./audit-simulator.page.scss'],
 })
 export class AuditSimulatorPage implements OnInit, OnDestroy {
   @ViewChild('slideInWrapper') public slideInWrapper: ElementRef;
@@ -64,6 +65,19 @@ export class AuditSimulatorPage implements OnInit, OnDestroy {
 
   public ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
+  }
+
+  public get auditState(): string {
+    switch (this.state) {
+      case AuditState.INTRODUCTION:
+        return 'Einleitung';
+      case AuditState.PLAY:
+        return `${this.round + 1}/${auditQuestions.length}`;
+      case AuditState.END:
+        return 'Ende';
+      default:
+        return 'unknown';
+    }
   }
 
   public startAudit(): void {

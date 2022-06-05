@@ -1,7 +1,7 @@
 <div class="page post">
-  <ng-container *ngIf="post">
-    <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
+  <fe-loading-spinner *ngIf="!post"></fe-loading-spinner>
 
+  <ng-container *ngIf="post">
     <fe-card [title]="post.title" [date]="post.lessonDate" [type]="post.type" [lastUpdate]="post.lastUpdate">
       <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
     </fe-card>

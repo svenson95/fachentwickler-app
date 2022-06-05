@@ -1,0 +1,129 @@
+@import "mixins";
+
+.page.curriculum {
+  ::ng-deep {
+    mat-card.card.school-year {
+      mat-card-header.card-header {
+        display: flex;
+        align-items: center;
+
+        mat.card-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    mat-card.card.school-week {
+      @include from-lg {
+        margin-bottom: 30px !important;
+      }
+
+      @include to-lg {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    mat-button-toggle-group {
+      .mat-button-toggle-disabled {
+        color: var(--text-color-3);
+      }
+
+      .mat-button-toggle-checked {
+        background-color: rgba(var(--secondary-color-rgb), 0.15);
+        font-weight: 700;
+      }
+
+      .week-toggle {
+        @include to-md {
+          .mat-button-toggle .mat-button-toggle-label-content {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    $toggleSize: 42px;
+    .year-toggle,
+    .week-toggle {
+      mat-button-toggle {
+        @include from-xs {
+          width: $toggleSize;
+        }
+
+        @include to-xs {
+          width: $toggleSize - 10;
+        }
+
+        .mat-button-toggle-label-content {
+          @include from-xs {
+            line-height: $toggleSize;
+          }
+
+          @include to-xs {
+            line-height: $toggleSize - 10;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .year-toggle {
+    margin-left: 20px;
+
+    .mat-button-toggle + .mat-button-toggle {
+      border-left: solid 1px rgba(var(--tertiary-color-rgb), 0.2);
+    }
+  }
+
+  .week-cards-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    max-width: var(--max-width);
+
+    .week-toggle-card {
+      margin-bottom: 0;
+
+      .week-toggle {
+        flex-direction: column;
+        flex-shrink: 0;
+
+        .mat-button-toggle + .mat-button-toggle {
+          border-left: none;
+          border-top: solid 1px rgba(var(--tertiary-color-rgb), 0.2);
+        }
+      }
+    }
+
+    .weeks-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 120px;
+      bottom: 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      -webkit-appearance: none;
+      scrollbar-width: none;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include to-md {
+        right: 120px;
+      }
+
+      @include to-xs {
+        right: 80px;
+      }
+
+      fe-school-week-card:last-of-type mat-card {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

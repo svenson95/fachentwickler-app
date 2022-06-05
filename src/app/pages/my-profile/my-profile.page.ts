@@ -19,6 +19,7 @@ import { inputsMatch } from '../../validators/match.validator';
 @Component({
   selector: 'fe-my-profile-page',
   templateUrl: './my-profile.page.html',
+  styleUrls: ['./my-profile.page.scss'],
 })
 export class MyProfilePage implements OnInit, OnDestroy {
   public isConfirmingEmail: boolean;

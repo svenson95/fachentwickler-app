@@ -19,6 +19,7 @@ import { ThemeService } from '../../services/theme.service';
 @Component({
   selector: 'fe-register-page',
   templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit, OnDestroy {
   public form: FormGroup;

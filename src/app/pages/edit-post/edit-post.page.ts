@@ -9,6 +9,7 @@ import { HeaderService } from '../../services/header.service';
 @Component({
   selector: 'fe-post-page',
   templateUrl: './edit-post.page.html',
+  styleUrls: ['./edit-post.page.scss'],
 })
 export class EditPostPage {
   public post: Post;

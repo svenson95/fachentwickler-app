@@ -15,10 +15,10 @@ mat-dialog-content.image-manager {
     border-radius: 0;
   }
 
-  .card-header {
+  mat-card-header.card-header {
     margin-bottom: 20px;
 
-    .fe-card-title {
+    mat-card-title.card-title {
       margin-bottom: 2px;
     }
   }

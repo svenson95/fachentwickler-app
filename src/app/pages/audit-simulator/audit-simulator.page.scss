@@ -1,0 +1,133 @@
+@import "mixins";
+
+.page.audit-simulator {
+  ::ng-deep {
+    mat-card.card {
+      .slide-in-animation {
+        @include moveInLeftAnimation;
+      }
+
+      mat-card-content.card-content {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .fe-text-button.right {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  .question {
+    font-weight: 700;
+  }
+
+  .description {
+    white-space: pre;
+  }
+
+  .question-image {
+    display: flex;
+    margin: auto;
+
+    @include to-md {
+      width: 100%;
+    }
+  }
+
+  .choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    @include from-lg {
+      max-width: 400px;
+    }
+
+    .choice-button {
+      width: 100%;
+      padding: 6px 8px;
+      background-color: transparent;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      color: var(--text-color-1);
+      text-align: left;
+      transition: background-color 100ms ease-in-out;
+
+      &:hover {
+        @include from-md {
+          background: rgba(var(--tertiary-color-rgb), 0.1);
+          transition: none;
+        }
+      }
+
+      &.correct {
+        background-color: rgba(50, 205, 50, 0.2);
+        transition: none;
+      }
+
+      &.wrong {
+        background-color: rgba(255, 0, 0, 0.2);
+        transition: none;
+      }
+
+      .button-index {
+        height: 26px;
+        width: 26px;
+        display: inline-flex;
+        background: var(--background-secondary);
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        text-align: center;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .input-wrapper {
+    .choice-input {
+      margin-right: auto;
+      color: var(--text-color-1);
+
+      .mat-form-field-label {
+        color: var(--text-color-3);
+      }
+
+      .mat-form-field-suffix {
+        color: var(--text-color-1);
+      }
+
+      // Hide spin-arrow (default in input type=number)
+      /* Chrome, Safari, Edge, Opera */
+      ::-webkit-outer-spin-button,
+      ::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      [type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    .fe-text-button {
+      margin-left: 20px;
+      transform: translateY(-3px);
+      transition: background 100ms ease-in-out;
+
+      &.correct {
+        background-color: rgba(50, 205, 50, 0.2);
+        transition: background 100ms ease-in-out;
+      }
+
+      &.wrong {
+        background-color: rgba(255, 0, 0, 0.2);
+        transition: background 100ms ease-in-out;
+      }
+    }
+  }
+}

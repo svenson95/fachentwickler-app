@@ -1,38 +1,33 @@
-.page.register {
-  .card-content {
-    display: flex;
-    width: fit-content;
-    margin: 40px auto;
-    padding-bottom: 40px;
+@import "mixins";
 
-    @include to-md {
-      flex-direction: column;
-    }
+.page.login {
+  ::ng-deep {
+    mat-card-content.card-content {
+      display: flex;
+      width: fit-content;
+      margin: 40px auto;
+      padding-bottom: 40px;
 
-    .fe-back-to-login-btn {
-      align-self: center;
+      @include to-md {
+        flex-direction: column;
+      }
 
-      @include from-md {
-        margin-right: 0;
+      .fe-text-button:hover span {
+        color: var(--tertiary-color);
       }
     }
   }
 
-  .register-form {
+  .login-form {
     text-align: center;
-
-    @include from-lg {
-      margin-right: 150px;
-    }
 
     .form-inputs {
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
 
-      .name,
-      .email {
-        margin-bottom: 15px;
+      .name {
+        margin-bottom: 8px;
 
         ::placeholder {
           color: var(--grey-4);
@@ -47,6 +42,10 @@
     .buttons-wrapper {
       display: flex;
       flex-direction: column;
+
+      .fe-text-button:first-child {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -66,10 +65,14 @@
   .register-form {
     text-align: center;
     align-self: center;
-    margin: 30px 50px 0 auto;
 
-    @include to-lg {
-      margin: 30px auto 0;
+    .no-account-hint {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .fe-text-button {
+      display: flex;
     }
   }
 }

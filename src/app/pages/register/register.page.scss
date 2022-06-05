@@ -1,29 +1,40 @@
-.page.login {
-  .card-content {
-    display: flex;
-    width: fit-content;
-    margin: 40px auto;
-    padding-bottom: 40px;
+.page.register {
+  ::ng-deep {
+    mat-card-content.card-content {
+      display: flex;
+      width: fit-content;
+      margin: 40px auto;
+      padding-bottom: 40px;
 
-    @include to-md {
-      flex-direction: column;
-    }
-
-    .fe-text-button:hover span {
-      color: var(--tertiary-color);
+      @include to-md {
+        flex-direction: column;
+      }
     }
   }
 
-  .login-form {
+  .back-to-login-btn {
+    align-self: center;
+
+    @include from-md {
+      margin-right: 0;
+    }
+  }
+
+  .register-form {
     text-align: center;
+
+    @include from-lg {
+      margin-right: 150px;
+    }
 
     .form-inputs {
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
 
-      .name {
-        margin-bottom: 8px;
+      .name,
+      .email {
+        margin-bottom: 15px;
 
         ::placeholder {
           color: var(--grey-4);
@@ -38,10 +49,6 @@
     .buttons-wrapper {
       display: flex;
       flex-direction: column;
-
-      .fe-text-button:first-child {
-        margin-bottom: 20px;
-      }
     }
   }
 
@@ -61,14 +68,10 @@
   .register-form {
     text-align: center;
     align-self: center;
+    margin: 30px 50px 0 auto;
 
-    .no-account-hint {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .fe-text-button {
-      display: flex;
+    @include to-lg {
+      margin: 30px auto 0;
     }
   }
 }

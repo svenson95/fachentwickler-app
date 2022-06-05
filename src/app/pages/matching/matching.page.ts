@@ -8,6 +8,7 @@ import { HeaderService } from '../../services/header.service';
 @Component({
   selector: 'fe-matching-page',
   templateUrl: './matching.page.html',
+  styleUrls: ['./matching.page.scss'],
 })
 export class MatchingPage {
   public matching: PostMatching;

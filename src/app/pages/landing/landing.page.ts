@@ -18,6 +18,7 @@ import { HeaderService } from '../../services/header.service';
 @Component({
   selector: 'fe-landing-page',
   templateUrl: './landing.page.html',
+  styleUrls: ['./landing.page.scss'],
 })
 export class LandingPage {
   public testUser: User = testUser;

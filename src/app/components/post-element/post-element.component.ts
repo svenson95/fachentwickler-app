@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { ElementType } from '../../models/element-type';
 import { ImageChunk } from '../../models/image-data';
 import { PostElement, SublistItem } from '../../models/post-element';
@@ -11,6 +11,14 @@ import { DataService } from '../../services/data/data.service';
 })
 export class PostElementComponent implements OnInit {
   @Input() public element: PostElement;
+
+  @HostBinding('class') public get elementType(): string {
+    return this.element.type.toLowerCase().replace('_', '-');
+  }
+
+  @HostBinding('class.answer') public get hiddenAnswer(): boolean {
+    return this.element.hidden;
+  }
 
   public image: boolean | string = false;
 

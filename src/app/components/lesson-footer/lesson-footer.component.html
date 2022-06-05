@@ -1,4 +1,4 @@
-<mat-card class="fe-card lesson-footer" *ngIf="authService.user !== null">
+<mat-card class="card lesson-footer" *ngIf="authService.user !== null">
   <div class="button-container">
     <fe-state-button
       *ngIf="postId !== undefined"
@@ -8,6 +8,7 @@
     >
       Als gelesen markieren
     </fe-state-button>
+
     <button
       class="fe-text-button"
       *ngIf="authService.user && authService.user.role === UserRole.ADMIN"

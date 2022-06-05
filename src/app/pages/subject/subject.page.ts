@@ -10,6 +10,7 @@ import { HeaderService } from '../../services/header.service';
 @Component({
   selector: 'fe-subject-page',
   templateUrl: './subject.page.html',
+  styleUrls: ['./subject.page.scss'],
 })
 export class SubjectPage implements OnInit, OnDestroy {
   public subject: Subject;

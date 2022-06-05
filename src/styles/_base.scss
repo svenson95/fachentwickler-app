@@ -3,8 +3,13 @@
 *::after,
 *::before {
   margin: 0;
-  padding: 0; /* set margin and padding of all elements to zero */
+  padding: 0;
   box-sizing: inherit;
+}
+
+.mat-drawer-container,
+.mat-card {
+  color: inherit;
 }
 
 html {
@@ -13,12 +18,14 @@ html {
 
 html,
 body {
-  font-size: 100%; /* defines what 1rem is */
+  font-size: 100%;
+  color: var(--text-color-1);
 }
 
 body {
-  box-sizing: border-box; /* elements width and height should include margin and padding */
+  box-sizing: border-box;
   background: var(--background-primary);
+
   &.scroll-locked {
     overflow: hidden;
   }

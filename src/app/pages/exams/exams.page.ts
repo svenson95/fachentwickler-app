@@ -18,6 +18,7 @@ import { HeaderService } from '../../services/header.service';
 @Component({
   selector: 'fe-exams',
   templateUrl: './exams.page.html',
+  styleUrls: ['./exams.page.scss'],
 })
 export class ExamsPage implements OnInit, AfterViewInit {
   @ViewChild('calendar') public calendar: MatCalendar<Date>;

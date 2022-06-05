@@ -1,6 +1,12 @@
+@import "mixins";
+
 .page.verify {
-  .card-content {
-    margin-top: 20px;
+  ::ng-deep {
+    mat-card.card {
+      mat-card-content.card-content {
+        margin-top: 20px;
+      }
+    }
   }
 
   .verify-form {

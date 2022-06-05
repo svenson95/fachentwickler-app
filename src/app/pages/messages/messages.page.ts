@@ -9,6 +9,7 @@ import { LoadingService } from '../../services/loading.service';
 @Component({
   selector: 'fe-messages-page',
   templateUrl: './messages.page.html',
+  styleUrls: ['./messages.page.scss'],
 })
 export class MessagesPage implements OnInit, OnDestroy {
   public news: SchoolNews[];

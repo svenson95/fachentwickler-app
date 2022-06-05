@@ -1,18 +1,100 @@
+@import "mixins";
+
 .page.my-profile {
-  fe-card.user-data {
-    mat-card.mat-card.card {
-      mat-card-content.card-content {
-        margin-top: 40px;
-        font-size: 1.2em;
-
-        @include from-xs {
+  ::ng-deep {
+    fe-card.user-data {
+      mat-card.card {
+        mat-card-content.card-content {
           margin-top: 40px;
+          font-size: 1.2em;
+
+          @include from-xs {
+            margin-top: 40px;
+          }
+
+          @include to-xs {
+            font-size: 1em;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    fe-card.settings {
+      mat-card.card {
+        mat-card-content.card-content {
+          margin-top: 0;
+        }
+      }
+    }
+
+    mat-form-field.form-field {
+      margin-bottom: 0.5rem;
+
+      @include from-lg {
+        width: 350px;
+      }
+
+      @include to-xs {
+        width: 100%;
+      }
+
+      .mat-input-element {
+        color: var(--text-color-1);
+
+        &:disabled {
+          opacity: 1;
+        }
+      }
+
+      .mat-form-field-flex {
+        transition: background-color 150ms ease-in-out;
+      }
+
+      .mat-form-field-outline {
+        color: var(--grey-4);
+        opacity: 1;
+      }
+
+      .mat-form-field-label {
+        color: var(--grey-4);
+      }
+
+      .mat-form-field-underline {
+        background-image: linear-gradient(
+          to right,
+          rgba(var(--grey-4), 1) 0%,
+          rgba(var(--grey-4), 1) 0%
+        );
+        background-color: rgba(var(--tertiary-color-rgb), 0.3);
+      }
+
+      .mat-error {
+        font-size: 0.7rem;
+      }
+
+      &.mat-form-field-disabled {
+        .mat-form-field-flex {
+          background-color: transparent;
+          transition: background-color 150ms ease-in-out;
         }
 
-        @include to-xs {
-          font-size: 1em;
-          margin-top: 20px;
+        .mat-form-field-label-wrapper .mat-form-field-label {
+          color: var(--text-color-3);
         }
+      }
+      .mat-form-field-infix {
+        @include from-xs {
+          width: 300px;
+        }
+      }
+    }
+
+    mat-form-field.theme {
+      line-height: normal;
+
+      .mat-form-field-infix {
+        display: flex;
       }
     }
   }
@@ -113,83 +195,7 @@
     }
   }
 
-  mat-form-field.form-field {
-    margin-bottom: 0.5rem;
-
-    @include from-lg {
-      width: 350px;
-    }
-
-    @include to-xs {
-      width: 100%;
-    }
-
-    .mat-input-element {
-      color: var(--text-color-1);
-
-      &:disabled {
-        opacity: 1;
-      }
-    }
-
-    .mat-form-field-flex {
-      transition: background-color 150ms ease-in-out;
-    }
-
-    .mat-form-field-outline {
-      color: var(--grey-4);
-      opacity: 1;
-    }
-
-    .mat-form-field-label {
-      color: var(--grey-4);
-    }
-
-    .mat-form-field-underline {
-      background-image: linear-gradient(
-        to right,
-        rgba(var(--grey-4), 1) 0%,
-        rgba(var(--grey-4), 1) 0%
-      );
-      background-color: rgba(var(--tertiary-color-rgb), 0.3);
-    }
-
-    .mat-error {
-      font-size: 0.7rem;
-    }
-
-    &.mat-form-field-disabled {
-      .mat-form-field-flex {
-        background-color: transparent;
-        transition: background-color 150ms ease-in-out;
-      }
-
-      .mat-form-field-label-wrapper .mat-form-field-label {
-        color: var(--text-color-3);
-      }
-    }
-    .mat-form-field-infix {
-      @include from-xs {
-        width: 300px;
-      }
-    }
-  }
-
-  mat-form-field.theme {
-    line-height: normal;
-
-    .mat-form-field-infix {
-      display: flex;
-    }
-  }
-
   fe-card.settings {
-    mat-card.mat-card.card {
-      mat-card-content.card-content {
-        margin-top: 0;
-      }
-    }
-
     .edit-wrapper {
       display: flex;
       flex-direction: column;

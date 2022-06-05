@@ -1,15 +1,6 @@
 <div class="page audit-simulator">
-  <mat-card class="card">
-    <mat-card-header class="card-header">
-      <mat-card-title class="card-title">Zwischenprüfungs- / Abschlussprüfungs-Simulator</mat-card-title>
-      <mat-card-subtitle class="card-description" [ngSwitch]="state">
-        <ng-container *ngSwitchCase="AuditState.INTRODUCTION">Einleitung</ng-container>
-        <ng-container *ngSwitchCase="AuditState.PLAY">{{round+1}}/{{auditQuestions.length}}</ng-container>
-        <ng-container *ngSwitchCase="AuditState.END">Ende</ng-container>
-      </mat-card-subtitle>
-    </mat-card-header>
-
-    <mat-card-content class="card-content" *ngIf="state === AuditState.INTRODUCTION">
+  <fe-card title="Zwischenprüfungs- / Abschlussprüfungs-Simulator" [date]="auditState">
+    <ng-container *ngIf="state === AuditState.INTRODUCTION">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate delectus exercitationem fugit
         impedit, ipsa nihil sequi totam ullam vel? Aut magnam neque quisquam veritatis vitae! Culpa minima placeat
@@ -19,8 +10,9 @@
         Das Quiz enthält Prüfungsfragen aus den Zwischenprüfungen der Jahre Sommer 2019, Herbst 2020 und Frühling 2021.
       </p>
       <button class="fe-text-button right" (click)="startAudit()">Start</button>
-    </mat-card-content>
-    <mat-card-content class="card-content play" *ngIf="state === AuditState.PLAY" #slideInWrapper>
+    </ng-container>
+
+    <ng-container *ngIf="state === AuditState.PLAY" #slideInWrapper>
       <div>
         <p class="question">{{currentQuestion.question}}</p>
         <p class="description" *ngIf="currentQuestion.description" [innerHTML]="currentQuestion.description"></p>
@@ -56,9 +48,10 @@
           </button>
         </div>
       </div>
-    </mat-card-content>
-    <mat-card-content class="card-content" *ngIf="state === AuditState.END">
+    </ng-container>
+
+    <ng-container *ngIf="state === AuditState.END">
       <p>Du hast alle Fragen beantwortet</p>
-    </mat-card-content>
-  </mat-card>
+    </ng-container>
+  </fe-card>
 </div>

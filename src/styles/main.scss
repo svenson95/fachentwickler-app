@@ -1,32 +1,10 @@
-/* Abstracts */
-@import "src/styles/breakpoints";
-@import "src/styles/mixins";
-@import "src/styles/variables";
-
-/* Base */
-@import "src/styles/angular-material";
-@import "src/styles/animations";
-@import "src/styles/base";
-@import "src/styles/typography";
-@import "src/styles/utilities";
-
-/* Pages */
-@import "src/styles/pages/about";
-@import "src/styles/pages/audit-simulator";
-@import "src/styles/pages/curriculum";
-@import "src/styles/pages/dashboard";
-@import "src/styles/pages/edit-post";
-@import "src/styles/pages/exams";
-@import "src/styles/pages/forgot-password";
-@import "src/styles/pages/landing";
-@import "src/styles/pages/login";
-@import "src/styles/pages/messages";
-@import "src/styles/pages/my-profile";
-@import "src/styles/pages/post";
-@import "src/styles/pages/register";
-@import "src/styles/pages/search";
-@import "src/styles/pages/subject";
-@import "src/styles/pages/verify";
+@import "mixins";
+@import "variables";
+@import "angular-material";
+@import "animations";
+@import "base";
+@import "typography";
+@import "utilities";
 
 mat-card.mat-card.card,
 mat-dialog-content.image-manager {
@@ -87,30 +65,6 @@ mat-card.mat-card.card {
     justify-content: flex-end;
     color: var(--grey-3);
   }
-}
-
-/* list number (post element) */
-.ddu-list-number,
-.list-number {
-  display: inline-flex;
-  $size: 32px;
-  line-height: $size;
-  width: $size;
-  height: $size;
-  font-size: 1em;
-  justify-content: center;
-  color: var(--secondary-color);
-  background: var(--background-secondary);
-  border-radius: 50%;
-  margin-right: 5px;
-  flex-shrink: 0;
-}
-
-.post-title .ddu-list-number,
-.post-title .list-number {
-  line-height: 35px;
-  width: 36px;
-  height: 36px;
 }
 
 /* mat form field */

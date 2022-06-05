@@ -1,0 +1,15 @@
+@import "mixins";
+
+.page.dashboard {
+  ::ng-deep {
+    mat-card.card {
+      @include to-xs {
+        margin-bottom: 20px;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

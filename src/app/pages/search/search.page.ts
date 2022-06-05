@@ -9,6 +9,7 @@ import { MediaQueryService } from '../../services/media-query.service';
 @Component({
   selector: 'fe-search-page',
   templateUrl: './search.page.html',
+  styleUrls: ['./search.page.scss'],
 })
 export class SearchPage implements OnDestroy {
   public resultsMapping = {

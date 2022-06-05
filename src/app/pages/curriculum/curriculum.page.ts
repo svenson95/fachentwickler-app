@@ -10,6 +10,7 @@ import { LoadingService } from '../../services/loading.service';
 @Component({
   selector: 'fe-curriculum-page',
   templateUrl: './curriculum.page.html',
+  styleUrls: ['./curriculum.page.scss'],
 })
 export class CurriculumPage implements OnInit, OnDestroy {
   private allWeeks: number[];

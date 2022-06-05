@@ -15,10 +15,6 @@ hr {
   border: none;
 }
 
-p {
-  color: var(--text-color-1);
-}
-
 a {
   color: var(--text-color-1);
   text-decoration-color: var(--secondary-color);
@@ -28,10 +24,6 @@ a {
     color: var(--secondary-color);
     transition: color 100ms ease-in-out;
   }
-}
-
-mat-card.fe-card {
-  color: var(--text-color-1);
 }
 
 ul {
