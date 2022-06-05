@@ -8,7 +8,6 @@ import { MatNativeDateModule, MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } f
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { environment } from '../environments/environment';
@@ -16,18 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeleteImageDialogModule } from './components/dialogs/delete-image-dialog/delete-image-dialog.module';
 import { ImageManagerDialogModule } from './components/dialogs/image-manager-dialog/image-manager-dialog.module';
-import { LogoutDialogComponent } from './components/dialogs/logout-dialog/logout-dialog.component';
-import { HeaderMenuModule } from './components/header-menu/header-menu.module';
-import { LoadingSpinnerModule } from './components/loading-spinner/loading-spinner.module';
-import { NavLinkModule } from './components/nav-link/nav-link.module';
-import { SearchFieldModule } from './components/search-field/search-field.module';
+import { LogoutDialogModule } from './components/dialogs/logout-dialog/logout-dialog.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { AngularMaterialModule } from './shared/angular-material.module';
-import { AppIconComponent } from './shared/app-icon/app-icon.component';
-import { ContentComponent } from './shared/content/content.component';
-import { HamburgerIconComponent } from './shared/hamburger-icon/hamburger-icon.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { ContentModule } from './shared/content/content.module';
+import { HeaderModule } from './shared/header/header.module';
+import { SidenavModule } from './shared/sidenav/sidenav.module';
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {
@@ -37,30 +30,21 @@ const globalRippleConfig: RippleGlobalOptions = {
 };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HamburgerIconComponent,
-    SidenavComponent,
-    ContentComponent,
-    AppIconComponent,
-    LogoutDialogComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     CommonModule,
     AngularMaterialModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     HttpClientModule,
     MatNativeDateModule,
-    RouterModule,
+    AppRoutingModule,
+    HeaderModule,
+    ContentModule,
+    SidenavModule,
     ImageManagerDialogModule,
     DeleteImageDialogModule,
-    SearchFieldModule,
-    HeaderMenuModule,
-    LoadingSpinnerModule,
-    NavLinkModule,
+    LogoutDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
