@@ -59,6 +59,18 @@ div.quiz {
           padding-bottom: 5px;
         }
       }
+
+      ::ng-deep .answer-indicator-wrapper {
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 200ms ease;
+
+        &.correct,
+        &.wrong {
+          opacity: 1;
+        }
+      }
     }
 
     .quiz-question {

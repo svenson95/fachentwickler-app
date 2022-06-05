@@ -7,6 +7,11 @@
   box-sizing: inherit;
 }
 
+.mat-drawer-container,
+.mat-card {
+  color: inherit;
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
 }
@@ -20,9 +25,9 @@ body {
   }
 }
 
-.mat-drawer-container,
-.mat-card {
-  color: inherit;
+hr {
+  background: var(--grey-1);
+  border: none;
 }
 
 mat-toolbar.mat-toolbar {
@@ -170,7 +175,6 @@ mat-card.mat-card.card {
   }
 }
 
-/* mat form field */
 mat-form-field.input.mat-form-field {
   .mat-form-field-flex {
     background-color: var(--background-secondary);
@@ -212,4 +216,9 @@ mat-form-field.input.mat-form-field {
   .mat-error {
     margin-bottom: 5px;
   }
+}
+
+fe-post-link:not(:last-of-type),
+.post-link-wrapper:not(:last-of-type) {
+  margin-bottom: 10px;
 }

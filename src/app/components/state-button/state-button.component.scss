@@ -1,0 +1,23 @@
+button.fe-text-button {
+  position: relative;
+
+  .label {
+    display: flex;
+
+    ::ng-deep span {
+      align-self: center;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  mat-spinner.mat-spinner {
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

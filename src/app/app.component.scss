@@ -1,6 +1,6 @@
 @import "mixins";
 
-div.page-container {
+:host {
   display: flex;
   flex-direction: column;
   background-color: var(--background-primary);
@@ -10,7 +10,7 @@ div.page-container {
   left: 0;
   right: 0;
 
-  mat-sidenav.fe-sidenav {
+  mat-sidenav.navigation {
     background: var(--background-secondary);
     overflow-x: hidden;
     border-right: 0;
@@ -18,8 +18,8 @@ div.page-container {
 }
 
 ::ng-deep {
-  mat-sidenav.fe-sidenav.mat-sidenav,
-  mat-sidenav.fe-sidenav.mat-sidenav .mat-drawer-inner-container {
+  mat-sidenav.navigation,
+  mat-sidenav.navigation .mat-drawer-inner-container {
     -webkit-appearance: none;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -58,7 +58,7 @@ div.page-container {
     flex: 1 0 auto;
   }
 
-  mat-sidenav.fe-sidenav {
+  mat-sidenav.navigation {
     background: var(--background-secondary);
     overflow-x: hidden;
     border-right: 0;

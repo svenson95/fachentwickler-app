@@ -1,4 +1,13 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostBinding,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -13,13 +22,21 @@ import { ThemeService } from './services/theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('sidenav') public sidenav: MatSidenav;
+
+  @HostBinding('class.is-mobile') public get _(): boolean {
+    return this.isMobile;
+  }
+
+  @HostBinding('class') public get theme(): string {
+    return this.themeService.getActiveTheme().name;
+  }
+
   public isMobile: boolean;
 
   public isTiny: boolean;
 
   private subscription: Subscription = new Subscription();
-
-  @ViewChild('sidenav') public sidenav: MatSidenav;
 
   constructor(
     private router: Router,

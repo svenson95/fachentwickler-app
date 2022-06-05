@@ -8,3 +8,13 @@
     transform: translateY(-5px);
   }
 }
+
+.main-content {
+  background: var(--background-secondary);
+  padding: 20px 20px 20px 0;
+
+  @include to-md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
