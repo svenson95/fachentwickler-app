@@ -1,5 +1,10 @@
-<fe-card class="news" title="Ankündigungen" buttonLink="/mitteilungen" buttonLabel="Mitteilungen">
-  <div class="fe-news-container">
+<fe-card
+  class="news"
+  title="Ankündigungen"
+  [buttonLink]="news?.length > 1 ? null : '/mitteilungen'"
+  [buttonLabel]="news?.length > 1 ? null : 'Mitteilungen'"
+>
+  <div class="news-container">
     <fe-loading-spinner *ngIf="news === undefined"></fe-loading-spinner>
     <div class="fe-news-item" *ngFor="let post of news">
       <div class="fe-news-header">
@@ -10,6 +15,7 @@
         <span>Lesen</span>
       </a>
     </div>
+
     <fe-pagination-bar
       *ngIf="news && allNewsLength"
       [totalItems]="allNewsLength"
