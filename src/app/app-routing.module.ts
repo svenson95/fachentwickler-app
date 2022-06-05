@@ -82,11 +82,6 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'mitteilungen/:url',
-    loadChildren: () => import('./pages/news-article/news-article.module').then((m) => m.NewsArticlePageModule),
-    canActivate: [AuthGuardService],
-  },
-  {
     path: 'lehrplan',
     loadChildren: () => import('./pages/curriculum/curriculum.module').then((m) => m.CurriculumPageModule),
     canActivate: [AuthGuardService],
@@ -115,27 +110,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/search/search.module').then((m) => m.SearchPageModule),
   },
   ...subjectsPaths(),
-  {
-    path: ':subject/:topic/:post',
-    loadChildren: () => import('./pages/post/post.module').then((m) => m.PostPageModule),
-  },
-  {
-    path: ':subject/:topic/:post/edit',
-    loadChildren: () => import('./pages/edit-post/edit-post.module').then((m) => m.EditPostPageModule),
-    canActivate: [AuthGuardService],
-  },
-  {
-    path: ':subject/:topic/:title/karteikarten',
-    loadChildren: () => import('./pages/index-card/index-card.module').then((m) => m.IndexCardPageModule),
-  },
-  {
-    path: ':subject/:topic/:title/quiz',
-    loadChildren: () => import('./pages/quiz/quiz.module').then((m) => m.QuizPageModule),
-  },
-  {
-    path: ':subject/:topic/:title/matching',
-    loadChildren: () => import('./pages/matching/matching.module').then((m) => m.MatchingPageModule),
-  },
   {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then((m) => m.NotFoundPageModule),
