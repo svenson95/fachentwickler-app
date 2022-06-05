@@ -11,7 +11,7 @@
           <p class="label">Frage</p>
           <p class="label">{{ level + 1 }} von {{ indexCards.elements.length }}</p>
         </div>
-        <p class="content" [innerHTML]="indexCards.elements[level].question"></p>
+        <p class="text" [innerHTML]="indexCards.elements[level].question"></p>
       </div>
       <div class="indexcard__back">
         <div class="card-header">
@@ -19,7 +19,7 @@
           <p class="label">{{ level + 1 }} von {{ indexCards.elements.length }}</p>
         </div>
         <p
-          class="content"
+          class="text"
           [innerHTML]="indexCards.elements[level].answer"
           [class.shortAnswer]="stripHtml(indexCards.elements[level].answer).length < 400"
         ></p>

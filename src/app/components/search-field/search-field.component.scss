@@ -2,69 +2,71 @@
 
 $searchbar-height: 35px;
 
-mat-form-field.search-bar-form-field {
-  width: 200px;
-  border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
+:host ::ng-deep {
+  mat-form-field.search-bar-form-field {
+    width: 200px;
+    border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
 
-  @include to-lg {
-    width: 180px;
-  }
-
-  .mat-form-field-underline {
-    display: none;
-
-    &::before {
-      background-color: var(--tertiary-color);
+    @include to-lg {
+      width: 180px;
     }
-  }
 
-  &.is-searching .mat-form-field-underline::before {
-    background-color: var(--secondary-color);
-  }
+    .mat-form-field-underline {
+      display: none;
 
-  .mat-form-field-outline {
-    opacity: 1;
-    color: var(--grey-3);
-  }
-
-  .mat-form-field-wrapper {
-    padding-bottom: 0;
-
-    .mat-form-field-flex {
-      background: var(--background-primary);
-      padding: 0 1rem;
-      height: $searchbar-height;
-      align-items: center;
-
-      @include from-md {
-        border-radius: var(--border-radius);
+      &::before {
+        background-color: var(--tertiary-color);
       }
     }
 
-    .mat-form-field-infix {
-      padding: 0;
-      border-top: 0;
+    &.is-searching .mat-form-field-underline::before {
+      background-color: var(--secondary-color);
+    }
 
-      input {
-        font-size: 0.9rem;
-        vertical-align: middle;
-        color: var(--text-color-1);
+    .mat-form-field-outline {
+      opacity: 1;
+      color: var(--grey-3);
+    }
 
-        &::placeholder {
-          color: var(--text-color-3);
-          opacity: 1; // firefox adds a lower opacity to the placeholder, reset to 1
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+
+      .mat-form-field-flex {
+        background: var(--background-primary);
+        padding: 0 1rem;
+        height: $searchbar-height;
+        align-items: center;
+
+        @include from-md {
+          border-radius: var(--border-radius);
         }
       }
-    }
 
-    .mat-form-field-suffix {
-      text-align: end;
+      .mat-form-field-infix {
+        padding: 0;
+        border-top: 0;
 
-      .mat-icon {
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-        color: var(--tertiary-color);
-        cursor: pointer;
+        input {
+          font-size: 0.9rem;
+          vertical-align: middle;
+          color: var(--text-color-1);
+
+          &::placeholder {
+            color: var(--text-color-3);
+            opacity: 1; // firefox adds a lower opacity to the placeholder, reset to 1
+          }
+        }
+      }
+
+      .mat-form-field-suffix {
+        text-align: end;
+
+        .mat-icon {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+          color: var(--tertiary-color);
+          cursor: pointer;
+        }
       }
     }
   }
