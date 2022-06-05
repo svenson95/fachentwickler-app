@@ -9,17 +9,17 @@
   {{ isVisible ? "Ausblenden" : "Lösung anzeigen" }}
 </button>
 <!-- TITLE -->
-<p
+<h2
   class="post-title"
   *ngIf="element.type === ElementType.TITLE && (element.hidden ? isVisible : true)"
   [innerHTML]="element.content"
-></p>
+></h2>
 <!-- SUBTITLE -->
-<p
+<h3
   class="post-subtitle"
   *ngIf="element.type === ElementType.SUBTITLE && (element.hidden ? isVisible : true)"
   [innerHTML]="element.content"
-></p>
+></h3>
 <!-- TEXT -->
 <p
   class="post-text"
@@ -53,8 +53,8 @@
 <ng-container *ngIf="element.type === ElementType.LIST && element.ordered && (element.hidden ? isVisible : true)">
   <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
   <ol class="post-list-ordered">
-    <li class="post-ol-list" *ngFor="let item of element.list" [class.sublist-container]="isSublistItem(item)">
-      <span *ngIf="isString(item)" [innerHTML]="item"></span>
+    <li class="post-ol-list" *ngFor="let item of element.list">
+      <span [innerHTML]="item"></span>
     </li>
   </ol>
 </ng-container>
@@ -69,8 +69,8 @@
     [class.medium]="element.size === 'm'"
     [class.large]="element.size === 'l'"
   />
-  <fe-loading-spinner *ngIf="image === false"></fe-loading-spinner>
-  <p style="color: grey !important" *ngIf="image === null">no image found</p>
+  <mat-spinner *ngIf="image === null" diameter="24"></mat-spinner>
+  <p style="color: grey !important" *ngIf="image === false">no image found</p>
 </div>
 <!-- TABLE -->
 <p

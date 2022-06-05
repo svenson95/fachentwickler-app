@@ -20,7 +20,7 @@ export class PostElementComponent implements OnInit {
     return this.element.hidden;
   }
 
-  public image: boolean | string = false;
+  public image: boolean | string = null;
 
   public ElementType = ElementType;
 
@@ -51,7 +51,7 @@ export class PostElementComponent implements OnInit {
         this.image = `data:image/png;base64,${dataStrings.join('')}`;
       },
       () => {
-        this.image = null;
+        this.image = false;
       },
     );
   }
