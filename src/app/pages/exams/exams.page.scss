@@ -9,6 +9,15 @@
     }
   }
 
+  fe-exam-item {
+    @include to-md {
+      border-bottom: 1px solid var(--grey-2);
+      padding-bottom: 20px;
+    }
+  }
+}
+
+::ng-deep {
   .mat-calendar {
     font-size: 0.9em;
 
@@ -32,10 +41,6 @@
     .mat-calendar-table-header,
     .mat-calendar-body-label {
       color: var(--grey-3);
-    }
-
-    .mat-calendar-body-active .mat-calendar-body-cell-content {
-      border-color: var(--grey-3);
     }
 
     .mat-calendar-previous-button.mat-button-disabled,
@@ -85,77 +90,77 @@
       border-top-color: var(--text-color-1);
     }
   }
+
+  .exams-column {
+    width: 100%;
+    margin-top: 20px;
+
+    .lesson-container {
+      margin-left: 45px;
+
+      .horizontal-line {
+        width: 10px;
+        left: -10px;
+      }
+
+      .vertical-line {
+        left: -13px;
+      }
+    }
+
+    fe-exam-item:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    fe-exam-item {
+      .post-links-container {
+        @include from-lg {
+          margin-left: 40px;
+        }
+      }
+
+      @include to-lg {
+        .exam-date-block {
+          margin-left: -30px;
+          padding: 10px 10px 10px 25px;
+        }
+      }
+    }
+
+    .no-data {
+      padding: 10px;
+    }
+  }
+
+  .exam-details-wrapper {
+    .exam-date-block {
+      margin-left: -20px;
+    }
+
+    .exam-title-wrapper {
+      margin-bottom: 5px;
+
+      .exam-subject,
+      .exam-title {
+        @include from-lg {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }
 
 .calendar-column {
   width: 250px;
-  margin-right: 20px;
+  margin-right: 30px;
   flex-shrink: 0;
 
   @include from-lg {
     padding-right: 20px;
-    border-right: 1px solid var(--grey-1);
+    border-right: 1px solid var(--grey-2);
   }
 
   @include to-lg {
     margin-bottom: 20px;
-  }
-}
-
-.exams-column {
-  width: 100%;
-  margin-top: 20px;
-
-  .lesson-container {
-    margin-left: 45px;
-
-    .horizontal-line {
-      width: 10px;
-      left: -10px;
-    }
-
-    .vertical-line {
-      left: -13px;
-    }
-  }
-
-  fe-exam-item:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
-
-  fe-exam-item {
-    .post-links-container {
-      @include from-lg {
-        margin-left: 40px;
-      }
-    }
-
-    @include to-lg {
-      .exam-date-block {
-        margin-left: -30px;
-        padding: 10px 10px 10px 25px;
-      }
-    }
-  }
-
-  .no-data {
-    padding: 10px;
-  }
-}
-
-.exam-details-wrapper {
-  .exam-date-block {
-    margin-left: -20px;
-  }
-
-  .exam-title-wrapper {
-    margin-bottom: 5px;
-
-    .exam-subject,
-    .exam-title {
-      @include from-lg {
-        margin-left: 10px;
-      }
-    }
   }
 }
