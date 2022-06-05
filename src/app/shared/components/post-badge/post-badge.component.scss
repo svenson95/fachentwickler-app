@@ -1,0 +1,71 @@
+@import "mixins";
+
+:host {
+  &.article p {
+    background-color: rgba(var(--tertiary-color-rgb), 0.15);
+    color: var(--tertiary-color);
+  }
+  &.tasks p {
+    background-color: rgba(var(--grey-4-rgb), 0.15);
+    color: var(--grey-4);
+  }
+  &.index-cards p {
+    background-color: rgba(var(--secondary-color-rgb), 0.15);
+    color: var(--secondary-color);
+  }
+  &.quiz p {
+    background-color: rgba(var(--primary-color-rgb), 0.15);
+    color: var(--primary-color);
+  }
+  &.matching p {
+    background-color: rgba(limegreen, 0.15);
+    color: limegreen;
+  }
+  &.test p {
+    background: rgba(var(--tertiary-color-rgb), 0.8);
+    color: var(--background-primary);
+  }
+
+  p.label {
+    align-items: center;
+    width: fit-content;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    border-radius: 4px;
+
+    font-weight: 300;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    @include to-md {
+      padding: 0 8px;
+      float: right;
+    }
+
+    @include to-xs {
+      font-size: 0.65em;
+    }
+
+    @include to-tiny {
+      font-size: 0.5rem;
+      line-height: 15px;
+    }
+
+    @include from-md {
+      padding: 0 8px;
+    }
+  }
+}
+
+::ng-deep {
+  fe-post-page,
+  fe-edit-post-page,
+  fe-indexcards-page,
+  fe-matchings-page,
+  fe-quiz-page {
+    fe-post-badge {
+      margin-right: 6px;
+    }
+  }
+}

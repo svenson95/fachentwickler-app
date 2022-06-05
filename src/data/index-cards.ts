@@ -1,4 +1,4 @@
-import { PostIndexCards } from '../app/models/post';
+import { PostIndexCards } from '../app/core/models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const indexCards: PostIndexCards[] = [

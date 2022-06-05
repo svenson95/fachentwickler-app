@@ -12,9 +12,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { MediaQueryService } from './services/media-query.service';
-import { SidenavService } from './services/sidenav.service';
-import { ThemeService } from './services/theme.service';
+import { MediaQueryService } from './core/services/media-query.service';
+import { SidenavService } from './core/services/sidenav.service';
+import { ThemeService } from './core/services/theme.service';
 
 @Component({
   selector: 'fe-root',

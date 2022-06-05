@@ -1,4 +1,4 @@
-import { PostArticle } from '../../app/models/post';
+import { PostArticle } from '../../app/core/models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const LF6_POSTS: PostArticle[] = [
@@ -525,7 +525,7 @@ export const LF6_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-09-27",
     "lastUpdate": "2020-10-31",
-    "schoolWeek": "3",
+    "schoolWeek": 3,
     "elements": [
       {
         "type": "SUBTITLE",
@@ -1489,7 +1489,7 @@ export const LF6_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2019-12-09",
     "lastUpdate": "2020-10-18",
-    "schoolWeek": "6",
+    "schoolWeek": 6,
     "elements": [
       {
         "type": "TITLE",

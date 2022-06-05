@@ -1,4 +1,4 @@
-import { SchoolNews } from '../app/models/school-news';
+import { SchoolNews } from '../app/core/models/school-news';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 const schoolNewsData: SchoolNews[] = [

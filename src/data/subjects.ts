@@ -1,7 +1,7 @@
-import { Subject } from '../app/models/subject';
+import { SubjectUnpopulated } from '../app/core/models/subject';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
-export const subjectsData: Subject[] = [
+export const subjectsData: SubjectUnpopulated[] = [
   {
     "subject": "lf-1",
     "description": [

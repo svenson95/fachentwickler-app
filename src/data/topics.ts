@@ -1,7 +1,6 @@
-import { Topic } from '../app/models/subject';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { TopicUnpopulated } from "../app/core/models/topic";
 
-const topics: Topic[] = [
+const topics: TopicUnpopulated[] = [
   {
     "title": "Der Betrieb und sein Umfeld",
     "_id": "6056185736ac2b24829ca2f4",

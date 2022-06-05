@@ -1,5 +1,5 @@
-import { PostArticle } from '../../app/models/post';
-import { PostType } from '../../app/models/post-type';
+import { PostType } from '../../app/core/enums/post-type';
+import { PostArticle } from '../../app/core/models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const testArticle: PostArticle = {

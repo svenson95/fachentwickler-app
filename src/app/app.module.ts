@@ -13,14 +13,11 @@ import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DeleteImageDialogModule } from './components/dialogs/delete-image-dialog/delete-image-dialog.module';
-import { ImageManagerDialogModule } from './components/dialogs/image-manager-dialog/image-manager-dialog.module';
-import { LogoutDialogModule } from './components/dialogs/logout-dialog/logout-dialog.module';
-import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { AngularMaterialModule } from './shared/angular-material.module';
-import { ContentModule } from './shared/content/content.module';
-import { HeaderModule } from './shared/header/header.module';
-import { SidenavModule } from './shared/sidenav/sidenav.module';
+import { AngularMaterialModule } from './core/angular-material.module';
+import { ContentModule } from './core/components/content/content.module';
+import { HeaderModule } from './core/components/header/header.module';
+import { SidenavModule } from './core/components/sidenav/sidenav.module';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {
@@ -33,18 +30,15 @@ const globalRippleConfig: RippleGlobalOptions = {
   declarations: [AppComponent],
   imports: [
     CommonModule,
-    AngularMaterialModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatNativeDateModule,
+    AngularMaterialModule,
     AppRoutingModule,
     HeaderModule,
-    ContentModule,
     SidenavModule,
-    ImageManagerDialogModule,
-    DeleteImageDialogModule,
-    LogoutDialogModule,
+    ContentModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

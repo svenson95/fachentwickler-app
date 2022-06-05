@@ -1,7 +1,7 @@
-import { PostMatching } from '../app/models/post';
+import { PostMatchings } from '../app/core/models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
-export const matchings: PostMatching[] = [
+export const matchings: PostMatchings[] = [
   {
     "url": "steuern_und_sozialversicherungen/sozialversicherungssysteme/matching",
     "_id": "61028adc73f9f2545fa75f33",

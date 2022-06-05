@@ -1,0 +1,25 @@
+<fe-card title="Themen">
+  <fe-loading-spinner *ngIf="subject === undefined; else content"></fe-loading-spinner>
+
+  <ng-template #content>
+    <div class="topic-description" *ngIf="subject.description !== undefined">
+      <ion-icon [name]="router.url | subjectIcon" alt="test"></ion-icon>
+      <fe-post-element *ngFor="let el of subject.description" [element]="el"></fe-post-element>
+    </div>
+
+    <div class="topic-container" *ngFor="let topic of subject.topics">
+      <div class="header">
+        <p class="topic-title">{{topic.title}}</p>
+        <hr />
+      </div>
+
+      <div class="post-links-container">
+        <fe-post-link *ngFor="let post of topic.links" [post]="post"></fe-post-link>
+      </div>
+    </div>
+  </ng-template>
+</fe-card>
+
+<fe-card title="Tests" *ngIf="subject && subject.tests !== undefined">
+  <fe-post-link *ngFor="let post of subject.tests" [post]="post"></fe-post-link>
+</fe-card>

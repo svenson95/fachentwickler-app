@@ -1,4 +1,4 @@
-import { PostArticle } from '../../app/models/post';
+import { PostArticle } from '../../app/core/models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const WISO_POSTS: PostArticle[] = [
@@ -406,7 +406,7 @@ export const WISO_POSTS: PostArticle[] = [
     "type": "article",
     "lessonDate": "2020-09-21",
     "lastUpdate": "2020-10-03",
-    "schoolWeek": "3",
+    "schoolWeek": 3,
     "elements": [
       {
         "type": "TITLE",
