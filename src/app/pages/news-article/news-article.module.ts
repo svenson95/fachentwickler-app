@@ -8,12 +8,6 @@ import { NewsArticlePage } from './news-article.page';
 
 @NgModule({
   declarations: [NewsArticlePage],
-  imports: [
-    CommonModule,
-    NewsArticleRoutingModule,
-    CardModule,
-    PostElementModule,
-    LoadingSpinnerModule,
-  ],
+  imports: [CommonModule, NewsArticleRoutingModule, CardModule, PostElementModule, LoadingSpinnerModule],
 })
 export class NewsArticlePageModule {}

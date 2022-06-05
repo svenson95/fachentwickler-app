@@ -1,10 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { auditQuestions } from '../../constants/pruefungsfragen';
@@ -56,11 +50,9 @@ export class AuditSimulatorPage implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.state = AuditState.INTRODUCTION;
-    this.loadingSubscription = this.loadingService.loading$
-      .pipe(delay(0))
-      .subscribe((status: boolean) => {
-        this.isLoading = status;
-      });
+    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe((status: boolean) => {
+      this.isLoading = status;
+    });
   }
 
   public ngOnDestroy(): void {
@@ -91,8 +83,7 @@ export class AuditSimulatorPage implements OnInit, OnDestroy {
 
     if (this.currentQuestion.choices) {
       this.selectedAnswer = this.currentQuestion.choices.indexOf(choice);
-      const correctAnswer =
-        this.currentQuestion.choices[Number(this.currentQuestion.answer) - 1];
+      const correctAnswer = this.currentQuestion.choices[Number(this.currentQuestion.answer) - 1];
       this.isCorrect = choice === correctAnswer;
     } else {
       const inputAnswer = this.choiceInput;
@@ -103,13 +94,7 @@ export class AuditSimulatorPage implements OnInit, OnDestroy {
       if (this.isCorrect) {
         this.nextRound();
         this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
-        setTimeout(
-          () =>
-            this.slideInWrapper.nativeElement.classList.remove(
-              'slide-in-animation',
-            ),
-          400,
-        );
+        setTimeout(() => this.slideInWrapper.nativeElement.classList.remove('slide-in-animation'), 400);
       }
       this.isCorrect = undefined;
       this.selectedAnswer = undefined;

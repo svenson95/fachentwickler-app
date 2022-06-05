@@ -1,10 +1,4 @@
-import {
-  Component,
-  HostListener,
-  OnDestroy,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
@@ -33,8 +27,7 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
 
   @HostListener('window:scroll', ['$event'])
   public onScroll(): void {
-    if (this.isMobile && this.menuTrigger.menuOpen)
-      this.menuTrigger.closeMenu();
+    if (this.isMobile && this.menuTrigger.menuOpen) this.menuTrigger.closeMenu();
   }
 
   constructor(
@@ -46,11 +39,9 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   ) {}
 
   public ngOnInit(): void {
-    this.mobileSubscription = this.mediaQueryService.isMobile$.subscribe(
-      (value) => {
-        this.isMobile = value;
-      },
-    );
+    this.mobileSubscription = this.mediaQueryService.isMobile$.subscribe((value) => {
+      this.isMobile = value;
+    });
   }
 
   public ngOnDestroy(): void {

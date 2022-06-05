@@ -1,19 +1,14 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { AuthService } from '../../services/auth/auth.service';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
+import { SnackbarComponent } from '../../shared/snackbar/snackbar.component';
 import { inputsMatch } from '../../validators/match.validator';
 
 @Component({
@@ -72,11 +67,9 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.initUserProgress();
-    this.loadingSubscription = this.loadingService.loading$.subscribe(
-      (value) => {
-        this.isLoading = value;
-      },
-    );
+    this.loadingSubscription = this.loadingService.loading$.subscribe((value) => {
+      this.isLoading = value;
+    });
   }
 
   public ngOnDestroy(): void {
@@ -87,23 +80,14 @@ export class MyProfilePage implements OnInit, OnDestroy {
     if (this.dataService.dashboard === undefined) {
       this.dataService
         .getAllLessons()
-        .subscribe((lessons) =>
-          this.progress.setValue(this.getProgressPercentage(lessons.length)),
-        );
+        .subscribe((lessons) => this.progress.setValue(this.getProgressPercentage(lessons.length)));
     } else {
-      this.progress.setValue(
-        this.getProgressPercentage(
-          this.dataService.dashboard.allLessons.length,
-        ),
-      );
+      this.progress.setValue(this.getProgressPercentage(this.dataService.dashboard.allLessons.length));
     }
   }
 
   private getProgressPercentage(progressLength): string {
-    return `${(
-      (this.authService.user.progress.length / progressLength) *
-      100
-    ).toFixed(2)} %`;
+    return `${((this.authService.user.progress.length / progressLength) * 100).toFixed(2)} %`;
   }
 
   private initFormControls(): void {
@@ -191,10 +175,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
           this.name.setValue(this.authService.user.name);
           this.matSnackBar.openFromComponent(SnackbarComponent, {
             duration: 3000,
-            data:
-              `Fehler: ${typeof errorRes}` === 'string'
-                ? errorRes
-                : errorRes.error.message,
+            data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
           });
         },
       );
@@ -220,30 +201,23 @@ export class MyProfilePage implements OnInit, OnDestroy {
     }
     const { email } = this.emailFormGroup.value;
 
-    this.authService
-      .editUser({ _id: this.authService.user._id, email })
-      .subscribe(
-        () => {
-          this.isConfirmingEmail = true;
+    this.authService.editUser({ _id: this.authService.user._id, email }).subscribe(
+      () => {
+        this.isConfirmingEmail = true;
 
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Verifizierungscode versendet',
-          });
-        },
-        (errorRes) => {
-          this.emailFormGroup.controls.email.setValue(
-            this.authService.user.email,
-          );
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data:
-              `Fehler: ${typeof errorRes}` === 'string'
-                ? errorRes
-                : errorRes.error.message,
-          });
-        },
-      );
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Verifizierungscode versendet',
+        });
+      },
+      (errorRes) => {
+        this.emailFormGroup.controls.email.setValue(this.authService.user.email);
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
+        });
+      },
+    );
   }
 
   public confirmChangedEmail(): void {
@@ -252,25 +226,23 @@ export class MyProfilePage implements OnInit, OnDestroy {
     }
     const { email, verificationCode } = this.emailFormGroup.value;
 
-    this.authService
-      .verifyUser(this.authService.user.email, verificationCode, email)
-      .subscribe(
-        (response) => {
-          if (response.success) {
-            this.email.disable();
-            this.matSnackBar.openFromComponent(SnackbarComponent, {
-              duration: 3000,
-              data: 'E-Mail wurde geändert',
-            });
-            this.isConfirmingEmail = undefined;
-          }
-        },
-        (error) => {
-          if (error.error.code === 'TokenNotFoundException') {
-            this.verificationCode.setErrors({ incorrect: true });
-          }
-        },
-      );
+    this.authService.verifyUser(this.authService.user.email, verificationCode, email).subscribe(
+      (response) => {
+        if (response.success) {
+          this.email.disable();
+          this.matSnackBar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: 'E-Mail wurde geändert',
+          });
+          this.isConfirmingEmail = undefined;
+        }
+      },
+      (error) => {
+        if (error.error.code === 'TokenNotFoundException') {
+          this.verificationCode.setErrors({ incorrect: true });
+        }
+      },
+    );
   }
 
   public toggleChangePassword(): void {
@@ -302,30 +274,25 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
       const { confirmPassword } = this.passwordFormGroup.value;
 
-      this.authService
-        .editUser({ _id: this.authService.user._id, password: confirmPassword })
-        .subscribe(
-          () => {
-            this.password.disable();
-            this.password.setValue('xxxxxxxx');
-            this.password.markAsUntouched();
-            this.confirmPassword.markAsUntouched();
-            this.isConfirmingPassword = undefined;
-            this.matSnackBar.openFromComponent(SnackbarComponent, {
-              duration: 3000,
-              data: 'Passwort wurde geändert',
-            });
-          },
-          (errorRes) => {
-            this.matSnackBar.openFromComponent(SnackbarComponent, {
-              duration: 3000,
-              data:
-                `Fehler: ${typeof errorRes}` === 'string'
-                  ? errorRes
-                  : errorRes.error.message,
-            });
-          },
-        );
+      this.authService.editUser({ _id: this.authService.user._id, password: confirmPassword }).subscribe(
+        () => {
+          this.password.disable();
+          this.password.setValue('xxxxxxxx');
+          this.password.markAsUntouched();
+          this.confirmPassword.markAsUntouched();
+          this.isConfirmingPassword = undefined;
+          this.matSnackBar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: 'Passwort wurde geändert',
+          });
+        },
+        (errorRes) => {
+          this.matSnackBar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
+          });
+        },
+      );
     }
   }
 
@@ -335,24 +302,19 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeTheme(): void {
-    this.authService
-      .editUser({ _id: this.authService.user._id, theme: this.theme.value })
-      .subscribe(
-        () => {
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Standard-Theme wurde geändert',
-          });
-        },
-        (errorRes) => {
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data:
-              `Fehler: ${typeof errorRes}` === 'string'
-                ? errorRes
-                : errorRes.error.message,
-          });
-        },
-      );
+    this.authService.editUser({ _id: this.authService.user._id, theme: this.theme.value }).subscribe(
+      () => {
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Standard-Theme wurde geändert',
+        });
+      },
+      (errorRes) => {
+        this.matSnackBar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
+        });
+      },
+    );
   }
 }

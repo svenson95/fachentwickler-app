@@ -21,13 +21,9 @@ export class IndexCardPage {
     private router: Router,
   ) {
     const subject = this.router.url.substring(0, router.url.indexOf('/', 1));
-    this.headerService.setPageTitle(
-      subjects.find((sub) => sub.url === subject)?.title,
-    );
-    this.dataService
-      .getPost(router.url.substr(router.url.indexOf('/', 1) + 1))
-      .subscribe((data) => {
-        this.indexCards = data as PostIndexCards;
-      });
+    this.headerService.setPageTitle(subjects.find((sub) => sub.url === subject)?.title);
+    this.dataService.getPost(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe((data) => {
+      this.indexCards = data as PostIndexCards;
+    });
   }
 }

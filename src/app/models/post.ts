@@ -30,12 +30,7 @@ export interface Post {
   lessonDate: string;
   lastUpdate: string;
   schoolWeek: number;
-  elements?:
-    | PostElement[]
-    | IndexCardQuestion[]
-    | MatchingPair[][]
-    | QuizQuestion[]
-    | any[];
+  elements?: PostElement[] | IndexCardQuestion[] | MatchingPair[][] | QuizQuestion[] | any[];
 }
 
 export interface PostArticle extends Post {

@@ -3,12 +3,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { AuthUser } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
 import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
+import { SnackbarComponent } from '../../shared/snackbar/snackbar.component';
 
 @Component({
   selector: 'fe-login-page',
@@ -49,14 +49,8 @@ export class LoginPage implements OnDestroy {
     const passwordValidators = [Validators.required, Validators.minLength(4)];
 
     this.form = this.fb.group({
-      username: [
-        null as string,
-        { validators: passwordValidators, updateOn: 'submit' },
-      ],
-      password: [
-        null as string,
-        { validators: passwordValidators, updateOn: 'submit' },
-      ],
+      username: [null as string, { validators: passwordValidators, updateOn: 'submit' }],
+      password: [null as string, { validators: passwordValidators, updateOn: 'submit' }],
     });
   }
 

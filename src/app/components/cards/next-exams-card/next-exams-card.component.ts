@@ -19,11 +19,9 @@ export class NextExamsCardComponent implements OnInit, OnDestroy {
   constructor(private loadingService: LoadingService) {}
 
   public ngOnInit(): void {
-    this.loadingSubscription = this.loadingService.loading$
-      .pipe(delay(0))
-      .subscribe((status) => {
-        this.isLoading = status;
-      });
+    this.loadingSubscription = this.loadingService.loading$.pipe(delay(0)).subscribe((status) => {
+      this.isLoading = status;
+    });
   }
 
   public ngOnDestroy(): void {

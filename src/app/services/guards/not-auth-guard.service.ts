@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  Router,
-  RouterStateSnapshot,
-  UrlTree,
-} from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 
 @Injectable({
@@ -19,8 +13,6 @@ export class NotAuthGuardService implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot,
   ): boolean | UrlTree {
-    return this.authService.isAuthenticated
-      ? this.router.parseUrl('/dashboard')
-      : true;
+    return this.authService.isAuthenticated ? this.router.parseUrl('/dashboard') : true;
   }
 }

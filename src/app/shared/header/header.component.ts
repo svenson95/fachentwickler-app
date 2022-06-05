@@ -22,10 +22,7 @@ export class HeaderComponent {
   ) {}
 
   public goToSubject(): void {
-    const subjectUrl = this.router.url.substring(
-      0,
-      this.router.url.indexOf('/', 2),
-    );
+    const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
     if (subjectUrl && this.router.url !== subjectUrl) {
       this.router.navigateByUrl(subjectUrl);
     }

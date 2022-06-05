@@ -5,13 +5,13 @@ export const subjects: MenuItem[] = [
     title: 'Lernfeld 1',
     shortTitle: 'LF-1',
     url: '/lf-1',
-    icon: 'earth-outline'
+    icon: 'earth-outline',
   },
   {
     title: 'Lernfeld 2',
     shortTitle: 'LF-2',
     url: '/lf-2',
-    icon: 'business-outline'
+    icon: 'business-outline',
   },
   {
     title: 'Lernfeld 3',
@@ -129,7 +129,7 @@ export const study: MenuItem[] = [
     shortTitle: 'Theo. Inf.',
     url: '/theoretische-informatik',
     icon: 'library-outline',
-  }
+  },
 ];
 
 export const languages: MenuItem[] = [
@@ -168,7 +168,7 @@ export const languages: MenuItem[] = [
     shortTitle: 'Skript',
     url: '/skriptsprachen',
     icon: 'color-palette-outline',
-  }
+  },
 ];
 
 export const myClass: MenuItem[] = [
@@ -207,7 +207,7 @@ export const myClass: MenuItem[] = [
     shortTitle: 'Schuljahresplan',
     url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/21_22/se-fi_21-22.pdf',
     icon: 'calendar-outline',
-  }
+  },
 ];
 
 export const pages = [...subjects, ...study, ...languages, ...myClass];

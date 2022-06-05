@@ -166,11 +166,7 @@ export class ImageManagerDialogComponent {
     this.isLoadingImages = true;
 
     this.dataService
-      .getMultipleImages(
-        page || 0,
-        undefined,
-        this.isSortedAscending ? 'ascending' : 'descending',
-      )
+      .getMultipleImages(page || 0, undefined, this.isSortedAscending ? 'ascending' : 'descending')
       .subscribe((data) => {
         this.images = data;
         this.isLoadingImages = false;

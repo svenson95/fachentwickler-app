@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { indexCards } from '../../../data/index-cards';
 import { matchings } from '../../../data/matchings';
 import { quizzes } from '../../../data/quizzes';
-import {
-  testDashboard,
-  testSchedule,
-  testSchoolWeek,
-  testUser,
-} from '../../constants/landing-page-data';
+import { testDashboard, testSchedule, testSchoolWeek, testUser } from '../../constants/landing-page-data';
 import { DashboardData } from '../../models/dashboard-data';
 import { PostIndexCards, PostMatching, PostQuiz } from '../../models/post';
 import { Schedule } from '../../models/schedule';

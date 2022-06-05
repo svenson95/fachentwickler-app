@@ -7,11 +7,6 @@ import { MessagesPage } from './messages.page';
 
 @NgModule({
   declarations: [MessagesPage],
-  imports: [
-    CommonModule,
-    MessagesPageRoutingModule,
-    CardModule,
-    NewsCardContainerModule,
-  ],
+  imports: [CommonModule, MessagesPageRoutingModule, CardModule, NewsCardContainerModule],
 })
 export class MessagesPageModule {}

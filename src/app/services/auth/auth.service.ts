@@ -4,20 +4,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
-import {
-  AuthResponse,
-  BasicResponse,
-  TokenResponse,
-  UserProgressResponse,
-} from '../../models/fetch-response';
-import {
-  AuthUser,
-  EditUser,
-  RegisterUser,
-  User,
-  UserProgress,
-} from '../../models/user';
+import { AuthResponse, BasicResponse, TokenResponse, UserProgressResponse } from '../../models/fetch-response';
+import { AuthUser, EditUser, RegisterUser, User, UserProgress } from '../../models/user';
+import { SnackbarComponent } from '../../shared/snackbar/snackbar.component';
 import { DataService } from '../data/data.service';
 import { ThemeService } from '../theme.service';
 
@@ -109,11 +98,7 @@ export class AuthService {
       );
   }
 
-  public verifyUser(
-    email: string,
-    code: string,
-    newEmail = null,
-  ): Observable<AuthResponse> {
+  public verifyUser(email: string, code: string, newEmail = null): Observable<AuthResponse> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     let confirmationEndpoint = `${this.CONFIRMATION_ENDPOINT}/${email}/${code}`;
 
@@ -121,31 +106,23 @@ export class AuthService {
       confirmationEndpoint += `/${newEmail}`;
     }
 
-    return this.httpClient
-      .get<AuthResponse>(confirmationEndpoint, { headers })
-      .pipe(
-        map((response) => {
-          // console.log('response POST confirm-registration', response);
-          if (response.success) {
-            this.user = response.user;
-            this.storeData();
-          }
-          return response;
-        }),
-      );
+    return this.httpClient.get<AuthResponse>(confirmationEndpoint, { headers }).pipe(
+      map((response) => {
+        // console.log('response POST confirm-registration', response);
+        if (response.success) {
+          this.user = response.user;
+          this.storeData();
+        }
+        return response;
+      }),
+    );
   }
 
   public resendVerificationCode(email: string): Observable<TokenResponse> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
 
     return this.httpClient
-      .post<TokenResponse>(
-        `${this.RESEND_VERIFICATION_ENDPOINT}`,
-        JSON.stringify({ email }),
-        { headers },
-      )
+      .post<TokenResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, JSON.stringify({ email }), { headers })
       .pipe(
         map((response) => {
           // console.log('response POST resend-verification-code', response);
@@ -162,11 +139,7 @@ export class AuthService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this.httpClient
-      .post<TokenResponse>(
-        `${this.FORGOT_PASSWORD_ENDPOINT}`,
-        JSON.stringify({ email }),
-        { headers },
-      )
+      .post<TokenResponse>(`${this.FORGOT_PASSWORD_ENDPOINT}`, JSON.stringify({ email }), { headers })
       .pipe(
         map((response) => {
           // console.log('response POST forgot-password', response);
@@ -175,20 +148,13 @@ export class AuthService {
       );
   }
 
-  public changePassword(
-    code: string,
-    newPassword: string,
-  ): Observable<AuthResponse> {
+  public changePassword(code: string, newPassword: string): Observable<AuthResponse> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     const body = { code, newPassword };
 
     return this.httpClient
-      .post<AuthResponse>(
-        `${this.CHANGE_PASSWORD_ENDPOINT}`,
-        JSON.stringify(body),
-        { headers },
-      )
+      .post<AuthResponse>(`${this.CHANGE_PASSWORD_ENDPOINT}`, JSON.stringify(body), { headers })
       .pipe(
         map((response) => {
           // console.log('response POST forgot-password', response);
@@ -205,27 +171,20 @@ export class AuthService {
   }
 
   public fetchNextLesson(lessons: string[]): void {
-    const nextLessonId = lessons.find(
-      (lessonId) => !this.user.progress.includes(lessonId),
-    );
+    const nextLessonId = lessons.find((lessonId) => !this.user.progress.includes(lessonId));
 
     this.dataService.getPostById(nextLessonId).subscribe((nextLesson) => {
       this.dataService.dashboard.nextLesson = nextLesson;
-      this.dataService.dashboard.lessonsPercentage =
-        (this.user.progress.length / lessons.length) * 100;
+      this.dataService.dashboard.lessonsPercentage = (this.user.progress.length / lessons.length) * 100;
 
-      this.dataService
-        .getSchoolWeek(Number(nextLesson.schoolWeek))
-        .subscribe((response) => {
-          this.dataService.schoolWeek = response;
-        });
+      this.dataService.getSchoolWeek(Number(nextLesson.schoolWeek)).subscribe((response) => {
+        this.dataService.schoolWeek = response;
+      });
     });
   }
 
   public editUser(user: EditUser): Observable<AuthResponse> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
 
     return this.httpClient
       .patch<AuthResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(user), {
@@ -243,16 +202,10 @@ export class AuthService {
   }
 
   public addProgress(progress: UserProgress): Observable<UserProgressResponse> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
 
     return this.httpClient
-      .post<UserProgressResponse>(
-        this.ADD_PROGRESS_ENDPOINT,
-        JSON.stringify(progress),
-        { headers },
-      )
+      .post<UserProgressResponse>(this.ADD_PROGRESS_ENDPOINT, JSON.stringify(progress), { headers })
       .pipe(
         map((response) => {
           // console.log('response POST user/add-progress', response);
@@ -266,9 +219,7 @@ export class AuthService {
   }
 
   public invalidate(): Observable<BasicResponse> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
 
     this.user = undefined;
     this.token = 'jwt';
@@ -277,35 +228,29 @@ export class AuthService {
     this.dataService.schoolWeek = undefined;
     localStorage.removeItem(CREDENTIALS_STORAGE_KEY);
 
-    return this.httpClient
-      .get<BasicResponse>(this.LOGOUT_ENDPOINT, { headers })
-      .pipe(
-        map((response) => {
-          // console.log('response GET user/logout', response);
-          return response;
-        }),
-      );
+    return this.httpClient.get<BasicResponse>(this.LOGOUT_ENDPOINT, { headers }).pipe(
+      map((response) => {
+        // console.log('response GET user/logout', response);
+        return response;
+      }),
+    );
   }
 
   public refresh(): Observable<TokenResponse> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
 
-    return this.httpClient
-      .get<TokenResponse>(this.AUTHENTICATED_ENDPOINT, { headers })
-      .pipe(
-        map((response) => {
-          // console.log('response POST authenticated', response);
-          if (response.success) {
-            this.user = response.user;
-            this.isAuthenticated = true;
-            this.token = response.token;
-            this.storeData();
-          }
-          return response;
-        }),
-      );
+    return this.httpClient.get<TokenResponse>(this.AUTHENTICATED_ENDPOINT, { headers }).pipe(
+      map((response) => {
+        // console.log('response POST authenticated', response);
+        if (response.success) {
+          this.user = response.user;
+          this.isAuthenticated = true;
+          this.token = response.token;
+          this.storeData();
+        }
+        return response;
+      }),
+    );
   }
 
   public async restore(): Promise<boolean | TokenResponse> {
@@ -316,8 +261,7 @@ export class AuthService {
     this.user = data.user;
     this.token = data.token;
     this.isAuthenticated = true;
-    if (this.themeService.getActiveTheme().name !== data.theme)
-      this.themeService.toggleTheme();
+    if (this.themeService.getActiveTheme().name !== data.theme) this.themeService.toggleTheme();
     if (this.token === undefined) return;
 
     this.refresh().subscribe(

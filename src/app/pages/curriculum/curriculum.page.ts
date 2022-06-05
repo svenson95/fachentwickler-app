@@ -53,19 +53,13 @@ export class CurriculumPage implements OnInit, OnDestroy {
   }
 
   private initAllWeeks(): void {
-    this.allWeeks = Array.from(
-      Array(this.dataService.currentSchoolWeek + 1).keys(),
-    );
+    this.allWeeks = Array.from(Array(this.dataService.currentSchoolWeek + 1).keys());
     this.allWeeks.shift(); // remove school-week 0
   }
 
   // eslint-disable-next-line class-methods-use-this
   private initSchoolYears(schoolWeeks: SchoolWeek[]): SchoolYear[] {
-    const schoolYears = [
-      new SchoolYear(1),
-      new SchoolYear(2),
-      new SchoolYear(3),
-    ];
+    const schoolYears = [new SchoolYear(1), new SchoolYear(2), new SchoolYear(3)];
 
     schoolWeeks.forEach((week) => {
       if (Number(week.schoolWeek) <= 13) {
@@ -80,25 +74,19 @@ export class CurriculumPage implements OnInit, OnDestroy {
   }
 
   public onWeekChange(week): void {
-    this.elementRef.nativeElement
-      .querySelector(`.week-${week}`)
-      .scrollIntoView({
-        behavior: 'auto',
-        block: 'start',
-      });
+    this.elementRef.nativeElement.querySelector(`.week-${week}`).scrollIntoView({
+      behavior: 'auto',
+      block: 'start',
+    });
   }
 
   public onYearChange(): void {
-    this.selectedWeek = Number(
-      this.schoolYears[this.selectedYear].weeks[0].schoolWeek,
-    );
+    this.selectedWeek = Number(this.schoolYears[this.selectedYear].weeks[0].schoolWeek);
   }
 
   public onScroll(): void {
     this.schoolYears[this.selectedYear].weeks.forEach((week) => {
-      const weekEl = this.elementRef.nativeElement.querySelector(
-        `.week-${week.schoolWeek}`,
-      );
+      const weekEl = this.elementRef.nativeElement.querySelector(`.week-${week.schoolWeek}`);
       if (this.isVisible(weekEl)) {
         this.selectedWeek = Number(week.schoolWeek);
       }
@@ -111,8 +99,6 @@ export class CurriculumPage implements OnInit, OnDestroy {
     const weeksContainer = document.querySelector('.weeks-container');
     const containerRect = weeksContainer.getBoundingClientRect();
 
-    return top <= containerRect.top
-      ? containerRect.top - top <= height
-      : bottom - containerRect.bottom <= height;
+    return top <= containerRect.top ? containerRect.top - top <= height : bottom - containerRect.bottom <= height;
   };
 }

@@ -12,10 +12,7 @@ export class LoadingInterceptor {
 
   constructor(private loadingService: LoadingService) {}
 
-  public intercept(
-    request: HttpRequest<any>,
-    next: HttpHandler,
-  ): Observable<HttpEvent<any>> {
+  public intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (this.activeRequests === 0) {
       this.loadingService.startLoading();
     }

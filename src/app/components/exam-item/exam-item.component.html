@@ -3,9 +3,7 @@
     <mat-icon class="date-icon">insert_invitation</mat-icon>
     <div class="date-block-wrapper">
       <div class="date-details">
-        <p class="date">
-          {{ exam.date | date: "dd.MM.yyyy" }}, {{ exam.date | date: "EEEE" }}
-        </p>
+        <p class="date">{{ exam.date | date: "dd.MM.yyyy" }}, {{ exam.date | date: "EEEE" }}</p>
         <p class="days-left" *ngIf="(exam.date | daysLeft) !== null">
           {{ exam.date | daysLeft }}
         </p>
@@ -29,15 +27,10 @@
   </div>
 </div>
 <div class="post-links-container" *ngIf="lessonsVisible">
-  <div
-    class="post-link-wrapper"
-    *ngFor="let lesson of examLessons; let i = index"
-  >
+  <div class="post-link-wrapper" *ngFor="let lesson of examLessons; let i = index">
     <hr class="horizontal-line" />
     <hr class="vertical-line" />
     <fe-post-link [post]="lesson"></fe-post-link>
   </div>
-  <fe-loading-spinner
-    *ngIf="lessonsVisible && examLessons === undefined"
-  ></fe-loading-spinner>
+  <fe-loading-spinner *ngIf="lessonsVisible && examLessons === undefined"></fe-loading-spinner>
 </div>

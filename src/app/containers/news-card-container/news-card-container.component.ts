@@ -21,10 +21,7 @@ export class NewsCardContainerComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription = new Subscription();
 
-  constructor(
-    private loadingService: LoadingService,
-    private dataService: DataService,
-  ) {}
+  constructor(private loadingService: LoadingService, private dataService: DataService) {}
 
   public ngOnInit(): void {
     this.subscription.add(

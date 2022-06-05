@@ -14,9 +14,7 @@ export class ScheduleComponent {
 
   // eslint-disable-next-line class-methods-use-this
   public subjectName = (subject) => {
-    const sub = subjects.find(
-      (item: MenuItem) => item.url.substring(1) === subject,
-    );
+    const sub = subjects.find((item: MenuItem) => item.url.substring(1) === subject);
 
     if (sub) {
       return sub.shortTitle;

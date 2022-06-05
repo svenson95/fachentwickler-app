@@ -40,9 +40,7 @@ export class QuizCardComponent {
     setTimeout(() => {
       this.slideInWrapper.nativeElement.classList.add('slide-in-animation');
       setTimeout(() => {
-        this.slideInWrapper.nativeElement.classList.remove(
-          'slide-in-animation',
-        );
+        this.slideInWrapper.nativeElement.classList.remove('slide-in-animation');
       }, 400);
 
       this.answer = undefined;

@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  ViewChild,
-  ViewEncapsulation,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
@@ -19,10 +13,7 @@ import { SearchPostService } from '../../services/data/search-post.service';
 export class SearchFieldComponent implements AfterViewInit {
   @ViewChild('searchInput') public searchInput: ElementRef;
 
-  constructor(
-    public router: Router,
-    public searchPostService: SearchPostService,
-  ) {}
+  constructor(public router: Router, public searchPostService: SearchPostService) {}
 
   public ngAfterViewInit(): void {
     this.initSearchBarInputEvent();
@@ -31,9 +22,7 @@ export class SearchFieldComponent implements AfterViewInit {
   private initSearchBarInputEvent(): void {
     fromEvent(this.searchInput.nativeElement, 'keyup')
       .pipe(
-        filter(
-          (e: KeyboardEvent) => e.code === 'Enter' || e.code === 'NumpadEnter',
-        ),
+        filter((e: KeyboardEvent) => e.code === 'Enter' || e.code === 'NumpadEnter'),
         tap(() => this.searchForPost()),
       )
       .subscribe();
@@ -46,14 +35,10 @@ export class SearchFieldComponent implements AfterViewInit {
     }
 
     if (this.searchInput.nativeElement.value !== '') {
-      this.router.navigateByUrl(
-        `search?query=${this.searchInput.nativeElement.value}`,
-      );
-      this.searchPostService
-        .searchPosts(this.searchInput.nativeElement.value)
-        .subscribe((response) => {
-          this.searchPostService.searchResults$.next(response);
-        });
+      this.router.navigateByUrl(`search?query=${this.searchInput.nativeElement.value}`);
+      this.searchPostService.searchPosts(this.searchInput.nativeElement.value).subscribe((response) => {
+        this.searchPostService.searchResults$.next(response);
+      });
     } else if (this.searchPostService.redirectUrl) {
       this.router.navigateByUrl(this.searchPostService.redirectUrl);
     }

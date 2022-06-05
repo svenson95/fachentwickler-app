@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnChanges,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
 import { SchoolWeek } from '../../../models/school-week';
 import { DataService } from '../../../services/data/data.service';
 
@@ -25,11 +20,7 @@ export class SchoolWeekCardComponent implements OnChanges {
   constructor(public dataService: DataService) {}
 
   public ngOnChanges(): void {
-    if (
-      this.showNavigation &&
-      this.weeks === undefined &&
-      this.week !== undefined
-    ) {
+    if (this.showNavigation && this.weeks === undefined && this.week !== undefined) {
       this.weeks = [this.week];
     }
   }
@@ -38,9 +29,7 @@ export class SchoolWeekCardComponent implements OnChanges {
     if (this.isLoading) return;
     const schoolWeek = Number(this.week.schoolWeek);
 
-    const previousWeek = this.weeks.find(
-      (el) => Number(el.schoolWeek) === schoolWeek + value,
-    );
+    const previousWeek = this.weeks.find((el) => Number(el.schoolWeek) === schoolWeek + value);
 
     if (previousWeek) {
       this.week = previousWeek;

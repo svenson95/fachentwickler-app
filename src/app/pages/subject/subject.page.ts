@@ -19,11 +19,7 @@ export class SubjectPage implements OnInit, OnDestroy {
 
   public PostType = PostType;
 
-  constructor(
-    public router: Router,
-    private dataService: DataService,
-    private headerService: HeaderService,
-  ) {
+  constructor(public router: Router, private dataService: DataService, private headerService: HeaderService) {
     const subject = subjects.find((sub) => sub.url === router.url);
     this.headerService.setPageTitle(subject.title);
   }

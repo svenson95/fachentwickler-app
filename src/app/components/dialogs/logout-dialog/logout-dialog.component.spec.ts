@@ -8,9 +8,8 @@ describe('LogoutDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogoutDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [LogoutDialogComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

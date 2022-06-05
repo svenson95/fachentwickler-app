@@ -11,11 +11,7 @@ import { HeaderService } from '../../services/header.service';
 export class NewsArticlePage implements OnInit {
   public data: SchoolNews;
 
-  constructor(
-    private router: Router,
-    private headerService: HeaderService,
-    private dataService: DataService,
-  ) {
+  constructor(private router: Router, private headerService: HeaderService, private dataService: DataService) {
     this.headerService.setPageTitle('Mitteilung');
   }
 

@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-  OnInit,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -50,14 +42,10 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       }),
     );
     this.subscription.add(
-      this.router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
-        .subscribe(() => {
-          this.elementRef.nativeElement
-            .querySelector('.mat-sidenav-content')
-            .scrollTo(0, 0);
-          if (this.isMobile) this.sidenavService.close();
-        }),
+      this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+        this.elementRef.nativeElement.querySelector('.mat-sidenav-content').scrollTo(0, 0);
+        if (this.isMobile) this.sidenavService.close();
+      }),
     );
   }
 

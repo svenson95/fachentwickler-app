@@ -4,18 +4,11 @@ import { AuditQuestion } from '../models/audit-question';
 export const auditQuestions: AuditQuestion[] = [
   {
     question: 'Welches der folgenden Betriebsmittel ist immaterieller Natur?',
-    choices: [
-      'Computer',
-      'Schreibtisch',
-      'Lizenzen',
-      'Firmenwagen',
-      'Bürogebäude',
-    ],
+    choices: ['Computer', 'Schreibtisch', 'Lizenzen', 'Firmenwagen', 'Bürogebäude'],
     answer: 3,
   },
   {
-    question:
-      'Berechnen Sie den Preis pro Ticket, wenn mit einem Gewinnzuschlag von 25 % kalkuliert wird.',
+    question: 'Berechnen Sie den Preis pro Ticket, wenn mit einem Gewinnzuschlag von 25 % kalkuliert wird.',
     description:
       '<u>Gegeben</u>: <br/>Variable Kosten/Kunde\t\t6 EUR <br/>Fixkosten\t\t\t\t120.000 EUR <br/>Anzahl der Kunden\t\t12.000',
     answer: 20,

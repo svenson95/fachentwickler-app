@@ -23,9 +23,7 @@ export class IndexCardComponent {
   }
 
   public answerVisible(content): string {
-    return this.isAnswerVisible
-      ? content.questions[this.level].answer
-      : content.questions[this.level].question;
+    return this.isAnswerVisible ? content.questions[this.level].answer : content.questions[this.level].question;
   }
 
   public increaseLevel(): void {

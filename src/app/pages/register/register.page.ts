@@ -1,20 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ValidationErrors,
-  ValidatorFn,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { RegisterUser, UserRole } from '../../models/user';
 import { AuthService } from '../../services/auth/auth.service';
 import { HeaderService } from '../../services/header.service';
 import { LoadingService } from '../../services/loading.service';
 import { ThemeService } from '../../services/theme.service';
+import { SnackbarComponent } from '../../shared/snackbar/snackbar.component';
 
 @Component({
   selector: 'fe-register-page',
@@ -76,27 +70,16 @@ export class RegisterPage implements OnInit, OnDestroy {
       name: [
         null as string,
         {
-          validators: [
-            Validators.required,
-            Validators.minLength(4),
-            this.NameAlreadyTaken,
-          ],
+          validators: [Validators.required, Validators.minLength(4), this.NameAlreadyTaken],
         },
       ],
       email: [
         null as string,
         {
-          validators: [
-            Validators.required,
-            Validators.email,
-            this.EmailAlreadyTaken,
-          ],
+          validators: [Validators.required, Validators.email, this.EmailAlreadyTaken],
         },
       ],
-      password: [
-        null as string,
-        { validators: [Validators.required, Validators.minLength(4)] },
-      ],
+      password: [null as string, { validators: [Validators.required, Validators.minLength(4)] }],
     });
   }
 

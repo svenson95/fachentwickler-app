@@ -12,12 +12,6 @@ import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { environment } from '../environments/environment';
-import { AngularMaterialModule } from './app-common/angular-material.module';
-import { AppIconComponent } from './app-common/app-icon/app-icon.component';
-import { ContentComponent } from './app-common/content/content.component';
-import { HamburgerIconComponent } from './app-common/hamburger-icon/hamburger-icon.component';
-import { HeaderComponent } from './app-common/header/header.component';
-import { SidenavComponent } from './app-common/sidenav/sidenav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeleteImageDialogModule } from './components/dialogs/delete-image-dialog/delete-image-dialog.module';
@@ -28,6 +22,12 @@ import { LoadingSpinnerModule } from './components/loading-spinner/loading-spinn
 import { NavLinkModule } from './components/nav-link/nav-link.module';
 import { SearchFieldModule } from './components/search-field/search-field.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { AngularMaterialModule } from './shared/angular-material.module';
+import { AppIconComponent } from './shared/app-icon/app-icon.component';
+import { ContentComponent } from './shared/content/content.component';
+import { HamburgerIconComponent } from './shared/hamburger-icon/hamburger-icon.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { SidenavComponent } from './shared/sidenav/sidenav.component';
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {

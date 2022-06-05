@@ -35,10 +35,7 @@ export class ThemeService {
     this.theme = theme;
 
     Object.keys(this.theme.properties).forEach((prop) => {
-      document.documentElement.style.setProperty(
-        prop,
-        this.theme.properties[prop],
-      );
+      document.documentElement.style.setProperty(prop, this.theme.properties[prop]);
     });
   }
 

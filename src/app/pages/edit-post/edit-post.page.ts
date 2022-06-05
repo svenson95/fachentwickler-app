@@ -21,16 +21,10 @@ export class EditPostPage {
     public authService: AuthService,
   ) {
     this.headerService.setPageTitle(
-      subjects.find(
-        (sub) =>
-          sub.url === router.url.substring(0, router.url.indexOf('/', 2)),
-      )?.title,
+      subjects.find((sub) => sub.url === router.url.substring(0, router.url.indexOf('/', 2)))?.title,
     );
 
-    const postUrl = this.router.url.substring(
-      router.url.indexOf('/', 2) + 1,
-      router.url.lastIndexOf('/'),
-    );
+    const postUrl = this.router.url.substring(router.url.indexOf('/', 2) + 1, router.url.lastIndexOf('/'));
 
     this.dataService.getPost(postUrl).subscribe((data) => {
       this.post = data;

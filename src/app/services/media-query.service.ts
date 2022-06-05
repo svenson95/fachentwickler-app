@@ -1,12 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
-import {
-  distinctUntilChanged,
-  map,
-  shareReplay,
-  startWith,
-} from 'rxjs/operators';
+import { distinctUntilChanged, map, shareReplay, startWith } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',

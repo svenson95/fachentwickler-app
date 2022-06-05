@@ -9,12 +9,6 @@ import { NewsCardComponent } from './news-card.component';
 @NgModule({
   declarations: [NewsCardComponent],
   exports: [NewsCardComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
-    CardModule,
-    PaginationBarModule,
-    LoadingSpinnerModule,
-  ],
+  imports: [CommonModule, RouterModule, CardModule, PaginationBarModule, LoadingSpinnerModule],
 })
 export class NewsCardModule {}

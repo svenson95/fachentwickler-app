@@ -25,10 +25,8 @@ export class QuizPage {
       })?.title,
     );
 
-    this.dataService
-      .getPost(router.url.substr(router.url.indexOf('/', 1) + 1))
-      .subscribe((data) => {
-        this.quiz = data as PostQuiz;
-      });
+    this.dataService.getPost(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe((data) => {
+      this.quiz = data as PostQuiz;
+    });
   }
 }

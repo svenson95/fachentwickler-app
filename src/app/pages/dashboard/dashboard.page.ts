@@ -13,11 +13,7 @@ import { HeaderService } from '../../services/header.service';
 export class DashboardPage implements OnInit {
   public schedule = schedule;
 
-  constructor(
-    private headerService: HeaderService,
-    public authService: AuthService,
-    public dataService: DataService,
-  ) {
+  constructor(private headerService: HeaderService, public authService: AuthService, public dataService: DataService) {
     this.headerService.setPageTitle('Dashboard');
   }
 

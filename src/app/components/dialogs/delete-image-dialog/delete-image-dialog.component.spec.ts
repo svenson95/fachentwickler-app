@@ -8,9 +8,8 @@ describe('DeleteImageDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeleteImageDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [DeleteImageDialogComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

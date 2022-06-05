@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { AuthService } from '../../services/auth/auth.service';
 import { HeaderService } from '../../services/header.service';
+import { SnackbarComponent } from '../../shared/snackbar/snackbar.component';
 
 @Component({
   selector: 'fe-verify-page',
@@ -33,10 +33,7 @@ export class VerifyPage implements OnInit {
   ) {
     this.headerService.setPageTitle('Verifizierung');
     this.formGroup = this.formBuilder.group({
-      verificationCode: [
-        null as number,
-        { validators: [Validators.required], updateOn: 'submit' },
-      ],
+      verificationCode: [null as number, { validators: [Validators.required], updateOn: 'submit' }],
     });
   }
 
@@ -100,31 +97,29 @@ export class VerifyPage implements OnInit {
 
     this.isResendLoading = true;
     this.resendTimeout = true;
-    this.authService
-      .resendVerificationCode(this.authService.user.email)
-      .subscribe(
-        () => {
-          this.isResendLoading = false;
-          this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 2500,
-            data: 'Verifizierungscode erfolgreich versendet.',
-          });
+    this.authService.resendVerificationCode(this.authService.user.email).subscribe(
+      () => {
+        this.isResendLoading = false;
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: 'Verifizierungscode erfolgreich versendet.',
+        });
 
-          setTimeout(() => {
-            this.resendTimeout = undefined;
-          }, 2500);
-        },
-        (error) => {
-          this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 2500,
-            data: `Fehler auftreten. ${error.error.message}`,
-          });
+        setTimeout(() => {
+          this.resendTimeout = undefined;
+        }, 2500);
+      },
+      (error) => {
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: `Fehler auftreten. ${error.error.message}`,
+        });
 
-          this.isResendLoading = false;
-          setTimeout(() => {
-            this.resendTimeout = undefined;
-          }, 2500);
-        },
-      );
+        this.isResendLoading = false;
+        setTimeout(() => {
+          this.resendTimeout = undefined;
+        }, 2500);
+      },
+    );
   }
 }

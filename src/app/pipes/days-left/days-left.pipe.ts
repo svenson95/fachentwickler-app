@@ -12,9 +12,7 @@ export class DaysLeftPipe implements PipeTransform {
     if (new Date(date) < today) return null;
 
     const examDate = new Date(date);
-    const days = Math.ceil(
-      Math.abs((today.getTime() - examDate.getTime()) / DAY_IN_MILLISECONDS),
-    );
+    const days = Math.ceil(Math.abs((today.getTime() - examDate.getTime()) / DAY_IN_MILLISECONDS));
     const suffix = days > 1 ? 'Tage' : 'Tag';
 
     return `Noch ${days} ${suffix}`;

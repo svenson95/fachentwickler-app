@@ -7,11 +7,6 @@ import { SubstitutionSchedulePage } from './substitution-schedule.page';
 
 @NgModule({
   declarations: [SubstitutionSchedulePage],
-  imports: [
-    CommonModule,
-    CardModule,
-    SubstitutionScheduleRoutingModule,
-    ScheduleCardModule,
-  ],
+  imports: [CommonModule, CardModule, SubstitutionScheduleRoutingModule, ScheduleCardModule],
 })
 export class SubstitutionSchedulePageModule {}

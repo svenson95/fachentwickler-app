@@ -1,11 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  languages,
-  myClass,
-  study,
-  subjects,
-} from '../../constants/menu-items';
+import { languages, myClass, study, subjects } from '../../constants/menu-items';
 import { MenuItem } from '../../models/menu-item';
 import { AuthService } from '../../services/auth/auth.service';
 

@@ -91,17 +91,11 @@ const inThreeDays = () => {
   }
 
   const todayDateString = `${year}-${month}-${day}`;
-  let examDateString = moment(moment(todayDateString).add(3, 'days')).format(
-    'YYYY-MM-DD',
-  );
+  let examDateString = moment(moment(todayDateString).add(3, 'days')).format('YYYY-MM-DD');
   if (new Date(examDateString).getDay() === 6) {
-    examDateString = moment(moment(examDateString).add(2, 'days')).format(
-      'YYYY-MM-DD',
-    );
+    examDateString = moment(moment(examDateString).add(2, 'days')).format('YYYY-MM-DD');
   } else if (new Date(examDateString).getDay() === 0) {
-    examDateString = moment(moment(examDateString).add(1, 'days')).format(
-      'YYYY-MM-DD',
-    );
+    examDateString = moment(moment(examDateString).add(1, 'days')).format('YYYY-MM-DD');
   }
 
   return examDateString;

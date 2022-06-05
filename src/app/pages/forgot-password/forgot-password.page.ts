@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { SnackbarComponent } from '../../app-common/snackbar/snackbar.component';
 import { AuthService } from '../../services/auth/auth.service';
 import { HeaderService } from '../../services/header.service';
+import { SnackbarComponent } from '../../shared/snackbar/snackbar.component';
 import { inputsMatch } from '../../validators/match.validator';
 
 @Component({
@@ -34,19 +34,13 @@ export class ForgotPasswordPage {
 
   private initFormGroups(): void {
     this.emailForm = this.formBuilder.group({
-      email: [
-        null as string,
-        { validators: [Validators.required, Validators.email] },
-      ],
+      email: [null as string, { validators: [Validators.required, Validators.email] }],
     });
 
     this.passwordForm = this.formBuilder.group({
       verificationCode: [null as number, { validators: [Validators.required] }],
       password: [null as string, { validators: [Validators.required] }],
-      confirmPassword: [
-        null as string,
-        { validators: [Validators.required, inputsMatch('password')] },
-      ],
+      confirmPassword: [null as string, { validators: [Validators.required, inputsMatch('password')] }],
     });
   }
 
@@ -102,31 +96,29 @@ export class ForgotPasswordPage {
 
     const { verificationCode, confirmPassword } = this.passwordForm.value;
 
-    this.authService
-      .changePassword(verificationCode, confirmPassword)
-      .subscribe(
-        () => {
-          this.router.navigate(['/login']);
-          this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 2500,
-            data: 'Passwort erfolgreich geändert',
+    this.authService.changePassword(verificationCode, confirmPassword).subscribe(
+      () => {
+        this.router.navigate(['/login']);
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: 'Passwort erfolgreich geändert',
+        });
+      },
+      (err) => {
+        if (err.error.code === 'TokenNotFoundException') {
+          this.passwordForm.controls.verificationCode.setErrors({
+            incorrect: true,
           });
-        },
-        (err) => {
-          if (err.error.code === 'TokenNotFoundException') {
-            this.passwordForm.controls.verificationCode.setErrors({
-              incorrect: true,
-            });
-          }
+        }
 
-          this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 2500,
-            data: 'Fehler! Benutzer Passwort konnte nicht geändert werden',
-          });
-        },
-        () => {
-          this.isSubmitLoading = false;
-        },
-      );
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: 'Fehler! Benutzer Passwort konnte nicht geändert werden',
+        });
+      },
+      () => {
+        this.isSubmitLoading = false;
+      },
+    );
   }
 }

@@ -14,8 +14,5 @@ export class UserProgressCardComponent {
 
   @Input() public dashboard: DashboardData;
 
-  constructor(
-    public dataService: DataService,
-    public loadingService: LoadingService,
-  ) {}
+  constructor(public dataService: DataService, public loadingService: LoadingService) {}
 }

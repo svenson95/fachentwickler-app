@@ -1,16 +1,6 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
-import {
-  MatCalendar,
-  MatCalendarCellCssClasses,
-} from '@angular/material/datepicker';
+import { MatCalendar, MatCalendarCellCssClasses } from '@angular/material/datepicker';
 import { ExamDate } from '../../models/exam-date';
 import { DataService } from '../../services/data/data.service';
 import { HeaderService } from '../../services/header.service';
@@ -34,10 +24,7 @@ export class ExamsPage implements OnInit, AfterViewInit {
   public get monthExams(): ExamDate[] {
     return this.allExams?.filter((exam) => {
       const date = new Date(exam.date);
-      return (
-        date.getFullYear() === this.calendarDate.getFullYear() &&
-        date.getMonth() === this.calendarDate.getMonth()
-      );
+      return date.getFullYear() === this.calendarDate.getFullYear() && date.getMonth() === this.calendarDate.getMonth();
     });
   }
 
@@ -81,12 +68,8 @@ export class ExamsPage implements OnInit, AfterViewInit {
   }
 
   private initializeCalendarButtons(): void {
-    const BACK_BUTTON = this.elementRef.nativeElement.querySelector(
-      '.mat-calendar-previous-button',
-    );
-    const FORWARD_BUTTON = this.elementRef.nativeElement.querySelector(
-      '.mat-calendar-next-button',
-    );
+    const BACK_BUTTON = this.elementRef.nativeElement.querySelector('.mat-calendar-previous-button');
+    const FORWARD_BUTTON = this.elementRef.nativeElement.querySelector('.mat-calendar-next-button');
     if (BACK_BUTTON) {
       this.renderer.listen(BACK_BUTTON, 'click', () => {
         const month = this.calendarDate.getMonth() as number;

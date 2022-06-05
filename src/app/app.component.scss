@@ -15,7 +15,9 @@ div.page-container {
     overflow-x: hidden;
     border-right: 0;
   }
+}
 
+::ng-deep {
   mat-sidenav.fe-sidenav.mat-sidenav,
   mat-sidenav.fe-sidenav.mat-sidenav .mat-drawer-inner-container {
     -webkit-appearance: none;
@@ -26,9 +28,7 @@ div.page-container {
       display: none;
     }
   }
-}
 
-::ng-deep {
   .mat-sidenav-container {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
              causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */

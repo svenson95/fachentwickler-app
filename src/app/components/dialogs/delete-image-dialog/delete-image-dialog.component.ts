@@ -1,9 +1,9 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SnackbarComponent } from '../../../app-common/snackbar/snackbar.component';
 import { AuthService } from '../../../services/auth/auth.service';
 import { DataService } from '../../../services/data/data.service';
+import { SnackbarComponent } from '../../../shared/snackbar/snackbar.component';
 
 @Component({
   selector: 'fe-delete-image-dialog',

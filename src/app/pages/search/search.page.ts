@@ -50,10 +50,7 @@ export class SearchPage implements OnDestroy {
   }
 
   private searchForPosts(): void {
-    const searchValue = this.router.url
-      .substring(14, this.router.url.length)
-      .split('%20')
-      .join(' ');
+    const searchValue = this.router.url.substring(14, this.router.url.length).split('%20').join(' ');
     if (searchValue !== '') {
       this.searchPostService.searchTerm = searchValue;
       this.searchPostService.searchedTerm = searchValue;

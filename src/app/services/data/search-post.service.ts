@@ -24,15 +24,13 @@ export class SearchPostService {
   public searchPosts(searchTerm: string): Observable<Post[]> {
     this.isSearching = true;
     this.searchedTerm = searchTerm;
-    return this.httpClient
-      .get<Post[]>(`${environment.baseUrl}/search?query=${searchTerm}`)
-      .pipe(
-        map((response) => {
-          // console.log('response GET search post', response);
-          this.isSearching = false;
-          return response;
-        }),
-      );
+    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search?query=${searchTerm}`).pipe(
+      map((response) => {
+        // console.log('response GET search post', response);
+        this.isSearching = false;
+        return response;
+      }),
+    );
   }
 
   public setRedirectUrl(url): void {

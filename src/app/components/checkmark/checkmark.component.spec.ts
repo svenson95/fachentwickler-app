@@ -8,9 +8,8 @@ describe('CheckmarkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CheckmarkComponent ]
-    })
-    .compileComponents();
+      declarations: [CheckmarkComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -89,10 +89,7 @@ export class MatchingCardComponent implements OnInit {
       this.gameView.nativeElement.classList.add('game-started');
     }
 
-    if (
-      this.state === 'play' &&
-      this.matching.elements[this.round + 1] === undefined
-    ) {
+    if (this.state === 'play' && this.matching.elements[this.round + 1] === undefined) {
       this.state = 'end';
     } else {
       this.round += 1;
@@ -119,19 +116,12 @@ export class MatchingCardComponent implements OnInit {
     this.matching.elements[this.round].forEach((pair) => {
       this.unsolvedPairs.push(pair);
     });
-    this.leftSidePairs = [...this.unsolvedPairs].sort(
-      () => Math.random() - 0.5,
-    );
-    this.rightSidePairs = [...this.unsolvedPairs].sort(
-      () => Math.random() - 0.5,
-    );
+    this.leftSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
+    this.rightSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
   }
 
   private setSolvedState(): void {
-    if (
-      !this.auth.user.progress.includes(this.matching._id) &&
-      this.auth.isAuthenticated
-    ) {
+    if (!this.auth.user.progress.includes(this.matching._id) && this.auth.isAuthenticated) {
       this.auth.setLessonSolved(this.matching._id);
     }
   }

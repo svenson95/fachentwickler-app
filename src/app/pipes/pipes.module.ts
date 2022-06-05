@@ -15,14 +15,7 @@ import { WeekdayStringPipe } from './weekday-string/weekday-string.pipe';
     DaysLeftPipe,
     SubjectIconPipe,
   ],
-  exports: [
-    LongSubjectNamePipe,
-    WeekdayStringPipe,
-    AlreadyReadPipe,
-    SchoolDaysPipe,
-    DaysLeftPipe,
-    SubjectIconPipe,
-  ],
+  exports: [LongSubjectNamePipe, WeekdayStringPipe, AlreadyReadPipe, SchoolDaysPipe, DaysLeftPipe, SubjectIconPipe],
   imports: [],
 })
 export class PipesModule {}
