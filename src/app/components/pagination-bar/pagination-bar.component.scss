@@ -52,6 +52,10 @@ div.pagination-bar {
   button:disabled {
     color: var(--text-color-3);
   }
+
+  mat-spinner {
+    margin-left: 20px;
+  }
 }
 
 hr.pagination-bar-divider {

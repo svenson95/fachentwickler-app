@@ -18,6 +18,7 @@
       <ion-icon class="delete-icon" name="caret-back"></ion-icon>
     </button>
   </ng-container>
+
   <button
     class="page-btn unselectable"
     *ngFor="let page of paginationPage | pageButtons: buttonsPerPage:totalPages"
@@ -26,9 +27,11 @@
   >
     {{ page + 1 }}
   </button>
+
   <ng-container *ngIf="isFirstPaginationPage && isLastPaginationPage">
-    <fe-loading-spinner size="24" *ngIf="isLoading"></fe-loading-spinner>
+    <mat-spinner *ngIf="isLoading" diameter="24"></mat-spinner>
   </ng-container>
+
   <ng-container *ngIf="!(isFirstPaginationPage && isLastPaginationPage)">
     <button
       class="forward-btn"
