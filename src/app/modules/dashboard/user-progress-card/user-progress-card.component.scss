@@ -15,6 +15,14 @@
       background: var(--background-secondary);
     }
   }
+
+  ngx-skeleton-loader span.loader.progress {
+    height: 37px;
+
+    @include to-md {
+      height: 75px;
+    }
+  }
 }
 
 .current-lesson,

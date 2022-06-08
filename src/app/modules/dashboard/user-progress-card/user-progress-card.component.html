@@ -20,6 +20,5 @@
   </div>
 
   <fe-post-link *ngIf="dashboard?.nextLesson" [post]="dashboard?.nextLesson" title="Nächste Lektion"></fe-post-link>
-
-  <fe-loading-spinner *ngIf="!dashboard?.nextLesson"></fe-loading-spinner>
+  <ngx-skeleton-loader *ngIf="!dashboard?.nextLesson" animation="progress" appearance="line"></ngx-skeleton-loader>
 </fe-card>

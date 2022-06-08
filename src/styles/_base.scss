@@ -218,6 +218,24 @@ mat-form-field.input.mat-form-field {
   }
 }
 
+ngx-skeleton-loader span.loader.progress {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.dark ngx-skeleton-loader span.loader.progress {
+  background: #4c4c4c no-repeat;
+
+  &:before {
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.2),
+      transparent
+    );
+  }
+}
+
 fe-post-link:not(:last-of-type),
 .post-link-wrapper:not(:last-of-type) {
   margin-bottom: 10px;
