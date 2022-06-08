@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from '../../core/angular-material.module';
 import { LoadingSpinnerModule } from '../../core/components/loading-spinner/loading-spinner.module';
-import { NewsCardContainerModule } from '../../shared/components/news-card-container/news-card-container.module';
+import { NewsCardModule } from '../../shared/components/news-card/news-card.module';
 import { ScheduleCardModule } from '../../shared/components/schedule-card/schedule-card.module';
 import { SchoolWeekCardModule } from '../../shared/components/school-week-card/school-week-card.module';
 import { NextExamsCardModule } from '../dashboard/next-exams-card/next-exams-card.module';
@@ -26,7 +26,7 @@ import { LandingPage } from './landing.page';
     IndexCardModule,
     MatchingsCardModule,
     ScheduleCardModule,
-    NewsCardContainerModule,
+    NewsCardModule,
     LoadingSpinnerModule,
   ],
 })

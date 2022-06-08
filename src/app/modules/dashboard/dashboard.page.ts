@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { schedule } from '../../core/constants/schedule';
 import { DashboardData } from '../../core/models/dashboard-data';
-import { SchoolNews } from '../../core/models/school-news';
 import { AuthService } from '../../core/services/auth.service';
 import { DataService } from '../../core/services/data.service';
 import { HeaderService } from '../../core/services/header.service';
@@ -21,17 +20,9 @@ export class DashboardPage implements OnInit {
     this.setupComponent();
   }
 
-  public getLatest(): SchoolNews[] {
-    if (this.dataService.dashboard?.schoolNews === undefined) return [];
-    return [this.dataService.dashboard.schoolNews[0]];
-  }
-
   private setupComponent(): void {
     if (!this.dataService.dashboard) {
       this.dataService.dashboard = {} as DashboardData;
-      this.dataService.getAllNews().subscribe((response) => {
-        this.dataService.dashboard.schoolNews = response;
-      });
       this.fetchNextExams();
       this.authService.fetchAllLessons();
     }
@@ -62,6 +53,7 @@ export class DashboardPage implements OnInit {
         }
         return 0;
       });
+
       this.dataService.dashboard.nextExams = openExams;
     });
   }

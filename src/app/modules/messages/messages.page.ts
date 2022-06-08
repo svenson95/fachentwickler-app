@@ -1,45 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { delay } from 'rxjs/operators';
-import { SchoolNews } from '../../core/models/school-news';
-import { DataService } from '../../core/services/data.service';
+import { Component } from '@angular/core';
 import { HeaderService } from '../../core/services/header.service';
-import { LoadingService } from '../../core/services/loading.service';
 
 @Component({
   selector: 'fe-messages-page',
   templateUrl: './messages.page.html',
   styleUrls: ['./messages.page.scss'],
 })
-export class MessagesPage implements OnInit, OnDestroy {
-  public news: SchoolNews[];
-
-  public isLoading: boolean;
-
-  private subscription: Subscription = new Subscription();
-
-  constructor(
-    private headerService: HeaderService,
-    private dataService: DataService,
-    private loadService: LoadingService,
-  ) {
+export class MessagesPage {
+  constructor(private headerService: HeaderService) {
     this.headerService.setPageTitle('Mitteilungen');
-  }
-
-  public ngOnInit(): void {
-    this.subscription.add(
-      this.loadService.loading$.pipe(delay(0)).subscribe((value) => {
-        this.isLoading = value;
-      }),
-    );
-    this.subscription.add(
-      this.dataService.getAllNews().subscribe((res) => {
-        this.news = res;
-      }),
-    );
-  }
-
-  public ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 }

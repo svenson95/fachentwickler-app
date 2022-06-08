@@ -4,5 +4,5 @@
   *ngIf="dataService.dashboard?.nextExams?.length > 0"
 ></fe-next-exams-card>
 <fe-schedule-card [schedule]="schedule"></fe-schedule-card>
-<fe-news-card-container [news]="getLatest()" [onlyNewest]="true"></fe-news-card-container>
+<fe-news-card [onlyNewest]="true"></fe-news-card>
 <fe-school-week-card [week]="dataService.schoolWeek" [showNavigation]="true"></fe-school-week-card>

@@ -1,23 +1,27 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { testDashboard } from '../../../core/constants/landing-page-data';
 import { SchoolNews } from '../../../core/models/school-news';
 import { DataService } from '../../../core/services/data.service';
 import { LoadingService } from '../../../core/services/loading.service';
 
 @Component({
-  selector: 'fe-news-card-container',
-  templateUrl: './news-card-container.component.html',
+  selector: 'fe-news-card',
+  templateUrl: './news-card.component.html',
+  styleUrls: ['./news-card.component.scss'],
 })
-export class NewsCardContainerComponent implements OnInit, OnDestroy {
-  @Input() public news: SchoolNews[];
+export class NewsCardComponent implements OnInit, OnDestroy {
+  @Input() public onlyNewest = false;
 
-  @Input() private onlyNewest = false;
+  @Input() private testData = false;
 
-  public allNewsLength: number;
+  public news: SchoolNews[];
 
   public currentPage = 0;
 
   public isLoading: boolean;
+
+  public allNewsLength: number;
 
   private subscription: Subscription = new Subscription();
 
@@ -30,12 +34,20 @@ export class NewsCardContainerComponent implements OnInit, OnDestroy {
       }),
     );
 
-    if (!this.onlyNewest) {
-      this.subscription.add(
-        this.dataService.getAllNewsLength().subscribe((value) => {
-          this.allNewsLength = value;
-        }),
-      );
+    if (this.testData) {
+      this.news = testDashboard.schoolNews;
+    } else if (this.onlyNewest) {
+      this.dataService.getLatestNews().subscribe((response) => {
+        this.news = [response];
+      });
+    } else {
+      this.dataService.getNews().subscribe((response) => {
+        this.news = response;
+      });
+
+      this.dataService.getAllNewsLength().subscribe((response) => {
+        this.allNewsLength = response;
+      });
     }
   }
 
@@ -49,7 +61,7 @@ export class NewsCardContainerComponent implements OnInit, OnDestroy {
     }
 
     this.currentPage = page;
-    this.dataService.getAllNews(page).subscribe((res) => {
+    this.dataService.getNews(page).subscribe((res) => {
       this.news = res;
     });
   }

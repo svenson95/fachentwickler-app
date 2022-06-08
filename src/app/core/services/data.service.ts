@@ -171,13 +171,22 @@ export class DataService {
     );
   }
 
-  public getAllNews(page = 0, itemsPerPage = 10): Observable<SchoolNews[]> {
+  public getNews(page = 0, itemsPerPage = 10): Observable<SchoolNews[]> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const params = new HttpParams().set('page', String(page)).set('size', String(itemsPerPage));
 
     return this.httpClient.get<SchoolNews[]>(`${this.NEWS_ENDPOINT}/all`, { headers, params }).pipe(
       map((response) => {
         // console.log('response GET news', response);
+        return response;
+      }),
+    );
+  }
+
+  public getLatestNews(): Observable<SchoolNews> {
+    return this.httpClient.get<SchoolNews>(`${this.NEWS_ENDPOINT}/latest`).pipe(
+      map((response) => {
+        // console.log('response GET latest news', response);
         return response;
       }),
     );
