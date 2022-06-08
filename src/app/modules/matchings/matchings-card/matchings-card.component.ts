@@ -8,7 +8,7 @@ import { AuthService } from '../../../core/services/auth.service';
   templateUrl: './matchings-card.component.html',
   styleUrls: ['./matchings-card.component.scss'],
 })
-export class MatchingCardComponent implements OnInit {
+export class MatchingsCardComponent implements OnInit {
   @Input() public matching: PostMatchings;
 
   public round = 0;
