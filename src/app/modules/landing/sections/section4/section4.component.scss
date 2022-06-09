@@ -1,0 +1,73 @@
+@import "mixins";
+
+:host {
+  div.section-wrapper {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @include to-xs {
+      flex-direction: column;
+    }
+  }
+
+  div.label-container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    max-width: 360px;
+    margin-bottom: auto;
+
+    &:last-child {
+      @include to-xs {
+        margin-top: 20px;
+      }
+    }
+
+    img.hardware-svg {
+      vertical-align: top;
+      margin-right: 5px;
+    }
+
+    img.hardware-svg,
+    img.world-grid-svg {
+      width: 64px;
+      height: 64px;
+    }
+
+    img.datenbankspeicher-svg {
+      width: 96px;
+      height: 96px;
+    }
+
+    img.world-grid-svg {
+      margin-left: 5px;
+      align-self: flex-end;
+    }
+
+    img.question-svg {
+      width: 80px;
+      height: 80px;
+      color: var(--secondary-color);
+    }
+
+    p.title {
+      align-self: start;
+
+      @include to-lg {
+        align-self: baseline;
+      }
+    }
+  }
+
+  div.components-container {
+    align-self: center;
+
+    @include from-lg {
+      //min-width: 400px;
+    }
+
+    @include to-xs {
+      width: 100%;
+    }
+  }
+}

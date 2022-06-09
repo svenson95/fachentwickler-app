@@ -1,0 +1,38 @@
+<div class="section-wrapper">
+  <div class="label-container">
+    <img class="game-svg" src="../../../assets/images/game.svg" alt="game-svg" />
+    <p class="title">Spielend lernen</p>
+    <p class="description">
+      Nutze verschiedene Lernmethoden um die Inhalte besser im Gedächtnis zu behalten. Teste dein Wissen spielerisch in
+      einem Quiz, mit Karteikarten oder einem Puzzle.
+    </p>
+  </div>
+  <div class="label-container">
+    <img class="online-course-svg" src="../../../assets/images/online-course.svg" alt="online-course-svg" />
+    <p class="title">Online-Unterricht</p>
+    <p class="description">
+      Unterstützend zum Unterricht für ein besseres Verständnis. Alle Themen und Aufgaben aus dem Unterricht in
+      schriftlicher Form erklärt.
+    </p>
+  </div>
+</div>
+<div class="components-container">
+  <div class="component-name-wrapper">
+    <hr />
+    <p class="component-name">Quiz</p>
+    <hr />
+  </div>
+  <fe-quiz-card [quiz]="testQuiz"></fe-quiz-card>
+  <div class="component-name-wrapper">
+    <hr />
+    <p class="component-name">Karteikarten</p>
+    <hr />
+  </div>
+  <fe-index-card [indexCards]="testIndexCards"></fe-index-card>
+  <div class="component-name-wrapper">
+    <hr />
+    <p class="component-name">Matchings</p>
+    <hr />
+  </div>
+  <fe-matchings-card [matching]="testMatching"></fe-matchings-card>
+</div>

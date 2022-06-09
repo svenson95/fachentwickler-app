@@ -1,0 +1,62 @@
+@import "mixins";
+
+:host {
+  align-items: center;
+
+  div.section-wrapper {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    @include to-xs {
+      flex-direction: column;
+    }
+  }
+
+  div.label-container {
+    align-self: center;
+    max-width: 400px;
+
+    @include to-lg {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .title {
+      @include to-lg {
+        align-self: baseline;
+      }
+    }
+
+    .game-svg {
+      width: 100px;
+      margin-left: 20px;
+
+      @include to-lg {
+        margin-right: auto;
+      }
+    }
+
+    .online-course-svg {
+      width: 100px;
+      margin-left: 20px;
+
+      @include to-lg {
+        margin-right: auto;
+      }
+    }
+  }
+
+  div.components-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+
+    fe-quiz-card,
+    fe-index-card,
+    fe-matchings-card {
+      width: 100%;
+    }
+  }
+}

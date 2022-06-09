@@ -1,0 +1,27 @@
+@import "mixins";
+
+:host {
+  display: block;
+  text-align: center;
+
+  div.label-container {
+    align-items: center;
+
+    @include to-lg {
+      margin-top: 40px;
+    }
+
+    img.rocket-svg {
+      width: 100px;
+      height: 100px;
+      font-size: 100px;
+      color: var(--secondary-color);
+    }
+  }
+
+  button.fe-text-button {
+    width: fit-content;
+    align-self: center;
+    margin-top: 10px;
+  }
+}

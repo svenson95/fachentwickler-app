@@ -1,0 +1,34 @@
+<div class="section-wrapper">
+  <div class="label-container">
+    <img class="education-svg" src="../../../assets/images/education.svg" alt="education-svg" />
+    <div class="label-wrapper">
+      <p class="title">Helfer für die Berufsschule</p>
+      <p class="description">
+        Einsicht in den Stundenplan, anstehende Klausuren, Schulmitteilungen und Ansicht der aktuellen Schulwoche mit
+        allen einzelnen Unterrichtsstunden.
+      </p>
+    </div>
+  </div>
+  <div class="label-container">
+    <img class="reading-svg" src="../../../assets/images/reading.svg" alt="reading.svg" />
+    <div class="label-wrapper">
+      <p class="title">Digitale Schulbibliothek</p>
+      <p class="description">
+        Bestehend aus <b>39</b> Schulwochen. <br />
+        Mit insgesamt <b>330</b> Lektionen.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="components-container">
+  <div class="component-name-wrapper">
+    <hr />
+    <p class="component-name">Dashboard</p>
+    <hr />
+  </div>
+  <fe-user-progress-card [user]="testUser" [dashboard]="testDashboard"></fe-user-progress-card>
+  <fe-next-exams-card [nextExams]="testDashboard.nextExams"></fe-next-exams-card>
+  <fe-schedule-card [schedule]="testSchedule"></fe-schedule-card>
+  <fe-news-card [testData]="true"></fe-news-card>
+  <fe-school-week-card [week]="testSchoolWeek"></fe-school-week-card>
+</div>

@@ -1,0 +1,75 @@
+@import "mixins";
+
+mat-card.card {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  svg.app-icon {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 20px;
+
+    @include to-xs {
+      width: 150px;
+      height: 150px;
+      top: 40px;
+      left: -20px;
+    }
+
+    path {
+      fill: var(--secondary-color);
+      stroke: var(--secondary-color);
+      opacity: 0.2;
+
+      @include to-xs {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  div.label-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    align-items: initial;
+    margin: 0;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-align: right;
+    text-transform: uppercase;
+
+    @include to-lg {
+      font-size: 1.1em;
+      line-height: 16px;
+    }
+
+    @include to-xs {
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .grey-1 {
+      color: var(--grey-4);
+    }
+    .grey-2 {
+      color: var(--grey-3);
+    }
+    .grey-3 {
+      color: var(--grey-2);
+    }
+  }
+}
