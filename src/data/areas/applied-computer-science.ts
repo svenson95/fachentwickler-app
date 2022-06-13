@@ -1,5 +1,5 @@
 // import { Area } from "../../app/models/area";
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars */
 
 const appliedComputerScience = {
   "url": "/angewandte-informatik",

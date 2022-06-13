@@ -1,5 +1,5 @@
 import { PostArticle } from '../../app/core/models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars */
 
 const ENGLISH_POSTS: PostArticle[] = [
   {

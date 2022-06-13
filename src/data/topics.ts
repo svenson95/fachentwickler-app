@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { TopicUnpopulated } from "../app/core/models/topic";
 
 const topics: TopicUnpopulated[] = [

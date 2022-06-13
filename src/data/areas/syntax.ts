@@ -1,4 +1,4 @@
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars */
 
 const syntax = {
   "url": "/syntax",
