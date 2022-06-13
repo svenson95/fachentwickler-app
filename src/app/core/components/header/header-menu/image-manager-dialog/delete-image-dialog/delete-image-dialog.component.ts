@@ -1,10 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 import { AuthService } from '@services/auth.service';
-import { DataService } from '@services/data.service';
+import { ImageManagerService } from '@services/image-manager.service';
 
 @Component({
   selector: 'fe-delete-image-dialog',
@@ -18,31 +16,14 @@ export class DeleteImageDialogComponent {
     @Inject(MAT_DIALOG_DATA) private data: any,
     public dialogRef: MatDialogRef<DeleteImageDialogComponent>,
     public authService: AuthService,
-    private dataService: DataService,
-    private snackBar: MatSnackBar,
+    private imageManager: ImageManagerService,
   ) {}
 
-  public deleteRequest(): void {
+  public deleteImage(): void {
     this.isLoadingDelete = true;
-    this.dataService.deleteImageById(this.data.postId).subscribe(
-      // success
-      () => {
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: 'Bild erfolgreich gelöscht',
-        });
-      },
-      (error) => {
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 3000,
-          data: `Fehler beim Löschen: ${error}`,
-        });
-      },
-      // finally
-      () => {
-        this.isLoadingDelete = undefined;
-        this.dialogRef.close(true);
-      },
-    );
+    this.imageManager.deleteImageFromDB(this.data.postId, () => {
+      this.isLoadingDelete = undefined;
+      this.dialogRef.close(true);
+    });
   }
 }

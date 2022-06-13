@@ -66,7 +66,7 @@ mat-dialog-content.image-manager {
     margin: 20px 0;
   }
 
-  .fe-add-image-form {
+  .add-image-form {
     display: flex;
     text-align: center;
     align-items: center;
@@ -83,7 +83,7 @@ mat-dialog-content.image-manager {
     }
   }
 
-  .fe-im-recent-images {
+  .recent-images-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,13 +144,6 @@ mat-dialog-content.image-manager {
         border-bottom: 1px solid var(--secondary-color);
         transition: border-bottom-color 150ms ease-in;
       }
-    }
-  }
-
-  .fe-pagination-bar {
-    hr {
-      margin-top: 0;
-      margin-bottom: 10px;
     }
   }
 }

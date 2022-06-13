@@ -9,7 +9,7 @@
     </mat-card-subtitle>
   </mat-card-header>
   <p class="title">Neues Bild hochladen</p>
-  <form class="fe-add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
+  <form class="add-image-form" encType="multipart/form-data" (submit)="uploadImage($event)">
     <div
       class="upload-image-dropzone"
       id="upload-image-dropzone"
@@ -110,7 +110,7 @@
       </mat-icon>
     </button>
   </div>
-  <div class="fe-im-recent-images">
+  <div class="recent-images-container">
     <fe-loading-spinner *ngIf="images.length === 0 || isLoadingImages"></fe-loading-spinner>
     <div class="images-list" *ngIf="!isLoadingImages">
       <button
@@ -126,11 +126,10 @@
       </button>
     </div>
   </div>
-  <div class="fe-pagination-bar" *ngIf="images.length > 0 && allImagesLength">
-    <fe-pagination-bar
-      [totalItems]="allImagesLength"
-      [currentPage]="currentPage"
-      (changePage)="loadImages($event)"
-    ></fe-pagination-bar>
-  </div>
+  <fe-pagination-bar
+    *ngIf="images.length > 0 && allImagesLength"
+    [totalItems]="allImagesLength"
+    [currentPage]="currentPage"
+    (changePage)="loadImages($event)"
+  ></fe-pagination-bar>
 </mat-dialog-content>

@@ -1,7 +1,7 @@
 <mat-dialog-content> Bist du sicher, dass du das Bild löschen möchtest? </mat-dialog-content>
 <mat-dialog-actions>
   <button class="fe-text-button close" mat-dialog-close>Nein</button>
-  <fe-state-button [isLoading]="isLoadingDelete" (click)="deleteRequest()">
+  <fe-state-button [isLoading]="isLoadingDelete" (click)="deleteImage()">
     Ja
     <ion-icon class="delete-icon" name="backspace"></ion-icon>
   </fe-state-button>

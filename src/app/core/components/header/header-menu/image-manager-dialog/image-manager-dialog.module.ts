@@ -3,13 +3,13 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 
 import { SharedModule } from '../../../../../shared/shared.module';
 
-import { DeleteImageDialogModule } from './delete-image-dialog/delete-image-dialog.module';
+import { DeleteImageDialogComponent } from './delete-image-dialog/delete-image-dialog.component';
 import { ImageManagerDialogComponent } from './image-manager-dialog.component';
 
 @NgModule({
-  declarations: [ImageManagerDialogComponent],
+  declarations: [ImageManagerDialogComponent, DeleteImageDialogComponent],
   exports: [ImageManagerDialogComponent],
-  imports: [SharedModule, NgxDropzoneModule, DeleteImageDialogModule],
+  imports: [SharedModule, NgxDropzoneModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ImageManagerDialogModule {}
