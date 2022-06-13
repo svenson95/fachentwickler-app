@@ -1,2 +1,5 @@
 # Ignore all data files:
-/src/data/**/*.ts 
+/src/data/**/*.ts
+.angular/**/*.*
+e2e/**/*.*
+karma.conf.js
