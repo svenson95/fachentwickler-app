@@ -38,7 +38,7 @@ export class NewsCardComponent implements OnInit, OnDestroy {
       this.news = testDashboard.schoolNews;
     } else if (this.onlyNewest) {
       this.dataService.getLatestNews().subscribe((response) => {
-        this.news = [response];
+        this.news = response;
       });
     } else {
       this.dataService.getNews().subscribe((response) => {

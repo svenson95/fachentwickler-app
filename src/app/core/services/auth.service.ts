@@ -163,14 +163,14 @@ export class AuthService {
       );
   }
 
-  public async fetchAllLessons(): Promise<void> {
+  public async fetchUsersNextLesson(): Promise<void> {
     this.dataService.getAllLessons().subscribe((lessons) => {
       this.dataService.dashboard.allLessons = lessons;
       this.fetchNextLesson(lessons);
     });
   }
 
-  public fetchNextLesson(lessons: string[]): void {
+  private fetchNextLesson(lessons: string[]): void {
     const nextLessonId = lessons.find((lessonId) => !this.user.progress.includes(lessonId));
 
     this.dataService.getPostById(nextLessonId).subscribe((nextLesson) => {
@@ -180,6 +180,32 @@ export class AuthService {
       this.dataService.getSchoolWeek(Number(nextLesson.schoolWeek)).subscribe((response) => {
         this.dataService.schoolWeek = response;
       });
+    });
+  }
+
+  public fetchNextExams(): void {
+    this.dataService.getAllExamDates().subscribe((exams) => {
+      const openExams = [];
+
+      const today = new Date();
+      today.setHours(23, 59, 59, 999);
+
+      exams.forEach((exam) => {
+        const examDate = new Date(exam.date);
+        examDate.setHours(23, 59, 59, 999);
+
+        if (today <= examDate) {
+          openExams.push(exam);
+        }
+      });
+
+      openExams.sort((a, b) => {
+        if (a.date > b.date) return 1;
+        if (a.date < b.date) return -1;
+        return 0;
+      });
+
+      this.dataService.dashboard.nextExams = openExams;
     });
   }
 

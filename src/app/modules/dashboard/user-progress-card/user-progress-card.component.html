@@ -1,22 +1,12 @@
 <fe-card class="user-progress" title="Fortschritt">
   <div class="current-lesson">
-    <p class="label">
-      <span>Lektion </span>
-      <span>{{ user?.progress ? user.progress?.length : "..." }} </span>
-      <span>von </span>
-      <span>{{ dashboard?.allLessons?.length || "..." }}</span>
-    </p>
+    <p class="label">Lektion {{ lessonProgress }} von {{ lessonLength }}</p>
     <mat-progress-bar [value]="dashboard?.lessonsPercentage"></mat-progress-bar>
   </div>
 
   <div class="current-week">
-    <p class="label">
-      Schulwoche {{ dashboard?.nextLesson?.schoolWeek || "..." }} von
-      {{ dataService.schoolWeeksLength }}
-    </p>
-    <mat-progress-bar
-      [value]="(dashboard?.nextLesson?.schoolWeek / dataService.schoolWeeksLength) * 100"
-    ></mat-progress-bar>
+    <p class="label">Schulwoche {{ weekProgress }} von {{ weekLength }}</p>
+    <mat-progress-bar [value]="schoolWeekPercentage"></mat-progress-bar>
   </div>
 
   <fe-post-link *ngIf="dashboard?.nextLesson" [post]="dashboard?.nextLesson" title="Nächste Lektion"></fe-post-link>

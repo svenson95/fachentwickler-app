@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { schedule } from '../../core/constants/schedule';
 import { DashboardData } from '../../core/models/dashboard-data';
+import { Schedule } from '../../core/models/schedule';
 import { AuthService } from '../../core/services/auth.service';
 import { DataService } from '../../core/services/data.service';
 import { HeaderService } from '../../core/services/header.service';
@@ -10,9 +11,9 @@ import { HeaderService } from '../../core/services/header.service';
   templateUrl: './dashboard.page.html',
 })
 export class DashboardPage implements OnInit {
-  public schedule = schedule;
+  public schedule: Schedule = schedule;
 
-  constructor(private headerService: HeaderService, public authService: AuthService, public dataService: DataService) {
+  constructor(private headerService: HeaderService, public dataService: DataService, public authService: AuthService) {
     this.headerService.setPageTitle('Dashboard');
   }
 
@@ -23,38 +24,8 @@ export class DashboardPage implements OnInit {
   private setupComponent(): void {
     if (!this.dataService.dashboard) {
       this.dataService.dashboard = {} as DashboardData;
-      this.fetchNextExams();
-      this.authService.fetchAllLessons();
+      this.authService.fetchNextExams();
+      this.authService.fetchUsersNextLesson();
     }
-  }
-
-  private fetchNextExams(): void {
-    this.dataService.getAllExamDates().subscribe((exams) => {
-      const openExams = [];
-
-      const today = new Date();
-      today.setHours(23, 59, 59, 999);
-
-      exams.forEach((exam) => {
-        const examDate = new Date(exam.date);
-        examDate.setHours(23, 59, 59, 999);
-
-        if (today <= examDate) {
-          openExams.push(exam);
-        }
-      });
-
-      openExams.sort((a, b) => {
-        if (a.date > b.date) {
-          return 1;
-        }
-        if (a.date < b.date) {
-          return -1;
-        }
-        return 0;
-      });
-
-      this.dataService.dashboard.nextExams = openExams;
-    });
   }
 }

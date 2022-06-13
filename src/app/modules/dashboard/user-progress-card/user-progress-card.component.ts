@@ -14,5 +14,26 @@ export class UserProgressCardComponent {
 
   @Input() public dashboard: DashboardData;
 
-  constructor(public dataService: DataService, public loadingService: LoadingService) {}
+  public get lessonProgress(): number | string {
+    return this.user.progress.length || '...';
+  }
+
+  public get lessonLength(): number | string {
+    return this.dashboard.allLessons?.length || '...';
+  }
+
+  public get weekProgress(): number | string {
+    return this.dashboard.nextLesson?.schoolWeek || '...';
+  }
+
+  public get weekLength(): number {
+    return this.dataService.schoolWeeksLength;
+  }
+
+  public get schoolWeekPercentage(): number {
+    const currentWeek = this.dashboard?.nextLesson?.schoolWeek;
+    return (currentWeek / this.dataService.schoolWeeksLength) * 100;
+  }
+
+  constructor(private dataService: DataService, public loadingService: LoadingService) {}
 }
