@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../../core/angular-material.module';
+import { SharedModule } from '../../../../../shared/shared.module';
 import { LogoutDialogComponent } from './logout-dialog.component';
 
 @NgModule({
   declarations: [LogoutDialogComponent],
   exports: [LogoutDialogComponent],
-  imports: [CommonModule, AngularMaterialModule],
+  imports: [SharedModule],
 })
 export class LogoutDialogModule {}

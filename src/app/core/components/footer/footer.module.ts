@@ -1,12 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../angular-material.module';
+import { SharedModule } from '../../../shared/shared.module';
 import { AppIconModule } from '../app-icon/app-icon.module';
 import { FooterComponent } from './footer.component';
 
 @NgModule({
   declarations: [FooterComponent],
   exports: [FooterComponent],
-  imports: [CommonModule, AngularMaterialModule, AppIconModule],
+  imports: [SharedModule, AppIconModule],
 })
 export class FooterModule {}

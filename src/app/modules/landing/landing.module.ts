@@ -1,10 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../../core/angular-material.module';
-import { LoadingSpinnerModule } from '../../core/components/loading-spinner/loading-spinner.module';
-import { NewsCardModule } from '../../shared/components/news-card/news-card.module';
-import { ScheduleCardModule } from '../../shared/components/schedule-card/schedule-card.module';
-import { SchoolWeekCardModule } from '../../shared/components/school-week-card/school-week-card.module';
+import { SharedModule } from '../../shared/shared.module';
 import { NextExamsCardModule } from '../dashboard/next-exams-card/next-exams-card.module';
 import { UserProgressCardModule } from '../dashboard/user-progress-card/user-progress-card.module';
 import { IndexCardModule } from '../indexcards/index-card/index-card.module';
@@ -28,18 +23,13 @@ import { WelcomeBannerComponent } from './sections/welcome-banner/welcome-banner
     Section4Component,
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     LandingRoutingModule,
-    AngularMaterialModule,
     NextExamsCardModule,
     UserProgressCardModule,
-    SchoolWeekCardModule,
     QuizCardModule,
     IndexCardModule,
     MatchingsCardModule,
-    ScheduleCardModule,
-    NewsCardModule,
-    LoadingSpinnerModule,
   ],
 })
 export class LandingPageModule {}

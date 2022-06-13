@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { CommonModule, registerLocaleData } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import localeDe from '@angular/common/locales/de';
 import { LOCALE_ID, NgModule } from '@angular/core';
@@ -13,11 +13,11 @@ import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularMaterialModule } from './core/angular-material.module';
 import { ContentModule } from './core/components/content/content.module';
 import { HeaderModule } from './core/components/header/header.module';
 import { SidenavModule } from './core/components/sidenav/sidenav.module';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { SharedModule } from './shared/shared.module';
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {
@@ -29,12 +29,11 @@ const globalRippleConfig: RippleGlobalOptions = {
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatNativeDateModule,
-    AngularMaterialModule,
     AppRoutingModule,
     HeaderModule,
     SidenavModule,

@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CardModule } from '../../../core/components/card/card.module';
+import { SharedModule } from '../../../shared/shared.module';
 import { IndexCardComponent } from './index-card.component';
 
 @NgModule({
   declarations: [IndexCardComponent],
   exports: [IndexCardComponent],
-  imports: [CommonModule, CardModule],
+  imports: [SharedModule],
 })
 export class IndexCardModule {}

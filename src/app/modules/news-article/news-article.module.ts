@@ -1,13 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CardModule } from '../../core/components/card/card.module';
-import { LoadingSpinnerModule } from '../../core/components/loading-spinner/loading-spinner.module';
-import { PostElementModule } from '../../shared/components/post-element/post-element.module';
+import { SharedModule } from '../../shared/shared.module';
 import { NewsArticleRoutingModule } from './news-article-routing.module';
 import { NewsArticlePage } from './news-article.page';
 
 @NgModule({
   declarations: [NewsArticlePage],
-  imports: [CommonModule, NewsArticleRoutingModule, CardModule, PostElementModule, LoadingSpinnerModule],
+  imports: [SharedModule, NewsArticleRoutingModule],
 })
 export class NewsArticlePageModule {}

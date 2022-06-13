@@ -38,7 +38,7 @@
           ></button>
         </div>
       </div>
-      <div class="quiz-end" *ngIf="end">
+      <div class="quiz-end" *ngIf="end" #slideInWrapper>
         <p class="quiz-done-label">Lektion abgeschlossen</p>
         <div class="quiz-end-wrapper">
           <p *ngIf="wrongAnswers === 0">Du hast das Quiz ohne Fehler abgeschlossen</p>

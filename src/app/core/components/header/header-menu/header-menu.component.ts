@@ -3,12 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ImageManagerDialogComponent } from '../../../../shared/dialogs/image-manager-dialog/image-manager-dialog.component';
-import { LogoutDialogComponent } from '../../../../shared/dialogs/logout-dialog/logout-dialog.component';
 import { UserRole } from '../../../models/user';
 import { AuthService } from '../../../services/auth.service';
 import { MediaQueryService } from '../../../services/media-query.service';
 import { ThemeService } from '../../../services/theme.service';
+import { ImageManagerDialogComponent } from './image-manager-dialog/image-manager-dialog.component';
+import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
 
 @Component({
   selector: 'fe-header-menu',

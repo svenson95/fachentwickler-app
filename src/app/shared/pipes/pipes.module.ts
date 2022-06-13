@@ -2,20 +2,14 @@ import { NgModule } from '@angular/core';
 import { AlreadyReadPipe } from './already-read/already-read.pipe';
 import { DaysLeftPipe } from './days-left/days-left.pipe';
 import { LongSubjectNamePipe } from './long-subject-name/long-subject-name.pipe';
+import { PageButtonsPipe } from './page-buttons/page-buttons.pipe';
 import { SchoolDaysPipe } from './school-days/school-days.pipe';
-import { SubjectIconPipe } from './subject-icon/subject-icon.pipe';
 import { WeekdayStringPipe } from './weekday-string/weekday-string.pipe';
 
+const pipes = [LongSubjectNamePipe, WeekdayStringPipe, AlreadyReadPipe, SchoolDaysPipe, DaysLeftPipe, PageButtonsPipe];
+
 @NgModule({
-  declarations: [
-    LongSubjectNamePipe,
-    WeekdayStringPipe,
-    AlreadyReadPipe,
-    SchoolDaysPipe,
-    DaysLeftPipe,
-    SubjectIconPipe,
-  ],
-  exports: [LongSubjectNamePipe, WeekdayStringPipe, AlreadyReadPipe, SchoolDaysPipe, DaysLeftPipe, SubjectIconPipe],
-  imports: [],
+  declarations: [pipes],
+  exports: [pipes],
 })
 export class PipesModule {}

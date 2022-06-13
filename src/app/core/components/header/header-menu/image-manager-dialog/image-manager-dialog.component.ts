@@ -1,11 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ImageData, ImageFile } from '../../../core/models/image-data';
-import { UserRole } from '../../../core/models/user';
-import { AuthService } from '../../../core/services/auth.service';
-import { DataService } from '../../../core/services/data.service';
-import { LoadingService } from '../../../core/services/loading.service';
-import { DeleteImageDialogComponent } from '../delete-image-dialog/delete-image-dialog.component';
+import { ImageData, ImageFile } from '../../../../models/image-data';
+import { UserRole } from '../../../../models/user';
+import { AuthService } from '../../../../services/auth.service';
+import { DataService } from '../../../../services/data.service';
+import { LoadingService } from '../../../../services/loading.service';
+import { DeleteImageDialogComponent } from './delete-image-dialog/delete-image-dialog.component';
 
 @Component({
   selector: 'fe-image-manager-dialog',
@@ -140,7 +140,7 @@ export class ImageManagerDialogComponent {
     return `${parseFloat((bytes / k ** i).toFixed(dm))} ${sizes[i]}`;
   }
 
-  public loadImages(pageNumber: number): void {
+  public loadImages(pageNumber: any): void {
     this.loadPage(pageNumber);
   }
 

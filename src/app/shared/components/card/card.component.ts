@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PostType } from '../../enums/post-type';
+import { PostType } from '../../../core/enums/post-type';
 
 @Component({
   selector: 'fe-card',

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { SnackbarComponent } from '../../../core/components/snackbar/snackbar.component';
-import { AuthService } from '../../../core/services/auth.service';
+import { AuthService } from '../../../../services/auth.service';
+import { SnackbarComponent } from '../../../snackbar/snackbar.component';
 
 @Component({
   selector: 'fe-logout-dialog',

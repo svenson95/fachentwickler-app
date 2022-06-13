@@ -183,8 +183,8 @@ export class DataService {
     );
   }
 
-  public getLatestNews(): Observable<SchoolNews> {
-    return this.httpClient.get<SchoolNews>(`${this.NEWS_ENDPOINT}/latest`).pipe(
+  public getLatestNews(): Observable<SchoolNews[]> {
+    return this.httpClient.get<SchoolNews[]>(`${this.NEWS_ENDPOINT}/latest`).pipe(
       map((response) => {
         // console.log('response GET latest news', response);
         return response;
