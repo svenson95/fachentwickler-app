@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AdminGuardService } from '../../core/guards/admin-guard.service';
+
 import { SubjectPage } from './subject.page';
 
 const routes: Routes = [

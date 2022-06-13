@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../../shared/shared.module';
+
 import { SubstitutionScheduleRoutingModule } from './substitution-schedule-routing.module';
 import { SubstitutionSchedulePage } from './substitution-schedule.page';
 

@@ -1,4 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
+
 import { ElementType } from '../../../core/enums/element-type';
 import { ImageChunk } from '../../../core/models/image-data';
 import { PostElement, SublistItem } from '../../../core/models/post-element';

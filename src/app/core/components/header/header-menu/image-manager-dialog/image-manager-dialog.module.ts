@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+
 import { SharedModule } from '../../../../../shared/shared.module';
+
 import { DeleteImageDialogModule } from './delete-image-dialog/delete-image-dialog.module';
 import { ImageManagerDialogComponent } from './image-manager-dialog.component';
 

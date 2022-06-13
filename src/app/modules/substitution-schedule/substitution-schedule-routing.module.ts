@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { SubstitutionSchedulePage } from './substitution-schedule.page';
 
 const routes: Routes = [

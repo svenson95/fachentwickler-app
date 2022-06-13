@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
 import { subjects } from '../../core/constants/menu-items';
 import { PostType } from '../../core/enums/post-type';
 import { SubjectPopulated } from '../../core/models/subject';

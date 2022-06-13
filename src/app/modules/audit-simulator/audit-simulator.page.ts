@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
+
 import { auditQuestions } from '../../core/constants/pruefungsfragen';
 import { AuditState } from '../../core/enums/audit-state';
 import { ImageChunk } from '../../core/models/image-data';

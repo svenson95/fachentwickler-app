@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { languages, myClass, study, subjects } from '../../../core/constants/menu-items';
-import { AuthService } from '../../../core/services/auth.service';
+
+import { languages, myClass, study, subjects } from '../../constants/menu-items';
+import { AuthService } from '../../services/auth.service';
 import { MenuItem } from '../../models/menu-item';
 
 @Component({

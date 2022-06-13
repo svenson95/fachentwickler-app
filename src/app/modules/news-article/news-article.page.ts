@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { SchoolNews } from '../../core/models/school-news';
 import { DataService } from '../../core/services/data.service';
 import { HeaderService } from '../../core/services/header.service';

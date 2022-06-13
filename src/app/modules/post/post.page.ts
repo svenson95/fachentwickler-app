@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+
 import { testArticle } from '../../../data/posts/post-template';
 import { subjects } from '../../core/constants/menu-items';
 import { PostArticle } from '../../core/models/post';

@@ -1,11 +1,13 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
+
 import { SchoolWeek } from '../../core/models/school-week';
-import { SchoolYear } from '../../core/models/school-year';
 import { DataService } from '../../core/services/data.service';
 import { HeaderService } from '../../core/services/header.service';
 import { LoadingService } from '../../core/services/loading.service';
+
+import { SchoolYear } from './school-year';
 
 @Component({
   selector: 'fe-curriculum-page',

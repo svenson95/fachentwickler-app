@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../../shared/shared.module';
+
 import { NewsArticleRoutingModule } from './news-article-routing.module';
 import { NewsArticlePage } from './news-article.page';
 

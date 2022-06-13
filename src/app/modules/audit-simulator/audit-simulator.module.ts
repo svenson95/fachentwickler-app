@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../../shared/shared.module';
+
 import { PruefungsSimulatorPageRoutingModule } from './audit-simulator-routing.module';
 import { AuditSimulatorPage } from './audit-simulator.page';
 

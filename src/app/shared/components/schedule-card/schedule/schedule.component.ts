@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+
 import { subjects } from '../../../../core/constants/menu-items';
 import { MenuItem } from '../../../../core/models/menu-item';
 import { Schedule } from '../../../../core/models/schedule';

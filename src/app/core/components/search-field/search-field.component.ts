@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
+
 import { SearchPostService } from '../../services/search-post.service';
 
 @Component({

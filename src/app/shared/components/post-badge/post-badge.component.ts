@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+
 import { PostType } from '../../../core/enums/post-type';
 
 @Component({

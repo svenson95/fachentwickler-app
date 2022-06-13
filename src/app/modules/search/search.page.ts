@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
 import { Post } from '../../core/models/post';
 import { HeaderService } from '../../core/services/header.service';
 import { MediaQueryService } from '../../core/services/media-query.service';

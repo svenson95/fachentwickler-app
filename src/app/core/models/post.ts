@@ -1,4 +1,5 @@
 import { PostType } from '../enums/post-type';
+
 import { PostElement } from './post-element';
 
 interface IndexCardQuestion {

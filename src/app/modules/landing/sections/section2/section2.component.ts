@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { testDashboard, testSchedule, testSchoolWeek, testUser } from '../../../../core/constants/landing-page-data';
 import { DashboardData } from '../../../../core/models/dashboard-data';
 import { Schedule } from '../../../../core/models/schedule';

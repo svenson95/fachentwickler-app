@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../../../shared/shared.module';
+
 import { NextExamsCardComponent } from './next-exams-card.component';
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+
 import { PostQuiz } from '../../../core/models/post';
 import { DataService } from '../../../core/services/data.service';
 

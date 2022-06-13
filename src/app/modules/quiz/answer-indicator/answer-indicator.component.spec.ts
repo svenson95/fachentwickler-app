@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { AnswerIndicatorComponent } from './answer-indicator.component';
 
 describe('AnswerIndicatorComponent', () => {

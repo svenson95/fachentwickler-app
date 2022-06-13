@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+
 import { AuthService } from '../../../../services/auth.service';
 import { SnackbarComponent } from '../../../snackbar/snackbar.component';
 

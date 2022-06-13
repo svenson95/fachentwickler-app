@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HighlightModule } from 'ngx-highlightjs';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
 import { AngularMaterialModule } from './angular-material.module';
 import { CardComponent } from './components/card/card.component';
 import { CheckmarkComponent } from './components/checkmark/checkmark.component';

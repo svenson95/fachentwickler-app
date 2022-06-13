@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { subjects } from '../../../core/constants/menu-items';
 
 @Pipe({

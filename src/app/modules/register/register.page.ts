@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } fro
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
 import { SnackbarComponent } from '../../core/components/snackbar/snackbar.component';
 import { RegisterUser, UserRole } from '../../core/models/user';
 import { AuthService } from '../../core/services/auth.service';

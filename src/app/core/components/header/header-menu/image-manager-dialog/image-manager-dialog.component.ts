@@ -1,10 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+
 import { ImageData, ImageFile } from '../../../../models/image-data';
 import { UserRole } from '../../../../models/user';
 import { AuthService } from '../../../../services/auth.service';
 import { DataService } from '../../../../services/data.service';
 import { LoadingService } from '../../../../services/loading.service';
+
 import { DeleteImageDialogComponent } from './delete-image-dialog/delete-image-dialog.component';
 
 @Component({

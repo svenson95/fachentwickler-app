@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { indexCards } from '../../../../../data/index-cards';
 import { matchings } from '../../../../../data/matchings';
 import { quizzes } from '../../../../../data/quizzes';

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../../shared/shared.module';
+
 import { TeacherFilesPageRoutingModule } from './teacher-files-routing.module';
 import { TeacherFilesPage } from './teacher-files.page';
 

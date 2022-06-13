@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { subjects } from '../../core/constants/menu-items';
 import { PostIndexCards } from '../../core/models/post';
 import { DataService } from '../../core/services/data.service';

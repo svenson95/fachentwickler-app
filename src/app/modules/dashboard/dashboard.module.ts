@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../../shared/shared.module';
+
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardPage } from './dashboard.page';
 import { NextExamsCardModule } from './next-exams-card/next-exams-card.module';

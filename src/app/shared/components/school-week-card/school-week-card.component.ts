@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
+
 import { SchoolWeek } from '../../../core/models/school-week';
 import { DataService } from '../../../core/services/data.service';
 

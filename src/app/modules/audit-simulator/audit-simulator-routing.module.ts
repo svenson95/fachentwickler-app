@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AuditSimulatorPage } from './audit-simulator.page';
 
 const routes: Routes = [

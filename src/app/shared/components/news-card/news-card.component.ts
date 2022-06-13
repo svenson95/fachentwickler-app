@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+
 import { testDashboard } from '../../../core/constants/landing-page-data';
 import { SchoolNews } from '../../../core/models/school-news';
 import { DataService } from '../../../core/services/data.service';
