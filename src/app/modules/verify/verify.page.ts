@@ -3,9 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { SnackbarComponent } from '../../core/components/snackbar/snackbar.component';
-import { AuthService } from '../../core/services/auth.service';
-import { HeaderService } from '../../core/services/header.service';
+import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { AuthService } from '@services/auth.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-verify-page',

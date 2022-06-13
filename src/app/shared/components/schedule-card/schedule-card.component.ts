@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { Schedule } from '../../../core/models/schedule';
+import { Schedule } from '@models/schedule';
 
 @Component({
   selector: 'fe-schedule-card',

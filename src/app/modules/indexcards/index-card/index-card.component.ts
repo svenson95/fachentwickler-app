@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { PostIndexCards } from '../../../core/models/post';
+import { PostIndexCards } from '@models/post';
 
 @Component({
   selector: 'fe-index-card',

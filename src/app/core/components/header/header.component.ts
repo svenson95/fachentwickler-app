@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthService } from '../../services/auth.service';
-import { HeaderService } from '../../services/header.service';
-import { SidenavService } from '../../services/sidenav.service';
+import { AuthService } from '@services/auth.service';
+import { HeaderService } from '@services/header.service';
+import { SidenavService } from '@services/sidenav.service';
 
 @Component({
   selector: 'fe-header',

@@ -2,10 +2,10 @@ import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { Post } from '../../core/models/post';
-import { HeaderService } from '../../core/services/header.service';
-import { MediaQueryService } from '../../core/services/media-query.service';
-import { SearchPostService } from '../../core/services/search-post.service';
+import { Post } from '@models/post';
+import { HeaderService } from '@services/header.service';
+import { MediaQueryService } from '@services/media-query.service';
+import { SearchPostService } from '@services/search-post.service';
 
 @Component({
   selector: 'fe-search-page',

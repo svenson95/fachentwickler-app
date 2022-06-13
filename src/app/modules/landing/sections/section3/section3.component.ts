@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { indexCards } from '../../../../../data/index-cards';
-import { matchings } from '../../../../../data/matchings';
-import { quizzes } from '../../../../../data/quizzes';
-import { PostIndexCards, PostMatchings, PostQuiz } from '../../../../core/models/post';
+import { indexCards } from '@data/index-cards';
+import { matchings } from '@data/matchings';
+import { quizzes } from '@data/quizzes';
+import { PostIndexCards, PostMatchings, PostQuiz } from '@models/post';
 
 @Component({
   selector: 'section.3',

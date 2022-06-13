@@ -4,13 +4,13 @@ import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 
-import { SnackbarComponent } from '../../core/components/snackbar/snackbar.component';
-import { AuthService } from '../../core/services/auth.service';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
-import { LoadingService } from '../../core/services/loading.service';
-import { ThemeService } from '../../core/services/theme.service';
-import { inputsMatch } from '../../shared/validators/match.validator';
+import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { AuthService } from '@services/auth.service';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
+import { LoadingService } from '@services/loading.service';
+import { ThemeService } from '@services/theme.service';
+import { inputsMatch } from '@validators/match.validator';
 
 @Component({
   selector: 'fe-my-profile-page',

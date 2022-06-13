@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { TopicUnpopulated } from "../app/core/models/topic";
+/* eslint-disable @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
+import { TopicUnpopulated } from "@models/topic";
 
 const topics: TopicUnpopulated[] = [
   {

@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
-import { PostQuiz } from '../../../core/models/post';
-import { DataService } from '../../../core/services/data.service';
+import { PostQuiz } from '@models/post';
+import { DataService } from '@services/data.service';
 
 @Component({
   selector: 'fe-quiz-card',

@@ -1,11 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-import { ImageData, ImageFile } from '../../../../models/image-data';
-import { UserRole } from '../../../../models/user';
-import { AuthService } from '../../../../services/auth.service';
-import { DataService } from '../../../../services/data.service';
-import { LoadingService } from '../../../../services/loading.service';
+import { ImageData, ImageFile } from '@models/image-data';
+import { UserRole } from '@models/user';
+import { AuthService } from '@services/auth.service';
+import { DataService } from '@services/data.service';
 
 import { DeleteImageDialogComponent } from './delete-image-dialog/delete-image-dialog.component';
 
@@ -43,12 +42,7 @@ export class ImageManagerDialogComponent {
 
   @ViewChild('fileInput') public fileInput;
 
-  constructor(
-    public authService: AuthService,
-    private dataService: DataService,
-    private loadingService: LoadingService,
-    private dialog: MatDialog,
-  ) {
+  constructor(public authService: AuthService, private dataService: DataService, private dialog: MatDialog) {
     this.loadAllImagesCount();
     this.getImages();
   }

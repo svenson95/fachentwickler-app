@@ -1,4 +1,4 @@
-import { AuditQuestion } from '../models/audit-question';
+import { AuditQuestion } from '@models/audit-question';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const auditQuestions: AuditQuestion[] = [

@@ -4,10 +4,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { environment } from '../../../environments/environment';
-import { SnackbarComponent } from '../components/snackbar/snackbar.component';
-import { AuthResponse, BasicResponse, TokenResponse, UserProgressResponse } from '../models/fetch-response';
-import { AuthUser, EditUser, RegisterUser, User, UserProgress } from '../models/user';
+import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { AuthResponse, BasicResponse, TokenResponse, UserProgressResponse } from '@models/fetch-response';
+import { AuthUser, EditUser, RegisterUser, User, UserProgress } from '@models/user';
+import { environment } from '@env/environment';
 
 import { DataService } from './data.service';
 import { ThemeService } from './theme.service';

@@ -1,4 +1,4 @@
-import { SubjectUnpopulated } from '../app/core/models/subject';
+import { SubjectUnpopulated } from '@models/subject';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const subjectsData: SubjectUnpopulated[] = [

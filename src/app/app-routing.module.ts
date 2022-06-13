@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Route, RouterModule, Routes } from '@angular/router';
 
-import { subjects } from './core/constants/menu-items';
-import { AuthGuardService } from './core/guards/auth-guard.service';
-import { NotAuthGuardService } from './core/guards/not-auth-guard.service';
-import { VerifyGuardService } from './core/guards/verify-guard.service';
+import { subjects } from '@constants/menu-items';
+import { AuthGuardService } from '@guards/auth-guard.service';
+import { NotAuthGuardService } from '@guards/not-auth-guard.service';
+import { VerifyGuardService } from '@guards/verify-guard.service';
 
 const subjectsPaths = (): Array<Route> => {
   const subjectPaths: Route[] = [];

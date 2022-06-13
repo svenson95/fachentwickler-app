@@ -1,4 +1,4 @@
-import { PostQuiz } from '../app/core/models/post';
+import { PostQuiz } from '@models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const quizzes: PostQuiz[] = [

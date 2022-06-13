@@ -1,4 +1,4 @@
-import { ExamDate } from '../app/core/models/exam-date';
+import { ExamDate } from '@models/exam-date';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const exams: ExamDate[] = [

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { HeaderService } from '../../core/services/header.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-teacher-files-page',

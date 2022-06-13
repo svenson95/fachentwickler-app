@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { subjects } from '../../../../core/constants/menu-items';
-import { MenuItem } from '../../../../core/models/menu-item';
-import { Schedule } from '../../../../core/models/schedule';
+import { subjects } from '@constants/menu-items';
+import { MenuItem } from '@models/menu-item';
+import { Schedule } from '@models/schedule';
 
 @Component({
   selector: 'fe-schedule',

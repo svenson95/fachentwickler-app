@@ -1,9 +1,9 @@
 import * as moment from 'moment';
 
-import { DashboardData } from '../models/dashboard-data';
-import { Schedule } from '../models/schedule';
-import { SchoolWeek } from '../models/school-week';
-import { User, UserRole } from '../models/user';
+import { DashboardData } from '@models/dashboard-data';
+import { Schedule } from '@models/schedule';
+import { SchoolWeek } from '@models/school-week';
+import { User, UserRole } from '@models/user';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const testSchoolWeek: SchoolWeek = {

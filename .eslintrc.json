@@ -17,9 +17,7 @@
   "plugins": ["@typescript-eslint", "prettier", "unused-imports"],
   "settings": {
     "import/resolver": {
-      "node": {
-        "extensions": [".ts", ".mjs"]
-      }
+      "typescript": {}
     }
   },
   "rules": {

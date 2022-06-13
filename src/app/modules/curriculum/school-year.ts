@@ -1,4 +1,4 @@
-import { SchoolWeek } from '../../core/models/school-week';
+import { SchoolWeek } from '@models/school-week';
 
 export class SchoolYear {
   public year: number;

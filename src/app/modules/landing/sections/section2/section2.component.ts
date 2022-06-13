@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { testDashboard, testSchedule, testSchoolWeek, testUser } from '../../../../core/constants/landing-page-data';
-import { DashboardData } from '../../../../core/models/dashboard-data';
-import { Schedule } from '../../../../core/models/schedule';
-import { SchoolWeek } from '../../../../core/models/school-week';
-import { User } from '../../../../core/models/user';
+import { testDashboard, testSchedule, testSchoolWeek, testUser } from '@constants/landing-page-data';
+import { DashboardData } from '@models/dashboard-data';
+import { Schedule } from '@models/schedule';
+import { SchoolWeek } from '@models/school-week';
+import { User } from '@models/user';
 
 @Component({
   selector: 'section.2',

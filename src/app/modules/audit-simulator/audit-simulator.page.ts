@@ -2,12 +2,12 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
-import { auditQuestions } from '../../core/constants/pruefungsfragen';
-import { AuditState } from '../../core/enums/audit-state';
-import { ImageChunk } from '../../core/models/image-data';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
-import { LoadingService } from '../../core/services/loading.service';
+import { auditQuestions } from '@constants/pruefungsfragen';
+import { AuditState } from '@enums/audit-state';
+import { ImageChunk } from '@models/image-data';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
+import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'fe-audit-simulator-page',

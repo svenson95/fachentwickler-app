@@ -1,10 +1,10 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { testDashboard } from '../../../core/constants/landing-page-data';
-import { SchoolNews } from '../../../core/models/school-news';
-import { DataService } from '../../../core/services/data.service';
-import { LoadingService } from '../../../core/services/loading.service';
+import { testDashboard } from '@constants/landing-page-data';
+import { SchoolNews } from '@models/school-news';
+import { DataService } from '@services/data.service';
+import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'fe-news-card',

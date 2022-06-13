@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { schedule } from '../../core/constants/schedule';
-import { DashboardData } from '../../core/models/dashboard-data';
-import { Schedule } from '../../core/models/schedule';
-import { AuthService } from '../../core/services/auth.service';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
+import { schedule } from '@constants/schedule';
+import { DashboardData } from '@models/dashboard-data';
+import { Schedule } from '@models/schedule';
+import { AuthService } from '@services/auth.service';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-dashboard-page',

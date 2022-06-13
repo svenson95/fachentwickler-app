@@ -4,10 +4,10 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { UserRole } from '../../../models/user';
-import { AuthService } from '../../../services/auth.service';
-import { MediaQueryService } from '../../../services/media-query.service';
-import { ThemeService } from '../../../services/theme.service';
+import { UserRole } from '@models/user';
+import { AuthService } from '@services/auth.service';
+import { MediaQueryService } from '@services/media-query.service';
+import { ThemeService } from '@services/theme.service';
 
 import { ImageManagerDialogComponent } from './image-manager-dialog/image-manager-dialog.component';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';

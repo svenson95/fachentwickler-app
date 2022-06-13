@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { environment } from '../../../environments/environment';
-import { Post } from '../models/post';
+import { environment } from '@env/environment';
+import { Post } from '@models/post';
 
 @Injectable({
   providedIn: 'root',

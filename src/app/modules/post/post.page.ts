@@ -3,13 +3,13 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import { testArticle } from '../../../data/posts/post-template';
-import { subjects } from '../../core/constants/menu-items';
-import { PostArticle } from '../../core/models/post';
-import { AuthService } from '../../core/services/auth.service';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
-import { LoadingService } from '../../core/services/loading.service';
+import { testArticle } from '@data/posts/post-template';
+import { subjects } from '@constants/menu-items';
+import { PostArticle } from '@models/post';
+import { AuthService } from '@services/auth.service';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
+import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'fe-post-page',

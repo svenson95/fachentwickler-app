@@ -2,9 +2,9 @@ import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } fr
 import { DateAdapter } from '@angular/material/core';
 import { MatCalendar, MatCalendarCellCssClasses } from '@angular/material/datepicker';
 
-import { ExamDate } from '../../core/models/exam-date';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
+import { ExamDate } from '@models/exam-date';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-exams',

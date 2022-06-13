@@ -1,5 +1,5 @@
-import { PostArticle } from '../../app/core/models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars */
+import { PostArticle } from '@models/post';
+/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
 
 const WP_POSTS: PostArticle[] = [
   {

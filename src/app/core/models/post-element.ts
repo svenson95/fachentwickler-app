@@ -1,4 +1,4 @@
-import { ElementType } from '../enums/element-type';
+import { ElementType } from '@enums/element-type';
 
 export interface SublistItem {
   content?: string;

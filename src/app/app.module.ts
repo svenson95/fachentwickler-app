@@ -11,14 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
-import { environment } from '../environments/environment';
+import { ContentModule } from '@core-components/content/content.module';
+import { SidenavModule } from '@core-components/sidenav/sidenav.module';
+import { LoadingInterceptor } from '@interceptors/loading.interceptor';
+import { HeaderModule } from '@core-components/header/header.module';
+import { environment } from '@env/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContentModule } from './core/components/content/content.module';
-import { HeaderModule } from './core/components/header/header.module';
-import { SidenavModule } from './core/components/sidenav/sidenav.module';
-import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 import { SharedModule } from './shared/shared.module';
 
 const globalRippleConfig: RippleGlobalOptions = {

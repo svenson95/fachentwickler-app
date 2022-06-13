@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { environment } from '../../../environments/environment';
-import { DashboardData } from '../models/dashboard-data';
-import { ExamDate } from '../models/exam-date';
-import { ImageData, ImageFile } from '../models/image-data';
-import { Post, PostArticle, PostIndexCards, PostMatchings, PostQuiz } from '../models/post';
-import { SchoolNews } from '../models/school-news';
-import { SchoolWeek } from '../models/school-week';
-import { SubjectPopulated } from '../models/subject';
+import { environment } from '@env/environment';
+import { DashboardData } from '@models/dashboard-data';
+import { SchoolWeek } from '@models/school-week';
+import { SubjectPopulated } from '@models/subject';
+import { Post, PostArticle, PostIndexCards, PostMatchings, PostQuiz } from '@models/post';
+import { ExamDate } from '@models/exam-date';
+import { ImageFile, ImageData } from '@models/image-data';
+import { SchoolNews } from '@models/school-news';
 
 @Injectable({
   providedIn: 'root',

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { subjects } from '../../core/constants/menu-items';
-import { PostMatchings } from '../../core/models/post';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
+import { subjects } from '@constants/menu-items';
+import { PostMatchings } from '@models/post';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-matchings-page',

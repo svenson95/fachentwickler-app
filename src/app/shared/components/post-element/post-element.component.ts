@@ -1,9 +1,9 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
-import { ElementType } from '../../../core/enums/element-type';
-import { ImageChunk } from '../../../core/models/image-data';
-import { PostElement, SublistItem } from '../../../core/models/post-element';
-import { DataService } from '../../../core/services/data.service';
+import { ElementType } from '@enums/element-type';
+import { ImageChunk } from '@models/image-data';
+import { PostElement, SublistItem } from '@models/post-element';
+import { DataService } from '@services/data.service';
 
 @Component({
   selector: 'fe-post-element',

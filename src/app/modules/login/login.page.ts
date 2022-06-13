@@ -4,12 +4,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { SnackbarComponent } from '../../core/components/snackbar/snackbar.component';
-import { AuthUser } from '../../core/models/user';
-import { AuthService } from '../../core/services/auth.service';
-import { HeaderService } from '../../core/services/header.service';
-import { LoadingService } from '../../core/services/loading.service';
-import { ThemeService } from '../../core/services/theme.service';
+import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { AuthUser } from '@models/user';
+import { AuthService } from '@services/auth.service';
+import { HeaderService } from '@services/header.service';
+import { LoadingService } from '@services/loading.service';
+import { ThemeService } from '@services/theme.service';
 
 @Component({
   selector: 'fe-login-page',

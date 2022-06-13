@@ -1,4 +1,4 @@
-import { PostType } from '../enums/post-type';
+import { PostType } from '@enums/post-type';
 
 import { PostElement } from './post-element';
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import { SearchFieldModule } from '../../core/components/search-field/search-field.module';
+import { SearchFieldModule } from '@core-components/search-field/search-field.module';
+
 import { SharedModule } from '../../shared/shared.module';
 
 import { SearchRoutingModule } from './search-routing.module';

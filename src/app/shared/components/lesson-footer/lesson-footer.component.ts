@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { UserRole } from '../../../core/models/user';
-import { AuthService } from '../../../core/services/auth.service';
+import { UserRole } from '@models/user';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'fe-lesson-footer',

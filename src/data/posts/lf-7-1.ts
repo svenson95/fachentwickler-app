@@ -1,4 +1,4 @@
-import { PostArticle } from '../../app/core/models/post';
+import { PostArticle } from '@models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const LF7_1_POSTS: PostArticle[] = [

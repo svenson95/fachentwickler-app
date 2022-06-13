@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { schedule } from '../../core/constants/schedule';
-import { HeaderService } from '../../core/services/header.service';
+import { schedule } from '@constants/schedule';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-substitution-schedule-page',

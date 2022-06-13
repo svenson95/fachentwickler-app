@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { SchoolWeek, WeekDays } from '../../../core/models/school-week';
+import { SchoolWeek, WeekDays } from '@models/school-week';
 
 @Pipe({
   name: 'schoolDays',

@@ -1,5 +1,5 @@
-import { SchoolNews } from '../app/core/models/school-news';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars */
+import { SchoolNews } from '@models/school-news';
+/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
 
 const schoolNewsData: SchoolNews[] = [
   {

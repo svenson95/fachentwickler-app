@@ -1,8 +1,8 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
-import { MatchingPair, PostMatchings } from '../../../core/models/post';
-import { AuthService } from '../../../core/services/auth.service';
+import { MatchingPair, PostMatchings } from '@models/post';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'fe-matchings-card',

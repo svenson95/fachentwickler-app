@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { subjects } from '../../core/constants/menu-items';
-import { PostType } from '../../core/enums/post-type';
-import { SubjectPopulated } from '../../core/models/subject';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
+import { subjects } from '@constants/menu-items';
+import { PostType } from '@enums/post-type';
+import { SubjectPopulated } from '@models/subject';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
   selector: 'fe-subject-page',

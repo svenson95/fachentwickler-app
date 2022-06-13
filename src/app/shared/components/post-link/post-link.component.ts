@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Post } from '../../../core/models/post';
+import { Post } from '@models/post';
 
 @Component({
   selector: 'fe-post-link',

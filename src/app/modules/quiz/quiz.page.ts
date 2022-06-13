@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { subjects } from '../../core/constants/menu-items';
-import { PostQuiz } from '../../core/models/post';
-import { DataService } from '../../core/services/data.service';
-import { HeaderService } from '../../core/services/header.service';
-import { LoadingService } from '../../core/services/loading.service';
+import { subjects } from '@constants/menu-items';
+import { PostQuiz } from '@models/post';
+import { DataService } from '@services/data.service';
+import { HeaderService } from '@services/header.service';
+import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'fe-quiz-page',

@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
-import { DashboardData } from '../../../core/models/dashboard-data';
-import { User } from '../../../core/models/user';
-import { DataService } from '../../../core/services/data.service';
-import { LoadingService } from '../../../core/services/loading.service';
+import { DashboardData } from '@models/dashboard-data';
+import { User } from '@models/user';
+import { DataService } from '@services/data.service';
+import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'fe-user-progress-card',

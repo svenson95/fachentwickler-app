@@ -1,4 +1,4 @@
-import { PostMatchings } from '../app/core/models/post';
+import { PostMatchings } from '@models/post';
 /* eslint-disable quotes, quote-props, max-len, comma-dangle */
 
 export const matchings: PostMatchings[] = [

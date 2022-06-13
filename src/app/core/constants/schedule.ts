@@ -1,4 +1,4 @@
-import { Schedule } from '../models/schedule';
+import { Schedule } from '@models/schedule';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const schedule: Schedule = {

@@ -3,10 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-import { SnackbarComponent } from '../../core/components/snackbar/snackbar.component';
-import { AuthService } from '../../core/services/auth.service';
-import { HeaderService } from '../../core/services/header.service';
-import { inputsMatch } from '../../shared/validators/match.validator';
+import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { AuthService } from '@services/auth.service';
+import { HeaderService } from '@services/header.service';
+import { inputsMatch } from '@validators/match.validator';
 
 @Component({
   selector: 'fe-forgot-password-page',

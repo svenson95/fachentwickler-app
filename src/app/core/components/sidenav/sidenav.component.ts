@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { languages, myClass, study, subjects } from '../../constants/menu-items';
-import { AuthService } from '../../services/auth.service';
-import { MenuItem } from '../../models/menu-item';
+import { languages, myClass, study, subjects } from '@constants/menu-items';
+import { MenuItem } from '@models/menu-item';
+import { AuthService } from '@services/auth.service';
 
 @Component({
   selector: 'fe-sidenav',

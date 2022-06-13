@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
-import { ExamDate } from '../../../core/models/exam-date';
-import { Post } from '../../../core/models/post';
-import { DataService } from '../../../core/services/data.service';
+import { ExamDate } from '@models/exam-date';
+import { Post } from '@models/post';
+import { DataService } from '@services/data.service';
 
 @Component({
   selector: 'fe-exam-item',
