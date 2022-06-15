@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../../shared/shared.module';
-import { NextExamsCardModule } from '../dashboard/next-exams-card/next-exams-card.module';
-import { UserProgressCardModule } from '../dashboard/user-progress-card/user-progress-card.module';
-import { IndexCardModule } from '../indexcards/index-card/index-card.module';
-import { MatchingsCardModule } from '../matchings/matchings-card/matchings-card.module';
-import { QuizCardModule } from '../quiz/quiz-card/quiz-card.module';
+import { IndexCardModule } from '../subject/indexcards/index-card/index-card.module';
+import { MatchingsCardModule } from '../subject/matchings/matchings-card/matchings-card.module';
+import { QuizCardModule } from '../subject/quiz/quiz-card/quiz-card.module';
+import { NextExamsCardModule } from '../user-pages/dashboard/next-exams-card/next-exams-card.module';
+import { UserProgressCardModule } from '../user-pages/dashboard/user-progress-card/user-progress-card.module';
 
 import { LandingRoutingModule } from './landing-routing.module';
 import { LandingPage } from './landing.page';

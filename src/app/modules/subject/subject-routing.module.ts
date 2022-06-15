@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AdminGuardService } from '@guards/admin-guard.service';
-
 import { SubjectPage } from './subject.page';
 
 const routes: Routes = [
@@ -12,24 +10,19 @@ const routes: Routes = [
   },
   {
     path: ':topic/:post',
-    loadChildren: () => import('../post/post.module').then((m) => m.PostPageModule),
-  },
-  {
-    path: ':topic/:post/edit',
-    loadChildren: () => import('../edit-post/edit-post.module').then((m) => m.EditPostPageModule),
-    canActivate: [AdminGuardService],
+    loadChildren: () => import('./post/post.module').then((m) => m.PostPageModule),
   },
   {
     path: ':topic/:title/karteikarten',
-    loadChildren: () => import('../indexcards/indexcards.module').then((m) => m.IndexcardsPageModule),
+    loadChildren: () => import('./indexcards/indexcards.module').then((m) => m.IndexcardsPageModule),
   },
   {
     path: ':topic/:title/quiz',
-    loadChildren: () => import('../quiz/quiz.module').then((m) => m.QuizPageModule),
+    loadChildren: () => import('./quiz/quiz.module').then((m) => m.QuizPageModule),
   },
   {
     path: ':topic/:title/matchings',
-    loadChildren: () => import('../matchings/matchings.module').then((m) => m.MatchingsPageModule),
+    loadChildren: () => import('./matchings/matchings.module').then((m) => m.MatchingsPageModule),
   },
 ];
 

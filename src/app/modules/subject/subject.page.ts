@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { subjects } from '@constants/menu-items';
 import { PostType } from '@enums/post-type';
@@ -13,36 +12,22 @@ import { HeaderService } from '@services/header.service';
   templateUrl: './subject.page.html',
   styleUrls: ['./subject.page.scss'],
 })
-export class SubjectPage implements OnInit, OnDestroy {
+export class SubjectPage {
   public subject: SubjectPopulated;
-
-  private subscription: Subscription = new Subscription();
 
   public PostType = PostType;
 
-  constructor(public router: Router, private dataService: DataService, private headerService: HeaderService) {
+  public get subjectIcon(): string {
+    const sub = subjects.find((s) => s.url === this.router.url);
+    return sub.icon.slice(0, -8);
+  }
+
+  constructor(private router: Router, private data: DataService, private header: HeaderService) {
     const subject = subjects.find((sub) => sub.url === router.url);
-    this.headerService.setPageTitle(subject.title);
-  }
+    this.header.setPageTitle(subject.title);
 
-  public ngOnInit(): void {
-    this.loadSubjectBy(this.router.url);
-    this.subscription.add(
-      this.router.events.subscribe((nav) => {
-        if (nav instanceof NavigationEnd) {
-          this.loadSubjectBy(nav.url);
-        }
-      }),
-    );
-  }
-
-  public ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
-
-  private loadSubjectBy(url: string): void {
-    this.dataService.getSubject(url).subscribe((data) => {
-      this.subject = data;
+    this.data.getSubject(this.router.url).subscribe((response) => {
+      this.subject = response;
     });
   }
 }
