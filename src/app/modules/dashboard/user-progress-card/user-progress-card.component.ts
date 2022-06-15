@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
-import { DashboardData } from '@models/dashboard-data';
+import { Post } from '@models/post';
 import { User } from '@models/user';
-import { DataService } from '@services/data.service';
+import { DashboardService } from '@services/dashboard.service';
 import { LoadingService } from '@services/loading.service';
 
 @Component({
@@ -13,28 +13,32 @@ import { LoadingService } from '@services/loading.service';
 export class UserProgressCardComponent {
   @Input() public user: User;
 
-  @Input() public dashboard: DashboardData;
+  @Input() public allLessons: string[];
+
+  @Input() public nextLesson: Post;
+
+  @Input() public lessonsPercentage: number;
 
   public get lessonProgress(): number | string {
-    return this.user.progress.length || '...';
+    return this.user?.progress.length || '...';
   }
 
   public get lessonLength(): number | string {
-    return this.dashboard.allLessons?.length || '...';
+    return this.allLessons?.length || '...';
   }
 
   public get weekProgress(): number | string {
-    return this.dashboard.nextLesson?.schoolWeek || '...';
+    return this.nextLesson?.schoolWeek || '...';
   }
 
   public get weekLength(): number {
-    return this.dataService.schoolWeeksLength;
+    return this.dashboard.SCHOOL_WEEKS_LENGTH;
   }
 
   public get schoolWeekPercentage(): number {
-    const currentWeek = this.dashboard?.nextLesson?.schoolWeek;
-    return (currentWeek / this.dataService.schoolWeeksLength) * 100;
+    const currentWeek = this.nextLesson?.schoolWeek;
+    return (currentWeek / this.dashboard.SCHOOL_WEEKS_LENGTH) * 100;
   }
 
-  constructor(private dataService: DataService, public loadingService: LoadingService) {}
+  constructor(public loadingService: LoadingService, public dashboard: DashboardService) {}
 }

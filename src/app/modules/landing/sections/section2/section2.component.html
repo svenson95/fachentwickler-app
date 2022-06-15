@@ -26,7 +26,12 @@
     <p class="component-name">Dashboard</p>
     <hr />
   </div>
-  <fe-user-progress-card [user]="testUser" [dashboard]="testDashboard"></fe-user-progress-card>
+  <fe-user-progress-card
+    [user]="testUser"
+    [nextLesson]="testDashboard.nextLesson"
+    [allLessons]="testDashboard.allLessons"
+    [lessonsPercentage]="testDashboard.lessonsPercentage"
+  ></fe-user-progress-card>
   <fe-next-exams-card [nextExams]="testDashboard.nextExams"></fe-next-exams-card>
   <fe-schedule-card [schedule]="testSchedule"></fe-schedule-card>
   <fe-news-card [testData]="true"></fe-news-card>

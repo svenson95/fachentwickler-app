@@ -1,7 +1,7 @@
 <fe-card class="user-progress" title="Fortschritt">
   <div class="current-lesson">
     <p class="label">Lektion {{ lessonProgress }} von {{ lessonLength }}</p>
-    <mat-progress-bar [value]="dashboard?.lessonsPercentage"></mat-progress-bar>
+    <mat-progress-bar [value]="lessonsPercentage"></mat-progress-bar>
   </div>
 
   <div class="current-week">
@@ -9,6 +9,6 @@
     <mat-progress-bar [value]="schoolWeekPercentage"></mat-progress-bar>
   </div>
 
-  <fe-post-link *ngIf="dashboard?.nextLesson" [post]="dashboard?.nextLesson" title="Nächste Lektion"></fe-post-link>
-  <ngx-skeleton-loader *ngIf="!dashboard?.nextLesson" animation="progress" appearance="line"></ngx-skeleton-loader>
+  <fe-post-link *ngIf="nextLesson" [post]="nextLesson" title="Nächste Lektion"></fe-post-link>
+  <ngx-skeleton-loader *ngIf="!nextLesson" animation="progress" appearance="line"></ngx-skeleton-loader>
 </fe-card>

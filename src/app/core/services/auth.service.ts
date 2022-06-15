@@ -9,7 +9,6 @@ import { AuthResponse, BasicResponse, TokenResponse, UserProgressResponse } from
 import { AuthUser, EditUser, RegisterUser, User, UserProgress } from '@models/user';
 import { environment } from '@env/environment';
 
-import { DataService } from './data.service';
 import { ThemeService } from './theme.service';
 
 /* eslint-disable quotes, quote-props, max-len */
@@ -20,6 +19,14 @@ const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';
   providedIn: 'root',
 })
 export class AuthService {
+  public user: User;
+
+  public token = 'jwt';
+
+  public isAuthenticated = false;
+
+  public redirectUrl: string;
+
   private LOGIN_ENDPOINT = `${environment.baseUrl}/user/login`;
 
   private REGISTER_ENDPOINT = `${environment.baseUrl}/user/register`;
@@ -40,20 +47,7 @@ export class AuthService {
 
   private AUTHENTICATED_ENDPOINT = `${environment.baseUrl}/user/authenticated`;
 
-  public user: User;
-
-  public token = 'jwt';
-
-  public isAuthenticated = false;
-
-  public redirectUrl: string;
-
-  constructor(
-    private httpClient: HttpClient,
-    private themeService: ThemeService,
-    private dataService: DataService,
-    private matSnackBar: MatSnackBar,
-  ) {
+  constructor(private httpClient: HttpClient, private themeService: ThemeService, private matSnackBar: MatSnackBar) {
     this.restore();
   }
 
@@ -165,52 +159,6 @@ export class AuthService {
       );
   }
 
-  public async fetchUsersNextLesson(): Promise<void> {
-    this.dataService.getAllLessons().subscribe((lessons) => {
-      this.dataService.dashboard.allLessons = lessons;
-      this.fetchNextLesson(lessons);
-    });
-  }
-
-  private fetchNextLesson(lessons: string[]): void {
-    const nextLessonId = lessons.find((lessonId) => !this.user.progress.includes(lessonId));
-
-    this.dataService.getPostById(nextLessonId).subscribe((nextLesson) => {
-      this.dataService.dashboard.nextLesson = nextLesson;
-      this.dataService.dashboard.lessonsPercentage = (this.user.progress.length / lessons.length) * 100;
-
-      this.dataService.getSchoolWeek(Number(nextLesson.schoolWeek)).subscribe((response) => {
-        this.dataService.schoolWeek = response;
-      });
-    });
-  }
-
-  public fetchNextExams(): void {
-    this.dataService.getAllExamDates().subscribe((exams) => {
-      const openExams = [];
-
-      const today = new Date();
-      today.setHours(23, 59, 59, 999);
-
-      exams.forEach((exam) => {
-        const examDate = new Date(exam.date);
-        examDate.setHours(23, 59, 59, 999);
-
-        if (today <= examDate) {
-          openExams.push(exam);
-        }
-      });
-
-      openExams.sort((a, b) => {
-        if (a.date > b.date) return 1;
-        if (a.date < b.date) return -1;
-        return 0;
-      });
-
-      this.dataService.dashboard.nextExams = openExams;
-    });
-  }
-
   public editUser(user: EditUser): Observable<AuthResponse> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
 
@@ -239,7 +187,6 @@ export class AuthService {
           // console.log('response POST user/add-progress', response);
           if (response.success) {
             this.user = response.user;
-            this.fetchNextLesson(this.dataService.dashboard.allLessons);
           }
           return response;
         }),
@@ -252,8 +199,6 @@ export class AuthService {
     this.user = undefined;
     this.token = 'jwt';
     this.isAuthenticated = undefined;
-    this.dataService.dashboard = undefined;
-    this.dataService.schoolWeek = undefined;
     localStorage.removeItem(CREDENTIALS_STORAGE_KEY);
 
     return this.httpClient.get<BasicResponse>(this.LOGOUT_ENDPOINT, { headers }).pipe(
@@ -317,18 +262,7 @@ export class AuthService {
     );
   }
 
-  private storeData(): void {
-    localStorage.setItem(
-      CREDENTIALS_STORAGE_KEY,
-      JSON.stringify({
-        user: this.user,
-        token: this.token,
-        theme: this.themeService.getActiveTheme().name,
-      }),
-    );
-  }
-
-  public setLessonSolved(id: string): void {
+  public async setLessonSolved(id: string): Promise<void> {
     if (this.user.progress.includes(id)) return;
 
     const lesson = {
@@ -337,9 +271,9 @@ export class AuthService {
     } as UserProgress;
 
     this.addProgress(lesson).subscribe(
-      (response) => {
-        this.user = response.user;
+      () => {
         this.storeData();
+
         this.matSnackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Lektion als gelesen markiert',
@@ -351,6 +285,17 @@ export class AuthService {
           data: `Fehler: ${typeof error === 'string' ? error : error.message}`,
         });
       },
+    );
+  }
+
+  private storeData(): void {
+    localStorage.setItem(
+      CREDENTIALS_STORAGE_KEY,
+      JSON.stringify({
+        user: this.user,
+        token: this.token,
+        theme: this.themeService.getActiveTheme().name,
+      }),
     );
   }
 }

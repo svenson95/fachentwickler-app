@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { DashboardData } from '@models/dashboard-data';
 import { SchoolWeek } from '@models/school-week';
 import { SubjectPopulated } from '@models/subject';
 import { Post, PostTypes } from '@models/post';
@@ -28,14 +27,6 @@ export class DataService {
 
   private NEWS_ENDPOINT = `${environment.baseUrl}/news`;
 
-  public currentSchoolWeek = 26;
-
-  public schoolWeeksLength = 39;
-
-  public dashboard: DashboardData;
-
-  public schoolWeek: SchoolWeek;
-
   constructor(private httpClient: HttpClient) {}
 
   public getSubject(subjectUrl: string): Observable<SubjectPopulated> {
@@ -58,11 +49,11 @@ export class DataService {
 
   public getPost(postUrl: string): Observable<PostTypes> {
     return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/${postUrl}`).pipe(
-        map((response) => {
-          // console.log('response GET post', response);
-          return response;
-        }),
-      );
+      map((response) => {
+        // console.log('response GET post', response);
+        return response;
+      }),
+    );
   }
 
   public getMultiplePosts(postIdsString: string): Observable<Post[]> {

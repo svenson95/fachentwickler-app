@@ -10,6 +10,7 @@ import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
+import { DashboardService } from '@services/dashboard.service';
 
 @Component({
   selector: 'fe-login-page',
@@ -28,6 +29,7 @@ export class LoginPage implements OnDestroy {
   constructor(
     private router: Router,
     private authService: AuthService,
+    private dashboard: DashboardService,
     private headerService: HeaderService,
     private themeService: ThemeService,
     private loadService: LoadingService,
@@ -73,6 +75,8 @@ export class LoginPage implements OnDestroy {
         if (this.themeService.getActiveTheme().name !== response.user.theme) {
           this.themeService.toggleTheme();
         }
+
+        this.dashboard.init();
 
         if (this.authService.redirectUrl) {
           this.redirectTo(this.authService.redirectUrl);

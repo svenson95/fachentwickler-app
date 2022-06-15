@@ -1,4 +1,4 @@
-<mat-card class="card school-week" *ngIf="week !== undefined">
+<mat-card class="card school-week" *ngIf="week !== null">
   <mat-card-header class="card-header">
     <mat-card-title class="card-title">Schulwoche #{{ week.schoolWeek }}</mat-card-title>
     <mat-card-subtitle class="card-date">
@@ -19,7 +19,7 @@
       <button
         class="next-week-btn"
         (click)="setWeek(1)"
-        [disabled]="week === undefined || week.schoolWeek == dataService.currentSchoolWeek"
+        [disabled]="week === undefined || week.schoolWeek == dashboard.CURRENT_SCHOOL_WEEK"
         mat-icon-button
       >
         <mat-icon>keyboard_arrow_right</mat-icon>

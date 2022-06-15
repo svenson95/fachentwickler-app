@@ -6,11 +6,11 @@ import { Subscription } from 'rxjs';
 
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 import { AuthService } from '@services/auth.service';
-import { DataService } from '@services/data.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
 import { inputsMatch } from '@validators/match.validator';
+import { DashboardService } from '@services/dashboard.service';
 
 @Component({
   selector: 'fe-my-profile-page',
@@ -18,13 +18,11 @@ import { inputsMatch } from '@validators/match.validator';
   styleUrls: ['./my-profile.page.scss'],
 })
 export class MyProfilePage implements OnInit, OnDestroy {
-  public isConfirmingEmail: boolean;
+  @ViewChild('nameInput') public nameInput: MatInput;
 
-  public isConfirmingPassword: boolean;
+  @ViewChild('emailInput') public emailInput: MatInput;
 
-  public isLoading: boolean;
-
-  private loadingSubscription: Subscription;
+  @ViewChild('passwordInput') public passwordInput: MatInput;
 
   public emailFormGroup: FormGroup;
 
@@ -46,17 +44,19 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public theme: FormControl;
 
-  @ViewChild('nameInput') public nameInput: MatInput;
+  public isConfirmingEmail: boolean;
 
-  @ViewChild('emailInput') public emailInput: MatInput;
+  public isConfirmingPassword: boolean;
 
-  @ViewChild('passwordInput') public passwordInput: MatInput;
+  public isLoading: boolean;
+
+  private loadingSubscription: Subscription;
 
   constructor(
     private headerService: HeaderService,
     public authService: AuthService,
     public themeService: ThemeService,
-    private dataService: DataService,
+    private dashboard: DashboardService,
     private loadingService: LoadingService,
     private matSnackBar: MatSnackBar,
     private formBuilder: FormBuilder,
@@ -67,70 +67,15 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.initUserProgress();
     this.loadingSubscription = this.loadingService.loading$.subscribe((value) => {
       this.isLoading = value;
     });
+
+    this.initUserProgress();
   }
 
   public ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
-  }
-
-  private initUserProgress(): void {
-    if (this.dataService.dashboard === undefined) {
-      this.dataService
-        .getAllLessons()
-        .subscribe((lessons) => this.progress.setValue(this.getProgressPercentage(lessons.length)));
-    } else {
-      this.progress.setValue(this.getProgressPercentage(this.dataService.dashboard.allLessons.length));
-    }
-  }
-
-  private getProgressPercentage(progressLength): string {
-    return `${((this.authService.user.progress.length / progressLength) * 100).toFixed(2)} %`;
-  }
-
-  private initFormControls(): void {
-    this.name = new FormControl(
-      { value: this.authService.user.name, disabled: true },
-      { validators: [Validators.required, Validators.minLength(4)] },
-    );
-    this.email = new FormControl(
-      { value: this.authService.user.email, disabled: true },
-      { validators: [Validators.required, Validators.email] },
-    );
-    this.verificationCode = new FormControl('', {
-      validators: [Validators.required],
-    });
-    this.password = new FormControl(
-      { value: 'xxxxxxxx', disabled: true },
-      { validators: [Validators.required, Validators.minLength(4)] },
-    );
-    this.confirmPassword = new FormControl('', {
-      validators: [inputsMatch('password')],
-    });
-    this.role = new FormControl({
-      value: this.authService.user.role,
-      disabled: true,
-    });
-    this.progress = new FormControl({ value: 0, disabled: true });
-    this.theme = new FormControl({
-      value: this.themeService.getActiveTheme().name,
-      disabled: true,
-    });
-  }
-
-  private initFormGroups(): void {
-    this.emailFormGroup = this.formBuilder.group({
-      email: this.email,
-      verificationCode: this.verificationCode,
-    });
-
-    this.passwordFormGroup = this.formBuilder.group({
-      password: this.password,
-      confirmPassword: this.confirmPassword,
-    });
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -317,5 +262,56 @@ export class MyProfilePage implements OnInit, OnDestroy {
         });
       },
     );
+  }
+
+  private async initUserProgress(): Promise<void> {
+    const allLessons = await this.dashboard.allLessons$.toPromise();
+    this.progress.setValue(this.getProgressPercentage(allLessons.length));
+  }
+
+  private getProgressPercentage(progressLength): string {
+    return `${((this.authService.user.progress.length / progressLength) * 100).toFixed(2)} %`;
+  }
+
+  private initFormControls(): void {
+    this.name = new FormControl(
+      { value: this.authService.user.name, disabled: true },
+      { validators: [Validators.required, Validators.minLength(4)] },
+    );
+    this.email = new FormControl(
+      { value: this.authService.user.email, disabled: true },
+      { validators: [Validators.required, Validators.email] },
+    );
+    this.verificationCode = new FormControl('', {
+      validators: [Validators.required],
+    });
+    this.password = new FormControl(
+      { value: 'xxxxxxxx', disabled: true },
+      { validators: [Validators.required, Validators.minLength(4)] },
+    );
+    this.confirmPassword = new FormControl('', {
+      validators: [inputsMatch('password')],
+    });
+    this.role = new FormControl({
+      value: this.authService.user.role,
+      disabled: true,
+    });
+    this.progress = new FormControl({ value: 0, disabled: true });
+    this.theme = new FormControl({
+      value: this.themeService.getActiveTheme().name,
+      disabled: true,
+    });
+  }
+
+  private initFormGroups(): void {
+    this.emailFormGroup = this.formBuilder.group({
+      email: this.email,
+      verificationCode: this.verificationCode,
+    });
+
+    this.passwordFormGroup = this.formBuilder.group({
+      password: this.password,
+      confirmPassword: this.confirmPassword,
+    });
   }
 }

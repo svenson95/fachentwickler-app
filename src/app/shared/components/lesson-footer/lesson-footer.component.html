@@ -4,7 +4,7 @@
       *ngIf="postId !== undefined"
       [isLoading]="isLoading && !(postId | alreadyRead)"
       [disabled]="isLoading || (postId | alreadyRead)"
-      (click)="authService.setLessonSolved(postId)"
+      (click)="lessonSolved()"
     >
       Als gelesen markieren
     </fe-state-button>
