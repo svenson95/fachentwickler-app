@@ -7,7 +7,7 @@ import { environment } from '@env/environment';
 import { DashboardData } from '@models/dashboard-data';
 import { SchoolWeek } from '@models/school-week';
 import { SubjectPopulated } from '@models/subject';
-import { Post, PostArticle, PostIndexCards, PostMatchings, PostQuiz } from '@models/post';
+import { Post, PostTypes } from '@models/post';
 import { ExamDate } from '@models/exam-date';
 import { ImageFile, ImageData } from '@models/image-data';
 import { SchoolNews } from '@models/school-news';
@@ -56,10 +56,8 @@ export class DataService {
     );
   }
 
-  public getPost(postUrl: string): Observable<PostArticle | PostQuiz | PostMatchings | PostIndexCards> {
-    return this.httpClient
-      .get<PostArticle | PostQuiz | PostMatchings | PostIndexCards>(`${this.POSTS_ENDPOINT}/${postUrl}`)
-      .pipe(
+  public getPost(postUrl: string): Observable<PostTypes> {
+    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/${postUrl}`).pipe(
         map((response) => {
           // console.log('response GET post', response);
           return response;

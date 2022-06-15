@@ -11,7 +11,7 @@ import { AuthService } from '@services/auth.service';
   styleUrls: ['./logout-dialog.component.scss'],
 })
 export class LogoutDialogComponent {
-  constructor(public authService: AuthService, private router: Router, private snackBar: MatSnackBar) {}
+  constructor(private router: Router, private snackBar: MatSnackBar, public authService: AuthService) {}
 
   public logout(): void {
     const guardRoutes = this.router.config.filter((r) => r.canActivate).map((r) => r.path);
@@ -28,10 +28,6 @@ export class LogoutDialogComponent {
         });
       },
       () => {
-        if (guardRoutes.includes(this.router.url.substr(1))) {
-          this.router.navigateByUrl('/');
-        }
-
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Fehler beim Abmelden aufgetreten',
