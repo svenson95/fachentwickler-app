@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { languages, myClass, study, subjects } from '@constants/menu-items';
 import { MenuItem } from '@models/menu-item';
-import { AuthService } from '@services/auth.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-sidenav',
@@ -19,5 +19,5 @@ export class SidenavComponent {
 
   public language: MenuItem[] = languages;
 
-  constructor(public router: Router, public authService: AuthService) {}
+  constructor(public router: Router, public user: UserService) {}
 }

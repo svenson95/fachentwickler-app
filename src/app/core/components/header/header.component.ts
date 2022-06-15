@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
 import { SidenavService } from '@services/sidenav.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-header',
@@ -17,8 +17,8 @@ export class HeaderComponent {
 
   constructor(
     public router: Router,
+    public user: UserService,
     public headerService: HeaderService,
-    public authService: AuthService,
     public sidenavService: SidenavService,
   ) {}
 
@@ -34,7 +34,7 @@ export class HeaderComponent {
       return '/';
     }
 
-    if (this.authService.isAuthenticated) {
+    if (this.user.isAuthenticated) {
       return '/dashboard';
     }
 

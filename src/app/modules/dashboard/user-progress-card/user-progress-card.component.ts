@@ -1,9 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 import { Post } from '@models/post';
-import { User } from '@models/user';
+import { UserData } from '@models/user';
 import { DashboardService } from '@services/dashboard.service';
-import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'fe-user-progress-card',
@@ -11,7 +10,7 @@ import { LoadingService } from '@services/loading.service';
   styleUrls: ['./user-progress-card.component.scss'],
 })
 export class UserProgressCardComponent {
-  @Input() public user: User;
+  @Input() public user: UserData;
 
   @Input() public allLessons: string[];
 
@@ -40,5 +39,5 @@ export class UserProgressCardComponent {
     return (currentWeek / this.dashboard.SCHOOL_WEEKS_LENGTH) * 100;
   }
 
-  constructor(public loadingService: LoadingService, public dashboard: DashboardService) {}
+  constructor(private dashboard: DashboardService) {}
 }

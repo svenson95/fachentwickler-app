@@ -4,7 +4,7 @@ import { testDashboard, testSchedule, testSchoolWeek, testUser } from '@constant
 import { DashboardData } from '@models/dashboard-data';
 import { Schedule } from '@models/schedule';
 import { SchoolWeek } from '@models/school-week';
-import { User } from '@models/user';
+import { UserData } from '@models/user';
 
 @Component({
   selector: 'section.2',
@@ -12,7 +12,7 @@ import { User } from '@models/user';
   styleUrls: ['./section2.component.scss'],
 })
 export class Section2Component {
-  public testUser: User = testUser;
+  public testUser: UserData = testUser;
 
   public testDashboard: DashboardData = testDashboard;
 

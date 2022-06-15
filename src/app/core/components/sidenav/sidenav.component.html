@@ -1,4 +1,4 @@
-<div class="section my-class" *ngIf="authService.isAuthenticated">
+<div class="section my-class" *ngIf="user.isAuthenticated">
   <label class="section-title">Meine Klasse</label>
   <mat-nav-list>
     <ng-container *ngFor="let navItem of myClass">
@@ -45,7 +45,7 @@
 
 <hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px" />
 
-<div class="section apps" *ngIf="authService.isAuthenticated">
+<div class="section apps" *ngIf="user.isAuthenticated">
   <button
     class="fe-text-button fe-pruefungssimulator-btn"
     routerLink="pruefungssimulator"

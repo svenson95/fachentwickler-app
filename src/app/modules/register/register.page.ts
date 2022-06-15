@@ -10,6 +10,7 @@ import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-register-page',
@@ -27,14 +28,14 @@ export class RegisterPage implements OnInit, OnDestroy {
 
   private emailAlreadyTaken: boolean;
 
-  private NameAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
+  private NameAlreadyTaken: ValidatorFn = (): ValidationErrors => {
     if (this.nameAlreadyTaken) {
       return { alreadyTaken: true };
     }
     return null;
   };
 
-  private EmailAlreadyTaken: ValidatorFn = (ac): ValidationErrors => {
+  private EmailAlreadyTaken: ValidatorFn = (): ValidationErrors => {
     if (this.emailAlreadyTaken) {
       return { alreadyTaken: true };
     }
@@ -46,9 +47,10 @@ export class RegisterPage implements OnInit, OnDestroy {
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private headerService: HeaderService,
-    private authService: AuthService,
-    private loadService: LoadingService,
-    private themeService: ThemeService,
+    private auth: AuthService,
+    private user: UserService,
+    private loading: LoadingService,
+    private theme: ThemeService,
   ) {
     this.headerService.setPageTitle('Registrieren');
     this.initFormGroup();
@@ -56,7 +58,7 @@ export class RegisterPage implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.subscription.add(
-      this.loadService.loading$.subscribe((value) => {
+      this.loading.loading$.subscribe((value) => {
         this.isLoading = value;
       }),
     );
@@ -64,6 +66,49 @@ export class RegisterPage implements OnInit, OnDestroy {
 
   public ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  public onFormChange(): void {
+    if (this.nameAlreadyTaken) {
+      this.nameAlreadyTaken = false;
+    }
+    if (this.emailAlreadyTaken) {
+      this.emailAlreadyTaken = false;
+    }
+  }
+
+  public register(): void {
+    if (this.form.invalid) {
+      return;
+    }
+
+    const name = this.form.controls.name.value.toLowerCase();
+    const email = this.form.controls.email.value.toLowerCase();
+    const password = this.form.controls.password.value.toLowerCase();
+    const user = {
+      name,
+      email,
+      password,
+      theme: this.theme.getActiveTheme().name,
+      role: UserRole.USER,
+    } as RegisterUser;
+
+    this.auth.register(user).subscribe(
+      (response) => {
+        if (response.success) {
+          this.router.navigateByUrl('/dashboard');
+          this.user.isAuthenticated = true;
+          this.user.data = response.user;
+          this.user.storeData();
+        }
+      },
+      (error) => {
+        this.snackBar.openFromComponent(SnackbarComponent, {
+          duration: 2500,
+          data: this.showErrorMessage(error),
+        });
+      },
+    );
   }
 
   private initFormGroup(): void {
@@ -82,35 +127,6 @@ export class RegisterPage implements OnInit, OnDestroy {
       ],
       password: [null as string, { validators: [Validators.required, Validators.minLength(4)] }],
     });
-  }
-
-  public register(event): void {
-    if (this.form.invalid) {
-      return;
-    }
-
-    const name = this.form.controls.name.value.toLowerCase();
-    const email = this.form.controls.email.value.toLowerCase();
-    const password = this.form.controls.password.value.toLowerCase();
-    const user = {
-      name,
-      email,
-      password,
-      theme: this.themeService.getActiveTheme().name,
-      role: UserRole.USER,
-    } as RegisterUser;
-
-    this.authService.register(user).subscribe(
-      () => {
-        this.router.navigateByUrl('/dashboard');
-      },
-      (error) => {
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: this.showErrorMessage(error),
-        });
-      },
-    );
   }
 
   private showErrorMessage(response): string {
@@ -133,14 +149,5 @@ export class RegisterPage implements OnInit, OnDestroy {
       return 'Die E-Mail Adresse ist bereits vergeben';
     }
     return `Unbekannter Fehler: ${response.error.message}`;
-  }
-
-  public onFormChange(event): void {
-    if (this.nameAlreadyTaken) {
-      this.nameAlreadyTaken = false;
-    }
-    if (this.emailAlreadyTaken) {
-      this.emailAlreadyTaken = false;
-    }
   }
 }

@@ -6,10 +6,10 @@ import { filter } from 'rxjs/operators';
 import { testArticle } from '@data/posts/post-template';
 import { subjects } from '@constants/menu-items';
 import { PostArticle } from '@models/post';
-import { AuthService } from '@services/auth.service';
 import { DataService } from '@services/data.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-post-page',
@@ -25,7 +25,7 @@ export class PostPage implements OnInit, OnDestroy {
     private dataService: DataService,
     private router: Router,
     private headerService: HeaderService,
-    public authService: AuthService,
+    public user: UserService,
     public loadingService: LoadingService,
   ) {
     const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));

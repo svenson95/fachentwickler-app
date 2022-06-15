@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, Router, UrlTree } from '@angular/router';
 
-import { AuthService } from '@services/auth.service';
+import { UserService } from '@services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotAuthGuardService implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private router: Router, private user: UserService) {}
 
-  public canActivate(
-    /* eslint-disable @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot,
-  ): boolean | UrlTree {
-    return this.authService.isAuthenticated ? this.router.parseUrl('/dashboard') : true;
+  public canActivate(): boolean | UrlTree {
+    return this.user.isAuthenticated ? this.router.parseUrl('/dashboard') : true;
   }
 }

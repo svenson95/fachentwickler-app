@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { UserRole } from '@models/user';
-import { AuthService } from '@services/auth.service';
 import { MediaQueryService } from '@services/media-query.service';
 import { ThemeService } from '@services/theme.service';
+import { UserService } from '@services/user.service';
 
 import { ImageManagerDialogComponent } from './image-manager-dialog/image-manager-dialog.component';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
@@ -33,7 +33,7 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   }
 
   constructor(
-    public authService: AuthService,
+    public user: UserService,
     public router: Router,
     public dialog: MatDialog,
     public themeService: ThemeService,
@@ -50,16 +50,16 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     this.mobileSubscription.unsubscribe();
   }
 
-  public async openLogoutDialog(): Promise<void> {
-    await this.dialog.open(LogoutDialogComponent, {
+  public openLogoutDialog(): void {
+    this.dialog.open(LogoutDialogComponent, {
       restoreFocus: true,
       panelClass: 'logout-modal',
       autoFocus: false,
     });
   }
 
-  public async openImageManager(): Promise<void> {
-    await this.dialog.open(ImageManagerDialogComponent, {
+  public openImageManager(): void {
+    this.dialog.open(ImageManagerDialogComponent, {
       restoreFocus: true,
       panelClass: 'image-manager-modal',
     });

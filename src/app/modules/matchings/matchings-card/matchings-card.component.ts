@@ -2,7 +2,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 import { MatchingPair, PostMatchings } from '@models/post';
-import { AuthService } from '@services/auth.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-matchings-card',
@@ -30,7 +30,7 @@ export class MatchingsCardComponent implements OnInit {
 
   @ViewChild('slideInRight') public slideInRight: ElementRef;
 
-  constructor(private auth: AuthService) {}
+  constructor(private user: UserService) {}
 
   public ngOnInit(): void {
     this.setupMatchings();
@@ -122,8 +122,8 @@ export class MatchingsCardComponent implements OnInit {
   }
 
   private setSolvedState(): void {
-    if (!this.auth.user.progress.includes(this.matching._id) && this.auth.isAuthenticated) {
-      this.auth.setLessonSolved(this.matching._id);
+    if (!this.user.data.progress.includes(this.matching._id) && this.user.isAuthenticated) {
+      this.user.setLessonSolved(this.matching._id);
     }
   }
 }

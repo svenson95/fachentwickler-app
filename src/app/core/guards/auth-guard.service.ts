@@ -2,29 +2,31 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 
 import { AuthService } from '@services/auth.service';
+import { UserService } from '@services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuardService implements CanActivate {
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private router: Router, private auth: AuthService, private user: UserService) {}
 
   public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree {
     return this.userIsAuthenticated(state.url);
   }
 
-  /* -- Auth validation on route load -- */
   private userIsAuthenticated(url: string): boolean | UrlTree {
-    // Store the attempted URL for redirecting
     this.auth.redirectUrl = url;
 
-    if ((this.auth.isAuthenticated && this.auth.user.active) || this.isTestDataRequest(url)) {
+    const userIsVerified = this.user.isAuthenticated && this.user.data.active;
+    const userNotVerified = this.user.isAuthenticated && !this.user.data.active;
+
+    if (userIsVerified || this.isTestDataRequest(url)) {
       return true;
     }
-    if (this.auth.isAuthenticated && !this.auth.user.active) {
+    if (userNotVerified) {
       return this.router.parseUrl('/verify');
     }
-    if (!this.auth.isAuthenticated) {
+    if (!this.user.isAuthenticated) {
       return this.router.parseUrl('/login');
     }
     return false;

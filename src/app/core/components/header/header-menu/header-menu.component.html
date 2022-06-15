@@ -10,7 +10,7 @@
     class="menu-btn"
     mat-menu-item
     routerLink="mein-profil"
-    *ngIf="authService.isAuthenticated"
+    *ngIf="user.isAuthenticated"
     [disabled]="router.url.startsWith('/mein-profil')"
     disableRipple
   >
@@ -21,7 +21,7 @@
     class="menu-btn"
     mat-menu-item
     routerLink="login"
-    *ngIf="!authService.isAuthenticated"
+    *ngIf="!user.isAuthenticated"
     [disabled]="router.url.startsWith('/login')"
     disableRipple
   >
@@ -32,7 +32,7 @@
     class="menu-btn"
     mat-menu-item
     (click)="openImageManager()"
-    *ngIf="!isMobile && authService.user?.role === UserRole.ADMIN"
+    *ngIf="!isMobile && user.data?.role === UserRole.ADMIN"
     disableRipple
   >
     <mat-icon>perm_media</mat-icon>
@@ -42,7 +42,7 @@
     <mat-icon>invert_colors</mat-icon>
     <span class="label">{{ themeService.isDarkTheme() ? "Light" : "Dark" }} Theme aktivieren</span>
   </a>
-  <button class="menu-btn" mat-menu-item (click)="openLogoutDialog()" *ngIf="authService.isAuthenticated" disableRipple>
+  <button class="menu-btn" mat-menu-item (click)="openLogoutDialog()" *ngIf="user.isAuthenticated" disableRipple>
     <mat-icon>logout</mat-icon>
     <span class="label">Ausloggen</span>
   </button>

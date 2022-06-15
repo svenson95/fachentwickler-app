@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-verify-page',
@@ -20,14 +21,15 @@ export class VerifyPage implements OnInit {
 
   public isResendLoading = false;
 
-  private resendTimeout: boolean;
+  public verificationSucceed = false;
 
-  public verificationSucceed: boolean;
+  private resendTimeout = false;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    public authService: AuthService,
+    private auth: AuthService,
+    private user: UserService,
     private headerService: HeaderService,
     private snackBar: MatSnackBar,
     private formBuilder: FormBuilder,
@@ -48,21 +50,28 @@ export class VerifyPage implements OnInit {
     });
   }
 
-  public verifyUser(event: Event = null): void {
+  public onFormChange(): void {
+    this.formGroup.controls.verificationCode.setErrors(null);
+  }
+
+  public verifyUser(): void {
     if (this.formGroup.invalid) return;
 
-    const email = this.authService.isAuthenticated
-      ? this.authService.user.email
-      : this.route.snapshot.paramMap.get('email');
+    const email = this.user.isAuthenticated ? this.user.data.email : this.route.snapshot.paramMap.get('email');
     const verificationCode = this.formGroup.get('verificationCode').value;
 
     this.isSubmitLoading = true;
-    this.authService.verifyUser(email, verificationCode).subscribe(
-      () => {
+    this.auth.verify(email, verificationCode).subscribe(
+      (response) => {
         this.isSubmitLoading = false;
-        this.verificationSucceed = true;
 
-        if (this.authService.isAuthenticated) {
+        if (response.success) {
+          this.verificationSucceed = true;
+          this.user.data = response.user;
+          this.user.storeData();
+        }
+
+        if (this.user.isAuthenticated) {
           setTimeout(() => {
             this.router.navigateByUrl('/dashboard');
           }, 3000);
@@ -87,27 +96,26 @@ export class VerifyPage implements OnInit {
     );
   }
 
-  public onFormChange(event): void {
-    this.formGroup.controls.verificationCode.setErrors(null);
-  }
-
   public resendVerificationMail(): void {
-    if (this.resendTimeout !== undefined) {
+    if (this.resendTimeout !== false) {
       return;
     }
 
     this.isResendLoading = true;
     this.resendTimeout = true;
-    this.authService.resendVerificationCode(this.authService.user.email).subscribe(
+
+    this.auth.resendVerificationCode(this.user.data.email).subscribe(
       () => {
         this.isResendLoading = false;
+        this.user.data.active = true;
+
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,
           data: 'Verifizierungscode erfolgreich versendet.',
         });
 
         setTimeout(() => {
-          this.resendTimeout = undefined;
+          this.resendTimeout = false;
         }, 2500);
       },
       (error) => {
@@ -118,7 +126,7 @@ export class VerifyPage implements OnInit {
 
         this.isResendLoading = false;
         setTimeout(() => {
-          this.resendTimeout = undefined;
+          this.resendTimeout = false;
         }, 2500);
       },
     );

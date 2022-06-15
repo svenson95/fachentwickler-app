@@ -1,4 +1,4 @@
-import { User } from './user';
+import { UserData } from './user';
 
 export interface BasicResponse {
   success: boolean;
@@ -8,7 +8,7 @@ export interface BasicResponse {
 }
 
 export interface AuthResponse extends BasicResponse {
-  user?: User;
+  user?: UserData;
 }
 
 export interface TokenResponse extends AuthResponse {

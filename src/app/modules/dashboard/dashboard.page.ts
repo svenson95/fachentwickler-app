@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 import { schedule } from '@constants/schedule';
 import { Schedule } from '@models/schedule';
-import { AuthService } from '@services/auth.service';
+import { UserData } from '@models/user';
 import { DashboardService } from '@services/dashboard.service';
 import { HeaderService } from '@services/header.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-dashboard-page',
@@ -13,11 +14,9 @@ import { HeaderService } from '@services/header.service';
 export class DashboardPage {
   public schedule: Schedule = schedule;
 
-  constructor(
-    private headerService: HeaderService,
-    public dashboard: DashboardService,
-    public authService: AuthService,
-  ) {
+  public userData: UserData = this.user.data;
+
+  constructor(private headerService: HeaderService, public dashboard: DashboardService, private user: UserService) {
     this.headerService.setPageTitle('Dashboard');
   }
 }

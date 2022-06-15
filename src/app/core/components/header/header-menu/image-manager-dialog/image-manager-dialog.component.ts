@@ -2,10 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 import { ImageData, ImageFile } from '@models/image-data';
-import { UserRole } from '@models/user';
-import { AuthService } from '@services/auth.service';
+import { UserData, UserRole } from '@models/user';
 import { DataService } from '@services/data.service';
 import { ImageManagerService } from '@services/image-manager.service';
+import { UserService } from '@services/user.service';
 
 import { DeleteImageDialogComponent } from './delete-image-dialog/delete-image-dialog.component';
 
@@ -22,6 +22,8 @@ export class ImageManagerDialogComponent {
     '=1': '1 Chunk',
     other: '# Chunks',
   };
+
+  public userData: UserData = this.user.data;
 
   public UserRole = UserRole;
 
@@ -44,8 +46,8 @@ export class ImageManagerDialogComponent {
   public selectedImageData: ImageData;
 
   constructor(
-    public authService: AuthService,
-    private dataService: DataService,
+    private user: UserService,
+    private data: DataService,
     private imageManager: ImageManagerService,
     private dialog: MatDialog,
   ) {
@@ -148,7 +150,7 @@ export class ImageManagerDialogComponent {
   public setSelectedImage(image: ImageFile): void {
     this.selectedImageData = undefined;
     this.selectedImage = image;
-    this.dataService.getImageById(image._id).subscribe((value) => {
+    this.data.getImageById(image._id).subscribe((value) => {
       this.selectedImageData = value;
     });
   }
@@ -159,7 +161,7 @@ export class ImageManagerDialogComponent {
   }
 
   private loadAllImagesCount(): void {
-    this.dataService.getAllImagesLength().subscribe((data) => {
+    this.data.getAllImagesLength().subscribe((data) => {
       this.allImagesLength = data;
     });
   }
@@ -176,7 +178,7 @@ export class ImageManagerDialogComponent {
   private getImages(page = null): void {
     this.isLoadingImages = true;
 
-    this.dataService
+    this.data
       .getMultipleImages(page || 0, undefined, this.isSortedAscending ? 'ascending' : 'descending')
       .subscribe((data) => {
         this.images = data;
@@ -185,7 +187,7 @@ export class ImageManagerDialogComponent {
         if (page === null) {
           // eslint-disable-next-line prefer-destructuring
           this.selectedImage = data[0];
-          this.dataService.getImageById(data[0]._id).subscribe((value) => {
+          this.data.getImageById(data[0]._id).subscribe((value) => {
             this.selectedImageData = value;
           });
         }

@@ -8,6 +8,6 @@
   <fe-lesson-footer
     [postId]="post._id"
     [isLoading]="loadingService.loading$ | async"
-    *ngIf="authService.isAuthenticated && post"
+    *ngIf="user.isAuthenticated && post"
   ></fe-lesson-footer>
 </ng-container>

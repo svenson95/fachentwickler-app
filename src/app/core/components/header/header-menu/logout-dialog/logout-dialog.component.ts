@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 import { AuthService } from '@services/auth.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-logout-dialog',
@@ -11,16 +12,23 @@ import { AuthService } from '@services/auth.service';
   styleUrls: ['./logout-dialog.component.scss'],
 })
 export class LogoutDialogComponent {
-  constructor(private router: Router, private snackBar: MatSnackBar, public authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private snackBar: MatSnackBar,
+    private auth: AuthService,
+    private user: UserService,
+  ) {}
 
   public logout(): void {
     const guardRoutes = this.router.config.filter((r) => r.canActivate).map((r) => r.path);
 
-    this.authService.invalidate().subscribe(
+    this.auth.invalidate().subscribe(
       () => {
         if (guardRoutes.includes(this.router.url.substr(1))) {
           this.router.navigateByUrl('/');
         }
+        this.user.data = undefined;
+        this.user.isAuthenticated = false;
 
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,

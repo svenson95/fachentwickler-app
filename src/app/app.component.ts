@@ -16,6 +16,7 @@ import { filter } from 'rxjs/operators';
 import { MediaQueryService } from '@services/media-query.service';
 import { SidenavService } from '@services/sidenav.service';
 import { ThemeService } from '@services/theme.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-root',
@@ -29,8 +30,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     return this.isMobile;
   }
 
-  @HostBinding('class') public get theme(): string {
-    return this.themeService.getActiveTheme().name;
+  @HostBinding('class') public get activeTheme(): string {
+    return this.theme.getActiveTheme().name;
   }
 
   public isMobile: boolean;
@@ -43,10 +44,13 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     private router: Router,
     private renderer: Renderer2,
     private elementRef: ElementRef,
+    private user: UserService,
     private sidenavService: SidenavService,
-    public themeService: ThemeService,
+    private theme: ThemeService,
     public mediaQueryService: MediaQueryService,
-  ) {}
+  ) {
+    this.user.restore();
+  }
 
   public ngOnInit(): void {
     this.subscription.add(

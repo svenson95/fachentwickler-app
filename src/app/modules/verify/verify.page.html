@@ -2,8 +2,8 @@
   <form
     class="verify-form"
     [formGroup]="formGroup"
-    (ngSubmit)="verifyUser($event)"
-    (change)="onFormChange($event)"
+    (ngSubmit)="verifyUser()"
+    (change)="onFormChange()"
     *ngIf="!verificationSucceed"
   >
     <div class="form-inputs">

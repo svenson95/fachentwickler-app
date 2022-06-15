@@ -8,7 +8,7 @@ import { SchoolNews } from '@models/school-news';
 import { SchoolWeek } from '@models/school-week';
 
 import { DataService } from './data.service';
-import { AuthService } from './auth.service';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root',
@@ -30,7 +30,7 @@ export class DashboardService {
 
   public SCHOOL_WEEKS_LENGTH: number = 39;
 
-  constructor(private data: DataService, private authService: AuthService) {
+  constructor(private data: DataService, private user: UserService) {
     this.init();
   }
 
@@ -44,7 +44,7 @@ export class DashboardService {
   public getNextLesson(): void {
     this.nextLesson$ = this.allLessons$.pipe(
       switchMap(async (allLessons) => {
-        const nextLessonId = allLessons.find((lessonId) => !this.authService.user.progress.includes(lessonId));
+        const nextLessonId = allLessons.find((lessonId) => !this.user.data.progress.includes(lessonId));
         const post = await this.data.getPostById(nextLessonId).toPromise();
         return post;
       }),
@@ -52,7 +52,7 @@ export class DashboardService {
     );
   }
 
-  public getSchoolWeek(): void {
+  private getSchoolWeek(): void {
     this.schoolWeek$ = this.nextLesson$.pipe(
       switchMap(async (nextLesson) => {
         const schoolWeek = await this.data.getSchoolWeek(nextLesson.schoolWeek).toPromise();
@@ -62,7 +62,7 @@ export class DashboardService {
     );
   }
 
-  public getNextExams(): void {
+  private getNextExams(): void {
     this.nextExams$ = this.data.getAllExamDates().pipe(
       map((response) => {
         const openExams = [];
@@ -91,10 +91,10 @@ export class DashboardService {
     );
   }
 
-  public getLessonsPercentage(): void {
+  private getLessonsPercentage(): void {
     this.lessonsPercentage$ = this.allLessons$.pipe(
       map((response) => {
-        return (this.authService.user.progress.length / response.length) * 100;
+        return (this.user.data.progress.length / response.length) * 100;
       }),
       shareReplay(1),
     );

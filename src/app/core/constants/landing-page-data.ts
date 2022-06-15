@@ -3,7 +3,7 @@ import * as moment from 'moment';
 import { DashboardData } from '@models/dashboard-data';
 import { Schedule } from '@models/schedule';
 import { SchoolWeek } from '@models/school-week';
-import { User, UserRole } from '@models/user';
+import { UserData, UserRole } from '@models/user';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const testSchoolWeek: SchoolWeek = {
@@ -78,7 +78,7 @@ export const testSchoolWeek: SchoolWeek = {
   ],
 };
 
-const inThreeDays = () => {
+const inThreeDays = (): string => {
   let day: string | number = new Date().getDate();
   let month: string | number = new Date().getMonth() + 1;
   const year = new Date().getFullYear();
@@ -93,6 +93,7 @@ const inThreeDays = () => {
 
   const todayDateString = `${year}-${month}-${day}`;
   let examDateString = moment(moment(todayDateString).add(3, 'days')).format('YYYY-MM-DD');
+
   if (new Date(examDateString).getDay() === 6) {
     examDateString = moment(moment(examDateString).add(2, 'days')).format('YYYY-MM-DD');
   } else if (new Date(examDateString).getDay() === 0) {
@@ -486,7 +487,7 @@ export const testDashboard: DashboardData = {
   ],
 };
 
-export const testUser: User = {
+export const testUser: UserData = {
   email: 'test@mail.de',
   name: 'test',
   progress: [

@@ -92,7 +92,7 @@
       </div>
     </div>
     <fe-state-button
-      *ngIf="authService.user.role === UserRole.ADMIN"
+      *ngIf="userData.role === UserRole.ADMIN"
       [disabled]="!selectedImage"
       (click)="deleteImage(selectedImage._id)"
     >

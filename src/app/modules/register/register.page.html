@@ -3,7 +3,7 @@
     <span>Zurück zum Login</span>
   </div>
   <hr class="divider-line" />
-  <form class="register-form" [formGroup]="form" (ngSubmit)="register($event)" (change)="onFormChange($event)">
+  <form class="register-form" [formGroup]="form" (ngSubmit)="register()" (change)="onFormChange()">
     <div class="form-inputs">
       <mat-form-field class="input name">
         <mat-label>Benutzername</mat-label>

@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
+import { UserService } from '@services/user.service';
 import { inputsMatch } from '@validators/match.validator';
 
 @Component({
@@ -24,7 +25,8 @@ export class ForgotPasswordPage {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    private auth: AuthService,
+    private user: UserService,
     private headerService: HeaderService,
     private formBuilder: FormBuilder,
     private snackBar: MatSnackBar,
@@ -61,7 +63,7 @@ export class ForgotPasswordPage {
     const email = this.emailForm.get('email').value;
     this.isSubmitLoading = true;
 
-    this.authService.forgotPassword(email).subscribe(
+    this.auth.forgotPassword(email).subscribe(
       (result) => {
         if (!result.success && result.code === 'UserVerifiedException') {
           this.snackBar.openFromComponent(SnackbarComponent, {
@@ -97,7 +99,7 @@ export class ForgotPasswordPage {
 
     const { verificationCode, confirmPassword } = this.passwordForm.value;
 
-    this.authService.changePassword(verificationCode, confirmPassword).subscribe(
+    this.user.changePassword(verificationCode, confirmPassword).subscribe(
       () => {
         this.router.navigate(['/login']);
         this.snackBar.openFromComponent(SnackbarComponent, {

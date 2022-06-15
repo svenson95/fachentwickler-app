@@ -1,17 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { AuthService } from '@services/auth.service';
+import { UserService } from '@services/user.service';
 
 @Pipe({
   name: 'alreadyRead',
   pure: false,
 })
 export class AlreadyReadPipe implements PipeTransform {
-  constructor(public auth: AuthService) {}
+  constructor(private user: UserService) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
-  public transform(value: string, ...args: unknown[]): boolean {
-    if (!this.auth.user) return false;
-    return this.auth.user.progress.includes(value);
+  public transform(value: string): boolean {
+    if (!this.user.data) return false;
+    return this.user.data.progress.includes(value);
   }
 }

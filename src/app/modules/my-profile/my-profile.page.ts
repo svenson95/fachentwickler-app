@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
@@ -11,6 +11,8 @@ import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
 import { inputsMatch } from '@validators/match.validator';
 import { DashboardService } from '@services/dashboard.service';
+import { UserService } from '@services/user.service';
+import { EditUser } from '@models/user';
 
 @Component({
   selector: 'fe-my-profile-page',
@@ -24,25 +26,50 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   @ViewChild('passwordInput') public passwordInput: MatInput;
 
-  public emailFormGroup: FormGroup;
+  public name = new FormControl(
+    { value: this.user.data.name, disabled: true },
+    { validators: [Validators.required, Validators.minLength(4)] },
+  );
 
-  public passwordFormGroup: FormGroup;
+  public email = new FormControl(
+    { value: this.user.data.email, disabled: true },
+    { validators: [Validators.required, Validators.email] },
+  );
 
-  public name: FormControl;
+  public verificationCode = new FormControl('', {
+    validators: [Validators.required],
+  });
 
-  public email: FormControl;
+  public password = new FormControl(
+    { value: 'xxxxxxxx', disabled: true },
+    { validators: [Validators.required, Validators.minLength(4)] },
+  );
 
-  public verificationCode: FormControl;
+  public confirmPassword = new FormControl('', {
+    validators: [inputsMatch('password')],
+  });
 
-  public password: FormControl;
+  public role = new FormControl({
+    value: this.user.data.role,
+    disabled: true,
+  });
 
-  public confirmPassword: FormControl;
+  public progress = new FormControl({ value: 0, disabled: true });
 
-  public role: FormControl;
+  public theme = new FormControl({
+    value: this.themeService.getActiveTheme().name,
+    disabled: true,
+  });
 
-  public progress: FormControl;
+  public emailFormGroup = this.formBuilder.group({
+    email: this.email,
+    verificationCode: this.verificationCode,
+  });
 
-  public theme: FormControl;
+  public passwordFormGroup = this.formBuilder.group({
+    password: this.password,
+    confirmPassword: this.confirmPassword,
+  });
 
   public isConfirmingEmail: boolean;
 
@@ -54,20 +81,19 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   constructor(
     private headerService: HeaderService,
-    public authService: AuthService,
+    private auth: AuthService,
+    public user: UserService,
     public themeService: ThemeService,
     private dashboard: DashboardService,
-    private loadingService: LoadingService,
-    private matSnackBar: MatSnackBar,
+    private loading: LoadingService,
+    private snackbar: MatSnackBar,
     private formBuilder: FormBuilder,
   ) {
     this.headerService.setPageTitle('Mein Profil');
-    this.initFormControls();
-    this.initFormGroups();
   }
 
   public ngOnInit(): void {
-    this.loadingSubscription = this.loadingService.loading$.subscribe((value) => {
+    this.loadingSubscription = this.loading.loading$.subscribe((value) => {
       this.isLoading = value;
     });
 
@@ -94,7 +120,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
       this.nameInput.focus();
     } else {
       this.name.reset();
-      this.name.setValue(this.authService.user.name);
+      this.name.setValue(this.user.data.name);
       this.name.disable();
     }
   }
@@ -104,27 +130,27 @@ export class MyProfilePage implements OnInit, OnDestroy {
       return;
     }
 
-    this.authService
-      .editUser({
-        _id: this.authService.user._id,
-        newName: this.name.value.toLowerCase(),
-      })
-      .subscribe(
-        () => {
-          this.name.disable();
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: 'Benutzername wurde geändert',
-          });
-        },
-        (errorRes) => {
-          this.name.setValue(this.authService.user.name);
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
-            duration: 3000,
-            data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
-          });
-        },
-      );
+    const data = {
+      _id: this.user.data._id,
+      newName: this.name.value.toLowerCase(),
+    } as EditUser;
+
+    this.user.edit(data).subscribe(
+      () => {
+        this.name.disable();
+        this.snackbar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: 'Benutzername wurde geändert',
+        });
+      },
+      (errorRes) => {
+        this.name.setValue(this.user.data.name);
+        this.snackbar.openFromComponent(SnackbarComponent, {
+          duration: 3000,
+          data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
+        });
+      },
+    );
   }
 
   public toggleChangeEmail(): void {
@@ -133,7 +159,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
       this.emailInput.focus();
     } else {
       this.email.reset();
-      this.email.setValue(this.authService.user.email);
+      this.email.setValue(this.user.data.email);
       this.email.disable();
       this.verificationCode.reset();
       this.verificationCode.setValue('');
@@ -147,18 +173,18 @@ export class MyProfilePage implements OnInit, OnDestroy {
     }
     const { email } = this.emailFormGroup.value;
 
-    this.authService.editUser({ _id: this.authService.user._id, email }).subscribe(
+    this.user.edit({ _id: this.user.data._id, email }).subscribe(
       () => {
         this.isConfirmingEmail = true;
 
-        this.matSnackBar.openFromComponent(SnackbarComponent, {
+        this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Verifizierungscode versendet',
         });
       },
       (errorRes) => {
-        this.emailFormGroup.controls.email.setValue(this.authService.user.email);
-        this.matSnackBar.openFromComponent(SnackbarComponent, {
+        this.emailFormGroup.controls.email.setValue(this.user.data.email);
+        this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
         });
@@ -172,11 +198,14 @@ export class MyProfilePage implements OnInit, OnDestroy {
     }
     const { email, verificationCode } = this.emailFormGroup.value;
 
-    this.authService.verifyUser(this.authService.user.email, verificationCode, email).subscribe(
+    this.auth.verify(this.user.data.email, verificationCode, email).subscribe(
       (response) => {
         if (response.success) {
+          this.user.data = response.user;
+          this.user.storeData();
           this.email.disable();
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
+
+          this.snackbar.openFromComponent(SnackbarComponent, {
             duration: 3000,
             data: 'E-Mail wurde geändert',
           });
@@ -198,7 +227,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
       this.passwordInput.focus();
     } else {
       this.password.reset();
-      this.password.setValue(this.authService.user.password.substring(0, 8));
+      this.password.setValue(this.user.data.password.substring(0, 8));
       this.password.disable();
       this.confirmPassword.reset();
       this.confirmPassword.setValue('');
@@ -219,21 +248,23 @@ export class MyProfilePage implements OnInit, OnDestroy {
       }
 
       const { confirmPassword } = this.passwordFormGroup.value;
+      const data: EditUser = { _id: this.user.data._id, password: confirmPassword };
 
-      this.authService.editUser({ _id: this.authService.user._id, password: confirmPassword }).subscribe(
+      this.user.edit(data).subscribe(
         () => {
           this.password.disable();
           this.password.setValue('xxxxxxxx');
           this.password.markAsUntouched();
           this.confirmPassword.markAsUntouched();
           this.isConfirmingPassword = undefined;
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
+
+          this.snackbar.openFromComponent(SnackbarComponent, {
             duration: 3000,
             data: 'Passwort wurde geändert',
           });
         },
         (errorRes) => {
-          this.matSnackBar.openFromComponent(SnackbarComponent, {
+          this.snackbar.openFromComponent(SnackbarComponent, {
             duration: 3000,
             data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
           });
@@ -248,15 +279,17 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeTheme(): void {
-    this.authService.editUser({ _id: this.authService.user._id, theme: this.theme.value }).subscribe(
+    const data: EditUser = { _id: this.user.data._id, theme: this.theme.value };
+
+    this.user.edit(data).subscribe(
       () => {
-        this.matSnackBar.openFromComponent(SnackbarComponent, {
+        this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: 'Standard-Theme wurde geändert',
         });
       },
       (errorRes) => {
-        this.matSnackBar.openFromComponent(SnackbarComponent, {
+        this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
         });
@@ -269,49 +302,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
     this.progress.setValue(this.getProgressPercentage(allLessons.length));
   }
 
-  private getProgressPercentage(progressLength): string {
-    return `${((this.authService.user.progress.length / progressLength) * 100).toFixed(2)} %`;
-  }
-
-  private initFormControls(): void {
-    this.name = new FormControl(
-      { value: this.authService.user.name, disabled: true },
-      { validators: [Validators.required, Validators.minLength(4)] },
-    );
-    this.email = new FormControl(
-      { value: this.authService.user.email, disabled: true },
-      { validators: [Validators.required, Validators.email] },
-    );
-    this.verificationCode = new FormControl('', {
-      validators: [Validators.required],
-    });
-    this.password = new FormControl(
-      { value: 'xxxxxxxx', disabled: true },
-      { validators: [Validators.required, Validators.minLength(4)] },
-    );
-    this.confirmPassword = new FormControl('', {
-      validators: [inputsMatch('password')],
-    });
-    this.role = new FormControl({
-      value: this.authService.user.role,
-      disabled: true,
-    });
-    this.progress = new FormControl({ value: 0, disabled: true });
-    this.theme = new FormControl({
-      value: this.themeService.getActiveTheme().name,
-      disabled: true,
-    });
-  }
-
-  private initFormGroups(): void {
-    this.emailFormGroup = this.formBuilder.group({
-      email: this.email,
-      verificationCode: this.verificationCode,
-    });
-
-    this.passwordFormGroup = this.formBuilder.group({
-      password: this.password,
-      confirmPassword: this.confirmPassword,
-    });
+  private getProgressPercentage(progressLength: number): string {
+    return `${((this.user.data.progress.length / progressLength) * 100).toFixed(2)} %`;
   }
 }

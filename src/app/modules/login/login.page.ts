@@ -11,6 +11,7 @@ import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
 import { DashboardService } from '@services/dashboard.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-login-page',
@@ -28,7 +29,8 @@ export class LoginPage implements OnDestroy {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    private auth: AuthService,
+    private user: UserService,
     private dashboard: DashboardService,
     private headerService: HeaderService,
     private themeService: ThemeService,
@@ -59,7 +61,7 @@ export class LoginPage implements OnDestroy {
 
   private redirectTo(url): void {
     this.router.navigateByUrl(url);
-    this.authService.redirectUrl = undefined;
+    this.auth.redirectUrl = undefined;
   }
 
   public login(event): void {
@@ -69,17 +71,24 @@ export class LoginPage implements OnDestroy {
 
     const username = this.form.get('username').value.toLowerCase();
     const password = this.form.get('password').value;
+    const data = { username, password } as AuthUser;
 
-    this.authService.login({ username, password } as AuthUser).subscribe(
+    this.auth.login(data).subscribe(
       (response) => {
         if (this.themeService.getActiveTheme().name !== response.user.theme) {
           this.themeService.toggleTheme();
         }
 
-        this.dashboard.init();
+        if (response.success) {
+          this.auth.token = response.token;
+          this.user.isAuthenticated = true;
+          this.user.data = response.user;
+          this.user.storeData();
+          this.dashboard.init();
+        }
 
-        if (this.authService.redirectUrl) {
-          this.redirectTo(this.authService.redirectUrl);
+        if (this.auth.redirectUrl) {
+          this.redirectTo(this.auth.redirectUrl);
         } else {
           this.router.navigate(['dashboard']);
         }
