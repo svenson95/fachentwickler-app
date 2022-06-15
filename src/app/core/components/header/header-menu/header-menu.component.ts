@@ -22,7 +22,7 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
 
   public isMobile: boolean;
 
-  private mobileSubscription: Subscription;
+  private subscription: Subscription = new Subscription();
 
   @ViewChild(MatMenuTrigger, { static: true })
   public menuTrigger: MatMenuTrigger;
@@ -33,21 +33,21 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   }
 
   constructor(
-    public user: UserService,
     public router: Router,
-    public dialog: MatDialog,
-    public themeService: ThemeService,
-    private mediaQueryService: MediaQueryService,
+    public user: UserService,
+    public theme: ThemeService,
+    private dialog: MatDialog,
+    private mediaQuery: MediaQueryService,
   ) {}
 
   public ngOnInit(): void {
-    this.mobileSubscription = this.mediaQueryService.isMobile$.subscribe((value) => {
+    this.subscription = this.mediaQuery.isMobile$.subscribe((value) => {
       this.isMobile = value;
     });
   }
 
   public ngOnDestroy(): void {
-    this.mobileSubscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   public openLogoutDialog(): void {

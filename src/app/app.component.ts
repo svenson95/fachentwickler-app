@@ -1,16 +1,6 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostBinding,
-  OnDestroy,
-  OnInit,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostBinding, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { MediaQueryService } from '@services/media-query.service';
@@ -23,8 +13,8 @@ import { UserService } from '@services/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
-  @ViewChild('sidenav') public sidenav: MatSidenav;
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('matSidenav') public matSidenav: MatSidenav;
 
   @HostBinding('class.is-mobile') public get _(): boolean {
     return this.isMobile;
@@ -36,47 +26,31 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public isMobile: boolean;
 
-  public isTiny: boolean;
-
-  private subscription: Subscription = new Subscription();
-
   constructor(
     private router: Router,
     private renderer: Renderer2,
     private elementRef: ElementRef,
     private user: UserService,
-    private sidenavService: SidenavService,
+    private sidenav: SidenavService,
     private theme: ThemeService,
-    public mediaQueryService: MediaQueryService,
+    private mediaQuery: MediaQueryService,
   ) {
     this.user.restore();
   }
 
   public ngOnInit(): void {
-    this.subscription.add(
-      this.mediaQueryService.isMobile$.subscribe((v) => {
-        this.isMobile = v;
-      }),
-    );
-    this.subscription.add(
-      this.mediaQueryService.isTiny$.subscribe((v) => {
-        this.isTiny = v;
-      }),
-    );
-    this.subscription.add(
-      this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
-        this.elementRef.nativeElement.querySelector('.mat-sidenav-content').scrollTo(0, 0);
-        if (this.isMobile) this.sidenavService.close();
-      }),
-    );
-  }
+    this.mediaQuery.isMobile$.subscribe((value) => {
+      this.isMobile = value;
+    });
 
-  public ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      this.elementRef.nativeElement.querySelector('.mat-sidenav-content').scrollTo(0, 0);
+      if (this.isMobile) this.sidenav.close();
+    });
   }
 
   public ngAfterViewInit(): void {
-    this.sidenavService.setSidenav(this.sidenav);
+    this.sidenav.setSidenav(this.matSidenav);
   }
 
   public onSideMenuToggled(isOpen: boolean): void {

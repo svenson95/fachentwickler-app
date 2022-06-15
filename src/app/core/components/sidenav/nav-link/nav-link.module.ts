@@ -1,14 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
-import { RouterModule } from '@angular/router';
+
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { NavLinkComponent } from './nav-link.component';
 
 @NgModule({
   declarations: [NavLinkComponent],
   exports: [NavLinkComponent],
-  imports: [CommonModule, RouterModule, MatListModule],
+  imports: [SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class NavLinkModule {}

@@ -4,10 +4,9 @@
   [allLessons]="dashboard.allLessons$ | async"
   [lessonsPercentage]="dashboard.lessonsPercentage$ | async"
 ></fe-user-progress-card>
-<fe-next-exams-card
-  [nextExams]="dashboard.nextExams$ | async"
-  *ngIf="(dashboard.nextExams$ | async)?.length > 0"
-></fe-next-exams-card>
+<ng-container *ngIf="dashboard.nextExams$ | async as nextExams">
+  <fe-next-exams-card [nextExams]="nextExams" *ngIf="nextExams?.length > 0"></fe-next-exams-card>
+</ng-container>
 <fe-schedule-card [schedule]="schedule"></fe-schedule-card>
 <fe-news-card [onlyNewest]="true"></fe-news-card>
 <fe-school-week-card [week]="dashboard.schoolWeek$ | async" [showNavigation]="true"></fe-school-week-card>

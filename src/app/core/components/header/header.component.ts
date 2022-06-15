@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { HeaderService } from '@services/header.service';
+import { MediaQueryService } from '@services/media-query.service';
 import { SidenavService } from '@services/sidenav.service';
 import { UserService } from '@services/user.service';
 
@@ -11,26 +12,8 @@ import { UserService } from '@services/user.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Input() public isMobile: boolean;
-
-  @Input() public isTiny: boolean;
-
-  constructor(
-    public router: Router,
-    public user: UserService,
-    public headerService: HeaderService,
-    public sidenavService: SidenavService,
-  ) {}
-
-  public goToSubject(): void {
-    const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
-    if (subjectUrl && this.router.url !== subjectUrl) {
-      this.router.navigateByUrl(subjectUrl);
-    }
-  }
-
-  public mobileLogoLink(): string {
-    if (this.sidenavService.isOpen()) {
+  public get mobileLogoLink(): string {
+    if (this.sidenav.isOpen()) {
       return '/';
     }
 
@@ -39,5 +22,20 @@ export class HeaderComponent {
     }
 
     return '/login';
+  }
+
+  constructor(
+    public router: Router,
+    public user: UserService,
+    public header: HeaderService,
+    public sidenav: SidenavService,
+    public mediaQuery: MediaQueryService,
+  ) {}
+
+  public goToSubject(): void {
+    const subjectUrl = this.router.url.substring(0, this.router.url.indexOf('/', 2));
+    if (subjectUrl && this.router.url !== subjectUrl) {
+      this.router.navigateByUrl(subjectUrl);
+    }
   }
 }

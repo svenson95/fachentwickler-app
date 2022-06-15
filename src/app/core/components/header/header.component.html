@@ -1,42 +1,44 @@
-<mat-toolbar class="header-toolbar" [class.sidenav--open]="isMobile && sidenavService.isOpen()">
-  <div class="header-wrapper">
-    <div class="sidenav-section">
-      <a
-        class="fe-logo-wrapper"
-        [routerLink]="isMobile ? mobileLogoLink() : '/'"
-        matRipple
-        [class.active-route]="
-          router.url === '/' ||
-          router.url === '/login' ||
-          (isMobile && !sidenavService.isOpen() && router.url === '/dashboard')
-        "
-      >
-        <fe-icon></fe-icon>
-      </a>
-    </div>
-    <div class="header-content">
-      <div class="page-title" (click)="goToSubject()" *ngIf="!isTiny || (isTiny && !sidenavService.isOpen())">
-        <mat-icon class="unselectable" *ngIf="!isMobile">chevron_right</mat-icon>
-        <p class="title" [innerHTML]="headerService.pageTitle"></p>
-      </div>
-      <div class="header-elements-wrapper">
-        <fe-hamburger-icon
-          class="sidenav-btn"
-          [isOpen]="sidenavService.isOpen()"
-          (click)="sidenavService.toggle()"
-          *ngIf="isMobile"
-        ></fe-hamburger-icon>
+<ng-container *ngIf="{ mobile: mediaQuery.isMobile$ | async, tiny: mediaQuery.isTiny$ | async } as is">
+  <mat-toolbar class="header-toolbar" [class.sidenav--open]="is.mobile && sidenav.isOpen()">
+    <div class="header-wrapper">
+      <div class="sidenav-section">
         <a
-          class="fe-text-button dashboard-btn"
+          class="app-icon"
+          [routerLink]="is.mobile ? mobileLogoLink : '/'"
           matRipple
-          [routerLink]="user.isAuthenticated ? '/dashboard' : '/login'"
-          [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')"
+          [class.active-route]="
+            router.url === '/' ||
+            router.url === '/login' ||
+            (is.mobile && !sidenav.isOpen() && router.url === '/dashboard')
+          "
         >
-          <span>{{ user.isAuthenticated ? "Dashboard" : "Schülerbereich" }}</span>
+          <fe-icon></fe-icon>
         </a>
-        <fe-header-menu></fe-header-menu>
-        <fe-search-field *ngIf="!isMobile"></fe-search-field>
+      </div>
+      <div class="header-content">
+        <div class="page-title" (click)="goToSubject()" *ngIf="!is.tiny || (is.tiny && !sidenav.isOpen())">
+          <mat-icon class="unselectable" *ngIf="!is.mobile">chevron_right</mat-icon>
+          <p class="title" [innerHTML]="header.pageTitle"></p>
+        </div>
+        <div class="header-elements-wrapper">
+          <fe-hamburger-icon
+            class="sidenav-btn"
+            [isOpen]="sidenav.isOpen()"
+            (click)="sidenav.toggle()"
+            *ngIf="is.mobile"
+          ></fe-hamburger-icon>
+          <a
+            class="fe-text-button dashboard-btn"
+            matRipple
+            [routerLink]="user.isAuthenticated ? '/dashboard' : '/login'"
+            [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')"
+          >
+            <span>{{ user.isAuthenticated ? "Dashboard" : "Schülerbereich" }}</span>
+          </a>
+          <fe-header-menu></fe-header-menu>
+          <fe-search-field *ngIf="!is.mobile"></fe-search-field>
+        </div>
       </div>
     </div>
-  </div>
-</mat-toolbar>
+  </mat-toolbar>
+</ng-container>

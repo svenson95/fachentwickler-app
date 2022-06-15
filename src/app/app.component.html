@@ -1,12 +1,12 @@
-<fe-header [isMobile]="mediaQueryService.isMobile$ | async" [isTiny]="mediaQueryService.isTiny$ | async"></fe-header>
+<fe-header></fe-header>
 <mat-sidenav-container autosize>
   <mat-sidenav
     class="navigation"
     [mode]="isMobile ? 'over' : 'side'"
     [opened]="!isMobile"
     [fixedInViewport]="isMobile"
-    (openedChange)="onSideMenuToggled(sidenav.opened)"
-    #sidenav
+    (openedChange)="onSideMenuToggled(matSidenav.opened)"
+    #matSidenav
   >
     <fe-sidenav></fe-sidenav>
   </mat-sidenav>

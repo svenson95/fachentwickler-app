@@ -38,9 +38,9 @@
     <mat-icon>perm_media</mat-icon>
     <span class="label">Image-Manager</span>
   </button>
-  <a class="menu-btn" mat-menu-item (click)="themeService.toggleTheme()" disableRipple>
+  <a class="menu-btn" mat-menu-item (click)="theme.toggleTheme()" disableRipple>
     <mat-icon>invert_colors</mat-icon>
-    <span class="label">{{ themeService.isDarkTheme() ? "Light" : "Dark" }} Theme aktivieren</span>
+    <span class="label">{{ theme.isDarkTheme() ? "Light" : "Dark" }} Theme aktivieren</span>
   </a>
   <button class="menu-btn" mat-menu-item (click)="openLogoutDialog()" *ngIf="user.isAuthenticated" disableRipple>
     <mat-icon>logout</mat-icon>

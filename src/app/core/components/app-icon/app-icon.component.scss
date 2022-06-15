@@ -63,7 +63,7 @@
       transform: translateX(-5px);
     }
 
-    .fe-logo-wrapper {
+    .app-icon {
       display: flex;
       justify-content: left;
       text-decoration: none;
@@ -103,7 +103,7 @@
     }
   }
 
-  fe-header .mat-toolbar:not(.sidenav--open) .fe-logo-wrapper {
+  fe-header .mat-toolbar:not(.sidenav--open) .app-icon {
     @include to-xs {
       background: var(--background-primary);
       border-radius: 8px;
@@ -132,7 +132,7 @@
     }
   }
 
-  fe-header .mat-toolbar .fe-logo-wrapper {
+  fe-header .mat-toolbar .app-icon {
     &:hover,
     &:focus {
       .icon-wrapper:not(.active-route) {

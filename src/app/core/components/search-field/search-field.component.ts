@@ -13,19 +13,12 @@ import { SearchPostService } from '@services/search-post.service';
 export class SearchFieldComponent implements AfterViewInit {
   @ViewChild('searchInput') public searchInput: ElementRef;
 
-  constructor(public router: Router, public searchPostService: SearchPostService) {}
+  public searchTerm = this.searchPostService.searchTerm;
+
+  constructor(public router: Router, private searchPostService: SearchPostService) {}
 
   public ngAfterViewInit(): void {
     this.initSearchBarInputEvent();
-  }
-
-  private initSearchBarInputEvent(): void {
-    fromEvent(this.searchInput.nativeElement, 'keyup')
-      .pipe(
-        filter((e: KeyboardEvent) => e.code === 'Enter' || e.code === 'NumpadEnter'),
-        tap(() => this.searchForPost()),
-      )
-      .subscribe();
   }
 
   public searchForPost(): void {
@@ -42,5 +35,14 @@ export class SearchFieldComponent implements AfterViewInit {
     } else if (this.searchPostService.redirectUrl) {
       this.router.navigateByUrl(this.searchPostService.redirectUrl);
     }
+  }
+
+  private initSearchBarInputEvent(): void {
+    fromEvent(this.searchInput.nativeElement, 'keyup')
+      .pipe(
+        filter((e: KeyboardEvent) => e.code === 'Enter' || e.code === 'NumpadEnter'),
+        tap(() => this.searchForPost()),
+      )
+      .subscribe();
   }
 }
