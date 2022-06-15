@@ -17,9 +17,11 @@ export class NavLinkComponent {
 
   @Input('href-link') public hrefLink: string;
 
-  constructor(public router: Router) {}
-
-  public isCurrentRoute(route): boolean {
-    return this.router.url.startsWith(route);
+  public get outlineOrSolidIcon(): string {
+    const solid = this.item.icon.slice(0, -8);
+    const outline = this.item.icon;
+    return this.router.url.startsWith(this.item.url) ? solid : outline;
   }
+
+  constructor(public router: Router) {}
 }

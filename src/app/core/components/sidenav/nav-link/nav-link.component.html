@@ -7,7 +7,7 @@
   [class.active-route]="router.url.startsWith(item.url)"
   [routerLink]="'/' + item.url"
 >
-  <ion-icon class="nav-item-icon" [icon]="isCurrentRoute(item.url) ? item.icon.slice(0, -8) : item.icon"></ion-icon>
+  <ion-icon class="nav-item-icon" [icon]="outlineOrSolidIcon"></ion-icon>
   <span [innerHTML]="item.title"></span>
 </a>
 <a
@@ -20,6 +20,6 @@
   [href]="item.url"
   target="_blank"
 >
-  <ion-icon class="nav-item-icon" [icon]="isCurrentRoute(item.url) ? item.icon.slice(0, -8) : item.icon"></ion-icon>
+  <ion-icon class="nav-item-icon" [icon]="outlineOrSolidIcon"></ion-icon>
   <span [innerHTML]="item.title"></span>
 </a>
