@@ -1,31 +1,35 @@
-<fe-card class="elements" title="Elemente">
-  <div class="elements-bar">
-    <button class="fe-text-button">Text</button>
-    <button class="fe-text-button">Title</button>
-    <button class="fe-text-button">Subtitle</button>
-    <button class="fe-text-button">Hint</button>
-    <button class="fe-text-button">Image</button>
-    <button class="fe-text-button">Line</button>
-    <button class="fe-text-button">List</button>
-    <button class="fe-text-button">Table</button>
-    <button class="fe-text-button">Code</button>
-    <button class="fe-text-button">File</button>
-  </div>
-</fe-card>
+<fe-loading-spinner *ngIf="!post; else content"></fe-loading-spinner>
 
-<fe-card [title]="post.title" [date]="post.description" [type]="post.type" [lastUpdate]="post.lastUpdate">
-  <fe-loading-spinner *ngIf="post === undefined"></fe-loading-spinner>
-  <fe-post-element *ngFor="let element of post.elements" [element]="element" [contentEditable]="true"></fe-post-element>
-  <p class="error-message" *ngIf="post && post.elements === undefined">Artikel nicht gefunden</p>
-</fe-card>
+<ng-template #content>
+  <fe-card class="elements" title="Elemente">
+    <div class="elements-bar">
+      <button class="fe-text-button">Text</button>
+      <button class="fe-text-button">Title</button>
+      <button class="fe-text-button">Subtitle</button>
+      <button class="fe-text-button">Hint</button>
+      <button class="fe-text-button">Image</button>
+      <button class="fe-text-button">Line</button>
+      <button class="fe-text-button">List</button>
+      <button class="fe-text-button">Table</button>
+      <button class="fe-text-button">Code</button>
+      <button class="fe-text-button">File</button>
+    </div>
+  </fe-card>
 
-<mat-card class="card options">
-  <div class="button-container">
-    <button class="fe-text-button" *ngIf="userData.role === UserRole.ADMIN">
-      <span>Speichern</span>
-    </button>
-    <button class="fe-text-button" *ngIf="userData.role === UserRole.ADMIN">
+  <fe-card [title]="post.title" [date]="post.lessonDate" [type]="post.type" [lastUpdate]="post.lastUpdate">
+    <fe-post-element
+      *ngFor="let element of post.elements"
+      [element]="element"
+      [contentEditable]="true"
+    ></fe-post-element>
+  </fe-card>
+
+  <fe-card class="options">
+    <button class="fe-text-button">
       <span>Artikel Löschen</span>
     </button>
-  </div>
-</mat-card>
+    <button class="fe-text-button">
+      <span>Speichern</span>
+    </button>
+  </fe-card>
+</ng-template>

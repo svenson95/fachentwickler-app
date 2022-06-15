@@ -1,3 +1,11 @@
-<fe-loading-spinner *ngIf="matching === undefined"></fe-loading-spinner>
-<fe-matchings-card [matching]="matching" *ngIf="matching !== undefined"></fe-matchings-card>
-<!--  <fe-lesson-footer [postId]="pieces._id" *ngIf="quiz !== undefined"></app-lesson-footer>-->
+<fe-loading-spinner *ngIf="!matching; else content"></fe-loading-spinner>
+
+<ng-template #content>
+  <fe-matchings-card [matching]="matching"></fe-matchings-card>
+
+  <fe-lesson-footer
+    [postId]="matching._id"
+    [isLoading]="loading.loading$ | async"
+    *ngIf="user.isAuthenticated"
+  ></fe-lesson-footer>
+</ng-template>

@@ -10,13 +10,10 @@ fe-card.elements {
   }
 }
 
-mat-card.card.options {
-  .button-container {
-    display: flex;
-    flex-direction: row-reverse;
+fe-card.options {
+  text-align: end;
 
-    .fe-text-button:not(:first-of-type) {
-      margin-right: 10px;
-    }
+  button.fe-text-button:not(:first-of-type) {
+    margin-left: 10px;
   }
 }

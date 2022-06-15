@@ -1,7 +1,11 @@
-<fe-loading-spinner *ngIf="indexCards === undefined"></fe-loading-spinner>
-<fe-index-card [indexCards]="indexCards" *ngIf="indexCards !== undefined"></fe-index-card>
-<fe-lesson-footer
-  [postId]="indexCards._id"
-  [isLoading]="loadingService.loading$ | async"
-  *ngIf="indexCards !== undefined"
-></fe-lesson-footer>
+<fe-loading-spinner *ngIf="!indexCards; else content"></fe-loading-spinner>
+
+<ng-template #content>
+  <fe-index-card [indexCards]="indexCards"></fe-index-card>
+
+  <fe-lesson-footer
+    [postId]="indexCards._id"
+    [isLoading]="loading.loading$ | async"
+    *ngIf="user.isAuthenticated"
+  ></fe-lesson-footer>
+</ng-template>

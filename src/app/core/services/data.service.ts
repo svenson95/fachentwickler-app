@@ -38,8 +38,8 @@ export class DataService {
     );
   }
 
-  public getPostById(postId: string): Observable<Post> {
-    return this.httpClient.get<Post>(`${this.POSTS_ENDPOINT}/${postId}`).pipe(
+  public getPostById(postId: string): Observable<PostTypes> {
+    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/${postId}`).pipe(
       map((response) => {
         // console.log('response GET subjects/post', response);
         return response;

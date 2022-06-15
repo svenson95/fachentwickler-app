@@ -6,6 +6,7 @@ import { PostIndexCards } from '@models/post';
 import { DataService } from '@services/data.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'fe-indexcards-page',
@@ -16,15 +17,23 @@ export class IndexcardsPage {
   public indexCards: PostIndexCards;
 
   constructor(
-    private headerService: HeaderService,
-    private dataService: DataService,
-    public loadingService: LoadingService,
     private router: Router,
+    public user: UserService,
+    private header: HeaderService,
+    private data: DataService,
+    public loading: LoadingService,
   ) {
-    const subject = this.router.url.substring(0, router.url.indexOf('/', 1));
-    this.headerService.setPageTitle(subjects.find((sub) => sub.url === subject)?.title);
-    this.dataService.getPost(router.url.substr(router.url.indexOf('/', 1) + 1)).subscribe((data) => {
-      this.indexCards = data as PostIndexCards;
+    const { url } = this.router;
+    const subjectUrl = url.substring(0, url.indexOf('/', 1));
+    this.header.setPageTitle(subjects.find((sub) => sub.url === subjectUrl)?.title);
+
+    const indexcardsUrl = url.substr(url.indexOf('/', 1) + 1);
+    this.data.getPost(indexcardsUrl).subscribe((response) => {
+      if (response !== null) {
+        this.indexCards = response as PostIndexCards;
+      } else {
+        this.router.navigate(['not-found']);
+      }
     });
   }
 }

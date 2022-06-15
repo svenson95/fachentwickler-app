@@ -1,7 +1,11 @@
-<fe-loading-spinner *ngIf="quiz === undefined"></fe-loading-spinner>
-<fe-quiz-card [quiz]="quiz" *ngIf="quiz !== undefined"></fe-quiz-card>
-<fe-lesson-footer
-  [postId]="quiz._id"
-  [isLoading]="loadingService.loading$ | async"
-  *ngIf="quiz !== undefined"
-></fe-lesson-footer>
+<fe-loading-spinner *ngIf="!quiz; else content"></fe-loading-spinner>
+
+<ng-template #content>
+  <fe-quiz-card [quiz]="quiz"></fe-quiz-card>
+
+  <fe-lesson-footer
+    [postId]="quiz._id"
+    [isLoading]="loading.loading$ | async"
+    *ngIf="user.isAuthenticated"
+  ></fe-lesson-footer>
+</ng-template>

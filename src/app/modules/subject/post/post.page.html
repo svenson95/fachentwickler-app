@@ -1,13 +1,13 @@
-<fe-loading-spinner *ngIf="!post"></fe-loading-spinner>
+<fe-loading-spinner *ngIf="!post; else content"></fe-loading-spinner>
 
-<ng-container *ngIf="post">
+<ng-template #content>
   <fe-card [title]="post.title" [date]="post.lessonDate" [type]="post.type" [lastUpdate]="post.lastUpdate">
     <fe-post-element *ngFor="let element of post.elements" [element]="element"></fe-post-element>
   </fe-card>
 
   <fe-lesson-footer
     [postId]="post._id"
-    [isLoading]="loadingService.loading$ | async"
-    *ngIf="user.isAuthenticated && post"
+    [isLoading]="loading.loading$ | async"
+    *ngIf="user.isAuthenticated"
   ></fe-lesson-footer>
-</ng-container>
+</ng-template>
