@@ -11,6 +11,7 @@ import { UserService } from '@services/user.service';
 @Component({
   selector: 'fe-verify-page',
   templateUrl: './verify.page.html',
+  styleUrls: ['./verify.page.scss'],
 })
 export class VerifyPage implements OnInit {
   @ViewChild('verificationCodeInput') public verificationCodeInput;

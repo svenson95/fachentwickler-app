@@ -1,5 +1,5 @@
 <fe-card title="Account erstellen">
-  <a class="fe-button back-to-login-btn" routerLink="/login" matRipple>Zurück zum Login</a>
+  <a class="fe-button" routerLink="/login" matRipple>Zurück zum Login</a>
   <hr class="divider-line" />
   <form class="register-form" [formGroup]="form" (ngSubmit)="register()" (change)="onFormChange()">
     <div class="form-inputs">
@@ -37,7 +37,8 @@
         <mat-error *ngIf="form.controls.password.hasError('required')"> Passwort erforderlich </mat-error>
       </mat-form-field>
     </div>
-    <div class="buttons-wrapper">
+
+    <div class="button-container">
       <button class="fe-button" type="submit" [disabled]="form.invalid || isLoading" [isLoading]="isLoading" matRipple>
         Bestätigen
       </button>

@@ -6,30 +6,28 @@
     (change)="onFormChange()"
     *ngIf="!verificationSucceed"
   >
-    <div class="form-inputs">
-      <p>
-        Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem
-        Verifizierungscode zugeschickt.
-      </p>
-      <mat-form-field class="input code">
-        <mat-label>Verifizierungscode</mat-label>
-        <input
-          matInput
-          type="number"
-          inputmode="numeric"
-          pattern="[0-9]*"
-          autocomplete="off"
-          formControlName="verificationCode"
-          #verificationCodeInput
-        />
-        <mat-error *ngIf="formGroup.controls.verificationCode.hasError('required')">
-          Verifizierungscode erforderlich
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="buttons-wrapper">
+    <p>
+      Um die Registrierung abzuschließen musst du deine E-Mail verifizieren. Wir haben dir eine E-Mail mit einem
+      Verifizierungscode zugeschickt.
+    </p>
+    <mat-form-field class="input code">
+      <mat-label>Verifizierungscode</mat-label>
+      <input
+        matInput
+        type="number"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        autocomplete="off"
+        formControlName="verificationCode"
+        #verificationCodeInput
+      />
+      <mat-error *ngIf="formGroup.controls.verificationCode.hasError('required')">
+        Verifizierungscode erforderlich
+      </mat-error>
+    </mat-form-field>
+    <div class="button-container">
       <button class="fe-button" type="submit" [isLoading]="isSubmitLoading" matRipple>Bestätigen</button>
-      <p>Du hast keine E-Mail erhalten?</p>
+      <p class="no-email-received">Du hast keine E-Mail erhalten?</p>
       <button
         class="fe-button"
         type="button"
@@ -41,8 +39,9 @@
       </button>
     </div>
   </form>
+
   <div class="verification-succeed-container" *ngIf="verificationSucceed">
     <fe-checkmark></fe-checkmark>
-    <p>Erfolgreich verifiziert!</p>
+    <p class="verified">Erfolgreich verifiziert!</p>
   </div>
 </fe-card>

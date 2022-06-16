@@ -1,35 +1,41 @@
 @import "mixins";
 
-:host ::ng-deep {
-  mat-card.card {
-    mat-card-content.card-content {
-      margin-top: 20px;
+:host {
+  ::ng-deep {
+    mat-card.card {
+      mat-card-content.card-content {
+        margin-top: 20px;
+      }
     }
   }
-}
 
-.verify-form {
-  text-align: center;
-  margin: auto;
-
-  @include from-xs {
-    max-width: 50%;
-  }
-
-  .input {
-    margin-bottom: 10px;
-  }
-
-  .buttons-wrapper {
+  form.verify-form {
+    text-align: center;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    p {
-      margin-top: 40px;
+    @include from-xs {
+      max-width: 50%;
+    }
+
+    mat-form-field.input.mat-form-field-invalid {
+      margin-bottom: 10px;
+    }
+
+    div.button-container {
+      display: flex;
+      flex-direction: column;
+
+      p.no-email-received {
+        margin-top: 40px;
+      }
     }
   }
-}
 
-.verification-succeed-container p {
-  text-align: center;
-  margin-top: 20px;
+  .verification-succeed-container p {
+    text-align: center;
+    margin-top: 20px;
+  }
 }

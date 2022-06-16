@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -67,13 +68,13 @@ export class ForgotPasswordPage {
       (response) => {
         if (!response.success) {
           this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 2500,
+            duration: 3000,
             data: 'Fehler! Benutzer ist bereits verfiziert',
           });
         } else {
           this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 2500,
-            data: 'Benutzer mit angegebener E-Mail Adresse nicht gefunden',
+            duration: 3000,
+            data: 'Verifizierungscode versendet',
           });
         }
 
@@ -81,7 +82,7 @@ export class ForgotPasswordPage {
       },
       () => {
         this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
+          duration: 3000,
           data: 'Fehler! Verifizierungscode konnte nicht gesendet werden',
         });
       },
@@ -92,31 +93,34 @@ export class ForgotPasswordPage {
   }
 
   public changeUserPassword(): void {
-    if (this.passwordForm.invalid) {
-      return;
-    }
+    if (this.passwordForm.invalid) return;
 
     const { verificationCode, confirmPassword } = this.passwordForm.value;
-
     this.user.changePassword(verificationCode, confirmPassword).subscribe(
-      () => {
-        this.router.navigate(['/login']);
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: 'Passwort erfolgreich geändert',
-        });
-      },
-      (err) => {
-        if (err.error.code === 'TokenNotFoundException') {
+      (response) => {
+        if (response.success) {
           this.passwordForm.controls.verificationCode.setErrors({
             incorrect: true,
           });
+        } else {
+          this.router.navigate(['/login']);
+          this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: 'Passwort erfolgreich geändert',
+          });
         }
-
-        this.snackBar.openFromComponent(SnackbarComponent, {
-          duration: 2500,
-          data: 'Fehler! Benutzer Passwort konnte nicht geändert werden',
-        });
+      },
+      (response: HttpErrorResponse) => {
+        if (response.error.message.includes('Matching verification code not found')) {
+          this.passwordForm.controls.verificationCode.setErrors({
+            incorrect: true,
+          });
+        } else {
+          this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: `Fehler! ${response.statusText}`,
+          });
+        }
       },
       () => {
         this.isSubmitLoading = false;

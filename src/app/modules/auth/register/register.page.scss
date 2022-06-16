@@ -1,77 +1,75 @@
 @import "mixins";
 
-:host ::ng-deep {
-  mat-card-content.card-content {
-    display: flex;
-    width: fit-content;
-    margin: 40px auto;
-    padding-bottom: 40px;
+:host {
+  ::ng-deep {
+    mat-card-content.card-content {
+      display: flex;
+      width: fit-content;
+      margin: 40px auto;
+      padding-bottom: 40px;
 
-    @include to-md {
-      flex-direction: column;
+      @include to-md {
+        flex-direction: column;
+      }
     }
   }
-}
 
-.back-to-login-btn {
-  align-self: center;
+  a.fe-button {
+    align-self: center;
 
-  @include from-md {
-    margin-right: 0;
-  }
-}
-
-.register-form {
-  text-align: center;
-
-  @include from-lg {
-    margin-right: 150px;
+    @include from-md {
+      margin-right: 0;
+    }
   }
 
-  .form-inputs {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  .divider-line {
+    border: none;
 
-    .name,
-    .email {
-      margin-bottom: 15px;
+    @include from-md {
+      width: 1px;
+      margin: 0 50px;
+    }
 
-      ::placeholder {
-        color: var(--grey-4);
+    @include to-md {
+      display: none;
+    }
+  }
+
+  .register-form {
+    text-align: center;
+    align-self: center;
+    margin: 30px 50px 0 auto;
+
+    @include to-lg {
+      margin: 30px auto 0;
+    }
+
+    @include from-lg {
+      margin-right: 150px;
+    }
+
+    .form-inputs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      .name,
+      .email {
+        margin-bottom: 15px;
+
+        ::placeholder {
+          color: var(--grey-4);
+        }
+      }
+
+      .password {
+        margin-bottom: 8px;
       }
     }
 
-    .password {
-      margin-bottom: 8px;
+    .button-container {
+      display: flex;
+      flex-direction: column;
     }
-  }
-
-  .buttons-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.divider-line {
-  border: none;
-
-  @include from-md {
-    width: 1px;
-    margin: 0 50px;
-  }
-
-  @include to-md {
-    display: none;
-  }
-}
-
-.register-form {
-  text-align: center;
-  align-self: center;
-  margin: 30px 50px 0 auto;
-
-  @include to-lg {
-    margin: 30px auto 0;
   }
 }
