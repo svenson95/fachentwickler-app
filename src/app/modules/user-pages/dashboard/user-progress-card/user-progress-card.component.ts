@@ -19,7 +19,7 @@ export class UserProgressCardComponent {
   @Input() public lessonsPercentage: number;
 
   public get lessonProgress(): number | string {
-    return this.user?.progress.length || '...';
+    return this.user?.progress.length ?? '...';
   }
 
   public get lessonLength(): number | string {
