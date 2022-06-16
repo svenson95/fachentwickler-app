@@ -3,11 +3,11 @@ import { RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouterEvent } from '@
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'fe-content',
-  templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss'],
+  selector: 'main.content',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
 })
-export class ContentComponent implements OnDestroy {
+export class MainComponent implements OnDestroy {
   public isLoading: boolean;
 
   private subscription: Subscription = new Subscription();

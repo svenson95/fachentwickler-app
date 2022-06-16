@@ -7,20 +7,14 @@ import { SidenavService } from '@services/sidenav.service';
 import { UserService } from '@services/user.service';
 
 @Component({
-  selector: 'fe-header',
+  selector: 'header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   public get mobileLogoLink(): string {
-    if (this.sidenav.isOpen()) {
-      return '/';
-    }
-
-    if (this.user.isAuthenticated) {
-      return '/dashboard';
-    }
-
+    if (this.sidenav.isOpen()) return '/';
+    if (this.user.isAuthenticated) return '/dashboard';
     return '/login';
   }
 

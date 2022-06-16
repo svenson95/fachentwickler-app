@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-right: 5px;
+    margin-right: 8px;
 
     @include from-xs {
       fill: var(--secondary-color);
@@ -41,109 +41,85 @@
 
     transition: letter-spacing 600ms ease;
     z-index: 1;
+
+    @include to-xs {
+      font-size: 0.8rem;
+      line-height: 11px;
+    }
   }
 }
 
 ::ng-deep {
-  fe-header .mat-toolbar:not(.sidenav--open) .icon-wrapper {
+  header mat-toolbar.page-header {
     @include to-xs {
-      margin-right: 0;
-    }
-  }
+      &:not(.sidenav--open) {
+        .app-icon {
+          background: var(--background-primary);
+          border-radius: 8px;
+          width: fit-content;
+          height: 36px;
+          align-self: center;
+          padding: 6px;
+          margin-left: 12px;
+          fill: var(--tertiary-color);
 
-  fe-header .mat-toolbar .sidenav-section {
-    display: flex;
-    flex: 0 0 auto;
+          .app-name {
+            display: none;
+          }
 
-    @include from-md {
-      width: 180px;
-    }
+          .icon-wrapper {
+            margin-right: 0;
+          }
+        }
+      }
 
-    @include to-xs {
-      transform: translateX(-5px);
+      &.sidenav--open {
+        .app-icon {
+          padding-left: 18px;
+          padding-right: 15px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
+
+        .icon-wrapper {
+          fill: var(--secondary-color);
+        }
+
+        .app-name {
+          @include logoMoveInLeftAnimation;
+        }
+      }
     }
 
     .app-icon {
-      display: flex;
-      justify-content: left;
-      text-decoration: none;
-      flex-shrink: 0;
-      align-items: center;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-right: 15px;
+      &:hover,
+      &:focus {
+        .icon-wrapper:not(.active-route) {
+          @include from-md {
+            transition: letter-spacing 150ms ease-out;
+          }
+        }
+      }
 
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      &:focus {
+        outline: none;
+      }
 
       @include from-xs {
-        padding-left: 33px;
-        transform: translateX(-20px);
+        &:hover .app-name {
+          letter-spacing: 1px;
+          transition: letter-spacing 500ms ease-out;
+        }
+        &:active .app-name {
+          letter-spacing: 0.5px;
+        }
       }
 
       @include to-xs {
-        padding-left: 20px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-      }
-
-      .icon-wrapper {
-        @include to-xs {
-          width: 24px;
+        div.icon-wrapper {
+          width: 26px;
         }
       }
-
-      &:hover .app-name {
-        letter-spacing: 1px;
-        transition: letter-spacing 500ms ease-out;
-      }
-      &:active .app-name {
-        letter-spacing: 0.5px;
-      }
-    }
-  }
-
-  fe-header .mat-toolbar:not(.sidenav--open) .app-icon {
-    @include to-xs {
-      background: var(--background-primary);
-      border-radius: 8px;
-      width: fit-content;
-      height: 36px;
-      align-self: center;
-      padding: 6px;
-      margin-left: 15px;
-      fill: var(--tertiary-color);
-
-      .app-name {
-        display: none;
-      }
-    }
-  }
-
-  fe-header .mat-toolbar.sidenav--open {
-    @include to-xs {
-      .icon-wrapper {
-        fill: var(--secondary-color);
-      }
-
-      .app-name {
-        @include logoMoveInLeftAnimation;
-      }
-    }
-  }
-
-  fe-header .mat-toolbar .app-icon {
-    &:hover,
-    &:focus {
-      .icon-wrapper:not(.active-route) {
-        @include from-md {
-          transition: letter-spacing 150ms ease-out;
-        }
-      }
-    }
-
-    &:focus {
-      outline: none;
     }
   }
 }

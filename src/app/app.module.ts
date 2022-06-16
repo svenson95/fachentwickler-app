@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
-import { ContentModule } from '@core-components/content/content.module';
+import { MainModule } from '@core-components/main/main.module';
 import { SidenavModule } from '@core-components/sidenav/sidenav.module';
 import { LoadingInterceptor } from '@interceptors/loading.interceptor';
 import { HeaderModule } from '@core-components/header/header.module';
@@ -39,7 +39,7 @@ const globalRippleConfig: RippleGlobalOptions = {
     AppRoutingModule,
     HeaderModule,
     SidenavModule,
-    ContentModule,
+    MainModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

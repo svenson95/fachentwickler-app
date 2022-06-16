@@ -1,7 +1,7 @@
 <ng-container *ngIf="{ mobile: mediaQuery.isMobile$ | async, tiny: mediaQuery.isTiny$ | async } as is">
-  <mat-toolbar class="header-toolbar" [class.sidenav--open]="is.mobile && sidenav.isOpen()">
+  <mat-toolbar class="page-header" [class.sidenav--open]="is.mobile && sidenav.isOpen()">
     <div class="header-wrapper">
-      <div class="sidenav-section">
+      <section class="sidenav">
         <a
           class="app-icon"
           [routerLink]="is.mobile ? mobileLogoLink : '/'"
@@ -14,8 +14,8 @@
         >
           <fe-icon></fe-icon>
         </a>
-      </div>
-      <div class="header-content">
+      </section>
+      <section class="main">
         <div class="page-title" (click)="goToSubject()" *ngIf="!is.tiny || (is.tiny && !sidenav.isOpen())">
           <mat-icon class="unselectable" *ngIf="!is.mobile">chevron_right</mat-icon>
           <p class="title" [innerHTML]="header.pageTitle"></p>
@@ -38,7 +38,7 @@
           <fe-header-menu></fe-header-menu>
           <fe-search-field *ngIf="!is.mobile"></fe-search-field>
         </div>
-      </div>
+      </section>
     </div>
   </mat-toolbar>
 </ng-container>

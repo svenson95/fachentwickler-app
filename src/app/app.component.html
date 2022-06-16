@@ -1,14 +1,13 @@
-<fe-header></fe-header>
+<header></header>
 <mat-sidenav-container autosize>
   <mat-sidenav
-    class="navigation"
     [mode]="isMobile ? 'over' : 'side'"
     [opened]="!isMobile"
     [fixedInViewport]="isMobile"
     (openedChange)="onSideMenuToggled(matSidenav.opened)"
     #matSidenav
   >
-    <fe-sidenav></fe-sidenav>
+    <nav class="sidenav"></nav>
   </mat-sidenav>
-  <fe-content></fe-content>
+  <main class="content"></main>
 </mat-sidenav-container>

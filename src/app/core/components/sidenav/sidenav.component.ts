@@ -6,7 +6,7 @@ import { MenuItem } from '@models/menu-item';
 import { UserService } from '@services/user.service';
 
 @Component({
-  selector: 'fe-sidenav',
+  selector: 'nav.sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
 })

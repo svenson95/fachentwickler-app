@@ -1,4 +1,4 @@
-<div class="section my-class" *ngIf="user.isAuthenticated">
+<section class="my-class" *ngIf="user.isAuthenticated">
   <label class="section-title">Meine Klasse</label>
   <mat-nav-list>
     <ng-container *ngFor="let navItem of myClass">
@@ -10,16 +10,16 @@
       <fe-nav-link *ngIf="navItem.url.startsWith('http://')" [item]="navItem" [href-link]="navItem.url"></fe-nav-link>
     </ng-container>
   </mat-nav-list>
-</div>
+</section>
 
-<div class="section subjects">
+<section class="subjects">
   <label class="section-title">Lernfelder</label>
   <mat-nav-list>
     <fe-nav-link *ngFor="let navItem of subjects" [item]="navItem" [router-link]="navItem.url"></fe-nav-link>
   </mat-nav-list>
-</div>
+</section>
 
-<div class="section study">
+<section class="study">
   <label class="section-title">Studium</label>
   <mat-nav-list>
     <fe-nav-link
@@ -29,9 +29,9 @@
       [disabled]="true"
     ></fe-nav-link>
   </mat-nav-list>
-</div>
+</section>
 
-<div class="section areas">
+<section class="areas">
   <label class="section-title">Bereiche</label>
   <mat-nav-list>
     <fe-nav-link
@@ -41,17 +41,19 @@
       [disabled]="true"
     ></fe-nav-link>
   </mat-nav-list>
-</div>
+</section>
 
-<hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px" />
+<ng-container *ngIf="user.isAuthenticated">
+  <hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px" />
 
-<div class="section apps" *ngIf="user.isAuthenticated">
-  <a
-    class="fe-button"
-    routerLink="pruefungssimulator"
-    [class.active-route]="router.url.startsWith('/pruefungssimulator')"
-    matRipple
-  >
-    Prüfungssimulator
-  </a>
-</div>
+  <section class="apps" *ngIf="user.isAuthenticated">
+    <a
+      class="fe-button"
+      routerLink="pruefungssimulator"
+      [class.active-route]="router.url.startsWith('/pruefungssimulator')"
+      matRipple
+    >
+      Prüfungssimulator
+    </a>
+  </section>
+</ng-container>

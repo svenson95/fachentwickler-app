@@ -10,7 +10,12 @@
   left: 0;
   right: 0;
 
-  mat-sidenav.navigation {
+  main.content,
+  nav.sidenav {
+    padding-top: 50px;
+  }
+
+  mat-sidenav {
     background: var(--background-secondary);
     overflow-x: hidden;
     border-right: 0;
@@ -18,8 +23,8 @@
 }
 
 ::ng-deep {
-  mat-sidenav.navigation,
-  mat-sidenav.navigation .mat-drawer-inner-container {
+  mat-sidenav,
+  mat-sidenav .mat-drawer-inner-container {
     -webkit-appearance: none;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -56,11 +61,5 @@
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
              `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
-  }
-
-  mat-sidenav.navigation {
-    background: var(--background-secondary);
-    overflow-x: hidden;
-    border-right: 0;
   }
 }

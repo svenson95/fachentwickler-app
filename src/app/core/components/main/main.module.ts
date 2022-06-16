@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
 import { FooterModule } from '../footer/footer.module';
 
-import { ContentComponent } from './content.component';
+import { MainComponent } from './main.component';
 
 @NgModule({
-  declarations: [ContentComponent],
-  exports: [ContentComponent],
+  declarations: [MainComponent],
+  exports: [MainComponent],
   imports: [SharedModule, FooterModule],
 })
-export class ContentModule {}
+export class MainModule {}
