@@ -1,5 +1,3 @@
-import { BaseResponse } from './base-response';
-
 export enum UserRole {
   ADMIN = 'admin',
   USER = 'user',
@@ -29,32 +27,29 @@ export interface RegisterUser {
   theme: 'light' | 'dark';
 }
 
-export interface EditUser {
+interface EditUserBase {
   _id: string;
-  newName?: string;
-  email?: string;
-  password?: string;
-  theme?: 'light' | 'dark';
 }
 
-export interface UserProgress {
-  _id?: string;
+export interface EditNameBody extends EditUserBase {
+  newName: string;
+}
+
+export interface EditEmailBody extends EditUserBase {
+  email: string;
+}
+
+export interface EditPasswordBody extends EditUserBase {
+  password: string;
+}
+
+export interface EditThemeBody extends EditUserBase {
+  theme: 'light' | 'dark';
+}
+
+export interface AddProgressBody {
   userId: string;
   postId: string;
 }
 
-export interface AuthNullResponse extends BaseResponse {
-  data: null;
-}
-
-export interface AuthUserResponse extends BaseResponse {
-  data: { user: UserData } | null;
-}
-
-export interface AuthUserTokenResponse extends BaseResponse {
-  data: { token: string; user: UserData } | null;
-}
-
-export interface AuthUserProgressResponse extends BaseResponse {
-  data: { progress: string; user: UserData } | null;
-}
+export type EditBodyTypes = EditNameBody | EditEmailBody | EditPasswordBody | EditThemeBody;

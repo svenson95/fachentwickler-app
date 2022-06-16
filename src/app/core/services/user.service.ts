@@ -4,9 +4,10 @@ import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { AuthUserProgressResponse, AuthUserResponse, EditUser, UserData, UserProgress } from '@models/user';
 import { environment } from '@env/environment';
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { AddProgressBody, EditBodyTypes, UserData } from '@models/user';
+import { AuthUserProgressResponse, AuthUserResponse } from '@models/auth-response';
 
 import { AuthService, CREDENTIALS_STORAGE_KEY } from './auth.service';
 import { ThemeService } from './theme.service';
@@ -81,10 +82,10 @@ export class UserService {
   public setLessonSolved(id: string): Promise<void> {
     if (this.data.progress.includes(id)) return;
 
-    const lesson = {
+    const lesson: AddProgressBody = {
       userId: this.data._id,
       postId: id,
-    } as UserProgress;
+    };
 
     this.addProgress(lesson).subscribe(
       () => {
@@ -113,11 +114,11 @@ export class UserService {
     );
   }
 
-  public edit(user: EditUser): Observable<AuthUserResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.auth.token);
+  public edit(user: EditBodyTypes): Observable<AuthUserResponse> {
+    const headers = new HttpHeaders().set('Authorization', this.auth.token);
 
     return this.httpClient
-      .patch<AuthUserResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(user), {
+      .patch<AuthUserResponse>(this.EDIT_USER_ENDPOINT, user, {
         headers,
       })
       .pipe(
@@ -131,20 +132,18 @@ export class UserService {
       );
   }
 
-  private addProgress(progress: UserProgress): Observable<AuthUserProgressResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.auth.token);
+  private addProgress(progress: AddProgressBody): Observable<AuthUserProgressResponse> {
+    const headers = new HttpHeaders().set('Authorization', this.auth.token);
 
-    return this.httpClient
-      .post<AuthUserProgressResponse>(this.ADD_PROGRESS_ENDPOINT, JSON.stringify(progress), { headers })
-      .pipe(
-        map((response) => {
-          // console.log('response POST user/add-progress', response);
-          if (response.success) {
-            this.data = response.data.user;
-            this.storeData();
-          }
-          return response;
-        }),
-      );
+    return this.httpClient.post<AuthUserProgressResponse>(this.ADD_PROGRESS_ENDPOINT, progress, { headers }).pipe(
+      map((response) => {
+        // console.log('response POST user/add-progress', response);
+        if (response.success) {
+          this.data = response.data.user;
+          this.storeData();
+        }
+        return response;
+      }),
+    );
   }
 }

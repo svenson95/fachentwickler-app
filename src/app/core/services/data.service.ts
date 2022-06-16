@@ -93,10 +93,9 @@ export class DataService {
   }
 
   public getMultipleImages(page = 0, imagesPerPage = 10, sorting = 'descending'): Observable<ImageFile[]> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const params = new HttpParams().set('page', String(page)).set('size', String(imagesPerPage)).set('sort', sorting);
 
-    return this.httpClient.get<ImageFile[]>(`${this.IMAGES_ENDPOINT}/all`, { headers, params }).pipe(
+    return this.httpClient.get<ImageFile[]>(`${this.IMAGES_ENDPOINT}/all`, { params }).pipe(
       map((response) => {
         // console.log('response GET images', response);
         return response;

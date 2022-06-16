@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { AuthNullResponse, AuthUser, AuthUserResponse, AuthUserTokenResponse, RegisterUser } from '@models/user';
 import { environment } from '@env/environment';
+import { AuthUser, RegisterUser } from '@models/user';
+import { AuthNullResponse, AuthUserResponse, AuthUserTokenResponse } from '@models/auth-response';
 
 /* eslint-disable quotes, quote-props, max-len */
 
@@ -65,9 +66,9 @@ export class AuthService {
   }
 
   public resendVerificationCode(email: string): Observable<AuthNullResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Authorization', this.token);
 
-    return this.http.post<AuthNullResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, email, { headers }).pipe(
+    return this.http.post<AuthNullResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, { email }, { headers }).pipe(
       map((response) => {
         // console.log('response POST resend-verification-code', response);
         return response;
@@ -76,7 +77,7 @@ export class AuthService {
   }
 
   public forgotPassword(email: string): Observable<AuthNullResponse> {
-    return this.http.post<AuthNullResponse>(`${this.FORGOT_PASSWORD_ENDPOINT}`, email).pipe(
+    return this.http.post<AuthNullResponse>(`${this.FORGOT_PASSWORD_ENDPOINT}`, { email }).pipe(
       map((response) => {
         // console.log('response POST forgot-password', response);
         return response;
@@ -85,7 +86,7 @@ export class AuthService {
   }
 
   public refresh(): Observable<AuthUserTokenResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Authorization', this.token);
 
     return this.http.get<AuthUserTokenResponse>(this.AUTHENTICATED_ENDPOINT, { headers }).pipe(
       map((response) => {
@@ -96,7 +97,7 @@ export class AuthService {
   }
 
   public invalidate(): Observable<AuthNullResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.token);
+    const headers = new HttpHeaders().set('Authorization', this.token);
 
     this.token = 'jwt';
     localStorage.removeItem(CREDENTIALS_STORAGE_KEY);

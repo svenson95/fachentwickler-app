@@ -12,6 +12,7 @@ import { ThemeService } from '@services/theme.service';
 import { inputsMatch } from '@validators/match.validator';
 import { DashboardService } from '@services/dashboard.service';
 import { UserService } from '@services/user.service';
+import { EditEmailBody, EditNameBody, EditPasswordBody, EditThemeBody } from '@models/user';
 
 @Component({
   selector: 'fe-my-profile-page',
@@ -125,11 +126,9 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeName(): void {
-    if (this.name.invalid) {
-      return;
-    }
+    if (this.name.invalid) return;
 
-    const data = {
+    const data: EditNameBody = {
       _id: this.user.data._id,
       newName: this.name.value.toLowerCase(),
     };
@@ -167,11 +166,9 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeEmail(): void {
-    if (this.email.invalid) {
-      return;
-    }
+    if (this.email.invalid) return;
 
-    const data = { _id: this.user.data._id, email: this.email.value };
+    const data: EditEmailBody = { _id: this.user.data._id, email: this.email.value };
     this.user.edit(data).subscribe(
       () => {
         this.isConfirmingEmail = true;
@@ -192,9 +189,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public confirmChangedEmail(): void {
-    if (this.emailFormGroup.invalid) {
-      return;
-    }
+    if (this.emailFormGroup.invalid) return;
     const { email, verificationCode } = this.emailFormGroup.value;
 
     this.auth.verify(this.user.data.email, verificationCode, email).subscribe(
@@ -235,18 +230,14 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangePassword(): void {
-    if (this.password.invalid) {
-      return;
-    }
+    if (this.password.invalid) return;
 
     if (!this.isConfirmingPassword) {
       this.isConfirmingPassword = true;
     } else {
-      if (this.confirmPassword.invalid) {
-        return;
-      }
+      if (this.confirmPassword.invalid) return;
 
-      const data = { _id: this.user.data._id, password: this.confirmPassword.value };
+      const data: EditPasswordBody = { _id: this.user.data._id, password: this.confirmPassword.value };
       this.user.edit(data).subscribe(
         () => {
           this.password.disable();
@@ -276,7 +267,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeTheme(): void {
-    const data = { _id: this.user.data._id, theme: this.theme.value };
+    const data: EditThemeBody = { _id: this.user.data._id, theme: this.theme.value };
     this.user.edit(data).subscribe(
       () => {
         this.snackbar.openFromComponent(SnackbarComponent, {
