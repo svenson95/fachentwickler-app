@@ -46,12 +46,12 @@
 <hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px" />
 
 <div class="section apps" *ngIf="user.isAuthenticated">
-  <button
-    class="fe-text-button fe-pruefungssimulator-btn"
+  <a
+    class="fe-button"
     routerLink="pruefungssimulator"
     [class.active-route]="router.url.startsWith('/pruefungssimulator')"
     matRipple
   >
     Prüfungssimulator
-  </button>
+  </a>
 </div>

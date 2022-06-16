@@ -19,14 +19,14 @@ import { PostLinkComponent } from './components/post-link/post-link.component';
 import { ScheduleCardComponent } from './components/schedule-card/schedule-card.component';
 import { ScheduleComponent } from './components/schedule-card/schedule/schedule.component';
 import { SchoolWeekCardComponent } from './components/school-week-card/school-week-card.component';
-import { StateButtonComponent } from './components/state-button/state-button.component';
+import { TextComponent } from './components/button/button.component';
 import { PipesModule } from './pipes/pipes.module';
 
 const components = [
   CardComponent,
   CheckmarkComponent,
   LoadingSpinnerComponent,
-  StateButtonComponent,
+  TextComponent,
   PostLinkComponent,
   PostElementComponent,
   PostBadgeComponent,

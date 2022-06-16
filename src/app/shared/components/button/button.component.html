@@ -1,0 +1,4 @@
+<span class="label" [class.hidden]="isLoading">
+  <ng-content></ng-content>
+</span>
+<mat-spinner diameter="18" *ngIf="isLoading"></mat-spinner>

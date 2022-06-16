@@ -45,9 +45,9 @@
         </ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
-    <fe-state-button type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)">
+    <button class="fe-button" type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)" matRipple>
       Hochladen
-    </fe-state-button>
+    </button>
   </form>
   <hr class="divider-line" />
   <p class="title">Details</p>
@@ -91,20 +91,22 @@
         </p>
       </div>
     </div>
-    <fe-state-button
+    <button
+      class="fe-button"
       *ngIf="userData.role === UserRole.ADMIN"
       [disabled]="!selectedImage"
       (click)="deleteImage(selectedImage._id)"
+      matRipple
     >
-      <span>Bild löschen</span>
+      Bild löschen
       <ion-icon class="drop-icon" name="backspace"></ion-icon>
-    </fe-state-button>
+    </button>
   </div>
   <hr class="divider-line" />
   <div class="title-wrapper">
     <p class="title">Hochgeladene Bilder</p>
-    <button class="fe-text-button secondary" (click)="changeSorting()">
-      <span>{{ isSortedAscending ? "Aufsteigend" : "Absteigend" }}</span>
+    <button class="fe-button secondary" (click)="changeSorting()" matRipple>
+      {{ isSortedAscending ? "Aufsteigend" : "Absteigend" }}
       <mat-icon>
         {{ isSortedAscending ? "expand_less" : "expand_more" }}
       </mat-icon>

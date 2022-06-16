@@ -88,14 +88,22 @@ mat-dialog-container.mat-dialog-container {
   color: var(--text-color-1);
   border-radius: var(--border-radius);
 
-  .mat-dialog-actions {
+  mat-dialog-actions.mat-dialog-actions {
     min-height: inherit;
+    justify-content: end;
     padding-bottom: 0;
     margin-bottom: 0;
   }
 
-  .fe-text-button.close {
-    margin-right: 10px;
+  button.fe-button.close {
+    margin-right: 15px;
+  }
+
+  button.fe-button {
+    .delete-icon,
+    .logout-icon {
+      margin-left: 5px;
+    }
   }
 }
 

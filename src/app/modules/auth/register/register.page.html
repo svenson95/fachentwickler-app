@@ -1,7 +1,5 @@
 <fe-card title="Account erstellen">
-  <div class="fe-text-button back-to-login-btn" routerLink="/login" matRipple>
-    <span>Zurück zum Login</span>
-  </div>
+  <a class="fe-button back-to-login-btn" routerLink="/login" matRipple>Zurück zum Login</a>
   <hr class="divider-line" />
   <form class="register-form" [formGroup]="form" (ngSubmit)="register()" (change)="onFormChange()">
     <div class="form-inputs">
@@ -40,9 +38,9 @@
       </mat-form-field>
     </div>
     <div class="buttons-wrapper">
-      <fe-state-button type="submit" [disabled]="form.invalid || isLoading" [isLoading]="isLoading">
+      <button class="fe-button" type="submit" [disabled]="form.invalid || isLoading" [isLoading]="isLoading" matRipple>
         Bestätigen
-      </fe-state-button>
+      </button>
     </div>
   </form>
 </fe-card>

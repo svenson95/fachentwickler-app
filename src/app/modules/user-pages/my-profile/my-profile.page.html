@@ -174,13 +174,9 @@
   </div>
 </fe-card>
 
-<fe-card class="settings">
-  <div class="edit-wrapper">
-    <button class="fe-text-button edit-user-btn" (click)="resetProgress()" disabled>
-      <span>Fortschritt zurücksetzen</span>
-    </button>
-    <button class="fe-text-button edit-user-btn" (click)="markAllPostsAsRead()" disabled>
-      <span>Alle als gelesen markieren</span>
-    </button>
-  </div>
+<fe-card class="settings align-right">
+  <button class="fe-button" (click)="resetProgress()" [disabled]="true" matRipple>Fortschritt zurücksetzen</button>
+  <button class="fe-button" (click)="markAllPostsAsRead()" [disabled]="true" matRipple>
+    Alle als gelesen markieren
+  </button>
 </fe-card>

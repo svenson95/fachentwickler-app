@@ -1,16 +1,10 @@
-::ng-deep {
-  .logout-modal.cdk-overlay-pane {
-    .fe-text-button {
-      display: flex;
-      align-items: center;
-
-      .mat-icon {
-        height: 16px;
-        width: 16px;
-        line-height: 1.1rem;
-        font-size: 1rem;
-        margin-left: 5px;
-      }
+::ng-deep .logout-modal.cdk-overlay-pane {
+  .fe-button {
+    .logout-icon {
+      height: 16px;
+      width: 16px;
+      line-height: 1.1rem;
+      font-size: 1rem;
     }
   }
 }

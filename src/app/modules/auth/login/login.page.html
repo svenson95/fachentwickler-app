@@ -35,10 +35,8 @@
       </mat-form-field>
     </div>
     <div class="buttons-wrapper">
-      <fe-state-button type="submit" [isLoading]="isLoading">Anmelden</fe-state-button>
-      <a class="fe-text-button" routerLink="/forgot-password" matRipple>
-        <span>Passwort vergessen?</span>
-      </a>
+      <button class="fe-button" type="submit" [isLoading]="isLoading" matRipple>Anmelden</button>
+      <a class="fe-button" routerLink="/forgot-password" matRipple> Passwort vergessen? </a>
     </div>
   </form>
 
@@ -46,8 +44,6 @@
 
   <div class="register-form">
     <p class="no-account-hint">Noch nicht registriert?</p>
-    <a class="fe-text-button" routerLink="/register" matRipple>
-      <span>Account erstellen</span>
-    </a>
+    <a class="fe-button" routerLink="/register" matRipple> Account erstellen </a>
   </div>
 </fe-card>

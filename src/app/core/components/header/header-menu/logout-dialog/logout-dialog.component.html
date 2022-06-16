@@ -1,10 +1,8 @@
-<div class="fe-logout-dialog">
-  <mat-dialog-content> Möchtest du dich abmelden? </mat-dialog-content>
-  <mat-dialog-actions>
-    <button class="fe-text-button close" mat-dialog-close>Nein</button>
-    <button class="fe-text-button" (click)="logout()" mat-dialog-close>
-      Ja
-      <mat-icon>logout</mat-icon>
-    </button>
-  </mat-dialog-actions>
-</div>
+<mat-dialog-content> Möchtest du dich abmelden? </mat-dialog-content>
+<mat-dialog-actions>
+  <button class="fe-button close" mat-dialog-close matRipple>Nein</button>
+  <button class="fe-button" (click)="logout()" mat-dialog-close matRipple>
+    Ja
+    <mat-icon class="logout-icon">logout</mat-icon>
+  </button>
+</mat-dialog-actions>

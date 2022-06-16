@@ -1,11 +1,7 @@
 ::ng-deep .delete-image-modal.cdk-overlay-pane {
-  .fe-text-button {
-    span {
-      display: flex;
-    }
+  .fe-button {
     .delete-icon {
       font-size: 1.3em;
-      margin-left: 5px;
     }
   }
 }

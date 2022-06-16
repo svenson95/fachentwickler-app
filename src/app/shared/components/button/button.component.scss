@@ -1,16 +1,14 @@
-button.fe-text-button {
-  position: relative;
+:host {
+  display: grid;
 
-  .label {
+  span.label {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    ::ng-deep span {
-      align-self: center;
+    &.hidden {
+      opacity: 0;
     }
-  }
-
-  .hidden {
-    opacity: 0;
   }
 
   mat-spinner.mat-spinner {

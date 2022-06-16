@@ -9,11 +9,3 @@ fe-card.elements {
     z-index: 3;
   }
 }
-
-fe-card.options {
-  text-align: end;
-
-  button.fe-text-button:not(:first-of-type) {
-    margin-left: 10px;
-  }
-}

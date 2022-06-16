@@ -1,16 +1,14 @@
-<mat-card class="card lesson-footer" *ngIf="userData">
-  <div class="button-container">
-    <fe-state-button
-      *ngIf="postId"
-      [isLoading]="isLoading && !(postId | alreadyRead)"
-      [disabled]="isLoading || (postId | alreadyRead)"
-      (click)="lessonSolved()"
-    >
-      Als gelesen markieren
-    </fe-state-button>
+<fe-card class="lesson-footer align-right" *ngIf="userData">
+  <button
+    class="fe-button"
+    *ngIf="postId"
+    [isLoading]="isLoading && !(postId | alreadyRead)"
+    [disabled]="isLoading || (postId | alreadyRead)"
+    (click)="lessonSolved()"
+    matRipple
+  >
+    Als gelesen markieren
+  </button>
 
-    <button class="fe-text-button" *ngIf="userData.role === UserRole.ADMIN" routerLink="edit">
-      <span>Artikel bearbeiten</span>
-    </button>
-  </div>
-</mat-card>
+  <a class="fe-button" *ngIf="userData.role === UserRole.ADMIN" routerLink="edit" matRipple> Artikel bearbeiten </a>
+</fe-card>

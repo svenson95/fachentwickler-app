@@ -209,7 +209,7 @@ $easeIn-duration: 400ms;
     }
   }
 
-  .fe-text-button {
+  button.fe-button {
     display: flex;
     margin: 20px auto auto;
 
@@ -278,12 +278,9 @@ $easeIn-duration: 400ms;
     #horizontal-connector {
       margin: 0 !important;
     }
-  }
 
-  &.correct,
-  &.wrong {
-    button.fe-text-button span,
-    button.fe-text-button:disabled span {
+    button.fe-button span,
+    button.fe-button:disabled span {
       color: var(--tertiary-color);
     }
   }

@@ -9,8 +9,8 @@
 
     <mat-card-subtitle class="card-date" *ngIf="date && !type">{{ date }}</mat-card-subtitle>
 
-    <a class="fe-text-button secondary show-more" [routerLink]="buttonLink" *ngIf="buttonLink && buttonLabel" matRipple>
-      <span>{{ buttonLabel }}</span>
+    <a class="fe-button secondary show-more" [routerLink]="buttonLink" *ngIf="buttonLink && buttonLabel" matRipple>
+      {{ buttonLabel }}
     </a>
   </mat-card-header>
 

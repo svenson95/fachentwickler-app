@@ -20,10 +20,12 @@ a {
   color: var(--text-color-1);
   text-decoration-color: var(--secondary-color);
   transition: color 100ms ease-in-out;
+}
 
+a,
+.fe-button {
   &:hover {
     color: var(--secondary-color);
-    transition: color 100ms ease-in-out;
   }
 }
 

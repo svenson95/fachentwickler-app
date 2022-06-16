@@ -12,7 +12,8 @@
   margin-top: 10px;
 }
 
-.fe-text-button {
+button.fe-button,
+a.fe-button {
   background-color: transparent;
   color: var(--tertiary-color);
   text-decoration: none;
@@ -50,10 +51,11 @@
   }
 
   &.secondary {
-    padding: 4px 10px 2px;
+    padding: 5px 10px 4px;
     font-size: 0.9em;
 
     @include to-xs {
+      padding: 4px 10px 3px;
       font-size: 0.8em;
     }
   }
@@ -80,6 +82,21 @@
     span,
     .drop-icon {
       color: rgba(var(--grey-4-rgb), 0.5);
+    }
+  }
+}
+
+fe-card.align-right {
+  mat-card-content.card-content {
+    display: flex;
+    justify-content: end;
+
+    .fe-button:not(:first-of-type) {
+      margin-left: 20px;
+
+      @include to-xs {
+        font-size: 0.7rem;
+      }
     }
   }
 }

@@ -28,11 +28,17 @@
       </mat-form-field>
     </div>
     <div class="buttons-wrapper">
-      <fe-state-button type="submit" [isLoading]="isSubmitLoading">Bestätigen</fe-state-button>
+      <button class="fe-button" type="submit" [isLoading]="isSubmitLoading" matRipple>Bestätigen</button>
       <p>Du hast keine E-Mail erhalten?</p>
-      <fe-state-button type="button" [isLoading]="isResendLoading" (click)="resendVerificationMail()">
+      <button
+        class="fe-button"
+        type="button"
+        [isLoading]="isResendLoading"
+        (click)="resendVerificationMail()"
+        matRipple
+      >
         Nochmal senden
-      </fe-state-button>
+      </button>
     </div>
   </form>
   <div class="verification-succeed-container" *ngIf="verificationSucceed">

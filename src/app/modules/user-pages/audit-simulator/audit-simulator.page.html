@@ -7,7 +7,7 @@
     <p>
       Das Quiz enthält Prüfungsfragen aus den Zwischenprüfungen der Jahre Sommer 2019, Herbst 2020 und Frühling 2021.
     </p>
-    <button class="fe-text-button right" (click)="startAudit()">Start</button>
+    <button class="fe-button right" (click)="startAudit()" matRipple>Start</button>
   </ng-container>
 
   <ng-container *ngIf="state === AuditState.PLAY" #slideInWrapper>
@@ -25,10 +25,11 @@
           <span matSuffix>&nbsp; EUR</span>
         </mat-form-field>
         <button
-          class="fe-text-button"
+          class="fe-button"
           (click)="checkAnswer($event, null)"
           [class.correct]="isCorrect === true"
           [class.wrong]="isCorrect === false"
+          matRipple
         >
           Absenden
         </button>

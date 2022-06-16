@@ -12,7 +12,7 @@
   }
 }
 
-.fe-text-button.right {
+.fe-button.right {
   display: flex;
   margin-left: auto;
   margin-top: 20px;
@@ -113,7 +113,7 @@
     }
   }
 
-  .fe-text-button {
+  .fe-button {
     margin-left: 20px;
     transform: translateY(-3px);
     transition: background 100ms ease-in-out;

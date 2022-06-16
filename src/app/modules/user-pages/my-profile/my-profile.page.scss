@@ -19,13 +19,6 @@
     }
   }
 
-  fe-card.settings {
-    mat-card.card {
-      mat-card-content.card-content {
-        margin-top: 0;
-      }
-    }
-  }
 
   mat-form-field.form-field {
     margin-bottom: 0.5rem;
@@ -191,23 +184,5 @@ button.save-change {
   &:disabled {
     background: rgba(var(--grey-4-rgb), 0.6);
     border-color: rgba(var(--grey-4-rgb), 0.6);
-  }
-}
-
-fe-card.settings {
-  .edit-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-
-    .edit-user-btn {
-      font-size: 0.8em;
-      width: fit-content;
-
-      &:not(:first-of-type) {
-        margin-top: 15px;
-      }
-    }
   }
 }

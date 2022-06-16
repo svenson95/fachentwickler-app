@@ -28,12 +28,12 @@
             *ngIf="is.mobile"
           ></fe-hamburger-icon>
           <a
-            class="fe-text-button dashboard-btn"
+            class="fe-button dashboard-btn"
             matRipple
             [routerLink]="user.isAuthenticated ? '/dashboard' : '/login'"
             [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')"
           >
-            <span>{{ user.isAuthenticated ? "Dashboard" : "Schülerbereich" }}</span>
+            {{ user.isAuthenticated ? "Dashboard" : "Schülerbereich" }}
           </a>
           <fe-header-menu></fe-header-menu>
           <fe-search-field *ngIf="!is.mobile"></fe-search-field>

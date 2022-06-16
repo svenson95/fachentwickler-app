@@ -20,6 +20,10 @@
         padding-bottom: 10px;
         border-bottom: 1px solid var(--grey-1);
       }
+
+      button.fe-button:hover {
+        color: var(--tertiary-color);
+      }
     }
 
     ngx-skeleton-loader span.loader.progress {
@@ -90,12 +94,6 @@
       @include to-xs {
         font-size: 0.8rem;
       }
-    }
-  }
-
-  .fe-news-item .fe-text-button {
-    &:hover {
-      color: var(--tertiary-color);
     }
   }
 }

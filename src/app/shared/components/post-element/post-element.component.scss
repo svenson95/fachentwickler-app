@@ -16,10 +16,24 @@
     border-radius: 0;
   }
 
-  &.is-open {
-    .fe-text-button {
-      color: var(--text-color-3);
-      border-color: rgba(var(--grey-1-rgb), 0.6);
+  &.is-open button.fe-button {
+    color: var(--text-color-3);
+    border-color: rgba(var(--grey-1-rgb), 0.6);
+  }
+
+  &:not(.is-open) button.fe-button {
+    margin-bottom: 10px;
+  }
+
+  button.fe-button {
+    height: fit-content;
+
+    @include from-xs {
+      width: 140px;
+    }
+
+    @include to-xs {
+      width: 130px;
     }
   }
 
@@ -106,22 +120,6 @@
       width: 36px;
       height: 36px;
     }
-  }
-}
-
-.fe-text-button {
-  height: fit-content;
-
-  @include from-xs {
-    width: 140px;
-  }
-
-  @include to-xs {
-    width: 130px;
-  }
-
-  &:not(.is-open) {
-    margin-bottom: 10px;
   }
 }
 
