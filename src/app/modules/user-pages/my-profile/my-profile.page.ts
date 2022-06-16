@@ -12,7 +12,6 @@ import { ThemeService } from '@services/theme.service';
 import { inputsMatch } from '@validators/match.validator';
 import { DashboardService } from '@services/dashboard.service';
 import { UserService } from '@services/user.service';
-import { EditUser } from '@models/user';
 
 @Component({
   selector: 'fe-my-profile-page',
@@ -133,7 +132,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
     const data = {
       _id: this.user.data._id,
       newName: this.name.value.toLowerCase(),
-    } as EditUser;
+    };
 
     this.user.edit(data).subscribe(
       () => {
@@ -171,9 +170,9 @@ export class MyProfilePage implements OnInit, OnDestroy {
     if (this.email.invalid) {
       return;
     }
-    const { email } = this.emailFormGroup.value;
 
-    this.user.edit({ _id: this.user.data._id, email }).subscribe(
+    const data = { _id: this.user.data._id, email: this.email.value };
+    this.user.edit(data).subscribe(
       () => {
         this.isConfirmingEmail = true;
 
@@ -201,7 +200,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
     this.auth.verify(this.user.data.email, verificationCode, email).subscribe(
       (response) => {
         if (response.success) {
-          this.user.data = response.user;
+          this.user.data = response.data.user;
           this.user.storeData();
           this.email.disable();
 
@@ -247,9 +246,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
         return;
       }
 
-      const { confirmPassword } = this.passwordFormGroup.value;
-      const data: EditUser = { _id: this.user.data._id, password: confirmPassword };
-
+      const data = { _id: this.user.data._id, password: this.confirmPassword.value };
       this.user.edit(data).subscribe(
         () => {
           this.password.disable();
@@ -279,8 +276,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeTheme(): void {
-    const data: EditUser = { _id: this.user.data._id, theme: this.theme.value };
-
+    const data = { _id: this.user.data._id, theme: this.theme.value };
     this.user.edit(data).subscribe(
       () => {
         this.snackbar.openFromComponent(SnackbarComponent, {

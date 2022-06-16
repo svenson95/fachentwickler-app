@@ -64,14 +64,13 @@ export class ForgotPasswordPage {
     this.isSubmitLoading = true;
 
     this.auth.forgotPassword(email).subscribe(
-      (result) => {
-        if (!result.success && result.code === 'UserVerifiedException') {
+      (response) => {
+        if (!response.success) {
           this.snackBar.openFromComponent(SnackbarComponent, {
             duration: 2500,
             data: 'Fehler! Benutzer ist bereits verfiziert',
           });
-        }
-        if (!result.success && result.code === 'UserNotFoundException') {
+        } else {
           this.snackBar.openFromComponent(SnackbarComponent, {
             duration: 2500,
             data: 'Benutzer mit angegebener E-Mail Adresse nicht gefunden',

@@ -4,8 +4,7 @@ import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-import { AuthResponse, UserProgressResponse } from '@models/fetch-response';
-import { EditUser, UserData, UserProgress } from '@models/user';
+import { AuthUserProgressResponse, AuthUserResponse, EditUser, UserData, UserProgress } from '@models/user';
 import { environment } from '@env/environment';
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 
@@ -46,11 +45,11 @@ export class UserService {
     this.auth.refresh().subscribe(
       (response) => {
         if (response.success) {
-          this.data = response.user;
-          this.auth.token = response.token;
+          this.data = response.data.user;
+          this.auth.token = response.data.token;
           this.isAuthenticated = true;
 
-          if (this.theme.getActiveTheme().name !== response.user.theme) {
+          if (this.theme.getActiveTheme().name !== response.data.user.theme) {
             this.theme.toggleTheme();
           }
 
@@ -79,39 +78,6 @@ export class UserService {
     );
   }
 
-  public changePassword(code: string, newPassword: string): Observable<AuthResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
-
-    const body = { code, newPassword };
-
-    return this.httpClient
-      .post<AuthResponse>(`${this.CHANGE_PASSWORD_ENDPOINT}`, JSON.stringify(body), { headers })
-      .pipe(
-        map((response) => {
-          // console.log('response POST forgot-password', response);
-          return response;
-        }),
-      );
-  }
-
-  public edit(user: EditUser): Observable<AuthResponse> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.auth.token);
-
-    return this.httpClient
-      .patch<AuthResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(user), {
-        headers,
-      })
-      .pipe(
-        map((response) => {
-          if (response.success) {
-            this.data = response.user;
-            this.storeData();
-          }
-          return response;
-        }),
-      );
-  }
-
   public setLessonSolved(id: string): Promise<void> {
     if (this.data.progress.includes(id)) return;
 
@@ -136,16 +102,45 @@ export class UserService {
     );
   }
 
-  private addProgress(progress: UserProgress): Observable<UserProgressResponse> {
+  public changePassword(code: string, newPassword: string): Observable<AuthUserResponse> {
+    const body = { code, newPassword };
+
+    return this.httpClient.post<AuthUserResponse>(`${this.CHANGE_PASSWORD_ENDPOINT}`, body).pipe(
+      map((response) => {
+        // console.log('response POST forgot-password', response);
+        return response;
+      }),
+    );
+  }
+
+  public edit(user: EditUser): Observable<AuthUserResponse> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.auth.token);
 
     return this.httpClient
-      .post<UserProgressResponse>(this.ADD_PROGRESS_ENDPOINT, JSON.stringify(progress), { headers })
+      .patch<AuthUserResponse>(this.EDIT_USER_ENDPOINT, JSON.stringify(user), {
+        headers,
+      })
+      .pipe(
+        map((response) => {
+          if (response.success) {
+            this.data = response.data.user;
+            this.storeData();
+          }
+          return response;
+        }),
+      );
+  }
+
+  private addProgress(progress: UserProgress): Observable<AuthUserProgressResponse> {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Authorization', this.auth.token);
+
+    return this.httpClient
+      .post<AuthUserProgressResponse>(this.ADD_PROGRESS_ENDPOINT, JSON.stringify(progress), { headers })
       .pipe(
         map((response) => {
           // console.log('response POST user/add-progress', response);
           if (response.success) {
-            this.data = response.user;
+            this.data = response.data.user;
             this.storeData();
           }
           return response;

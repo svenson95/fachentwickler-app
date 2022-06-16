@@ -67,7 +67,7 @@ export class VerifyPage implements OnInit {
 
         if (response.success) {
           this.verificationSucceed = true;
-          this.user.data = response.user;
+          this.user.data = response.data.user;
           this.user.storeData();
         }
 

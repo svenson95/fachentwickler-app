@@ -75,22 +75,22 @@ export class LoginPage implements OnDestroy {
 
     this.auth.login(data).subscribe(
       (response) => {
-        if (this.themeService.getActiveTheme().name !== response.user.theme) {
-          this.themeService.toggleTheme();
-        }
-
         if (response.success) {
-          this.auth.token = response.token;
+          if (this.themeService.getActiveTheme().name !== response.data.user.theme) {
+            this.themeService.toggleTheme();
+          }
+
+          this.auth.token = response.data.token;
+          this.user.data = response.data.user;
           this.user.isAuthenticated = true;
-          this.user.data = response.user;
           this.user.storeData();
           this.dashboard.init();
-        }
 
-        if (this.auth.redirectUrl) {
-          this.redirectTo(this.auth.redirectUrl);
-        } else {
-          this.router.navigate(['dashboard']);
+          if (this.auth.redirectUrl) {
+            this.redirectTo(this.auth.redirectUrl);
+          } else {
+            this.router.navigate(['dashboard']);
+          }
         }
       },
       () => {

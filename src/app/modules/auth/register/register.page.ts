@@ -98,7 +98,7 @@ export class RegisterPage implements OnInit, OnDestroy {
         if (response.success) {
           this.router.navigateByUrl('/dashboard');
           this.user.isAuthenticated = true;
-          this.user.data = response.user;
+          this.user.data = response.data.user;
           this.user.storeData();
         }
       },
