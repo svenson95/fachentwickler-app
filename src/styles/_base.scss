@@ -146,6 +146,10 @@ mat-dialog-content.image-manager {
       display: flex;
       align-items: center;
       margin-top: 5px;
+
+      fe-post-badge {
+        margin-right: 6px;
+      }
     }
   }
 }
