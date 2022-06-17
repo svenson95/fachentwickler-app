@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { indexCards } from '@data/index-cards';
 import { matchings } from '@data/matchings';
 import { quizzes } from '@data/quizzes';
-import { PostIndexCards, PostMatchings, PostQuiz } from '@models/post';
+import { PostIndexCards, PostMatching, PostQuiz } from '@models/post';
 
 @Component({
   selector: 'section.3',
@@ -15,5 +15,5 @@ export class Section3Component {
 
   public testIndexCards: PostIndexCards = indexCards[1];
 
-  public testMatching: PostMatchings = matchings[0];
+  public testMatching: PostMatching = matchings[0];
 }

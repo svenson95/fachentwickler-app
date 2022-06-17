@@ -2,19 +2,19 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { subjects } from '@constants/menu-items';
-import { PostMatchings } from '@models/post';
+import { PostMatching } from '@models/post';
 import { DataService } from '@services/data.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { UserService } from '@services/user.service';
 
 @Component({
-  selector: 'fe-matchings-page',
-  templateUrl: './matchings.page.html',
-  styleUrls: ['./matchings.page.scss'],
+  selector: 'fe-matching-page',
+  templateUrl: './matching.page.html',
+  styleUrls: ['./matching.page.scss'],
 })
-export class MatchingsPage {
-  public matching: PostMatchings;
+export class MatchingPage {
+  public matching: PostMatching;
 
   constructor(
     private router: Router,
@@ -30,7 +30,7 @@ export class MatchingsPage {
     const matchingUrl = url.substring(url.indexOf('/', 1), url.length);
     this.data.getPost(matchingUrl).subscribe((response) => {
       if (response !== null) {
-        this.matching = response as PostMatchings;
+        this.matching = response as PostMatching;
       } else {
         this.router.navigate(['not-found']);
       }

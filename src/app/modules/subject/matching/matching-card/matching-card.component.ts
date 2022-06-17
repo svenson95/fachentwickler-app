@@ -1,16 +1,16 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
-import { MatchingPair, PostMatchings } from '@models/post';
+import { MatchingPair, PostMatching } from '@models/post';
 import { UserService } from '@services/user.service';
 
 @Component({
-  selector: 'fe-matchings-card',
-  templateUrl: './matchings-card.component.html',
-  styleUrls: ['./matchings-card.component.scss'],
+  selector: 'fe-matching-card',
+  templateUrl: './matching-card.component.html',
+  styleUrls: ['./matching-card.component.scss'],
 })
-export class MatchingsCardComponent implements OnInit {
-  @Input() public matching: PostMatchings;
+export class MatchingCardComponent implements OnInit {
+  @Input() public matching: PostMatching;
 
   public round = 0;
 

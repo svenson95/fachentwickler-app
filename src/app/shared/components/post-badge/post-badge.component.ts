@@ -45,7 +45,7 @@ export class PostBadgeComponent {
       case PostType.INDEX_CARDS:
         return 'Karteikarten';
       case PostType.MATCHING:
-        return 'Matchings';
+        return 'Matching';
       default:
         return 'unknown';
     }

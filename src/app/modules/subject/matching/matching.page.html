@@ -1,7 +1,7 @@
 <fe-loading-spinner *ngIf="!matching; else content"></fe-loading-spinner>
 
 <ng-template #content>
-  <fe-matchings-card [matching]="matching"></fe-matchings-card>
+  <fe-matching-card [matching]="matching"></fe-matching-card>
 
   <fe-lesson-footer
     [postId]="matching._id"
