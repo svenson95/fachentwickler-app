@@ -9,12 +9,24 @@ import { CssTheme, darkTheme, lightTheme } from '@styles/_themes';
 export class ThemeService {
   private theme: CssTheme = lightTheme;
 
+  constructor() {
+    this.injectThemeCss();
+  }
+
   public getActiveTheme(): Theme {
     return this.theme.name;
   }
 
   public getActiveThemeTranslated(): string {
     return this.theme.name === Theme.LIGHT ? 'Hell' : 'Dunkel';
+  }
+
+  public toggleTheme(): void {
+    if (this.getActiveTheme() === Theme.DARK) {
+      this.setLightTheme();
+    } else {
+      this.setDarkTheme();
+    }
   }
 
   private setDarkTheme(): void {
@@ -28,16 +40,12 @@ export class ThemeService {
   private setActiveTheme(theme: CssTheme): void {
     this.theme = theme;
 
+    this.injectThemeCss();
+  }
+
+  private injectThemeCss(): void {
     Object.keys(this.theme.properties).forEach((prop) => {
       document.documentElement.style.setProperty(prop, this.theme.properties[prop]);
     });
-  }
-
-  public toggleTheme(): void {
-    if (this.getActiveTheme() === Theme.DARK) {
-      this.setLightTheme();
-    } else {
-      this.setDarkTheme();
-    }
   }
 }
