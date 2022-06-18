@@ -27,7 +27,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": ["src/styles/main.scss"],
+            "styles": ["src/styles/main.scss", "src/styles.scss"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
@@ -101,7 +101,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": ["src/styles/main.scss"],
+            "styles": ["src/styles/main.scss", "src/styles.scss"],
             "scripts": []
           }
         },

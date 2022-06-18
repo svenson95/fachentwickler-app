@@ -1,16 +1,4 @@
-/* BASIC RESET */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-.mat-drawer-container,
-.mat-card {
-  color: inherit;
-}
+@import "mixins";
 
 html {
   -webkit-tap-highlight-color: transparent;
@@ -25,21 +13,57 @@ body {
   }
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 hr {
   background: var(--grey-1);
   border: none;
 }
 
-mat-toolbar.mat-toolbar {
-  font-size: 1rem;
+mat-sidenav,
+mat-sidenav .mat-drawer-inner-container {
+  -webkit-appearance: none;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
-  h4 {
-    font-size: 1.2rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 
-    @include to-xs {
-      font-size: 1.1rem;
+mat-sidenav-container.mat-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+             causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+  background-color: var(--background-primary);
+
+  .mat-drawer-content {
+    background-color: var(--background-primary);
+
+    // Scrollbar
+    &::-webkit-scrollbar {
+      width: var(--scrollbar-width);
+      overflow-y: scroll;
+      background: var(--background-secondary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--secondary-color);
+      border-radius: 0;
     }
   }
+}
+
+.is-mobile .mat-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+             `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
 }
 
 .mat-ripple-element {
@@ -249,9 +273,4 @@ ngx-skeleton-loader span.loader.progress {
       transparent
     );
   }
-}
-
-fe-post-link:not(:last-of-type),
-.post-link-wrapper:not(:last-of-type) {
-  margin-bottom: 10px;
 }

@@ -2,6 +2,11 @@ html,
 body {
   font-size: 100%;
   color: var(--text-color-1);
+
+  .mat-card,
+  .mat-drawer-container {
+    color: inherit;
+  }
 }
 
 b,
