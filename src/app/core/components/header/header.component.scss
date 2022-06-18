@@ -6,7 +6,14 @@
   justify-content: space-between;
   background: var(--background-primary);
   position: relative;
-  box-shadow: var(--box-shadow);
+
+  :host-context(.light) {
+    box-shadow: var(--box-shadow);
+  }
+
+  :host-context(.dark) {
+    border-bottom: 1px solid var(--background-tertiary);
+  }
 
   position: absolute;
   top: 0;
@@ -19,7 +26,7 @@
   }
 
   @include to-xs {
-    padding: 5px;
+    padding: 5px 10px;
 
     &:not(.sidenav--open) section.main {
       width: 100%;
@@ -31,136 +38,150 @@
     width: 100%;
     max-width: calc(190px + var(--max-width));
     justify-content: space-between;
+  }
 
-    section.sidenav {
+  section.sidenav {
+    display: flex;
+    flex: 0 0 auto;
+
+    @include from-md {
+      width: 180px;
+    }
+
+    a.app-icon {
       display: flex;
-      flex: 0 0 auto;
+      justify-content: left;
+      text-decoration: none;
+      flex-shrink: 0;
+      align-items: center;
 
-      @include from-md {
-        width: 180px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+
+      @include from-xs {
+        padding-left: 22px;
+        padding-right: 10px;
+        transform: translateX(-20px);
+      }
+
+      fe-icon ::ng-deep {
+        @include from-xs {
+          &:hover .app-name {
+            letter-spacing: 1px;
+            transition: letter-spacing 500ms ease-out;
+          }
+          &:active .app-name {
+            letter-spacing: 0.5px;
+          }
+        }
+
+        @include to-xs {
+          div.icon-wrapper {
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  section.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include from-xs {
+      width: 100%;
+    }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      @include titleMoveInRightAnimation;
+
+      @include to-md {
+        flex-shrink: 1;
       }
 
       @include to-xs {
-        transform: translateX(-5px);
+        font-size: 0.8em;
+        margin-left: 5px;
+        padding: 0;
       }
 
-      .app-icon {
-        display: flex;
-        justify-content: left;
-        text-decoration: none;
-        flex-shrink: 0;
-        align-items: center;
+      mat-icon {
+        color: var(--secondary-color);
+        transform: scale(0.8);
+      }
 
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
+      .title {
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 12px;
+        white-space: pre-line;
+        text-align: left;
+        margin-bottom: 0;
 
-        @include from-xs {
-          padding-left: 22px;
-          padding-right: 10px;
-          transform: translateX(-20px);
+        @include from-md {
+          letter-spacing: 1px;
+          margin-left: 5px;
         }
       }
     }
 
-    section.main {
+    .header-elements-wrapper {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      line-height: normal;
+      gap: 10px;
+      z-index: 2;
 
-      @include from-xs {
-        width: 100%;
+      .search-bar-form-field {
+        margin-left: 15px;
+
+        &.mat-focused,
+        .search-bar-form-field:hover {
+          background-color: var(--button-hover-background);
+          transition: none;
+        }
       }
 
-      .page-title {
-        display: flex;
-        align-items: center;
-        @include titleMoveInRightAnimation;
-
-        @include to-md {
-          flex-shrink: 1;
+      .sidenav-btn {
+        @include from-xs {
+          margin-right: 12px;
         }
 
         @include to-xs {
-          font-size: 0.8em;
-          margin-left: 0;
-          padding: 0;
-        }
-
-        mat-icon {
-          color: var(--secondary-color);
-          transform: scale(0.8);
-        }
-
-        .title {
-          font-size: 0.9rem;
-          font-weight: 400;
-          text-transform: uppercase;
-          line-height: 12px;
-          letter-spacing: 1px;
-          white-space: pre-line;
-          text-align: left;
-          margin-bottom: 0;
-
-          @include from-md {
-            margin-left: 5px;
-          }
+          margin-right: 10px;
         }
       }
 
-      .header-elements-wrapper {
-        display: flex;
-        align-items: center;
-        line-height: normal;
-        gap: 10px;
-        z-index: 2;
+      .dashboard-btn {
+        font-size: 0.9rem;
+        font-weight: 400;
+        border-bottom: 1px solid rgba(var(--grey-4-rgb), 0.4);
+        padding: 5px 14px;
 
-        .search-bar-form-field {
-          margin-left: 15px;
-
-          &.mat-focused,
-          .search-bar-form-field:hover {
-            background-color: var(--button-hover-background);
-            transition: none;
-          }
+        &:hover,
+        &.active-route {
+          background: var(--button-hover-background);
         }
 
-        .sidenav-btn {
-          @include from-xs {
-            margin-right: 12px;
-          }
+        &.active-route {
+          border-color: var(--secondary-color);
 
-          @include to-xs {
-            margin-right: 10px;
-          }
-        }
-
-        .dashboard-btn {
-          font-size: 0.9rem;
-          font-weight: 400;
-          border-bottom: 1px solid rgba(var(--grey-4-rgb), 0.4);
-          padding: 5px 14px;
-
-          &:hover,
-          &.active-route {
-            background: var(--button-hover-background);
-          }
-
-          &.active-route {
-            border-color: var(--secondary-color);
-
-            h1,
-            span {
-              &:before,
-              &:after {
-                opacity: 1;
-                transform: translateY(2px);
-              }
+          h1,
+          span {
+            &:before,
+            &:after {
+              opacity: 1;
+              transform: translateY(2px);
             }
           }
+        }
 
-          @include to-md {
-            display: none;
-          }
+        @include to-md {
+          display: none;
         }
       }
     }
@@ -182,30 +203,6 @@
     .sidenav-btn,
     .more-menu-btn {
       color: var(--text-color-2);
-    }
-
-    .rounded-btn {
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      outline: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      transition: background-color 100ms ease-in-out;
-
-      @include from-xs {
-        &:hover,
-        &.is-active {
-          background: rgba(240, 240, 240, 0.1);
-          transition: none;
-        }
-      }
-
-      .mat-icon {
-        display: flex;
-        margin: auto;
-      }
     }
   }
 }

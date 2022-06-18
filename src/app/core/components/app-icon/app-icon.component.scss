@@ -60,7 +60,6 @@
           height: 36px;
           align-self: center;
           padding: 6px;
-          margin-left: 12px;
           fill: var(--tertiary-color);
 
           .app-name {
@@ -75,7 +74,7 @@
 
       &.sidenav--open {
         .app-icon {
-          padding-left: 18px;
+          padding-left: 6px;
           padding-right: 15px;
           padding-top: 2px;
           padding-bottom: 2px;
@@ -91,7 +90,7 @@
       }
     }
 
-    .app-icon {
+    a.app-icon fe-icon {
       &:hover,
       &:focus {
         .icon-wrapper:not(.active-route) {
@@ -103,22 +102,6 @@
 
       &:focus {
         outline: none;
-      }
-
-      @include from-xs {
-        &:hover .app-name {
-          letter-spacing: 1px;
-          transition: letter-spacing 500ms ease-out;
-        }
-        &:active .app-name {
-          letter-spacing: 0.5px;
-        }
-      }
-
-      @include to-xs {
-        div.icon-wrapper {
-          width: 26px;
-        }
       }
     }
   }

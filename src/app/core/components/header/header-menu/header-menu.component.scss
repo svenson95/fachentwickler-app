@@ -1,21 +1,38 @@
+@import "mixins";
+
+:host {
+  button.rounded-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 100ms ease-in-out;
+
+    @include from-xs {
+      &:hover,
+      &.is-active {
+        background: rgba(240, 240, 240, 0.1);
+        transition: none;
+      }
+    }
+
+    .mat-icon {
+      display: flex;
+      margin: auto;
+    }
+  }
+}
+
 ::ng-deep .cdk-overlay-container .more-menu {
   background-color: var(--background-primary);
   border-radius: var(--border-radius);
   border: 1px solid var(--grey-1);
   box-shadow: var(--box-shadow);
 
-  .menu-btn {
-    .label {
-      color: var(--text-color-1);
-      padding-right: 5px;
-    }
-
-    mat-icon {
-      color: var(--tertiary-color);
-    }
-  }
-
-  .mat-menu-item {
+  .menu-btn.mat-menu-item {
     &:not([disabled]) {
       &:hover,
       &:active {
@@ -31,6 +48,15 @@
       .label {
         color: var(--text-color-3);
       }
+    }
+
+    .label {
+      color: var(--text-color-1);
+      padding-right: 5px;
+    }
+
+    mat-icon {
+      color: var(--tertiary-color);
     }
   }
 
