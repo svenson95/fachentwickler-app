@@ -2,12 +2,12 @@
   <mat-card-header class="card-header" *ngIf="title" [class.with-button]="buttonLink && buttonLabel">
     <mat-card-title class="card-title" [innerHTML]="title"></mat-card-title>
 
-    <mat-card-subtitle class="card-description" *ngIf="date && type">
+    <mat-card-subtitle class="card-subtitle" *ngIf="date && type">
       <fe-post-badge [type]="type" *ngIf="type"></fe-post-badge>
-      <div class="card-date">vom {{ date | date: "dd.MM.yyyy" }}</div>
+      <div class="card-subtitle-2">vom {{ date | date: "dd.MM.yyyy" }}</div>
     </mat-card-subtitle>
 
-    <mat-card-subtitle class="card-date" *ngIf="date && !type">{{ date }}</mat-card-subtitle>
+    <mat-card-subtitle class="card-subtitle-2" *ngIf="date && !type">{{ date }}</mat-card-subtitle>
 
     <a class="fe-button secondary show-more" [routerLink]="buttonLink" *ngIf="buttonLink && buttonLabel" matRipple>
       {{ buttonLabel }}

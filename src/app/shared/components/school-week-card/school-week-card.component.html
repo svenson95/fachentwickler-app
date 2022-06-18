@@ -1,7 +1,7 @@
 <mat-card class="card school-week" *ngIf="week !== null">
   <mat-card-header class="card-header">
     <mat-card-title class="card-title">Schulwoche #{{ week.schoolWeek }}</mat-card-title>
-    <mat-card-subtitle class="card-date">
+    <mat-card-subtitle class="card-subtitle-2">
       {{ (week.posts[0].lessonDate | date: "dd.MM.yyyy") || "00.00.0000" }} -
       {{ (week.posts[week.posts.length - 1].lessonDate | date: "dd.MM.yyyy") || "00.00.0000" }}
     </mat-card-subtitle>
