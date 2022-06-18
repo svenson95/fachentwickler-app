@@ -1,4 +1,5 @@
 <fe-card class="lesson-footer align-right" *ngIf="userData">
+  <a class="fe-button" *ngIf="userData.role === UserRole.ADMIN" routerLink="edit" matRipple> Artikel bearbeiten </a>
   <button
     class="fe-button"
     *ngIf="postId"
@@ -9,6 +10,4 @@
   >
     Als gelesen markieren
   </button>
-
-  <a class="fe-button" *ngIf="userData.role === UserRole.ADMIN" routerLink="edit" matRipple> Artikel bearbeiten </a>
 </fe-card>
