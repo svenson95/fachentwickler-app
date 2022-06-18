@@ -21,10 +21,6 @@
     border-color: rgba(var(--grey-1-rgb), 0.6);
   }
 
-  &:not(.is-open) button.fe-button {
-    margin-bottom: 10px;
-  }
-
   button.fe-button {
     height: fit-content;
 

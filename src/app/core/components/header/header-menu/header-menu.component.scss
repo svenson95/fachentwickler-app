@@ -4,29 +4,33 @@
   border: 1px solid var(--grey-1);
   box-shadow: var(--box-shadow);
 
-  .menu-btn .label {
-    color: var(--text-color-1);
-    padding-right: 5px;
-  }
+  .menu-btn {
+    .label {
+      color: var(--text-color-1);
+      padding-right: 5px;
+    }
 
-  .menu-btn mat-icon {
-    color: var(--tertiary-color);
+    mat-icon {
+      color: var(--tertiary-color);
+    }
   }
 
   .mat-menu-item {
-    &:hover,
-    &:active {
-      background: rgba(var(--tertiary-color-rgb), 0.25);
-    }
-  }
-
-  .mat-menu-item[disabled] {
-    mat-icon {
-      color: var(--text-color-3);
+    &:not([disabled]) {
+      &:hover,
+      &:active {
+        background: rgba(var(--tertiary-color-rgb), 0.25);
+      }
     }
 
-    .label {
-      color: var(--text-color-3);
+    &[disabled] {
+      mat-icon {
+        color: var(--text-color-3);
+      }
+
+      .label {
+        color: var(--text-color-3);
+      }
     }
   }
 

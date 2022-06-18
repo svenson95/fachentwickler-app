@@ -9,16 +9,17 @@
   }
 }
 
-section:not(:last-child) {
-  margin-bottom: 25px;
-}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 
-section.my-class,
-section.subjects,
-section.study,
-section.areas {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
   @include to-md {
-    font-size: 0.8rem;
     min-width: 125px;
   }
 
@@ -32,19 +33,13 @@ section.areas {
     padding: 8px 5px 3px;
   }
 
-  mat-nav-list.mat-nav-list {
-    @include to-md {
-      padding-top: 15px;
-    }
+  mat-nav-list.mat-nav-list ::ng-deep a.nav-link {
+    color: var(--text-color-3);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 
-    ::ng-deep a.nav-link {
-      color: var(--text-color-3);
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-
-      &.active-route {
-        color: var(--text-color-1);
-      }
+    &.active-route {
+      color: var(--text-color-1);
     }
   }
 }

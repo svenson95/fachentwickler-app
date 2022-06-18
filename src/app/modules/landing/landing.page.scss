@@ -33,16 +33,12 @@
     margin-bottom: 20px;
 
     p.component-name {
+      color: var(--text-color-3);
       font-size: 1rem;
       letter-spacing: 5px;
-      text-align: center;
       text-transform: uppercase;
-      opacity: 0.2;
+      text-align: center;
       margin: 0 20px;
-
-      @include to-xs {
-        font-size: 1rem;
-      }
     }
 
     hr {

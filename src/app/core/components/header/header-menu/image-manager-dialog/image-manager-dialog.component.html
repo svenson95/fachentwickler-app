@@ -1,10 +1,10 @@
 <mat-dialog-content class="image-manager">
   <mat-card-header class="card-header">
     <mat-card-title class="card-title">Image-Manager</mat-card-title>
-    <mat-card-subtitle class="card-description" *ngIf="allImagesLength === undefined">
+    <mat-card-subtitle class="card-date" *ngIf="allImagesLength === undefined">
       Bilder werden geladen ...
     </mat-card-subtitle>
-    <mat-card-subtitle class="card-description" *ngIf="allImagesLength !== undefined">
+    <mat-card-subtitle class="card-date" *ngIf="allImagesLength !== undefined">
       {{ allImagesLength }} Bilder
     </mat-card-subtitle>
   </mat-card-header>

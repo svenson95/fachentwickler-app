@@ -142,14 +142,23 @@ mat-dialog-content.image-manager {
       font-weight: 400;
     }
 
+    mat-card-subtitle.mat-card-subtitle {
+      margin-top: 0;
+    }
+
     .card-description {
       display: flex;
       align-items: center;
-      margin-top: 5px;
 
       fe-post-badge {
         margin-right: 6px;
       }
+    }
+
+    .card-date {
+      font-weight: 300;
+      color: var(--grey-3);
+      letter-spacing: 0.5px;
     }
   }
 }
@@ -172,12 +181,6 @@ mat-card.mat-card.card {
   @include to-xs {
     padding: 20px;
     border-radius: 0;
-  }
-
-  .card-date {
-    font-weight: 300;
-    color: var(--grey-3);
-    letter-spacing: 0.5px;
   }
 
   .card-last-update {

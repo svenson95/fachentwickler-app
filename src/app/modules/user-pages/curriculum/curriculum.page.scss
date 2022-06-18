@@ -22,7 +22,17 @@
     }
   }
 
+  .mat-button-toggle-standalone.mat-button-toggle-appearance-standard,
+  .mat-button-toggle-group-appearance-standard {
+    border: solid 1px var(--grey-2);
+  }
+
   mat-button-toggle-group {
+    .mat-button-toggle-appearance-standard {
+      color: var(--text-color-1);
+      background: var(--background-primary);
+    }
+
     .mat-button-toggle-disabled {
       color: var(--text-color-3);
     }
