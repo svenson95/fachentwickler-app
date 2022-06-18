@@ -50,7 +50,7 @@
 }
 
 ::ng-deep {
-  header mat-toolbar.page-header {
+  header {
     @include to-xs {
       &:not(.sidenav--open) {
         .app-icon {
