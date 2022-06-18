@@ -26,7 +26,7 @@ export class SubjectPage {
     const subject = subjects.find((sub) => sub.url === router.url);
     this.header.setPageTitle(subject.title);
 
-    this.data.getSubject(this.router.url).subscribe((response) => {
+    this.data.getSubject(this.router.url.substring(1)).subscribe((response) => {
       this.subject = response;
     });
   }
