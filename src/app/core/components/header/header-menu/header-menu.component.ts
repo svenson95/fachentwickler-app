@@ -64,6 +64,7 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     this.dialog.open(ImageManagerDialogComponent, {
       restoreFocus: true,
       panelClass: 'image-manager-modal',
+      autoFocus: false,
     });
   }
 }
