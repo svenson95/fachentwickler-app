@@ -19,4 +19,10 @@
       border-right: 0;
     }
   }
+
+  mat-sidenav {
+    @include to-md {
+      margin-top: 50px;
+    }
+  }
 }
