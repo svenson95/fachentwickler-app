@@ -46,7 +46,7 @@
     <mat-icon>logout</mat-icon>
     <span class="label">Ausloggen</span>
   </button>
-  <ng-container>
+  <ng-container *ngIf="user.data?.role === UserRole.ADMIN">
     <hr />
     <a
       class="menu-btn"
