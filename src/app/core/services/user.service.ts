@@ -41,16 +41,15 @@ export class UserService {
     this.data = data.user;
     this.auth.token = data.token;
     this.isAuthenticated = true;
-    if (this.theme.getActiveTheme().name !== data.theme) this.theme.toggleTheme();
+    if (this.theme.getActiveTheme() !== data.theme) this.theme.toggleTheme();
 
     this.auth.refresh().subscribe(
       (response) => {
         if (response.success) {
           this.data = response.data.user;
           this.auth.token = response.data.token;
-          this.isAuthenticated = true;
 
-          if (this.theme.getActiveTheme().name !== response.data.user.theme) {
+          if (this.theme.getActiveTheme() !== response.data.user.theme) {
             this.theme.toggleTheme();
           }
 
@@ -74,7 +73,7 @@ export class UserService {
       JSON.stringify({
         user: this.data,
         token: this.auth.token,
-        theme: this.theme.getActiveTheme().name,
+        theme: this.theme.getActiveTheme(),
       }),
     );
   }

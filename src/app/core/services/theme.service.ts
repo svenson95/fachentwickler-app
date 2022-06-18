@@ -1,38 +1,31 @@
 import { Injectable } from '@angular/core';
 
-import { Theme, light, dark } from '@styles/_themes';
+import { Theme } from '@models/user';
+import { CssTheme, darkTheme, lightTheme } from '@styles/_themes';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  private theme: Theme = light;
-
-  constructor() {
-    this.setActiveTheme(this.getActiveTheme());
-  }
+  private theme: CssTheme = lightTheme;
 
   public getActiveTheme(): Theme {
-    return this.theme;
+    return this.theme.name;
   }
 
-  private getActiveThemeTranslated(): string {
-    return this.theme.name === 'light' ? 'Hell' : 'Dunkel';
-  }
-
-  public isDarkTheme(): boolean {
-    return this.theme.name === dark.name;
+  public getActiveThemeTranslated(): string {
+    return this.theme.name === Theme.LIGHT ? 'Hell' : 'Dunkel';
   }
 
   private setDarkTheme(): void {
-    this.setActiveTheme(dark);
+    this.setActiveTheme(darkTheme);
   }
 
   private setLightTheme(): void {
-    this.setActiveTheme(light);
+    this.setActiveTheme(lightTheme);
   }
 
-  private setActiveTheme(theme: Theme): void {
+  private setActiveTheme(theme: CssTheme): void {
     this.theme = theme;
 
     Object.keys(this.theme.properties).forEach((prop) => {
@@ -41,7 +34,7 @@ export class ThemeService {
   }
 
   public toggleTheme(): void {
-    if (this.isDarkTheme()) {
+    if (this.getActiveTheme() === Theme.DARK) {
       this.setLightTheme();
     } else {
       this.setDarkTheme();

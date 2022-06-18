@@ -1,12 +1,14 @@
 /* eslint-disable quotes, quote-props, max-len */
 
-export interface Theme {
-  name: 'light' | 'dark';
-  properties: any;
+import { Theme } from '@models/user';
+
+export interface CssTheme {
+  name: Theme;
+  properties?: any;
 }
 
-export const light: Theme = {
-  name: 'light',
+export const lightTheme: CssTheme = {
+  name: Theme.LIGHT,
   properties: {
     '--background-primary': '#FFFFFF',
     '--background-secondary': '#f0f0f0',
@@ -34,8 +36,8 @@ export const light: Theme = {
   },
 };
 
-export const dark: Theme = {
-  name: 'dark',
+export const darkTheme: CssTheme = {
+  name: Theme.DARK,
   properties: {
     '--background-primary': '#292929',
     '--background-secondary': '#373737',

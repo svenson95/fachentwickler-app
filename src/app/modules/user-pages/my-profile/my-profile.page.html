@@ -157,14 +157,18 @@
       <mat-form-field class="form-field theme" appearance="legacy">
         <mat-label>Standard-Theme</mat-label>
         <input matInput type="text" [formControl]="theme" />
-        <mat-slide-toggle class="theme-toggle" [checked]="themeService.isDarkTheme()" (change)="toggleTheme()">
+        <mat-slide-toggle
+          class="theme-toggle"
+          [checked]="themeService.getActiveTheme() == Theme.DARK"
+          (change)="toggleTheme()"
+        >
         </mat-slide-toggle>
       </mat-form-field>
       <div class="button-container">
         <button
           class="save-change"
           (click)="saveChangeTheme()"
-          *ngIf="themeService.getActiveTheme().name !== user.data.theme"
+          *ngIf="themeService.getActiveTheme() !== user.data.theme"
           [disabled]="isConfirmingEmail || isLoading"
         >
           Speichern

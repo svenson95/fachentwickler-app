@@ -1,6 +1,12 @@
 export enum UserRole {
-  ADMIN = 'admin',
-  USER = 'user',
+  ADMIN = 'ADMIN',
+  USER = 'USER',
+  TEACHER = 'TEACHER',
+}
+
+export enum Theme {
+  LIGHT = 'LIGHT',
+  DARK = 'DARK',
 }
 
 export interface UserData {
@@ -11,7 +17,7 @@ export interface UserData {
   progress: string[];
   active: boolean;
   role: UserRole;
-  theme: 'light' | 'dark';
+  theme: Theme;
 }
 
 export interface AuthUser {
@@ -24,7 +30,7 @@ export interface RegisterUser {
   email: string;
   password: string;
   role: UserRole;
-  theme: 'light' | 'dark';
+  theme: Theme;
 }
 
 interface EditUserBase {
@@ -44,7 +50,7 @@ export interface EditPasswordBody extends EditUserBase {
 }
 
 export interface EditThemeBody extends EditUserBase {
-  theme: 'light' | 'dark';
+  theme: Theme;
 }
 
 export interface AddProgressBody {

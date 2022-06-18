@@ -89,7 +89,7 @@ export class RegisterPage implements OnInit, OnDestroy {
       name,
       email,
       password,
-      theme: this.theme.getActiveTheme().name,
+      theme: this.theme.getActiveTheme(),
       role: UserRole.USER,
     } as RegisterUser;
 

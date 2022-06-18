@@ -4,7 +4,7 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { UserRole } from '@models/user';
+import { Theme, UserRole } from '@models/user';
 import { MediaQueryService } from '@services/media-query.service';
 import { ThemeService } from '@services/theme.service';
 import { UserService } from '@services/user.service';
@@ -19,6 +19,8 @@ import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
 })
 export class HeaderMenuComponent implements OnInit, OnDestroy {
   public UserRole = UserRole;
+
+  public Theme = Theme;
 
   public isMobile: boolean;
 

@@ -3,7 +3,7 @@ import * as moment from 'moment';
 import { DashboardData } from '@models/dashboard-data';
 import { Schedule } from '@models/schedule';
 import { SchoolWeek } from '@models/school-week';
-import { UserData, UserRole } from '@models/user';
+import { Theme, UserData, UserRole } from '@models/user';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const testSchoolWeek: SchoolWeek = {
@@ -615,7 +615,7 @@ export const testUser: UserData = {
     '5f88ce2ca0d0cb421f136a51',
   ],
   role: UserRole.USER,
-  theme: 'light',
+  theme: Theme.LIGHT,
   active: true,
   _id: '5f1a3dca8d16e73572a16f50',
 };

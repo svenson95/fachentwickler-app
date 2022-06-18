@@ -76,7 +76,7 @@ export class LoginPage implements OnDestroy {
     this.auth.login(data).subscribe(
       (response) => {
         if (response.success) {
-          if (this.themeService.getActiveTheme().name !== response.data.user.theme) {
+          if (this.themeService.getActiveTheme() !== response.data.user.theme) {
             this.themeService.toggleTheme();
           }
 

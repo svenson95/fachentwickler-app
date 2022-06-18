@@ -12,7 +12,7 @@ import { ThemeService } from '@services/theme.service';
 import { inputsMatch } from '@validators/match.validator';
 import { DashboardService } from '@services/dashboard.service';
 import { UserService } from '@services/user.service';
-import { EditEmailBody, EditNameBody, EditPasswordBody, EditThemeBody } from '@models/user';
+import { EditEmailBody, EditNameBody, EditPasswordBody, EditThemeBody, Theme } from '@models/user';
 
 @Component({
   selector: 'fe-my-profile-page',
@@ -25,6 +25,8 @@ export class MyProfilePage implements OnInit, OnDestroy {
   @ViewChild('emailInput') public emailInput: MatInput;
 
   @ViewChild('passwordInput') public passwordInput: MatInput;
+
+  public Theme = Theme;
 
   public name = new FormControl(
     { value: this.user.data.name, disabled: true },
@@ -50,14 +52,14 @@ export class MyProfilePage implements OnInit, OnDestroy {
   });
 
   public role = new FormControl({
-    value: this.user.data.role,
+    value: this.user.data.role.toLowerCase(),
     disabled: true,
   });
 
   public progress = new FormControl({ value: 0, disabled: true });
 
   public theme = new FormControl({
-    value: this.themeService.getActiveTheme().name,
+    value: this.themeService.getActiveThemeTranslated(),
     disabled: true,
   });
 
@@ -77,7 +79,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public isLoading: boolean;
 
-  private loadingSubscription: Subscription;
+  private subscription: Subscription;
 
   constructor(
     private headerService: HeaderService,
@@ -93,7 +95,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.loadingSubscription = this.loading.loading$.subscribe((value) => {
+    this.subscription = this.loading.loading$.subscribe((value) => {
       this.isLoading = value;
     });
 
@@ -101,7 +103,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    this.loadingSubscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -263,7 +265,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public toggleTheme(): void {
     this.themeService.toggleTheme();
-    this.theme.setValue(this.themeService.getActiveTheme().name);
+    this.theme.setValue(this.themeService.getActiveThemeTranslated());
   }
 
   public saveChangeTheme(): void {
