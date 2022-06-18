@@ -117,10 +117,7 @@ mat-dialog-container.mat-dialog-container {
     justify-content: end;
     padding-bottom: 0;
     margin-bottom: 0;
-  }
-
-  button.fe-button.close {
-    margin-right: 15px;
+    gap: 15px;
   }
 
   button.fe-button {
@@ -255,6 +252,16 @@ mat-form-field.input.mat-form-field {
   .mat-error {
     margin-bottom: 5px;
   }
+}
+
+div.post-links-container,
+div.exams-column {
+  display: flex;
+  flex-direction: column;
+}
+
+div.post-links-container {
+  gap: 10px;
 }
 
 ngx-skeleton-loader span.loader.progress {
