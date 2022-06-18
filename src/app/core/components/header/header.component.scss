@@ -64,7 +64,7 @@
         transform: translateX(-20px);
       }
 
-      fe-icon ::ng-deep {
+      fe-app-icon ::ng-deep {
         @include from-xs {
           &:hover .app-name {
             letter-spacing: 1px;
