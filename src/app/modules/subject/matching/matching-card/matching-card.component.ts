@@ -99,10 +99,6 @@ export class MatchingCardComponent implements OnInit {
     if (this.matching.elements[this.round] !== undefined) {
       this.setupMatchings();
     }
-
-    if (this.state === 'end') {
-      this.setSolvedState();
-    }
   }
 
   public restartGame(): void {
@@ -119,11 +115,5 @@ export class MatchingCardComponent implements OnInit {
     });
     this.leftSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
     this.rightSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
-  }
-
-  private setSolvedState(): void {
-    if (!this.user.data.progress.includes(this.matching._id) && this.user.isAuthenticated) {
-      this.user.setLessonSolved(this.matching._id);
-    }
   }
 }
