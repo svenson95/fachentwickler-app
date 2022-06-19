@@ -1,6 +1,6 @@
 @import "mixins";
 
-::ng-deep fe-card mat-card.index-cards {
+::ng-deep article mat-card.index-cards {
   mat-card-content.card-content {
     display: flex;
     justify-content: space-evenly;

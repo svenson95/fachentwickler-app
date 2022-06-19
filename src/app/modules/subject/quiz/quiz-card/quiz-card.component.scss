@@ -1,6 +1,6 @@
 @import "mixins";
 
-::ng-deep fe-card mat-card.quiz {
+::ng-deep article mat-card.quiz {
   mat-card-content.card-content {
     display: flex;
     justify-content: space-evenly;

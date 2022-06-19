@@ -16,13 +16,13 @@
     </div>
   </fe-card>
 
-  <fe-card [title]="post.title" [date]="post.lessonDate" [type]="post.type" [lastUpdate]="post.lastUpdate">
+  <article [title]="post.title" [date]="post.lessonDate" [type]="post.type" [lastUpdate]="post.lastUpdate">
     <fe-post-element
       *ngFor="let element of post.elements"
       [element]="element"
       [contentEditable]="true"
     ></fe-post-element>
-  </fe-card>
+  </article>
 
   <fe-card class="options align-right">
     <button class="fe-button" matRipple>Artikel Löschen</button>

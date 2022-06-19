@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { PostType } from '@enums/post-type';
 
 @Component({
-  selector: 'fe-card',
+  selector: 'fe-card, article',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
