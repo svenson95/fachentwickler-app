@@ -13,7 +13,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
 
   &:not(:last-child) {
     margin-bottom: 25px;
@@ -33,13 +32,20 @@ section {
     padding: 0 5px 3px;
   }
 
-  mat-nav-list.mat-nav-list ::ng-deep a.nav-link {
-    color: var(--text-color-3);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+  mat-nav-list.mat-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
 
-    &.active-route {
-      color: var(--text-color-1);
+    ::ng-deep a.nav-link {
+      color: var(--text-color-3);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+
+      &.active-route {
+        color: var(--text-color-1);
+      }
     }
   }
 }

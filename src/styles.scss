@@ -206,7 +206,7 @@ mat-card.mat-card.card {
   .card-last-update {
     display: flex;
     justify-content: flex-end;
-    color: var(--grey-3);
+    color: var(--grey-2);
   }
 }
 
@@ -216,7 +216,6 @@ mat-form-field.input.mat-form-field {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     padding: 0.75em 1em 0 1em;
-    font-size: 1rem;
 
     input {
       color: var(--text-color-1);

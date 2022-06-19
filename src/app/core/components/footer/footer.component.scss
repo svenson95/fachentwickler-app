@@ -56,15 +56,16 @@
     }
 
     ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
       list-style: none;
     }
 
     a {
-      font-size: 0.9rem;
       text-decoration: none;
 
       @include to-md {
-        font-size: 0.8rem;
         line-height: 26px;
       }
 

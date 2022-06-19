@@ -5,8 +5,6 @@ a.nav-link.mat-list-item {
   height: fit-content;
   width: 100%;
   max-width: 180px;
-  margin-top: 3px;
-  margin-bottom: 3px;
 
   $nav-link-icon-fade-duration: color 100ms ease-in-out;
 
@@ -38,16 +36,8 @@ a.nav-link.mat-list-item {
   }
 
   span {
-    padding: 6px 2px;
-
-    @include from-xs {
-      line-height: 16px;
-    }
-
     @include to-xs {
       width: 100%;
-      padding: 7px 2px;
-      line-height: 14px;
     }
   }
 
@@ -88,7 +78,7 @@ a.nav-link.mat-list-item {
         &:before,
         &:after {
           opacity: 1;
-          transform: translateY(-3px);
+          transform: translateY(3px);
         }
         &:before {
           transition: transform $duration $easeOutBack, opacity $duration;
