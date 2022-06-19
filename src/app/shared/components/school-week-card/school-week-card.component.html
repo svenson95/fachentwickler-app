@@ -35,11 +35,13 @@
           <p class="weekday-label">{{ el.day | weekdayString }}</p>
           <hr class="weekday-spacer" />
         </div>
-        <fe-post-link
-          *ngFor="let post of el.lessons"
-          [post]="post"
-          [title]="post.subject | longSubjectName"
-        ></fe-post-link>
+        <div class="post-links-container">
+          <fe-post-link
+            *ngFor="let post of el.lessons"
+            [post]="post"
+            [title]="post.subject | longSubjectName"
+          ></fe-post-link>
+        </div>
       </div>
     </div>
     <p class="no-data" *ngIf="week && week.posts.length === 0">Artikel noch nicht freigeschaltet</p>

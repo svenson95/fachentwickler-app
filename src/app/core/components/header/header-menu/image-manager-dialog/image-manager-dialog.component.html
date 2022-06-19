@@ -61,7 +61,7 @@
           (click)="showPreview()"
           *ngIf="selectedImageData"
         />
-        <fe-loading-spinner *ngIf="!selectedImageData"></fe-loading-spinner>
+        <mat-spinner *ngIf="!selectedImageData" diameter="32"></mat-spinner>
       </div>
       <div class="image-attributes-list">
         <p>

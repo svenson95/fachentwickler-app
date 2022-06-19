@@ -133,8 +133,15 @@
       display: flex;
       align-items: center;
       line-height: normal;
-      gap: 5px;
       z-index: 2;
+
+      @include from-md {
+        gap: 10px;
+      }
+
+      @include to-md {
+        gap: 5px;
+      }
 
       .search-bar-form-field {
         margin-left: 15px;
