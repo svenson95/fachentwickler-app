@@ -7,52 +7,74 @@
   background: var(--background-primary);
   border-top-left-radius: var(--border-radius);
 
-  mat-toolbar.page-footer {
+  div.footer-wrapper {
     height: fit-content;
     width: 100%;
     max-width: var(--max-width);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: transparent;
-    padding: 30px 20px;
+    padding: 30px;
+    gap: 30px 20px;
     z-index: 3;
 
     @include moveInTopAnimation;
 
-    div.button-container {
+    div.column {
+      min-width: 120px;
       display: flex;
+      flex-direction: column;
+
+      @include from-lg {
+        &.full-width {
+          width: 100%;
+        }
+
+        &:not(.full-width) {
+          width: calc(25% - 20px);
+        }
+      }
+
+      @include to-lg {
+        &.full-width {
+          width: 100%;
+        }
+
+        &:not(.full-width) {
+          width: calc(50% - 20px);
+        }
+      }
+    }
+
+    p.heading {
+      color: var(--tertiary-color);
+      font-weight: 500;
+      font-family: Ubuntu, HelveticaNeue, Helvetica Neue, Helvetica-Neue,
+        Helvetica, Arial, sans-serif;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      font-size: 0.9rem;
+      text-decoration: none;
 
       @include to-md {
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: 30px;
-        letter-spacing: 1px;
+        font-size: 0.8rem;
+        line-height: 26px;
       }
 
-      a {
-        cursor: pointer;
-        outline: none;
-        font-size: 0.9rem;
-
-        @include to-md {
-          font-size: 0.8rem;
-          line-height: 26px;
-        }
-
-        &.is-active {
-          color: var(--text-color-3);
-        }
-      }
-
-      span.footer-divider {
-        margin: 0 8px;
-        font-weight: 100;
+      &.is-active {
         color: var(--text-color-3);
-
-        @include to-md {
-          display: none;
-        }
       }
+    }
+
+    small.copyright {
+      color: var(--grey-2);
     }
   }
 }

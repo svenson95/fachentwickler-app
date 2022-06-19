@@ -1,12 +1,59 @@
-<mat-toolbar class="page-footer">
-  <fe-app-icon></fe-app-icon>
-  <div class="button-container">
-    <a class="start" routerLink="/" [class.is-active]="router.url === '/'"> Start </a>
-    <span class="footer-divider">|</span>
-    <a class="about" routerLink="about" [class.is-active]="router.url.startsWith('/about')"> About </a>
-    <span class="footer-divider">|</span>
-    <a class="about" routerLink="feedback" [class.is-active]="router.url.startsWith('/feedback')"> Feedback </a>
-    <span class="footer-divider">|</span>
-    <a class="legal" routerLink="/impressum" [class.is-active]="router.url.startsWith('/impressum')"> Impressum </a>
+<div class="footer-wrapper">
+  <div class="column">
+    <fe-app-icon></fe-app-icon>
   </div>
-</mat-toolbar>
+
+  <div class="column">
+    <p class="heading">Anmelden</p>
+    <ul>
+      <li>
+        <a routerLink="login" [class.is-active]="router.url == '/login'"> Login </a>
+      </li>
+      <li>
+        <a routerLink="register" [class.is-active]="router.url == '/register'"> Registrieren </a>
+      </li>
+      <li>
+        <a routerLink="forgot-password" [class.is-active]="router.url == '/forgot-password'"> Passwort vergessen </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="column">
+    <p class="heading">Schülerbereich</p>
+    <ul>
+      <li>
+        <a routerLink="/dashboard" [class.is-active]="router.url == '/dashboard'"> Dashboard </a>
+      </li>
+      <li>
+        <a routerLink="mein-profil" [class.is-active]="router.url == '/mein-profil'"> Mein Profil </a>
+      </li>
+      <li>
+        <a routerLink="pruefungssimulator" [class.is-active]="router.url == '/pruefungssimulator'">
+          Prüfungssimulator
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="column">
+    <p class="heading">Plattform</p>
+    <ul>
+      <li>
+        <a routerLink="/" [class.is-active]="router.url == '/'"> Start </a>
+      </li>
+      <li>
+        <a routerLink="about" [class.is-active]="router.url == '/about'"> About </a>
+      </li>
+      <li>
+        <a routerLink="feedback" [class.is-active]="router.url == '/feedback'"> Feedback </a>
+      </li>
+      <li>
+        <a routerLink="impressum" [class.is-active]="router.url == '/impressum'"> Impressum </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="column full-width">
+    <small class="copyright">© 2022 fachentwickler</small>
+  </div>
+</div>

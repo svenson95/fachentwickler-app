@@ -34,23 +34,26 @@ a,
   }
 }
 
-ul {
-  list-style: none;
-  margin-top: 0;
-
-  li:not(.sublist-container)::before {
-    content: "\25B8";
-    color: var(--secondary-color);
-    margin-left: -1rem;
-    margin-right: 0.5rem;
-  }
-
-  li ul.post-ul-sublist {
+article,
+fe-subject-page {
+  ul {
     list-style: none;
-    margin-left: 1rem;
+    margin-top: 0;
 
-    li::before {
-      color: var(--tertiary-color);
+    li:not(.sublist-container)::before {
+      content: "\25B8";
+      color: var(--secondary-color);
+      margin-left: -1rem;
+      margin-right: 0.5rem;
+    }
+
+    li ul.post-ul-sublist {
+      list-style: none;
+      margin-left: 1rem;
+
+      li::before {
+        color: var(--tertiary-color);
+      }
     }
   }
 }
