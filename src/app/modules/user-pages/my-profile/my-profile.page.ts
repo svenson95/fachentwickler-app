@@ -269,7 +269,8 @@ export class MyProfilePage implements OnInit, OnDestroy {
   }
 
   public saveChangeTheme(): void {
-    const data: EditThemeBody = { _id: this.user.data._id, theme: this.theme.value };
+    const theme = this.themeService.getActiveTheme();
+    const data: EditThemeBody = { _id: this.user.data._id, theme };
     this.user.edit(data).subscribe(
       () => {
         this.snackbar.openFromComponent(SnackbarComponent, {
