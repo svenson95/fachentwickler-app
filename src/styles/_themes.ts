@@ -11,7 +11,7 @@ export const lightTheme: CssTheme = {
   name: Theme.LIGHT,
   properties: {
     '--background-primary': '#FFFFFF',
-    '--background-secondary': '#f0f0f0',
+    '--background-secondary': '#dddddd',
     '--background-tertiary': '#d4d4d4',
     '--tertiary-color': '#94aac5',
 
@@ -39,8 +39,8 @@ export const lightTheme: CssTheme = {
 export const darkTheme: CssTheme = {
   name: Theme.DARK,
   properties: {
-    '--background-primary': '#292929',
-    '--background-secondary': '#373737',
+    '--background-primary': '#222222',
+    '--background-secondary': '#333333',
     '--background-tertiary': '#464646',
     '--tertiary-color': 'var(--tertiary-color-dark)',
 
