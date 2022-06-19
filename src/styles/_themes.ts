@@ -17,7 +17,7 @@ export const lightTheme: CssTheme = {
 
     '--text-color-1': '#3e3e3e',
     '--text-color-2': '#787878',
-    '--text-color-3': '#b4b4b4',
+    '--text-color-3': '#939393',
 
     '--grey-1': '#f5f5f5',
     '--grey-1-rgb': '245,245,245',
@@ -46,7 +46,7 @@ export const darkTheme: CssTheme = {
 
     '--text-color-1': '#ffffff',
     '--text-color-2': '#d2d2d2',
-    '--text-color-3': '#b4b4b4',
+    '--text-color-3': '#727272',
 
     '--grey-1': '#505050',
     '--grey-1-rgb': '80,80,80',

@@ -77,7 +77,7 @@
 
         @include to-xs {
           div.icon-wrapper {
-            width: 24px;
+            width: 26px;
           }
         }
       }
@@ -199,10 +199,13 @@
 
   div.header-wrapper {
     .page-title .title,
-    .dashboard-btn,
+    .dashboard-btn {
+      color: var(--text-color-2);
+    }
+
     .sidenav-btn,
     .more-menu-btn {
-      color: var(--text-color-2);
+      color: var(--text-color-3);
     }
   }
 }
