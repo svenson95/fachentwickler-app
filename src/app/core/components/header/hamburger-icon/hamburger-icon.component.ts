@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'fe-hamburger-icon',
   template: `
-    <div id="hamburger-icon" [class.open]="isOpen">
-      <span></span>
+    <div [class.open]="this.isOpen">
       <span></span>
       <span></span>
       <span></span>
