@@ -39,7 +39,7 @@ export class DataService {
   }
 
   public getPostById(postId: string): Observable<PostTypes> {
-    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/${postId}`).pipe(
+    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/id/${postId}`).pipe(
       map((response) => {
         // console.log('response GET subjects/post', response);
         return response;
@@ -48,7 +48,7 @@ export class DataService {
   }
 
   public getPost(postUrl: string): Observable<PostTypes> {
-    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/${postUrl}`).pipe(
+    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/url/${postUrl}/`).pipe(
       map((response) => {
         // console.log('response GET post', response);
         return response;
@@ -134,7 +134,7 @@ export class DataService {
   }
 
   public getSchoolWeek(week: number): Observable<SchoolWeek> {
-    return this.httpClient.get<SchoolWeek>(`${this.SCHOOL_WEEK_ENDPOINT}/number/${week}`).pipe(
+    return this.httpClient.get<SchoolWeek>(`${this.SCHOOL_WEEK_ENDPOINT}/week/${week}`).pipe(
       map((response) => {
         // console.log('response GET posts/school-week/:number', response);
         return response;

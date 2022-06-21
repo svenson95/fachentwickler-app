@@ -21,7 +21,7 @@ export class ExamItemComponent {
   public showLessons(): void {
     this.lessonsVisible = !this.lessonsVisible;
     if (this.examLessons.length === 0) {
-      const postIdsArray = `_${this.exam.lessons.join()}`;
+      const postIdsArray = `${this.exam.lessons.join()}`;
 
       this.dataService.getMultiplePosts(postIdsArray).subscribe((posts) => {
         this.examLessons = posts;
