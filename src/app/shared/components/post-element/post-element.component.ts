@@ -1,6 +1,6 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
-import { ElementType } from '@enums/element-type';
+import { PostElementType } from '@enums/element-type';
 import { ImageChunk } from '@models/image-data';
 import { PostElement, SublistItem } from '@models/post-element';
 import { DataService } from '@services/data.service';
@@ -23,14 +23,14 @@ export class PostElementComponent implements OnInit {
 
   public image: boolean | string = null;
 
-  public ElementType = ElementType;
+  public ElementType = PostElementType;
 
   public isVisible = false;
 
   constructor(private dataService: DataService) {}
 
   public ngOnInit(): void {
-    if (this.element.type === ElementType.IMAGE) {
+    if (this.element.type === PostElementType.IMAGE) {
       this.loadImage(this.element.content);
     }
   }

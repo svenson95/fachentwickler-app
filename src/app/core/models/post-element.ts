@@ -1,4 +1,4 @@
-import { ElementType } from '@enums/element-type';
+import { PostElementType } from '@enums/element-type';
 
 export interface SublistItem {
   content?: string;
@@ -18,7 +18,7 @@ interface TableRow {
 }
 
 export interface PostElement {
-  type: ElementType | string;
+  type: PostElementType | string;
   content?: string;
   hidden?: boolean;
   language?: 'java' | 'php' | 'javascript' | 'sql';

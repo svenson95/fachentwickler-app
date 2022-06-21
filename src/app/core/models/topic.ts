@@ -1,8 +1,8 @@
 import { Post } from './post';
 
 interface Topic {
-  title: string;
   _id: string;
+  title: string;
   url: string;
   subject: string;
 }
