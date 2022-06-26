@@ -68,11 +68,10 @@
     display: flex;
 
     .topic-title {
+      background-color: var(--grey-1);
       flex-shrink: 0;
-      font-size: 1rem;
-      font-weight: 600;
       line-height: 20px;
-      padding: 12px;
+      padding: 6px 12px;
       border-radius: var(--border-radius);
 
       @include from-md {
