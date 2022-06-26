@@ -33,12 +33,16 @@ $searchbar-height: 35px;
 
       .mat-form-field-flex {
         background: var(--background-primary);
-        padding: 0 1rem;
         height: $searchbar-height;
         align-items: center;
 
         @include from-md {
+          padding: 0 1rem;
           border-radius: var(--border-radius);
+        }
+
+        @include to-md {
+          font-size: initial;
         }
       }
 

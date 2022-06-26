@@ -107,8 +107,12 @@ mat-button-toggle-group {
   }
 }
 
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+
 mat-dialog-container.mat-dialog-container {
-  background: var(--background-secondary);
+  background: var(--background-primary);
   color: var(--text-color-1);
   border-radius: var(--border-radius);
 
