@@ -184,7 +184,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
         this.emailFormGroup.controls.email.setValue(this.user.data.email);
         this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
+          data: typeof errorRes === 'string' ? `Fehler: ${errorRes}` : `${errorRes.message}test`,
         });
       },
     );
