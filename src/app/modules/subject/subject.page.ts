@@ -27,7 +27,7 @@ export class SubjectPage {
     this.header.setPageTitle(subject.title);
 
     this.data.getSubject(this.router.url.substring(1)).subscribe((response) => {
-      this.subject = response;
+      this.subject = response.data;
     });
   }
 }

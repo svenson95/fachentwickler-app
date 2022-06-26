@@ -1,3 +1,4 @@
+import { BaseResponse } from './base-response';
 import { PostArticle } from './post';
 import { PostElement } from './post-element';
 import { TopicPopulated } from './topic';
@@ -15,4 +16,8 @@ export interface SubjectPopulated extends Subject {
 export interface SubjectUnpopulated extends Subject {
   topics: string[];
   tests?: string[];
+}
+
+export interface SubjectResponse extends BaseResponse {
+  data: SubjectPopulated;
 }

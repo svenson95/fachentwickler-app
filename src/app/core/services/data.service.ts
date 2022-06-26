@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 import { SchoolWeek } from '@models/school-week';
-import { SubjectPopulated } from '@models/subject';
+import { SubjectResponse } from '@models/subject';
 import { Post, PostTypes } from '@models/post';
 import { ExamDate } from '@models/exam-date';
 import { ImageFile, ImageData } from '@models/image-data';
@@ -29,8 +29,8 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public getSubject(subjectUrl: string): Observable<SubjectPopulated> {
-    return this.httpClient.get<SubjectPopulated>(`${this.SUBJECTS_ENDPOINT}/${subjectUrl}/populated`).pipe(
+  public getSubject(subjectUrl: string): Observable<SubjectResponse> {
+    return this.httpClient.get<SubjectResponse>(`${this.SUBJECTS_ENDPOINT}/${subjectUrl}/populated`).pipe(
       map((response) => {
         // console.log('response GET subject', response);
         return response;
