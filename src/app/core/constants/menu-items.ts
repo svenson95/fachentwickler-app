@@ -105,33 +105,6 @@ export const subjects: MenuItem[] = [
   },
 ];
 
-export const study: MenuItem[] = [
-  {
-    title: 'Angewandte Informatik',
-    shortTitle: 'Ang. Inf.',
-    url: '/angewandte-informatik',
-    icon: 'library-outline',
-  },
-  {
-    title: 'Technische Informatik',
-    shortTitle: 'Tech. Inf.',
-    url: '/technische-informatik',
-    icon: 'library-outline',
-  },
-  {
-    title: 'Praktische Informatik',
-    shortTitle: 'Prak. Inf.',
-    url: '/praktische-informatik',
-    icon: 'library-outline',
-  },
-  {
-    title: 'Theoretische Informatik',
-    shortTitle: 'Theo. Inf.',
-    url: '/theoretische-informatik',
-    icon: 'library-outline',
-  },
-];
-
 export const languages: MenuItem[] = [
   {
     title: 'Assembler',
@@ -210,4 +183,4 @@ export const myClass: MenuItem[] = [
   },
 ];
 
-export const pages = [...subjects, ...study, ...languages, ...myClass];
+export const pages = [...subjects, ...languages, ...myClass];

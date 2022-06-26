@@ -19,18 +19,6 @@
   </mat-nav-list>
 </section>
 
-<section class="study">
-  <label class="section-title">Studium</label>
-  <mat-nav-list>
-    <fe-nav-link
-      *ngFor="let navItem of study"
-      [item]="navItem"
-      [router-link]="navItem.url"
-      [disabled]="true"
-    ></fe-nav-link>
-  </mat-nav-list>
-</section>
-
 <section class="areas">
   <label class="section-title">Bereiche</label>
   <mat-nav-list>
@@ -44,7 +32,7 @@
 </section>
 
 <ng-container *ngIf="user.isAuthenticated">
-  <hr style="height: 1px; background: var(--grey-2); margin-bottom: 20px" />
+  <hr />
 
   <section class="apps">
     <a
