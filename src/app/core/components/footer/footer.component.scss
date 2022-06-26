@@ -75,16 +75,16 @@
     }
 
     small.copyright {
-      color: var(--grey-2);
+      color: var(--grey-3);
     }
   }
 }
 
 :host fe-app-icon ::ng-deep {
   div.icon-wrapper {
-    fill: var(--grey-2);
+    fill: var(--grey-3);
   }
   p.app-name {
-    color: var(--grey-2);
+    color: var(--grey-3);
   }
 }

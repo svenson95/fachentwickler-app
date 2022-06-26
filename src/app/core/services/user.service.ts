@@ -123,7 +123,6 @@ export class UserService {
       .pipe(
         map((response) => {
           if (response.success) {
-            this.data = response.data.user;
             this.storeData();
           }
           return response;
