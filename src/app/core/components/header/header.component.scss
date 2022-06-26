@@ -64,6 +64,11 @@
         transform: translateX(-20px);
       }
 
+      &:focus {
+        background-color: rgba(var(--tertiary-color-rgb), 0.2);
+        outline: none;
+      }
+
       ::ng-deep fe-app-icon {
         @include from-xs {
           &:hover .app-name {
@@ -160,8 +165,9 @@
         padding: 7px 14px;
 
         &:hover,
+        &:focus,
         &.active-route {
-          background: var(--button-hover-background);
+          background-color: var(--button-hover-background);
         }
 
         &.active-route {

@@ -13,8 +13,9 @@
 
     @include from-xs {
       &:hover,
+      &:focus,
       &.is-active {
-        background: rgba(240, 240, 240, 0.1);
+        background-color: var(--button-hover-background);
         transition: none;
       }
     }
