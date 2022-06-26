@@ -27,7 +27,7 @@
   [innerHTML]="element.content"
 ></p>
 <!-- LINE -->
-<hr class="post-line" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)" />
+<hr class="post-line horizontal" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)" />
 <!-- UNORDERED LIST -->
 <ng-container *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
   <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>

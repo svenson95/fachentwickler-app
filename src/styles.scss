@@ -22,8 +22,24 @@ body {
 }
 
 hr {
-  background: var(--grey-1);
   border: none;
+
+  &.horizontal {
+    height: 1px;
+    width: 100%;
+  }
+
+  &.vertical {
+    width: 1px;
+  }
+
+  &:not(.secondary) {
+    background: var(--grey-1);
+  }
+
+  &.secondary {
+    background: var(--grey-3);
+  }
 }
 
 mat-sidenav,

@@ -19,8 +19,7 @@
     }
   }
 
-  hr.divider-line {
-    height: 1px;
+  hr {
     margin-block: 20px;
 
     @include from-lg {
