@@ -20,6 +20,6 @@
   </ng-template>
 </fe-card>
 
-<fe-card title="Tests" *ngIf="subject && subject.tests.length !== 0">
+<fe-card title="Tests" *ngIf="subject && subject.tests">
   <fe-post-link *ngFor="let post of subject.tests" [post]="post"></fe-post-link>
 </fe-card>
