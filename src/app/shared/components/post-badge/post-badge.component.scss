@@ -6,8 +6,8 @@
     color: var(--tertiary-color);
   }
   &.tasks p {
-    background-color: rgba(var(--grey-4-rgb), 0.15);
-    color: var(--grey-4);
+    background-color: rgba(var(--grey-4-rgb), 0.25);
+    color: var(--text-color-3);
   }
   &.index-cards p {
     background-color: rgba(var(--secondary-color-rgb), 0.15);

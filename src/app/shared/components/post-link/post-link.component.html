@@ -10,7 +10,7 @@
     </p>
   </div>
   <div class="description-wrapper">
-    <p class="description">{{ post.lessonDate | date: "dd.MM.yyyy" }}</p>
+    <small>{{ post.lessonDate | date: "dd.MM.yyyy" }}</small>
     <fe-post-badge [type]="post.type"></fe-post-badge>
   </div>
 </a>

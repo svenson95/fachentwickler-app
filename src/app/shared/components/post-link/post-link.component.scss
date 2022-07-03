@@ -114,17 +114,13 @@
         align-items: flex-end;
       }
 
-      .description {
-        color: var(--grey-4);
-        font-size: 0.9em;
+      small {
+        color: var(--text-color-3);
         margin: 0;
         text-align: right;
-        line-height: 17px;
 
         @include to-xs {
-          font-size: 0.8em;
           margin-top: 7px;
-          line-height: 14px;
         }
 
         @include to-md {

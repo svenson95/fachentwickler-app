@@ -63,17 +63,16 @@ a.fe-button {
 
   &.show-more {
     background-color: transparent;
-    color: var(--grey-4);
-    border-color: rgba(var(--grey-4-rgb), 0.3);
+    color: var(--text-color-3);
+    border-color: rgba(var(--grey-4-rgb), 0.4);
     margin-left: 10px;
 
     &:hover {
-      background-color: rgba(var(--grey-4-rgb), 0.1);
-      color: var(--grey-4);
+      background-color: rgba(var(--grey-4-rgb), 0.3);
     }
 
     .mat-ripple-element {
-      background-color: rgba(var(--grey-4-rgb), 0.15);
+      background-color: rgba(var(--grey-4-rgb), 0.35);
     }
   }
 
@@ -82,7 +81,7 @@ a.fe-button {
 
     span,
     .drop-icon {
-      color: rgba(var(--grey-4-rgb), 0.5);
+      color: var(--grey-4);
     }
   }
 }
