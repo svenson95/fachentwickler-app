@@ -20,6 +20,19 @@
       "typescript": {}
     }
   },
+  "overrides": [
+    {
+      "files": ["./src/data/**/*.ts"],
+      "rules": {
+        "prettier/prettier": 0,
+        "qoutes": 0,
+        "quote-props": 0,
+        "comma-dangle": 0,
+        "@typescript-eslint/no-unused-vars": 0,
+        "unused-imports/no-unused-vars": 0
+      }
+    }
+  ],
   "rules": {
     "prettier/prettier": ["error", { "printWidth": 120, "endOfLine": "auto" }],
     "import/extensions": [

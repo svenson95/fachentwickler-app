@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF6_POSTS: PostArticle[] = [
   {
@@ -45,9 +44,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Wikipedia - Objektorientierung | 06.06.2021 | <a href='https://de.wikipedia.org/wiki/Objektorientierung'>https://de.wikipedia.org/wiki/Objektorientierung</a>"
-        ]
+        "list": ["Wikipedia - Objektorientierung | 06.06.2021 | <a href='https://de.wikipedia.org/wiki/Objektorientierung'>https://de.wikipedia.org/wiki/Objektorientierung</a>"]
       }
     ]
   },
@@ -98,20 +95,12 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<u>Eine Variable ist ein Triple (Name, Adresse, Wert)</u>. Der Name identifiziert die Adresse im Speicher, in dem der aktuelle Wert der Variablen abgelegt ist. In Java ist es üblich Variablen mit Kleinbuchstaben zu deklarieren, valide Zeichen dafür sind Buchstaben, Zahlen und der Unterstrich _. In anderen Sprachen findet man zum Beispiel noch …",
-        "list": [
-          "<code>camelCase</code>",
-          "<code>PascalCase</code>",
-          "<code>UPPER_SNAKE_CASE</code>",
-          "<code>snake_case</code>",
-          "<code>kebab-case</code>"
-        ]
+        "list": ["<code>camelCase</code>", "<code>PascalCase</code>", "<code>UPPER_SNAKE_CASE</code>", "<code>snake_case</code>", "<code>kebab-case</code>"]
       },
       {
         "type": "LIST",
         "content": "Eine <b>Konstante</b> ist eine nicht veränderbare Variable (engl. <i>immutable</i>), was bedeutet, dass <b>der bei der Deklaration zugewiesene Wert nicht geändert werden</b> kann. In Java werden Konstanten mit dem Schlüsselwort final gekennzeichnet. Ein Literal ist ein konstanter Wert oder Ausdruck, der sich zur Laufzeit eines Programms nicht ändert. Allgemein bezeichnet ein Literal eine Zeichenfolge, die die direkte Darstellung der Werte von Basistypen definiert.",
-        "list": [
-          "die Ziffern 123 sind ein Literal, denn sie repräsentieren den Wert einhundertdreiundzwanzig"
-        ]
+        "list": ["die Ziffern 123 sind ein Literal, denn sie repräsentieren den Wert einhundertdreiundzwanzig"]
       },
       {
         "type": "TABLE",
@@ -288,7 +277,7 @@ export const LF6_POSTS: PostArticle[] = [
           {
             "type": "default",
             "columns": [
-              { "align": "left", "content": "\\\"" },
+              { "align": "left", "content": '\\"' },
               { "align": "left", "content": "Doppeltes Anführungszeichen" }
             ]
           },
@@ -304,11 +293,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Der Typ char hat 16 bit und ist ein einzelnes Zeichen aus dem Unicodezeichensatz. Einer char - Variablen kann man drei verschiedene Arten von Werten zuweisen:",
-        "list": [
-          "→ Ein alphanumerisches Zeichen in einfachen Anführungszeichen",
-          "→ Ein Integerwert aus dem Zahlenbereich 0 bis 65535",
-          "→ oder der vierstellige hexadezimale Index aus dem Unicodezeichensatz"
-        ]
+        "list": ["→ Ein alphanumerisches Zeichen in einfachen Anführungszeichen", "→ Ein Integerwert aus dem Zahlenbereich 0 bis 65535", "→ oder der vierstellige hexadezimale Index aus dem Unicodezeichensatz"]
       },
       {
         "type": "LINE",
@@ -429,10 +414,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Implizite Typkonvertierung (engl. <i>implicite typecast</i>) bei Grunddatentypen",
-        "list": [
-          "Kleiner Zahlenbereich wird im großen Zahlenbereich abgebildet",
-          "Compiler tut dies in Java problemlos"
-        ]
+        "list": ["Kleiner Zahlenbereich wird im großen Zahlenbereich abgebildet", "Compiler tut dies in Java problemlos"]
       },
       {
         "type": "IMAGE",
@@ -449,10 +431,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "großen Zahlenbereich in kleinen Zahlenbereich umwandeln (zB. die Vorkommazahl von 3.14 wird benötigt) also in Java double → int",
-          "Compiler zeigt Fehler an"
-        ]
+        "list": ["großen Zahlenbereich in kleinen Zahlenbereich umwandeln (zB. die Vorkommazahl von 3.14 wird benötigt) also in Java double → int", "Compiler zeigt Fehler an"]
       },
       {
         "type": "TEXT",
@@ -509,11 +488,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Objekt-orientiertes Programmieren in Java, Typen und Variablen, Präzedenz, Wahrheitswertswerte - Vorlesungsaufzeichnung <a href='https://youtu.be/LNsjGxhUJ4I'>https://youtu.be/LNsjGxhUJ4I</a>",
-          "<a href='https://www.a-coding-project.de/ratgeber/java/variablen-und-operatoren'>https://www.a-coding-project.de/ratgeber/java/variablen-und-operatoren</a>",
-          "<a href='https://de.wikipedia.org/wiki/Zweierkomplement'>https://de.wikipedia.org/wiki/Zweierkomplement</a>"
-        ]
+        "list": ["Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Objekt-orientiertes Programmieren in Java, Typen und Variablen, Präzedenz, Wahrheitswertswerte - Vorlesungsaufzeichnung <a href='https://youtu.be/LNsjGxhUJ4I'>https://youtu.be/LNsjGxhUJ4I</a>", "<a href='https://www.a-coding-project.de/ratgeber/java/variablen-und-operatoren'>https://www.a-coding-project.de/ratgeber/java/variablen-und-operatoren</a>", "<a href='https://de.wikipedia.org/wiki/Zweierkomplement'>https://de.wikipedia.org/wiki/Zweierkomplement</a>"]
       }
     ]
   },
@@ -1111,7 +1086,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Ausdrücke (engl. \"expressions\") werden in einem Programm verwendet, um vorzunehmende Auswertungen zu beschreiben."
+        "content": 'Ausdrücke (engl. "expressions") werden in einem Programm verwendet, um vorzunehmende Auswertungen zu beschreiben.'
       },
       {
         "type": "TABLE",
@@ -1224,26 +1199,17 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Anweisungen (engl. \"statements\") sind Einheiten der Ausführung, auch \"Sätze in der Programmiersprache\" genannt. Anweisungen haben meistens eine Zustandsveränderung zur Folge."
+        "content": 'Anweisungen (engl. "statements") sind Einheiten der Ausführung, auch "Sätze in der Programmiersprache" genannt. Anweisungen haben meistens eine Zustandsveränderung zur Folge.'
       },
       {
         "type": "LIST",
         "content": "Anweisungen in Java",
-        "list": [
-          "Deklaration lokaler Variablen - <code>int x;</code>",
-          "Block-Anweisungen - <code>{ Anweisung1; ... }</code>",
-          "Return-Anweisungen - <code>return Ausdruck; bzw. return;</code>"
-        ]
+        "list": ["Deklaration lokaler Variablen - <code>int x;</code>", "Block-Anweisungen - <code>{ Anweisung1; ... }</code>", "Return-Anweisungen - <code>return Ausdruck; bzw. return;</code>"]
       },
       {
         "type": "LIST",
-        "content": "\"Expression-Statements\" sind ausgewählte Ausdrücke, die gleichzeitig auch als Anweisungen verwendet werden können",
-        "list": [
-          "Inkrement- / Dekrement-Operator <br/> <code>i++;</code> == <code>Ausdruck<sub>1</sub> = y + (i++);</code>",
-          "Zuweisungen <br/> <code>x = y;</code> == <code>Ausdruck<sub>2</sub> = (y = z);</code>",
-          "Methodenaufrufe <br/> <code>f(x,y);</code> == <code>Ausdruck<sub>3</sub> = (y = z);</code>",
-          "new-Operator <br/> <code>new Vector2D();</code> == <code>Ausdruck<sub>4</sub> = new Vector2D();</code>"
-        ]
+        "content": '"Expression-Statements" sind ausgewählte Ausdrücke, die gleichzeitig auch als Anweisungen verwendet werden können',
+        "list": ["Inkrement- / Dekrement-Operator <br/> <code>i++;</code> == <code>Ausdruck<sub>1</sub> = y + (i++);</code>", "Zuweisungen <br/> <code>x = y;</code> == <code>Ausdruck<sub>2</sub> = (y = z);</code>", "Methodenaufrufe <br/> <code>f(x,y);</code> == <code>Ausdruck<sub>3</sub> = (y = z);</code>", "new-Operator <br/> <code>new Vector2D();</code> == <code>Ausdruck<sub>4</sub> = new Vector2D();</code>"]
       },
       {
         "type": "SUBTITLE",
@@ -1302,12 +1268,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Bei welchen Java-Fragmenten handelt es sich um gültige Anweisungen?",
-        "list": [
-          "1) <code>P = new Vector2D().shift(1.0, 2.0);</code>",
-          "2) <code>(int)foo(x);</code>",
-          "2) <code>x = y = z;</code>",
-          "2) <code>(i++)++;</code>"
-        ]
+        "list": ["1) <code>P = new Vector2D().shift(1.0, 2.0);</code>", "2) <code>(int)foo(x);</code>", "2) <code>x = y = z;</code>", "2) <code>(i++)++;</code>"]
       },
       {
         "type": "SUBTITLE",
@@ -1320,11 +1281,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vorgefertigte Klasse <code>Scanner</code>",
-        "list": [
-          "Importieren mit - <code>import java.util.Scanner;s</code>",
-          "Objekt erstellen mit - <code>new Scanner(System.in);</code>",
-          "Zeile einlesen mit - <code>scanner.nextInt();</code>"
-        ]
+        "list": ["Importieren mit - <code>import java.util.Scanner;s</code>", "Objekt erstellen mit - <code>new Scanner(System.in);</code>", "Zeile einlesen mit - <code>scanner.nextInt();</code>"]
       },
       {
         "type": "HINT",
@@ -1336,7 +1293,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TITLE",
-        "content": "Kontrollfluss-Anweisungen (engl. \"control-flow-statements\")"
+        "content": 'Kontrollfluss-Anweisungen (engl. "control-flow-statements")'
       },
       {
         "type": "TEXT",
@@ -1386,7 +1343,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "int points = 70;\nint grade = 0; \n\nif (points >= 87) {\n    grade = 1 \n} else if (points >= 75) {\n    grade = 2;\n} else if (points >= 63) {\n    grade = 3;\n} else if (points >= 51) {\n    grade = 4;\n} else {\n    grade = 5;\n}\n\nSystem.out.println(\"Note: \" + grade);"
+        "content": 'int points = 70;\nint grade = 0; \n\nif (points >= 87) {\n    grade = 1 \n} else if (points >= 75) {\n    grade = 2;\n} else if (points >= 63) {\n    grade = 3;\n} else if (points >= 51) {\n    grade = 4;\n} else {\n    grade = 5;\n}\n\nSystem.out.println("Note: " + grade);'
       },
       {
         "type": "TEXT",
@@ -1415,7 +1372,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "Scanner scanner = new Scanner(System.in);\nint a = scanner.nextInt(); \nint b = scanner.nextInt(); \n\nif (a > b) {\n    System.out.println(\"a ist größer als b\");\n} else if (a < b) {\n    System.out.println(\"a ist kleiner als b\");\n} else {\n    System.out.println(\"a ist gleich b\");\n}"
+        "content": 'Scanner scanner = new Scanner(System.in);\nint a = scanner.nextInt(); \nint b = scanner.nextInt(); \n\nif (a > b) {\n    System.out.println("a ist größer als b");\n} else if (a < b) {\n    System.out.println("a ist kleiner als b");\n} else {\n    System.out.println("a ist gleich b");\n}'
       },
       {
         "type": "LINE",
@@ -1436,7 +1393,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "// Konstanten der Klasse\nstatic final char NEW = ‘n‘;\nstatic final char OPEN = ‘o‘;\nstatic final char SAVE = ‘s‘;\nstatic final char QUIT = ‘q‘;\n\n// Innerhalb einer Methode\nchar command = ...;\nswitch (command) {\n   case NEW:   createFile();\n   break;\n   case OPEN:  openFile();\n   break;\n   case SAVE:  saveFile();\n   break;\n   case QUIT:  exitProgram();\n   break;\n   default:    System.out.println(\"Unbekanntes Kommando: \" + command);\n   break;\n}"
+        "content": '// Konstanten der Klasse\nstatic final char NEW = ‘n‘;\nstatic final char OPEN = ‘o‘;\nstatic final char SAVE = ‘s‘;\nstatic final char QUIT = ‘q‘;\n\n// Innerhalb einer Methode\nchar command = ...;\nswitch (command) {\n   case NEW:   createFile();\n   break;\n   case OPEN:  openFile();\n   break;\n   case SAVE:  saveFile();\n   break;\n   case QUIT:  exitProgram();\n   break;\n   default:    System.out.println("Unbekanntes Kommando: " + command);\n   break;\n}'
       },
       {
         "type": "TEXT",
@@ -1475,9 +1432,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Kontrollstrukturen, Ausdrücke, Programmieren von Schleifen, Unterschied for- und while-Schleifen - Vorlesungsaufzeichnung <a href='https://youtu.be/7afJG3_JSDo'>https://youtu.be/7afJG3_JSDo</a>"
-        ]
+        "list": ["Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Kontrollstrukturen, Ausdrücke, Programmieren von Schleifen, Unterschied for- und while-Schleifen - Vorlesungsaufzeichnung <a href='https://youtu.be/7afJG3_JSDo'>https://youtu.be/7afJG3_JSDo</a>"]
       }
     ]
   },
@@ -1617,7 +1572,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "Scanner scanner = new Scanner(System.in);\nint p = scanner.nextInt();\nint i = 1;\n\nwhile (i <= p) {\n   System.out.println(i + \" \");\n   i++;\n}"
+        "content": 'Scanner scanner = new Scanner(System.in);\nint p = scanner.nextInt();\nint i = 1;\n\nwhile (i <= p) {\n   System.out.println(i + " ");\n   i++;\n}'
       },
       {
         "type": "LINE",
@@ -1629,7 +1584,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Die <code>for</code> – Schleife (engl. \"for statement\") ist eine Zählschleife"
+        "content": 'Die <code>for</code> – Schleife (engl. "for statement") ist eine Zählschleife'
       },
       {
         "type": "TEXT",
@@ -1710,7 +1665,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "int p = scanner.nextInt();\nint m = scanner.nextInt();\n\nfor (int i = 1; i <= p; i++) {\n   for (int j = 1; j <= m; j++) {\n      System.out.print(j + \" \");\n   }\n\n   System.out.println(\"\");\n}"
+        "content": 'int p = scanner.nextInt();\nint m = scanner.nextInt();\n\nfor (int i = 1; i <= p; i++) {\n   for (int j = 1; j <= m; j++) {\n      System.out.print(j + " ");\n   }\n\n   System.out.println("");\n}'
       },
       {
         "type": "LINE",
@@ -1727,7 +1682,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "int i, sum = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   }\n   sum += i;\n   System.out.println(\"sum = \" + sum);\n}"
+        "content": 'int i, sum = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   }\n   sum += i;\n   System.out.println("sum = " + sum);\n}'
       },
       {
         "type": "LINE",
@@ -1744,7 +1699,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "int i, numOnes = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   } else if (i != 1) {\n      continue;\n   }\n   numOnes++;\n   System.out.println(\"number of ones = \" + numOnes);\n}"
+        "content": 'int i, numOnes = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   } else if (i != 1) {\n      continue;\n   }\n   numOnes++;\n   System.out.println("number of ones = " + numOnes);\n}'
       },
       {
         "type": "LINE",
@@ -1753,9 +1708,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Kontrollstrukturen, Ausdrücke, Programmieren von Schleifen, Unterschied for- und while-Schleifen - Vorlesungsaufzeichnung <a href='https://youtu.be/7afJG3_JSDo'>https://youtu.be/7afJG3_JSDo</a>"
-        ]
+        "list": ["Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Kontrollstrukturen, Ausdrücke, Programmieren von Schleifen, Unterschied for- und while-Schleifen - Vorlesungsaufzeichnung <a href='https://youtu.be/7afJG3_JSDo'>https://youtu.be/7afJG3_JSDo</a>"]
       }
     ]
   },
@@ -1851,7 +1804,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Viele Probleme lassen sich mit den bisherigen \"Boardmitteln\" nur umständlich programmieren. Angenommen, Sie wollen ein Programm schreiben, das aus 100 Werten vom Typ <code>int</code> das Minimum ausgibt. Dazu müssten Sie 100 Variablen vom Typ <code>int</code> deklaieren (anlegen), initialisieren (einlesen) und selektieren (100 Vergleiche abfragen)."
+        "content": 'Viele Probleme lassen sich mit den bisherigen "Boardmitteln" nur umständlich programmieren. Angenommen, Sie wollen ein Programm schreiben, das aus 100 Werten vom Typ <code>int</code> das Minimum ausgibt. Dazu müssten Sie 100 Variablen vom Typ <code>int</code> deklaieren (anlegen), initialisieren (einlesen) und selektieren (100 Vergleiche abfragen).'
       },
       {
         "type": "CODE",
@@ -1864,7 +1817,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Ein oft einfacherer Weg, algorithmische Probleme zu lösen, ist die Verwendung von Datenstrukturen. Grundlegene Datenstrukturen für die vorrangig imperative Programmierung sidn Tupel (engl. \"record\"), Feld (engl. \"array\", \"vector\"), Verkettete Liste (engl. \"linked list\"), Stapelspeicher/Kellerspeicher (engl. \"stack\"), Warteschlange (engl. \"queue\"), Vorrangswarteschlange/Prioritätswarteschlange (engl. \"priority queue\"), Graph, Baum (engl. \"tree\"), Heap, Treap, Hashtabelle (engl. \"hash table\", \"dictionary\" oder \"map\")."
+        "content": 'Ein oft einfacherer Weg, algorithmische Probleme zu lösen, ist die Verwendung von Datenstrukturen. Grundlegene Datenstrukturen für die vorrangig imperative Programmierung sidn Tupel (engl. "record"), Feld (engl. "array", "vector"), Verkettete Liste (engl. "linked list"), Stapelspeicher/Kellerspeicher (engl. "stack"), Warteschlange (engl. "queue"), Vorrangswarteschlange/Prioritätswarteschlange (engl. "priority queue"), Graph, Baum (engl. "tree"), Heap, Treap, Hashtabelle (engl. "hash table", "dictionary" oder "map").'
       },
       {
         "type": "LINE",
@@ -1952,7 +1905,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": " ... Dadurch ist es möglich, nicht-\"rechteckige\" Arrays zu erzeugen. Das folgende Beispiel deklariert und initialisiert ein zweidimensionales dreieckiges Array."
+        "content": ' ... Dadurch ist es möglich, nicht-"rechteckige" Arrays zu erzeugen. Das folgende Beispiel deklariert und initialisiert ein zweidimensionales dreieckiges Array.'
       },
       {
         "type": "CODE",
@@ -1969,7 +1922,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Eine Zuweisung mit einem Referenztyp erzeugt eine Referenzkopie auf das gleiche Objekt! Dieser Effekt wird als Aliasing (dts. \"Überlappung/Überlagerung\") bezeichnet. Es wird nur die Referenz kopiert, nicht der Wert!"
+        "content": 'Eine Zuweisung mit einem Referenztyp erzeugt eine Referenzkopie auf das gleiche Objekt! Dieser Effekt wird als Aliasing (dts. "Überlappung/Überlagerung") bezeichnet. Es wird nur die Referenz kopiert, nicht der Wert!'
       },
       {
         "type": "IMAGE",
@@ -2027,7 +1980,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "HINT",
-        "content": "Mit statischen Methoden lässt sich das Programmparadigma \"divide et impera\" (lateinisch für teile und hersche, engl. \"divide and conquer\") umsetzen. Komplexe Aufgaben werden in weniger komplexe Teilaufgaben zerlegt, womit sich das Debuggen, Warten und Wiederverwenden von Codes vereinfacht."
+        "content": 'Mit statischen Methoden lässt sich das Programmparadigma "divide et impera" (lateinisch für teile und hersche, engl. "divide and conquer") umsetzen. Komplexe Aufgaben werden in weniger komplexe Teilaufgaben zerlegt, womit sich das Debuggen, Warten und Wiederverwenden von Codes vereinfacht.'
       },
       {
         "type": "TEXT",
@@ -2181,7 +2134,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Statische Methoden werden nicht am Namen sondern anhand ihrer Signatur identifiziert. Dadurch ist es möglich, für verschiedene Methoden, die genügend Gemeinsamkeiten aufweisen, den gleichen Namen zu vergeben. Dies ist zum Beispiel sinnvoll, wenn Methoden die gleichen Operationen auf unterschiedliche Parameter durchführen (Listing 1 und 2). Statische Methoden mit gleichem Namen und unterschiedlichen Parametern werden als überladen (engl. \"overloading\") bezeichnet."
+        "content": 'Statische Methoden werden nicht am Namen sondern anhand ihrer Signatur identifiziert. Dadurch ist es möglich, für verschiedene Methoden, die genügend Gemeinsamkeiten aufweisen, den gleichen Namen zu vergeben. Dies ist zum Beispiel sinnvoll, wenn Methoden die gleichen Operationen auf unterschiedliche Parameter durchführen (Listing 1 und 2). Statische Methoden mit gleichem Namen und unterschiedlichen Parametern werden als überladen (engl. "overloading") bezeichnet.'
       },
       {
         "type": "CODE",
@@ -2494,9 +2447,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf'>https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf</a>"
-        ]
+        "list": ["<a href='https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf'>https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf</a>"]
       }
     ]
   },
@@ -2615,7 +2566,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "javascript",
-        "content": "let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\n\nfunction calculate() {\n   let buyInDays = [], buyOutDays = [], profits = [];\n   let recommendBuyInDay, profit;\n   let recommendBuyOutDay = 1;\n\n   for (let buyInDay = 0; buyInDay < history.length; buyInDay++) {\n      profit = 0;\n\n      for (let buyOutDay = buyInDay + 1; buyOutDay < history.length; buyOutDay++) {\n         profit = profit + history[buyOutDay];\n         profits.push(profit);\n         buyInDays.push((buyInDay + 1));\n         buyOutDays.push((buyOutDay + 1));\n      }\n   }\n\n   let highestProfit = profits[0];\n   for (let i = 0; i < profits.length; i++) {\n      if (profits[i] > highestProfit) {\n         highestProfit = profits[i];\n         recommendBuyInDay = buyInDays[i];\n         recommendBuyOutDay = buyOutDays[i];\n      }\n   }\n\n   console.log(\"Recommendend Buy-In Day: \" + recommendBuyInDay + \"; Recommended Buy-Out Day: \" + recommendBuyOutDay + \"; Profit: \" + highestProfit);\n}\n\ncalculate();\nconsole.log((new Date() - start) / 1000 + \" seconds runtime\");"
+        "content": 'let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\n\nfunction calculate() {\n   let buyInDays = [], buyOutDays = [], profits = [];\n   let recommendBuyInDay, profit;\n   let recommendBuyOutDay = 1;\n\n   for (let buyInDay = 0; buyInDay < history.length; buyInDay++) {\n      profit = 0;\n\n      for (let buyOutDay = buyInDay + 1; buyOutDay < history.length; buyOutDay++) {\n         profit = profit + history[buyOutDay];\n         profits.push(profit);\n         buyInDays.push((buyInDay + 1));\n         buyOutDays.push((buyOutDay + 1));\n      }\n   }\n\n   let highestProfit = profits[0];\n   for (let i = 0; i < profits.length; i++) {\n      if (profits[i] > highestProfit) {\n         highestProfit = profits[i];\n         recommendBuyInDay = buyInDays[i];\n         recommendBuyOutDay = buyOutDays[i];\n      }\n   }\n\n   console.log("Recommendend Buy-In Day: " + recommendBuyInDay + "; Recommended Buy-Out Day: " + recommendBuyOutDay + "; Profit: " + highestProfit);\n}\n\ncalculate();\nconsole.log((new Date() - start) / 1000 + " seconds runtime");'
       },
       {
         "type": "LINE",
@@ -2632,7 +2583,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "javascript",
-        "content": "let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\n\nfunction calculateAllOptions(start, end) {\n   let profit = 0;\n   for (let i = start, i < end; i++) {\n      profit = profit + history[i];\n   }\n   return profit;\n}\n\nfunction calculate(start, end) {\n   const profit1 = calculateAllOptions(start, end) {\n      \n\n      if (start >= end - 1) {\n         return [profit1, start, end];\n      }\n\n      const result2 = calculate(start + 1, end);\n      const result3 = calculate(start, end - 1);\n\n      const profit2 = result2[0];\n      const profit3 = result3[0];\n\n      if (profit1 > profit2) {\n         if (profit1 > profit3) {\n            return [profit1, start, end];\n         }\n         return result3;\n      }\n\n      if (profit2 > profit3) return result2;\n\n      return result3;\n   }   \n\n   console.log(calculate(1, 30));\n   console.log((new Date() - startDate) / 1000 + \" seconds runtime\");\n}"
+        "content": 'let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\n\nfunction calculateAllOptions(start, end) {\n   let profit = 0;\n   for (let i = start, i < end; i++) {\n      profit = profit + history[i];\n   }\n   return profit;\n}\n\nfunction calculate(start, end) {\n   const profit1 = calculateAllOptions(start, end) {\n      \n\n      if (start >= end - 1) {\n         return [profit1, start, end];\n      }\n\n      const result2 = calculate(start + 1, end);\n      const result3 = calculate(start, end - 1);\n\n      const profit2 = result2[0];\n      const profit3 = result3[0];\n\n      if (profit1 > profit2) {\n         if (profit1 > profit3) {\n            return [profit1, start, end];\n         }\n         return result3;\n      }\n\n      if (profit2 > profit3) return result2;\n\n      return result3;\n   }   \n\n   console.log(calculate(1, 30));\n   console.log((new Date() - startDate) / 1000 + " seconds runtime");\n}'
       },
       {
         "type": "LINE",
@@ -2649,7 +2600,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "javascript",
-        "content": "let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\nlet profit, recommendBuyInDay, recommendBuyOutDay, highestProfit = 0;\n\nfunction calculate() {\n   for (let buyInDay = 0; buyInDay <history.length; buyInDay++) {\n      profit = 0;\n\n      for (let buyOutDay = buyInDay + 1; buyOutDay < history.length; buyOutDay++) {\n         profit = profit + history[buyOutDay];\n\n         if (profit > highestProfit) {\n            highestProfit = profit;\n            recommendBuyInDay = buyInDay + 1;\n            recommendBuyOutDay = buyOutDay + 1;\n         }\n      }\n   }\n\n   console.log(\"Recommended Buy-In Day: \" + recommendBuyInDay + \"; Recommended Buy-Out Day: \" + recommendBuyOutDay + \"; Profit: \" + highestProfit);\n}\n\ncalculate();\nconsole.log((new Date() - start) / 1000 + \" seconds runtime\");"
+        "content": 'let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\nlet profit, recommendBuyInDay, recommendBuyOutDay, highestProfit = 0;\n\nfunction calculate() {\n   for (let buyInDay = 0; buyInDay <history.length; buyInDay++) {\n      profit = 0;\n\n      for (let buyOutDay = buyInDay + 1; buyOutDay < history.length; buyOutDay++) {\n         profit = profit + history[buyOutDay];\n\n         if (profit > highestProfit) {\n            highestProfit = profit;\n            recommendBuyInDay = buyInDay + 1;\n            recommendBuyOutDay = buyOutDay + 1;\n         }\n      }\n   }\n\n   console.log("Recommended Buy-In Day: " + recommendBuyInDay + "; Recommended Buy-Out Day: " + recommendBuyOutDay + "; Profit: " + highestProfit);\n}\n\ncalculate();\nconsole.log((new Date() - start) / 1000 + " seconds runtime");'
       },
       {
         "type": "LINE",
@@ -2658,9 +2609,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf'>https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf</a>"
-        ]
+        "list": ["<a href='https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf'>https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf</a>"]
       }
     ]
   },
@@ -2697,7 +2646,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "int[] intArray = new int[]{1, 3, 6, 2};\ndouble[] doubleArray = new double[]{1.246, 1.968, 1.312, 1.567, 1.634};\nchar[] charArray = new char[]{'a', 'b', 'd', 'k', 'c', 'f'};\nString[] stringArray = new String[]{\"Berlin\", \"Rio\", \"Canberra\", \"Buenos Aires\", \"Paris\", \"Prag\", \"Amsterdam\"};\n\n// Und für Aufgabe 15, 24 & 27 angepasste Arrays"
+        "content": 'int[] intArray = new int[]{1, 3, 6, 2};\ndouble[] doubleArray = new double[]{1.246, 1.968, 1.312, 1.567, 1.634};\nchar[] charArray = new char[]{\'a\', \'b\', \'d\', \'k\', \'c\', \'f\'};\nString[] stringArray = new String[]{"Berlin", "Rio", "Canberra", "Buenos Aires", "Paris", "Prag", "Amsterdam"};\n\n// Und für Aufgabe 15, 24 & 27 angepasste Arrays'
       },
       {
         "type": "LINE",
@@ -2714,7 +2663,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "public static int myLength(int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(double[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(char[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(String[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\nSystem.out.println(\"Length of intArray: \" + MyArray.myLength(intArray));\n// ...\n\n// Length of intArray: 4\n// Length of doubleArray: 5\n// Length of charArray: 6\n// Length of stringArray: 7"
+        "content": 'public static int myLength(int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(double[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(char[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(String[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\nSystem.out.println("Length of intArray: " + MyArray.myLength(intArray));\n// ...\n\n// Length of intArray: 4\n// Length of doubleArray: 5\n// Length of charArray: 6\n// Length of stringArray: 7'
       },
       {
         "type": "TEXT",
@@ -2843,7 +2792,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "public static int[] modify(int oldVal, int newVal, int[] array) {\n   int[] modifiedArray = array.clone();\n   boolean valueModified = false;\n   if (array.length == 0) throw new IllegalArgumentException(\"Array is empty\");\n   for (int i = 0; i < array.length; i++) {\n      if (modifiedArray[i] == oldVal) {\n         modifiedArray[i] = newVal;\n         valueModified = true;\n      }\n   }\n   if (!valueModified) throw new IllegalArgumentException(\"Value to modify not found\");\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+        "content": 'public static int[] modify(int oldVal, int newVal, int[] array) {\n   int[] modifiedArray = array.clone();\n   boolean valueModified = false;\n   if (array.length == 0) throw new IllegalArgumentException("Array is empty");\n   for (int i = 0; i < array.length; i++) {\n      if (modifiedArray[i] == oldVal) {\n         modifiedArray[i] = newVal;\n         valueModified = true;\n      }\n   }\n   if (!valueModified) throw new IllegalArgumentException("Value to modify not found");\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string'
       },
       {
         "type": "TEXT",
@@ -2852,7 +2801,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "public static int[] addLastElement(int element, int[] array) {\n   int[] modifiedArray = new int[array.length + 1];\n   if (array.length == 0) throw new IllegalArgumentException(\"Array is empty\");\n   for (int i = 0; i < array.length; i++) {\n      modifiedArray[i] = array[i];\n   }\n   modifiedArray[modifiedArray.length-1] = element;\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+        "content": 'public static int[] addLastElement(int element, int[] array) {\n   int[] modifiedArray = new int[array.length + 1];\n   if (array.length == 0) throw new IllegalArgumentException("Array is empty");\n   for (int i = 0; i < array.length; i++) {\n      modifiedArray[i] = array[i];\n   }\n   modifiedArray[modifiedArray.length-1] = element;\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string'
       },
       {
         "type": "TEXT",
@@ -2861,7 +2810,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "java",
-        "content": "public static int[] addElement(int element, int[] array) {\n   int[] modifiedArray = new int[array.length + 1];\n   if (array.length == 0) throw new IllegalArgumentException(\"Array is empty\");\n   for (int i = 0; i < array.length; i++) {\n      modifiedArray[i+1] = array[i];\n   }\n   modifiedArray[0] = element;\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+        "content": 'public static int[] addElement(int element, int[] array) {\n   int[] modifiedArray = new int[array.length + 1];\n   if (array.length == 0) throw new IllegalArgumentException("Array is empty");\n   for (int i = 0; i < array.length; i++) {\n      modifiedArray[i+1] = array[i];\n   }\n   modifiedArray[0] = element;\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string'
       },
       {
         "type": "TEXT",
@@ -3020,11 +2969,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Das Catering der Cafeteria des OSZ-Teltow gewährt beim Kauf von Schnitzelbaguettes",
-        "list": [
-          "bei Mindestabnahme von 3 Baguettes 5% Rabatt",
-          "bei Mindestabnahme von 5 Baguettes 10% Rabatt",
-          "bei Mindestabnahme von 7 Baguettes 15% Rabatt"
-        ]
+        "list": ["bei Mindestabnahme von 3 Baguettes 5% Rabatt", "bei Mindestabnahme von 5 Baguettes 10% Rabatt", "bei Mindestabnahme von 7 Baguettes 15% Rabatt"]
       },
       {
         "type": "TEXT",
@@ -3037,24 +2982,12 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Überprüfen Sie den Lösungsvorschlag und kreuzen Sie den Fehler an, der bei der Bearbeitung dieses Algorithmus gemacht wurde.",
-        "list": [
-          "A - Bei unter 3 Baguettes würde Rabatt berechnet werden",
-          "B - Ab 3 bis unter 5 Baguettes würde kein Rabatt berechnet werden",
-          "C - Ab 3 bis unter 5 Baguettes würde mehr als 5% Rabatt berechnet werden",
-          "<strong>D - Ab 5 bis unter 7 Baguettes würde 5% Rabatt berechnet werden</strong>",
-          "E - Ab 5 bis unter 7 Baguettes würde kein Rabatt berechnet werden"
-        ]
+        "list": ["A - Bei unter 3 Baguettes würde Rabatt berechnet werden", "B - Ab 3 bis unter 5 Baguettes würde kein Rabatt berechnet werden", "C - Ab 3 bis unter 5 Baguettes würde mehr als 5% Rabatt berechnet werden", "<strong>D - Ab 5 bis unter 7 Baguettes würde 5% Rabatt berechnet werden</strong>", "E - Ab 5 bis unter 7 Baguettes würde kein Rabatt berechnet werden"]
       },
       {
         "type": "LIST",
         "content": "b) Der Algorithmus, der mit Hilfe des Nassi-Shneiderman-Diagramms dargestellt wird, ist implementiert worden. Dabei ist ein logischer Fehler aufgetreten. Kreuzen Sie die Tätigkeit an die ausgeübt wurde, um einen solchen Fehler ausfindig zu machen.",
-        "list": [
-          "A - Übersetzen mit Compiler",
-          "B - Editieren mit einer IDE (engl. \"Integrated Development Environment\")",
-          "C - Starten des Debuggers zum Anzeigen der logischen Fehler",
-          "<strong>D - Ausführen mit speziell generierten Testdaten</strong>",
-          "E - Binden mit dem Linker"
-        ]
+        "list": ["A - Übersetzen mit Compiler", 'B - Editieren mit einer IDE (engl. "Integrated Development Environment")', "C - Starten des Debuggers zum Anzeigen der logischen Fehler", "<strong>D - Ausführen mit speziell generierten Testdaten</strong>", "E - Binden mit dem Linker"]
       },
       {
         "type": "TEXT",
@@ -3313,10 +3246,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "man spült ein einziges Teil ab (erledigt einen Teil der Aufgabe)",
-          "man sucht die nächste Person, die den Abwasch erledigen soll"
-        ]
+        "list": ["man spült ein einziges Teil ab (erledigt einen Teil der Aufgabe)", "man sucht die nächste Person, die den Abwasch erledigen soll"]
       },
       {
         "type": "TEXT",
@@ -3328,15 +3258,11 @@ export const LF6_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Direkte rekursive Funktion",
-            "sublist": [
-              "Die Funktion ruft sich mindestens einmal selbst auf"
-            ]
+            "sublist": ["Die Funktion ruft sich mindestens einmal selbst auf"]
           },
           {
             "content": "Indirekte rekursive Funktion (verschränkte Rekursion)",
-            "sublist": [
-              "Die Funktion ruft eine andere Funktion auf, die wiederum eine weitere Funktion aufruft, die wiederum eine weitere Funktion aufruft, bis irgendwann eine Funktion die erste Funktion wieder aufruft. Alle aufgerufenen Funktionen sind damit natürlich rekursiv."
-            ]
+            "sublist": ["Die Funktion ruft eine andere Funktion auf, die wiederum eine weitere Funktion aufruft, die wiederum eine weitere Funktion aufruft, bis irgendwann eine Funktion die erste Funktion wieder aufruft. Alle aufgerufenen Funktionen sind damit natürlich rekursiv."]
           }
         ]
       },
@@ -3360,12 +3286,7 @@ export const LF6_POSTS: PostArticle[] = [
           "eng verbunden mit dem leistungsfähigen Algorithmenschema Teile-und-Herrsche",
           {
             "content": "Viele Berechnungen und Datenstrukturen sind von Haus aus selbstbezüglich:",
-            "sublist": [
-              "Ein Verzeichnis enthält Daten und andere Verzeichnisse",
-              "Euklidischer Algorithmus ggT",
-              "Quicksort",
-              "Listen, Bäume"
-            ]
+            "sublist": ["Ein Verzeichnis enthält Daten und andere Verzeichnisse", "Euklidischer Algorithmus ggT", "Quicksort", "Listen, Bäume"]
           }
         ]
       },
@@ -3380,12 +3301,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Es gibt verschiedene Arten von Rekursionen ...",
-        "list": [
-          "Lineare Rekursion",
-          "Verzweigte Rekursion",
-          "Verschachtelte Rekursion",
-          "Verschränkte Rekursion"
-        ]
+        "list": ["Lineare Rekursion", "Verzweigte Rekursion", "Verschachtelte Rekursion", "Verschränkte Rekursion"]
       },
       {
         "type": "SUBTITLE",
@@ -3520,10 +3436,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Phansud Wiki - Rekursion | 06.06.2021 | <a href='http://ais.informatik.uni-freiburg.de/teaching/ss09/info_MST/material/mst_08_recursion.pdf'>http://ais.informatik.uni-freiburg.de/teaching/ss09/info_MST/material/mst_08_recursion.pdf</a>",
-          "Einführung in die Informatik - Recursion - Wolfram Burgard & Cyrill Stachniss | 06.06.2021 | <a href='https://phansud.fandom.com/de/wiki/Rekursion'>https://phansud.fandom.com/de/wiki/Rekursion</a>"
-        ]
+        "list": ["Phansud Wiki - Rekursion | 06.06.2021 | <a href='http://ais.informatik.uni-freiburg.de/teaching/ss09/info_MST/material/mst_08_recursion.pdf'>http://ais.informatik.uni-freiburg.de/teaching/ss09/info_MST/material/mst_08_recursion.pdf</a>", "Einführung in die Informatik - Recursion - Wolfram Burgard & Cyrill Stachniss | 06.06.2021 | <a href='https://phansud.fandom.com/de/wiki/Rekursion'>https://phansud.fandom.com/de/wiki/Rekursion</a>"]
       }
     ]
   },
@@ -3554,12 +3467,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Typen",
-        "list": [
-          "Tabellenbasierte Datenbanken (MySQL)",
-          "Dokumentenbasierte Datenbanken (MongoDB)",
-          "Hierarchische Datenbanken",
-          "Grafische Datenbanken / Graphdatenbank"
-        ]
+        "list": ["Tabellenbasierte Datenbanken (MySQL)", "Dokumentenbasierte Datenbanken (MongoDB)", "Hierarchische Datenbanken", "Grafische Datenbanken / Graphdatenbank"]
       },
       {
         "type": "LIST",
@@ -3567,39 +3475,27 @@ export const LF6_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Datenunabhängigkeit",
-            "sublist": [
-              "Anwendungsprogramm und Datenhaltung sollten unabhängig voneinader sein"
-            ]
+            "sublist": ["Anwendungsprogramm und Datenhaltung sollten unabhängig voneinader sein"]
           },
           {
             "content": "Paralleler Datenzugriff",
-            "sublist": [
-              "Mehrere Benutzer müssen gleichzeitig auf die Daten zugreifen können. Hierfür benötigt es Protokolle für Transaktionskontrollen"
-            ]
+            "sublist": ["Mehrere Benutzer müssen gleichzeitig auf die Daten zugreifen können. Hierfür benötigt es Protokolle für Transaktionskontrollen"]
           },
           {
             "content": "Datenkonsistenz",
-            "sublist": [
-              "Die Daten innerhalb einer Tabelle / Collection können einem einheitlichen Modell folgen, bei MongoDB beispielsweise nicht zwingend vorgegeben"
-            ]
+            "sublist": ["Die Daten innerhalb einer Tabelle / Collection können einem einheitlichen Modell folgen, bei MongoDB beispielsweise nicht zwingend vorgegeben"]
           },
           {
             "content": "Datensicherheit",
-            "sublist": [
-              "Der Zugriff darf nur durch autorisierte Benutzer gestattet werden"
-            ]
+            "sublist": ["Der Zugriff darf nur durch autorisierte Benutzer gestattet werden"]
           },
           {
             "content": "Abfragesprache",
-            "sublist": [
-              "Muss eine Möglichkeit für die Datenmanipulation (Erstellen / Create, Abfragen / Read, Bearbeiten / Update, Löschen / Delete - kurz CRUD) bereitstellen"
-            ]
+            "sublist": ["Muss eine Möglichkeit für die Datenmanipulation (Erstellen / Create, Abfragen / Read, Bearbeiten / Update, Löschen / Delete - kurz CRUD) bereitstellen"]
           },
           {
             "content": "Keine / kontrollierte Redundanz",
-            "sublist": [
-              "Um Inkonsistenz des gleichen Werts in verschiedenen Objekten zu vermeiden, sollte die redundante (mehrfache) Speicherung von identischen Daten vermieden werden. In Ausnahmefällen kann Redundanz zur Performance-Optimierung verwendet werden"
-            ]
+            "sublist": ["Um Inkonsistenz des gleichen Werts in verschiedenen Objekten zu vermeiden, sollte die redundante (mehrfache) Speicherung von identischen Daten vermieden werden. In Ausnahmefällen kann Redundanz zur Performance-Optimierung verwendet werden"]
           }
         ]
       },
@@ -3707,7 +3603,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Für Zahlen gibt es verschiedene Datentypen für unterschiedliche Zahlenbereiche, da höhere Zahlen mehr Speicherplatz verbrauchen. Es ist gibt auch \"unsigned\" Datentypen, welche ausschließlich positive Zahlenwerte enthalten dürfen - die Zahlenbereiche sind in diesem Fall so hoch wie die Range des Datentyps, bei TinyInt wären das -128 bis 127 = 255."
+        "content": 'Für Zahlen gibt es verschiedene Datentypen für unterschiedliche Zahlenbereiche, da höhere Zahlen mehr Speicherplatz verbrauchen. Es ist gibt auch "unsigned" Datentypen, welche ausschließlich positive Zahlenwerte enthalten dürfen - die Zahlenbereiche sind in diesem Fall so hoch wie die Range des Datentyps, bei TinyInt wären das -128 bis 127 = 255.'
       },
       {
         "type": "LIST",
@@ -3715,43 +3611,23 @@ export const LF6_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "TinyInt",
-            "sublist": [
-              "Sehr kleiner Integer",
-              "Zahlenbereich: -128 bis 127",
-              "1 Byte"
-            ]
+            "sublist": ["Sehr kleiner Integer", "Zahlenbereich: -128 bis 127", "1 Byte"]
           },
           {
             "content": "SmallInt",
-            "sublist": [
-              "Kleiner Integer",
-              "Zahlenbereich: -32768 bis 32767",
-              "2 Bytes"
-            ]
+            "sublist": ["Kleiner Integer", "Zahlenbereich: -32768 bis 32767", "2 Bytes"]
           },
           {
             "content": "MediumInt",
-            "sublist": [
-              "Mittelgroßer Integer",
-              "Zahlenbereich: -8388608 bis 8388607",
-              "3 Bytes"
-            ]
+            "sublist": ["Mittelgroßer Integer", "Zahlenbereich: -8388608 bis 8388607", "3 Bytes"]
           },
           {
             "content": "Int",
-            "sublist": [
-              "(Default) Integer",
-              "Zahlenbereich: -2147483648 bis 2147483647",
-              "4 Bytes"
-            ]
+            "sublist": ["(Default) Integer", "Zahlenbereich: -2147483648 bis 2147483647", "4 Bytes"]
           },
           {
             "content": "BigInt",
-            "sublist": [
-              "Großer Integer",
-              "Zahlenbereich: -2<sup>63</sup> bis 2<sup>63</sup>-1",
-              "8 Bytes"
-            ]
+            "sublist": ["Großer Integer", "Zahlenbereich: -2<sup>63</sup> bis 2<sup>63</sup>-1", "8 Bytes"]
           }
         ]
       },
@@ -4014,10 +3890,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm'>https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm</a>",
-          "<a href='https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf'>https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf</a>"
-        ]
+        "list": ["<a href='https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm'>https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm</a>", "<a href='https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf'>https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf</a>"]
       }
     ]
   },
@@ -4155,12 +4028,12 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "Zeige alle Einträge in den \"Kalkül\" vorkommt und gebe dessen Start-Index im gefilterten Wort aus"
+        "content": 'Zeige alle Einträge in den "Kalkül" vorkommt und gebe dessen Start-Index im gefilterten Wort aus'
       },
       {
         "type": "CODE",
         "language": "sql",
-        "content": "SELECT wiss_name, leistung, POSITION(\"Kalkül\" in leistung) FROM informatiker AS MatchPosition;"
+        "content": 'SELECT wiss_name, leistung, POSITION("Kalkül" in leistung) FROM informatiker AS MatchPosition;'
       },
       {
         "type": "IMAGE",
@@ -4282,7 +4155,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Mit dem Schlüsselwort UNION werden zwei (oder mehr) <code>SELECT</code>-Anweisungen ohne Duplikate zusammengefasst. Schreiben Sie eine SQL-Abfrage, die in der ersten <code>SELECT</code>-Anweisung alle Wissenschaftlernamen die mit \"D\" beginnen ausgibt, und in der zweiten <code>SELECT</code>-Anweisung die Namensliste aller Wissenschaftler ausgibt. Untersuchen Sie die Ausgabe, was passiert, wenn Sie statt <code>UNION</code> das Schlüsselwort <code>UNION ALL</code> verwenden"
+        "content": 'Mit dem Schlüsselwort UNION werden zwei (oder mehr) <code>SELECT</code>-Anweisungen ohne Duplikate zusammengefasst. Schreiben Sie eine SQL-Abfrage, die in der ersten <code>SELECT</code>-Anweisung alle Wissenschaftlernamen die mit "D" beginnen ausgibt, und in der zweiten <code>SELECT</code>-Anweisung die Namensliste aller Wissenschaftler ausgibt. Untersuchen Sie die Ausgabe, was passiert, wenn Sie statt <code>UNION</code> das Schlüsselwort <code>UNION ALL</code> verwenden'
       },
       {
         "type": "CODE",
@@ -4569,16 +4442,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Für die Entwicklung des Datenbanksystems liegt folgende Beschreibung vor:",
-        "list": [
-          "Auf einem Frachtflug werden Frachten, die von einem oder mehreren Kunden stammen, transportiert",
-          "Die Fracht eines Kunden kann auf einen oder mehrere Flüge verteilt werden",
-          "Ein Flug wird mit einem Flugzeug ausgeführt",
-          "Ein Flugzeug wird für viele Flüge eingesetzt",
-          "Ein Flugzeug wird von verschiedenen Piloten geflogen",
-          "Piloten können auf verschiedenen Flugzeugen eingesetzt werden",
-          "Ein Pilot führt viele Flüge durch",
-          "Ein Flug wird von zwei Piloten ausgeführt"
-        ]
+        "list": ["Auf einem Frachtflug werden Frachten, die von einem oder mehreren Kunden stammen, transportiert", "Die Fracht eines Kunden kann auf einen oder mehrere Flüge verteilt werden", "Ein Flug wird mit einem Flugzeug ausgeführt", "Ein Flugzeug wird für viele Flüge eingesetzt", "Ein Flugzeug wird von verschiedenen Piloten geflogen", "Piloten können auf verschiedenen Flugzeugen eingesetzt werden", "Ein Pilot führt viele Flüge durch", "Ein Flug wird von zwei Piloten ausgeführt"]
       },
       {
         "type": "TEXT",
@@ -4603,18 +4467,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vervollständigen Sie dazu auf der gegenüberliegenden Seite das ER-Diagramm anhand folgender Vorgaben",
-        "list": [
-          "Auf einer Lieferfahrt werden Frachten von einem oder mehreren Kunden transportiert",
-          "Die Fracht eines Kunden kann auf eine oder mehrere Lieferfahrten verteilt werden",
-          "Eine Lieferfahrt wird mit einem LKW ausgeführt",
-          "Ein LKW wird für viele Lieferfahrten auf unterschiedlichen Routen eingesetzt",
-          "Ein LKW wird von verschiedenen Fahreren gefahren",
-          "Fahrer können auf verschiedenen LKW's eingesetzt werden",
-          "Ein Fahrer führt viele Lieferfahrten durch",
-          "Eine Lieferfahrt wird von einem Fahrer ausgeführt",
-          "Eine Lieferfahrt führt über eine Route, die sich aus mehreren Strecken zusammensetzt",
-          "Eine Strecke verbindet zwei Lager und kann zu verschiedenen Routen gehören"
-        ]
+        "list": ["Auf einer Lieferfahrt werden Frachten von einem oder mehreren Kunden transportiert", "Die Fracht eines Kunden kann auf eine oder mehrere Lieferfahrten verteilt werden", "Eine Lieferfahrt wird mit einem LKW ausgeführt", "Ein LKW wird für viele Lieferfahrten auf unterschiedlichen Routen eingesetzt", "Ein LKW wird von verschiedenen Fahreren gefahren", "Fahrer können auf verschiedenen LKW's eingesetzt werden", "Ein Fahrer führt viele Lieferfahrten durch", "Eine Lieferfahrt wird von einem Fahrer ausgeführt", "Eine Lieferfahrt führt über eine Route, die sich aus mehreren Strecken zusammensetzt", "Eine Strecke verbindet zwei Lager und kann zu verschiedenen Routen gehören"]
       },
       {
         "type": "LINE",
@@ -4626,7 +4479,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Die Fachzeitschrift \"El-I.te\" für Elektro- und Informationstechnologie erscheint einmal im Quartal und enthält fundierte Artikel zu aktuellen Themen. Jede Ausgabe enthält eine Heft-CD, auf der unter anderem auch die Artikel der jeweiligen Ausgabe im PDF-Format gespeichert sind."
+        "content": 'Die Fachzeitschrift "El-I.te" für Elektro- und Informationstechnologie erscheint einmal im Quartal und enthält fundierte Artikel zu aktuellen Themen. Jede Ausgabe enthält eine Heft-CD, auf der unter anderem auch die Artikel der jeweiligen Ausgabe im PDF-Format gespeichert sind.'
       },
       {
         "type": "TEXT",
@@ -4636,21 +4489,7 @@ export const LF6_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Anforderungsliste:",
         "ordered": true,
-        "list": [
-          "Welche Artikel gibt es?",
-          "Um die Position des Artikels im Verzeichnisbaum bestimmen zu können, muss das Jahr, die Ausgabe und der Dateiname gespeichert werden",
-          "Zusätzlich muss zu jedem Artikel ein Thema angegeben werden",
-          "Welche Autoren gibt es?",
-          "Ein Autor wird über den Vor- und Nachnamen oder das Autorenkürzel eindeutig bestimmt",
-          "Ein oder mehrere Autoren schreiben einen Artikel",
-          "Welche Schlüsselwörter gibt es?",
-          "Das Schlüsselwort selbst wird gespeichert",
-          "Ein Schlüsselwort kommt in mehreren Artikeln vor",
-          "In einem Artikel können mehrere Schlüsselwörter vorkommen",
-          "Welche Rubriken gibt es?",
-          "Eine Rubrik hat eine Bezeichnung",
-          "Jeder Artikel kann eindeutig einer Rubrik zugeordnet werden"
-        ]
+        "list": ["Welche Artikel gibt es?", "Um die Position des Artikels im Verzeichnisbaum bestimmen zu können, muss das Jahr, die Ausgabe und der Dateiname gespeichert werden", "Zusätzlich muss zu jedem Artikel ein Thema angegeben werden", "Welche Autoren gibt es?", "Ein Autor wird über den Vor- und Nachnamen oder das Autorenkürzel eindeutig bestimmt", "Ein oder mehrere Autoren schreiben einen Artikel", "Welche Schlüsselwörter gibt es?", "Das Schlüsselwort selbst wird gespeichert", "Ein Schlüsselwort kommt in mehreren Artikeln vor", "In einem Artikel können mehrere Schlüsselwörter vorkommen", "Welche Rubriken gibt es?", "Eine Rubrik hat eine Bezeichnung", "Jeder Artikel kann eindeutig einer Rubrik zugeordnet werden"]
       },
       {
         "type": "TEXT",
@@ -4702,10 +4541,7 @@ export const LF6_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Bereits mit diesen wenigen Elementen lässt sich ein vorläufiges ER-Modell zur Schuldatenbank aufstellen. Für dieses ER-Modell müssen lediglich die Entitäten und die Beziehungen betrachtet werden, die den Unterpunkten 1. und 2. der Anforderungslistenanalyse aus dem Thema Datenanalyse (verlinkung).",
         "ordered": true,
-        "list": [
-          "Entitäten → \"Schüler\", \"Klasse\", \"Lehrer\"",
-          "Beziehungen → \"ist-Mitschüler\", \"ist-Klassensprecher\", \"ist-Klassenlehrer\", \"unterrichtet\""
-        ]
+        "list": ['Entitäten → "Schüler", "Klasse", "Lehrer"', 'Beziehungen → "ist-Mitschüler", "ist-Klassensprecher", "ist-Klassenlehrer", "unterrichtet"']
       },
       {
         "type": "IMAGE",
@@ -4719,10 +4555,7 @@ export const LF6_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Das ER-Modell wird um die Anzahlangagben erweitert. Zu jeder Beziehung müssen zwei Anzahlangaben bestimmt werden. Für die Beziehung „ist-Mitschüler“ können die folgenden beiden Fragen betrachtet werden:",
         "ordered": true,
-        "list": [
-          "Ein Schüler ist Mitscühler in wie vielen Klassen?",
-          "Eine Klasse hat wie viele (Mit-)Schüler?"
-        ]
+        "list": ["Ein Schüler ist Mitscühler in wie vielen Klassen?", "Eine Klasse hat wie viele (Mit-)Schüler?"]
       },
       {
         "type": "TEXT",
@@ -4734,11 +4567,11 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "\"Ein Schüler ist Mitschüler in wie vielen Klassen?\""
+        "content": '"Ein Schüler ist Mitschüler in wie vielen Klassen?"'
       },
       {
         "type": "TEXT",
-        "content": "Da ein Schüler immer nur Schüler einer Klasse sein kann, wird in dem ER-Modell an der Position des Fragezeichens eine \"1\" eingetragen."
+        "content": 'Da ein Schüler immer nur Schüler einer Klasse sein kann, wird in dem ER-Modell an der Position des Fragezeichens eine "1" eingetragen.'
       },
       {
         "type": "SUBTITLE",
@@ -4746,7 +4579,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "\"Eine Klasse hat wie viele (Mit-)Schüler)?\""
+        "content": '"Eine Klasse hat wie viele (Mit-)Schüler)?"'
       },
       {
         "type": "TEXT",
@@ -4800,15 +4633,7 @@ export const LF6_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Für die Entwicklung des Datenbanksystems liegt folgende Beschreibung vor:",
         "ordered": true,
-        "list": [
-          "Ermitteln der Entitäten",
-          "Ermitteln der Beziehungen in der Anforderungsliste",
-          "Erstellen eines vorläufigen ER-Modells (nur Entitäten und Beziehungen)",
-          "Ermitteln aller Anzahlangaben aus der Anforderungsliste",
-          "Erweitern des ER-Modells um die Anzahlangaben",
-          "Ermitteln aller Merkmale zu den Entitäten und Beziehungen",
-          "Erweitern des ER-Modells um die Merkmale. Dabei für jede Entität eine einzigartige ID festlegen!"
-        ]
+        "list": ["Ermitteln der Entitäten", "Ermitteln der Beziehungen in der Anforderungsliste", "Erstellen eines vorläufigen ER-Modells (nur Entitäten und Beziehungen)", "Ermitteln aller Anzahlangaben aus der Anforderungsliste", "Erweitern des ER-Modells um die Anzahlangaben", "Ermitteln aller Merkmale zu den Entitäten und Beziehungen", "Erweitern des ER-Modells um die Merkmale. Dabei für jede Entität eine einzigartige ID festlegen!"]
       },
       {
         "type": "LINE",
@@ -4829,16 +4654,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Für die Entwicklung des Datenbanksystems liegt folgende Beschreibung vor:",
-        "list": [
-          "Auf einem Frachtflug werden Frachten, die von einem oder mehreren Kunden stammen, transportiert",
-          "Die Fracht eines Kunden kann auf einen oder mehrere Flüge verteilt werden",
-          "Ein Flug wird mit einem Flugzeug ausgeführt",
-          "Ein Flugzeug wird für viele Flüge eingesetzt",
-          "Ein Flugzeug wird von verschiedenen Piloten geflogen",
-          "Piloten können auf verschiedenen Flugzeugen eingesetzt werden",
-          "Ein Pilot führt viele Flüge durch",
-          "Ein Flug wird von zwei Piloten ausgeführt"
-        ]
+        "list": ["Auf einem Frachtflug werden Frachten, die von einem oder mehreren Kunden stammen, transportiert", "Die Fracht eines Kunden kann auf einen oder mehrere Flüge verteilt werden", "Ein Flug wird mit einem Flugzeug ausgeführt", "Ein Flugzeug wird für viele Flüge eingesetzt", "Ein Flugzeug wird von verschiedenen Piloten geflogen", "Piloten können auf verschiedenen Flugzeugen eingesetzt werden", "Ein Pilot führt viele Flüge durch", "Ein Flug wird von zwei Piloten ausgeführt"]
       },
       {
         "type": "TEXT",
@@ -4868,18 +4684,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vervollständigen Sie dazu auf der gegenüberliegenden Seite das ER-Diagramm anhand folgender Vorgaben",
-        "list": [
-          "Auf einer Lieferfahrt werden Frachten von einem oder mehreren Kunden transportiert",
-          "Die Fracht eines Kunden kann auf eine oder mehrere Lieferfahrten verteilt werden",
-          "Eine Lieferfahrt wird mit einem LKW ausgeführt",
-          "Ein LKW wird für viele Lieferfahrten auf unterschiedlichen Routen eingesetzt",
-          "Ein LKW wird von verschiedenen Fahreren gefahren",
-          "Fahrer können auf verschiedenen LKW's eingesetzt werden",
-          "Ein Fahrer führt viele Lieferfahrten durch",
-          "Eine Lieferfahrt wird von einem Fahrer ausgeführt",
-          "Eine Lieferfahrt führt über eine Route, die sich aus mehreren Strecken zusammensetzt",
-          "Eine Strecke verbindet zwei Lager und kann zu verschiedenen Routen gehören"
-        ]
+        "list": ["Auf einer Lieferfahrt werden Frachten von einem oder mehreren Kunden transportiert", "Die Fracht eines Kunden kann auf eine oder mehrere Lieferfahrten verteilt werden", "Eine Lieferfahrt wird mit einem LKW ausgeführt", "Ein LKW wird für viele Lieferfahrten auf unterschiedlichen Routen eingesetzt", "Ein LKW wird von verschiedenen Fahreren gefahren", "Fahrer können auf verschiedenen LKW's eingesetzt werden", "Ein Fahrer führt viele Lieferfahrten durch", "Eine Lieferfahrt wird von einem Fahrer ausgeführt", "Eine Lieferfahrt führt über eine Route, die sich aus mehreren Strecken zusammensetzt", "Eine Strecke verbindet zwei Lager und kann zu verschiedenen Routen gehören"]
       },
       {
         "type": "IMAGE",
@@ -4896,7 +4701,7 @@ export const LF6_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Die Fachzeitschrift \"El-I.te\" für Elektro- und Informationstechnologie erscheint einmal im Quartal und enthält fundierte Artikel zu aktuellen Themen. Jede Ausgabe enthält eine Heft-CD, auf der unter anderem auch die Artikel der jeweiligen Ausgabe im PDF-Format gespeichert sind."
+        "content": 'Die Fachzeitschrift "El-I.te" für Elektro- und Informationstechnologie erscheint einmal im Quartal und enthält fundierte Artikel zu aktuellen Themen. Jede Ausgabe enthält eine Heft-CD, auf der unter anderem auch die Artikel der jeweiligen Ausgabe im PDF-Format gespeichert sind.'
       },
       {
         "type": "TEXT",
@@ -4906,21 +4711,7 @@ export const LF6_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Anforderungsliste:",
         "ordered": true,
-        "list": [
-          "Welche Artikel gibt es?",
-          "Um die Position des Artikels im Verzeichnisbaum bestimmen zu können, muss das Jahr, die Ausgabe und der Dateiname gespeichert werden",
-          "Zusätzlich muss zu jedem Artikel ein Thema angegeben werden",
-          "Welche Autoren gibt es?",
-          "Ein Autor wird über den Vor- und Nachnamen oder das Autorenkürzel eindeutig bestimmt",
-          "Ein oder mehrere Autoren schreiben einen Artikel",
-          "Welche Schlüsselwörter gibt es?",
-          "Das Schlüsselwort selbst wird gespeichert",
-          "Ein Schlüsselwort kommt in mehreren Artikeln vor",
-          "In einem Artikel können mehrere Schlüsselwörter vorkommen",
-          "Welche Rubriken gibt es?",
-          "Eine Rubrik hat eine Bezeichnung",
-          "Jeder Artikel kann eindeutig einer Rubrik zugeordnet werden"
-        ]
+        "list": ["Welche Artikel gibt es?", "Um die Position des Artikels im Verzeichnisbaum bestimmen zu können, muss das Jahr, die Ausgabe und der Dateiname gespeichert werden", "Zusätzlich muss zu jedem Artikel ein Thema angegeben werden", "Welche Autoren gibt es?", "Ein Autor wird über den Vor- und Nachnamen oder das Autorenkürzel eindeutig bestimmt", "Ein oder mehrere Autoren schreiben einen Artikel", "Welche Schlüsselwörter gibt es?", "Das Schlüsselwort selbst wird gespeichert", "Ein Schlüsselwort kommt in mehreren Artikeln vor", "In einem Artikel können mehrere Schlüsselwörter vorkommen", "Welche Rubriken gibt es?", "Eine Rubrik hat eine Bezeichnung", "Jeder Artikel kann eindeutig einer Rubrik zugeordnet werden"]
       },
       {
         "type": "IMAGE",
@@ -4934,9 +4725,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.westermann.de/artikel/978-3-14-222492-3/Datenbanken-Relationale-Datenbanken-entwerfen-und-realisieren'>Relationale Datenbanken entwerfen und realisieren. Schülerband 2. Auflage 2017.</a>"
-        ]
+        "list": ["<a href='https://www.westermann.de/artikel/978-3-14-222492-3/Datenbanken-Relationale-Datenbanken-entwerfen-und-realisieren'>Relationale Datenbanken entwerfen und realisieren. Schülerband 2. Auflage 2017.</a>"]
       }
     ]
   },
@@ -4974,45 +4763,31 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "Kunde" }
-                ]
+                "columns": [{ "align": "left", "content": "Kunde" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "KundenID (PK)" }
-                ]
+                "columns": [{ "align": "left", "content": "KundenID (PK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Nachname" }
-                ]
+                "columns": [{ "align": "left", "content": "Nachname" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Vorname" }
-                ]
+                "columns": [{ "align": "left", "content": "Vorname" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Straße" }
-                ]
+                "columns": [{ "align": "left", "content": "Straße" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "PLZ" }
-                ]
+                "columns": [{ "align": "left", "content": "PLZ" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Ort" }
-                ]
+                "columns": [{ "align": "left", "content": "Ort" }]
               }
             ]
           },
@@ -5022,21 +4797,15 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "KundeKurs" }
-                ]
+                "columns": [{ "align": "left", "content": "KundeKurs" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "KundenID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "KundenID (FK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "KursID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "KursID (FK)" }]
               }
             ]
           },
@@ -5046,45 +4815,31 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "Kurs" }
-                ]
+                "columns": [{ "align": "left", "content": "Kurs" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "KursID (PK)" }
-                ]
+                "columns": [{ "align": "left", "content": "KursID (PK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "KursartID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "KursartID (FK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "TrainerID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "TrainerID (FK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "SportstätteID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "SportstätteID (FK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Datum-Uhrzeit-Beginn" }
-                ]
+                "columns": [{ "align": "left", "content": "Datum-Uhrzeit-Beginn" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Preis" }
-                ]
+                "columns": [{ "align": "left", "content": "Preis" }]
               }
             ]
           },
@@ -5094,33 +4849,23 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "Kursart" }
-                ]
+                "columns": [{ "align": "left", "content": "Kursart" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "KursartID (PK)" }
-                ]
+                "columns": [{ "align": "left", "content": "KursartID (PK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Bezeichnung" }
-                ]
+                "columns": [{ "align": "left", "content": "Bezeichnung" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "SportartID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "SportartID (FK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Teilnehmer-Max" }
-                ]
+                "columns": [{ "align": "left", "content": "Teilnehmer-Max" }]
               }
             ]
           },
@@ -5130,21 +4875,15 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "Trainer" }
-                ]
+                "columns": [{ "align": "left", "content": "Trainer" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "TrainerID (PK)" }
-                ]
+                "columns": [{ "align": "left", "content": "TrainerID (PK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Name" }
-                ]
+                "columns": [{ "align": "left", "content": "Name" }]
               }
             ]
           },
@@ -5154,21 +4893,15 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "Sportart" }
-                ]
+                "columns": [{ "align": "left", "content": "Sportart" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "SportartID (PK)" }
-                ]
+                "columns": [{ "align": "left", "content": "SportartID (PK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Bezeichnung" }
-                ]
+                "columns": [{ "align": "left", "content": "Bezeichnung" }]
               }
             ]
           },
@@ -5178,21 +4911,15 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "TrainerSportart" }
-                ]
+                "columns": [{ "align": "left", "content": "TrainerSportart" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "TrainerID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "TrainerID (FK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "SportartID (FK)" }
-                ]
+                "columns": [{ "align": "left", "content": "SportartID (FK)" }]
               }
             ]
           },
@@ -5202,21 +4929,15 @@ export const LF6_POSTS: PostArticle[] = [
             "rows": [
               {
                 "type": "header",
-                "columns": [
-                  { "align": "left", "content": "Sportstätte" }
-                ]
+                "columns": [{ "align": "left", "content": "Sportstätte" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "SportstaetteID (PK)" }
-                ]
+                "columns": [{ "align": "left", "content": "SportstaetteID (PK)" }]
               },
               {
                 "type": "default",
-                "columns": [
-                  { "align": "left", "content": "Bezeichnung" }
-                ]
+                "columns": [{ "align": "left", "content": "Bezeichnung" }]
               }
             ]
           }
@@ -5249,9 +4970,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href=''></a>"
-        ]
+        "list": ["<a href=''></a>"]
       }
     ]
   },
@@ -5280,9 +4999,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href=''></a>"
-        ]
+        "list": ["<a href=''></a>"]
       }
     ]
   },
@@ -5325,11 +5042,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Beseitigung von Redundanzen",
-          "Vermeidung von Anomalien (funktionelle und transitive Abhängigkeiten)",
-          "Erstellung eines klar strukturierten Datenbankmodells"
-        ]
+        "list": ["Beseitigung von Redundanzen", "Vermeidung von Anomalien (funktionelle und transitive Abhängigkeiten)", "Erstellung eines klar strukturierten Datenbankmodells"]
       },
       {
         "type": "LINE",
@@ -5417,7 +5130,7 @@ export const LF6_POSTS: PostArticle[] = [
               { "align": "left", "content": "Chor" },
               { "align": "left", "content": "22" }
             ]
-          },
+          }
         ]
       },
       {
@@ -5427,11 +5140,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Normalisierung von Datenbanken - Datenbanken verstehen | 19.05.2021 | <a href='https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung'>https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung</a>",
-          "Normalisierung und Abhängigkeiten - Datenbanken verstehen | 19.05.2021 | <a href='https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/abhaengigkeiten-normalisierung'>https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/abhaengigkeiten-normalisierung</a>",
-          "Normalisierung von Datenbanken - Informatikmaterialien von Tino Hempel | 19.05.2021 | <a href='https://www.tinohempel.de/info/info/datenbank/normalisierung.htm'>https://www.tinohempel.de/info/info/datenbank/normalisierung.htm</a>"
-        ]
+        "list": ["Normalisierung von Datenbanken - Datenbanken verstehen | 19.05.2021 | <a href='https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung'>https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung</a>", "Normalisierung und Abhängigkeiten - Datenbanken verstehen | 19.05.2021 | <a href='https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/abhaengigkeiten-normalisierung'>https://www.datenbanken-verstehen.de/datenmodellierung/normalisierung/abhaengigkeiten-normalisierung</a>", "Normalisierung von Datenbanken - Informatikmaterialien von Tino Hempel | 19.05.2021 | <a href='https://www.tinohempel.de/info/info/datenbank/normalisierung.htm'>https://www.tinohempel.de/info/info/datenbank/normalisierung.htm</a>"]
       }
     ]
   },
@@ -5466,11 +5175,7 @@ export const LF6_POSTS: PostArticle[] = [
           "Ergänzen Sie in den Tabellen <i>Teil</i>, <i>Bestellung</i>, <i>Lieferer</i> und <i>BestellPosition</i> die erforderlichen Attribute",
           {
             "content": "Ergänzen Sie die leere Tabelle, um die folgende Anforderung zu erfüllen:",
-            "sublist": [
-              "Ein Teil kann von verschiedenen Lieferern zu unterschiedlichen Preisen bezogen werden",
-              "Für jede Bestellung kommen die Teile stets von einem Lieferanten",
-              "Vergeben Sie einen sinnvollen Tabellennamen und tragen Sie die erforderlichen Atrribute ein"
-            ]
+            "sublist": ["Ein Teil kann von verschiedenen Lieferern zu unterschiedlichen Preisen bezogen werden", "Für jede Bestellung kommen die Teile stets von einem Lieferanten", "Vergeben Sie einen sinnvollen Tabellennamen und tragen Sie die erforderlichen Atrribute ein"]
           },
           "Kennzeichnen Sie die Primärschlüssel mit (PK) und die Fremdschlüssel mit (FK) ",
           "Zeichnen Sie die Beziehungen zwischen den Tabellen mit den Kardinalitäten ein"
@@ -5523,5 +5228,5 @@ export const LF6_POSTS: PostArticle[] = [
         "content": "..."
       }
     ]
-  },
+  }
 ];

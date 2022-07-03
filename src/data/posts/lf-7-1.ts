@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF7_1_POSTS: PostArticle[] = [
   {
@@ -19,11 +18,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<span class='ddu-list-number'>1</span> Teil",
-        "list": [
-          "Wiederholung der Grundlagen | Gemischte Schaltungen | Spannungsteiler",
-          "Wiederholung Bauteile im Gleichstromkreis | Wechselstromkreis",
-          "Grundlagen der Wechselstromtechnik | Sinusgrößen"
-        ]
+        "list": ["Wiederholung der Grundlagen | Gemischte Schaltungen | Spannungsteiler", "Wiederholung Bauteile im Gleichstromkreis | Wechselstromkreis", "Grundlagen der Wechselstromtechnik | Sinusgrößen"]
       },
       {
         "type": "LINE",
@@ -32,11 +27,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<span class='ddu-list-number'>2</span> Teil",
-        "list": [
-          "Grundbegriffe der Übertragungstechnik",
-          "Übertragungstechnik | Pegel | Wellenwiderstand",
-          "Modulation | analog | digital"
-        ]
+        "list": ["Grundbegriffe der Übertragungstechnik", "Übertragungstechnik | Pegel | Wellenwiderstand", "Modulation | analog | digital"]
       }
     ]
   },
@@ -79,18 +70,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "<b>Strom I überall gleich</b>",
-          "I<sub>ges</sub> = I<sub>1</sub> = I<sub>2</sub> = I<sub>3</sub>",
-          "<b>Spannung U nicht überall gleich</b>",
-          "U<sub>ges</sub> = U<sub>1</sub> + U<sub>2</sub> + U<sub>3</sub>",
-          "<b>Widerstand R nicht überall gleich</b>",
-          "R<sub>ges</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub>",
-          "Addition aller Widerstände ergibt Gesamtwiderstand",
-          "Umso kleiner der Widerstand desto größer der Strom",
-          "Am größten fällt die größte Spannung ab",
-          "Spannungen verhalten sich wie die dazugehörigen Widerstände"
-        ]
+        "list": ["<b>Strom I überall gleich</b>", "I<sub>ges</sub> = I<sub>1</sub> = I<sub>2</sub> = I<sub>3</sub>", "<b>Spannung U nicht überall gleich</b>", "U<sub>ges</sub> = U<sub>1</sub> + U<sub>2</sub> + U<sub>3</sub>", "<b>Widerstand R nicht überall gleich</b>", "R<sub>ges</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub>", "Addition aller Widerstände ergibt Gesamtwiderstand", "Umso kleiner der Widerstand desto größer der Strom", "Am größten fällt die größte Spannung ab", "Spannungen verhalten sich wie die dazugehörigen Widerstände"]
       },
       {
         "type": "LINE",
@@ -111,16 +91,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "<b>Strom I nicht überall gleich</b>",
-          "I<sub>ges</sub> = I<sub>1</sub> + I<sub>2</sub> + I<sub>3</sub>",
-          "<b>Spannung U überall gleich</b>",
-          "U<sub>ges</sub> = U<sub>1</sub> = U<sub>2</sub> = U<sub>3</sub>",
-          "<b>Widerstand R überall gleich</b>",
-          "1 / R<sub>ges</sub> = (1 / R<sub>1</sub>) + (1 / R<sub>2</sub>) + (1 / R<sub>3</sub>)",
-          "Geringster Widerstand / kleinster Widerstand hat den größten Strom",
-          "Gesamtwiderstand ist kleiner als der kleinste Teilwiderstand"
-        ]
+        "list": ["<b>Strom I nicht überall gleich</b>", "I<sub>ges</sub> = I<sub>1</sub> + I<sub>2</sub> + I<sub>3</sub>", "<b>Spannung U überall gleich</b>", "U<sub>ges</sub> = U<sub>1</sub> = U<sub>2</sub> = U<sub>3</sub>", "<b>Widerstand R überall gleich</b>", "1 / R<sub>ges</sub> = (1 / R<sub>1</sub>) + (1 / R<sub>2</sub>) + (1 / R<sub>3</sub>)", "Geringster Widerstand / kleinster Widerstand hat den größten Strom", "Gesamtwiderstand ist kleiner als der kleinste Teilwiderstand"]
       },
       {
         "type": "HINT",
@@ -206,14 +177,7 @@ export const LF7_1_POSTS: PostArticle[] = [
             "type": "LIST",
             "content": "",
             "ordered": true,
-            "list": [
-              "Reihenschaltung: 12 + 8 = 20 Ω",
-              "Parallelschaltung: 20<sub>-1</sub> + 30<sub>-1</sub> = 0,0833 | 0,0833<sub>-1</sub> = 12 Ω",
-              "Reihenschaltung: 12 + 5 = 17 Ω",
-              "Parallelschaltung: 17<sub>-1</sub> + 20<sub>-1</sub> = 0,10 | 0,10<sub>-1</sub> = 9,189 Ω",
-              "Reihenschaltung: 9,189 Ω + 14 = 23,1891 Ω",
-              "R<sub>ges</sub> = <u>23,1891 Ω</u>"
-            ]
+            "list": ["Reihenschaltung: 12 + 8 = 20 Ω", "Parallelschaltung: 20<sub>-1</sub> + 30<sub>-1</sub> = 0,0833 | 0,0833<sub>-1</sub> = 12 Ω", "Reihenschaltung: 12 + 5 = 17 Ω", "Parallelschaltung: 17<sub>-1</sub> + 20<sub>-1</sub> = 0,10 | 0,10<sub>-1</sub> = 9,189 Ω", "Reihenschaltung: 9,189 Ω + 14 = 23,1891 Ω", "R<sub>ges</sub> = <u>23,1891 Ω</u>"]
           },
           {
             "type": "IMAGE",
@@ -312,9 +276,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Reihenschaltung und Parallelschaltung | 27.06.2021 | <a href='https://studyflix.de/elektrotechnik/reihen-und-parallelschaltung-260'>https://studyflix.de/elektrotechnik/reihen-und-parallelschaltung-260</a>"
-        ]
+        "list": ["Reihenschaltung und Parallelschaltung | 27.06.2021 | <a href='https://studyflix.de/elektrotechnik/reihen-und-parallelschaltung-260'>https://studyflix.de/elektrotechnik/reihen-und-parallelschaltung-260</a>"]
       }
     ]
   },
@@ -419,11 +381,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Erzeugt Magnetfeld",
-          "Strom kann nicht sofort durchfließen, Verzögerung durch Induktionswiderstand",
-          "Beim Abschalten ist auch das Ausschalten verzögert"
-        ]
+        "list": ["Erzeugt Magnetfeld", "Strom kann nicht sofort durchfließen, Verzögerung durch Induktionswiderstand", "Beim Abschalten ist auch das Ausschalten verzögert"]
       },
       {
         "type": "LINE",
@@ -476,11 +434,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "In der Elektrotechnik gilt ...",
-        "list": [
-          "kleines u = Momentanwert",
-          "großes U = Effektivwert",
-          "kleines u<sub>s</sub> = Spitzenwert Amplitude ( u<sub>s</sub> = Wurzel aus 2 x großes U)"
-        ]
+        "list": ["kleines u = Momentanwert", "großes U = Effektivwert", "kleines u<sub>s</sub> = Spitzenwert Amplitude ( u<sub>s</sub> = Wurzel aus 2 x großes U)"]
       },
       {
         "type": "TEXT",
@@ -693,11 +647,7 @@ export const LF7_1_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "hidden": true,
-        "list": [
-          "Geführte Übertragung",
-          "Ungeführte Übertragung",
-          "Materielle Übertragung"
-        ]
+        "list": ["Geführte Übertragung", "Ungeführte Übertragung", "Materielle Übertragung"]
       }
     ]
   },
@@ -724,11 +674,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Beschreibung aus physikalischer und mathematischer Sicht",
-          "Begriffsbestimmungen",
-          "Abkürzungen"
-        ]
+        "list": ["Beschreibung aus physikalischer und mathematischer Sicht", "Begriffsbestimmungen", "Abkürzungen"]
       },
       {
         "type": "SUBTITLE",
@@ -737,12 +683,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ton",
-          "Bild",
-          "Text",
-          "Daten"
-        ]
+        "list": ["Ton", "Bild", "Text", "Daten"]
       },
       {
         "type": "SUBTITLE",
@@ -754,15 +695,11 @@ export const LF7_1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Geben Sie eine Darstellung für einen einfachen Fall der Zuordnung von Signal und Information aus dem Alltagsleben",
-            "sublist": [
-              "Antwort"
-            ]
+            "sublist": ["Antwort"]
           },
           {
             "content": "Nennen Sie typische Störsignale, die alltäglich bei Radio und Fernsehen möglich sind",
-            "sublist": [
-              "Antwort"
-            ]
+            "sublist": ["Antwort"]
           }
         ]
       },
@@ -983,33 +920,23 @@ export const LF7_1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "In welcher Weise kann ein beliebiger Punkt P in einem rechtwinkligen Koordinatensystem beschrieben werden?",
-            "sublist": [
-              "..."
-            ]
+            "sublist": ["..."]
           },
           {
             "content": "Wie groß ist der lineare Mittelwert eines rechtförmigen Spannungsverlaufes mit Mittelwert û = 5,2 V und Mittelwert û = 5,2 V?",
-            "sublist": [
-              "..."
-            ]
+            "sublist": ["..."]
           },
           {
             "content": "Welche Bedeutung hat der Effektivwert der Spannung bzw. des Stromes bezogen auf die umgesetzte Leistung?",
-            "sublist": [
-              "..."
-            ]
+            "sublist": ["..."]
           },
           {
             "content": "Wodurch unterscheiden sich die Wirkleistung P und die Blindleistung Q?",
-            "sublist": [
-              "..."
-            ]
+            "sublist": ["..."]
           },
           {
             "content": "Unter welchen Umständen nimmt eine Impedanz einen reinen reelen Wert an? Welcher Phasenwinkel tritt dabei auf?",
-            "sublist": [
-              "..."
-            ]
+            "sublist": ["..."]
           }
         ]
       }
@@ -1033,14 +960,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Leitungsaufbau / prinz. Unterschied?",
-          "Grundgrößen einer Leitung?",
-          "Skineffekt?",
-          "Ersatzschaltbild einer Leitung?",
-          "Bedeutung der Leitungskennwerte?",
-          "Wirkung der Leitungsgrößen?"
-        ]
+        "list": ["Leitungsaufbau / prinz. Unterschied?", "Grundgrößen einer Leitung?", "Skineffekt?", "Ersatzschaltbild einer Leitung?", "Bedeutung der Leitungskennwerte?", "Wirkung der Leitungsgrößen?"]
       },
       {
         "type": "TEXT",
@@ -1075,11 +995,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Der Leitungswiderstand R<sub>L</sub> ist abhängig von ...",
-        "list": [
-          "Leiterlänge l",
-          "Material / Leiterwerkstoff (Leitfähigkeit) x / y",
-          "Leiterquerschnitt A"
-        ]
+        "list": ["Leiterlänge l", "Material / Leiterwerkstoff (Leitfähigkeit) x / y", "Leiterquerschnitt A"]
       },
       {
         "type": "IMAGE",
@@ -1102,9 +1018,7 @@ export const LF7_1_POSTS: PostArticle[] = [
           "Dadurch löschen sich die Ströme in der Mitte des Leiters aus und drängen nach außen.",
           {
             "content": "Es wird somit eine geringe Fläche zur Stromübertragung nutzbar, was umgekehrt bedeutet, das der Leitungswiderstand zunimmt!",
-            "sublist": [
-              "bei der Übertragung von sehr hohen Frequenzen werden Hohlleiter verwendet"
-            ]
+            "sublist": ["bei der Übertragung von sehr hohen Frequenzen werden Hohlleiter verwendet"]
           }
         ]
       },
@@ -1191,7 +1105,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Er wird auch Ableitung genannt, weil er einen Querstrom I<sub>is</sub> \"ableitet\". Die Maßeinheit ist Siemens (S)."
+        "content": 'Er wird auch Ableitung genannt, weil er einen Querstrom I<sub>is</sub> "ableitet". Die Maßeinheit ist Siemens (S).'
       },
       {
         "type": "IMAGE",
@@ -1351,12 +1265,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Zweipole / Vierpole",
-          "Resonanz",
-          "Hochpaß / Tiefpaß",
-          "Wellenwiderstand"
-        ]
+        "list": ["Zweipole / Vierpole", "Resonanz", "Hochpaß / Tiefpaß", "Wellenwiderstand"]
       },
       {
         "type": "LINE",
@@ -1392,10 +1301,7 @@ export const LF7_1_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Der Leitungswiderstand R<sub>L</sub> ist abhängig von ...",
         "ordered": true,
-        "list": [
-          "Begründen Sie ob eine Batterie als aktiver Zweipol betrachtet werden kann oder nicht",
-          "Welche Aussagen sind bei einem passiven Zweipol über die Leerlaufspannung und den Kurzschlussstrom möglich?"
-        ]
+        "list": ["Begründen Sie ob eine Batterie als aktiver Zweipol betrachtet werden kann oder nicht", "Welche Aussagen sind bei einem passiven Zweipol über die Leerlaufspannung und den Kurzschlussstrom möglich?"]
       },
       {
         "type": "LINE",
@@ -1416,15 +1322,11 @@ export const LF7_1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Aktive Vierpole",
-            "sublist": [
-              "Wirkleistung am Ausgang > Wirkleistung am Eingang, d.h. P<sub>2</sub> > P<sub>1</sub>"
-            ]
+            "sublist": ["Wirkleistung am Ausgang > Wirkleistung am Eingang, d.h. P<sub>2</sub> > P<sub>1</sub>"]
           },
           {
             "content": "Passive Vierpole",
-            "sublist": [
-              "Wirkleistung am Ausgang < Wirkleistung am Eingang, d.h. P<sub>2</sub> < P<sub>1</sub>"
-            ]
+            "sublist": ["Wirkleistung am Ausgang < Wirkleistung am Eingang, d.h. P<sub>2</sub> < P<sub>1</sub>"]
           }
         ]
       },
@@ -1483,12 +1385,7 @@ export const LF7_1_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Es werden nur alle Frequenzen <b>unterhalb</b> einer Grenzfrequenz <b>durchgelassen</b> = Tiefpaß (TP) [engl. <i>lowpass</i>]",
-          "Es werden nur alle Frequenzen <b>oberhalb</b> einer Grenzfrequenz <b>durchgelassen</b> = Hochpaß (HP) [engl. <i>highpass</i>]",
-          "Es werden nur alle Frequenzen <b>zwischen</b> zwei Grenzfrequenzen <b>durchgelassen</b> = Bandpaß (BP) [engl. <i>bandpass</i>]",
-          "Es werden nur alle Frequenzen <b>zwischen</b> zwei Grenzfrequenzen <b>gesperrt</b> = Bandsperre (BS) [engl. <i>bandstop</i>]"
-        ]
+        "list": ["Es werden nur alle Frequenzen <b>unterhalb</b> einer Grenzfrequenz <b>durchgelassen</b> = Tiefpaß (TP) [engl. <i>lowpass</i>]", "Es werden nur alle Frequenzen <b>oberhalb</b> einer Grenzfrequenz <b>durchgelassen</b> = Hochpaß (HP) [engl. <i>highpass</i>]", "Es werden nur alle Frequenzen <b>zwischen</b> zwei Grenzfrequenzen <b>durchgelassen</b> = Bandpaß (BP) [engl. <i>bandpass</i>]", "Es werden nur alle Frequenzen <b>zwischen</b> zwei Grenzfrequenzen <b>gesperrt</b> = Bandsperre (BS) [engl. <i>bandstop</i>]"]
       },
       {
         "type": "SUBTITLE",
@@ -1754,10 +1651,7 @@ export const LF7_1_POSTS: PostArticle[] = [
       {
         "type": "Der Wellenwiderstand ist ...",
         "content": "",
-        "list": [
-          "bei niedrigen Frequenzen frequenzabhängig",
-          "bei hohen Frequenzen frequenzabhängig"
-        ]
+        "list": ["bei niedrigen Frequenzen frequenzabhängig", "bei hohen Frequenzen frequenzabhängig"]
       },
       {
         "type": "SUBTITLE",
@@ -1926,5 +1820,5 @@ export const LF7_1_POSTS: PostArticle[] = [
         "content": "..."
       }
     ]
-  },
+  }
 ];

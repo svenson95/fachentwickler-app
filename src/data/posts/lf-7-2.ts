@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF7_2_POSTS: PostArticle[] = [
   {
@@ -147,9 +146,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/'>https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/</a>"
-        ]
+        "list": ["<a href='https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/'>https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/</a>"]
       }
     ]
   },
@@ -301,62 +298,39 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "BAN (Body Area Network)",
-            "sublist": [
-              "Körpersensoren",
-              "Reichweite: ~0,1m - 1m"
-            ]
+            "sublist": ["Körpersensoren", "Reichweite: ~0,1m - 1m"]
           },
           {
             "content": "CAN (Controller Area Network)",
-            "sublist": [
-              "Steuerelemente in der Automatisierungstechnik",
-              "Reichweite: ~0,1m - 1m"
-            ]
+            "sublist": ["Steuerelemente in der Automatisierungstechnik", "Reichweite: ~0,1m - 1m"]
           },
           {
             "content": "PAN (Personal Area Network)",
-            "sublist": [
-              "Vernetzung von (Klein-)Geräten innerhalb eines Raumes, zB ein Smartphone mit einem WLAN-fähigen Drucker",
-              "Reichweite: ~10m"
-            ]
+            "sublist": ["Vernetzung von (Klein-)Geräten innerhalb eines Raumes, zB ein Smartphone mit einem WLAN-fähigen Drucker", "Reichweite: ~10m"]
           },
           {
             "content": "LAN (Local Area Network)",
-            "sublist": [
-              "innerhalb eines Gebäudes",
-              "Reichweite: ~10m - 100m"
-            ]
+            "sublist": ["innerhalb eines Gebäudes", "Reichweite: ~10m - 100m"]
           },
           {
             "content": "MAN (Metropolitan Area Network)",
-            "sublist": [
-              "Verbindungen zwischen Gebäuden in der Nähe (Grundstück, Stadtgebiet, Campus)",
-              "Reichweite: bis 60km"
-            ]
+            "sublist": ["Verbindungen zwischen Gebäuden in der Nähe (Grundstück, Stadtgebiet, Campus)", "Reichweite: bis 60km"]
           },
           {
             "content": "WAN (Wide Area Network)",
-            "sublist": [
-              "Fernstrecken, erstrecken sich über große Bereiche wie Länder oder Kontinente"
-            ]
+            "sublist": ["Fernstrecken, erstrecken sich über große Bereiche wie Länder oder Kontinente"]
           },
           {
             "content": "GAN (Global Area Network)",
-            "sublist": [
-              "Weltweite Verbindungen, Zusammenschaltungen mehrerer WAN"
-            ]
+            "sublist": ["Weltweite Verbindungen, Zusammenschaltungen mehrerer WAN"]
           },
           {
             "content": "Intranet",
-            "sublist": [
-              "Privates, nicht öffentliches Datennetzwerk (LAN bis WAN von der Ausdehnung her möglich)"
-            ]
+            "sublist": ["Privates, nicht öffentliches Datennetzwerk (LAN bis WAN von der Ausdehnung her möglich)"]
           },
           {
             "content": "Internet",
-            "sublist": [
-              "Weltweites, öffentliches Datennetzwerk"
-            ]
+            "sublist": ["Weltweites, öffentliches Datennetzwerk"]
           }
         ]
       },
@@ -370,25 +344,17 @@ export const LF7_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Das OSI-Modell (engl. <i>Open Systems Interconnection</i>) beschreibt die unterschiedlichen Schichten auf die eine Netzwerkarchitektur basiert. Das OSI-Referenzmodell besteht aus insgesamt 7 Schichten, bei den verschiedenen Schichten handelt es sich um vereinheitlichte Verfahren und Regelungen für den Austausch von Daten. Die Schichten 1 bis 4 werden als \"Transportschichten\" bezeichnet. In diesen findet zwischen den physikalischen Endpunkten der physikalische Datentransport statt."
+        "content": 'Das OSI-Modell (engl. <i>Open Systems Interconnection</i>) beschreibt die unterschiedlichen Schichten auf die eine Netzwerkarchitektur basiert. Das OSI-Referenzmodell besteht aus insgesamt 7 Schichten, bei den verschiedenen Schichten handelt es sich um vereinheitlichte Verfahren und Regelungen für den Austausch von Daten. Die Schichten 1 bis 4 werden als "Transportschichten" bezeichnet. In diesen findet zwischen den physikalischen Endpunkten der physikalische Datentransport statt.'
       },
       {
         "type": "TEXT",
-        "content": "Die Schichten 5 bis 7 stellen die \"Anwendungsorientierten Schichten\" dar, hier findet die eigentliche Handhabung der Schnittstellen statt. Das OSI-Referenzmodell ermöglicht die Vergegenwärtigung, wie Daten in einem Netzwerk wandern. Denn durch die unterschiedlichen Schichten kann man die Netzwerkfunktionen seperat betrachten. Funktionsweise von Netzgeräten wie Switch oder Router werden erst mit dem OSI-Referenzmodell richtig klar."
+        "content": 'Die Schichten 5 bis 7 stellen die "Anwendungsorientierten Schichten" dar, hier findet die eigentliche Handhabung der Schnittstellen statt. Das OSI-Referenzmodell ermöglicht die Vergegenwärtigung, wie Daten in einem Netzwerk wandern. Denn durch die unterschiedlichen Schichten kann man die Netzwerkfunktionen seperat betrachten. Funktionsweise von Netzgeräten wie Switch oder Router werden erst mit dem OSI-Referenzmodell richtig klar.'
       },
       {
         "type": "LIST",
         "content": "Die 7 Schichten des OSI-Modells",
         "ordered": true,
-        "list": [
-          "Bitübertragungsschicht (engl. <i>Physical Layer</i>) ➞ Physikalischer Transport der digitalen Daten",
-          "Sicherungsschicht (engl. <i>Data-Link Layer</i>) ➞ Ankommende und abgehende Datenpakete werden auf Vollständigkeit und Unversehrtheit überprüft",
-          "Vermittlungsschicht (engl. <i>Network Layer</i>) ➞ Hier wird sichergestellt, dass die Daten am gewünschten Ziel eintreffen",
-          "Transportschicht (engl. <i>Transport Layer</i>) ➞ Segmentiert die Daten beim Sender und setzt sie beim Empfänger wieder zusammen, hier wird erkannt, ob es zu Datentransportfehlern gekommen ist und falls ja werden diese behoben",
-          "Sitzungsschicht (engl. <i>Session Layer</i>) ➞ Datenaustausch und geordneter Ablauf zwischen den Endsystemen wird hier geregelt",
-          "Darstellungsschicht (engl. <i>Presentation Layer</i>) ➞ Beinhaltet Protokolle eines Betriebssystems, legt Zeichensatz fest (z. B. ASCII), Datenkompression und Verschlüsselung, soll sicherstellen dass die Daten auf dem Empfänger-System gelesen werden können",
-          "Anwendungsschicht (engl. <i>Application Layer</i>) ➞ Verbindet Anwendungsprogramme mit dem OSI-Referenzmodell"
-        ]
+        "list": ["Bitübertragungsschicht (engl. <i>Physical Layer</i>) ➞ Physikalischer Transport der digitalen Daten", "Sicherungsschicht (engl. <i>Data-Link Layer</i>) ➞ Ankommende und abgehende Datenpakete werden auf Vollständigkeit und Unversehrtheit überprüft", "Vermittlungsschicht (engl. <i>Network Layer</i>) ➞ Hier wird sichergestellt, dass die Daten am gewünschten Ziel eintreffen", "Transportschicht (engl. <i>Transport Layer</i>) ➞ Segmentiert die Daten beim Sender und setzt sie beim Empfänger wieder zusammen, hier wird erkannt, ob es zu Datentransportfehlern gekommen ist und falls ja werden diese behoben", "Sitzungsschicht (engl. <i>Session Layer</i>) ➞ Datenaustausch und geordneter Ablauf zwischen den Endsystemen wird hier geregelt", "Darstellungsschicht (engl. <i>Presentation Layer</i>) ➞ Beinhaltet Protokolle eines Betriebssystems, legt Zeichensatz fest (z. B. ASCII), Datenkompression und Verschlüsselung, soll sicherstellen dass die Daten auf dem Empfänger-System gelesen werden können", "Anwendungsschicht (engl. <i>Application Layer</i>) ➞ Verbindet Anwendungsprogramme mit dem OSI-Referenzmodell"]
       },
       {
         "type": "LIST",
@@ -396,26 +362,15 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Schicht 3",
-            "sublist": [
-              "Router",
-              "Layer 3 Switch"
-            ]
+            "sublist": ["Router", "Layer 3 Switch"]
           },
           {
             "content": "Schicht 2",
-            "sublist": [
-              "Layer 2 Switch",
-              "Netzwerkkarte",
-              "Bridge"
-            ]
+            "sublist": ["Layer 2 Switch", "Netzwerkkarte", "Bridge"]
           },
           {
             "content": "Schicht 1",
-            "sublist": [
-              "Repeater",
-              "Hub",
-              "Reciever"
-            ]
+            "sublist": ["Repeater", "Hub", "Reciever"]
           }
         ]
       },
@@ -426,10 +381,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='http://www.easy-network.de/netztypen.html'>http://www.easy-network.de/netztypen.html</a>",
-          "<a href='http://www.easy-network.de/osi.html'>http://www.easy-network.de/osi.html</a>"
-        ]
+        "list": ["<a href='http://www.easy-network.de/netztypen.html'>http://www.easy-network.de/netztypen.html</a>", "<a href='http://www.easy-network.de/osi.html'>http://www.easy-network.de/osi.html</a>"]
       }
     ]
   },
@@ -459,21 +411,11 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Die <b>physikalische Topologie</b>, welches das aktuelle Layout der Kabel (Medium) definiert",
-            "sublist": [
-              "Bus - Topologie",
-              "Ring - Topologie",
-              "Stern - Topologie",
-              "Erweiterte Stern - Topologie",
-              "Hierarische - Topologie",
-              "Misch - Topologie"
-            ]
+            "sublist": ["Bus - Topologie", "Ring - Topologie", "Stern - Topologie", "Erweiterte Stern - Topologie", "Hierarische - Topologie", "Misch - Topologie"]
           },
           {
             "content": "Die <b>logische Topologie</b>, welche definiert wird durch den Medienzugriff der Hosts. Sie beschreibt wie die Hosts über das Medium kommunizieren. Im Allgemeinen werden zwei Arten der logischen Topologie genutzt:",
-            "sublist": [
-              "Broadcast",
-              "Tokenpassingverfahren"
-            ]
+            "sublist": ["Broadcast", "Tokenpassingverfahren"]
           }
         ]
       },
@@ -552,16 +494,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Zugangskontrolle ➞ Regelungen über die Zugangsberechtigungen von Endeinrichtungen",
-          "Initialisierung ➞ Prozess zum Starten und Beenden der Übertragung, Informationen zum Verbindungsaufbau und -abbau",
-          "Addressierung ➞ Identifizierung von Endsystemen (und des Absenders)",
-          "Blockbildung ➞ Regeln zur Kennzeichnung von Blockbeginn und Blockende",
-          "Blocknummerierung ➞ Fortlaufende Nummerierung von Datenblöcken, um den Verlust von Datenblöcken zu erkennen",
-          "Steuerung ➞ Überwachung des Ablaufes der Datenübertragung",
-          "Flusskontrolle ➞ Mechanismus zur Drosselung des Datenverkehrs, damit ein Sender einen Empfänger nicht mit Daten überschwemmt",
-          "Fehlererkennung ➞ Durch entsprechende Sicherungsverfahren, Prüfsumme zum Erkennen von Übertragungsfehlern"
-        ]
+        "list": ["Zugangskontrolle ➞ Regelungen über die Zugangsberechtigungen von Endeinrichtungen", "Initialisierung ➞ Prozess zum Starten und Beenden der Übertragung, Informationen zum Verbindungsaufbau und -abbau", "Addressierung ➞ Identifizierung von Endsystemen (und des Absenders)", "Blockbildung ➞ Regeln zur Kennzeichnung von Blockbeginn und Blockende", "Blocknummerierung ➞ Fortlaufende Nummerierung von Datenblöcken, um den Verlust von Datenblöcken zu erkennen", "Steuerung ➞ Überwachung des Ablaufes der Datenübertragung", "Flusskontrolle ➞ Mechanismus zur Drosselung des Datenverkehrs, damit ein Sender einen Empfänger nicht mit Daten überschwemmt", "Fehlererkennung ➞ Durch entsprechende Sicherungsverfahren, Prüfsumme zum Erkennen von Übertragungsfehlern"]
       },
       {
         "type": "LINE",
@@ -578,11 +511,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Verbindungsaufbau",
-          "Verbindungskontrolle",
-          "Verbindungsabbau"
-        ]
+        "list": ["Verbindungsaufbau", "Verbindungskontrolle", "Verbindungsabbau"]
       }
     ]
   },
@@ -613,13 +542,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "5er-Regel",
-        "list": [
-          "<span class='ddu-list-number'>5</span> Segmente",
-          "<span class='ddu-list-number'>4</span> Repeater",
-          "<span class='ddu-list-number'>3</span> Workstation-Segmente",
-          "<span class='ddu-list-number'>2</span> Links-Segmente",
-          "<span class='ddu-list-number'>1</span> Kollisionsdomäne"
-        ]
+        "list": ["<span class='ddu-list-number'>5</span> Segmente", "<span class='ddu-list-number'>4</span> Repeater", "<span class='ddu-list-number'>3</span> Workstation-Segmente", "<span class='ddu-list-number'>2</span> Links-Segmente", "<span class='ddu-list-number'>1</span> Kollisionsdomäne"]
       },
       {
         "type": "IMAGE",
@@ -672,12 +595,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml'>https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml</a>",
-          "<a href='https://www.elektronik-kompendium.de/sites/grd/0301035.htm'>https://www.elektronik-kompendium.de/sites/grd/0301035.htm</a>",
-          "<a href='https://www.itwissen.info/Abschlusswiderstand-terminator.html'>https://www.itwissen.info/Abschlusswiderstand-terminator.html</a>",
-          "<a href='https://www.itwissen.info/Kollisionsdomaene-collision-domain.html'>https://www.itwissen.info/Kollisionsdomaene-collision-domain.html</a>"
-        ]
+        "list": ["<a href='https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml'>https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml</a>", "<a href='https://www.elektronik-kompendium.de/sites/grd/0301035.htm'>https://www.elektronik-kompendium.de/sites/grd/0301035.htm</a>", "<a href='https://www.itwissen.info/Abschlusswiderstand-terminator.html'>https://www.itwissen.info/Abschlusswiderstand-terminator.html</a>", "<a href='https://www.itwissen.info/Kollisionsdomaene-collision-domain.html'>https://www.itwissen.info/Kollisionsdomaene-collision-domain.html</a>"]
       }
     ]
   },
@@ -793,15 +711,12 @@ export const LF7_2_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "Umrechnungsfaktor \"1000\""
+        "content": 'Umrechnungsfaktor "1000"'
       },
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Mengeneinheit: <b>k</b>ilo, <b>m</b>ega, <b>g</b>iga etc.",
-          "Kleingeschriebene Mengeneinheiten stellen einen Umrechnungsfaktor von 1000 dar"
-        ]
+        "list": ["Mengeneinheit: <b>k</b>ilo, <b>m</b>ega, <b>g</b>iga etc.", "Kleingeschriebene Mengeneinheiten stellen einen Umrechnungsfaktor von 1000 dar"]
       },
       {
         "type": "LINE",
@@ -809,15 +724,12 @@ export const LF7_2_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "Umrechnungsfaktor \"1024\""
+        "content": 'Umrechnungsfaktor "1024"'
       },
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Mengeneinheit: <b>K</b>ilo, <b>M</b>ega, <b>G</b>iga etc.",
-          "Großgeschriebene Mengeneinheiten stellen einen Umrechnungsfaktor von 1024 dar"
-        ]
+        "list": ["Mengeneinheit: <b>K</b>ilo, <b>M</b>ega, <b>G</b>iga etc.", "Großgeschriebene Mengeneinheiten stellen einen Umrechnungsfaktor von 1024 dar"]
       },
       {
         "type": "LINE",
@@ -830,35 +742,22 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Einheit: bit/s oder bps (Bit pro Sekunde - bits per second)",
-          "Umrechnungsfaktor 1000, d.h. kleingeschriebene Einheiten",
-          "Öfters sieht man auch das \"bit\" als \"b\" abgekürzt oder speziell bei Modems die Einheit \"bit\" ganz fehlt, etwa \"56k\" statt \"56kbit/s\" oder \"56kbps\"."
-        ]
+        "list": ["Einheit: bit/s oder bps (Bit pro Sekunde - bits per second)", "Umrechnungsfaktor 1000, d.h. kleingeschriebene Einheiten", 'Öfters sieht man auch das "bit" als "b" abgekürzt oder speziell bei Modems die Einheit "bit" ganz fehlt, etwa "56k" statt "56kbit/s" oder "56kbps".']
       },
       {
         "type": "LIST",
         "content": "z.B. 56k Modem",
-        "list": [
-          "56kbit/s bzw. 56kbps",
-          "56.000 Bit pro Sekunde (bit/s, bps)"
-        ]
+        "list": ["56kbit/s bzw. 56kbps", "56.000 Bit pro Sekunde (bit/s, bps)"]
       },
       {
         "type": "LIST",
         "content": "z.B. DSL (hier T-DSL 768)",
-        "list": [
-          "768kbit/s bzw. 56kbps",
-          "768.000 Bit pro Sekunde (bit/s, bps)"
-        ]
+        "list": ["768kbit/s bzw. 56kbps", "768.000 Bit pro Sekunde (bit/s, bps)"]
       },
       {
         "type": "LIST",
         "content": "z.B. LAN (hier 100 Base-TX)",
-        "list": [
-          "100mbit/s bzw. 100mbps",
-          "100.000.000 Bit pro Sekunde (bit/s, bps)"
-        ]
+        "list": ["100mbit/s bzw. 100mbps", "100.000.000 Bit pro Sekunde (bit/s, bps)"]
       },
       {
         "type": "TEXT",
@@ -875,31 +774,22 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Einheit: Byte oder nur \"B\"",
-          "Umrechnungsfaktor 1024, d. h. großgeschriebene Einheiten"
-        ]
+        "list": ['Einheit: Byte oder nur "B"', "Umrechnungsfaktor 1024, d. h. großgeschriebene Einheiten"]
       },
       {
         "type": "LIST",
         "content": "z .B. 5KB Datei",
-        "list": [
-          "5 x 1024 Byte = 5120 Byte"
-        ]
+        "list": ["5 x 1024 Byte = 5120 Byte"]
       },
       {
         "type": "LIST",
         "content": "z .B. 5MB Datei",
-        "list": [
-          "5 x 1024 KB = 5 x 1024 x 1024 Byte = 5.242.880 Byte"
-        ]
+        "list": ["5 x 1024 KB = 5 x 1024 x 1024 Byte = 5.242.880 Byte"]
       },
       {
         "type": "LIST",
         "content": "z. B. 5GB Datei",
-        "list": [
-          "5 x 1024 MB = 5 x 1024 x 1024 KB = 5 x 1024 x 1024 x 1024 Byte = 5.368.709.120 Byte"
-        ]
+        "list": ["5 x 1024 MB = 5 x 1024 x 1024 KB = 5 x 1024 x 1024 x 1024 Byte = 5.368.709.120 Byte"]
       },
       {
         "type": "LINE",
@@ -928,14 +818,11 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Da sicherlich die Zeit in Minuten bzw. Sekunden gesucht ist, kann man je nach Aufgabe auf ganzzahlige Ergebnisse <u>aufrunden</u>.",
-        "list": [
-          "Zeit = 2996 Sekunden (s)",
-          "49 Minuten und 56 Sekunden"
-        ]
+        "list": ["Zeit = 2996 Sekunden (s)", "49 Minuten und 56 Sekunden"]
       },
       {
         "type": "HINT",
-        "content": "Falls in den Prüfungen Aufgaben zur Datenübertragung kommen, wird in der Regel die Übertragungsrate in Bit angegeben oder ein Zusatz weist auf den Umrechnungsfaktor hin. Wenn das nicht der Fall sein sollte und man nicht sicher ist, schreibt an den Anfang der Lösung: Unter Annahme, dass der \"56k Modem\" 56.000 <b>Bit</b> pro Sekunde überträgt."
+        "content": 'Falls in den Prüfungen Aufgaben zur Datenübertragung kommen, wird in der Regel die Übertragungsrate in Bit angegeben oder ein Zusatz weist auf den Umrechnungsfaktor hin. Wenn das nicht der Fall sein sollte und man nicht sicher ist, schreibt an den Anfang der Lösung: Unter Annahme, dass der "56k Modem" 56.000 <b>Bit</b> pro Sekunde überträgt.'
       },
       {
         "type": "TEXT",
@@ -972,10 +859,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "so lange dauert es mindestens sofern die Datenrate nicht über 16.000kbit/s liegt",
-        "list": [
-          "Pro Pixel kann doch nur ein Kanal (SW)? <br/> 2.500 x 800 Pixel = 2.000.000 Pixel → 2.000.000 Pixel x 8 bit/Pixel = 16.000.000 Bit",
-          "Pro Pixel drei Kanäle (Farbe) <br/> 2.500 x 800 Pixel = 2.000.000 Pixel x 24bit/Pixel = 48.000.000 bit / 8 = 60.000.000 Byte"
-        ]
+        "list": ["Pro Pixel kann doch nur ein Kanal (SW)? <br/> 2.500 x 800 Pixel = 2.000.000 Pixel → 2.000.000 Pixel x 8 bit/Pixel = 16.000.000 Bit", "Pro Pixel drei Kanäle (Farbe) <br/> 2.500 x 800 Pixel = 2.000.000 Pixel x 24bit/Pixel = 48.000.000 bit / 8 = 60.000.000 Byte"]
       }
     ]
   },
@@ -1139,20 +1023,11 @@ export const LF7_2_POSTS: PostArticle[] = [
           "TCP/IP wird im Internet genutzt und hat dadurch eine enorme Verbreitung erfahren",
           {
             "content": "Transmission Control Protocol (TCP)",
-            "sublist": [
-              "Transportprotokoll (Schicht 4)",
-              "erbringt den gesicherten (zuverlässigen) Datentransport",
-              "Zuverlässigkeit bedeutet eine positive Bestätigung des Empfanges mit Neuübertragung bei aufgetretenen Fehlern"
-            ]
+            "sublist": ["Transportprotokoll (Schicht 4)", "erbringt den gesicherten (zuverlässigen) Datentransport", "Zuverlässigkeit bedeutet eine positive Bestätigung des Empfanges mit Neuübertragung bei aufgetretenen Fehlern"]
           },
           {
             "content": "Internet Protokoll (IP)",
-            "sublist": [
-              "Netzprotokoll (Schicht 3)",
-              "stellt den ungesicherten Transport von Daten zur Verfügung",
-              "IPv4",
-              "IPv6"
-            ]
+            "sublist": ["Netzprotokoll (Schicht 3)", "stellt den ungesicherten Transport von Daten zur Verfügung", "IPv4", "IPv6"]
           }
         ]
       },
@@ -1259,12 +1134,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Regeln für die IP-Adressierung",
-        "list": [
-          "4 Byte Binärzahlen <br/> (xxxx xxxx . xxxx xxxx . xxxx xxxx . xxxx xxxx)",
-          "Beinhaltet Netzwerk- und Hostadresse",
-          "Darstellung in dezimaler Punktnotation <br/> (192.168.100.20)",
-          "Jede Adresse darf nur einmal in einem autonomen System vergeben werden"
-        ]
+        "list": ["4 Byte Binärzahlen <br/> (xxxx xxxx . xxxx xxxx . xxxx xxxx . xxxx xxxx)", "Beinhaltet Netzwerk- und Hostadresse", "Darstellung in dezimaler Punktnotation <br/> (192.168.100.20)", "Jede Adresse darf nur einmal in einem autonomen System vergeben werden"]
       },
       {
         "type": "SUBTITLE",
@@ -1273,10 +1143,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Autonom (= <i>unabhängig, eigenständig</i>)",
-        "list": [
-          "Ein autonomes System wird durch eine Schnittstelle zu einem WAN begrenzt",
-          "Router innerhalb eines autonomen Systems verwenden interne Routingprotokolle (z. B. RIP, IGRP, OSPF, EIGRP)"
-        ]
+        "list": ["Ein autonomes System wird durch eine Schnittstelle zu einem WAN begrenzt", "Router innerhalb eines autonomen Systems verwenden interne Routingprotokolle (z. B. RIP, IGRP, OSPF, EIGRP)"]
       },
       {
         "type": "IMAGE",
@@ -1292,7 +1159,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Jedes internetfähige Gerät hat auf seiner Netzwerkschnittstelle eine eindeutige MAC-Adresse (engl. <i>Media-Access-Control Address</i>). Diese identifiziert ein Gerät bei einer Datenverbindung. Sofern ein Gerät (PC, Server, Switch) mehr als ein physisches Interface hat, besitzt jedes Netzwerk-Interface eine eigene MAC-Adresse. Bei Microsoft wird diese auch \"<b>physikalische Adresse</b>\" genannt. Format einer MAC-Adresse: <code>00-11-22-33-44-55</code> - es können alle hexadezimalen Zeichen vorkommen (0 bis 9, A bis F)."
+        "content": 'Jedes internetfähige Gerät hat auf seiner Netzwerkschnittstelle eine eindeutige MAC-Adresse (engl. <i>Media-Access-Control Address</i>). Diese identifiziert ein Gerät bei einer Datenverbindung. Sofern ein Gerät (PC, Server, Switch) mehr als ein physisches Interface hat, besitzt jedes Netzwerk-Interface eine eigene MAC-Adresse. Bei Microsoft wird diese auch "<b>physikalische Adresse</b>" genannt. Format einer MAC-Adresse: <code>00-11-22-33-44-55</code> - es können alle hexadezimalen Zeichen vorkommen (0 bis 9, A bis F).'
       }
     ]
   },
@@ -1365,11 +1232,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Arbeiten Sie den u. angehängten Text durch",
-          "Ergänzen und überprüfen Sie den Text durch Ihre Internet-Recherche",
-          "Dir Ergänzungen bitte in den Abgabeordner hochladen"
-        ]
+        "list": ["Arbeiten Sie den u. angehängten Text durch", "Ergänzen und überprüfen Sie den Text durch Ihre Internet-Recherche", "Dir Ergänzungen bitte in den Abgabeordner hochladen"]
       },
       {
         "type": "LINE",
@@ -1385,23 +1248,14 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Ein Virus besteht aus mehreren funktionalen Komponenten, von denen eine obligatorisch ist, die anderen aber nicht unbedingt vorhanden sein müssen",
-            "sublist": [
-              "Infektion",
-              "Payload (Nutzlast)",
-              "Tarnung"
-            ]
+            "sublist": ["Infektion", "Payload (Nutzlast)", "Tarnung"]
           },
           "<b>Grundsätzlich</b>: Ein Virus ist ein Programm",
           "Dieses spezielle Programm enthält die Befehle, die zur Erzeugung einer Kopie des Programms führen",
           "Der Teil des Computervirus, der sich mit der Anfertigung von Kopien seiner selbst beschäftigt, wird Infektionsroutine genannt",
           {
             "content": "Das aus dem militärischen Bereich stammende Wort Payload bezeichnet die „Nutzlast“ eines Virus. Man bezeichnet damit die verankerten Schadensfunktionen",
-            "sublist": [
-              "Je nach Absichten und Einfallsreichtum des Programmierers kann ein Virus die unterschiedlichsten Aktionen ausführen",
-              "Dies reicht von der Anzeige von störenden Bildschirmmeldungen bis zum Löschen von Dateien oder dem Unbrauchbarmachen von ganzen Datenträgern",
-              "Schadensfunktionen gekoppelt an bestimmte Ereignisse <br/> → z.B. an ein bestimmtes Datum (z. B. Freitag, den 13.) <br/> → oder an ein anderes Ereignis zu koppeln (z. B. 50. Neustart des Rechners) <br/> → Es existieren allerdings auch Viren, die keine Payload mit sich führen, da sie z. B. nur als konzeptionelle Viren geschrieben wurden",
-              "Auch Viren ohne Payload sind nicht ganz ungefährlich"
-            ]
+            "sublist": ["Je nach Absichten und Einfallsreichtum des Programmierers kann ein Virus die unterschiedlichsten Aktionen ausführen", "Dies reicht von der Anzeige von störenden Bildschirmmeldungen bis zum Löschen von Dateien oder dem Unbrauchbarmachen von ganzen Datenträgern", "Schadensfunktionen gekoppelt an bestimmte Ereignisse <br/> → z.B. an ein bestimmtes Datum (z. B. Freitag, den 13.) <br/> → oder an ein anderes Ereignis zu koppeln (z. B. 50. Neustart des Rechners) <br/> → Es existieren allerdings auch Viren, die keine Payload mit sich führen, da sie z. B. nur als konzeptionelle Viren geschrieben wurden", "Auch Viren ohne Payload sind nicht ganz ungefährlich"]
           },
           "Durch fehlerhaft programmierte Infektionsroutinen können auch diese zu einem Datenverlust führen",
           "Um auf einem System nach der Infektion nicht entdeckt zu werden, enthalten die meisten Viren spezielle Tarnroutinen. Dies kann sich auf die Art und Weise der Infektion oder Manipulation des befallenen Systems auswirken"
@@ -1470,10 +1324,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Nehmen Sie an, der Benutzer dieses Computers hat eine Diskette mit einem Bootsektorvirus erhalten und Dateien von dieser Diskette kopiert. Der Rechner muss irgendwann einmal neu gestartet werden und die Diskette wurde im Laufwerk vergessen.",
-          "Nachdem der POST erfolgreich durchgeführt wurde, sucht das BIOS gemäß der eingestellten Bootreihenfolge nach startbaren Laufwerken – meist LW – C: <br/> <u>Von der noch im Laufwerk befindlichen Diskette wird der Bootsektor ausgelesen und ausgeführt. <br/> In diesem Fall wird der Virus aktiv.</u>"
-        ]
+        "list": ["Nehmen Sie an, der Benutzer dieses Computers hat eine Diskette mit einem Bootsektorvirus erhalten und Dateien von dieser Diskette kopiert. Der Rechner muss irgendwann einmal neu gestartet werden und die Diskette wurde im Laufwerk vergessen.", "Nachdem der POST erfolgreich durchgeführt wurde, sucht das BIOS gemäß der eingestellten Bootreihenfolge nach startbaren Laufwerken – meist LW – C: <br/> <u>Von der noch im Laufwerk befindlichen Diskette wird der Bootsektor ausgelesen und ausgeführt. <br/> In diesem Fall wird der Virus aktiv.</u>"]
       },
       {
         "type": "IMAGE",
@@ -1482,12 +1333,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Virus infizierte HD",
-        "list": [
-          "Die <u>Infektionsroutine</u> des Virus <u>sucht</u> nun <u>andere installierte Datenträger</u> und erkennt das C-Laufwerk.",
-          "<u>Zur Infektion</u> des Laufwerks <u>erstellt</u> der Virus <u>zuerst eine Kopie</u> des originalen Bootsektors (1). Hierzu wird meist eine im Virus fest programmierte Sektoradresse als Speicher-Ort für die Backup-Kopie gewählt.",
-          "Anschließend <u>schreibt der Virus sich selbst an die Stelle des Bootsektors</u> (2). Um den erfolgreichen Infektionsvorgang zu vertuschen, wäre es jetzt für den Virus möglich, eine Fehlermeldung auf dem Bildschirm auszugeben, die besagt, dass eine nicht bootfähige Diskette im Laufwerk liegt. Der Benutzer wird sich an <u>die Diskette im Laufwerk erinnern</u>, diese entfernen und den <u>Rechner neu starten</u>.",
-          "Beim nächsten Neustart ohne eingelegte Diskette liest das BIOS den Virus-Sektor und startet diesen. Wiederum würde nach infizierbaren Disketten oder Festplatten gesucht, mit der Ausnahme, dass der Virus nun weiß, dass er von einer bootfähigen Festplatte gestartet wurde. Da die Adresse für das Backup des Originalsektors bekannt ist, verzweigt der Virus nach Abarbeitung seines Codes an die Adresse des originalen Bootsektors, und der PC startet wie gewöhnlich."
-        ]
+        "list": ["Die <u>Infektionsroutine</u> des Virus <u>sucht</u> nun <u>andere installierte Datenträger</u> und erkennt das C-Laufwerk.", "<u>Zur Infektion</u> des Laufwerks <u>erstellt</u> der Virus <u>zuerst eine Kopie</u> des originalen Bootsektors (1). Hierzu wird meist eine im Virus fest programmierte Sektoradresse als Speicher-Ort für die Backup-Kopie gewählt.", "Anschließend <u>schreibt der Virus sich selbst an die Stelle des Bootsektors</u> (2). Um den erfolgreichen Infektionsvorgang zu vertuschen, wäre es jetzt für den Virus möglich, eine Fehlermeldung auf dem Bildschirm auszugeben, die besagt, dass eine nicht bootfähige Diskette im Laufwerk liegt. Der Benutzer wird sich an <u>die Diskette im Laufwerk erinnern</u>, diese entfernen und den <u>Rechner neu starten</u>.", "Beim nächsten Neustart ohne eingelegte Diskette liest das BIOS den Virus-Sektor und startet diesen. Wiederum würde nach infizierbaren Disketten oder Festplatten gesucht, mit der Ausnahme, dass der Virus nun weiß, dass er von einer bootfähigen Festplatte gestartet wurde. Da die Adresse für das Backup des Originalsektors bekannt ist, verzweigt der Virus nach Abarbeitung seines Codes an die Adresse des originalen Bootsektors, und der PC startet wie gewöhnlich."]
       },
       {
         "type": "LINE",
@@ -1508,11 +1354,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Ein speicherresidenter Bootsektorvirus würde bei seiner Ausführung zuerst über eine BIOS-Funktion den Wert für den maximal verfügbaren Speicher um den Betrag seiner eigenen Größe reduzieren.",
-        "list": [
-          "Ein Virus ist z.B. 1 kB groß, so wird ein für die DOS-Architektur geschriebener Bootsektorvirus den Wert für verfügbaren Speicher von 640 kB auf 639 kB reduzieren. Anschließend kopiert sich der Virus in den als „nicht existent“ markierten Arbeitsspeicher.",
-          "<b>Damit der Virus auch wirklich aktiv bleiben kann, wird die Software-IRQ-Tabelle des PCs manipuliert.</b> Die Software-IRQs stellen grundlegende PC-Funktionalitäten zur Verfügung, auf denen Programmierer auch ohne Vorhandensein eines Betriebssystems aufbauen können. In der IRQ-Tabelle ist zu einer bestimmten IRQ-Nummer (entspricht einer Funktion) die Speicheradresse abgelegt, an der die entsprechende Funktion aufgerufen werden kann. <b>Der Virus liest einen Wert für einen gewünschten IRQ aus</b> (z. B. den IRQ für Datenträgerzugriffe) und <b>schreibt seine eigene Adresse im Speicher in diese Tabelle. Die ursprüngliche IRQ-Adresse wird im Virus gespeichert.</b>",
-          "Anschließend kann sich diese Instanz des Virus beenden; seine gerade angelegte Kopie bleibt im Speicher aktiv und wird von allen anderen Programmen unabsichtlich immer dann aufgerufen, wenn sie die entsprechende IRQ-Funktion benutzen. Der residente Virus hat dann bei seiner Ausführung Gelegenheit, weitere Ziele zu infizieren, Schadensfunktionen auszuführen oder den Funktionsaufruf an die Originalfunktion weiterzuleiten.Im letzteren Fall würde die Anwesenheit eines Virus nicht weiter auffallen, da der PC normal zu arbeiten scheint."
-        ]
+        "list": ["Ein Virus ist z.B. 1 kB groß, so wird ein für die DOS-Architektur geschriebener Bootsektorvirus den Wert für verfügbaren Speicher von 640 kB auf 639 kB reduzieren. Anschließend kopiert sich der Virus in den als „nicht existent“ markierten Arbeitsspeicher.", "<b>Damit der Virus auch wirklich aktiv bleiben kann, wird die Software-IRQ-Tabelle des PCs manipuliert.</b> Die Software-IRQs stellen grundlegende PC-Funktionalitäten zur Verfügung, auf denen Programmierer auch ohne Vorhandensein eines Betriebssystems aufbauen können. In der IRQ-Tabelle ist zu einer bestimmten IRQ-Nummer (entspricht einer Funktion) die Speicheradresse abgelegt, an der die entsprechende Funktion aufgerufen werden kann. <b>Der Virus liest einen Wert für einen gewünschten IRQ aus</b> (z. B. den IRQ für Datenträgerzugriffe) und <b>schreibt seine eigene Adresse im Speicher in diese Tabelle. Die ursprüngliche IRQ-Adresse wird im Virus gespeichert.</b>", "Anschließend kann sich diese Instanz des Virus beenden; seine gerade angelegte Kopie bleibt im Speicher aktiv und wird von allen anderen Programmen unabsichtlich immer dann aufgerufen, wenn sie die entsprechende IRQ-Funktion benutzen. Der residente Virus hat dann bei seiner Ausführung Gelegenheit, weitere Ziele zu infizieren, Schadensfunktionen auszuführen oder den Funktionsaufruf an die Originalfunktion weiterzuleiten.Im letzteren Fall würde die Anwesenheit eines Virus nicht weiter auffallen, da der PC normal zu arbeiten scheint."]
       },
       {
         "type": "SUBTITLE",
@@ -1527,10 +1369,7 @@ export const LF7_2_POSTS: PostArticle[] = [
           "Auch der „gut gemeinte“ Scherzvirus kann auf Grund eines Programmierfehlers oder einer Inkompatibilität nicht selten zu empfindlichen Datenverlusten führen.",
           {
             "content": "Beispiel:",
-            "sublist": [
-              "Ist der vom Virus für das Backup des Originalsektors verwendete Platz schon belegt, so werden diese Daten überschrieben und sind somit verloren.",
-              "Drastischer sind die Folgen einer Doppelinfektion mit zwei verschiedenen Viren, bei denen einer nur eine Variante des anderen ist."
-            ]
+            "sublist": ["Ist der vom Virus für das Backup des Originalsektors verwendete Platz schon belegt, so werden diese Daten überschrieben und sind somit verloren.", "Drastischer sind die Folgen einer Doppelinfektion mit zwei verschiedenen Viren, bei denen einer nur eine Variante des anderen ist."]
           }
         ]
       },
@@ -1541,11 +1380,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Wird das mit Virus A bereits infizierte System zusätzlich noch von Virus B befallen und hat der Programmierer der Variante B diesen Sonderfall nicht berücksichtigt, so wird Virus B den Inhalt des Bootsektors von seinem gewohnten Platz an die Stelle des Backup-Platzes kopieren. In diesem Fall befindet sich aber nicht der Original-Bootsektor, sondern Virus A im betreffenden Sektor.",
-          "Der an der Backup-Stelle befindliche originale Bootsektor wird hierbei durch Virus A überschrieben. Wird dieses System nun gestartet, so verzweigt Virus B, der zuerst gestartet wird, auf Virus A (1).",
-          "Dieser wiederum würde nach seinem Programmablauf den eigentlichen Bootsektor aufrufen, der sich an der Backup-Adresse befindet. In diesem Fall ruft Virus A sich in einer Endlosschleife selbst immer wieder auf, da er selbst an dieser Adresse sitzt (2). Das System kann ohne Eingriff von außen nicht mehr starten."
-        ]
+        "list": ["Wird das mit Virus A bereits infizierte System zusätzlich noch von Virus B befallen und hat der Programmierer der Variante B diesen Sonderfall nicht berücksichtigt, so wird Virus B den Inhalt des Bootsektors von seinem gewohnten Platz an die Stelle des Backup-Platzes kopieren. In diesem Fall befindet sich aber nicht der Original-Bootsektor, sondern Virus A im betreffenden Sektor.", "Der an der Backup-Stelle befindliche originale Bootsektor wird hierbei durch Virus A überschrieben. Wird dieses System nun gestartet, so verzweigt Virus B, der zuerst gestartet wird, auf Virus A (1).", "Dieser wiederum würde nach seinem Programmablauf den eigentlichen Bootsektor aufrufen, der sich an der Backup-Adresse befindet. In diesem Fall ruft Virus A sich in einer Endlosschleife selbst immer wieder auf, da er selbst an dieser Adresse sitzt (2). Das System kann ohne Eingriff von außen nicht mehr starten."]
       }
     ]
   },
@@ -1597,19 +1432,11 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Erarbeiten Sie sich die Lizenz-Strukturen der Windows Betriebssysteme für ...",
-            "sublist": [
-              "1.1 Clients",
-              "1.2 Server",
-              "1.3 Welche Dienste können von den Servern angeboten werden",
-              "1.4 Untersuchen Sie äquivalent das Linux Betriebssystem <br/> Bei Microsoft können Sie sich die aktuellen Informationen holen, z.B. für den Standard.-, Datacenterserver, für User Kerne usw. <br/><br/> Produktbestimmungen für Microsoft-Volumenlizenzierung (Deutsch, Juni 2019 <br/><br/> Lizenzen waren schon Prüfungsrelevant! Ich persönlich finde es nur ziemlich \"belastend\", da MS seine Rahmenbedingungen gelegentlich verändert. z. B. von der Kauflizenz zur monatlichen Liasinlizenz inklusive der Veränderung der Lizenzbedingungen. Ich hoffe, dass Sie bis zu Ihrer Prüfung keine Veränderung mehr bekommen und so zumindest den Überblick behalten."
-            ]
+            "sublist": ["1.1 Clients", "1.2 Server", "1.3 Welche Dienste können von den Servern angeboten werden", '1.4 Untersuchen Sie äquivalent das Linux Betriebssystem <br/> Bei Microsoft können Sie sich die aktuellen Informationen holen, z.B. für den Standard.-, Datacenterserver, für User Kerne usw. <br/><br/> Produktbestimmungen für Microsoft-Volumenlizenzierung (Deutsch, Juni 2019 <br/><br/> Lizenzen waren schon Prüfungsrelevant! Ich persönlich finde es nur ziemlich "belastend", da MS seine Rahmenbedingungen gelegentlich verändert. z. B. von der Kauflizenz zur monatlichen Liasinlizenz inklusive der Veränderung der Lizenzbedingungen. Ich hoffe, dass Sie bis zu Ihrer Prüfung keine Veränderung mehr bekommen und so zumindest den Überblick behalten.']
           },
           {
             "content": "Für mich ist auch der Vergleich mit Linux und Mac wichtig. Sie sollten immer Argumente für den Kunden und seine Aufgaben haben. Als Facharbeiter haben Sie immer eine Beratungspflicht.",
-            "sublist": [
-              "2.1 Erarbeiten Sie sich das Linux – Lizenzmodell",
-              "2.2 Erarbeiten Sie sich das MAC-OS – Lizenzmodell"
-            ]
+            "sublist": ["2.1 Erarbeiten Sie sich das Linux – Lizenzmodell", "2.2 Erarbeiten Sie sich das MAC-OS – Lizenzmodell"]
           },
           "Vergleichen Sie die Lizenzmodelle miteinander. Stellen Sie die Vor- und Nachteile gegenüber. "
         ]
@@ -1644,19 +1471,11 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Erarbeiten Sie sich die Lizenz-Strukturen der Windows Betriebssysteme für ...",
-            "sublist": [
-              "1.1 Clients",
-              "1.2 Server",
-              "1.3 Welche Dienste können von den Servern angeboten werden",
-              "1.4 Untersuchen Sie äquivalent das Linux Betriebssystem <br/> Bei Microsoft können Sie sich die aktuellen Informationen holen, z.B. für den Standard.-, Datacenterserver, für User Kerne usw. <br/><br/> Produktbestimmungen für Microsoft-Volumenlizenzierung (Deutsch, Juni 2019 <br/><br/> Lizenzen waren schon Prüfungsrelevant! Ich persönlich finde es nur ziemlich \"belastend\", da MS seine Rahmenbedingungen gelegentlich verändert. z. B. von der Kauflizenz zur monatlichen Liasinlizenz inklusive der Veränderung der Lizenzbedingungen. Ich hoffe, dass Sie bis zu Ihrer Prüfung keine Veränderung mehr bekommen und so zumindest den Überblick behalten."
-            ]
+            "sublist": ["1.1 Clients", "1.2 Server", "1.3 Welche Dienste können von den Servern angeboten werden", '1.4 Untersuchen Sie äquivalent das Linux Betriebssystem <br/> Bei Microsoft können Sie sich die aktuellen Informationen holen, z.B. für den Standard.-, Datacenterserver, für User Kerne usw. <br/><br/> Produktbestimmungen für Microsoft-Volumenlizenzierung (Deutsch, Juni 2019 <br/><br/> Lizenzen waren schon Prüfungsrelevant! Ich persönlich finde es nur ziemlich "belastend", da MS seine Rahmenbedingungen gelegentlich verändert. z. B. von der Kauflizenz zur monatlichen Liasinlizenz inklusive der Veränderung der Lizenzbedingungen. Ich hoffe, dass Sie bis zu Ihrer Prüfung keine Veränderung mehr bekommen und so zumindest den Überblick behalten.']
           },
           {
             "content": "Für mich ist auch der Vergleich mit Linux und Mac wichtig. Sie sollten immer Argumente für den Kunden und seine Aufgaben haben. Als Facharbeiter haben Sie immer eine Beratungspflicht.",
-            "sublist": [
-              "2.1 Erarbeiten Sie sich das Linux – Lizenzmodell",
-              "2.2 Erarbeiten Sie sich das MAC-OS – Lizenzmodell"
-            ]
+            "sublist": ["2.1 Erarbeiten Sie sich das Linux – Lizenzmodell", "2.2 Erarbeiten Sie sich das MAC-OS – Lizenzmodell"]
           },
           "Vergleichen Sie die Lizenzmodelle miteinander. Stellen Sie die Vor- und Nachteile gegenüber. "
         ]
@@ -1679,63 +1498,43 @@ export const LF7_2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Freeware",
-            "sublist": [
-              "darf kostenlos genutzt werden"
-            ]
+            "sublist": ["darf kostenlos genutzt werden"]
           },
           {
             "content": "Public Domain („geemeinfrei“)",
-            "sublist": [
-              "darf kostenlos genutzt werden, zusätzlich verzichtet der Hersteller auf sein Urheberrecht (in Deutschland ist es nicht möglich aufs Urheberrecht zu verzichten)"
-            ]
+            "sublist": ["darf kostenlos genutzt werden, zusätzlich verzichtet der Hersteller auf sein Urheberrecht (in Deutschland ist es nicht möglich aufs Urheberrecht zu verzichten)"]
           },
           {
             "content": "Open Source",
-            "sublist": [
-              "bedeutet, dass der Quellcode frei zugänglich ist. Die Nutzung muss deswegen aber nicht automatisch kostenlos sein"
-            ]
+            "sublist": ["bedeutet, dass der Quellcode frei zugänglich ist. Die Nutzung muss deswegen aber nicht automatisch kostenlos sein"]
           },
           {
             "content": "Freie Softwarelizenz",
-            "sublist": [
-              "heißt, dass die Nutzung kostenfrei. Anpassungen des Quellcodes sind problemlos möglich. Der Urheber ist bei dieser Lizenzform zu einer Offenlegung des Codes verpflichtet"
-            ]
+            "sublist": ["heißt, dass die Nutzung kostenfrei. Anpassungen des Quellcodes sind problemlos möglich. Der Urheber ist bei dieser Lizenzform zu einer Offenlegung des Codes verpflichtet"]
           },
           {
             "content": "Kommerzielle Software",
-            "sublist": [
-              "muss käuflich erworben werden, dazu zählen auch „kostenfreie Käufe“, wenn der Nutzer beispielsweise kostenlos eine Lizenz vom Hersteller erhält zu Promotionzwecken"
-            ]
+            "sublist": ["muss käuflich erworben werden, dazu zählen auch „kostenfreie Käufe“, wenn der Nutzer beispielsweise kostenlos eine Lizenz vom Hersteller erhält zu Promotionzwecken"]
           },
           {
             "content": "Proprietäre Lizenz",
-            "sublist": [
-              "gibt dem Nutzer das Recht, mehrere Kopien der Anwendung zu nutzen"
-            ]
+            "sublist": ["gibt dem Nutzer das Recht, mehrere Kopien der Anwendung zu nutzen"]
           },
           {
             "content": "Arbeitsstation Lizenz",
-            "sublist": [
-              "gestattet die Nutzung nur auf einem dedizierten Computer"
-            ]
+            "sublist": ["gestattet die Nutzung nur auf einem dedizierten Computer"]
           },
           {
             "content": "Copyleft-Lizenz/GNU General Public Lizenz",
-            "sublist": [
-              "gehört in die Kategorie Open Source. Quellcode darf verändert werden, muss aber laut GNU GPL für jedermann zugänglich gemacht werden"
-            ]
+            "sublist": ["gehört in die Kategorie Open Source. Quellcode darf verändert werden, muss aber laut GNU GPL für jedermann zugänglich gemacht werden"]
           },
           {
             "content": "Current Use Lizenz",
-            "sublist": [
-              "erlaubt dem Nutzer, die Software auf mehreren Geräten gleichzeitig zu nutzen. Die maximale Nutzungsanzahl wird über die Nutzungsbedingungen vorgegeben"
-            ]
+            "sublist": ["erlaubt dem Nutzer, die Software auf mehreren Geräten gleichzeitig zu nutzen. Die maximale Nutzungsanzahl wird über die Nutzungsbedingungen vorgegeben"]
           },
           {
             "content": "Standardlizenz (Concurrent Use Lizenz)",
-            "sublist": [
-              "erlaubt dem Nutzer, die software auf mehreren Geräten zu installieren aber pro Lizenz nur eine aktive Nutzung gleichzeitig"
-            ]
+            "sublist": ["erlaubt dem Nutzer, die software auf mehreren Geräten zu installieren aber pro Lizenz nur eine aktive Nutzung gleichzeitig"]
           }
         ]
       },
@@ -1782,15 +1581,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Beispiele von verschiedenen Zugriffslizenz-Modellen:",
-        "list": [
-          "Device CALs (gerätegebundene Zugriffslizenzen). Beliebig viele Nutzer",
-          "User CALs (personengebundene Zugriffslizenzen). Mehrere Geräte",
-          "Core CALs sind CAL-Bundles. Zugriffsrecht auf mehrere Server",
-          "Windows Server CAL",
-          "Office SharePoint Server CAL",
-          "SQL Server CAL",
-          "System Center Configuration Manager CAL"
-        ]
+        "list": ["Device CALs (gerätegebundene Zugriffslizenzen). Beliebig viele Nutzer", "User CALs (personengebundene Zugriffslizenzen). Mehrere Geräte", "Core CALs sind CAL-Bundles. Zugriffsrecht auf mehrere Server", "Windows Server CAL", "Office SharePoint Server CAL", "SQL Server CAL", "System Center Configuration Manager CAL"]
       },
       {
         "type": "SUBTITLE",
@@ -1807,10 +1598,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Es gibt hierbei zwei Lizenzierungsmöglichkeiten:",
-        "list": [
-          "Lizenz pro Gerät (Client) → beliebig viele Nutzer pro Gerät",
-          "Lizenz pro Nutzer (User) → beliebig viele Geräte pro Nutzer"
-        ]
+        "list": ["Lizenz pro Gerät (Client) → beliebig viele Nutzer pro Gerät", "Lizenz pro Nutzer (User) → beliebig viele Geräte pro Nutzer"]
       },
       {
         "type": "LINE",
@@ -1905,13 +1693,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<sup>1</sup> Client Access Licenses and Management Licenses, 05.03.2021 17:23 | <a href='https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license'>https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license</a>",
-          "<a href='http://www.informatik.uni-oldenburg.de/~iug09/igr/koenigssee.informatik.uni-oldenburg.de_1211/index.php/software/23-lizenzen/78-formen-von-softwarelizenzen.html'>http://www.informatik.uni-oldenburg.de/~iug09/igr/koenigssee.informatik.uni-oldenburg.de_1211/index.php/software/23-lizenzen/78-formen-von-softwarelizenzen.html</a>",
-          "<a href='https://www.bsh-ag.de/it-wissensdatenbank/lizenz/'>https://www.bsh-ag.de/it-wissensdatenbank/lizenz/</a>",
-          "<a href='https://de.wikipedia.org/wiki/Client_Access_License'>https://de.wikipedia.org/wiki/Client_Access_License</a>",
-          "<a href='https://www.software-express.de/lizenzierung/server-cal-windows-cal-microsoft-cal-core-cal/'>https://www.software-express.de/lizenzierung/server-cal-windows-cal-microsoft-cal-core-cal/</a>"
-        ]
+        "list": ["<sup>1</sup> Client Access Licenses and Management Licenses, 05.03.2021 17:23 | <a href='https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license'>https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license</a>", "<a href='http://www.informatik.uni-oldenburg.de/~iug09/igr/koenigssee.informatik.uni-oldenburg.de_1211/index.php/software/23-lizenzen/78-formen-von-softwarelizenzen.html'>http://www.informatik.uni-oldenburg.de/~iug09/igr/koenigssee.informatik.uni-oldenburg.de_1211/index.php/software/23-lizenzen/78-formen-von-softwarelizenzen.html</a>", "<a href='https://www.bsh-ag.de/it-wissensdatenbank/lizenz/'>https://www.bsh-ag.de/it-wissensdatenbank/lizenz/</a>", "<a href='https://de.wikipedia.org/wiki/Client_Access_License'>https://de.wikipedia.org/wiki/Client_Access_License</a>", "<a href='https://www.software-express.de/lizenzierung/server-cal-windows-cal-microsoft-cal-core-cal/'>https://www.software-express.de/lizenzierung/server-cal-windows-cal-microsoft-cal-core-cal/</a>"]
       }
     ]
   },
@@ -1937,7 +1719,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Das \"einfachste\" Netzwerk ist das sogenannte Peer-to-Peer (Crossover) Netzwerk, in welchem die Rechner gleichberechtigt zusammen arbeiten. Die Daten sind dezentral organisiert und verteilt, jeder Rechner kann Anbieter und Konsument von Ressourcen und Funktionen sein. Der genaue Gegensatz dazu ist das Client-Server-Modell, bei dem die Rollen des Servers und der Clients eindeutig verteilt sind. Der Server stellt Dienste bereit und die Clients nutzen diese."
+        "content": 'Das "einfachste" Netzwerk ist das sogenannte Peer-to-Peer (Crossover) Netzwerk, in welchem die Rechner gleichberechtigt zusammen arbeiten. Die Daten sind dezentral organisiert und verteilt, jeder Rechner kann Anbieter und Konsument von Ressourcen und Funktionen sein. Der genaue Gegensatz dazu ist das Client-Server-Modell, bei dem die Rollen des Servers und der Clients eindeutig verteilt sind. Der Server stellt Dienste bereit und die Clients nutzen diese.'
       },
       {
         "type": "IMAGE",
@@ -2004,7 +1786,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Der Laie versteht unter Router den heimischen \"Router\" (FritzBox oder Telekom Router). Diese Geräte sind jedoch meist nicht nur Router, sondern \"Integriertes Zugriffsgeräte\" (engl. <i>integrated access device</i>) - darüber hinaus bieten sie etwa USB-Hubs für Drucker oder USB-Sticks, oder Fax- und Telefonanlagen (ISDN). Telefonanschlüsse über ISDN ist jedoch eine veraltete Technik, die heutigen Anschlüsse nennen sich NGN-Anschlüsse, welche über VoiceOverIP laufen. Es sind somit IP-Telefone, welche das Internet zur Verbindung nutzen."
+        "content": 'Der Laie versteht unter Router den heimischen "Router" (FritzBox oder Telekom Router). Diese Geräte sind jedoch meist nicht nur Router, sondern "Integriertes Zugriffsgeräte" (engl. <i>integrated access device</i>) - darüber hinaus bieten sie etwa USB-Hubs für Drucker oder USB-Sticks, oder Fax- und Telefonanlagen (ISDN). Telefonanschlüsse über ISDN ist jedoch eine veraltete Technik, die heutigen Anschlüsse nennen sich NGN-Anschlüsse, welche über VoiceOverIP laufen. Es sind somit IP-Telefone, welche das Internet zur Verbindung nutzen.'
       },
       {
         "type": "LINE",
@@ -2013,11 +1795,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Was ist der Unterschied zwischen Hub, Switch und Router? | <a href='https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html'>https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html</a>",
-          "Netzwerkgeräte - Hub, Switch, Router, Modem, AP, IAD, 22.08.2017 | 19.04.2021 <a href='https://www.youtube.com/watch?v=Z7isAafDU2Q'>https://www.youtube.com/watch?v=Z7isAafDU2Q</a>",
-          "Peer-to-Peer-Netz | 19.04.2021 <a href='https://www.itwissen.info/Peer-to-Peer-Netz-peer-to-peer-network-P2P.html'>https://www.itwissen.info/Peer-to-Peer-Netz-peer-to-peer-network-P2P.html</a>"
-        ]
+        "list": ["Was ist der Unterschied zwischen Hub, Switch und Router? | <a href='https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html'>https://community.fs.com/de/blog/whats-the-difference-hub-vs-switch-vs-router.html</a>", "Netzwerkgeräte - Hub, Switch, Router, Modem, AP, IAD, 22.08.2017 | 19.04.2021 <a href='https://www.youtube.com/watch?v=Z7isAafDU2Q'>https://www.youtube.com/watch?v=Z7isAafDU2Q</a>", "Peer-to-Peer-Netz | 19.04.2021 <a href='https://www.itwissen.info/Peer-to-Peer-Netz-peer-to-peer-network-P2P.html'>https://www.itwissen.info/Peer-to-Peer-Netz-peer-to-peer-network-P2P.html</a>"]
       }
     ]
   },
@@ -2070,11 +1848,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Zu den gängigen Protokollen von TCP/IP gehören:",
-        "list": [
-          "HTTP (Hyper Text Transfer Protocol) übernimmt die Kommunikation zwischen einem Webserver und einem Webbrowser",
-          "HTTPS (Secure HTTP) wickelt die sichere Kommunikation zwischen einem Webserver und einem Webbrowser ab",
-          "FTP (File Transfer Protocol) sorgt für die Übertragung von Dateien zwischen Computern"
-        ]
+        "list": ["HTTP (Hyper Text Transfer Protocol) übernimmt die Kommunikation zwischen einem Webserver und einem Webbrowser", "HTTPS (Secure HTTP) wickelt die sichere Kommunikation zwischen einem Webserver und einem Webbrowser ab", "FTP (File Transfer Protocol) sorgt für die Übertragung von Dateien zwischen Computern"]
       },
       {
         "type": "TEXT",
@@ -2087,9 +1861,7 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "TCP/IP (Transmission Control Protocol/Internet Protocol) | 25.06.2021 | <a href='https://www.computerweekly.com/de/definition/TCP-IP-Transmission-Control-Protocol-Internet-Protocol' target=\"_blank\" rel=\"noopener noreferrer\">https://www.computerweekly.com/de/definition/TCP-IP-Transmission-Control-Protocol-Internet-Protocol</a>"
-        ]
+        "list": ['TCP/IP (Transmission Control Protocol/Internet Protocol) | 25.06.2021 | <a href=\'https://www.computerweekly.com/de/definition/TCP-IP-Transmission-Control-Protocol-Internet-Protocol\' target="_blank" rel="noopener noreferrer">https://www.computerweekly.com/de/definition/TCP-IP-Transmission-Control-Protocol-Internet-Protocol</a>']
       }
     ]
   },
@@ -2120,11 +1892,8 @@ export const LF7_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Subnetting (Subnetmask / Subnetzmaske) | 09.08.2021 | <a href='https://www.elektronik-kompendium.de/sites/net/0907201.htm' target=\"_blank\" rel=\"noopener noreferrer\">https://www.elektronik-kompendium.de/sites/net/0907201.htm</a>",
-          "SUBNETTING & SUPERNETTING | 09.08.2021 | <a href='http://muchowski.info/wp-content/uploads/2016/10/Subnetting.pdf' target=\"_blank\" rel=\"noopener noreferrer\">http://muchowski.info/wp-content/uploads/2016/10/Subnetting.pdf</a>"
-        ]
+        "list": ['Subnetting (Subnetmask / Subnetzmaske) | 09.08.2021 | <a href=\'https://www.elektronik-kompendium.de/sites/net/0907201.htm\' target="_blank" rel="noopener noreferrer">https://www.elektronik-kompendium.de/sites/net/0907201.htm</a>', 'SUBNETTING & SUPERNETTING | 09.08.2021 | <a href=\'http://muchowski.info/wp-content/uploads/2016/10/Subnetting.pdf\' target="_blank" rel="noopener noreferrer">http://muchowski.info/wp-content/uploads/2016/10/Subnetting.pdf</a>']
       }
     ]
-  },
+  }
 ];

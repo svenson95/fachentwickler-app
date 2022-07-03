@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF6_POSTS: PostArticle[] = [
   {
@@ -174,7 +173,7 @@ export const LF6_POSTS: PostArticle[] = [
       {
         "type": "CODE",
         "language": "javascript",
-        "content": "{\n   \"id\": 1,\n   \"firstname\": \"max\",\n   \"lastname\": \"mustermann\"\n}"
+        "content": '{\n   "id": 1,\n   "firstname": "max",\n   "lastname": "mustermann"\n}'
       },
       {
         "type": "TEXT",
@@ -189,5 +188,5 @@ export const LF6_POSTS: PostArticle[] = [
         "content": "A football database could consist of many tables for every football leauge. These tables can be compared with each other, for instance the result of a query could show the top ten teams in europe based on the points."
       }
     ]
-  },
+  }
 ];

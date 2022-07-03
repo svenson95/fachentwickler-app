@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF3_POSTS: PostArticle[] = [
   {
@@ -31,14 +30,7 @@ export const LF3_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Abhängigkeiten zwischen den Teilschritten - welche Schritte müssen vor einem Vorgang erledigt werden",
-          "Dauer der Aufgaben - Wieviel Zeit muss eingeplant werden?",
-          "Pufferzeiten - An welchen Stellen kommt es zu Pufferzeiten & welche Aufgaben müssen ohne Verzögerung erledigt werden",
-          "Frühester und spätester Anfangszeitpunkt einer Aufgabe - Wann kann ein Vorgang frühestens angefangen werden und wann spätestens?",
-          "Frühester und spätester Endzeitpunkt einer Aufgabe - Wann sollten die Vorgänge frühstens und spätestens abgeschlossen sein?",
-          "Kritischer Pfad - Alle Aufgaben die ohne Verzögerung erledigt werden müssen, um im Zeitplan zu bleiben"
-        ]
+        "list": ["Abhängigkeiten zwischen den Teilschritten - welche Schritte müssen vor einem Vorgang erledigt werden", "Dauer der Aufgaben - Wieviel Zeit muss eingeplant werden?", "Pufferzeiten - An welchen Stellen kommt es zu Pufferzeiten & welche Aufgaben müssen ohne Verzögerung erledigt werden", "Frühester und spätester Anfangszeitpunkt einer Aufgabe - Wann kann ein Vorgang frühestens angefangen werden und wann spätestens?", "Frühester und spätester Endzeitpunkt einer Aufgabe - Wann sollten die Vorgänge frühstens und spätestens abgeschlossen sein?", "Kritischer Pfad - Alle Aufgaben die ohne Verzögerung erledigt werden müssen, um im Zeitplan zu bleiben"]
       },
       {
         "type": "LINE",
@@ -54,39 +46,19 @@ export const LF3_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Strukturanalyse",
-            "sublist": [
-              "Regel 1 - Abhänigkeiten werden durch Pfeile dargestellt. Pfeilrichtung: von links nach rechts oder von unten nach oben",
-              "Regel 2 - Ein Vorgang kann mehrere Vorgänge und/oder Nachfolger haben",
-              "Regel 3 - Ein Netzplan darf keine Schleifen enthalten (Zeitrechnung wäre dann nicht möglich)",
-              "Regel 4 - Vom Projektanfang (Startknoten) bis zum Projektende (Zielknoten) muss ein ununterbrochener Ablauf gegeben sein"
-            ]
+            "sublist": ["Regel 1 - Abhänigkeiten werden durch Pfeile dargestellt. Pfeilrichtung: von links nach rechts oder von unten nach oben", "Regel 2 - Ein Vorgang kann mehrere Vorgänge und/oder Nachfolger haben", "Regel 3 - Ein Netzplan darf keine Schleifen enthalten (Zeitrechnung wäre dann nicht möglich)", "Regel 4 - Vom Projektanfang (Startknoten) bis zum Projektende (Zielknoten) muss ein ununterbrochener Ablauf gegeben sein"]
           },
           {
             "content": "Vorwärtsrechnung",
-            "sublist": [
-              "Regel 5 - Startvorgang beginnt mit einem frühesten Anfangszeitpunkt (FAZ) von 0",
-              "Regel 6 - Frühester Endzeitpunkt (minEnde) = Frühester Anfangszeitpunkt (FAZ) + Dauer",
-              "Regel 7 - Das \"minEnde\" eines Vorgangs ist Frühester Anfangszeitpunkt (FAZ) aller unmittelbar nachfolgenden Vorgängen",
-              "Regel 8 - Münden mehrere Vorgänge in einen Knoten, so ist dessen \"FAZ\" der größte \"FEZ\" aller Vorgänger"
-            ]
+            "sublist": ["Regel 5 - Startvorgang beginnt mit einem frühesten Anfangszeitpunkt (FAZ) von 0", "Regel 6 - Frühester Endzeitpunkt (minEnde) = Frühester Anfangszeitpunkt (FAZ) + Dauer", 'Regel 7 - Das "minEnde" eines Vorgangs ist Frühester Anfangszeitpunkt (FAZ) aller unmittelbar nachfolgenden Vorgängen', 'Regel 8 - Münden mehrere Vorgänge in einen Knoten, so ist dessen "FAZ" der größte "FEZ" aller Vorgänger']
           },
           {
             "content": "Rückwärtsrechnung",
-            "sublist": [
-              "Regel 9 - Frühester Endzeitpunkt (FAZ) des Zielknotens ist Spätester Endzeitpunkt (SEZ) des Projekts",
-              "Regel 10 - Spätester Anfangszeitpunkt (SAZ) = Spätester Endzeitpunkt (SEZ) - Dauer",
-              "Regel 11 - Der \"SAZ\" eines Vorgangs ist Spätester Endzeitpunkt (SEZ) aller unmittelbar vorausgehenden Vorgänge",
-              "Regel 12 - Haben mehrere Vorgänge einen gemeinsamen Vorgänger, so ist dessen \"SEZ\" der \"SAZ\" aller Nachfolger"
-            ]
+            "sublist": ["Regel 9 - Frühester Endzeitpunkt (FAZ) des Zielknotens ist Spätester Endzeitpunkt (SEZ) des Projekts", "Regel 10 - Spätester Anfangszeitpunkt (SAZ) = Spätester Endzeitpunkt (SEZ) - Dauer", 'Regel 11 - Der "SAZ" eines Vorgangs ist Spätester Endzeitpunkt (SEZ) aller unmittelbar vorausgehenden Vorgänge', 'Regel 12 - Haben mehrere Vorgänge einen gemeinsamen Vorgänger, so ist dessen "SEZ" der "SAZ" aller Nachfolger']
           },
           {
             "content": "Zeitreserve und kritischer Weg",
-            "sublist": [
-              "Regel 13 - Gesamt Puffer = SAZ - FAZ | oder | Gesamt Puffer = SEZ - FEZ",
-              "Regel 14 - Freier Puffer<sub>Vorgang A</sub> = FAZ<sub>Nachfolger B</sub> - FEZ<sub>Vorgang A</sub>",
-              "Regel 15 - Vorgänge ohne Zeitreserve sind kritische Vorgänge",
-              "Regel 16 - Der kritische Weg ist die Kette aller kritischen Vorgänge"
-            ]
+            "sublist": ["Regel 13 - Gesamt Puffer = SAZ - FAZ | oder | Gesamt Puffer = SEZ - FEZ", "Regel 14 - Freier Puffer<sub>Vorgang A</sub> = FAZ<sub>Nachfolger B</sub> - FEZ<sub>Vorgang A</sub>", "Regel 15 - Vorgänge ohne Zeitreserve sind kritische Vorgänge", "Regel 16 - Der kritische Weg ist die Kette aller kritischen Vorgänge"]
           }
         ]
       }
@@ -108,7 +80,7 @@ export const LF3_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Erstelle aus den gegebenen Vorgängen ein Gantt-Diagramm und ein Netzplan. Im Artikel <a href=\"http://159.65.105.150/lf-3/netzplantechnik/regeln_der_netzplantechnik\">Regeln der Netzplantechnik</a> kannst du dir die Vorgehensweisen zur Erstellung der Ablaufstrukturen nochmal anschauen."
+        "content": 'Erstelle aus den gegebenen Vorgängen ein Gantt-Diagramm und ein Netzplan. Im Artikel <a href="http://159.65.105.150/lf-3/netzplantechnik/regeln_der_netzplantechnik">Regeln der Netzplantechnik</a> kannst du dir die Vorgehensweisen zur Erstellung der Ablaufstrukturen nochmal anschauen.'
       },
       {
         "type": "SUBTITLE",
@@ -570,13 +542,7 @@ export const LF3_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "<b>Knoten verknüpfen</b> <br/> Kästchen zeichnen und Vorgangsnummer + Dauer eintragen. Tipp: Mach eine schnelle Skizze des Netzplans damit du nichts übersiehst!",
-          "<b>Vorwärtsterminierung</b> <br/> Zuerst werden die FAZ & FEZ (oben links und oben rechts) berechnet, der FAZ ist beim ersten Vorgang immer 0, ansonsten ist der FAZ der SEZ des Vorgängers. Der FEZ ergibt sich aus FAZ + Dauer.",
-          "<b>Rückwärtsterminierung</b> <br/> Jetzt werden die SEZ & SAZ (unten rechts und unten links) berechnet, beim letzten Vorgang sind FAZ & SAZ sowie SAZ & SEZ gleich. Der SEZ ergibt sich aus dem SAZ des Nachfolgers. Den SAZ berechnest du mit SEZ - Dauer.",
-          "<b>Pufferzeiten</b> <br/> Der Gesamt Puffer wird mit SAZ - FAZ ermittelt, für den Freien Puffer subtrahiert man den FAZ des Nachfolgers mit dem FEZ. (FP = FAZ<sup>2</sup> - FEZ<sup>1</sup>)",
-          "<b>Kritischer Pfad</b> <br/> Alle Schritte die ohne Verzögerung ausgeführt werden müssen markieren, also alle die keinen Gesamt- und Freien Puffer besitzen."
-        ]
+        "list": ["<b>Knoten verknüpfen</b> <br/> Kästchen zeichnen und Vorgangsnummer + Dauer eintragen. Tipp: Mach eine schnelle Skizze des Netzplans damit du nichts übersiehst!", "<b>Vorwärtsterminierung</b> <br/> Zuerst werden die FAZ & FEZ (oben links und oben rechts) berechnet, der FAZ ist beim ersten Vorgang immer 0, ansonsten ist der FAZ der SEZ des Vorgängers. Der FEZ ergibt sich aus FAZ + Dauer.", "<b>Rückwärtsterminierung</b> <br/> Jetzt werden die SEZ & SAZ (unten rechts und unten links) berechnet, beim letzten Vorgang sind FAZ & SAZ sowie SAZ & SEZ gleich. Der SEZ ergibt sich aus dem SAZ des Nachfolgers. Den SAZ berechnest du mit SEZ - Dauer.", "<b>Pufferzeiten</b> <br/> Der Gesamt Puffer wird mit SAZ - FAZ ermittelt, für den Freien Puffer subtrahiert man den FAZ des Nachfolgers mit dem FEZ. (FP = FAZ<sup>2</sup> - FEZ<sup>1</sup>)", "<b>Kritischer Pfad</b> <br/> Alle Schritte die ohne Verzögerung ausgeführt werden müssen markieren, also alle die keinen Gesamt- und Freien Puffer besitzen."]
       },
       {
         "type": "IMAGE",
@@ -593,9 +559,7 @@ export const LF3_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Test"
-        ]
+        "list": ["Test"]
       },
       {
         "type": "IMAGE",
@@ -879,10 +843,7 @@ export const LF3_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "IT-Handbuch - IT-Systemelektroniker/-in & Fachinformatiker/-in | www.westermann.de",
-          "https://www.webdesign-journal.de/psychologische-wirkung-von-farben-farbkombinationen/"
-        ]
+        "list": ["IT-Handbuch - IT-Systemelektroniker/-in & Fachinformatiker/-in | www.westermann.de", "https://www.webdesign-journal.de/psychologische-wirkung-von-farben-farbkombinationen/"]
       }
     ]
   },
@@ -1001,5 +962,5 @@ export const LF3_POSTS: PostArticle[] = [
         "content": "http://159.65.105.150:3000/images/5ed3052d79253514444249cf"
       }
     ]
-  },
+  }
 ];

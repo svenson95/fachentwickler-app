@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF1_POSTS: PostArticle[] = [
   {
@@ -192,37 +191,19 @@ export const LF1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "<u>Dienstleistungsgüter</u>",
-            "sublist": [
-              "Spedition",
-              "Beratung",
-              "Handel",
-              "Versicherungen",
-              "Banken"
-            ]
+            "sublist": ["Spedition", "Beratung", "Handel", "Versicherungen", "Banken"]
           },
           {
             "content": "<u>Informationsgüter</u>",
-            "sublist": [
-              "Fernsehübertragungen",
-              "Bücher",
-              "Medien wie Filme und Musik"
-            ]
+            "sublist": ["Fernsehübertragungen", "Bücher", "Medien wie Filme und Musik"]
           },
           {
             "content": "<u>Rechtegüter</u>",
-            "sublist": [
-              "Patent",
-              "Gütezeichen",
-              "Lizenz",
-              "Marke",
-              "Wegerecht"
-            ]
+            "sublist": ["Patent", "Gütezeichen", "Lizenz", "Marke", "Wegerecht"]
           },
           {
             "content": "<u>Sachgüter</u>",
-            "sublist": [
-              "Materielle Güter"
-            ]
+            "sublist": ["Materielle Güter"]
           }
         ]
       },
@@ -236,20 +217,11 @@ export const LF1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "<u>Gebrauchsgüter</u>",
-            "sublist": [
-              "LKW (Maschine)",
-              "Privat PKW",
-              "Möbel"
-            ]
+            "sublist": ["LKW (Maschine)", "Privat PKW", "Möbel"]
           },
           {
             "content": "<u>Verbrauchsgüter</u>",
-            "sublist": [
-              "Diesel (LKW)",
-              "Öl (Maschine)",
-              "Benzin für privat KPW",
-              "Lebensmittel"
-            ]
+            "sublist": ["Diesel (LKW)", "Öl (Maschine)", "Benzin für privat KPW", "Lebensmittel"]
           }
         ]
       },
@@ -264,9 +236,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.mubk.de/bildungsgaenge/bs/pk/faecher/bw/kap2/bw02_1.htm'>Wirtschaftliche Grundbegriffe Teil 1 - Bedürfnisse, Bedarf, Nachfrage</a>"
-        ]
+        "list": ["<a href='https://www.mubk.de/bildungsgaenge/bs/pk/faecher/bw/kap2/bw02_1.htm'>Wirtschaftliche Grundbegriffe Teil 1 - Bedürfnisse, Bedarf, Nachfrage</a>"]
       }
     ]
   },
@@ -289,10 +259,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Soziookönomisches System (<b>Arbeitsplätze schaffen</b>)",
-          "<b>Bedürfnisse der Menschen realisieren </b> (Güter)"
-        ]
+        "list": ["Soziookönomisches System (<b>Arbeitsplätze schaffen</b>)", "<b>Bedürfnisse der Menschen realisieren </b> (Güter)"]
       },
       {
         "type": "TITLE",
@@ -304,30 +271,15 @@ export const LF1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "<u>nach der der Leistung</u>",
-            "sublist": [
-              "Sachleistungsbetriebe wie zB. Computerhersteller",
-              "Dienstleistungsbetriebe wie zB. IT Systemintegratoren, Betriebe die Netzwerke installieren"
-            ]
+            "sublist": ["Sachleistungsbetriebe wie zB. Computerhersteller", "Dienstleistungsbetriebe wie zB. IT Systemintegratoren, Betriebe die Netzwerke installieren"]
           },
           {
             "content": "<u>nach Wirtschaftszweigen</u>",
-            "sublist": [
-              "Industriebetriebe",
-              "Handwerksbetriebe",
-              "Handelsbetriebe",
-              "Kreditinstitute",
-              "Versicherungsbetriebe",
-              "Verkehrsbetriebe"
-            ]
+            "sublist": ["Industriebetriebe", "Handwerksbetriebe", "Handelsbetriebe", "Kreditinstitute", "Versicherungsbetriebe", "Verkehrsbetriebe"]
           },
           {
             "content": "<u>nach dem vorherrschenden Einsatz eines Produktionsfaktors</u>",
-            "sublist": [
-              "Arbeitsintensive Betriebe (hoher Lohnkostenanteil) zB. Handwerksbetriebe",
-              "Anlage- oder kapitalintensive Betriebe (hoher Maschinenkostenanteil), zB. Betriebe der chemischen Industrie",
-              "Materialintensive Betriebe (hoher Materialkostenanteil) zB. Stahlwerke",
-              "Energieintensive Betriebe (hoher Energiekostenanteil) zB. Betriebe der Aluminiumherstellung"
-            ]
+            "sublist": ["Arbeitsintensive Betriebe (hoher Lohnkostenanteil) zB. Handwerksbetriebe", "Anlage- oder kapitalintensive Betriebe (hoher Maschinenkostenanteil), zB. Betriebe der chemischen Industrie", "Materialintensive Betriebe (hoher Materialkostenanteil) zB. Stahlwerke", "Energieintensive Betriebe (hoher Energiekostenanteil) zB. Betriebe der Aluminiumherstellung"]
           }
         ]
       }
@@ -350,11 +302,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Messen den Erfolg des Unternehmens",
-        "list": [
-          "Produktivität",
-          "Wirtschaftlichkeit",
-          "Rentabilität"
-        ]
+        "list": ["Produktivität", "Wirtschaftlichkeit", "Rentabilität"]
       },
       {
         "type": "LINE",
@@ -422,20 +370,13 @@ export const LF1_POSTS: PostArticle[] = [
       },
       {
         "type": "LIST",
-        "content": "In einem chemischen Großlabor der Schering AG wurde im vergangenen Jahr ein neues Medikament zur akuten Behandlung eines Schlaganfalls eingeführt. Zur Herstellung von 10 Mengeneinheiten (ME) des Wirkstoffes \"AMPA-Antagonist\" sind 7,2kg des Rohstoffes \"Beta-Interferon\" erforderlich. Ferner fallen hierfür folgende Faktorverbräuche an:",
-        "list": [
-          "Stromverbrauch = 5kWh",
-          "Arbeitszeit = 30min"
-        ]
+        "content": 'In einem chemischen Großlabor der Schering AG wurde im vergangenen Jahr ein neues Medikament zur akuten Behandlung eines Schlaganfalls eingeführt. Zur Herstellung von 10 Mengeneinheiten (ME) des Wirkstoffes "AMPA-Antagonist" sind 7,2kg des Rohstoffes "Beta-Interferon" erforderlich. Ferner fallen hierfür folgende Faktorverbräuche an:',
+        "list": ["Stromverbrauch = 5kWh", "Arbeitszeit = 30min"]
       },
       {
         "type": "LIST",
-        "content": "Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes \"Beta-Interferon\" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:",
-        "list": [
-          "\"Beta-Interferon\" = 0,25€ / kg",
-          "Stromverbrauch = 0,08€ / kWh",
-          "Arbeitszeit = 25€ / Stunde"
-        ]
+        "content": 'Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes "Beta-Interferon" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:',
+        "list": ['"Beta-Interferon" = 0,25€ / kg', "Stromverbrauch = 0,08€ / kWh", "Arbeitszeit = 25€ / Stunde"]
       },
       {
         "type": "TEXT",
@@ -448,11 +389,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "\"Beta-Interferon\" → 7,2 kg (10% Rohstoffverlust, daher sind das 90%) + 10% = 8 kg",
-          "Stromverbrauch → 5 kWh",
-          "Arbeitszeit → 30 min"
-        ]
+        "list": ['"Beta-Interferon" → 7,2 kg (10% Rohstoffverlust, daher sind das 90%) + 10% = 8 kg', "Stromverbrauch → 5 kWh", "Arbeitszeit → 30 min"]
       },
       {
         "type": "LINE",
@@ -528,7 +465,7 @@ export const LF1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Hinweis: Beachten Sie bei der Bestimmung der Teilproduktivität bzw. -wirtschaftlichkeit des Faktors \"Rohstoff\", dass im Rahmen des Produktionsprozesses 10% des Rohstoffes während der Herstellung verloren gehen. Die Teilproduktivität bzw. -wirtschaftlichkeit des Faktors \"Arbeitszeit\" bezieht sich auf Stunden. Entsprechende Minutenangaben sind umzurechnen!"
+        "content": 'Hinweis: Beachten Sie bei der Bestimmung der Teilproduktivität bzw. -wirtschaftlichkeit des Faktors "Rohstoff", dass im Rahmen des Produktionsprozesses 10% des Rohstoffes während der Herstellung verloren gehen. Die Teilproduktivität bzw. -wirtschaftlichkeit des Faktors "Arbeitszeit" bezieht sich auf Stunden. Entsprechende Minutenangaben sind umzurechnen!'
       },
       {
         "type": "SUBTITLE",
@@ -537,20 +474,12 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Produktivität's Kennziffern",
-        "list": [
-          "\"Beta-Interferon\" → 10stk / 8kg = <u>1,25</u>",
-          "Stromverbrauch → 10stk / 5 kWh = <u>2</u>",
-          "Arbeitszeit → 10stk / 0,5h = <u>20</u>"
-        ]
+        "list": ['"Beta-Interferon" → 10stk / 8kg = <u>1,25</u>', "Stromverbrauch → 10stk / 5 kWh = <u>2</u>", "Arbeitszeit → 10stk / 0,5h = <u>20</u>"]
       },
       {
         "type": "LIST",
         "content": "Wirtschaftlichkeit's Kennziffern",
-        "list": [
-          "\"Beta-Interferon\" → 7,5€ / 0,25€ = <u>30</u>",
-          "Stromverbrauch → 12€ / 0,08€ = <u>150</u>",
-          "Arbeitszeit → 120€ / 25€ = <u>4,8</u>"
-        ]
+        "list": ['"Beta-Interferon" → 7,5€ / 0,25€ = <u>30</u>', "Stromverbrauch → 12€ / 0,08€ = <u>150</u>", "Arbeitszeit → 120€ / 25€ = <u>4,8</u>"]
       },
       {
         "type": "LINE",
@@ -575,10 +504,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit'>https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit</a>",
-          "<a href='https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605'>https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605</a>"
-        ]
+        "list": ["<a href='https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit'>https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit</a>", "<a href='https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605'>https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605</a>"]
       }
     ]
   },
@@ -598,20 +524,13 @@ export const LF1_POSTS: PostArticle[] = [
       },
       {
         "type": "LIST",
-        "content": "In einem chemischen Großlabor der Schering AG wurde im vergangenen Jahr ein neues Medikament zur akuten Behandlung eines Schlaganfalls eingeführt. Zur Herstellung von 10 Mengeneinheiten (ME) des Wirkstoffes \"AMPA-Antagonist\" sind 7,2 kg des Rohstoffes \"Beta-Interferon\" erforderlich. Ferner fallen hierfür folgende Faktorverbräuche an:",
-        "list": [
-          "Stromverbrauch = 5 kWh",
-          "Arbeitszeit = 30 min"
-        ]
+        "content": 'In einem chemischen Großlabor der Schering AG wurde im vergangenen Jahr ein neues Medikament zur akuten Behandlung eines Schlaganfalls eingeführt. Zur Herstellung von 10 Mengeneinheiten (ME) des Wirkstoffes "AMPA-Antagonist" sind 7,2 kg des Rohstoffes "Beta-Interferon" erforderlich. Ferner fallen hierfür folgende Faktorverbräuche an:',
+        "list": ["Stromverbrauch = 5 kWh", "Arbeitszeit = 30 min"]
       },
       {
         "type": "LIST",
-        "content": "Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes \"Beta-Interferon\" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:",
-        "list": [
-          "\"Beta-Interferon\" = <u>0,25 €</u> / kg",
-          "Stromverbrauch = 0,08 € / kWh",
-          "Arbeitszeit = 25 € / Stunde"
-        ]
+        "content": 'Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes "Beta-Interferon" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:',
+        "list": ['"Beta-Interferon" = <u>0,25 €</u> / kg', "Stromverbrauch = 0,08 € / kWh", "Arbeitszeit = 25 € / Stunde"]
       },
       {
         "type": "TEXT",
@@ -623,12 +542,8 @@ export const LF1_POSTS: PostArticle[] = [
       },
       {
         "type": "LIST",
-        "content": "Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes \"Beta-Interferon\" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:",
-        "list": [
-          "\"Beta-Interferon\" = 7,2 kg (10% Rohstoffverlust, daher sind das 90%) + 10% = <u>8 kg</u>",
-          "Stromverbrauch = 5 kWh",
-          "Arbeitszeit = 30 min"
-        ]
+        "content": 'Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes "Beta-Interferon" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:',
+        "list": ['"Beta-Interferon" = 7,2 kg (10% Rohstoffverlust, daher sind das 90%) + 10% = <u>8 kg</u>', "Stromverbrauch = 5 kWh", "Arbeitszeit = 30 min"]
       },
       {
         "type": "SUBTITLE",
@@ -636,7 +551,7 @@ export const LF1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "<b>d) In diesem Jahr wurde eine Umstellung des Produktionsprozesses für \"AMPA-Antagonist\" bei der Schering AG durchgeführt. Dadurch konnte der Verbrauch an Arbeitszeit und Energie um jeweils 20% gesenkt werden. Gleichzeitig stieg der Stundenlohn aufgrund des neuen Tarifvertrages auf 30,00 €. Die Kosten des Stromverbrauchs haben sich aufgrund der insgesamt gestiegenen Energiepreise des Weltmarktes auf 0,10 € / kWh erhöht. Berechnen Sie die partiellen Produktivitäts- und Wirtschaftlichkeitskennziffern sowie die Gesamtwirtschaftlichkeit! Wie lassen sich die Ergebnisse interpretieren?</b>"
+        "content": '<b>d) In diesem Jahr wurde eine Umstellung des Produktionsprozesses für "AMPA-Antagonist" bei der Schering AG durchgeführt. Dadurch konnte der Verbrauch an Arbeitszeit und Energie um jeweils 20% gesenkt werden. Gleichzeitig stieg der Stundenlohn aufgrund des neuen Tarifvertrages auf 30,00 €. Die Kosten des Stromverbrauchs haben sich aufgrund der insgesamt gestiegenen Energiepreise des Weltmarktes auf 0,10 € / kWh erhöht. Berechnen Sie die partiellen Produktivitäts- und Wirtschaftlichkeitskennziffern sowie die Gesamtwirtschaftlichkeit! Wie lassen sich die Ergebnisse interpretieren?</b>'
       },
       {
         "type": "TEXT",
@@ -648,17 +563,11 @@ export const LF1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Mengeneffekt",
-            "sublist": [
-              "Stromverbrauch = 5 kWh → 4 kWh",
-              "Arbeitszeit = 0,5 h → 0,4 h"
-            ]
+            "sublist": ["Stromverbrauch = 5 kWh → 4 kWh", "Arbeitszeit = 0,5 h → 0,4 h"]
           },
           {
             "content": "Preiseffekt",
-            "sublist": [
-              "Lohn = 25 € / h → 30 € / h",
-              "Strom = 0,08 € / kWh → 0,10 € / kWh"
-            ]
+            "sublist": ["Lohn = 25 € / h → 30 € / h", "Strom = 0,08 € / kWh → 0,10 € / kWh"]
           }
         ]
       },
@@ -724,35 +633,19 @@ export const LF1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "1. Neuer Preis | Alte Menge",
-            "sublist": [
-              "W<sub>Strom</sub> = 120",
-              "W<sub>Arbeitszeit</sub> = 4",
-              "W<sub>Gesamt</sub> = 3,43"
-            ]
+            "sublist": ["W<sub>Strom</sub> = 120", "W<sub>Arbeitszeit</sub> = 4", "W<sub>Gesamt</sub> = 3,43"]
           },
           {
             "content": "2. Alter Preis | Neue Menge",
-            "sublist": [
-              "W<sub>Strom</sub> = 187,5",
-              "W<sub>Arbeitszeit</sub> = 6",
-              "W<sub>Gesamt</sub> = 4,87"
-            ]
+            "sublist": ["W<sub>Strom</sub> = 187,5", "W<sub>Arbeitszeit</sub> = 6", "W<sub>Gesamt</sub> = 4,87"]
           },
           {
             "content": "3. Neuer Preis | Neue Menge",
-            "sublist": [
-              "W<sub>Strom</sub> = 150",
-              "W<sub>Arbeitszeit</sub> = 5",
-              "W<sub>Gesamt</sub> = 4,17"
-            ]
+            "sublist": ["W<sub>Strom</sub> = 150", "W<sub>Arbeitszeit</sub> = 5", "W<sub>Gesamt</sub> = 4,17"]
           },
           {
             "content": "4. Alter Preis | Alte Menge",
-            "sublist": [
-              "W<sub>Strom</sub> = 150",
-              "W<sub>Arbeitszeit</sub> = 4,8",
-              "W<sub>Gesamt</sub> = 4,03"
-            ]
+            "sublist": ["W<sub>Strom</sub> = 150", "W<sub>Arbeitszeit</sub> = 4,8", "W<sub>Gesamt</sub> = 4,03"]
           }
         ]
       }
@@ -810,11 +703,7 @@ export const LF1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Eigenkapitalqoute = ",
-            "sublist": [
-              "a: 80 %",
-              "b: 50 %",
-              "c: 20 %"
-            ]
+            "sublist": ["a: 80 %", "b: 50 %", "c: 20 %"]
           }
         ]
       },
@@ -825,11 +714,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Gegeben:",
-        "list": [
-          "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
-          "Jahresüberschuss einschl. Fremdkapitalkosten = 150.000 €",
-          "Fremdkapitalzinssatz = 6 %"
-        ]
+        "list": ["Gesamtkapital (Bilanzsumme) = 1.000.000 €", "Jahresüberschuss einschl. Fremdkapitalkosten = 150.000 €", "Fremdkapitalzinssatz = 6 %"]
       },
       {
         "type": "TEXT",
@@ -882,11 +767,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Gegeben:",
-        "list": [
-          "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
-          "Jahresüberschuss einschl. Fremdkapitalkosten = 30.000 €",
-          "Fremdkapitalzinssatz = 6 %"
-        ]
+        "list": ["Gesamtkapital (Bilanzsumme) = 1.000.000 €", "Jahresüberschuss einschl. Fremdkapitalkosten = 30.000 €", "Fremdkapitalzinssatz = 6 %"]
       },
       {
         "type": "TEXT",
@@ -939,11 +820,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Gegeben:",
-        "list": [
-          "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
-          "Jahresüberschuss einschl. Fremdkapitalkosten = 100.000 €",
-          "Fremdkapitalzinssatz = 12 %"
-        ]
+        "list": ["Gesamtkapital (Bilanzsumme) = 1.000.000 €", "Jahresüberschuss einschl. Fremdkapitalkosten = 100.000 €", "Fremdkapitalzinssatz = 12 %"]
       },
       {
         "type": "TEXT",
@@ -996,12 +873,7 @@ export const LF1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Gegeben:",
-        "list": [
-          "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
-          "Gesamtkapitalrentabilität = 12 %",
-          "Fremdkapitalzinssatz = 8 %",
-          "Eigenkapitalqoute = 40 %"
-        ]
+        "list": ["Gesamtkapital (Bilanzsumme) = 1.000.000 €", "Gesamtkapitalrentabilität = 12 %", "Fremdkapitalzinssatz = 8 %", "Eigenkapitalqoute = 40 %"]
       },
       {
         "type": "TEXT",
@@ -1348,5 +1220,5 @@ export const LF1_POSTS: PostArticle[] = [
         "content": "Gebrauchsgüter gibt es sowohl bei Produktionsgütern als auch bei Konsumgütern. Sie können öfter genutzt werden, werden also nicht sofort verbraucht sondern verschleißen. Wie zum Beispiel Autos oder Maschinen."
       }
     ]
-  },
+  }
 ];

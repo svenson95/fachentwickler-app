@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const WISO_POSTS: PostArticle[] = [
   {
@@ -39,14 +38,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Ein Ausbildungsvertrag muss <u>schriftlich</u> zwischen dem Azubi und dem Ausbilder / Ausbildungsbetrieb abgeschlossen werden und mindesten folgende Angaben enthalten:",
-        "list": [
-          "Genaue Berufsbezeichnung",
-          "Beginn und Dauer der Ausbildung (2 bis 3 Jahre)",
-          "Dauer der täglichen und wöchentlichen Arbeitszeit",
-          "Dauer der Probezeit",
-          "Höhe der Vergütung",
-          "Anzahl der Urlaubstage"
-        ]
+        "list": ["Genaue Berufsbezeichnung", "Beginn und Dauer der Ausbildung (2 bis 3 Jahre)", "Dauer der täglichen und wöchentlichen Arbeitszeit", "Dauer der Probezeit", "Höhe der Vergütung", "Anzahl der Urlaubstage"]
       },
       {
         "type": "LINE",
@@ -142,11 +134,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Der Vertrag muss anschließend bei der zuständigen Kammer eingereicht werden. Die Kammer überprüft folgende Voraussetzungen …",
-        "list": [
-          "Die persönliche Eignung des Ausbilders, wer zB. gegen Ausbildungsverordnungen verstoßen hat, ist ungeeignet",
-          "Die fachliche Eignung des Ausbilders, der Ausbilder muss die erforderlichen beruflichen Qualifikation und die Ausbildungsbefähigung besitzen (zB. Meisterprüfung)",
-          "Die Eignung der Ausbildungsstätte"
-        ]
+        "list": ["Die persönliche Eignung des Ausbilders, wer zB. gegen Ausbildungsverordnungen verstoßen hat, ist ungeeignet", "Die fachliche Eignung des Ausbilders, der Ausbilder muss die erforderlichen beruflichen Qualifikation und die Ausbildungsbefähigung besitzen (zB. Meisterprüfung)", "Die Eignung der Ausbildungsstätte"]
       }
     ]
   },
@@ -324,23 +312,12 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Mit unterschiedlichen Maßnahmen kann Stress vermindert und die Arbeitsleistung gesteigert werden, Beispiele für Stressfaktoren sind …",
-        "list": [
-          "Schnell arbeiten müssen",
-          "Forderndes Multitasking",
-          "Termin- und Leistungsdruck",
-          "Arbeitsstörungen oder Unterbrechungen",
-          "Kleine Fehler die große Schäden verursachen"
-        ]
+        "list": ["Schnell arbeiten müssen", "Forderndes Multitasking", "Termin- und Leistungsdruck", "Arbeitsstörungen oder Unterbrechungen", "Kleine Fehler die große Schäden verursachen"]
       },
       {
         "type": "LIST",
         "content": "Leistungssteigernd ist unter anderem …",
-        "list": [
-          "ein häufiger Aufgabenwechsel bei eintönigen Arbeiten",
-          "Fließbandarbeiten durch Gruppenarbeiten zu ersetzen",
-          "Entscheidungsspielraum der Arbeitnehmer zu erweitern",
-          "Mehrere Arbeitselemente / Schritte zu einer Aufgabe zusammenzufassen"
-        ]
+        "list": ["ein häufiger Aufgabenwechsel bei eintönigen Arbeiten", "Fließbandarbeiten durch Gruppenarbeiten zu ersetzen", "Entscheidungsspielraum der Arbeitnehmer zu erweitern", "Mehrere Arbeitselemente / Schritte zu einer Aufgabe zusammenzufassen"]
       },
       {
         "type": "LINE",
@@ -423,10 +400,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Inhaltlich unterteilt es sich in ...",
-        "list": [
-          "Individualarbeitsrecht - Verhältnis zwischen Arbeitgeber und Arbeitnehmer",
-          "Kollektivarbeitsrecht - Gewerkschaften, Betriebsräte, Arbeitgeberverbände und Arbeitgeber"
-        ]
+        "list": ["Individualarbeitsrecht - Verhältnis zwischen Arbeitgeber und Arbeitnehmer", "Kollektivarbeitsrecht - Gewerkschaften, Betriebsräte, Arbeitgeberverbände und Arbeitgeber"]
       },
       {
         "type": "SUBTITLE",
@@ -483,19 +457,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Name und Anschrift der Vertragsparteien",
-          "Zeitpunkt und Beginn",
-          "Laufzeit / Dauer des Arbeitsverhältnisses (befristet / unbefristet)",
-          "Arbeitsorte bzw. Anmerkung zur häufig wechselnden Arbeitsorten",
-          "Beschreibung der zu leistenden Tätigkeiten",
-          "Vergütungsbetrag und Fälligkeit der Zahlung, einschließlich Zuschläge, Zulagen, Prämien und Sonderzahlungen",
-          "Arbeitszeit (täglich und wöchentlich)",
-          "Urlaubstage",
-          "Kündigungsfristen",
-          "Hinweis auf Tarifverträge",
-          "Betriebs- und Dienstvereinbarungen bezüglich des Arbeitsverhältnisses"
-        ]
+        "list": ["Name und Anschrift der Vertragsparteien", "Zeitpunkt und Beginn", "Laufzeit / Dauer des Arbeitsverhältnisses (befristet / unbefristet)", "Arbeitsorte bzw. Anmerkung zur häufig wechselnden Arbeitsorten", "Beschreibung der zu leistenden Tätigkeiten", "Vergütungsbetrag und Fälligkeit der Zahlung, einschließlich Zuschläge, Zulagen, Prämien und Sonderzahlungen", "Arbeitszeit (täglich und wöchentlich)", "Urlaubstage", "Kündigungsfristen", "Hinweis auf Tarifverträge", "Betriebs- und Dienstvereinbarungen bezüglich des Arbeitsverhältnisses"]
       },
       {
         "type": "LINE",
@@ -544,13 +506,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "KV → Krankenversicherung (seit 1883)",
-          "AV → Arbeitslosenversicherung (seit 1927)",
-          "RV → Rentenversicherung (seit 1889)",
-          "PV → Pflegeversicherung (seit 1995)",
-          "UV → Unfallversicherung (seit 1884)"
-        ]
+        "list": ["KV → Krankenversicherung (seit 1883)", "AV → Arbeitslosenversicherung (seit 1927)", "RV → Rentenversicherung (seit 1889)", "PV → Pflegeversicherung (seit 1995)", "UV → Unfallversicherung (seit 1884)"]
       },
       {
         "type": "LINE",
@@ -564,14 +520,7 @@ export const WISO_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Wer ist Träger der jeweiligen Versicherung?",
-          "Welche Versicherungspflichtgrenze gibt es bei den jeweiligen Versicherungen?",
-          "Wer ist versicherungspflichtig?",
-          "Wie hoch ist die jeweilige Beitragsbemessungsgrenze?",
-          "Beitragssatz und die jeweiligen Sätze für AG / AB",
-          "Welche Leistung bietet die jeweilige Versicherung?"
-        ]
+        "list": ["Wer ist Träger der jeweiligen Versicherung?", "Welche Versicherungspflichtgrenze gibt es bei den jeweiligen Versicherungen?", "Wer ist versicherungspflichtig?", "Wie hoch ist die jeweilige Beitragsbemessungsgrenze?", "Beitragssatz und die jeweiligen Sätze für AG / AB", "Welche Leistung bietet die jeweilige Versicherung?"]
       }
     ]
   },
@@ -644,24 +593,12 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "→ Alle Arbeitnehmer <br/> → Personen in ...",
-        "list": [
-          "Ausbildungsverhältnissen oder außerbetrieblicher Berufsausbildungen",
-          "Dualen Studiengängen",
-          "Tätigkeiten in Einrichtungen der Jugendhilfe, für Behinderte und in Berufsbildungswerken",
-          "Geistlichen Genossenschaften oder Diakonissen"
-        ]
+        "list": ["Ausbildungsverhältnissen oder außerbetrieblicher Berufsausbildungen", "Dualen Studiengängen", "Tätigkeiten in Einrichtungen der Jugendhilfe, für Behinderte und in Berufsbildungswerken", "Geistlichen Genossenschaften oder Diakonissen"]
       },
       {
         "type": "LIST",
         "content": "→ Für bestimmte Personengruppen hat der Gesetzgeber eine Versicherungspflicht festgelegt, auch wenn kein Arbeitseinkommen im engeren Sinne erzielt wird. Unter bestimmten Bedingungen ist sogar ein Rentenbezug möglich, ohne dass zuvor Beiträge gezahlt wurden. Davon betroffen sind ...",
-        "list": [
-          "Personen (in der Regel Mütter), bei denen anzurechnende Kindererziehungszeiten bestehen",
-          "Pflegende in der häuslichen Pflege (unter bestimmten Bedingungen)",
-          "Wehrdienstleister und Mitglieder des Bundesfreiwilligendienst",
-          "Bezieher von Krankengeld, Arbeitslosengeld, Übergangsgeld und ähnliche Sozialleistungen",
-          "Organspender unter bestimmten Voraussetzungen",
-          "Bezieher von Vorruhestandsgeld wenn sie zuletzt versicherungspflichtig waren"
-        ]
+        "list": ["Personen (in der Regel Mütter), bei denen anzurechnende Kindererziehungszeiten bestehen", "Pflegende in der häuslichen Pflege (unter bestimmten Bedingungen)", "Wehrdienstleister und Mitglieder des Bundesfreiwilligendienst", "Bezieher von Krankengeld, Arbeitslosengeld, Übergangsgeld und ähnliche Sozialleistungen", "Organspender unter bestimmten Voraussetzungen", "Bezieher von Vorruhestandsgeld wenn sie zuletzt versicherungspflichtig waren"]
       },
       {
         "type": "LINE",
@@ -701,38 +638,23 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Rehabilitation",
-            "sublist": [
-              "Erwerbstätigkeit sichern oder wiederherstellen",
-              "Frühzeitige Rentenzahlung verhindern"
-            ]
+            "sublist": ["Erwerbstätigkeit sichern oder wiederherstellen", "Frühzeitige Rentenzahlung verhindern"]
           },
           {
             "content": "Erwerbsminderungsrente",
-            "sublist": [
-              "Wird gezahlt bei teilweiser oder voller Erwerbsminderung",
-              "Wer weniger als 3 Stunden arbeitet, bekommt eine volle Erwerbsminderungsrente",
-              "Wer zwischen 3 und 6 Stunden arbeitet, erhält eine halbe Erwerbsminderungsrente"
-            ]
+            "sublist": ["Wird gezahlt bei teilweiser oder voller Erwerbsminderung", "Wer weniger als 3 Stunden arbeitet, bekommt eine volle Erwerbsminderungsrente", "Wer zwischen 3 und 6 Stunden arbeitet, erhält eine halbe Erwerbsminderungsrente"]
           },
           {
             "content": "Altersrente",
-            "sublist": [
-              "Wird gewährt, wenn der Versicherte ein bestimmtes Lebensalter erreicht hat. Aktuell ist dieses das 65. Lebensjahr",
-              "Bis 2029 steigt das Rentenalter auf 67"
-            ]
+            "sublist": ["Wird gewährt, wenn der Versicherte ein bestimmtes Lebensalter erreicht hat. Aktuell ist dieses das 65. Lebensjahr", "Bis 2029 steigt das Rentenalter auf 67"]
           },
           {
             "content": "Witwenrente",
-            "sublist": [
-              "Erhalten Ehegatten nach dem Tod des Versicherten",
-              "Heiratet der oder die Witwe / Witwer erneut, entfällt die Rente"
-            ]
+            "sublist": ["Erhalten Ehegatten nach dem Tod des Versicherten", "Heiratet der oder die Witwe / Witwer erneut, entfällt die Rente"]
           },
           {
             "content": "Waisenrente",
-            "sublist": [
-              "Erhalten die Kinder der Verstorbenen Versicherten bis zum Ende der ersten Berufsausbildung"
-            ]
+            "sublist": ["Erhalten die Kinder der Verstorbenen Versicherten bis zum Ende der ersten Berufsausbildung"]
           }
         ]
       },
@@ -797,12 +719,7 @@ export const WISO_POSTS: PostArticle[] = [
           "Kirchensteuer (Bayern & Baden-Württemberg 8 % der Lohnsteuer, alle anderen Bundesländern 9 % der Lohnsteuer)",
           {
             "content": "Sozialversicherungsbeiträge (bestehend aus Renten-, Kranken-, Arbeitslosen- & Pflegeversicherung)",
-            "sublist": [
-              "Rentenversicherung (2019, Arbeitgeber & Arbeitnehmer je 9,3 % vom Bruttolohn)",
-              "Krankenversicherung (7,3 % vom Bruttolohn, je nach Krankenkasse noch ein Zusatzbeitrag von 0,4 %)",
-              "Arbeitslosenversicherung (1,25 % vom Bruttolohn)",
-              "Pflegeversicherung (1,525 % vom Bruttolohn, für kinderlose Arbeitnehmer die älter als 23 Jahre sind 1,775 % vom Bruttolohn)"
-            ]
+            "sublist": ["Rentenversicherung (2019, Arbeitgeber & Arbeitnehmer je 9,3 % vom Bruttolohn)", "Krankenversicherung (7,3 % vom Bruttolohn, je nach Krankenkasse noch ein Zusatzbeitrag von 0,4 %)", "Arbeitslosenversicherung (1,25 % vom Bruttolohn)", "Pflegeversicherung (1,525 % vom Bruttolohn, für kinderlose Arbeitnehmer die älter als 23 Jahre sind 1,775 % vom Bruttolohn)"]
           }
         ]
       },
@@ -849,12 +766,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<b>3) Erläutern Sie, was man unter Lohnzusatzkosten versteht.</b> <br/> → Lohnzusatzkosten (auch Lohnnebenkosten & Personalzusatzkosten genannt) sind …",
-        "list": [
-          "Entgeltfortzahlung für Urlaub, Feiertage und Krankheit",
-          "Arbeitgeberanteile zur Sozialversicherung, Arbeitgeber zahlt 50 % der Sozialversicherungsbeiträge, die Unfallversicherung sogar zu 100%",
-          "Sonderzahlungen wie 13. Monatslohn, Urlaubs- oder Weihnachtsgeld",
-          "Vermögenswirksame Leistungen, die von vielen Arbeitgebern ganz oder teilweise übernommen werden"
-        ]
+        "list": ["Entgeltfortzahlung für Urlaub, Feiertage und Krankheit", "Arbeitgeberanteile zur Sozialversicherung, Arbeitgeber zahlt 50 % der Sozialversicherungsbeiträge, die Unfallversicherung sogar zu 100%", "Sonderzahlungen wie 13. Monatslohn, Urlaubs- oder Weihnachtsgeld", "Vermögenswirksame Leistungen, die von vielen Arbeitgebern ganz oder teilweise übernommen werden"]
       },
       {
         "type": "LINE",
@@ -993,14 +905,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Krankenversicherungssatz (inkl. Zusatzbeitrag): 15,6 % <br/> Alle Arbeitnehmer haben Kinder (also kein Kinderlosenzuschlag bei der Pflegeversicherung)",
-          "Die Lohnsteuerbeträge wurden unterstellt, sie sind letztlich von der Lohnsteuerklasse abhängig",
-          "Vermögenswirksames Sparen jeweils 40,00 €",
-          "Vermögenswirksame Leistung des Arbeitgebers jeweils 20,00 €",
-          "Aus Vereinfachungsgründen wurde vernachlässigt, dass der <b>Solidaritätszuschlag</b> erst ab einer bestimmten Einkunftshöhe berechnet wird und der 5,5 %-Zuschlag erst ab höheren Einkünften voll zum Tragen kommt. Ähnliches gilt bei der Kirchensteuer. Anhand der Kopiervorlagen kann unter Anwendung der Lohnsteuertabellen und der Angabe von Steuerklassen auch mit exakten Zahlen gerechnet werden.",
-          "<b>Pflegeversicherungssatz</b> (Arbeitnehmeranteil): 1,525 %"
-        ]
+        "list": ["Krankenversicherungssatz (inkl. Zusatzbeitrag): 15,6 % <br/> Alle Arbeitnehmer haben Kinder (also kein Kinderlosenzuschlag bei der Pflegeversicherung)", "Die Lohnsteuerbeträge wurden unterstellt, sie sind letztlich von der Lohnsteuerklasse abhängig", "Vermögenswirksames Sparen jeweils 40,00 €", "Vermögenswirksame Leistung des Arbeitgebers jeweils 20,00 €", "Aus Vereinfachungsgründen wurde vernachlässigt, dass der <b>Solidaritätszuschlag</b> erst ab einer bestimmten Einkunftshöhe berechnet wird und der 5,5 %-Zuschlag erst ab höheren Einkünften voll zum Tragen kommt. Ähnliches gilt bei der Kirchensteuer. Anhand der Kopiervorlagen kann unter Anwendung der Lohnsteuertabellen und der Angabe von Steuerklassen auch mit exakten Zahlen gerechnet werden.", "<b>Pflegeversicherungssatz</b> (Arbeitnehmeranteil): 1,525 %"]
       },
       {
         "type": "TABLE",
@@ -1062,12 +967,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Krankenversicherungsrate (inkl. Zusatzbetrag) = 15,6 %",
-          "VWS = 40,00 €",
-          "VWL vom Arbeitgeber = 20,00 €",
-          "Pflegeversicherungssatz = 1,525 %"
-        ]
+        "list": ["Krankenversicherungsrate (inkl. Zusatzbetrag) = 15,6 %", "VWS = 40,00 €", "VWL vom Arbeitgeber = 20,00 €", "Pflegeversicherungssatz = 1,525 %"]
       },
       {
         "type": "SUBTITLE",
@@ -1143,20 +1043,12 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<b>Vorteile</b>",
-        "list": [
-          "Abwechslung durch Betrieb und Berufsschule",
-          "Steuerzahler sparen Geld",
-          "Ausbildung erfolgt praxisbezogen, vorwiegend im Betrieb"
-        ]
+        "list": ["Abwechslung durch Betrieb und Berufsschule", "Steuerzahler sparen Geld", "Ausbildung erfolgt praxisbezogen, vorwiegend im Betrieb"]
       },
       {
         "type": "LIST",
         "content": "<b>Nachteile</b>",
-        "list": [
-          "Abstimmung zwischen Betrieb und Schule nicht immer optimal",
-          "Genügend Ausbildungsplätze abhängig von Wirtschaftslage",
-          "Qualität der Ausbildungsplätze ist unterschiedlich"
-        ]
+        "list": ["Abstimmung zwischen Betrieb und Schule nicht immer optimal", "Genügend Ausbildungsplätze abhängig von Wirtschaftslage", "Qualität der Ausbildungsplätze ist unterschiedlich"]
       },
       {
         "type": "LINE",
@@ -1205,15 +1097,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Berufsbezeichnung",
-          "Ausbildungsdauer",
-          "Tägliche und Wöchentliche Arbeitszeit",
-          "Urlaubstage",
-          "Kündigungsfristen / -voraussetzungen",
-          "Zahlungstermine und Höhe der Vergütung",
-          "Hinweise auf Tarifverträge"
-        ]
+        "list": ["Berufsbezeichnung", "Ausbildungsdauer", "Tägliche und Wöchentliche Arbeitszeit", "Urlaubstage", "Kündigungsfristen / -voraussetzungen", "Zahlungstermine und Höhe der Vergütung", "Hinweise auf Tarifverträge"]
       },
       {
         "type": "LINE",
@@ -1226,11 +1110,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Azubi / Auszubildender",
-          "Bei Minderjährigen zusätzlich die Eltern",
-          "Ausbilder / Ausbildender / Ausbildungsbetrieb"
-        ]
+        "list": ["Azubi / Auszubildender", "Bei Minderjährigen zusätzlich die Eltern", "Ausbilder / Ausbildender / Ausbildungsbetrieb"]
       }
     ]
   },
@@ -1268,10 +1148,7 @@ export const WISO_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "<b>Ermitteln Sie ...</b>",
         "ordered": true,
-        "list": [
-          "Das Nettogehalt",
-          "Den Auszahlungsbetrag"
-        ]
+        "list": ["Das Nettogehalt", "Den Auszahlungsbetrag"]
       },
       {
         "type": "LINE",
@@ -1579,14 +1456,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Grundsätze des Tarifrechts",
-          "Tarifpartner",
-          "Arten von Tarifverträgen",
-          "Kampfmaßnahmen der Tarifpartner",
-          "Ablauf von Tarifverhandlungen",
-          "Streikarten"
-        ]
+        "list": ["Grundsätze des Tarifrechts", "Tarifpartner", "Arten von Tarifverträgen", "Kampfmaßnahmen der Tarifpartner", "Ablauf von Tarifverhandlungen", "Streikarten"]
       },
       {
         "type": "TEXT",
@@ -1603,12 +1473,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Gründung von Betriebsräten",
-          "Wahl von Betriebsräten",
-          "Mitbestimmungsrechte und Mitwirkungsrechte unterscheiden",
-          "Rechte von Arbeitnehmern nach dem Betriebsverfassungsgesetz"
-        ]
+        "list": ["Gründung von Betriebsräten", "Wahl von Betriebsräten", "Mitbestimmungsrechte und Mitwirkungsrechte unterscheiden", "Rechte von Arbeitnehmern nach dem Betriebsverfassungsgesetz"]
       },
       {
         "type": "LINE",
@@ -1796,23 +1661,15 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Leistung",
-            "sublist": [
-              "Zahnarzt-, Arztbehandlung, Medikamente, Krankenhausaufenthalt, etc."
-            ]
+            "sublist": ["Zahnarzt-, Arztbehandlung, Medikamente, Krankenhausaufenthalt, etc."]
           },
           {
             "content": "Beiträge",
-            "sublist": [
-              "14,6% des Bruttogehalts",
-              "AG zahlt die Hälfte",
-              "AN zahlt die Hälfte + Zusatzbeitragssatz 7,3% + X = ca. 8,2%"
-            ]
+            "sublist": ["14,6% des Bruttogehalts", "AG zahlt die Hälfte", "AN zahlt die Hälfte + Zusatzbeitragssatz 7,3% + X = ca. 8,2%"]
           },
           {
             "content": "Träger",
-            "sublist": [
-              "Krankenkassen"
-            ]
+            "sublist": ["Krankenkassen"]
           }
         ]
       },
@@ -1822,24 +1679,15 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Leistung",
-            "sublist": [
-              "Häusliche und stationäre Pflege wird bezahlt",
-              "Bis zu max. 1550€/Monat etc."
-            ]
+            "sublist": ["Häusliche und stationäre Pflege wird bezahlt", "Bis zu max. 1550€/Monat etc."]
           },
           {
             "content": "Beiträge",
-            "sublist": [
-              "2,35 % des Bruttogehalts",
-              "AG zahlt die Hälfte",
-              "AN zahlt die Hälfte + 0,25 % wenn über 23 Jahre & kinderlos"
-            ]
+            "sublist": ["2,35 % des Bruttogehalts", "AG zahlt die Hälfte", "AN zahlt die Hälfte + 0,25 % wenn über 23 Jahre & kinderlos"]
           },
           {
             "content": "Träger",
-            "sublist": [
-              "Krankenkasse"
-            ]
+            "sublist": ["Krankenkasse"]
           }
         ]
       },
@@ -1849,25 +1697,15 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Leistung",
-            "sublist": [
-              "Heilbehandlung",
-              "Unfallverhütung",
-              "Verletztengeld",
-              "Renten"
-            ]
+            "sublist": ["Heilbehandlung", "Unfallverhütung", "Verletztengeld", "Renten"]
           },
           {
             "content": "Beiträge",
-            "sublist": [
-              "Beitrag wird zu 100 % vom AG getragen",
-              "Richtet sich nach Gefahrenklasse und Betriebsgröße"
-            ]
+            "sublist": ["Beitrag wird zu 100 % vom AG getragen", "Richtet sich nach Gefahrenklasse und Betriebsgröße"]
           },
           {
             "content": "Träger",
-            "sublist": [
-              "Berufsgenossenschaften"
-            ]
+            "sublist": ["Berufsgenossenschaften"]
           }
         ]
       },
@@ -1877,25 +1715,15 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Leistung",
-            "sublist": [
-              "Altersrente",
-              "Rehabilitationsmaßnahmen",
-              "Fördermaßnahmen für Behinderte"
-            ]
+            "sublist": ["Altersrente", "Rehabilitationsmaßnahmen", "Fördermaßnahmen für Behinderte"]
           },
           {
             "content": "Beiträge",
-            "sublist": [
-              "18,7 % des Bruttogehaltes",
-              "AG zahlt die Hälfte (9,35 %)",
-              "AN zahlt die Hälfte (9,35 %)"
-            ]
+            "sublist": ["18,7 % des Bruttogehaltes", "AG zahlt die Hälfte (9,35 %)", "AN zahlt die Hälfte (9,35 %)"]
           },
           {
             "content": "Träger",
-            "sublist": [
-              "Deutsche Rentenversicherung"
-            ]
+            "sublist": ["Deutsche Rentenversicherung"]
           }
         ]
       },
@@ -1905,26 +1733,15 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Leistung",
-            "sublist": [
-              "Berufsberatung",
-              "Weiterbildungen",
-              "Arbeitsvermittlung",
-              "Arbeitslosengeld I + II"
-            ]
+            "sublist": ["Berufsberatung", "Weiterbildungen", "Arbeitsvermittlung", "Arbeitslosengeld I + II"]
           },
           {
             "content": "Beiträge",
-            "sublist": [
-              "3 % des Bruttogehaltes",
-              "AG zahlt die Hälfte (1,5 %)",
-              "AN zahlt die Hälfte (1,5 %)"
-            ]
+            "sublist": ["3 % des Bruttogehaltes", "AG zahlt die Hälfte (1,5 %)", "AN zahlt die Hälfte (1,5 %)"]
           },
           {
             "content": "Träger",
-            "sublist": [
-              "Bundesagentur für Arbeit (BA)"
-            ]
+            "sublist": ["Bundesagentur für Arbeit (BA)"]
           }
         ]
       },
@@ -2004,45 +1821,31 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Land- und Forstwirtschaft",
-            "sublist": [
-              "Weinbauern, Gärtnereien, Forstbetriebe"
-            ]
+            "sublist": ["Weinbauern, Gärtnereien, Forstbetriebe"]
           },
           {
             "content": "Gewerbebetrieb",
-            "sublist": [
-              "Handwerks-, Handels- und Industriebetriebe"
-            ]
+            "sublist": ["Handwerks-, Handels- und Industriebetriebe"]
           },
           {
             "content": "selbstständige Arbeit",
-            "sublist": [
-              "Ärzte, Rechtsanwälte, Steuerberater, Architekten"
-            ]
+            "sublist": ["Ärzte, Rechtsanwälte, Steuerberater, Architekten"]
           },
           {
             "content": "nichtselbstständige Arbeit",
-            "sublist": [
-              "Löhne, Gehälter, Ausbildungsvergütungen"
-            ]
+            "sublist": ["Löhne, Gehälter, Ausbildungsvergütungen"]
           },
           {
             "content": "Kapitalvermögen",
-            "sublist": [
-              "Zinsen, Dividenden"
-            ]
+            "sublist": ["Zinsen, Dividenden"]
           },
           {
             "content": "Vermietung und Verpachtung",
-            "sublist": [
-              "Mieteinnahmen, Pachteinnahmen"
-            ]
+            "sublist": ["Mieteinnahmen, Pachteinnahmen"]
           },
           {
             "content": "sonstige Einkünfte",
-            "sublist": [
-              "Rentenbezüge, Spekulationsgewinne"
-            ]
+            "sublist": ["Rentenbezüge, Spekulationsgewinne"]
           }
         ]
       },
@@ -2095,10 +1898,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Grundlage für die Berechnung der Lohnsteuer",
-          "Zweck: Berücksichtigung der persönlichen Verhältnisse wie Familienstand und Kinderzahl  (daher unterschiedliche hohe Besteuerung bei gleicher Einkommenshöhe)"
-        ]
+        "list": ["Grundlage für die Berechnung der Lohnsteuer", "Zweck: Berücksichtigung der persönlichen Verhältnisse wie Familienstand und Kinderzahl  (daher unterschiedliche hohe Besteuerung bei gleicher Einkommenshöhe)"]
       },
       {
         "type": "TABLE",
@@ -2181,10 +1981,7 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Ausfüllen Ihrer Steuererklärung:",
-            "sublist": [
-              "Bruttoarbeitslohn, Lohnsteuer, Solidaritätszuschlag und Kirchensteuer können ablesen",
-              "Angaben zu den Beiträgen zur Renten-, Pflege-, Kranken- und Arbeitslosenversicherung ablesen"
-            ]
+            "sublist": ["Bruttoarbeitslohn, Lohnsteuer, Solidaritätszuschlag und Kirchensteuer können ablesen", "Angaben zu den Beiträgen zur Renten-, Pflege-, Kranken- und Arbeitslosenversicherung ablesen"]
           }
         ]
       },
@@ -2206,13 +2003,7 @@ export const WISO_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Jahresbruttoverdienst",
-            "sublist": [
-              "Werbungskosten",
-              "Sonderausgaben",
-              "Außergewöhnliche Belastungen",
-              "Freibeträge",
-              "= zu versteuerndes Einkommen"
-            ]
+            "sublist": ["Werbungskosten", "Sonderausgaben", "Außergewöhnliche Belastungen", "Freibeträge", "= zu versteuerndes Einkommen"]
           }
         ]
       },
@@ -2252,13 +2043,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Die wichtigsten Freibeträge:",
-        "list": [
-          "Kinderfreibetrag",
-          "Ausbildungsfreibetrag",
-          "Erziehungsfreibetrag",
-          "Grundfreibetrag",
-          "Lohnsteuerfreibetrag"
-        ]
+        "list": ["Kinderfreibetrag", "Ausbildungsfreibetrag", "Erziehungsfreibetrag", "Grundfreibetrag", "Lohnsteuerfreibetrag"]
       },
       {
         "type": "TEXT",
@@ -2272,14 +2057,8 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "ordered": true,
-        "content": "Gründe für eine \"freiwillige ESt-Erklärung\" (auch Antragsveranlagung bzw. Antrag auf ESt-Veranlagung)",
-        "list": [
-          "Werbungskosten und Sonderausgaben sind höher als die Pauschalbeträge",
-          "Außergewöhnliche Belastungen sind entstanden",
-          "Die Heirat des Steuerpflichtigen und eine dadurch erfolgte Änderung der Steuerklasse können die Steuerbelastung mindern",
-          "Vorsorgeaufwendungen übersteigen die in die Tabellen eingearbeiteten Pauschalen",
-          "Eine Arbeitnehmersparzulage wird beantragt"
-        ]
+        "content": 'Gründe für eine "freiwillige ESt-Erklärung" (auch Antragsveranlagung bzw. Antrag auf ESt-Veranlagung)',
+        "list": ["Werbungskosten und Sonderausgaben sind höher als die Pauschalbeträge", "Außergewöhnliche Belastungen sind entstanden", "Die Heirat des Steuerpflichtigen und eine dadurch erfolgte Änderung der Steuerklasse können die Steuerbelastung mindern", "Vorsorgeaufwendungen übersteigen die in die Tabellen eingearbeiteten Pauschalen", "Eine Arbeitnehmersparzulage wird beantragt"]
       },
       {
         "type": "SUBTITLE",
@@ -2296,10 +2075,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Einkommensteuer – Was ist die Einkommensteuer? | 23.04.2021 | <a href='https://debitoor.de/lexikon/einkommensteuer'>https://debitoor.de/lexikon/einkommensteuer</a>",
-          "Wer eine Steuererklärung einreichen muss, 16.03.2021 | 23.04.2021 <a href='https://www.finanztip.de/steuererklaerung/steuererklaerung-pflicht/'>https://www.finanztip.de/steuererklaerung/steuererklaerung-pflicht/</a>"
-        ]
+        "list": ["Einkommensteuer – Was ist die Einkommensteuer? | 23.04.2021 | <a href='https://debitoor.de/lexikon/einkommensteuer'>https://debitoor.de/lexikon/einkommensteuer</a>", "Wer eine Steuererklärung einreichen muss, 16.03.2021 | 23.04.2021 <a href='https://www.finanztip.de/steuererklaerung/steuererklaerung-pflicht/'>https://www.finanztip.de/steuererklaerung/steuererklaerung-pflicht/</a>"]
       }
     ]
   },
@@ -2359,10 +2135,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<b>Lohngruppen</b>",
-        "list": [
-          "von den Tarifpartnern ausgehandelt",
-          "Übernahme in Manteltarifverträge"
-        ]
+        "list": ["von den Tarifpartnern ausgehandelt", "Übernahme in Manteltarifverträge"]
       },
       {
         "type": "SUBTITLE",
@@ -2498,21 +2271,12 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Alter: Alterszuschläge zum Grundlohn",
-          "Familienstand: Zuschläge für AN mit Familien und Kindern",
-          "Dauer der Betriebszugehörigkeit: mehr Weihnachts- / Urlaubsgeld, höherer Beteiligungslohn"
-        ]
+        "list": ["Alter: Alterszuschläge zum Grundlohn", "Familienstand: Zuschläge für AN mit Familien und Kindern", "Dauer der Betriebszugehörigkeit: mehr Weihnachts- / Urlaubsgeld, höherer Beteiligungslohn"]
       },
       {
         "type": "LIST",
         "content": "Beitrag des Staates zum familiengerechten Lohn",
-        "list": [
-          "Berücksichtigung des Familienstandes bei der Besteuerung",
-          "Kindergeld und Wohngeld",
-          "Förderung des vermögenswirksames Sparens",
-          "Gewährung von Arbeitnehmersparzulagen"
-        ]
+        "list": ["Berücksichtigung des Familienstandes bei der Besteuerung", "Kindergeld und Wohngeld", "Förderung des vermögenswirksames Sparens", "Gewährung von Arbeitnehmersparzulagen"]
       },
       {
         "type": "LINE",
@@ -2521,9 +2285,7 @@ export const WISO_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Entgeltsystem - Wie der \"gerechte Lohn\" festgelegt wird | 23.04.2021 | <a href='https://www.grin.com/document/101518'>https://www.grin.com/document/101518</a>"
-        ]
+        "list": ["Entgeltsystem - Wie der \"gerechte Lohn\" festgelegt wird | 23.04.2021 | <a href='https://www.grin.com/document/101518'>https://www.grin.com/document/101518</a>"]
       }
     ]
   },
@@ -2603,10 +2365,7 @@ export const WISO_POSTS: PostArticle[] = [
             "type": "LIST",
             "content": "",
             "ordered": true,
-            "list": [
-              "Kaufkraft der Arbeitnehmer",
-              "Was sich die Arbeitnehmer tatsächlich leisten können"
-            ]
+            "list": ["Kaufkraft der Arbeitnehmer", "Was sich die Arbeitnehmer tatsächlich leisten können"]
           },
           {
             "type": "HINT",
@@ -2665,5 +2424,5 @@ export const WISO_POSTS: PostArticle[] = [
         "content": "..."
       }
     ]
-  },
+  }
 ];

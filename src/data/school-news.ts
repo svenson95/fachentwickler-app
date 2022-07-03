@@ -1,5 +1,4 @@
-import { SchoolNews } from '@models/school-news';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
+import { SchoolNews } from "@models/school-news";
 
 const schoolNewsData: SchoolNews[] = [
   {
@@ -18,10 +17,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Hierbei handelt es sich um folgende Klassen:",
-        "list": [
-          "Abteilung 1: FIA83",
-          "Abteilung 2: SHK73, KFN73, KFS74"
-        ]
+        "list": ["Abteilung 1: FIA83", "Abteilung 2: SHK73, KFN73, KFS74"]
       },
       {
         "type": "TEXT",
@@ -34,10 +30,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Bitte beachten Sie als Schülerin oder Schüler:",
-        "list": [
-          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
-          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
-        ]
+        "list": ["Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.", "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."]
       },
       {
         "type": "TEXT",
@@ -61,10 +54,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Hierbei handelt es sich um folgende Klassen:",
-        "list": [
-          "Abteilung 1: FIM82, VTE81, EIT71",
-          "Abteilung 2: WAB81, WAB82, WAB83, SHK72, KFP72"
-        ]
+        "list": ["Abteilung 1: FIM82, VTE81, EIT71", "Abteilung 2: WAB81, WAB82, WAB83, SHK72, KFP72"]
       },
       {
         "type": "TEXT",
@@ -77,10 +67,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Bitte beachten Sie als Schülerin oder Schüler:",
-        "list": [
-          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
-          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
-        ]
+        "list": ["Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.", "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."]
       },
       {
         "type": "TEXT",
@@ -99,7 +86,7 @@ const schoolNewsData: SchoolNews[] = [
       },
       {
         "type": "TEXT",
-        "content": "Die Wasserbauer Martin Bollmann, Nils Ewald und Tim Fladung (WAB 81) haben den 3. Preis beim Schülerwettbewerb TECCI 2020 des Technologie- und Gründerzentrums Potsdam-Mittelmark gewonnen. Ihre Gründungsidee, die sie im Wiso-Unterricht ersannen, macht es möglich, Camping- und Wasserurlaub zu kombinieren. Dazu entwickelten sie ein Floß, das speziell für Wohnwagen geeignet ist. \"Besonders überzeugt hat uns die Kreativität und die detaillierte Beschreibung des Vorhabens\", schrieb die Preisjury. Die Schüler erhielten als Gewinn einen Pokal, Gutscheine für einen Einkauf über 100 Euro und eine Lernplattform sowie süße Leckereien. Linda Schröder vom Technologie- und Gründerzentrum Potsdam-Mittelmark ermuntert auch im kommenden Jahr Berufsschüler dazu, sich am Wettbewerb zu beteiligen."
+        "content": 'Die Wasserbauer Martin Bollmann, Nils Ewald und Tim Fladung (WAB 81) haben den 3. Preis beim Schülerwettbewerb TECCI 2020 des Technologie- und Gründerzentrums Potsdam-Mittelmark gewonnen. Ihre Gründungsidee, die sie im Wiso-Unterricht ersannen, macht es möglich, Camping- und Wasserurlaub zu kombinieren. Dazu entwickelten sie ein Floß, das speziell für Wohnwagen geeignet ist. "Besonders überzeugt hat uns die Kreativität und die detaillierte Beschreibung des Vorhabens", schrieb die Preisjury. Die Schüler erhielten als Gewinn einen Pokal, Gutscheine für einen Einkauf über 100 Euro und eine Lernplattform sowie süße Leckereien. Linda Schröder vom Technologie- und Gründerzentrum Potsdam-Mittelmark ermuntert auch im kommenden Jahr Berufsschüler dazu, sich am Wettbewerb zu beteiligen.'
       },
       {
         "type": "TEXT",
@@ -154,10 +141,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Hierbei handelt es sich um folgende Klassen:",
-        "list": [
-          "Abteilung 1: FIS81, SEL81, MGE81",
-          "Abteilung 2: SHK71, KFP71"
-        ]
+        "list": ["Abteilung 1: FIS81, SEL81, MGE81", "Abteilung 2: SHK71, KFP71"]
       },
       {
         "type": "TEXT",
@@ -174,10 +158,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Bitte beachten Sie als Schülerin oder Schüler:",
-        "list": [
-          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
-          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
-        ]
+        "list": ["Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.", "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."]
       },
       {
         "type": "TEXT",
@@ -197,10 +178,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Folgende Klassen haben in der Woche vom 01.03. bis zum 05.03.2021 Präsenzunterricht im Oberstufenzentrum",
-        "list": [
-          "Abteilung 1: EEG92, EIT81, SEL81, FIS81, MGE81, VTE81, VEG (VTE91 kein Unterricht)",
-          "Abteilung 2: SHK91, SHK81, KFP91, KFP81, VAM, VKF"
-        ]
+        "list": ["Abteilung 1: EEG92, EIT81, SEL81, FIS81, MGE81, VTE81, VEG (VTE91 kein Unterricht)", "Abteilung 2: SHK91, SHK81, KFP91, KFP81, VAM, VKF"]
       },
       {
         "type": "TEXT",
@@ -217,10 +195,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Bitte beachten Sie als Schülerin oder Schüler:",
-        "list": [
-          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
-          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
-        ]
+        "list": ["Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.", "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."]
       },
       {
         "type": "TEXT",
@@ -248,10 +223,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Folgende Klassen haben in der Woche vom 26.04. bis zum 30.04.2021 <b>Präsenzunterricht</b> im Oberstufenzentrum:",
-        "list": [
-          "Abteilung 1: EEG92, FSV02, FIA93, MGE81, VEG",
-          "Abteilung 2: SHK01, SHK91, KFN01, KFP04, KFP91, VAM, WAB2A, WAB2B"
-        ]
+        "list": ["Abteilung 1: EEG92, FSV02, FIA93, MGE81, VEG", "Abteilung 2: SHK01, SHK91, KFN01, KFP04, KFP91, VAM, WAB2A, WAB2B"]
       },
       {
         "type": "TEXT",
@@ -268,10 +240,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Bitte beachten Sie als Schülerin oder Schüler:",
-        "list": [
-          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
-          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
-        ]
+        "list": ["Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.", "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."]
       },
       {
         "type": "TEXT",
@@ -299,10 +268,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Folgende Klassen haben in der Woche vom 17.05. bis zum 21.05.2021 <b>Präsenzunterricht</b> im Oberstufenzentrum:",
-        "list": [
-          "Abteilung 1: EEG01, EIT81, FSV02, FIA93, VTE91",
-          "Abteilung 2: SHK01, SHK81, VAM, KFN01, KFP04, KFP81, WAB Gr.1A,WAB Gr.1B"
-        ]
+        "list": ["Abteilung 1: EEG01, EIT81, FSV02, FIA93, VTE91", "Abteilung 2: SHK01, SHK81, VAM, KFN01, KFP04, KFP81, WAB Gr.1A,WAB Gr.1B"]
       },
       {
         "type": "TEXT",
@@ -319,10 +285,7 @@ const schoolNewsData: SchoolNews[] = [
       {
         "type": "LIST",
         "content": "Bitte beachten Sie als Schülerin oder Schüler:",
-        "list": [
-          "Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.",
-          "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."
-        ]
+        "list": ["Sie sind zur Teilnahme am Präsenz- und Distanzunterricht verpflichtet. Ihre Teilnahme wird durch die Lehrkräfte registriert.", "Durch das Fortbestehen der Berufsschulpflicht und die Unterrichtserteilung bedarf es keiner gesonderten Abstimmung mit Ihrem Ausbildungsbetrieb."]
       },
       {
         "type": "TEXT",
@@ -356,5 +319,5 @@ const schoolNewsData: SchoolNews[] = [
         "content": "H. Danker <br/> Schulleiter"
       }
     ]
-  },
+  }
 ];

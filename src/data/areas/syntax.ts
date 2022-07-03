@@ -1,5 +1,3 @@
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
-
 const syntax = {
   "url": "/syntax",
   "description": "Die Syntax ist die Grundlage einer jeden Sprache, im herkömmlichen Sinn bedeutet Syntax die Lehre vom Satz / korrekten Satzbau. Sie ein Teilgebiet der Grammatik und legt fest, wie aus einzelnen Wörtern sinnvolle Sätze entstehen. Zum Beispiel der <code>return</code> Befehl ist Teil der Syntax einiger Progrmamiersprachen, d. h. diese Zeichenabfolge wird im Code als Befehl erkannt.",
@@ -18,7 +16,7 @@ const syntax = {
           "description": "Kaufmännische Anwendungen",
           "image": "test",
           "url": "/assembler/cobol"
-        },
+        }
       ]
     },
     {
@@ -47,7 +45,7 @@ const syntax = {
           "description": "Datenanalyse, System Administration, Web Entwicklung, Automatisierung, AI, Machine Learning, Microcontroller",
           "image": "test",
           "url": "/system-and-application-programming/c++"
-        },
+        }
       ]
     },
     {
@@ -82,7 +80,7 @@ const syntax = {
           "description": "JavaScript Library",
           "image": "test",
           "url": "/frontend/react"
-        },
+        }
       ]
     },
     {

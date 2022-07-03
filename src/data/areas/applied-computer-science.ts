@@ -1,6 +1,3 @@
-// import { Area } from "../../app/models/area";
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
-
 const appliedComputerScience = {
   "url": "/angewandte-informatik",
   "description": "Die Anwendung technischer, praktischer und theoretischer Informatik in anderen Wissenschaften und Gesellschaftsbereichen, um somit computerbasierte Lösungen für Probleme im Alltag oder in der Wissenschaft zu Entwickeln oder zu Verbessern. Software-Entwicklung und die Entwicklung von Systemen, die Daten optimal verarbeiten - wie etwa Datenbanken - und die Entwicklung von automatisierten Verfahren.",

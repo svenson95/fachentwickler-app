@@ -1,5 +1,4 @@
-import { ExamDate } from '@models/exam-date';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { ExamDate } from "@models/exam-date";
 
 export const exams: ExamDate[] = [
   {
@@ -30,63 +29,30 @@ export const exams: ExamDate[] = [
     "date": "2021-05-18",
     "subject": "lf-7-1",
     "title": "Test - Formen der Übertragung, Prinzip der Nachrichtenübertragung",
-    "lessons": [
-      "603eb6efb0c00c20f201d122",
-      "60428445b0c00c20f201d168",
-      "605855a237cdbc38e21c701c",
-      "605c84de23779759b9bb2901"
-    ]
+    "lessons": ["603eb6efb0c00c20f201d122", "60428445b0c00c20f201d168", "605855a237cdbc38e21c701c", "605c84de23779759b9bb2901"]
   },
   {
     "date": "2021-05-19",
     "subject": "deutsch",
     "title": "Test - Zitiertechniken, Literaturangaben und Nominalformen",
-    "lessons": [
-      "5f429f5f165d0ab470bc57fe",
-      "602106a765dbdf479177a4c4",
-      "6021399365dbdf479177a4cd",
-      "603cfd6eb0c00c20f201d100",
-      "60a2f6b259a0005b1c634ab0"
-    ]
+    "lessons": ["5f429f5f165d0ab470bc57fe", "602106a765dbdf479177a4c4", "6021399365dbdf479177a4cd", "603cfd6eb0c00c20f201d100", "60a2f6b259a0005b1c634ab0"]
   },
   {
     "date": "2021-05-20",
     "subject": "lf-8",
     "title": "Test - Kommunikations- und Distributionspoltik",
-    "lessons": [
-      "6021041865dbdf479177a4c2",
-      "603945b34bb78f077e58b415",
-      "6042c221b0c00c20f201d16f",
-      "604c985bb0c00c20f201d226",
-      "6059d3be1197a87e0b452a48",
-      "6059d3d51197a87e0b452a49",
-      "605c9a8f23779759b9bb2912",
-      "60a41b0c59a0005b1c634b22"
-    ]
+    "lessons": ["6021041865dbdf479177a4c2", "603945b34bb78f077e58b415", "6042c221b0c00c20f201d16f", "604c985bb0c00c20f201d226", "6059d3be1197a87e0b452a48", "6059d3d51197a87e0b452a49", "605c9a8f23779759b9bb2912", "60a41b0c59a0005b1c634b22"]
   },
   {
     "date": "2021-05-21",
     "subject": "wiso",
     "title": "Leistungskontrolle - Steuern und Sozialversicherungen, Aspekte der Entlohnung",
-    "lessons": [
-      "605905de1197a87e0b452a38",
-      "605c934d23779759b9bb290c",
-      "609e76046ffc47057f484114",
-      "60aa82c56f1e344659481845"
-    ]
+    "lessons": ["605905de1197a87e0b452a38", "605c934d23779759b9bb290c", "609e76046ffc47057f484114", "60aa82c56f1e344659481845"]
   },
   {
     "date": "2021-05-21",
     "subject": "lf-6",
     "title": "Leistungskontrolle - SQL Grundlagen",
-    "lessons": [
-      "604285ecb0c00c20f201d169",
-      "60428604b0c00c20f201d16a",
-      "605c875e23779759b9bb2903",
-      "605c880823779759b9bb2904",
-      "60a5736559a0005b1c634b64",
-      "60aa77286f1e34465948183e",
-      "60aa855a6f1e34465948184c"
-    ]
-  },
+    "lessons": ["604285ecb0c00c20f201d169", "60428604b0c00c20f201d16a", "605c875e23779759b9bb2903", "605c880823779759b9bb2904", "60a5736559a0005b1c634b64", "60aa77286f1e34465948183e", "60aa855a6f1e34465948184c"]
+  }
 ];

@@ -1,7 +1,4 @@
-import { PostArticle } from '@models/post';
-
-import { PostType } from '../../app/core/enums/post-type';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const testArticle: PostArticle = {
   "url": "test",
@@ -10,7 +7,7 @@ export const testArticle: PostArticle = {
   "title": "Testartikel",
   "description": "Thema vom 01.01.2000",
   "subject": "lf-1",
-  "type": PostType.ARTICLE,
+  "type": "ARTICLE",
   "lessonDate": "2020-01-01",
   "lastUpdate": "2020-01-01",
   "schoolWeek": 0,
@@ -52,10 +49,7 @@ export const testArticle: PostArticle = {
         "ipsum",
         {
           "content": "Unordered list subtitle",
-          "sublist": [
-            "dolor",
-            "consectetur"
-          ]
+          "sublist": ["dolor", "consectetur"]
         }
       ]
     },
@@ -71,10 +65,7 @@ export const testArticle: PostArticle = {
         "Elit",
         {
           "content": "",
-          "sublist": [
-            "Alias",
-            "Aliquam"
-          ]
+          "sublist": ["Alias", "Aliquam"]
         }
       ]
     },
@@ -86,11 +77,7 @@ export const testArticle: PostArticle = {
       "type": "LIST",
       "content": "Ordered list title",
       "ordered": true,
-      "list": [
-        "Lorem",
-        "ipsum",
-        "dolor"
-      ]
+      "list": ["Lorem", "ipsum", "dolor"]
     },
     {
       "type": "LINE",
@@ -121,7 +108,7 @@ export const testArticle: PostArticle = {
     {
       "type": "CODE",
       "language": "javascript",
-      "content": "console.log(\"Hello World!\");"
+      "content": 'console.log("Hello World!");'
     },
     {
       "type": "TABLE",
@@ -275,9 +262,7 @@ export const testArticle: PostArticle = {
     {
       "type": "LIST",
       "content": "Quellen:",
-      "list": [
-        "TITLE | DATE | <a href='https://www.wikipedia.de/' target=\"_blank\" rel=\"noopener noreferrer\">https://www.wikipedia.de/</a>"
-      ]
+      "list": ['TITLE | DATE | <a href=\'https://www.wikipedia.de/\' target="_blank" rel="noopener noreferrer">https://www.wikipedia.de/</a>']
     }
   ]
 };

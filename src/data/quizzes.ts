@@ -1,5 +1,4 @@
-import { PostQuiz } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostQuiz } from "@models/post";
 
 export const quizzes: PostQuiz[] = [
   {
@@ -169,7 +168,7 @@ export const quizzes: PostQuiz[] = [
         "answer": 2
       },
       {
-        "question": "Anforderungen an ein \"Öffentliches Netz\" ...",
+        "question": 'Anforderungen an ein "Öffentliches Netz" ...',
         "choice1": "falsch lorem ipsum",
         "choice2": "richtig lorem ipsum",
         "answer": 2
@@ -249,5 +248,5 @@ export const quizzes: PostQuiz[] = [
         "answer": 1
       }
     ]
-  },
+  }
 ];

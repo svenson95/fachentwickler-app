@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF2_POSTS: PostArticle[] = [
   {
@@ -29,38 +28,22 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Definitionsphase",
-        "list": [
-          "Analysieren des Ausgangsproblems",
-          "Formulierungen der Projektziele und Anforderungen",
-          "Analysieren der Durchführbarkeit des Projekts"
-        ]
+        "list": ["Analysieren des Ausgangsproblems", "Formulierungen der Projektziele und Anforderungen", "Analysieren der Durchführbarkeit des Projekts"]
       },
       {
         "type": "LIST",
         "content": "Planungsphase",
-        "list": [
-          "Identifizieren der Arbeitspakete",
-          "Erstellen des Zeitplans",
-          "Erstellen des Kostenplans"
-        ]
+        "list": ["Identifizieren der Arbeitspakete", "Erstellen des Zeitplans", "Erstellen des Kostenplans"]
       },
       {
         "type": "LIST",
         "content": "Realisierungsphase",
-        "list": [
-          "Motivieren des Projektteams",
-          "Minimieren von Soll-Ist-Abweichungen",
-          "Dokumentierung des Projekts"
-        ]
+        "list": ["Motivieren des Projektteams", "Minimieren von Soll-Ist-Abweichungen", "Dokumentierung des Projekts"]
       },
       {
         "type": "LIST",
         "content": "Abschlussphase",
-        "list": [
-          "Präsentation des Projekts / Projektergebnis",
-          "Reflektieren des Projekts (Abschlussbesprechung)",
-          "Erstellung eines Abschlussberichts"
-        ]
+        "list": ["Präsentation des Projekts / Projektergebnis", "Reflektieren des Projekts (Abschlussbesprechung)", "Erstellung eines Abschlussberichts"]
       }
     ]
   },
@@ -78,7 +61,7 @@ export const LF2_POSTS: PostArticle[] = [
     "elements": [
       {
         "type": "TEXT",
-        "content": "Viele Vorhaben werden als \"Projekt\" bezeichnet, wie etwa der Bau einer Immobilie, die Anfertigung einer speziellen Maschine nach Anforderungen des Kunden, die kommerzielle Erstellung von Internetseiten oder die Entwicklung einer neuen Werbestrategie für Handelsbetriebe."
+        "content": 'Viele Vorhaben werden als "Projekt" bezeichnet, wie etwa der Bau einer Immobilie, die Anfertigung einer speziellen Maschine nach Anforderungen des Kunden, die kommerzielle Erstellung von Internetseiten oder die Entwicklung einer neuen Werbestrategie für Handelsbetriebe.'
       },
       {
         "type": "TEXT",
@@ -91,12 +74,7 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Einmaligkeit der Bedingungen in ihrer Gesamtheit → Ein Projekt wird demnach von Natur aus immer zum ersten und zum letzten Mal ausgeführt.",
-          "Zielvorgabe → Jedem Projekt werden präzise Ziele vorgegeben, die das Projekt erreichen muss.",
-          "Zeitliche, personelle, finanzielle Begrenzung → Ein Projekt hat stets einen konkreten Endtermin und begrenzte MIttel zur Erreichung der Projektziele",
-          "Projektspezifische Organisation → Speziell für dieses Projekt müssen organisatorische Rahmenbedingungen eingerichtet werden."
-        ]
+        "list": ["Einmaligkeit der Bedingungen in ihrer Gesamtheit → Ein Projekt wird demnach von Natur aus immer zum ersten und zum letzten Mal ausgeführt.", "Zielvorgabe → Jedem Projekt werden präzise Ziele vorgegeben, die das Projekt erreichen muss.", "Zeitliche, personelle, finanzielle Begrenzung → Ein Projekt hat stets einen konkreten Endtermin und begrenzte MIttel zur Erreichung der Projektziele", "Projektspezifische Organisation → Speziell für dieses Projekt müssen organisatorische Rahmenbedingungen eingerichtet werden."]
       },
       {
         "type": "TEXT",
@@ -105,12 +83,7 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Komplexität → Projekte sind gekennzeichnet durch eine Vielzahl von wechselseitigen Zusammenhängen.",
-          "Aufwand → Projekte sind im Vergleich zum Routinegeschäft sehr umfangreiche Vorhaben.",
-          "Fachübergreifender Charakter → Fachleute verschiedener Disziplinen bzw. Mitarbeiter unterschiedlicher Abteilungen sind beteiligt.",
-          "Teamarbeit → Die Fachleute arbeiten eng zusammen, da ständiger Informationsaustausch und die Weitergabe von Teilleistungen erforderlich sind."
-        ]
+        "list": ["Komplexität → Projekte sind gekennzeichnet durch eine Vielzahl von wechselseitigen Zusammenhängen.", "Aufwand → Projekte sind im Vergleich zum Routinegeschäft sehr umfangreiche Vorhaben.", "Fachübergreifender Charakter → Fachleute verschiedener Disziplinen bzw. Mitarbeiter unterschiedlicher Abteilungen sind beteiligt.", "Teamarbeit → Die Fachleute arbeiten eng zusammen, da ständiger Informationsaustausch und die Weitergabe von Teilleistungen erforderlich sind."]
       },
       {
         "type": "TEXT",
@@ -208,7 +181,7 @@ export const LF2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Beispiel: \"Beschaffung zur Fertigung von PCs\" <br/> Der Produktmanager „PC“ entscheidet über die Art der Materialien, der Leiter der Funktionsabteilung „Beschaffung“ entscheidet über die Auswahl der Lieferanten."
+        "content": 'Beispiel: "Beschaffung zur Fertigung von PCs" <br/> Der Produktmanager „PC“ entscheidet über die Art der Materialien, der Leiter der Funktionsabteilung „Beschaffung“ entscheidet über die Auswahl der Lieferanten.'
       },
       {
         "type": "IMAGE",
@@ -217,14 +190,7 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Bedeutung",
-        "list": [
-          "Förderung der Teamarbeit",
-          "Entlastung der Unternehmensleitung",
-          "Verbesserung der Qualität von Problemlösungen durch das Einbringen verschiedener Denkansätze",
-          "Auftreten von Kompetenzproblemen",
-          "Längere Entscheidungsdauer durch die Notwendigkeit der Abstimmung",
-          "Häufige Kompromissentscheidungen durch Konfliktvermeidungsstrategie der Abteilungsleiter"
-        ]
+        "list": ["Förderung der Teamarbeit", "Entlastung der Unternehmensleitung", "Verbesserung der Qualität von Problemlösungen durch das Einbringen verschiedener Denkansätze", "Auftreten von Kompetenzproblemen", "Längere Entscheidungsdauer durch die Notwendigkeit der Abstimmung", "Häufige Kompromissentscheidungen durch Konfliktvermeidungsstrategie der Abteilungsleiter"]
       },
       {
         "type": "LINE",
@@ -253,29 +219,17 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Vorgesetzter trifft alle Entscheidungen allein",
-          "Mitarbeiter arbeiten mittels Weisungen und Einzelanordnungen",
-          "Aktivitäten und Leistungen der Mitarbeiter werden laufend überprüft"
-        ]
+        "list": ["Vorgesetzter trifft alle Entscheidungen allein", "Mitarbeiter arbeiten mittels Weisungen und Einzelanordnungen", "Aktivitäten und Leistungen der Mitarbeiter werden laufend überprüft"]
       },
       {
         "type": "LIST",
         "content": "Vorteile:",
-        "list": [
-          "eindeutige Bezugsperson, die entscheidet",
-          "klare Anweisungen",
-          "hohe Entscheidungsgeschwindigkeit"
-        ]
+        "list": ["eindeutige Bezugsperson, die entscheidet", "klare Anweisungen", "hohe Entscheidungsgeschwindigkeit"]
       },
       {
         "type": "LIST",
         "content": "Nachteile:",
-        "list": [
-          "Motivationsprobleme bei Mitarbeitern",
-          "Wenig Entfaltungsmöglichkeiten der Mitarbeiter",
-          "Überforderte Chefs und daraus resultierende Fehlentscheidungen und hohe Wartezeiten auf Entscheidungen, Ratlosigkeit bei Abwesenheit des Chefs"
-        ]
+        "list": ["Motivationsprobleme bei Mitarbeitern", "Wenig Entfaltungsmöglichkeiten der Mitarbeiter", "Überforderte Chefs und daraus resultierende Fehlentscheidungen und hohe Wartezeiten auf Entscheidungen, Ratlosigkeit bei Abwesenheit des Chefs"]
       },
       {
         "type": "SUBTITLE",
@@ -284,28 +238,17 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Mitarbeiter(innen) werden am Entscheidungsprozess beteiligt",
-          "Ein ständiger Informationsaustausch (Anregungen, Meinungen, Stellungnahmen, Berichte) erfolgt zwischen Vorgesetzten und Mitarbeitern",
-          "Von den Mitarbeitern wird ein partnerschaftliches und eigenverantwortliches Arbeiten erwartet",
-          "Die Kontrolle der Mitarbeiter bezieht sich in erster Linie auf die Ergebnisse der Arbeit"
-        ]
+        "list": ["Mitarbeiter(innen) werden am Entscheidungsprozess beteiligt", "Ein ständiger Informationsaustausch (Anregungen, Meinungen, Stellungnahmen, Berichte) erfolgt zwischen Vorgesetzten und Mitarbeitern", "Von den Mitarbeitern wird ein partnerschaftliches und eigenverantwortliches Arbeiten erwartet", "Die Kontrolle der Mitarbeiter bezieht sich in erster Linie auf die Ergebnisse der Arbeit"]
       },
       {
         "type": "LIST",
         "content": "Vorteile:",
-        "list": [
-          "gesteigerte Mitarbeiter-Motivation und Wertschätzung / Vertrauen, zB Mitarbeiter zeigen sich durch Überstunden erkenntlich",
-          "Raum für Kreativität, Einbringung neuer Ideen und Ansätze, die die Firma bereichern"
-        ]
+        "list": ["gesteigerte Mitarbeiter-Motivation und Wertschätzung / Vertrauen, zB Mitarbeiter zeigen sich durch Überstunden erkenntlich", "Raum für Kreativität, Einbringung neuer Ideen und Ansätze, die die Firma bereichern"]
       },
       {
         "type": "LIST",
         "content": "Nachteile:",
-        "list": [
-          "Prozesse der Entscheidungsfindung kann zu viel Zeit in Anspruch nehmen",
-          "Vielzahl an unterschiedlichen Ideen und Meinungen kann zu Konflikten führen"
-        ]
+        "list": ["Prozesse der Entscheidungsfindung kann zu viel Zeit in Anspruch nehmen", "Vielzahl an unterschiedlichen Ideen und Meinungen kann zu Konflikten führen"]
       },
       {
         "type": "LINE",
@@ -317,7 +260,7 @@ export const LF2_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "Laissez-faire-Stil (\"Lasst alle nur machen\")"
+        "content": 'Laissez-faire-Stil ("Lasst alle nur machen")'
       },
       {
         "type": "TEXT",
@@ -342,11 +285,7 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Voraussetzungen eines kooperativen Führungsstils:",
-        "list": [
-          "Anpassung der Aufbauorganisation: Stellenbeschreibungen, Informations- und Entscheidungssysteme, Führungstechniken",
-          "Führungsinstrumente: Vergütungssysteme, Beurteilungsverfahren, Personalentwicklungsmaßnahmen",
-          "Training der Team- und Kommunikationsfähigkeit"
-        ]
+        "list": ["Anpassung der Aufbauorganisation: Stellenbeschreibungen, Informations- und Entscheidungssysteme, Führungstechniken", "Führungsinstrumente: Vergütungssysteme, Beurteilungsverfahren, Personalentwicklungsmaßnahmen", "Training der Team- und Kommunikationsfähigkeit"]
       },
       {
         "type": "LINE",
@@ -363,20 +302,12 @@ export const LF2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vorteile",
-        "list": [
-          "Mitarbeiter bringen sich am Arbeitsplatz besser ein",
-          "Verantwortlichkeiten sind besser und überprüfbar geregelt",
-          "Pflichtgefühl, Motivation und Mitwirkung sind größer",
-          "Das Management wird entlastet"
-        ]
+        "list": ["Mitarbeiter bringen sich am Arbeitsplatz besser ein", "Verantwortlichkeiten sind besser und überprüfbar geregelt", "Pflichtgefühl, Motivation und Mitwirkung sind größer", "Das Management wird entlastet"]
       },
       {
         "type": "LIST",
         "content": "Nachteile",
-        "list": [
-          "Vereinbarung und Überprüfung von Zielen können zeitaufwändig sein",
-          "Überprüfung und Konsequenzen bei Nichterreichung sind wichtig"
-        ]
+        "list": ["Vereinbarung und Überprüfung von Zielen können zeitaufwändig sein", "Überprüfung und Konsequenzen bei Nichterreichung sind wichtig"]
       },
       {
         "type": "LINE",
@@ -455,13 +386,7 @@ export const LF2_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "hidden": true,
-        "list": [
-          "a) Bearbeitung einer Eingangsrechnung <br/> -> Ja, gehört zu den Kernprozessen, da es sich um einen Wertschöpfenden Prozess handelt.",
-          "b) Geschäftsführer <br/> Nein, der Üpste selbst ist kein Prozess.",
-          "c) Erstellen einer Webseite für den Kunden <br/> Ja, Kernprozess weil wertschöpfend.",
-          "d) Anmeldung eines Mitarbeiters beim Sozialversicherungsträger <br/> Ja, Supportprozess weil NICHT wertschöpfend aber wichtig fürs Unternehmen bzw. für den Mitarbeiter",
-          "e) Reparatur von PC's <br/> Ja, Kernprozess wenn es sich um eine Dienstleistung handelt."
-        ]
+        "list": ["a) Bearbeitung einer Eingangsrechnung <br/> -> Ja, gehört zu den Kernprozessen, da es sich um einen Wertschöpfenden Prozess handelt.", "b) Geschäftsführer <br/> Nein, der Üpste selbst ist kein Prozess.", "c) Erstellen einer Webseite für den Kunden <br/> Ja, Kernprozess weil wertschöpfend.", "d) Anmeldung eines Mitarbeiters beim Sozialversicherungsträger <br/> Ja, Supportprozess weil NICHT wertschöpfend aber wichtig fürs Unternehmen bzw. für den Mitarbeiter", "e) Reparatur von PC's <br/> Ja, Kernprozess wenn es sich um eine Dienstleistung handelt."]
       },
       {
         "type": "LINE",
@@ -508,20 +433,14 @@ export const LF2_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Kernprozesse",
-            "sublist": [
-              "1. Das Entwickeln von Software → wertschöfpend.",
-              "2. Meetings um Ablauf zu besprechen oder um Prototyp zu testen - gehört zum Entwicklungsprozess → wertschöpfend"
-            ]
+            "sublist": ["1. Das Entwickeln von Software → wertschöfpend.", "2. Meetings um Ablauf zu besprechen oder um Prototyp zu testen - gehört zum Entwicklungsprozess → wertschöpfend"]
           },
           {
             "content": "Supportprozesse",
-            "sublist": [
-              "1. Beantworten von Kundenanfragen ohne direkte Kaufabsicht → keine direkte Wertschöpfung",
-              "2. Bearbeiten von Retouren - Prüfen und ggf. neuen Artikel versenden → keine direkte Wertschöpfung"
-            ]
+            "sublist": ["1. Beantworten von Kundenanfragen ohne direkte Kaufabsicht → keine direkte Wertschöpfung", "2. Bearbeiten von Retouren - Prüfen und ggf. neuen Artikel versenden → keine direkte Wertschöpfung"]
           }
         ]
       }
     ]
-  },
+  }
 ];

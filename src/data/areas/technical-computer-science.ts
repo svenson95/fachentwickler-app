@@ -1,6 +1,3 @@
-// import { Area } from "../../app/models/area";
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
-
 const technicalComputerScience = {
   "url": "/technische-informatik",
   "description": "Ein Hauptgebiet der Informatik, das sich mit Architektur, Entwurf, Realisierung und Bewertung von IT-Systemen – Computer- und Kommunkationssysteme – in Sachen Hardware als auch der systemnahen Software beschäftigt. Untersuchung des funktionellen Aufbaus von Hardware, logische Entwürfe zur Entwicklung von Rechentechnik, maschinennahe Programmierung.",

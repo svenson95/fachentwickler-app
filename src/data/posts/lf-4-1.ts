@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF4_1_POSTS: PostArticle[] = [
   {
@@ -99,10 +98,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Zusammenfassend lässt sich sagen:",
-        "list": [
-          "Elektronenüberschuß ergibt negative Ladung",
-          "Elektronenmangel ergibt positive Ladung"
-        ]
+        "list": ["Elektronenüberschuß ergibt negative Ladung", "Elektronenmangel ergibt positive Ladung"]
       },
       {
         "type": "LINE",
@@ -111,11 +107,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Grundbegriffe der Chemie - Atome | 13.08.2021 | <a href='https://studyflix.de/chemie/atome-2396' target=\"_blank\" rel=\"noopener noreferrer\">https://studyflix.de/chemie/atome-2396</a>",
-          "Angewandte Informatik II - Grundzüge der Elektronik | 13.08.2021 | <a href='https://www.fh-muenster.de/maschinenbau/downloads/inf_maschbau/ang_inf_II/06a.pdf' target=\"_blank\" rel=\"noopener noreferrer\">https://www.fh-muenster.de/maschinenbau/downloads/inf_maschbau/ang_inf_II/06a.pdf</a>",
-          "Elektrotechnische Grundlagen | 13.08.2021 | <a href='https://vogel-fachbuch.de/media/pdf/ba/8b/45/sample-9783834332646.pdf' target=\"_blank\" rel=\"noopener noreferrer\">https://vogel-fachbuch.de/media/pdf/ba/8b/45/sample-9783834332646.pdf</a>"
-        ]
+        "list": ['Grundbegriffe der Chemie - Atome | 13.08.2021 | <a href=\'https://studyflix.de/chemie/atome-2396\' target="_blank" rel="noopener noreferrer">https://studyflix.de/chemie/atome-2396</a>', 'Angewandte Informatik II - Grundzüge der Elektronik | 13.08.2021 | <a href=\'https://www.fh-muenster.de/maschinenbau/downloads/inf_maschbau/ang_inf_II/06a.pdf\' target="_blank" rel="noopener noreferrer">https://www.fh-muenster.de/maschinenbau/downloads/inf_maschbau/ang_inf_II/06a.pdf</a>', 'Elektrotechnische Grundlagen | 13.08.2021 | <a href=\'https://vogel-fachbuch.de/media/pdf/ba/8b/45/sample-9783834332646.pdf\' target="_blank" rel="noopener noreferrer">https://vogel-fachbuch.de/media/pdf/ba/8b/45/sample-9783834332646.pdf</a>']
       }
     ]
   },
@@ -140,11 +132,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Elektrische Ladung beschreibt entweder den Elektronenmangel (positive Ladung) oder den Elektronenüberschuss (negative Ladung)",
-          "Kann durch Reibung entstehen (elektrisieren)",
-          "Sich bewegende Ladungsträger nennt man elektrischer Strom"
-        ]
+        "list": ["Elektrische Ladung beschreibt entweder den Elektronenmangel (positive Ladung) oder den Elektronenüberschuss (negative Ladung)", "Kann durch Reibung entstehen (elektrisieren)", "Sich bewegende Ladungsträger nennt man elektrischer Strom"]
       },
       {
         "type": "TEXT",
@@ -329,11 +317,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Entsteht eine leitende Verbindung zwischen den Polen, kommt es zu einer Entladung. Bei diesem Vorgang fließt ein elektrischer Strom.",
-        "list": [
-          "Elektrische Spannung ist der Druck oder die Kraft auf freie Elektronen.",
-          "Elektrische Spannung ist die Ursache des elektrischen Stroms.",
-          "Elektrische Spannung (Druck) entsteht durch den Ladungsunterschied zweier Punkte oder Pole."
-        ]
+        "list": ["Elektrische Spannung ist der Druck oder die Kraft auf freie Elektronen.", "Elektrische Spannung ist die Ursache des elektrischen Stroms.", "Elektrische Spannung (Druck) entsteht durch den Ladungsunterschied zweier Punkte oder Pole."]
       },
       {
         "type": "TEXT",
@@ -372,9 +356,7 @@ export const LF4_1_POSTS: PostArticle[] = [
           },
           {
             "type": "default",
-            "columns": [
-              { "align": "middle", "content": "oder", "colSpan": 2 }
-            ]
+            "columns": [{ "align": "middle", "content": "oder", "colSpan": 2 }]
           },
           {
             "type": "default",
@@ -388,12 +370,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Potentiale φ (phi) eines Punktes ist gleich der Spannung dieses Punktes gegenüber dem Bezugspunkt 0 V.",
-        "list": [
-          "Bezugspunkt wird als „Masse“ bezeichnet",
-          "Potentiale angeben / messen zur Masse hin",
-          "Messung positiver Werte = Potential ist positiver als Bezugsmasse <br/> → Vorzeichen ist +",
-          "Messung negativer Werte = Potential ist negativer als Bezugspunkt <br/> → Vorzeichen ist -"
-        ]
+        "list": ["Bezugspunkt wird als „Masse“ bezeichnet", "Potentiale angeben / messen zur Masse hin", "Messung positiver Werte = Potential ist positiver als Bezugsmasse <br/> → Vorzeichen ist +", "Messung negativer Werte = Potential ist negativer als Bezugspunkt <br/> → Vorzeichen ist -"]
       },
       {
         "type": "TEXT",
@@ -508,17 +485,11 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Elektrischer Strom oder Elektrische Stromstärke wird kurz Strom genannt",
-          "Strom ist die Übertragung elektrischer Energie",
-          "Strom ist eine gezielte / gerichtete Bewegung freier Ladungsträger",
-          "Ladungsträger können Elektronen oder Ionen sein",
-          "Strom kann nur fließen, wenn zwischen zwei unterschiedlichen elektrischen Ladungen genügend freie und bewegliche Ladungsträger vorhanden sind (leitfähiges Material (Metall, Flüssigkeit, etc) ist geeignet)"
-        ]
+        "list": ["Elektrischer Strom oder Elektrische Stromstärke wird kurz Strom genannt", "Strom ist die Übertragung elektrischer Energie", "Strom ist eine gezielte / gerichtete Bewegung freier Ladungsträger", "Ladungsträger können Elektronen oder Ionen sein", "Strom kann nur fließen, wenn zwischen zwei unterschiedlichen elektrischen Ladungen genügend freie und bewegliche Ladungsträger vorhanden sind (leitfähiges Material (Metall, Flüssigkeit, etc) ist geeignet)"]
       },
       {
         "type": "TEXT",
-        "content": "Das Formelzeichen des elektrischen Stroms bzw. der elektrischen (Gleich-)Stromstärke ist das große \"I\". <br/> Gesetzliche Grundeinheit des elektrischen Stroms ist 1 Ampere (A)."
+        "content": 'Das Formelzeichen des elektrischen Stroms bzw. der elektrischen (Gleich-)Stromstärke ist das große "I". <br/> Gesetzliche Grundeinheit des elektrischen Stroms ist 1 Ampere (A).'
       },
       {
         "type": "TABLE",
@@ -581,11 +552,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Wird in Schaltungen mit einem Pfeil angezeigt",
-          "Unterschiedliche wissenschaftliche Annahmen",
-          "Erkenntnis: Definition von zwei Stromrichtungen"
-        ]
+        "list": ["Wird in Schaltungen mit einem Pfeil angezeigt", "Unterschiedliche wissenschaftliche Annahmen", "Erkenntnis: Definition von zwei Stromrichtungen"]
       },
       {
         "type": "TEXT",
@@ -650,11 +617,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Weisen die beiden Rampen der dreieckförmigen Spannung nicht die gleiche Steigung auf, dann spricht man von einer sägezahnförmigen Wellenform oder Sägezahnspannung (saw tooth voltage). Dreieckförmige Wechselspannungen, insbesondere Sägezahnspannungen kommen in folgenden Bereichen zur Anwendung:",
-        "list": [
-          "Horizontale Strahlablenkung in einem Oszilloskop",
-          "Analog-Digital-Wandler nach dem „Dual-Slope-Prinzip“",
-          "Erzeugung eines pulsdauermodulierten Signals („PDM“)"
-        ]
+        "list": ["Horizontale Strahlablenkung in einem Oszilloskop", "Analog-Digital-Wandler nach dem „Dual-Slope-Prinzip“", "Erzeugung eines pulsdauermodulierten Signals („PDM“)"]
       },
       {
         "type": "TEXT",
@@ -671,11 +634,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Wechselstrom mit drei Phasen (stromführende Leitungen)",
-          "Begriff Drehstrom ist aus der Erzeugung abgeleitet",
-          "Anordnung von drei Spulen im 120°-Abstand rund um ein sich"
-        ]
+        "list": ["Wechselstrom mit drei Phasen (stromführende Leitungen)", "Begriff Drehstrom ist aus der Erzeugung abgeleitet", "Anordnung von drei Spulen im 120°-Abstand rund um ein sich"]
       },
       {
         "type": "TEXT",
@@ -716,10 +675,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Die Bewegung freier Ladungsträger im Inneren eines Leiters hat zur Folge, dass die freien Ladungsträger gegen Atome stoßen und in ihrem Fluss gestört werden. <br/> Diesen Effekt nennt man Widerstand (auch <b>ohmscher Widerstand</b> genannt) (<u>Auswirkung: den Strom in einem Stromkreis zu begrenzen</u>)",
-        "list": [
-          "Spielt in der Elektronik eine sehr große Rolle",
-          "Neben klassischen Widerständen besitzt jedes andere Bauteil einen Widerstandswert, welches Einfluss auf Spannungen und Ströme und Schaltungen nimmt."
-        ]
+        "list": ["Spielt in der Elektronik eine sehr große Rolle", "Neben klassischen Widerständen besitzt jedes andere Bauteil einen Widerstandswert, welches Einfluss auf Spannungen und Ströme und Schaltungen nimmt."]
       },
       {
         "type": "TITLE",
@@ -1048,10 +1004,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Für Widerstandsfertigung eignen sich spezielle Legierungen aus Metallen und Halbleiterstoffen.",
-        "list": [
-          "Spezifischer Widerstand ρ (griechisch: Rho)",
-          "Der spezifische Widerstand ρ ist der Widerstandswert eines Stoffes von 1 m Länge und 1 mm² Querschnitt bei einer Temperatur von 20 °C"
-        ]
+        "list": ["Spezifischer Widerstand ρ (griechisch: Rho)", "Der spezifische Widerstand ρ ist der Widerstandswert eines Stoffes von 1 m Länge und 1 mm² Querschnitt bei einer Temperatur von 20 °C"]
       },
       {
         "type": "TEXT",
@@ -1215,7 +1168,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "\"Kapazität\" bezieht sich auf das Bauelement \"Kondensator\", dessen Eigenschaft die Speicherung einer Ladungsmenge ist. Wie verhält es sich bei einem Akku, wenn er voll aufgeladen ist? Welche Kapazität hat dann der abgebildete Akku?"
+        "content": '"Kapazität" bezieht sich auf das Bauelement "Kondensator", dessen Eigenschaft die Speicherung einer Ladungsmenge ist. Wie verhält es sich bei einem Akku, wenn er voll aufgeladen ist? Welche Kapazität hat dann der abgebildete Akku?'
       },
       {
         "type": "IMAGE",
@@ -1223,7 +1176,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Was bedeutet 12 V 44 Ah, welchen Bezug zwischen Ampere und Stunde gibt es bezogen auf die Angabe \"44Ah\"? Wie könnte man die Eigenschaft des Akkus bildlich umschreiben? <br/> →"
+        "content": 'Was bedeutet 12 V 44 Ah, welchen Bezug zwischen Ampere und Stunde gibt es bezogen auf die Angabe "44Ah"? Wie könnte man die Eigenschaft des Akkus bildlich umschreiben? <br/> →'
       },
       {
         "type": "TEXT",
@@ -1486,7 +1439,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "a) Was ist unter der \"technischen Stromrichtung\" zu verstehen?"
+        "content": 'a) Was ist unter der "technischen Stromrichtung" zu verstehen?'
       },
       {
         "type": "TEXT",
@@ -1495,7 +1448,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "b) Wie lässt sich die \"physikalische Stromrichtung\" erklären?"
+        "content": 'b) Wie lässt sich die "physikalische Stromrichtung" erklären?'
       },
       {
         "type": "TEXT",
@@ -1518,14 +1471,7 @@ export const LF4_1_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Rechteckspannung",
-          "Sinusspannung",
-          "Gleichspannung",
-          "3-Phasen-Wechselspannung",
-          "Sägezahnspannung",
-          "Dreieckspannung"
-        ]
+        "list": ["Rechteckspannung", "Sinusspannung", "Gleichspannung", "3-Phasen-Wechselspannung", "Sägezahnspannung", "Dreieckspannung"]
       },
       {
         "type": "IMAGE",
@@ -1572,7 +1518,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "a) Was besagt der \"Knotenpunktsatz\"?"
+        "content": 'a) Was besagt der "Knotenpunktsatz"?'
       },
       {
         "type": "TEXT",
@@ -1581,7 +1527,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "b) Was meint Kirchoff mit dem \"Maschensatz\"?"
+        "content": 'b) Was meint Kirchoff mit dem "Maschensatz"?'
       },
       {
         "type": "TEXT",
@@ -1710,11 +1656,11 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Für die Berechnung einer USV legt man meist den Stromverbrauch der abzusichernden Geräte zugrunde Verluste durch die Umwandlungsvorgänge in der USV werden meist nicht betrachtet (spielen theoretisch schon eine Rolle, werden aber oft als \"Reserve\" angegeben) oder es gibt einen Wirkungsgrad dieser USV (80% zum Beispiel)."
+        "content": 'Für die Berechnung einer USV legt man meist den Stromverbrauch der abzusichernden Geräte zugrunde Verluste durch die Umwandlungsvorgänge in der USV werden meist nicht betrachtet (spielen theoretisch schon eine Rolle, werden aber oft als "Reserve" angegeben) oder es gibt einen Wirkungsgrad dieser USV (80% zum Beispiel).'
       },
       {
         "type": "TEXT",
-        "content": "Meist wird eine Leistungsaufnahme von Geräten angegeben (in Watt) und man errechnet sich die Laufzeit anhand der USV-Daten. Sinnvoll ist der Abgleich über die errechnete Stromaufnahme, da die verwendeten Akkumulatoren über eine \"Kapazität\" verfügen. Die Angabe der Stromstärke über eine bestimmte Zeit steht in einem Verhältnis."
+        "content": 'Meist wird eine Leistungsaufnahme von Geräten angegeben (in Watt) und man errechnet sich die Laufzeit anhand der USV-Daten. Sinnvoll ist der Abgleich über die errechnete Stromaufnahme, da die verwendeten Akkumulatoren über eine "Kapazität" verfügen. Die Angabe der Stromstärke über eine bestimmte Zeit steht in einem Verhältnis.'
       },
       {
         "type": "TEXT",
@@ -1759,7 +1705,7 @@ export const LF4_1_POSTS: PostArticle[] = [
           {
             "type": "default",
             "columns": [
-              { "align": "left", "content": "TFT-Monitor 19\"" },
+              { "align": "left", "content": 'TFT-Monitor 19"' },
               { "align": "left", "content": "5" },
               { "align": "left", "content": "75" },
               { "align": "left", "content": "0,33 A" },
@@ -1944,7 +1890,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Bereiten Sie einen Schülervortrag vor. Versuchen Sie mit geeigneten Anschauungsmitteln Ihren Vortrag interessant, aussagekräftig und informativ zu gestalten. In Ihrem Buch \"Einfache IT-Systeme\" sowie \"Vernetzte IT-Systeme\" finden Sie viele Informationen zum Themengebiet. Beziehen Sie sich auf folgende Begriffe näher ..."
+        "content": 'Bereiten Sie einen Schülervortrag vor. Versuchen Sie mit geeigneten Anschauungsmitteln Ihren Vortrag interessant, aussagekräftig und informativ zu gestalten. In Ihrem Buch "Einfache IT-Systeme" sowie "Vernetzte IT-Systeme" finden Sie viele Informationen zum Themengebiet. Beziehen Sie sich auf folgende Begriffe näher ...'
       },
       {
         "type": "IMAGE",
@@ -2377,12 +2323,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Spannungen (Ströme / Widerstände) im Wechselstromkreis herauf- oder herunter-transformieren",
-          "Transformator – kurz Trafo – wirkt auf der Eingangs- bzw Primärseite, wie ein Verbraucher R für seine Wechselspannungsquelle, sofern der Trafo mit Nennlast belastet ist",
-          "Unbelastet wirk er wie eine Induktivität",
-          "Ausgangsseite bzw Sekundärseite wirkt als Wechselspannungsquelle mit Quellenspannung U0 und Innenwiderstand R<sup>i</sup>"
-        ]
+        "list": ["Spannungen (Ströme / Widerstände) im Wechselstromkreis herauf- oder herunter-transformieren", "Transformator – kurz Trafo – wirkt auf der Eingangs- bzw Primärseite, wie ein Verbraucher R für seine Wechselspannungsquelle, sofern der Trafo mit Nennlast belastet ist", "Unbelastet wirk er wie eine Induktivität", "Ausgangsseite bzw Sekundärseite wirkt als Wechselspannungsquelle mit Quellenspannung U0 und Innenwiderstand R<sup>i</sup>"]
       },
       {
         "type": "IMAGE",
@@ -2391,20 +2332,12 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Bestandteile / Aufbauprinzip",
-        "list": [
-          "Besteht aus zwei nebeneinander liegenden Spulen, mit gleicher oder unterschiedlicher Windungsanzahl",
-          "Windung = Draht, der einmal um den Spulenkörper herumgeführt wird",
-          "Gesamtheit der Windungen wird als Wicklung bezeichnet"
-        ]
+        "list": ["Besteht aus zwei nebeneinander liegenden Spulen, mit gleicher oder unterschiedlicher Windungsanzahl", "Windung = Draht, der einmal um den Spulenkörper herumgeführt wird", "Gesamtheit der Windungen wird als Wicklung bezeichnet"]
       },
       {
         "type": "LIST",
         "content": "Funktionsprinzip",
-        "list": [
-          "Auf der Eingangswicklung wird ein sich änderndes Magnetfeld durch die anliegende Wechselspannung erzeugt",
-          "Auf der Ausgangswicklung wird eine Induktionsspannung erzeugt",
-          "Die Höhe dieser Spannung ist abhängig vom Windungsverhältnis der Primär- oder Sekundärseite des Transformators"
-        ]
+        "list": ["Auf der Eingangswicklung wird ein sich änderndes Magnetfeld durch die anliegende Wechselspannung erzeugt", "Auf der Ausgangswicklung wird eine Induktionsspannung erzeugt", "Die Höhe dieser Spannung ist abhängig vom Windungsverhältnis der Primär- oder Sekundärseite des Transformators"]
       },
       {
         "type": "LINE",
@@ -2594,11 +2527,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vorteile",
-        "list": [
-          "Durch Umwandlung in höhere Frequenzen bei gleicher Leistung weniger Magnetvolumen (Gewicht, Streuung, Wärmeverlust, …)",
-          "Transistor im SNT immer ganz gesperrt oder ganz offen → daher kaum erwärmt",
-          "Hohe Wirkungsgrade über 90% erreichbar"
-        ]
+        "list": ["Durch Umwandlung in höhere Frequenzen bei gleicher Leistung weniger Magnetvolumen (Gewicht, Streuung, Wärmeverlust, …)", "Transistor im SNT immer ganz gesperrt oder ganz offen → daher kaum erwärmt", "Hohe Wirkungsgrade über 90% erreichbar"]
       },
       {
         "type": "LIST",
@@ -2606,9 +2535,7 @@ export const LF4_1_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Schaltung muss wegen intern verwendeter leistungsstarken Wechselfrequenz gut abgeschirmt werden für gute EMV ...",
-            "sublist": [
-              "Elektromagnetische Verträglichkeit → das Gerät lässt sich durch elektrische oder elektromagnetische Effekte nicht stören und stört auch keine anderen Geräte"
-            ]
+            "sublist": ["Elektromagnetische Verträglichkeit → das Gerät lässt sich durch elektrische oder elektromagnetische Effekte nicht stören und stört auch keine anderen Geräte"]
           },
           "Ausgang immer mit geringem AC-Anteil → Das stört Digitalschaltungen oder Ladegeräte weniger, aber empfindliche Verstärker zB in Funkgeräten, HiFi-Anlagen, …"
         ]
@@ -2616,16 +2543,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Lineares Trafonetzteil",
-        "list": [
-          "Einfacher Aufbau – niedrige Frequenz",
-          "Kaum Entstörmaßnahmen nötig",
-          "Relativ groß und schwer, durch großen Trafo",
-          "Geringere Wirkungsgrade, hoher Energieverbrauch",
-          "Komplexere Schaltungstechnik – Hochfrequenz",
-          "Abschirmung nötig um elektromagnetische Verträglichkeit zu gewähren",
-          "Kleinere und leichtere Bauweise für gleiche Energie durch geringeres Magnetvolumen des Trafos",
-          "Höhere Wirkungsgrade bis zu über 90%, sparsam im Verbrauch, günstiger für Umwelt und Kunden"
-        ]
+        "list": ["Einfacher Aufbau – niedrige Frequenz", "Kaum Entstörmaßnahmen nötig", "Relativ groß und schwer, durch großen Trafo", "Geringere Wirkungsgrade, hoher Energieverbrauch", "Komplexere Schaltungstechnik – Hochfrequenz", "Abschirmung nötig um elektromagnetische Verträglichkeit zu gewähren", "Kleinere und leichtere Bauweise für gleiche Energie durch geringeres Magnetvolumen des Trafos", "Höhere Wirkungsgrade bis zu über 90%, sparsam im Verbrauch, günstiger für Umwelt und Kunden"]
       },
       {
         "type": "LINE",
@@ -2682,10 +2600,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Ein hoher Wirkungsgrad bei SNT wird erreicht durch",
-        "list": [
-          "Ausgeklügelte Schaltungstechnik",
-          "Hochwertige Bauelemente – bspw. Schalttransistoren"
-        ]
+        "list": ["Ausgeklügelte Schaltungstechnik", "Hochwertige Bauelemente – bspw. Schalttransistoren"]
       },
       {
         "type": "IMAGE",
@@ -2758,14 +2673,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Folgende Vorgänge finden im Schaltnetzteil statt",
-        "list": [
-          "Gleichrichtung der Netzwechselspannung",
-          "Glättung der entstehenden Gleichspannung",
-          "„Zerhacken“ der Gleichspannung",
-          "Transformierung der entstandenen Wechselspannung",
-          "Gleichrichtung der Wechselspannung",
-          "Siebung der Gleichspannung"
-        ]
+        "list": ["Gleichrichtung der Netzwechselspannung", "Glättung der entstehenden Gleichspannung", "„Zerhacken“ der Gleichspannung", "Transformierung der entstandenen Wechselspannung", "Gleichrichtung der Wechselspannung", "Siebung der Gleichspannung"]
       },
       {
         "type": "TEXT",
@@ -2786,15 +2694,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Hoher Wirkungsgrad auch bei kleiner Nennleistung und wechselnden Lasten möglich",
-          "Gute Regelbarkeit und damit großer Toleranzbereich für Eingangsspannung und Netzfrequenz, ein Schaltnetzteil kann für den Einsatz mit sehr unterschiedlichen Netzspannungen (zB 85-255 V, 47-63 Hz) ausgelegt werden",
-          "Die Eingangsspannung kann bei dafür ausgelegten Geräten auch eine Gleichspannung sein",
-          "Geringes Gewicht und geringes Volumen wegen kleinerer Transformatoren und kleinerer sekundärseitiger Siebkondensatoren (hohe Arbeitsfrequenz)",
-          "Geringeres Kupfervolumen",
-          "Geringerer Standby-Verbrauch möglich",
-          "Preiswerter als linear geregelte Netzteile ohne Zwischenkreis"
-        ]
+        "list": ["Hoher Wirkungsgrad auch bei kleiner Nennleistung und wechselnden Lasten möglich", "Gute Regelbarkeit und damit großer Toleranzbereich für Eingangsspannung und Netzfrequenz, ein Schaltnetzteil kann für den Einsatz mit sehr unterschiedlichen Netzspannungen (zB 85-255 V, 47-63 Hz) ausgelegt werden", "Die Eingangsspannung kann bei dafür ausgelegten Geräten auch eine Gleichspannung sein", "Geringes Gewicht und geringes Volumen wegen kleinerer Transformatoren und kleinerer sekundärseitiger Siebkondensatoren (hohe Arbeitsfrequenz)", "Geringeres Kupfervolumen", "Geringerer Standby-Verbrauch möglich", "Preiswerter als linear geregelte Netzteile ohne Zwischenkreis"]
       },
       {
         "type": "SUBTITLE",
@@ -2803,13 +2703,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Aufgrund des Schaltbetriebs mit hohen Frequenzen sind Maßnahmen zur Verbesserung des EMV-Verhaltens (Störemission) erforderlich. Schaltnetzteile sind oft elektromagnetische Störquellen",
-          "Verformung Netzstrom (Stromimpulse) aufgrund Blindleistung für die Ladevorgänge der eingangsseitigen Elkos. Schaltnetzteile bewirken so eine Verzerrung der Versorgungsspannung, vgl. <br/> Total Harmonic Distortion. Abhilfe: Leistungsfaktorkorrektur (engl. ‘Power Factor Correction‘, kurz PFC) – seit 2001 bei SNTs mit weniger als 16 A Eingangsstrom, aber 50 Watt oder 75 Watt Eingangsleistung (je Geräteklasse) vorgeschrieben",
-          "Schlechtes Regelverhalten im Vergleich zum herkömmlichen Längsregler bei sehr schnellen Lastwechseln oder bei sehr niedriger Last",
-          "Höhere Komplexität der Schaltung, mehr Bauelemente und deshalb statistisch höhere Ausfallwahrscheinlichkeit",
-          "Bei geringer Last problematisch (Schwingneigung) → Lösung: Vorlast"
-        ]
+        "list": ["Aufgrund des Schaltbetriebs mit hohen Frequenzen sind Maßnahmen zur Verbesserung des EMV-Verhaltens (Störemission) erforderlich. Schaltnetzteile sind oft elektromagnetische Störquellen", "Verformung Netzstrom (Stromimpulse) aufgrund Blindleistung für die Ladevorgänge der eingangsseitigen Elkos. Schaltnetzteile bewirken so eine Verzerrung der Versorgungsspannung, vgl. <br/> Total Harmonic Distortion. Abhilfe: Leistungsfaktorkorrektur (engl. ‘Power Factor Correction‘, kurz PFC) – seit 2001 bei SNTs mit weniger als 16 A Eingangsstrom, aber 50 Watt oder 75 Watt Eingangsleistung (je Geräteklasse) vorgeschrieben", "Schlechtes Regelverhalten im Vergleich zum herkömmlichen Längsregler bei sehr schnellen Lastwechseln oder bei sehr niedriger Last", "Höhere Komplexität der Schaltung, mehr Bauelemente und deshalb statistisch höhere Ausfallwahrscheinlichkeit", "Bei geringer Last problematisch (Schwingneigung) → Lösung: Vorlast"]
       },
       {
         "type": "LINE",
@@ -2822,47 +2716,27 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<b>+ 3,3 V</b>",
-        "list": [
-          "Laufwerkselektronik von S-ATA-Laufwerken",
-          "Prozessor",
-          "Arbeitsspeicher",
-          "Chipsatz",
-          "Grafikkarten"
-        ]
+        "list": ["Laufwerkselektronik von S-ATA-Laufwerken", "Prozessor", "Arbeitsspeicher", "Chipsatz", "Grafikkarten"]
       },
       {
         "type": "LIST",
         "content": "<b>+ 5 V</b>",
-        "list": [
-          "Laufwerkselektronik",
-          "Prozessor (AT-kompatible)",
-          "Arbeitsspeicher (AT-kompatible)",
-          "Chipsatz",
-          "Erweiterungskarten"
-        ]
+        "list": ["Laufwerkselektronik", "Prozessor (AT-kompatible)", "Arbeitsspeicher (AT-kompatible)", "Chipsatz", "Erweiterungskarten"]
       },
       {
         "type": "LIST",
         "content": "<b>- 5 V</b>",
-        "list": [
-          "Erweiterungskarten (ISA)"
-        ]
+        "list": ["Erweiterungskarten (ISA)"]
       },
       {
         "type": "LIST",
         "content": "<b>+ 12 V</b>",
-        "list": [
-          "Laufwerkmotoren",
-          "Lüfter",
-          "Erweiterungskarten"
-        ]
+        "list": ["Laufwerkmotoren", "Lüfter", "Erweiterungskarten"]
       },
       {
         "type": "LIST",
         "content": "<b>- 12 V</b>",
-        "list": [
-          "Erweiterungskarten (ISA, PCI)"
-        ]
+        "list": ["Erweiterungskarten (ISA, PCI)"]
       },
       {
         "type": "TEXT",
@@ -2956,10 +2830,7 @@ export const LF4_1_POSTS: PostArticle[] = [
           "Müssen mit Leistungsfaktorkorrekturfilter (engl. ‘Power Factor Compensation‘, daher PFC abgekürzt) verfügen",
           {
             "content": "zwei Bauformen",
-            "sublist": [
-              "passive Version ist vergleichsweise billig, schwer und nur begrenzt wirksam",
-              "aktiver Filter (teurere Lösung)"
-            ]
+            "sublist": ["passive Version ist vergleichsweise billig, schwer und nur begrenzt wirksam", "aktiver Filter (teurere Lösung)"]
           },
           "80-PLUS-Zertifizierung schreibt Leistungsfaktor über 0,9 vor",
           "Einschaltstrombegrenzung und Leistungsfaktorkorrektur sind in einigen Konstruktionen sehr eng verbunden",
@@ -3009,12 +2880,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Es wird ein Rechtecksignal in seiner Pulsweite moduliert",
-          "Verfahren wird zB in Reglern eingesetzt, um die Drehgeschwindigkeit eines Motors zu regeln.",
-          "Pulsfrequenz (Motorstärke) bleibt konstant, nur die Pulsbreite ist variabel – verändert sich",
-          "Tastverhältnis ändert sich somit ebenfalls"
-        ]
+        "list": ["Es wird ein Rechtecksignal in seiner Pulsweite moduliert", "Verfahren wird zB in Reglern eingesetzt, um die Drehgeschwindigkeit eines Motors zu regeln.", "Pulsfrequenz (Motorstärke) bleibt konstant, nur die Pulsbreite ist variabel – verändert sich", "Tastverhältnis ändert sich somit ebenfalls"]
       },
       {
         "type": "IMAGE",
@@ -3047,12 +2913,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Üblich eingesetzt in …",
-        "list": [
-          "D/A-Wandlern (Digital-Analog-Umsetzer, digital in analog umwandeln)",
-          "Schaltnetzteilen",
-          "Steuerung von Elektromotoren",
-          "Dimmern"
-        ]
+        "list": ["D/A-Wandlern (Digital-Analog-Umsetzer, digital in analog umwandeln)", "Schaltnetzteilen", "Steuerung von Elektromotoren", "Dimmern"]
       },
       {
         "type": "LINE",
@@ -3165,18 +3026,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Eine entsprechende Beschaltung der Eingänge und des Ausgangs kann folgende Einsatzgebiete ergeben:",
-        "list": [
-          "Inverter",
-          "Addierer",
-          "Summierer",
-          "Subtrahierer",
-          "Verstärker, Nichtinverter",
-          "Differenzverstärker",
-          "Aktive Abschwächer (zB. Pegelanpassungen)",
-          "Filterschaltungen",
-          "Komplette Reglungsschaltungen",
-          "zB. ein elektronisch geregeltes Netzteil"
-        ]
+        "list": ["Inverter", "Addierer", "Summierer", "Subtrahierer", "Verstärker, Nichtinverter", "Differenzverstärker", "Aktive Abschwächer (zB. Pegelanpassungen)", "Filterschaltungen", "Komplette Reglungsschaltungen", "zB. ein elektronisch geregeltes Netzteil"]
       },
       {
         "type": "LINE",
@@ -3407,14 +3257,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Temperatursensoren sind …",
-        "list": [
-          "NTC – Heißleiter",
-          "PTC – Kaltleiter",
-          "Pyroelektrischer Sensor",
-          "PT100 / PT1000",
-          "Widerstandsthermometer",
-          "pn-Übergang der Basis-Emitter-Strecke eines Transistors"
-        ]
+        "list": ["NTC – Heißleiter", "PTC – Kaltleiter", "Pyroelektrischer Sensor", "PT100 / PT1000", "Widerstandsthermometer", "pn-Übergang der Basis-Emitter-Strecke eines Transistors"]
       },
       {
         "type": "IMAGE",
@@ -3431,20 +3274,12 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Lichtsensoren (Helligkeit)",
-        "list": [
-          "LDR – Fotowiderstand",
-          "Fotodioden",
-          "Solarzellen / Fotoelemente",
-          "Fototransistoren",
-          "Fotozelle"
-        ]
+        "list": ["LDR – Fotowiderstand", "Fotodioden", "Solarzellen / Fotoelemente", "Fototransistoren", "Fotozelle"]
       },
       {
         "type": "LIST",
         "content": "Spannungsüberwachung",
-        "list": [
-          "Varistoren"
-        ]
+        "list": ["Varistoren"]
       },
       {
         "type": "LINE",
@@ -3457,22 +3292,12 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Magnetismus / Magnetfelder",
-        "list": [
-          "MDR – Feldplatte",
-          "Hallgenerator / Hallsonde"
-        ]
+        "list": ["MDR – Feldplatte", "Hallgenerator / Hallsonde"]
       },
       {
         "type": "LIST",
         "content": "Drucksensoren (Kraft, Druck und Beschleunigung)",
-        "list": [
-          "DMS – Dehnungsmessstreifen",
-          "Piezoresistiver Sensor",
-          "Pyroelektrischer Sensor",
-          "MEMS – Micro-Electro-Mechanical-Systems",
-          "Kapazitiver Aufnehmer",
-          "Induktiver Aufnehmer"
-        ]
+        "list": ["DMS – Dehnungsmessstreifen", "Piezoresistiver Sensor", "Pyroelektrischer Sensor", "MEMS – Micro-Electro-Mechanical-Systems", "Kapazitiver Aufnehmer", "Induktiver Aufnehmer"]
       },
       {
         "type": "LINE",
@@ -3497,13 +3322,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Durch angelegte Spannung entsteht ein elektrisches Feld",
-          "Sperrschichten werden teilweise abgebaut",
-          "Wird Spannung erhöht, baut elektrische Feldstärke zunehmend Sperrschichten ab",
-          "Widerstandswert nimmt bei zunehmender Spannung ab",
-          "Bei sinkender Spannung steigt der Widerstandswert wieder an"
-        ]
+        "list": ["Durch angelegte Spannung entsteht ein elektrisches Feld", "Sperrschichten werden teilweise abgebaut", "Wird Spannung erhöht, baut elektrische Feldstärke zunehmend Sperrschichten ab", "Widerstandswert nimmt bei zunehmender Spannung ab", "Bei sinkender Spannung steigt der Widerstandswert wieder an"]
       },
       {
         "type": "LINE",
@@ -3516,14 +3335,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Spannungsstabilisierung",
-          "Überspannungsschutz",
-          "Schaltfunkenunterdrückung",
-          "Spannungsbegrenzung (paralleler Schutzwiderstand)",
-          "Absorption der Schaltenergie von Spulen",
-          "Verformung von Spannungs- und Stromkurven in der Impuls-, Fernseh-, Steuer- und Regeltechnik"
-        ]
+        "list": ["Spannungsstabilisierung", "Überspannungsschutz", "Schaltfunkenunterdrückung", "Spannungsbegrenzung (paralleler Schutzwiderstand)", "Absorption der Schaltenergie von Spulen", "Verformung von Spannungs- und Stromkurven in der Impuls-, Fernseh-, Steuer- und Regeltechnik"]
       },
       {
         "type": "LINE",
@@ -3536,12 +3348,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ab einer bestimmten Spannung wird der Varistor niederohmig und verhindert dadurch einen weiteren Spannungsanstieg",
-          "Schneidet Spannungen beider Polaritäten vom bestimmten Grenzwert an ganz scharf ab",
-          "Polung des Varistors spielt dabei keine Rolle",
-          "Strom / Spannungskennlinie ist symmetrisch"
-        ]
+        "list": ["Ab einer bestimmten Spannung wird der Varistor niederohmig und verhindert dadurch einen weiteren Spannungsanstieg", "Schneidet Spannungen beider Polaritäten vom bestimmten Grenzwert an ganz scharf ab", "Polung des Varistors spielt dabei keine Rolle", "Strom / Spannungskennlinie ist symmetrisch"]
       },
       {
         "type": "IMAGE",
@@ -3586,10 +3393,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Verringern Widerstandswert mit steigender Temperatur",
-          "Leiten bei hohen Temperaturen besser als bei niedrigen Temperaturen"
-        ]
+        "list": ["Verringern Widerstandswert mit steigender Temperatur", "Leiten bei hohen Temperaturen besser als bei niedrigen Temperaturen"]
       },
       {
         "type": "IMAGE",
@@ -3606,13 +3410,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Temperaturfühler bei Temperaturmessung",
-          "Temperaturstabilisierung von Halbleiterschaltungen als Arbeitspunkteinstellung",
-          "Anzugsverzögerung (in Reihe zum Relais)",
-          "Abfallverzögerung (parallel zum Relais)",
-          "Reduzierung des Einschaltstromes in Stromkreisen"
-        ]
+        "list": ["Temperaturfühler bei Temperaturmessung", "Temperaturstabilisierung von Halbleiterschaltungen als Arbeitspunkteinstellung", "Anzugsverzögerung (in Reihe zum Relais)", "Abfallverzögerung (parallel zum Relais)", "Reduzierung des Einschaltstromes in Stromkreisen"]
       },
       {
         "type": "LINE",
@@ -3645,11 +3443,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Flüssigkeitsniveaufühler (Flüssigkeit kühlt den eigenerwärmten PTC ab)",
-          "Temperaturregelung für eine Heizung",
-          "Leistungs-PTCs werden zum Schutz gegen Überstrom alternativ zu Schmelzsicherungen eingesetzt"
-        ]
+        "list": ["Flüssigkeitsniveaufühler (Flüssigkeit kühlt den eigenerwärmten PTC ab)", "Temperaturregelung für eine Heizung", "Leistungs-PTCs werden zum Schutz gegen Überstrom alternativ zu Schmelzsicherungen eingesetzt"]
       },
       {
         "type": "HINT",
@@ -3674,13 +3468,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ist ein Halbleiter, dessen Widerstandswert lichtabhängig ist",
-          "Halbleitermaterialien sind alle lichtempfindlich",
-          "Effekt nicht in jedem Halbleiter gleich",
-          "Für LDR Halbleitermischungen mit starkem Effekt",
-          "Materialien Cadmiumsulfid (CdS), Bleisulfid (PbS), Bleiselenid (PbSe), Indiumarsenid (InAs), Germanium (Ge) oder Silizium (Si)"
-        ]
+        "list": ["Ist ein Halbleiter, dessen Widerstandswert lichtabhängig ist", "Halbleitermaterialien sind alle lichtempfindlich", "Effekt nicht in jedem Halbleiter gleich", "Für LDR Halbleitermischungen mit starkem Effekt", "Materialien Cadmiumsulfid (CdS), Bleisulfid (PbS), Bleiselenid (PbSe), Indiumarsenid (InAs), Germanium (Ge) oder Silizium (Si)"]
       },
       {
         "type": "IMAGE",
@@ -3689,12 +3477,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Fällt Licht (Photonen) auf lichtempfindliches Halbleitermaterial …",
-        "list": [
-          "werden Elektronen aus ihren Kristallen herausgelöst (Paarbildung)",
-          "LDR wird leitfähiger, sein Widerstandswert wird kleiner",
-          "Je mehr Licht auf das Bauteil fällt, desto kleiner wird der Widerstand und desto größer wird der elektrische Strom",
-          "Vorgang ist sehr träge, Verzögerung dauert mehrere Millisekunden"
-        ]
+        "list": ["werden Elektronen aus ihren Kristallen herausgelöst (Paarbildung)", "LDR wird leitfähiger, sein Widerstandswert wird kleiner", "Je mehr Licht auf das Bauteil fällt, desto kleiner wird der Widerstand und desto größer wird der elektrische Strom", "Vorgang ist sehr träge, Verzögerung dauert mehrere Millisekunden"]
       },
       {
         "type": "IMAGE",
@@ -3719,19 +3502,12 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Einsatz in Gleich- und Wechselstromkreisen"
-        ]
+        "list": ["Einsatz in Gleich- und Wechselstromkreisen"]
       },
       {
         "type": "LIST",
         "content": "Unter Vernachlässigung der Trägheit für:",
-        "list": [
-          "Beleuchtungsstärkemesser",
-          "Flammenwächter",
-          "Dämmerungsschalter",
-          "Sensor in Lichtschranken"
-        ]
+        "list": ["Beleuchtungsstärkemesser", "Flammenwächter", "Dämmerungsschalter", "Sensor in Lichtschranken"]
       }
     ]
   },
@@ -3768,12 +3544,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Einsatz als ...",
-        "list": [
-          "Fotodiode",
-          "Fototransistor",
-          "Optokoppler (Vereinigung von Sende- / Empfangseinheit)",
-          "LED – Light Emitter Diode"
-        ]
+        "list": ["Fotodiode", "Fototransistor", "Optokoppler (Vereinigung von Sende- / Empfangseinheit)", "LED – Light Emitter Diode"]
       },
       {
         "type": "LINE",
@@ -3786,16 +3557,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Fotodioden sind Halbleiterdioden",
-          "bestehen aus Silizium oder Germanium",
-          "pn-Übergang ist dem Licht baulich sehr gut zugänglich gemacht",
-          "Einfallendes Licht löst Elektronen aus ihren Kristallbindungen",
-          "Sperrschicht erzeugt Elektronen und Löcher als freie Ladungsträger",
-          "Fotodiode wird Sperrrichtung betrieben",
-          "Freien Ladungsträger bewegen sich aus der Sperrschicht",
-          "Sperrstrom steigt an"
-        ]
+        "list": ["Fotodioden sind Halbleiterdioden", "bestehen aus Silizium oder Germanium", "pn-Übergang ist dem Licht baulich sehr gut zugänglich gemacht", "Einfallendes Licht löst Elektronen aus ihren Kristallbindungen", "Sperrschicht erzeugt Elektronen und Löcher als freie Ladungsträger", "Fotodiode wird Sperrrichtung betrieben", "Freien Ladungsträger bewegen sich aus der Sperrschicht", "Sperrstrom steigt an"]
       },
       {
         "type": "IMAGE",
@@ -3824,12 +3586,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Wandeln elektrische Energie in Licht um",
-          "Funktionieren wie Halbleiterdioden",
-          "Arbeiten in Durchlassrichtung",
-          "Lichtimpulse bis in den MHz-Bereich reichend"
-        ]
+        "list": ["Wandeln elektrische Energie in Licht um", "Funktionieren wie Halbleiterdioden", "Arbeiten in Durchlassrichtung", "Lichtimpulse bis in den MHz-Bereich reichend"]
       },
       {
         "type": "HINT",
@@ -3842,13 +3599,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Aufbau",
-        "list": [
-          "Besteht aus einem n-leitenden Grundhalbleiter",
-          "Darauf ist eine sehr dünne p-leitende Halbleiterschicht mit großer Löcherdichte",
-          "Wie bei normalen Dioden wird die Grenzschicht mit freien Ladungsträgern überschwemmt",
-          "Elektronen rekombinieren mit Löchern",
-          "Elektronen geben ihre Energie in Form eines Lichtblitzes frei"
-        ]
+        "list": ["Besteht aus einem n-leitenden Grundhalbleiter", "Darauf ist eine sehr dünne p-leitende Halbleiterschicht mit großer Löcherdichte", "Wie bei normalen Dioden wird die Grenzschicht mit freien Ladungsträgern überschwemmt", "Elektronen rekombinieren mit Löchern", "Elektronen geben ihre Energie in Form eines Lichtblitzes frei"]
       },
       {
         "type": "TABLE",
@@ -3856,9 +3607,7 @@ export const LF4_1_POSTS: PostArticle[] = [
         "rows": [
           {
             "type": "header",
-            "columns": [
-              { "align": "left", "content": "Standard-LED (IF / ILED = 10 mA)", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "left", "content": "Standard-LED (IF / ILED = 10 mA)", "colSpan": 3 }]
           },
           {
             "type": "header",
@@ -3921,26 +3670,12 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Halbleiter Bezeichnungen",
-        "list": [
-          "Galliumarsenid (GaAs)",
-          "Galliumarsenidphosphid (GaAsP)",
-          "Galliumphosphid (GaP)",
-          "Aluminium-Indium-Gallium-Phosphid (AlInGaP) für Rot, Rot-Orange, Amber ",
-          "Indium-Gallium-Nitrogen (InGaN) für Grün, Cyan, Blau, Weiß",
-          "GalliumNitrid (GaN) für Blau"
-        ]
+        "list": ["Galliumarsenid (GaAs)", "Galliumarsenidphosphid (GaAsP)", "Galliumphosphid (GaP)", "Aluminium-Indium-Gallium-Phosphid (AlInGaP) für Rot, Rot-Orange, Amber ", "Indium-Gallium-Nitrogen (InGaN) für Grün, Cyan, Blau, Weiß", "GalliumNitrid (GaN) für Blau"]
       },
       {
         "type": "LIST",
         "content": "Anwendungen",
-        "list": [
-          "Anzeige von Betriebszuständen",
-          "7-Segment-Anzeige",
-          "Lampenersatz",
-          "Lauflichter",
-          "Laserpointer",
-          "Lichtschranken"
-        ]
+        "list": ["Anzeige von Betriebszuständen", "7-Segment-Anzeige", "Lampenersatz", "Lauflichter", "Laserpointer", "Lichtschranken"]
       },
       {
         "type": "TEXT",
@@ -3969,13 +3704,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Optokoppler",
-        "list": [
-          "stehen sich gegenüber: LED – Fotosensor",
-          "ist ein 4-poliges Bauelement",
-          "Eingangsseitig LED",
-          "LED-Licht fällt auf die Fotodiode, ausgangsseitig angeordnet",
-          "Dadurch können Signale galvanisch getrennt übertragen werden"
-        ]
+        "list": ["stehen sich gegenüber: LED – Fotosensor", "ist ein 4-poliges Bauelement", "Eingangsseitig LED", "LED-Licht fällt auf die Fotodiode, ausgangsseitig angeordnet", "Dadurch können Signale galvanisch getrennt übertragen werden"]
       },
       {
         "type": "TEXT",
@@ -3996,22 +3725,12 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "“Licht-Verstärkung durch stimulierte Emission von Strahlung“",
-          "Bezeichnet sowohl den physikalischen Effekt als auch das Gerät, mit dem Laserstrahlen erzeugt werden"
-        ]
+        "list": ["“Licht-Verstärkung durch stimulierte Emission von Strahlung“", "Bezeichnet sowohl den physikalischen Effekt als auch das Gerät, mit dem Laserstrahlen erzeugt werden"]
       },
       {
         "type": "LIST",
         "content": "Laserstrahlen sind elektromagnetische Wellen, unterschied zur gewöhnlichen Lichtquelle:",
-        "list": [
-          "Unerreichte Kombination von hoher Intensität",
-          "Sehr engem Frequenzbereich (monochromatisches Licht)",
-          "Scharfer Bündelung des Strahls",
-          "Großer Kohärenzlänge (zusammenhängend)",
-          "Sehr weitem Frequenzbereich",
-          "Extrem kurze / intenstive Strahlpulse mit exakter Wiederholfrequenz"
-        ]
+        "list": ["Unerreichte Kombination von hoher Intensität", "Sehr engem Frequenzbereich (monochromatisches Licht)", "Scharfer Bündelung des Strahls", "Großer Kohärenzlänge (zusammenhängend)", "Sehr weitem Frequenzbereich", "Extrem kurze / intenstive Strahlpulse mit exakter Wiederholfrequenz"]
       },
       {
         "type": "IMAGE",
@@ -4044,13 +3763,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Anwendungen",
-        "list": [
-          "Addiererschaltungen",
-          "Subtrahiererschaltungen",
-          "Addier-Subtrahier-Werke",
-          "Multiplikationsschaltungen",
-          "Arithmetisch-logische Einheit (ALU)"
-        ]
+        "list": ["Addiererschaltungen", "Subtrahiererschaltungen", "Addier-Subtrahier-Werke", "Multiplikationsschaltungen", "Arithmetisch-logische Einheit (ALU)"]
       },
       {
         "type": "LINE",
@@ -4350,13 +4063,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Flip-Flops unterscheiden sich …",
-        "list": [
-          "in der Anzahl und der logischen Funktion ihrer Eingänge – beschrieben durch ihre charakteristische Gleichung",
-          "in der zeitlichen Reaktion auf die Eingangssignale (Daten- und Steuersignale), insbesondere auf die Taktsignale (Timing)",
-          "in der Durchlässigkeit von Datensignalen bis zum Ausgang (Transparenz oder Momentanfreigabe)",
-          "in der Möglichkeit der direkten Rückführung von Ausgangssignalen auf die Eingänge (Transparenz oder Zähl-Flipflop)",
-          "und im strukturellen Aufbau (einfache interne Mitkopplung oder Master-Slave-Prinzip)"
-        ]
+        "list": ["in der Anzahl und der logischen Funktion ihrer Eingänge – beschrieben durch ihre charakteristische Gleichung", "in der zeitlichen Reaktion auf die Eingangssignale (Daten- und Steuersignale), insbesondere auf die Taktsignale (Timing)", "in der Durchlässigkeit von Datensignalen bis zum Ausgang (Transparenz oder Momentanfreigabe)", "in der Möglichkeit der direkten Rückführung von Ausgangssignalen auf die Eingänge (Transparenz oder Zähl-Flipflop)", "und im strukturellen Aufbau (einfache interne Mitkopplung oder Master-Slave-Prinzip)"]
       },
       {
         "type": "TEXT",
@@ -5296,11 +5003,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Es gibt viele Gründe für die Kodierung einer Datenquelle:",
-        "list": [
-          "Komprimieren von Audio- oder Videodaten für eine schnelle Übertragbarkeit über „langsame“ Datenkanäle (viele Daten in kurzer Zeit).",
-          "Komprimieren von Audio- oder Videodaten, um bei gegebener Übertragungsgeschwindigkeit oder gegebenem Speicherplatz eine höhere Bild- oder Tonqualität zu erzielen.",
-          "Daten werden mit Fehlerschutz kodiert, damit Störungen, die auf dem Übertragungskanal auftreten und die Daten stören würden, beim Empfänger korrigiert werden können (Forward Error Correction). Dazu werden den ursprünglichen Daten von einem Kodierer zusätzliche Informationen beigefügt, die dem Dekodierer erlauben, Daten und Fehler voneinander zu trennen."
-        ]
+        "list": ["Komprimieren von Audio- oder Videodaten für eine schnelle Übertragbarkeit über „langsame“ Datenkanäle (viele Daten in kurzer Zeit).", "Komprimieren von Audio- oder Videodaten, um bei gegebener Übertragungsgeschwindigkeit oder gegebenem Speicherplatz eine höhere Bild- oder Tonqualität zu erzielen.", "Daten werden mit Fehlerschutz kodiert, damit Störungen, die auf dem Übertragungskanal auftreten und die Daten stören würden, beim Empfänger korrigiert werden können (Forward Error Correction). Dazu werden den ursprünglichen Daten von einem Kodierer zusätzliche Informationen beigefügt, die dem Dekodierer erlauben, Daten und Fehler voneinander zu trennen."]
       },
       {
         "type": "LINE",
@@ -5800,14 +5503,7 @@ export const LF4_1_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Kabel werden als Übertragungsmedien benutzt für ...",
-        "list": [
-          "die Übertragung von Informationen",
-          "Daten- und Kontrollsignale",
-          "Niederfrequenz",
-          "Hochfrequenz und Mikrowellen",
-          "die Energie-Übertragung der Versorgungsspannungen",
-          "..."
-        ]
+        "list": ["die Übertragung von Informationen", "Daten- und Kontrollsignale", "Niederfrequenz", "Hochfrequenz und Mikrowellen", "die Energie-Übertragung der Versorgungsspannungen", "..."]
       },
       {
         "type": "TEXT",
@@ -5981,6 +5677,6 @@ export const LF4_1_POSTS: PostArticle[] = [
         "type": "IMAGE",
         "content": "http://159.65.105.150:3000/images/5f5f9c18471abd6e76d8cbdd"
       }
-    ],
+    ]
   }
 ];

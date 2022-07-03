@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF9_POSTS: PostArticle[] = [
   {
@@ -35,14 +34,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vorteile eines Computers mit Netzwerk-Verbindung",
-        "list": [
-          "Nutzen gemeinsamer Datenbestände",
-          "Nutzen verfügbarer Ressourcen",
-          "Teilen von Rechenleistung und Speicherkapazität",
-          "zentrales Steuern von Programmen und Daten",
-          "Durchsetzen von Berechtigungen und Zuständigkeiten",
-          "Durchsetzen Datenschutz und Datensicherheit"
-        ]
+        "list": ["Nutzen gemeinsamer Datenbestände", "Nutzen verfügbarer Ressourcen", "Teilen von Rechenleistung und Speicherkapazität", "zentrales Steuern von Programmen und Daten", "Durchsetzen von Berechtigungen und Zuständigkeiten", "Durchsetzen Datenschutz und Datensicherheit"]
       },
       {
         "type": "LINE",
@@ -56,35 +48,7 @@ export const LF9_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Einstieg in das Lernfeld",
-          "Öffentliches Netzwerk & Telekommunikations-Netzbetreiber",
-          "Digitale Vermittlungsstelle des Ortsnetzes",
-          "Analoge Telefonie",
-          "ISDN-Grundlagen",
-          "Modulation AM / FM / QAM u. a.",
-          "xDSL-Familie",
-          "Vectoring",
-          "Voice-Over-IP",
-          "DECT-Standard",
-          "WAN & Digitale Hierarchie im Netz",
-          "BK-DOCSIS-Netz",
-          "DWDM",
-          "MLPS-Netz",
-          "Broadcastnetze",
-          "Richtfunk",
-          "Übertragung im Glasfasernetz",
-          "Übertragungverfahren",
-          "STM/PTM/ATM",
-          "Mobilfunknetze",
-          "WIMAX",
-          "Sat-Kom.",
-          "WLAN",
-          "ATM-Netz",
-          "NGN",
-          "TK-Anlagen",
-          "Berechnung von Datenübertragungen"
-        ]
+        "list": ["Einstieg in das Lernfeld", "Öffentliches Netzwerk & Telekommunikations-Netzbetreiber", "Digitale Vermittlungsstelle des Ortsnetzes", "Analoge Telefonie", "ISDN-Grundlagen", "Modulation AM / FM / QAM u. a.", "xDSL-Familie", "Vectoring", "Voice-Over-IP", "DECT-Standard", "WAN & Digitale Hierarchie im Netz", "BK-DOCSIS-Netz", "DWDM", "MLPS-Netz", "Broadcastnetze", "Richtfunk", "Übertragung im Glasfasernetz", "Übertragungverfahren", "STM/PTM/ATM", "Mobilfunknetze", "WIMAX", "Sat-Kom.", "WLAN", "ATM-Netz", "NGN", "TK-Anlagen", "Berechnung von Datenübertragungen"]
       }
     ]
   },
@@ -104,7 +68,7 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Öffentliche Netze bilden die Infrastrukturgrundlage für die Übertragung beliebiger Informationen, bei einem Netz, das <b>grundsätzlich für jedermann zugänglich</b> ist, wird von einem öffentlichen Netz gesprochen. Werden Informationen mit nachrichtentechnischen Übertragungsverfahren ausgetauscht, dann wird dies als Telekommunikation bezeichnet - giechiesch \"tele\" = fern, lateinisch \"communicare\" = mitteilen."
+        "content": 'Öffentliche Netze bilden die Infrastrukturgrundlage für die Übertragung beliebiger Informationen, bei einem Netz, das <b>grundsätzlich für jedermann zugänglich</b> ist, wird von einem öffentlichen Netz gesprochen. Werden Informationen mit nachrichtentechnischen Übertragungsverfahren ausgetauscht, dann wird dies als Telekommunikation bezeichnet - giechiesch "tele" = fern, lateinisch "communicare" = mitteilen.'
       },
       {
         "type": "TEXT",
@@ -133,11 +97,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "~ 40 Millionen Festnetzanschlüsse / über 22 Millionen DSL-Anschlüsse",
-          "Telekommunikationsnetz ist das Kabelnetz für Fernseh-, Internet- und Hörfunk",
-          "Kabel- als auch Satellitenanbieter werden als Kabelnetzbetreiber bezeichnet"
-        ]
+        "list": ["~ 40 Millionen Festnetzanschlüsse / über 22 Millionen DSL-Anschlüsse", "Telekommunikationsnetz ist das Kabelnetz für Fernseh-, Internet- und Hörfunk", "Kabel- als auch Satellitenanbieter werden als Kabelnetzbetreiber bezeichnet"]
       },
       {
         "type": "LINE",
@@ -161,17 +121,12 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "Anforderungen an ein \"Öffentliches Netz\" ..., das <u>grundsätzlich für Jedermann zugänglich</u> ist"
+        "content": 'Anforderungen an ein "Öffentliches Netz" ..., das <u>grundsätzlich für Jedermann zugänglich</u> ist'
       },
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Verbindung zu einem Teilnehmer muss zu jeder Zeit möglich sein (Ausnahme in besonderen Fällen)",
-          "Teilnehmer muss das gewünschte Ziel selbst bestimmen können",
-          "Netz muss Vielzahl gleichzeitiger Verbindungen ermöglichen",
-          "Notwendiger technischer Aufwand muss begrenzt werden"
-        ]
+        "list": ["Verbindung zu einem Teilnehmer muss zu jeder Zeit möglich sein (Ausnahme in besonderen Fällen)", "Teilnehmer muss das gewünschte Ziel selbst bestimmen können", "Netz muss Vielzahl gleichzeitiger Verbindungen ermöglichen", "Notwendiger technischer Aufwand muss begrenzt werden"]
       },
       {
         "type": "LINE",
@@ -265,7 +220,7 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "Verteilungsebenen des \"klassischen Kupfernetzes\""
+        "content": 'Verteilungsebenen des "klassischen Kupfernetzes"'
       },
       {
         "type": "IMAGE",
@@ -274,12 +229,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "HVt = Haupt-Verteiler",
-          "KVz = Kabel-Verzweiger",
-          "APL = Abschluss-Punkt der Linientechnik",
-          "TAE = Telefon-Anschluss-Einheit (Telefonsteckdose)"
-        ]
+        "list": ["HVt = Haupt-Verteiler", "KVz = Kabel-Verzweiger", "APL = Abschluss-Punkt der Linientechnik", "TAE = Telefon-Anschluss-Einheit (Telefonsteckdose)"]
       },
       {
         "type": "LINE",
@@ -313,12 +263,7 @@ export const LF9_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Festgeschaltete Verbindung (permanent)",
-          "Wählverbindung (freie Wahl)",
-          "Punkt-Zu-Punkt-Verbindung (Teilnehmer-Zu-Teilnehmer)",
-          "Mehrpunktverbindung (z.B. Polling, Master, Slave), Ein-Zu-Mehrere, Mehrere-Zu-Einem"
-        ]
+        "list": ["Festgeschaltete Verbindung (permanent)", "Wählverbindung (freie Wahl)", "Punkt-Zu-Punkt-Verbindung (Teilnehmer-Zu-Teilnehmer)", "Mehrpunktverbindung (z.B. Polling, Master, Slave), Ein-Zu-Mehrere, Mehrere-Zu-Einem"]
       },
       {
         "type": "LINE",
@@ -331,12 +276,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Leistungsvermittlung (circuit switching)",
-          "Speichervermittlung (store and forward)",
-          "Paketvermittlung (packet switching)",
-          "Virtuelle Vermittlung (virtual)"
-        ]
+        "list": ["Leistungsvermittlung (circuit switching)", "Speichervermittlung (store and forward)", "Paketvermittlung (packet switching)", "Virtuelle Vermittlung (virtual)"]
       },
       {
         "type": "IMAGE",
@@ -389,13 +329,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Freileitung",
-        "list": [
-          "Mögliche Frequenzen: 0 Hz bis 100 kHz",
-          "Repeaterabstand: 2 bis 20 km",
-          "Bandbreite: < 10 kHz",
-          "Bitfehlerrate: ?",
-          "Beispiel: oberirdische Telefonleitung, veraltet, in Deutschland hauptsächlich im bahninternen Fernsprechnetz verwendet"
-        ]
+        "list": ["Mögliche Frequenzen: 0 Hz bis 100 kHz", "Repeaterabstand: 2 bis 20 km", "Bandbreite: < 10 kHz", "Bitfehlerrate: ?", "Beispiel: oberirdische Telefonleitung, veraltet, in Deutschland hauptsächlich im bahninternen Fernsprechnetz verwendet"]
       },
       {
         "type": "IMAGE",
@@ -408,24 +342,12 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Verdrillte Kupferadern",
-        "list": [
-          "Mögliche Frequenzen: 0 Hz bis 750 MHz",
-          "Repeaterabstand: ca. 1,2 km",
-          "Bandbreite: 100 kHz bis 600 kHz",
-          "Bitfehlerrate: ca. 10 - 5",
-          "Details zu ADSL über Kupferdoppeladern sind in der Richtlinie G.992.1 geregelt. Beispiele: Telefonnetz (Teilnehmeranschlussbereich) oder Ethernet."
-        ]
+        "list": ["Mögliche Frequenzen: 0 Hz bis 750 MHz", "Repeaterabstand: ca. 1,2 km", "Bandbreite: 100 kHz bis 600 kHz", "Bitfehlerrate: ca. 10 - 5", "Details zu ADSL über Kupferdoppeladern sind in der Richtlinie G.992.1 geregelt. Beispiele: Telefonnetz (Teilnehmeranschlussbereich) oder Ethernet."]
       },
       {
         "type": "LIST",
         "content": "Koaxialkabel",
-        "list": [
-          "Mögliche Frequenzen: bis 5 GHz",
-          "Repeaterabstand: 1 km bis 10 km",
-          "Bandbreite: 900 MHz",
-          "Bitfehlerrate: ca. 10 - 7",
-          "Beispiele: Telefonnetz (netzintern), Ethernet, Kabelfernsehen oder Antennenkabel."
-        ]
+        "list": ["Mögliche Frequenzen: bis 5 GHz", "Repeaterabstand: 1 km bis 10 km", "Bandbreite: 900 MHz", "Bitfehlerrate: ca. 10 - 7", "Beispiele: Telefonnetz (netzintern), Ethernet, Kabelfernsehen oder Antennenkabel."]
       },
       {
         "type": "IMAGE",
@@ -458,9 +380,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Öffentliche Netze werden von Netzbetreiber verwaltet",
-        "list": [
-          "Accounting: pro Zeit / pro Datenvolumen / Flatrate für bestimmte Verbindungen oder Allnet-Flat"
-        ]
+        "list": ["Accounting: pro Zeit / pro Datenvolumen / Flatrate für bestimmte Verbindungen oder Allnet-Flat"]
       },
       {
         "type": "HINT",
@@ -497,22 +417,12 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Verbindungsarten",
-        "list": [
-          "Festgeschaltete Verbindung (permanent)",
-          "Wählverbindung (freie Wahl)",
-          "Punkt-zu-Punkt-Verbindung (Teilnehmer-zu-Teilnehmer)",
-          "Mehrpunktverbindung (z.B.Polling, Master, Slave) (Ein-zu-Mehreren oder Mehrere-zu-Einem)"
-        ]
+        "list": ["Festgeschaltete Verbindung (permanent)", "Wählverbindung (freie Wahl)", "Punkt-zu-Punkt-Verbindung (Teilnehmer-zu-Teilnehmer)", "Mehrpunktverbindung (z.B.Polling, Master, Slave) (Ein-zu-Mehreren oder Mehrere-zu-Einem)"]
       },
       {
         "type": "LIST",
         "content": "Arten der Vermittlung",
-        "list": [
-          "Leitungsvermittlung (circuit switching)",
-          "Speichervermittlung (store and forward)",
-          "Paketvermittlung (packet switching)",
-          "Virtuelle Vermittlung (virtual)"
-        ]
+        "list": ["Leitungsvermittlung (circuit switching)", "Speichervermittlung (store and forward)", "Paketvermittlung (packet switching)", "Virtuelle Vermittlung (virtual)"]
       },
       {
         "type": "LINE",
@@ -525,19 +435,12 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Übertragungsarten",
-        "list": [
-          "Analoge Übertragung (Amplitudenmodulation, Frequenzmodulation, Phasenmodulation)",
-          "Serielle Digitale Übertragung"
-        ]
+        "list": ["Analoge Übertragung (Amplitudenmodulation, Frequenzmodulation, Phasenmodulation)", "Serielle Digitale Übertragung"]
       },
       {
         "type": "LIST",
         "content": "Betriebsarten",
-        "list": [
-          "Simplex (sx, Richtungsbetrieb) - Überwachungskameras",
-          "Halbduplex (hdx, Wechselbetrieb) - Walkie-Talkies",
-          "Duplex (fdx, Gegenbetrieb) - Telefon"
-        ]
+        "list": ["Simplex (sx, Richtungsbetrieb) - Überwachungskameras", "Halbduplex (hdx, Wechselbetrieb) - Walkie-Talkies", "Duplex (fdx, Gegenbetrieb) - Telefon"]
       },
       {
         "type": "LINE",
@@ -550,32 +453,17 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Datenübertragungseinrichtungen (DÜE)",
-        "list": [
-          "Analogmodem (FSN)",
-          "Datenfernschaltgerät DFGt (X.25 Datex-P)",
-          "Datenanschlussgerät DAGt (HfD)",
-          "ISDN-NT (ISDN)",
-          "ADSL-Modem (Internet)",
-          "..."
-        ]
+        "list": ["Analogmodem (FSN)", "Datenfernschaltgerät DFGt (X.25 Datex-P)", "Datenanschlussgerät DAGt (HfD)", "ISDN-NT (ISDN)", "ADSL-Modem (Internet)", "..."]
       },
       {
         "type": "LIST",
         "content": "OSI-Modell-Referenzen",
-        "list": [
-          "Schicht 1 (z.B. V.24, X.21 Netzgerät)",
-          "Schicht 2 (z.B. BSC, HDLC, LAP ähnlich einem Switch)",
-          "Schicht 3 (z.B. X.25 intelligentes Gerät einem Router entsprechend)"
-        ]
+        "list": ["Schicht 1 (z.B. V.24, X.21 Netzgerät)", "Schicht 2 (z.B. BSC, HDLC, LAP ähnlich einem Switch)", "Schicht 3 (z.B. X.25 intelligentes Gerät einem Router entsprechend)"]
       },
       {
         "type": "LIST",
         "content": "Prüfschleifen",
-        "list": [
-          "Schleifentyp 1: DEE-Prüfschleife (Daten-End-Einrichtung)",
-          "Schleifentyp 2: Netzprüfschleife (z. Bsp. Passiver Prüfabschluss)",
-          "Schleifentyp 3: Lokale Prüfschleife"
-        ]
+        "list": ["Schleifentyp 1: DEE-Prüfschleife (Daten-End-Einrichtung)", "Schleifentyp 2: Netzprüfschleife (z. Bsp. Passiver Prüfabschluss)", "Schleifentyp 3: Lokale Prüfschleife"]
       },
       {
         "type": "LINE",
@@ -588,20 +476,12 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Ziel von Netzen",
-        "list": [
-          "ihren Nutzern Dienste/Telekommunikationsdienste anzubieten",
-          "Bereitstellung von Dienstleistungen durch unterschiedliche Betreiber zum Zwecke der Telekommunikation",
-          "Telekommunikationsdienste nutzen sogenannte Übertragungsdienste (bearer services)"
-        ]
+        "list": ["ihren Nutzern Dienste/Telekommunikationsdienste anzubieten", "Bereitstellung von Dienstleistungen durch unterschiedliche Betreiber zum Zwecke der Telekommunikation", "Telekommunikationsdienste nutzen sogenannte Übertragungsdienste (bearer services)"]
       },
       {
         "type": "LIST",
         "content": "Dienst-Apskete werden unterschieden in",
-        "list": [
-          "Diensttypen - (Tele-)kommunikations-, Übertragungs- und Zusatzdienste",
-          "Dienstarten - Sprache, Texte, Bilder und Daten",
-          "Eigenschaft / Struktur - Echtzeit, Abruf, Verteilung, Duplex, Simplex und Halbduplex"
-        ]
+        "list": ["Diensttypen - (Tele-)kommunikations-, Übertragungs- und Zusatzdienste", "Dienstarten - Sprache, Texte, Bilder und Daten", "Eigenschaft / Struktur - Echtzeit, Abruf, Verteilung, Duplex, Simplex und Halbduplex"]
       },
       {
         "type": "LINE",
@@ -614,52 +494,32 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Informationstyp (auf Dienstarten bezogen)",
-        "list": [
-          "Sprache",
-          "Text",
-          "Daten",
-          "Stillbild",
-          "Bewegtbild"
-        ]
+        "list": ["Sprache", "Text", "Daten", "Stillbild", "Bewegtbild"]
       },
       {
         "type": "LIST",
         "content": "Kommunikationsart",
-        "list": [
-          "Individualkommunikation",
-          "Verteilkommunikation"
-        ]
+        "list": ["Individualkommunikation", "Verteilkommunikation"]
       },
       {
         "type": "LIST",
         "content": "Kommunikationsrichtung",
-        "list": [
-          "Monologdienste",
-          "Dialogdienste"
-        ]
+        "list": ["Monologdienste", "Dialogdienste"]
       },
       {
         "type": "LIST",
         "content": "Erforderliche Bitraten",
-        "list": [
-          "Sporadische Meldungen (einige bit/s, Telemetriedienste)",
-          "Schmalbanddienste ... <br/> mit ≤ 64 kbit/s, für Sprach- und Datendienste <br/> mit = n x 64 kbit/s, für Stillbildübertragung, Sprachübertragung hoher Güte",
-          "Breitbanddienste (einige Mbit/s, Bewegtbildübertragung, Bildfernsprechen)"
-        ]
+        "list": ["Sporadische Meldungen (einige bit/s, Telemetriedienste)", "Schmalbanddienste ... <br/> mit ≤ 64 kbit/s, für Sprach- und Datendienste <br/> mit = n x 64 kbit/s, für Stillbildübertragung, Sprachübertragung hoher Güte", "Breitbanddienste (einige Mbit/s, Bewegtbildübertragung, Bildfernsprechen)"]
       },
       {
         "type": "LIST",
         "content": "Dienstmerkmale",
-        "list": [
-          "Sind „Dienstspezifische“ Nutzungseigenschaften"
-        ]
+        "list": ["Sind „Dienstspezifische“ Nutzungseigenschaften"]
       },
       {
         "type": "LIST",
         "content": "Dienstübergänge",
-        "list": [
-          "Stellen Gateways her"
-        ]
+        "list": ["Stellen Gateways her"]
       },
       {
         "type": "LINE",
@@ -672,34 +532,22 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Trägerdienste (Bearer Services)",
-        "list": [
-          "Datenübertragungsdienste",
-          "Überdecken nur untere Schichten (max. 1-3) des OSI-Modells - d.h. übertragungsorientiert, transparente Übertragung <br/> Beispiele: Datex-P, ISDN-Datenübertragung, Frame Relay"
-        ]
+        "list": ["Datenübertragungsdienste", "Überdecken nur untere Schichten (max. 1-3) des OSI-Modells - d.h. übertragungsorientiert, transparente Übertragung <br/> Beispiele: Datex-P, ISDN-Datenübertragung, Frame Relay"]
       },
       {
         "type": "LIST",
         "content": "Teledienste (Tele-Services, Unified Services, Standard-Dienste)",
-        "list": [
-          "Netzeigene Anwendungsdienste",
-          "Überdecken ggf. alle 7 Schichten des OSI-Modells",
-          "Interne Implementierung bleibt für Nutzer transparent <br/> Beispiele: Telefon, Telefax, T-Online"
-        ]
+        "list": ["Netzeigene Anwendungsdienste", "Überdecken ggf. alle 7 Schichten des OSI-Modells", "Interne Implementierung bleibt für Nutzer transparent <br/> Beispiele: Telefon, Telefax, T-Online"]
       },
       {
         "type": "LIST",
         "content": "Umwandlungsdienste (Conversion Services, Gateway Services)",
-        "list": [
-          "Möglichkeit zur Umwandlung zwischen Diensten - Beispiel: Faxe als TIFF-Datei oder PDF-Datei als E-Mail-Anhang"
-        ]
+        "list": ["Möglichkeit zur Umwandlung zwischen Diensten - Beispiel: Faxe als TIFF-Datei oder PDF-Datei als E-Mail-Anhang"]
       },
       {
         "type": "LIST",
         "content": "Zusatzdienste (Mehrwertdienste, Value-Added-Services)",
-        "list": [
-          "Bauen auf Tele- und Trägerdiensten auf",
-          "Stellen zusätzliche Funktionen / Dienste bereit - Beispiele: Weckruf, Fernsteuerung, Televoting 0137... - Gewinnspiele in Radio/Fernsehen"
-        ]
+        "list": ["Bauen auf Tele- und Trägerdiensten auf", "Stellen zusätzliche Funktionen / Dienste bereit - Beispiele: Weckruf, Fernsteuerung, Televoting 0137... - Gewinnspiele in Radio/Fernsehen"]
       },
       {
         "type": "LINE",
@@ -712,11 +560,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Man unterscheidet nach der Multifunktionsfähigkeit folgende drei Typen",
-        "list": [
-          "<u>Typ I</u> - für jeden Dienst wurde ein spezielles Netz und spezielle Endgeräte entwickelt die Dienstekompatibilität wird über die Endgerätekompatibilität realisiert - Beispiel: Fernsprechnetz, ursprüngliche Funknetze, Telex, Teletext",
-          "<u>Typ II</u> - Netze, die universelle Transportdienste bereitstellen diese Dienste werden durch spezielle Hardware und spezielle Protokolle realisiert alle Dienste nutzen universelle Transportdienste - Beispiel: ISDN, Internet",
-          "<u>Typ III</u> - Entwicklung von Mulimediaapplikationen, deren flexible Konstruktion und deren Mobilität - Beispiel: Multimedia-Tele-Konferenzing, Mobilitäts-Management in Funknetzen"
-        ]
+        "list": ["<u>Typ I</u> - für jeden Dienst wurde ein spezielles Netz und spezielle Endgeräte entwickelt die Dienstekompatibilität wird über die Endgerätekompatibilität realisiert - Beispiel: Fernsprechnetz, ursprüngliche Funknetze, Telex, Teletext", "<u>Typ II</u> - Netze, die universelle Transportdienste bereitstellen diese Dienste werden durch spezielle Hardware und spezielle Protokolle realisiert alle Dienste nutzen universelle Transportdienste - Beispiel: ISDN, Internet", "<u>Typ III</u> - Entwicklung von Mulimediaapplikationen, deren flexible Konstruktion und deren Mobilität - Beispiel: Multimedia-Tele-Konferenzing, Mobilitäts-Management in Funknetzen"]
       },
       {
         "type": "TABLE",
@@ -784,16 +628,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "1861 - Erfindung des Telefons von Philipp Reis",
-          "1877 - Brauchbares Telefon durch Alexander Graham Bell",
-          "1881 - Erstes handvermitteltes Fernsprechamt in Berlin, 48 Teilnehmer",
-          "1889 - Erfindung des Hebdrehwählers",
-          "1930 - elektromechanische Vermittlungsknoten -> analoge Durchschaltesysteme mit autom. Durchwahl (festverdrahteter Steuerung)",
-          "1970 - rechnergesteuerte Vermittlungsknoten -> analoger Durchschaltung mit automatische Durchwahl, SPC Stored Program Control, Zentrale Steuerung",
-          "1980 - rechnergesteuerte Vermittlungsknoten -> digitale Durchschaltung mit automatischer Durchwahl, rechnergesteuertes Mehrprozessorsystem",
-          "1988 - Einführung ISDN"
-        ]
+        "list": ["1861 - Erfindung des Telefons von Philipp Reis", "1877 - Brauchbares Telefon durch Alexander Graham Bell", "1881 - Erstes handvermitteltes Fernsprechamt in Berlin, 48 Teilnehmer", "1889 - Erfindung des Hebdrehwählers", "1930 - elektromechanische Vermittlungsknoten -> analoge Durchschaltesysteme mit autom. Durchwahl (festverdrahteter Steuerung)", "1970 - rechnergesteuerte Vermittlungsknoten -> analoger Durchschaltung mit automatische Durchwahl, SPC Stored Program Control, Zentrale Steuerung", "1980 - rechnergesteuerte Vermittlungsknoten -> digitale Durchschaltung mit automatischer Durchwahl, rechnergesteuertes Mehrprozessorsystem", "1988 - Einführung ISDN"]
       },
       {
         "type": "IMAGE",
@@ -815,20 +650,12 @@ export const LF9_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Nebenstellenbereich",
-          "Ortsnetze",
-          "Nationales Fernnetz",
-          "Internationales Fernnetz"
-        ]
+        "list": ["Nebenstellenbereich", "Ortsnetze", "Nationales Fernnetz", "Internationales Fernnetz"]
       },
       {
         "type": "LIST",
         "content": "<b>Verbindungsleitungen</b>",
-        "list": [
-          "Frequenzmultiplexleitungen (analog)",
-          "Zeitmultiplexleitungen (PCM-Strecken) (digital)"
-        ]
+        "list": ["Frequenzmultiplexleitungen (analog)", "Zeitmultiplexleitungen (PCM-Strecken) (digital)"]
       },
       {
         "type": "TEXT",
@@ -889,16 +716,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Telefonie",
-        "list": [
-          "Internationaler Sprachdienst im Fernsprechnetz",
-          "Individualdienst",
-          "Sprachdienst (300 Hz bis 3400 Hz)",
-          "Auskunftsdienst",
-          "Auftragsdienst (z.B. Wecken)",
-          "Service 130",
-          "Sprachdienst (Voice Mail)",
-          "Konferenzverbindungen"
-        ]
+        "list": ["Internationaler Sprachdienst im Fernsprechnetz", "Individualdienst", "Sprachdienst (300 Hz bis 3400 Hz)", "Auskunftsdienst", "Auftragsdienst (z.B. Wecken)", "Service 130", "Sprachdienst (Voice Mail)", "Konferenzverbindungen"]
       }
     ]
   },
@@ -922,7 +740,7 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Im Zuge der Digitalisierung der Netze findet jedoch in den OVSt inzwischen eine Analog-Digital-Umsetzung statt, so dass im Carrier-Netz selbst nur digitale Signale transportiert werden. Neben den eigentlichen Nutzsignalen sind zusätzlich noch Steuerungsinformationen zu übertragen. Dazu zählen insbesondere die Zustände \"frei\" und \"besetzt\" sowie die gewählte Rufnummer. In analogen Telefonnetzen laufen die entsprechenden Signale hörbar über die normale Leitung."
+        "content": 'Im Zuge der Digitalisierung der Netze findet jedoch in den OVSt inzwischen eine Analog-Digital-Umsetzung statt, so dass im Carrier-Netz selbst nur digitale Signale transportiert werden. Neben den eigentlichen Nutzsignalen sind zusätzlich noch Steuerungsinformationen zu übertragen. Dazu zählen insbesondere die Zustände "frei" und "besetzt" sowie die gewählte Rufnummer. In analogen Telefonnetzen laufen die entsprechenden Signale hörbar über die normale Leitung.'
       },
       {
         "type": "LINE",
@@ -939,20 +757,12 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Darunter versteht man",
-        "list": [
-          "Kommunikationssystem zur Abwicklung von Telefongesprächen (Telefonie)",
-          "Telefonnetz ist ideeller Begriff",
-          "Unabhängig von jeweils verwendeten Technologie oder Architektur"
-        ]
+        "list": ["Kommunikationssystem zur Abwicklung von Telefongesprächen (Telefonie)", "Telefonnetz ist ideeller Begriff", "Unabhängig von jeweils verwendeten Technologie oder Architektur"]
       },
       {
         "type": "LIST",
         "content": "Ein Telefonnetz liegt dann vor, wenn",
-        "list": [
-          "Gesprächspartner durch Eingabe einer Rufnummer angewählt bzw. angerufen werden",
-          "Aufbau der Verbindung zwischen den Gesprächspartnern vorwiegend der Sprachübertragung dient",
-          "Nach Beendigung des Gesprächs die aufgebaute Verbindung wieder abgebaut wird und so die verwendeten Betriebsmittel (Telefon, Netzressourcen) für neue Gesprächsverbindungen zur Verfügung stehen"
-        ]
+        "list": ["Gesprächspartner durch Eingabe einer Rufnummer angewählt bzw. angerufen werden", "Aufbau der Verbindung zwischen den Gesprächspartnern vorwiegend der Sprachübertragung dient", "Nach Beendigung des Gesprächs die aufgebaute Verbindung wieder abgebaut wird und so die verwendeten Betriebsmittel (Telefon, Netzressourcen) für neue Gesprächsverbindungen zur Verfügung stehen"]
       },
       {
         "type": "LINE",
@@ -965,19 +775,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Die wichtigsten Leistungsmerkmale (sind vom Provider abhängig und zum Teil kostenpflichtig!)",
-        "list": [
-          "Einfachrufnummer (1 Rufnummer pro Anschluss)",
-          "Rufnummernübermittlung (CLIP)",
-          "Anklopfen",
-          "Rückfragen, Halten, Makeln",
-          "Rückruf bei Besetzt",
-          "Anrufweiterschaltung",
-          "Rufnummernsperren",
-          "Dreierkonferenz",
-          "Entgeltinformationen",
-          "Geschlossene Benutzergruppen",
-          "Netzanrufbeantworter (0800 33 02424)"
-        ]
+        "list": ["Einfachrufnummer (1 Rufnummer pro Anschluss)", "Rufnummernübermittlung (CLIP)", "Anklopfen", "Rückfragen, Halten, Makeln", "Rückruf bei Besetzt", "Anrufweiterschaltung", "Rufnummernsperren", "Dreierkonferenz", "Entgeltinformationen", "Geschlossene Benutzergruppen", "Netzanrufbeantworter (0800 33 02424)"]
       },
       {
         "type": "LINE",
@@ -1006,11 +804,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Geräte zur Datenübertragungen im POTS",
-        "list": [
-          "Faxgeräte / PCs erzeugen digitalen Daten",
-          "Um diese übertragen zu können, müssen die digitalen Daten durch den Einsatz eines Modems analogisiert und auf der Empfängerseite wieder digitalisiert werden",
-          "Wahlvorgang und Initialisierung des Verbindungsaufbaus durch das Modems erfolgt in der Regel für den Anwender hörbar"
-        ]
+        "list": ["Faxgeräte / PCs erzeugen digitalen Daten", "Um diese übertragen zu können, müssen die digitalen Daten durch den Einsatz eines Modems analogisiert und auf der Empfängerseite wieder digitalisiert werden", "Wahlvorgang und Initialisierung des Verbindungsaufbaus durch das Modems erfolgt in der Regel für den Anwender hörbar"]
       },
       {
         "type": "IMAGE",
@@ -1031,11 +825,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Bundesweit einheitliche Anschlussnorm für die Anschlusssysteme zugelassener Endgeräte.",
-          "Gewährleistung eines funktionsfähigen Anschlusses",
-          "Verhinderung einer versehentlichen Parallelschaltung von Telefonen"
-        ]
+        "list": ["Bundesweit einheitliche Anschlussnorm für die Anschlusssysteme zugelassener Endgeräte.", "Gewährleistung eines funktionsfähigen Anschlusses", "Verhinderung einer versehentlichen Parallelschaltung von Telefonen"]
       },
       {
         "type": "IMAGE",
@@ -1044,11 +834,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Grundprinzip",
-        "list": [
-          "Einsatz von analog arbeitenden Endgeräten (a/b-Telefone)",
-          "Leitung als Kupfer-2-Draht-Verbindung überträgt die analogen Signale bis zur digitalen Vermittlungsstelle",
-          "In der DIVO werden die analogen Signale erst „digitalisiert“ im A/D-Wandler"
-        ]
+        "list": ["Einsatz von analog arbeitenden Endgeräten (a/b-Telefone)", "Leitung als Kupfer-2-Draht-Verbindung überträgt die analogen Signale bis zur digitalen Vermittlungsstelle", "In der DIVO werden die analogen Signale erst „digitalisiert“ im A/D-Wandler"]
       },
       {
         "type": "IMAGE",
@@ -1293,11 +1079,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Anrufsignalisierung",
-        "list": [
-          "Signalisierung eines Anrufs durch akustische Signalgeber",
-          "Alt - elektromechanische Wecker",
-          "Modern - Tonrufbaugruppen mit einem IC, bei dem sich das Klangbild und die Tonruflautstärke einstellen lässt"
-        ]
+        "list": ["Signalisierung eines Anrufs durch akustische Signalgeber", "Alt - elektromechanische Wecker", "Modern - Tonrufbaugruppen mit einem IC, bei dem sich das Klangbild und die Tonruflautstärke einstellen lässt"]
       },
       {
         "type": "SUBTITLE",
@@ -1314,11 +1096,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Für Selbstwählfernsprechsysteme zum Herstellen der gewünschten Verbindung. Früher wurden dafür mechanische Nummernschalter mit Drehscheibe (nur IWV) verwendet, in modernen Geräten kommen Tastwahlblöcke (IWV oder MFV einstellbar) zum Einsatz.",
-        "list": [
-          "nsa = Nummern-Schalter-Arbeits- (oder Abschalte-) Kontakt",
-          "nsi = Nummern-Schalter-Impuls-Kontakt",
-          "nsr = Nummern-Schalter-Reduzier- (oder Ruhe-) Kontakt"
-        ]
+        "list": ["nsa = Nummern-Schalter-Arbeits- (oder Abschalte-) Kontakt", "nsi = Nummern-Schalter-Impuls-Kontakt", "nsr = Nummern-Schalter-Reduzier- (oder Ruhe-) Kontakt"]
       },
       {
         "type": "SUBTITLE",
@@ -1327,11 +1105,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ist Fernsprechverbindung zustande gekommen, wird eigene Sprache und die des Gesprächspartners über eine Doppelader (ab) übertragen",
-          "Um kommende/gehende Signale zu trennen, wird mit einem Übertrager gearbeitet (Primärwicklung mit Mittelanzapfung -> Anschlussbedingungen und fester Wert vom Übertrager soll Rückhören unterdrücken",
-          "Hörschaltung enthält nicht nur einen Lautsprecher, sondern auch einen Gehörschutzgleichrichter -> Schutz des Ohres vor zu lauten Tönen"
-        ]
+        "list": ["Ist Fernsprechverbindung zustande gekommen, wird eigene Sprache und die des Gesprächspartners über eine Doppelader (ab) übertragen", "Um kommende/gehende Signale zu trennen, wird mit einem Übertrager gearbeitet (Primärwicklung mit Mittelanzapfung -> Anschlussbedingungen und fester Wert vom Übertrager soll Rückhören unterdrücken", "Hörschaltung enthält nicht nur einen Lautsprecher, sondern auch einen Gehörschutzgleichrichter -> Schutz des Ohres vor zu lauten Tönen"]
       },
       {
         "type": "IMAGE",
@@ -1340,9 +1114,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Leitungsnachbildung",
-        "list": [
-          "besteht aus Widerstand-Kondensator-Kombination"
-        ]
+        "list": ["besteht aus Widerstand-Kondensator-Kombination"]
       },
       {
         "type": "TEXT",
@@ -1378,9 +1150,7 @@ export const LF9_POSTS: PostArticle[] = [
         "rows": [
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "MFV-Tastenbelegung", "colSpan": 5 }
-            ]
+            "columns": [{ "align": "middle", "content": "MFV-Tastenbelegung", "colSpan": 5 }]
           },
           {
             "type": "default",
@@ -1539,28 +1309,15 @@ export const LF9_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Teledienste",
-            "sublist": [
-              "Telefonie mit 3,1 kHz Bandbreite (300-3400 Hz)",
-              "Telefonie mit 7 kHz Bandbreite",
-              "Telefax Gruppe 4",
-              "T-Online 64 kBit/s oder 128 kBit/s bei Kanalbündelung",
-              "Bildtelefonie"
-            ]
+            "sublist": ["Telefonie mit 3,1 kHz Bandbreite (300-3400 Hz)", "Telefonie mit 7 kHz Bandbreite", "Telefax Gruppe 4", "T-Online 64 kBit/s oder 128 kBit/s bei Kanalbündelung", "Bildtelefonie"]
           },
           {
             "content": "Teledienste",
-            "sublist": [
-              "64-kBit/s-Übermittlung",
-              "3,1-kHz-a/b-Übermittlung",
-              "Sprachübermittlung"
-            ]
+            "sublist": ["64-kBit/s-Übermittlung", "3,1-kHz-a/b-Übermittlung", "Sprachübermittlung"]
           },
           {
             "content": "Paketvermittelnde Übermittlungsdienste",
-            "sublist": [
-              "D-Kanal-Zugang",
-              "B-Kanal-Zugang"
-            ]
+            "sublist": ["D-Kanal-Zugang", "B-Kanal-Zugang"]
           }
         ]
       },
@@ -1578,30 +1335,19 @@ export const LF9_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "<b>Telefonie</b> Verbindungsaufbau (MWV)",
-            "sublist": [
-              "Bessere Sprachqualität",
-              "Neue, komfortable Leistungsmerkmale"
-            ]
+            "sublist": ["Bessere Sprachqualität", "Neue, komfortable Leistungsmerkmale"]
           },
           {
             "content": "<b>Telefax</b> Übertragungsdauer bei einer DIN-A4-Seite",
-            "sublist": [
-              "Verbesserte Qualität der Fernkopie (höhere Auflösung)"
-            ]
+            "sublist": ["Verbesserte Qualität der Fernkopie (höhere Auflösung)"]
           },
           {
             "content": "<b>Datenübertragung</b> 1 MByte mit ISDN oder Modem",
-            "sublist": [
-              "Kostenersparnis durch schnellere Übertragung",
-              "Höhere Datensicherheit"
-            ]
+            "sublist": ["Kostenersparnis durch schnellere Übertragung", "Höhere Datensicherheit"]
           },
           {
             "content": "<b>T-Online</b> Übertragung einer Online-Text-Seite",
-            "sublist": [
-              "Schnellerer Verbindungsaufbau",
-              "Beschleunigter Bildaufbau"
-            ]
+            "sublist": ["Schnellerer Verbindungsaufbau", "Beschleunigter Bildaufbau"]
           }
         ]
       },
@@ -1612,19 +1358,12 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Analog/Digital zu Digital/Analog Nachteile:",
-        "list": [
-          "Digitalisierung der Sprache/Daten erst im Vermittlungssystem",
-          "Übertragung mit max. 56kbit/s (variable Rate)",
-          "Viele Schritte (A/D…D/A) bei der Wandlung mit hoher Fehlerrate"
-        ]
+        "list": ["Digitalisierung der Sprache/Daten erst im Vermittlungssystem", "Übertragung mit max. 56kbit/s (variable Rate)", "Viele Schritte (A/D…D/A) bei der Wandlung mit hoher Fehlerrate"]
       },
       {
         "type": "LIST",
         "content": "Vorteile ergeben sich aus:",
-        "list": [
-          "Digitalisierung der Sprache/Daten im Endgerät",
-          "Übertragung mit 64kbit/s (feste Rate)"
-        ]
+        "list": ["Digitalisierung der Sprache/Daten im Endgerät", "Übertragung mit 64kbit/s (feste Rate)"]
       },
       {
         "type": "IMAGE",
@@ -1638,17 +1377,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Leistungsmerkmale beim Standardanschluss",
-        "list": [
-          "Übermittlung der Rufnummer des Anrufers",
-          "Rückfrage und Makeln",
-          "Dreierkonferenz",
-          "Umstecken am Bus",
-          "Drei Mehrfachrufnummern (Mehrgeräteanschluss)",
-          "Durchwahl mit Regelrufnummernblock (Anlagenanschluss)",
-          "Dauerüberwachung (Anlagenanschluss)",
-          "Rückruf bei Besetzt",
-          "Anklopfen"
-        ]
+        "list": ["Übermittlung der Rufnummer des Anrufers", "Rückfrage und Makeln", "Dreierkonferenz", "Umstecken am Bus", "Drei Mehrfachrufnummern (Mehrgeräteanschluss)", "Durchwahl mit Regelrufnummernblock (Anlagenanschluss)", "Dauerüberwachung (Anlagenanschluss)", "Rückruf bei Besetzt", "Anklopfen"]
       },
       {
         "type": "LIST",
@@ -1656,10 +1385,7 @@ export const LF9_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Leistungsmerkmale des Standardanschlusses zuzüglich",
-            "sublist": [
-              "Übermittlung der Tarif-information am Ende einer Verbindung",
-              "Anrufweiterschaltung Ständig, bei Besetzt und bei Nichtmelden"
-            ]
+            "sublist": ["Übermittlung der Tarif-information am Ende einer Verbindung", "Anrufweiterschaltung Ständig, bei Besetzt und bei Nichtmelden"]
           }
         ]
       },
@@ -1677,21 +1403,15 @@ export const LF9_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Rückfrage",
-            "sublist": [
-              "Wechsel von einer Verbindung A - B nach A - C und zurück (Voraussetzung ist \"Halten\")"
-            ]
+            "sublist": ['Wechsel von einer Verbindung A - B nach A - C und zurück (Voraussetzung ist "Halten")']
           },
           {
             "content": "Makeln",
-            "sublist": [
-              "Hin- und Herschalten zwischen zwei Verbindungen A - B und A - C"
-            ]
+            "sublist": ["Hin- und Herschalten zwischen zwei Verbindungen A - B und A - C"]
           },
           {
             "content": "Dreierkonferenz",
-            "sublist": [
-              "Zusammenschalten der Teilnehmer A, B und C"
-            ]
+            "sublist": ["Zusammenschalten der Teilnehmer A, B und C"]
           }
         ]
       },
@@ -1732,11 +1452,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Rückwärtige D-Kanal-Signalisierung zum Anrufer (A) sobald der Angerufene (B) das Gespräch beendet",
-          "ISDN-Einrichtung des Anrufers (A) muss das Leistungsmerkmal unterstützen",
-          "Der Angerufene (B) muss an einer digitalen Vermittlungsstelle angeschlossen sein"
-        ]
+        "list": ["Rückwärtige D-Kanal-Signalisierung zum Anrufer (A) sobald der Angerufene (B) das Gespräch beendet", "ISDN-Einrichtung des Anrufers (A) muss das Leistungsmerkmal unterstützen", "Der Angerufene (B) muss an einer digitalen Vermittlungsstelle angeschlossen sein"]
       },
       {
         "type": "LINE",
@@ -1754,11 +1470,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Rückwärtige D-Kanal-Signalisierung zum Anrufer (A) sobald der Angerufene (B) ein Gespräch geführt hat",
-          "ISDN-Einrichtung des Anrufers (A) muss das Leistungsmerkmal unterstützen",
-          "Der Angerufene (B) muss an einer digitalen Vermittlungsstelle angeschlossen sein"
-        ]
+        "list": ["Rückwärtige D-Kanal-Signalisierung zum Anrufer (A) sobald der Angerufene (B) ein Gespräch geführt hat", "ISDN-Einrichtung des Anrufers (A) muss das Leistungsmerkmal unterstützen", "Der Angerufene (B) muss an einer digitalen Vermittlungsstelle angeschlossen sein"]
       },
       {
         "type": "LINE",
@@ -1797,12 +1509,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Speicherung der Rufnummer des Rufenden und Gerufenen sowie Datum und Uhrzeit der Verbindung",
-          "Aktivierung des Leistungsmerkmals während oder kurz nach der Verbindung",
-          "Registrierung von Klingelstörern durch \"Fangen„ oder bei Verdacht krimineller Handlungen",
-          "Kostenpflichtig"
-        ]
+        "list": ["Speicherung der Rufnummer des Rufenden und Gerufenen sowie Datum und Uhrzeit der Verbindung", "Aktivierung des Leistungsmerkmals während oder kurz nach der Verbindung", 'Registrierung von Klingelstörern durch "Fangen„ oder bei Verdacht krimineller Handlungen', "Kostenpflichtig"]
       },
       {
         "type": "IMAGE",
@@ -1812,10 +1519,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Zusätzlich zu den jeweiligen Verbindungskosten wird ein Konferenzzuschlag von einer Tarifeinheit je 20 Sekunden erhoben",
-          "Die Steuerung der Konferenz erfolgt durch das Endgerät des Initiators"
-        ]
+        "list": ["Zusätzlich zu den jeweiligen Verbindungskosten wird ein Konferenzzuschlag von einer Tarifeinheit je 20 Sekunden erhoben", "Die Steuerung der Konferenz erfolgt durch das Endgerät des Initiators"]
       }
     ]
   },
@@ -1864,14 +1568,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<span class='list-number'>1</span> Welche Teledienste nutzt ISDN? Welche Eigenschaften hat der Anschluss?",
-        "list": [
-          "Telefonie mit  ____ kHz Bandbreite (300-3400 Hz)",
-          "________ mit 7 kHz Bandbreite",
-          "Telefax Gruppe ___",
-          "B-Kanal mit _____ kBit/s ",
-          "D-Kanal mit _____ kBit/s (Basis) / _____kBit/s PMX",
-          "__________-telefonie"
-        ]
+        "list": ["Telefonie mit  ____ kHz Bandbreite (300-3400 Hz)", "________ mit 7 kHz Bandbreite", "Telefax Gruppe ___", "B-Kanal mit _____ kBit/s ", "D-Kanal mit _____ kBit/s (Basis) / _____kBit/s PMX", "__________-telefonie"]
       },
       {
         "type": "TEXT",
@@ -1896,31 +1593,17 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<span class='list-number'>3</span> Nennen Sie die 4 Hauptaufgaben eines NTBA",
-        "list": [
-          "...",
-          "...",
-          "...",
-          "..."
-        ]
+        "list": ["...", "...", "...", "..."]
       },
       {
         "type": "LIST",
         "content": "<span class='list-number'>4</span> Wohin gehören die nachfolgenden Schnittstellenbezeichnungen?",
-        "list": [
-          "U<sub>k0</sub> ...",
-          "U<sub>2M</sub> ...",
-          "S<sub>0</sub> ...",
-          "S<sub>2M</sub> ..."
-        ]
+        "list": ["U<sub>k0</sub> ...", "U<sub>2M</sub> ...", "S<sub>0</sub> ...", "S<sub>2M</sub> ..."]
       },
       {
         "type": "LIST",
         "content": "<span class='list-number'>5</span> S<sub>0</sub>-Bus – Verkabelung am Mehrgeräte oder als interner/externer Bus bei TK-Anlagen",
-        "list": [
-          "bis maximal 12 IAE’s",
-          "Terminierung in der letzten IAE mit 100 Ohm je Adernpaar",
-          "max. 150-180 m Länge"
-        ]
+        "list": ["bis maximal 12 IAE’s", "Terminierung in der letzten IAE mit 100 Ohm je Adernpaar", "max. 150-180 m Länge"]
       },
       {
         "type": "IMAGE",
@@ -1929,11 +1612,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Aufgaben:",
-        "list": [
-          "Verbinden Sie die IAE mit dem NTBA zu einem S0-Bus",
-          "Wie viele Adern sind nötig, wo befinden sich Terminatoren?",
-          "Kennzeichnen Sie U<sub>k0</sub> und S<sub>0</sub>"
-        ]
+        "list": ["Verbinden Sie die IAE mit dem NTBA zu einem S0-Bus", "Wie viele Adern sind nötig, wo befinden sich Terminatoren?", "Kennzeichnen Sie U<sub>k0</sub> und S<sub>0</sub>"]
       },
       {
         "type": "IMAGE",
@@ -1997,7 +1676,7 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Bei der Modulation spricht man von einem Vorgang der Signalübertragung, bei dem die Signalparameter verändert bzw. \"moduliert\" werden. Dadurch wird eine hochfrequente Übertragung eines niederfrequenten Signals ermöglicht, dieses Signal wird vom Empfänger durch einen Demodulator wieder ins Ursprungssignal zurückgewandelt."
+        "content": 'Bei der Modulation spricht man von einem Vorgang der Signalübertragung, bei dem die Signalparameter verändert bzw. "moduliert" werden. Dadurch wird eine hochfrequente Übertragung eines niederfrequenten Signals ermöglicht, dieses Signal wird vom Empfänger durch einen Demodulator wieder ins Ursprungssignal zurückgewandelt.'
       },
       {
         "type": "HINT",
@@ -2066,12 +1745,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Um die Bedeutung der Signalaufbereitung weiter zu verdeutlichen, hier einige praktische Beispiele:",
-        "list": [
-          "Musik - Die gleichzeitige Übertragung an mehrere Stereokanäle (links und rechts) wäre ohne Modulation unmöglich",
-          "TV - Bei einer Fernbedienung lassen sich durch Modulation der Infrarotstrahlung unterschiedliche Befehle wie Kanal wechseln, Änderung der Lautstärke sowie Ein-/Ausschalten drathlos übertragen",
-          "DSL - Bei DSL kann man gleichzeitig und unabhängig voneinander digitale Daten senden und empfangen, nebenbei kann man auch noch telefonieren",
-          "Telefonie - Die Vielfachausnutzung einer Kabel- oder Funkverbindung für einige Hundert gleichzeitig geführte Telefongespräche wäre ohne raffinierte Modulationsverfahren undenkbar"
-        ]
+        "list": ["Musik - Die gleichzeitige Übertragung an mehrere Stereokanäle (links und rechts) wäre ohne Modulation unmöglich", "TV - Bei einer Fernbedienung lassen sich durch Modulation der Infrarotstrahlung unterschiedliche Befehle wie Kanal wechseln, Änderung der Lautstärke sowie Ein-/Ausschalten drathlos übertragen", "DSL - Bei DSL kann man gleichzeitig und unabhängig voneinander digitale Daten senden und empfangen, nebenbei kann man auch noch telefonieren", "Telefonie - Die Vielfachausnutzung einer Kabel- oder Funkverbindung für einige Hundert gleichzeitig geführte Telefongespräche wäre ohne raffinierte Modulationsverfahren undenkbar"]
       },
       {
         "type": "TEXT",
@@ -2080,11 +1754,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<u>Zusammengefasst lässt sich sagen ...</u>",
-        "list": [
-          "Modulation dient einer frequenzmäßigen Anpassung am verwendeten Übertragungskanal mit verschiedenen Pässen",
-          "Modulation ermöglicht die Mehrfachausnutzung eines Übertragungsmediums",
-          "Modulation verbessert die Störsicherheit"
-        ]
+        "list": ["Modulation dient einer frequenzmäßigen Anpassung am verwendeten Übertragungskanal mit verschiedenen Pässen", "Modulation ermöglicht die Mehrfachausnutzung eines Übertragungsmediums", "Modulation verbessert die Störsicherheit"]
       },
       {
         "type": "LINE",
@@ -2143,15 +1813,12 @@ export const LF9_POSTS: PostArticle[] = [
         "content": "",
         "list": [
           "Ein oder mehrere Signalparameter wie Amplitude, Frequenz oder Phase eines Trägersignals durch das Informationssignal verändert oder moduliert.",
-          "Dem Träger wird dabei das Informationssignal, das auch als Modulationssignal bezeichnet wird, \"aufgeprägt\"",
+          'Dem Träger wird dabei das Informationssignal, das auch als Modulationssignal bezeichnet wird, "aufgeprägt"',
           "Danach besitzt die Information eine andere Signalform / befindet sich im neuen Frequenzband",
           "Jede Signalart kann als Trägersignal dienen",
           {
             "content": "Praktische Bedeutung haben harmonisch sinusförmige Trägersignale",
-            "sublist": [
-              "Als zeitkontinuierlichen Träger",
-              "Periodische, rechteckförmige Impulse als zeitdiskrete Träger"
-            ]
+            "sublist": ["Als zeitkontinuierlichen Träger", "Periodische, rechteckförmige Impulse als zeitdiskrete Träger"]
           },
           "Wird mathematisch durch Multiplikation des Trägers mit der Information beschrieben",
           "Dabei entstehen neue Frequenzen im Ausgangssignal, die in den Anfangssignalen nicht enthalten sind und Frequenzen können ganz verschwinden",
@@ -2173,12 +1840,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Eigenschaften der Amplitudenmodulation",
-        "list": [
-          "Die AM ist störanfällig, weil die Information in der Amplitude steckt",
-          "Wird sie beeinflusst, so ist die Information weg oder verfälscht",
-          "Es kann nicht jede beliebige Amplitude übertragen werden",
-          "Die Bandbreite (Δf) liegt bei 10 kHz"
-        ]
+        "list": ["Die AM ist störanfällig, weil die Information in der Amplitude steckt", "Wird sie beeinflusst, so ist die Information weg oder verfälscht", "Es kann nicht jede beliebige Amplitude übertragen werden", "Die Bandbreite (Δf) liegt bei 10 kHz"]
       },
       {
         "type": "IMAGE",
@@ -2196,16 +1858,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Gegen atmosphärischen und technischen Störungen anfällig",
-        "list": [
-          "Störungen im hochfrequenten Bereich werden zum Nutzsignal hinzuaddiert und sind, sofern ausreichend stark, zum Beispiel als Knackser aus einem Lautsprecher zu hören",
-          "Wettererscheinungen",
-          "Schaltvorgänge im Stromnetz (ein- und ausschalten von Geräten)",
-          "Hochfrequente Übertragungen im Stromnetz (hochfrequente Abstrahlung)",
-          "Die Folge sind Verzerrungen, schlechte Übertragungsqualität",
-          "Sie ist weniger störanfällig als Amplitudenmodulation",
-          "Gehört zur Gruppe der Winkelmodulationen",
-          "Ist der Phasenmodulation sehr ähnlich"
-        ]
+        "list": ["Störungen im hochfrequenten Bereich werden zum Nutzsignal hinzuaddiert und sind, sofern ausreichend stark, zum Beispiel als Knackser aus einem Lautsprecher zu hören", "Wettererscheinungen", "Schaltvorgänge im Stromnetz (ein- und ausschalten von Geräten)", "Hochfrequente Übertragungen im Stromnetz (hochfrequente Abstrahlung)", "Die Folge sind Verzerrungen, schlechte Übertragungsqualität", "Sie ist weniger störanfällig als Amplitudenmodulation", "Gehört zur Gruppe der Winkelmodulationen", "Ist der Phasenmodulation sehr ähnlich"]
       },
       {
         "type": "TEXT",
@@ -2267,10 +1920,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ursprünglich zur mehrfachen Ausnutzung eines Verbindungsweges entwickelt",
-          "Materialeinsparung und Sicherheit gleichermaßen wichtig"
-        ]
+        "list": ["Ursprünglich zur mehrfachen Ausnutzung eines Verbindungsweges entwickelt", "Materialeinsparung und Sicherheit gleichermaßen wichtig"]
       },
       {
         "type": "IMAGE",
@@ -2291,11 +1941,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://de.wikipedia.org/wiki/Modulation_(Technik)'>https://de.wikipedia.org/wiki/Modulation_(Technik)</a>",
-          "<a href='https://www.itwissen.info/Modulation-modulation.html'>https://www.itwissen.info/Modulation-modulation.html</a>",
-          "<a href='https://www.elektronik-kompendium.de/sites/kom/0211195.htm'>https://www.elektronik-kompendium.de/sites/kom/0211195.htm - Modulation / Modulationsverfahren</a>"
-        ]
+        "list": ["<a href='https://de.wikipedia.org/wiki/Modulation_(Technik)'>https://de.wikipedia.org/wiki/Modulation_(Technik)</a>", "<a href='https://www.itwissen.info/Modulation-modulation.html'>https://www.itwissen.info/Modulation-modulation.html</a>", "<a href='https://www.elektronik-kompendium.de/sites/kom/0211195.htm'>https://www.elektronik-kompendium.de/sites/kom/0211195.htm - Modulation / Modulationsverfahren</a>"]
       }
     ]
   },
@@ -2315,7 +1961,7 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "xDSL-Familie oder \"Wie schnell ist eigentlich schnell?\""
+        "content": 'xDSL-Familie oder "Wie schnell ist eigentlich schnell?"'
       },
       {
         "type": "TEXT",
@@ -2328,12 +1974,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "es wird eine Vielzahl von DSL-Verfahren angeboten",
-        "list": [
-          "Symmetrische DSL-Verfahren",
-          "asymmetrische DSL-Verfahren",
-          "DSL-Techniken für 2-Draht-Betrieb",
-          "DSL-Techniken für 4-Draht-Betrieb"
-        ]
+        "list": ["Symmetrische DSL-Verfahren", "asymmetrische DSL-Verfahren", "DSL-Techniken für 2-Draht-Betrieb", "DSL-Techniken für 4-Draht-Betrieb"]
       },
       {
         "type": "TEXT",
@@ -2341,7 +1982,7 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "xDSL ist eine der möglichen Alternativen für den Ausbau des Teilnehmeranschlussnetzes (auch Tln.-Zugangsnetz; Ortsanschlussnetz; Access-Netz oder \"Last Mile\" oder Local Loop genannt)"
+        "content": 'xDSL ist eine der möglichen Alternativen für den Ausbau des Teilnehmeranschlussnetzes (auch Tln.-Zugangsnetz; Ortsanschlussnetz; Access-Netz oder "Last Mile" oder Local Loop genannt)'
       },
       {
         "type": "LINE",
@@ -2353,12 +1994,8 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "LIST",
-        "content": "In der Literatur kann man unterschiedliche Definitionen zum Thema \"Breitband\" finden ...",
-        "list": [
-          "Laut ITU*-T-Empfehlung l.113 alle Dienste/Systeme, deren Bitrate über der Primärmultiplexdatenrate liegen",
-          "d. h. in Europa größer als 2,048 MBit/s",
-          "in Nordamerika größer als 1,544 MBit/s"
-        ]
+        "content": 'In der Literatur kann man unterschiedliche Definitionen zum Thema "Breitband" finden ...',
+        "list": ["Laut ITU*-T-Empfehlung l.113 alle Dienste/Systeme, deren Bitrate über der Primärmultiplexdatenrate liegen", "d. h. in Europa größer als 2,048 MBit/s", "in Nordamerika größer als 1,544 MBit/s"]
       },
       {
         "type": "TABLE",
@@ -2423,14 +2060,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Alternative Teilnehmerzugangsmöglichkeiten",
-        "list": [
-          "Analoge Modems (max. 56 kbit/s)",
-          "Breitbandkabelverteilnetze (Kabelmodems)",
-          "FTTH (Glasfaser bis zum Teilnehmer; (\"Fiber-to-the-Home\")",
-          "Funk (mobil oder fest) (GSM, DECT, CDMA, WLL)",
-          "Satelliten",
-          "Power Lines (Netzwerk über Stromleitung aufbauen)"
-        ]
+        "list": ["Analoge Modems (max. 56 kbit/s)", "Breitbandkabelverteilnetze (Kabelmodems)", 'FTTH (Glasfaser bis zum Teilnehmer; ("Fiber-to-the-Home")', "Funk (mobil oder fest) (GSM, DECT, CDMA, WLL)", "Satelliten", "Power Lines (Netzwerk über Stromleitung aufbauen)"]
       },
       {
         "type": "LINE",
@@ -2443,15 +2073,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Internetzugang",
-          "Telearbeit",
-          "Video-on-Demand",
-          "Videokonferenz und -spiele",
-          "Sicherungstechnik",
-          "Remote LAN-Zugriff",
-          "PABX-Kopplung"
-        ]
+        "list": ["Internetzugang", "Telearbeit", "Video-on-Demand", "Videokonferenz und -spiele", "Sicherungstechnik", "Remote LAN-Zugriff", "PABX-Kopplung"]
       },
       {
         "type": "TEXT",
@@ -2523,11 +2145,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Faktoren, die die Datenübertragungsrate beeinflussen, sind:",
-        "list": [
-          "Leitungsdämpfung (abhängig unter anderem von Länge und Durchmesser der Kupferleitungen und dem Frequenzspektrum des Signals)",
-          "Modulationsverfahren",
-          "Leitungscode"
-        ]
+        "list": ["Leitungsdämpfung (abhängig unter anderem von Länge und Durchmesser der Kupferleitungen und dem Frequenzspektrum des Signals)", "Modulationsverfahren", "Leitungscode"]
       },
       {
         "type": "HINT",
@@ -2675,9 +2293,7 @@ export const LF9_POSTS: PostArticle[] = [
           },
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "ab 1. Juli 1999 - <sup>1</sup> als Ausnahme bei großen Leitungslängen (= großer Dämpfung)", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "middle", "content": "ab 1. Juli 1999 - <sup>1</sup> als Ausnahme bei großen Leitungslängen (= großer Dämpfung)", "colSpan": 3 }]
           },
           {
             "type": "default",
@@ -2697,9 +2313,7 @@ export const LF9_POSTS: PostArticle[] = [
           },
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "ab Mai 2002<sup>2</sup> / September 2002<sup>3</sup> - <sup>2</sup> in bestimmten Städten | <sup>3</sup> bundesweit", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "middle", "content": "ab Mai 2002<sup>2</sup> / September 2002<sup>3</sup> - <sup>2</sup> in bestimmten Städten | <sup>3</sup> bundesweit", "colSpan": 3 }]
           },
           {
             "type": "default",
@@ -2719,9 +2333,7 @@ export const LF9_POSTS: PostArticle[] = [
           },
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "ab 1. April 2004", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "middle", "content": "ab 1. April 2004", "colSpan": 3 }]
           },
           {
             "type": "default",
@@ -2749,9 +2361,7 @@ export const LF9_POSTS: PostArticle[] = [
           },
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "ab 1. Juli 2005", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "middle", "content": "ab 1. Juli 2005", "colSpan": 3 }]
           },
           {
             "type": "default",
@@ -2779,9 +2389,7 @@ export const LF9_POSTS: PostArticle[] = [
           },
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "Pilotprojekt / ab Mitte Mai 2006", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "middle", "content": "Pilotprojekt / ab Mitte Mai 2006", "colSpan": 3 }]
           },
           {
             "type": "default",
@@ -2793,9 +2401,7 @@ export const LF9_POSTS: PostArticle[] = [
           },
           {
             "type": "header",
-            "columns": [
-              { "align": "middle", "content": "Pilotprojekt", "colSpan": 3 }
-            ]
+            "columns": [{ "align": "middle", "content": "Pilotprojekt", "colSpan": 3 }]
           },
           {
             "type": "default",
@@ -3017,63 +2623,31 @@ export const LF9_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "<b>ADSL</b>",
-            "sublist": [
-              "<i>Asymmetric Digital Subscriber Line</i>",
-              "16 MBit/s Downstream",
-              "1 MBit/s Upstream"
-            ]
+            "sublist": ["<i>Asymmetric Digital Subscriber Line</i>", "16 MBit/s Downstream", "1 MBit/s Upstream"]
           },
           {
             "content": "<b>ADSL2</b>",
-            "sublist": [
-              "Erweitere Form von ADSL",
-              "25 MBit/s Downstream",
-              "1 MBit/s Upstream"
-            ]
+            "sublist": ["Erweitere Form von ADSL", "25 MBit/s Downstream", "1 MBit/s Upstream"]
           },
           {
             "content": "<b>HDSL</b>",
-            "sublist": [
-              "<i>High Data Rate Digital Subscriber Line</i>",
-              "symmetrische Datenübertragungstechnologie",
-              "1,54 ~ 2,04 Mbit/s Downstream",
-              "1,54 ~ 2,04 Mbit/s Upstream"
-            ]
+            "sublist": ["<i>High Data Rate Digital Subscriber Line</i>", "symmetrische Datenübertragungstechnologie", "1,54 ~ 2,04 Mbit/s Downstream", "1,54 ~ 2,04 Mbit/s Upstream"]
           },
           {
             "content": "<b>SDSL (G.SHDSL)</b>",
-            "sublist": [
-              "<i>Symmetrical Digital Subscriber Line</i>",
-              "symmetrische Datenübertragungstechnologie",
-              "3 Mbit/s symmetrisch (Up- & Downstream)",
-              "bei vieradriger Anschaltung (2 Kupfer-Doppeladern) können maximal 4 Mbit/s übertragen werden",
-              "Alternativ kann auch die Reichweite auf Kosten der Bandbreite erhöht werden"
-            ]
+            "sublist": ["<i>Symmetrical Digital Subscriber Line</i>", "symmetrische Datenübertragungstechnologie", "3 Mbit/s symmetrisch (Up- & Downstream)", "bei vieradriger Anschaltung (2 Kupfer-Doppeladern) können maximal 4 Mbit/s übertragen werden", "Alternativ kann auch die Reichweite auf Kosten der Bandbreite erhöht werden"]
           },
           {
             "content": "<b>VDSL</b>",
-            "sublist": [
-              "<i>Very High Data Rate Digital Subscriber Line</i>",
-              "asymmetrische Datenübertragungstechnologie",
-              "12,9 ~ 51,8 Mbit/s Downstream",
-              "1,6 ~ 2,3 Mbit/s Upstream",
-              "symmetrische Datenübertragungstechnologie",
-              "Up- & Downstream gleich schnell"
-            ]
+            "sublist": ["<i>Very High Data Rate Digital Subscriber Line</i>", "asymmetrische Datenübertragungstechnologie", "12,9 ~ 51,8 Mbit/s Downstream", "1,6 ~ 2,3 Mbit/s Upstream", "symmetrische Datenübertragungstechnologie", "Up- & Downstream gleich schnell"]
           },
           {
             "content": "<b>UADSL, UDSL</b>",
-            "sublist": [
-              "<i>Universal (Asymmetric) Digital Subscriber Line</i>"
-            ]
+            "sublist": ["<i>Universal (Asymmetric) Digital Subscriber Line</i>"]
           },
           {
             "content": "<b>IDSL</b>",
-            "sublist": [
-              "<i>ISDN Digital Subscriber Line</i>",
-              "verwendet vorhandene ISDN-Technik",
-              "Datenraten bis zu 160 kbit/s"
-            ]
+            "sublist": ["<i>ISDN Digital Subscriber Line</i>", "verwendet vorhandene ISDN-Technik", "Datenraten bis zu 160 kbit/s"]
           }
         ]
       },
@@ -3084,9 +2658,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.elektronik-kompendium.de/sites/kom/0305232.htm'>https://www.elektronik-kompendium.de/sites/kom/0305232.htm</a>"
-        ]
+        "list": ["<a href='https://www.elektronik-kompendium.de/sites/kom/0305232.htm'>https://www.elektronik-kompendium.de/sites/kom/0305232.htm</a>"]
       }
     ]
   },
@@ -3112,15 +2684,12 @@ export const LF9_POSTS: PostArticle[] = [
       },
       {
         "type": "HINT",
-        "content": "Intelligente Steuerung / Elimination des \"Nebensprechens\" auf Kupfer zur Erhöhung der Bandbreite."
+        "content": 'Intelligente Steuerung / Elimination des "Nebensprechens" auf Kupfer zur Erhöhung der Bandbreite.'
       },
       {
         "type": "LIST",
         "content": "Voraussetzungen",
-        "list": [
-          "alle Leitungen in einem KVz-Bereich gehören dem selben Vectoring- System an und müssen von einem Anbieter gemanaged werden – es darf nur einen DSLAM/MSAN geben",
-          "regulatorische Anpassungen notwendig – keine KVz TAL mehr – Layer 2 BSA als neue Standardvorleistung"
-        ]
+        "list": ["alle Leitungen in einem KVz-Bereich gehören dem selben Vectoring- System an und müssen von einem Anbieter gemanaged werden – es darf nur einen DSLAM/MSAN geben", "regulatorische Anpassungen notwendig – keine KVz TAL mehr – Layer 2 BSA als neue Standardvorleistung"]
       },
       {
         "type": "IMAGE",
@@ -3156,17 +2725,12 @@ export const LF9_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Die Qualität im Sinne von Dämpfung einer Leitung wird durch folgende Parameter bestimmt:",
-            "sublist": [
-              "Kupferwiderstand der Leitung (Kabeldurchmesser)",
-              "elektrische Isolierung der benachbarten Doppeladern zueinander."
-            ]
+            "sublist": ["Kupferwiderstand der Leitung (Kabeldurchmesser)", "elektrische Isolierung der benachbarten Doppeladern zueinander."]
           },
           "Bei der Übertragung elektrischer Signale wird mit steigenden Frequenzen ein Störsignal auf die benachbarten Doppeladern übertragen, sog. Crosstalk oder Nebensprechen.",
           {
             "content": "Die VDSL2 Performance wird hauptsächlich durch den Crosstalk limitiert, da VDSL  sehr hohe Trägerfrequenzen auf kurzen Leitungen nutzt.",
-            "sublist": [
-              "Kompensierbar durch Vectoring"
-            ]
+            "sublist": ["Kompensierbar durch Vectoring"]
           },
           "Bei längeren Leitungen z.B. ADSL überwiegt der Verlust durch den Kupferwiderstand, daher ist der Gewinn durch Vectoring nicht so groß."
         ]
@@ -3178,14 +2742,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Zusammenfassung",
-        "list": [
-          "Über <b>alle</b> Leitungen eines Kabelbündels werden definierteTestsignale gesendet",
-          "Gestörte Testsignale werden durch Kundenmodems empfangen und Differenz zu Testsignal ermittelt",
-          "Messwerte der Modems werden an Vector-DSLAM zur Abschätzung des Crosstalk gesendet",
-          "Ermittlung der notwendigen Precodierung für die Nutzsignale im Vectoring DSLAM zur Kompensation der Leitungsstörungen",
-          "Precodierte Nutzsignale werden gesendet (Downstream). In Upstream Richtung wird der Crosstalk durch die <sup>1</sup>CPE-Informationen abgeschätzt und „gecanceld“",
-          "Nahezu ungestörtes Nutzsignal wird an den Modems empfangen"
-        ]
+        "list": ["Über <b>alle</b> Leitungen eines Kabelbündels werden definierteTestsignale gesendet", "Gestörte Testsignale werden durch Kundenmodems empfangen und Differenz zu Testsignal ermittelt", "Messwerte der Modems werden an Vector-DSLAM zur Abschätzung des Crosstalk gesendet", "Ermittlung der notwendigen Precodierung für die Nutzsignale im Vectoring DSLAM zur Kompensation der Leitungsstörungen", "Precodierte Nutzsignale werden gesendet (Downstream). In Upstream Richtung wird der Crosstalk durch die <sup>1</sup>CPE-Informationen abgeschätzt und „gecanceld“", "Nahezu ungestörtes Nutzsignal wird an den Modems empfangen"]
       },
       {
         "type": "TEXT",
@@ -3212,7 +2769,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "TEXT",
         "content": "..."
-      },
+      }
     ]
   },
   {
@@ -3234,7 +2791,7 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "TEXT",
         "content": "RFID (Radio-Frequency Identification) ist der kontaktlose Datenaustausch zwischen einem RFID-Transponder und einem RFID-Schreib-/Lesegerät."
-      },
+      }
     ]
   },
   {
@@ -3265,11 +2822,7 @@ export const LF9_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Bei der IP-Telefonie werden die Telefone nicht länger in die TAE-Buchse der Telefondose, in eine ISDN-Box oder in einen Splitter eingestöpselt, sondern in den DSL-Router oder in ein VoIP-fähiges Kabelmodem. Auch im Hintergrund spielt sich bei der Internettelefonie ein ganz anderer technischer Vorgang ab. Den Verbindungen werden keine festen Leitungen mehr zugewiesen - stattdessen wird die Sprache, wie jeder andere digitale Dienst auch, in Form von Datenpaketen über das Internet versandt. Dies geschieht aufgrund der Echtzeitanforderungen dabei in der Regel priorisiert. Auch ein Telefongespräch, das über das Internet geführt wird, lässt sich wie bei der klassischen Telefonie in drei grundlegende Vorgänge einteilen:",
         "ordered": true,
-        "list": [
-          "Verbindungsaufbau",
-          "Gesprächsübertragung",
-          "Verbindungsabbau"
-        ]
+        "list": ["Verbindungsaufbau", "Gesprächsübertragung", "Verbindungsabbau"]
       },
       {
         "type": "LINE",
@@ -3278,10 +2831,8 @@ export const LF9_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Was ist IP-Telefonie? | 25.06.2021 | <a href='https://www.placetel.de/ratgeber/ip-telefonie-voip-telefonie' target=\"_blank\" rel=\"noopener noreferrer\">https://www.placetel.de/ratgeber/ip-telefonie-voip-telefonie</a>"
-        ]
+        "list": ['Was ist IP-Telefonie? | 25.06.2021 | <a href=\'https://www.placetel.de/ratgeber/ip-telefonie-voip-telefonie\' target="_blank" rel="noopener noreferrer">https://www.placetel.de/ratgeber/ip-telefonie-voip-telefonie</a>']
       }
     ]
-  },
+  }
 ];

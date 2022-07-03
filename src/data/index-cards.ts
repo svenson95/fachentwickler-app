@@ -1,5 +1,4 @@
-import { PostIndexCards } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostIndexCards } from "@models/post";
 
 export const indexCards: PostIndexCards[] = [
   {
@@ -77,5 +76,5 @@ export const indexCards: PostIndexCards[] = [
         "answer": "Simplex - Radio <br/> Halbduplex - Hub, Walkie Talkie <br/> Vollduplex - Switch, Router, Internet"
       }
     ]
-  },
+  }
 ];

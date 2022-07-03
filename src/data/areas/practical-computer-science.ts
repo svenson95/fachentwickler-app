@@ -1,6 +1,3 @@
-// import { Area } from "../../app/models/area";
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
-
 const practicalComputerScience = {
   "url": "/praktische-informatik",
   "description": "Der Fokus der Praktischen Informatik liegt auf Basissoftware und Betriebssysteme, um sich mit der Umsetzung von Erkenntnissen in Software zu beschäftigen. Sei es die Entwicklung von Compilern – welche die Befehle eines Computers in Maschinenbefehle umwandeln -, der Aufbau von Betriebssystemen und Datenbanken oder Methoden und Werkzeuge zur Unterstützung der Software-Entwicklung.",

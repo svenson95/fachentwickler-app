@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF4_2_POSTS: PostArticle[] = [
   {
@@ -78,7 +77,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "1) Was versteht man unter \"Hardware\"?"
+        "content": '1) Was versteht man unter "Hardware"?'
       },
       {
         "type": "TEXT",
@@ -95,11 +94,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Eingabegeräte",
-          "Verarbeitungsgeräte",
-          "Ausgabegeräte"
-        ]
+        "list": ["Eingabegeräte", "Verarbeitungsgeräte", "Ausgabegeräte"]
       },
       {
         "type": "SUBTITLE",
@@ -136,12 +131,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Gesamtverständnis herstellen",
-          "Unterschied zwischen Informations- und Kommunikationstechnik",
-          "Signale und Codes",
-          "Signalformen allgemein"
-        ]
+        "list": ["Gesamtverständnis herstellen", "Unterschied zwischen Informations- und Kommunikationstechnik", "Signale und Codes", "Signalformen allgemein"]
       },
       {
         "type": "SUBTITLE",
@@ -150,10 +140,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kenntnisse / Wissen über Sachverhalte, Vorgänge, Zustände, Ereignisse usw.",
-          "Sprache, Schrift, Tabellen, Diagramme, Bilder, Grafiken zum Darstellen"
-        ]
+        "list": ["Kenntnisse / Wissen über Sachverhalte, Vorgänge, Zustände, Ereignisse usw.", "Sprache, Schrift, Tabellen, Diagramme, Bilder, Grafiken zum Darstellen"]
       },
       {
         "type": "TEXT",
@@ -194,10 +181,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kann jeden beliebigen Signalwert annehmen",
-          "In jedem Zeitpunkt ist ein Signalwert enthalten"
-        ]
+        "list": ["Kann jeden beliebigen Signalwert annehmen", "In jedem Zeitpunkt ist ein Signalwert enthalten"]
       },
       {
         "type": "IMAGE",
@@ -214,10 +198,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kann nur bestimmte Werte zwischen einem negativen und einem positiven Höchstwert annehmen",
-          "In jedem Zeitpunkt ist ein Signal vorhanden"
-        ]
+        "list": ["Kann nur bestimmte Werte zwischen einem negativen und einem positiven Höchstwert annehmen", "In jedem Zeitpunkt ist ein Signal vorhanden"]
       },
       {
         "type": "IMAGE",
@@ -234,10 +215,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kann jeden beliebigen Signalwert annehmen",
-          "Ist aber nur zu bestimmten Zeiten vorhanden"
-        ]
+        "list": ["Kann jeden beliebigen Signalwert annehmen", "Ist aber nur zu bestimmten Zeiten vorhanden"]
       },
       {
         "type": "IMAGE",
@@ -254,10 +232,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kann nur bestimmte Werte annehmen",
-          "Ist nur zu bestimmten Zeiten vorhanden"
-        ]
+        "list": ["Kann nur bestimmte Werte annehmen", "Ist nur zu bestimmten Zeiten vorhanden"]
       },
       {
         "type": "IMAGE",
@@ -348,12 +323,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Wichtige Zahlensysteme in der IT",
-          "Allgemeine Definition",
-          "Schreibweisen",
-          "Umwandlungswege in Beispielen"
-        ]
+        "list": ["Wichtige Zahlensysteme in der IT", "Allgemeine Definition", "Schreibweisen", "Umwandlungswege in Beispielen"]
       },
       {
         "type": "TITLE",
@@ -367,13 +337,7 @@ export const LF4_2_POSTS: PostArticle[] = [
           "Nach bestimmten Regeln als Folge von Ziffern bzw. Zeichen dargestellt",
           {
             "content": "Bekannteste Zahlensysteme sind:",
-            "sublist": [
-              "Dezimalsystem (10‘er System)",
-              "Binär/Dualsystem (2‘er System)",
-              "Hexadezimalsystem (16‘er System)",
-              "Oktalsystem (8‘er System)",
-              "Römische Zahlen"
-            ]
+            "sublist": ["Dezimalsystem (10‘er System)", "Binär/Dualsystem (2‘er System)", "Hexadezimalsystem (16‘er System)", "Oktalsystem (8‘er System)", "Römische Zahlen"]
           },
           "Jedes Zahlensystem besteht aus Nennwerten",
           "Anzahl der Nennwerte ergibt sich aus der Basis",
@@ -392,14 +356,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "„Achtersystem“ verwendet die Basis 8 (acht)",
-          "Ziffern 0 bis 7 zur Darstellung",
-          "Oktalzahl kann drei Bits darstellen",
-          "2<sup>3</sup> ist 8, somit lassen sich mit 3 Bits 8 verschiedene Möglichkeiten darstellen",
-          "Oktalzahl reicht, um Informationen wiederzugeben",
-          "Einige Programmiersprachen nutzen die Oktalform, zB. in PHP wird dazu eine 0 (Null) vorangestellt, zB. 077 für 77<sub>8</sub> (=64<sub>10</sub>)"
-        ]
+        "list": ["„Achtersystem“ verwendet die Basis 8 (acht)", "Ziffern 0 bis 7 zur Darstellung", "Oktalzahl kann drei Bits darstellen", "2<sup>3</sup> ist 8, somit lassen sich mit 3 Bits 8 verschiedene Möglichkeiten darstellen", "Oktalzahl reicht, um Informationen wiederzugeben", "Einige Programmiersprachen nutzen die Oktalform, zB. in PHP wird dazu eine 0 (Null) vorangestellt, zB. 077 für 77<sub>8</sub> (=64<sub>10</sub>)"]
       },
       {
         "type": "LINE",
@@ -424,12 +381,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Regeln",
-        "list": [
-          "Zahlen werden von links nach rechts gelesen und addiert",
-          "Wert der Zahlzeichen von links nach rechts abnehmend",
-          "Maximal vier gleiche Symbole",
-          "10 wird nicht durch VV dargestellt, sondern durch X"
-        ]
+        "list": ["Zahlen werden von links nach rechts gelesen und addiert", "Wert der Zahlzeichen von links nach rechts abnehmend", "Maximal vier gleiche Symbole", "10 wird nicht durch VV dargestellt, sondern durch X"]
       },
       {
         "type": "LINE",
@@ -714,23 +666,12 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Arbeit mit Zahlen unterschiedlicher Zahlensysteme – immer eindeutig zuordnen?",
-          "100 hätte zB eine andere Wertigkeit – Verwechslungsgefahr!",
-          "Index als Zahl oder Buchstabe wird verwendet",
-          "Schreibweisen mit Buchstaben, egal ob Groß- oder Kleinschreibung",
-          "Oktalzahl reicht, um Informationen wiederzugeben",
-          "sind wegen ihrer Ähnlichkeit zur hexadezimalen Darstellung interpretationswürdig (nur gültig, wenn Darstellungssystem keine tiefgestellten Zeichen erlaubt)"
-        ]
+        "list": ["Arbeit mit Zahlen unterschiedlicher Zahlensysteme – immer eindeutig zuordnen?", "100 hätte zB eine andere Wertigkeit – Verwechslungsgefahr!", "Index als Zahl oder Buchstabe wird verwendet", "Schreibweisen mit Buchstaben, egal ob Groß- oder Kleinschreibung", "Oktalzahl reicht, um Informationen wiederzugeben", "sind wegen ihrer Ähnlichkeit zur hexadezimalen Darstellung interpretationswürdig (nur gültig, wenn Darstellungssystem keine tiefgestellten Zeichen erlaubt)"]
       },
       {
         "type": "LIST",
         "content": "In der Realität üblich:",
-        "list": [
-          "Dezimale Zahlen markiert man optional mit einem kleinen d oder 10 <br/> zB 100d oder 100<sub>10</sub>",
-          "Hexadezimale Zahlen markiert man mit einem kleinen h oder 16 <br/> zB 100h oder 100<sub>16</sub> oder mit $ (zB $100)",
-          "Duale Zahlen markiert man mit einem kleinen b oder 2 <br/> zB 100b oder 100<sub>2</sub> oder mit % (zB %100)"
-        ]
+        "list": ["Dezimale Zahlen markiert man optional mit einem kleinen d oder 10 <br/> zB 100d oder 100<sub>10</sub>", "Hexadezimale Zahlen markiert man mit einem kleinen h oder 16 <br/> zB 100h oder 100<sub>16</sub> oder mit $ (zB $100)", "Duale Zahlen markiert man mit einem kleinen b oder 2 <br/> zB 100b oder 100<sub>2</sub> oder mit % (zB %100)"]
       },
       {
         "type": "TITLE",
@@ -739,14 +680,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Umwandlung von Dualzahlen in Dezimalzahlen",
-        "list": [
-          "Händische Umwandlung von Dualzahlen in Dezimalzahlen, mit Hilfe einer Tabelle",
-          "Dualzahl wird in die Tabelle (Zeile Dualzahl) eingetragen",
-          "Wenn der Dualwert „1“ ist, wird der Dezimalwert dieses Dualwertes darunter gesetzt",
-          "Bei einem Dualwert „0“ wird die Stelle frei gelassen",
-          "Ergibt Summe aller Dezimalwerte",
-          "Stellenwerte der Tabelle können nach links beliebig erweitert werden"
-        ]
+        "list": ["Händische Umwandlung von Dualzahlen in Dezimalzahlen, mit Hilfe einer Tabelle", "Dualzahl wird in die Tabelle (Zeile Dualzahl) eingetragen", "Wenn der Dualwert „1“ ist, wird der Dezimalwert dieses Dualwertes darunter gesetzt", "Bei einem Dualwert „0“ wird die Stelle frei gelassen", "Ergibt Summe aller Dezimalwerte", "Stellenwerte der Tabelle können nach links beliebig erweitert werden"]
       },
       {
         "type": "LINE",
@@ -909,11 +843,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Aus Dezimal 637 wird Dual 1001111101",
-        "list": [
-          "Andere Methode: Dezimalzahl durch die Basis (2) teilen",
-          "Nach Teilung wird: Rest zur „1“ | kein Rest zur „0“",
-          "Teilen bis Ergebnis „0“ wird"
-        ]
+        "list": ["Andere Methode: Dezimalzahl durch die Basis (2) teilen", "Nach Teilung wird: Rest zur „1“ | kein Rest zur „0“", "Teilen bis Ergebnis „0“ wird"]
       },
       {
         "type": "HINT",
@@ -921,7 +851,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Zur Kurzprüfung der Dualzahl muss diese an der letzten Stelle eine \"1\" haben, wenn die Dezimalzahl ungerade war. <br/> Beispiel: 637 (ungerade) = 100111110<u>1</u>"
+        "content": 'Zur Kurzprüfung der Dualzahl muss diese an der letzten Stelle eine "1" haben, wenn die Dezimalzahl ungerade war. <br/> Beispiel: 637 (ungerade) = 100111110<u>1</u>'
       },
       {
         "type": "IMAGE",
@@ -1391,10 +1321,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen'>https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen</a>",
-          "<a href='https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert'>https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert</a>"
-        ]
+        "list": ["<a href='https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen'>https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen</a>", "<a href='https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert'>https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert</a>"]
       }
     ]
   },
@@ -1677,7 +1604,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Informieren Sie sich hierzu: <br/> Rotes Buch: \"Einfache IT-Systeme\" (Kapitel 4 Informationsverarbeitung in IT-Systemen) ff. IT-Handbuch unter \"Digitale Logik\" sowie \"Logik\""
+        "content": 'Informieren Sie sich hierzu: <br/> Rotes Buch: "Einfache IT-Systeme" (Kapitel 4 Informationsverarbeitung in IT-Systemen) ff. IT-Handbuch unter "Digitale Logik" sowie "Logik"'
       },
       {
         "type": "SUBTITLE",
@@ -1717,7 +1644,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Gegeben ist die logische Schaltung mit Zeitablaufdiagramm <br/> a) Welche Funktionsgleichung beschreibt die logische Schaltung? <br/> b) Wie lautet die Wahrheitstabelle? <br/> c) Welches Zeitablaufdiagramm hat der Ausgang \"A\"?"
+        "content": 'Gegeben ist die logische Schaltung mit Zeitablaufdiagramm <br/> a) Welche Funktionsgleichung beschreibt die logische Schaltung? <br/> b) Wie lautet die Wahrheitstabelle? <br/> c) Welches Zeitablaufdiagramm hat der Ausgang "A"?'
       },
       {
         "type": "IMAGE",
@@ -1810,10 +1737,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Man muss unterscheiden zwischen",
-        "list": [
-          "Bildern als Grafikdatei auf dem Computer (zB Bilder von der Digitalkamera)",
-          "Bildern als Ausdruck oder Fotoabzug (zb Poster)"
-        ]
+        "list": ["Bildern als Grafikdatei auf dem Computer (zB Bilder von der Digitalkamera)", "Bildern als Ausdruck oder Fotoabzug (zb Poster)"]
       },
       {
         "type": "IMAGE",
@@ -1910,14 +1834,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Übliche Einheiten der Punktdichte in der Praxis sind …",
-        "list": [
-          "dpi – dots per inch (dts. ‘Punkte pro Zoll‘)",
-          "dpc – dots per centimetre/centimeter (dts. ‘Punkte pro Zentimeter‘)",
-          "ppi – pixels per inch (dts. ‘Pixel pro Zoll‘)",
-          "lpi – lines per inch (dts. ‘Linien pro Zoll‘)",
-          "L / cm – Linien pro Zentimeter",
-          "px / cm – Pixel pro Zentimeter"
-        ]
+        "list": ["dpi – dots per inch (dts. ‘Punkte pro Zoll‘)", "dpc – dots per centimetre/centimeter (dts. ‘Punkte pro Zentimeter‘)", "ppi – pixels per inch (dts. ‘Pixel pro Zoll‘)", "lpi – lines per inch (dts. ‘Linien pro Zoll‘)", "L / cm – Linien pro Zentimeter", "px / cm – Pixel pro Zentimeter"]
       },
       {
         "type": "IMAGE",
@@ -1930,11 +1847,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Beispielaufgabe zur Berechnung der Speichergröße",
-        "list": [
-          "Auflösung von 1024 x 800 Pixel",
-          "24-Bit Farbtiefe",
-          "Datenkompression von 6:1"
-        ]
+        "list": ["Auflösung von 1024 x 800 Pixel", "24-Bit Farbtiefe", "Datenkompression von 6:1"]
       },
       {
         "type": "TEXT",
@@ -2023,14 +1936,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Begriff „Speicherzelle“",
-          "Arbeitsweise NAND- bzw. NOR-Flash",
-          "Flash-Speicher in ihrer Vielfalt",
-          "Vor- und Nachteile",
-          "Konkurrenten",
-          "Quellenangaben"
-        ]
+        "list": ["Begriff „Speicherzelle“", "Arbeitsweise NAND- bzw. NOR-Flash", "Flash-Speicher in ihrer Vielfalt", "Vor- und Nachteile", "Konkurrenten", "Quellenangaben"]
       },
       {
         "type": "SUBTITLE",
@@ -2039,11 +1945,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Speicherzelle ist ein Speicherelement in dem zwei Zustände speicherbar sind 0 oder 1",
-          "Man spricht auch von einer 1-Bit-Speicherzelle, oder Bitzelle",
-          "Es gibt Speicherzellen für 1 Byte, die aus acht Speicherelementen bestehen"
-        ]
+        "list": ["Speicherzelle ist ein Speicherelement in dem zwei Zustände speicherbar sind 0 oder 1", "Man spricht auch von einer 1-Bit-Speicherzelle, oder Bitzelle", "Es gibt Speicherzellen für 1 Byte, die aus acht Speicherelementen bestehen"]
       },
       {
         "type": "IMAGE",
@@ -2052,36 +1954,22 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Flash-Speicher basiert auf dem Floating-Gate-Transistor",
-          "Feldeffekttransistor mit zusätzlichem „Floating Gate“",
-          "Die elektrische Ladung auf dem Floating Gate kodiert, ob die Speicherzelle eine logische 0 oder 1 speichert",
-          "Das Floating Gate ist vom Dielektrikum umgeben, d.h. es behält die aufgebrachte Ladung permanent (> 1 Jahr)"
-        ]
+        "list": ["Flash-Speicher basiert auf dem Floating-Gate-Transistor", "Feldeffekttransistor mit zusätzlichem „Floating Gate“", "Die elektrische Ladung auf dem Floating Gate kodiert, ob die Speicherzelle eine logische 0 oder 1 speichert", "Das Floating Gate ist vom Dielektrikum umgeben, d.h. es behält die aufgebrachte Ladung permanent (> 1 Jahr)"]
       },
       {
         "type": "LIST",
         "content": "Lesevorgang",
-        "list": [
-          "Ist das Floating Gate negativ geladen, verhindert es, dass der Transistor normal betrieben werden kann = kein Strom fließt = Kodiert logische 0",
-          "Ist das Floating Gate nicht geladen, kann der Transistor normal arbeiten = Strom fließt = Kodiert logische 1"
-        ]
+        "list": ["Ist das Floating Gate negativ geladen, verhindert es, dass der Transistor normal betrieben werden kann = kein Strom fließt = Kodiert logische 0", "Ist das Floating Gate nicht geladen, kann der Transistor normal arbeiten = Strom fließt = Kodiert logische 1"]
       },
       {
         "type": "LIST",
         "content": "Schreibvorgang",
-        "list": [
-          "Logische 0: Es wird eine hohe positive Spannung (ca. 15 V) angelegt <br/> Elektronen „tunneln“ aus dem Substrat auf das Floating Gate",
-          "Logische 1: Es wird eine hohe negative Spannung (ca. -15 V) angelegt <br/> Elektronen „tunneln“ vom Floating Gate in das Substrat"
-        ]
+        "list": ["Logische 0: Es wird eine hohe positive Spannung (ca. 15 V) angelegt <br/> Elektronen „tunneln“ aus dem Substrat auf das Floating Gate", "Logische 1: Es wird eine hohe negative Spannung (ca. -15 V) angelegt <br/> Elektronen „tunneln“ vom Floating Gate in das Substrat"]
       },
       {
         "type": "LIST",
         "content": "Degeneration",
-        "list": [
-          "Bei jedem Lese- oder Schreibvorgang wird die Oxidschicht leicht beeinträchtigt, so dass ein Transistor nach ca. 10.000 bis mehreren 100.000 Zyklen unbrauchbar wird",
-          "Auf dem Chip gibt es Logik, die fehlerhafte Speicherzellen erkennt, sich deren Position in der Speichermatrix merkt, und die betroffene Speicherzelle durch andere ersetzt"
-        ]
+        "list": ["Bei jedem Lese- oder Schreibvorgang wird die Oxidschicht leicht beeinträchtigt, so dass ein Transistor nach ca. 10.000 bis mehreren 100.000 Zyklen unbrauchbar wird", "Auf dem Chip gibt es Logik, die fehlerhafte Speicherzellen erkennt, sich deren Position in der Speichermatrix merkt, und die betroffene Speicherzelle durch andere ersetzt"]
       },
       {
         "type": "LINE",
@@ -2102,11 +1990,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Degeneration",
-        "list": [
-          "NAND-Flashs werden mit kompletten Blöcken verschaltet (aus vielen Pages bestehend)",
-          "Page aus einer Anzahl an Bytes, es können zwischen 512 B und 8 KB sein",
-          "Pages werden weiterhin in Blöcken zu Speichergrößen von 512 KB bis 2 MB zusammengefasst"
-        ]
+        "list": ["NAND-Flashs werden mit kompletten Blöcken verschaltet (aus vielen Pages bestehend)", "Page aus einer Anzahl an Bytes, es können zwischen 512 B und 8 KB sein", "Pages werden weiterhin in Blöcken zu Speichergrößen von 512 KB bis 2 MB zusammengefasst"]
       },
       {
         "type": "LINE",
@@ -2127,13 +2011,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Lesezugriff: auf alle Bytes wahlfrei zugegriffen",
-          "Schreibzugriff: muss berücksichtigt werden, dass Bytes zu Blöcken gruppiert sind",
-          "Einzelne Bytes können unabhängig voneinander beschrieben werden - Achtung: hier nur ein Übergang der Bits von 1 nach 0 möglich)",
-          "Löschvorgang ist nur auf einen vollständigen Block anwendbar",
-          "Alle Bits in den Bytes werden hierbei wieder auf 1 gesetzt"
-        ]
+        "list": ["Lesezugriff: auf alle Bytes wahlfrei zugegriffen", "Schreibzugriff: muss berücksichtigt werden, dass Bytes zu Blöcken gruppiert sind", "Einzelne Bytes können unabhängig voneinander beschrieben werden - Achtung: hier nur ein Übergang der Bits von 1 nach 0 möglich)", "Löschvorgang ist nur auf einen vollständigen Block anwendbar", "Alle Bits in den Bytes werden hierbei wieder auf 1 gesetzt"]
       },
       {
         "type": "LINE",
@@ -2227,14 +2105,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Sehr starke Verbreitung und große Beliebtheit, sie stecken in vielen Geräten des täglichen Gebrauchs",
-        "list": [
-          "USB-Stick",
-          "Speicherkarten",
-          "SSD – Solid State Drive",
-          "SSHD – Solid State Hybrid Drives (Hybrid-Festplatten)",
-          "Handy / Smartphone",
-          "MP3-Player"
-        ]
+        "list": ["USB-Stick", "Speicherkarten", "SSD – Solid State Drive", "SSHD – Solid State Hybrid Drives (Hybrid-Festplatten)", "Handy / Smartphone", "MP3-Player"]
       },
       {
         "type": "TEXT",
@@ -2263,23 +2134,12 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Vorteile",
-        "list": [
-          "Die gespeicherten Daten bleiben auch bei fehlender Versorgungsspannung erhalten / Erhaltungsladung nicht erforderlich",
-          "Speicherkarten",
-          "Geräuschlos, unempfindlich gegen Erschütterungen und magnetische Felder",
-          "Zu Festplatten gesehen sehr kurze Zugriffszeit",
-          "Lese- und Schreibgeschwindigkeit über gesamten Speicherbereich fast konstant",
-          "Platzsparend im Verhältnis von Größe und Gewicht"
-        ]
+        "list": ["Die gespeicherten Daten bleiben auch bei fehlender Versorgungsspannung erhalten / Erhaltungsladung nicht erforderlich", "Speicherkarten", "Geräuschlos, unempfindlich gegen Erschütterungen und magnetische Felder", "Zu Festplatten gesehen sehr kurze Zugriffszeit", "Lese- und Schreibgeschwindigkeit über gesamten Speicherbereich fast konstant", "Platzsparend im Verhältnis von Größe und Gewicht"]
       },
       {
         "type": "LIST",
         "content": "Nachteile",
-        "list": [
-          "Nur begrenzte Schreib- bzw Löschvorgänge",
-          "Begrenzte Speicherkapazität",
-          "Hoher Preis (Relativ betrachtet!)"
-        ]
+        "list": ["Nur begrenzte Schreib- bzw Löschvorgänge", "Begrenzte Speicherkapazität", "Hoher Preis (Relativ betrachtet!)"]
       },
       {
         "type": "LINE",
@@ -2304,10 +2164,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Unbeschränkte Anzahl von Schreibzyklen",
-          "Enorm erhöhte Daten-schreib- und Zugriffsgeschwindigkeit"
-        ]
+        "list": ["Unbeschränkte Anzahl von Schreibzyklen", "Enorm erhöhte Daten-schreib- und Zugriffsgeschwindigkeit"]
       },
       {
         "type": "IMAGE",
@@ -2332,13 +2189,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Was sind Dateisysteme (Definition)",
-          "Historische Entwicklung",
-          "Aufbau eines Datenträgers und Zugriff auf diesen (Festplatte)",
-          "Beispiele für Größen bei Dateisysteme",
-          "Fragmentierung / Platzverwaltung"
-        ]
+        "list": ["Was sind Dateisysteme (Definition)", "Historische Entwicklung", "Aufbau eines Datenträgers und Zugriff auf diesen (Festplatte)", "Beispiele für Größen bei Dateisysteme", "Fragmentierung / Platzverwaltung"]
       },
       {
         "type": "LINE",
@@ -2351,17 +2202,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Abstraktion jedes Betriebssystems zur geräteunabhängigen Verwaltung von Dateien",
-          "Vereinheitlichende Sicht auf verschiedene Arten von Sekundärspeichern zB Festplatten, Floppy‘s, CD-Rom‘s, DVDs und Bandlaufwerke",
-          "Benutzer muss sich nicht um physikalische Datenformate auf den verschiedenen Arten der Sekundärspeicher kümmern",
-          "Grundlegende Dateien- und Verzeichnisverwaltungsstrukturen von Betriebssystemen",
-          "Anlegung bei der Formatierung des Speichermediums",
-          "Dateisystem legt Clustergrößen, Zugriffsrechte, Suchmethoden usw. fest",
-          "In ihm sind alle notwendigen Strukturen für Speichern / Verwalten von Daten enthalten",
-          "Regeln des Bootdatensatzes (Boot Record) des Betriebssystems sowie Daten und Verzeichnisse sind integriert",
-          "„Datei“ repräsentiert sich als eine Menge von Blöcken fester Größe (wobei ein Block einem oder mehreren Sektoren entsprechen kann)"
-        ]
+        "list": ["Abstraktion jedes Betriebssystems zur geräteunabhängigen Verwaltung von Dateien", "Vereinheitlichende Sicht auf verschiedene Arten von Sekundärspeichern zB Festplatten, Floppy‘s, CD-Rom‘s, DVDs und Bandlaufwerke", "Benutzer muss sich nicht um physikalische Datenformate auf den verschiedenen Arten der Sekundärspeicher kümmern", "Grundlegende Dateien- und Verzeichnisverwaltungsstrukturen von Betriebssystemen", "Anlegung bei der Formatierung des Speichermediums", "Dateisystem legt Clustergrößen, Zugriffsrechte, Suchmethoden usw. fest", "In ihm sind alle notwendigen Strukturen für Speichern / Verwalten von Daten enthalten", "Regeln des Bootdatensatzes (Boot Record) des Betriebssystems sowie Daten und Verzeichnisse sind integriert", "„Datei“ repräsentiert sich als eine Menge von Blöcken fester Größe (wobei ein Block einem oder mehreren Sektoren entsprechen kann)"]
       },
       {
         "type": "LINE",
@@ -2374,15 +2215,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ursprüngliche Daten auf Lochkarte mit Standardformaten vereinheitlichen Darstellbarkeit und Transformation",
-          "Mensch organisiert seine „Daten“",
-          "Einzug der Speicherung von Daten auf Bändern",
-          "Speichern auf Bändern erlaubt nur serielles Lesen effizient – Daten auf Bändern sind höchstens zeitlich organisiert",
-          "Maschinen werden auf I/O bzw. auf Rechenkapazität spezialisiert",
-          "Disks kommen auf: Floppy Disks später Festplatten und weitere Medien",
-          "Disks haben keine strikte serielle Speicherung, System von Ordnern und Verzeichnissen sowie genauer Zuordnung von Dateien wird nötig"
-        ]
+        "list": ["Ursprüngliche Daten auf Lochkarte mit Standardformaten vereinheitlichen Darstellbarkeit und Transformation", "Mensch organisiert seine „Daten“", "Einzug der Speicherung von Daten auf Bändern", "Speichern auf Bändern erlaubt nur serielles Lesen effizient – Daten auf Bändern sind höchstens zeitlich organisiert", "Maschinen werden auf I/O bzw. auf Rechenkapazität spezialisiert", "Disks kommen auf: Floppy Disks später Festplatten und weitere Medien", "Disks haben keine strikte serielle Speicherung, System von Ordnern und Verzeichnissen sowie genauer Zuordnung von Dateien wird nötig"]
       },
       {
         "type": "IMAGE",
@@ -2403,14 +2236,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Magnetisierung auf kreisförmigen, konzentrischen Spuren (Tracks) von den Köpfen auf beiden Seiten aufgetragen",
-          "Gleiche, also übereinander befindlichen Spuren der einzelnen Plattenoberflächen heißen Zylinder (Cylinder)",
-          "Spuren sind in kleine logische Einheiten (Kreissegmente) unterteilt (Blöcke oder Sektoren) meist für 512 Bytes Nutzdaten",
-          "Blöcke sind kleinste adressierbare Einheiten",
-          "Müssen Daten im Block geändert werden, muss ganzer Block gelesen und neu geschrieben werden",
-          "Heute werden softwareseitig Cluster (Verbünde von Blöcken mit fester Größe, zB 4 oder 8 kB angesprochen)"
-        ]
+        "list": ["Magnetisierung auf kreisförmigen, konzentrischen Spuren (Tracks) von den Köpfen auf beiden Seiten aufgetragen", "Gleiche, also übereinander befindlichen Spuren der einzelnen Plattenoberflächen heißen Zylinder (Cylinder)", "Spuren sind in kleine logische Einheiten (Kreissegmente) unterteilt (Blöcke oder Sektoren) meist für 512 Bytes Nutzdaten", "Blöcke sind kleinste adressierbare Einheiten", "Müssen Daten im Block geändert werden, muss ganzer Block gelesen und neu geschrieben werden", "Heute werden softwareseitig Cluster (Verbünde von Blöcken mit fester Größe, zB 4 oder 8 kB angesprochen)"]
       },
       {
         "type": "IMAGE",
@@ -2419,12 +2245,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Massenspeicher",
-        "list": [
-          "physikalisches Medium mit Blockstruktur",
-          "Festplatten 512 bzw. 4096 Bytes",
-          "Optische Medien 2048 Bytes",
-          "4 oder 8 Blöcke = 1 Cluster"
-        ]
+        "list": ["physikalisches Medium mit Blockstruktur", "Festplatten 512 bzw. 4096 Bytes", "Optische Medien 2048 Bytes", "4 oder 8 Blöcke = 1 Cluster"]
       },
       {
         "type": "IMAGE",
@@ -2437,25 +2258,14 @@ export const LF4_2_POSTS: PostArticle[] = [
           "Tabelle mit Beschreibungen von Dateien",
           {
             "content": "Beschreibung (Metadaten)",
-            "sublist": [
-              "Länge",
-              "Adresse der Cluster",
-              "Dateityp",
-              "Besitzer / Rechte",
-              "Datumsangaben"
-            ]
+            "sublist": ["Länge", "Adresse der Cluster", "Dateityp", "Besitzer / Rechte", "Datumsangaben"]
           }
         ]
       },
       {
         "type": "LIST",
         "content": "Zuordnung Datei ↔ Cluster",
-        "list": [
-          "Startcluster + Länge",
-          "Startcluster + Adresse des Folgeclusters",
-          "Frei (Cluster stehen einzeln in der Tabelle)",
-          "Speicherung von Extents"
-        ]
+        "list": ["Startcluster + Länge", "Startcluster + Adresse des Folgeclusters", "Frei (Cluster stehen einzeln in der Tabelle)", "Speicherung von Extents"]
       },
       {
         "type": "TEXT",
@@ -2464,13 +2274,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Festplatte wird aufgeteilt in",
-        "list": [
-          "Bootblock (1)",
-          "Partitionstabelle, optional (2)",
-          "Beschreibungstabelle der Dateien (3)",
-          "Liste freier Cluster (4)",
-          "Dateien und Verzeichnisse (5)"
-        ]
+        "list": ["Bootblock (1)", "Partitionstabelle, optional (2)", "Beschreibungstabelle der Dateien (3)", "Liste freier Cluster (4)", "Dateien und Verzeichnisse (5)"]
       },
       {
         "type": "IMAGE",
@@ -2492,10 +2296,7 @@ export const LF4_2_POSTS: PostArticle[] = [
           "Je Sektor mit CHS klar lokalisier- und adressierbar",
           {
             "content": "CHS hat aber mehrere Einschränkungen",
-            "sublist": [
-              "Zwischen IDE und BIOS werden nur 16 Bits für die Zylinder (maximal 65.536), 4 Bits für die Köpfe (maximal 16) und 8 Bits für die Sektoren / Spur (maximal 256) reserviert",
-              "BIOS hat 10 Bits für Zylinder zur Verfügung (maximal 1.024), 8 Bits für Köpfe (maximal 256) und 6 Bits für Sektoren / Spur (maximal 63, da ab 1 gezählt wird)"
-            ]
+            "sublist": ["Zwischen IDE und BIOS werden nur 16 Bits für die Zylinder (maximal 65.536), 4 Bits für die Köpfe (maximal 16) und 8 Bits für die Sektoren / Spur (maximal 256) reserviert", "BIOS hat 10 Bits für Zylinder zur Verfügung (maximal 1.024), 8 Bits für Köpfe (maximal 256) und 6 Bits für Sektoren / Spur (maximal 63, da ab 1 gezählt wird)"]
           },
           "Grenze wird durch jeweils niedrigsten Wert entschieden",
           "Alte BIOS-Versionen können maximal 504 MB adressieren"
@@ -2516,11 +2317,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Bis zu Windows XP waren Defragmentierungstools sichtbar",
-          "„Sortierte Ablage“ auf der Platte war nur scheinbar gegeben, da Systeme des Restore und Backups immer mehr Platz benötigt haben",
-          "Dateien wurden entsprechend der vorhandenen Clustergröße aufgeteilt und nehmen mehrere Cluster einfacher"
-        ]
+        "list": ["Bis zu Windows XP waren Defragmentierungstools sichtbar", "„Sortierte Ablage“ auf der Platte war nur scheinbar gegeben, da Systeme des Restore und Backups immer mehr Platz benötigt haben", "Dateien wurden entsprechend der vorhandenen Clustergröße aufgeteilt und nehmen mehrere Cluster einfacher"]
       },
       {
         "type": "IMAGE",
@@ -2529,11 +2326,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ergebnis ist eine „ordentliche“ Anreihung der Fragmente einer Datei mit einer geringeren Zugriffszeit, da alle erforderlichen Lokalitätsangaben zu Suche nach Fragmenten entfallen",
-          "Das „Suchen“ nach Fragmenten wird lokal eingegrenzt",
-          "Nachteil: SSD‘s verlieren dadurch Zugriffszyklen = Lebensdauer!"
-        ]
+        "list": ["Ergebnis ist eine „ordentliche“ Anreihung der Fragmente einer Datei mit einer geringeren Zugriffszeit, da alle erforderlichen Lokalitätsangaben zu Suche nach Fragmenten entfallen", "Das „Suchen“ nach Fragmenten wird lokal eingegrenzt", "Nachteil: SSD‘s verlieren dadurch Zugriffszyklen = Lebensdauer!"]
       },
       {
         "type": "IMAGE",
@@ -2571,13 +2364,7 @@ export const LF4_2_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Warum Dateizuordnungstabelle",
-          "Hintergrund",
-          "Prinzip",
-          "Dateiformat",
-          "Bezug zur Software"
-        ]
+        "list": ["Warum Dateizuordnungstabelle", "Hintergrund", "Prinzip", "Dateiformat", "Bezug zur Software"]
       },
       {
         "type": "LINE",
@@ -2594,20 +2381,12 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "... eine Betriebssystemabstraktion sind",
-        "list": [
-          "Speicherung logisch zusammenhängender Informationen als Dateien",
-          "Meist hierarchische Verzeichnisstruktur, um Dateien zu ordnen"
-        ]
+        "list": ["Speicherung logisch zusammenhängender Informationen als Dateien", "Meist hierarchische Verzeichnisstruktur, um Dateien zu ordnen"]
       },
       {
         "type": "LIST",
         "content": "Dateisystem (filesystem = Ablageorganisation auf einem Datenträger. Dateien können gespeichert, gelesen, verändert oder gelöscht werden.",
-        "list": [
-          "Für Nutzer müssen Dateiname und computerinterne Dateiadressen in Einklang bringen",
-          "Leichteres Wiederfinden und sicheres Abspeichern als wesentliche Aufgabe",
-          "Ordnungs- und Zugriffssystem berücksichtigt Geräteeigenschaften",
-          "Bestandteil des Betriebssystems"
-        ]
+        "list": ["Für Nutzer müssen Dateiname und computerinterne Dateiadressen in Einklang bringen", "Leichteres Wiederfinden und sicheres Abspeichern als wesentliche Aufgabe", "Ordnungs- und Zugriffssystem berücksichtigt Geräteeigenschaften", "Bestandteil des Betriebssystems"]
       },
       {
         "type": "IMAGE",
@@ -2616,19 +2395,12 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "… durch die Hardware beeinflusst werden",
-        "list": [
-          "Minimierung der Positionierungszeiten bei Platten",
-          "Gleichmäßige „Abnutzung“ bei Flash-Speicher",
-          "Kein Buffer",
-          "Cache bei RAM-Disks"
-        ]
+        "list": ["Minimierung der Positionierungszeiten bei Platten", "Gleichmäßige „Abnutzung“ bei Flash-Speicher", "Kein Buffer", "Cache bei RAM-Disks"]
       },
       {
         "type": "LIST",
         "content": "… durch das Anwendungsprofil beeinflusst werden",
-        "list": [
-          "Blockgröße"
-        ]
+        "list": ["Blockgröße"]
       },
       {
         "type": "TEXT",
@@ -2637,10 +2409,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Aufbau von Verzeichnissen",
-        "list": [
-          "Keine Hash-Funktion → langwierige Suche",
-          "mit Hash-Funktion → mehr Aufwand bei der Verwaltung"
-        ]
+        "list": ["Keine Hash-Funktion → langwierige Suche", "mit Hash-Funktion → mehr Aufwand bei der Verwaltung"]
       },
       {
         "type": "LINE",
@@ -2653,11 +2422,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Dateisystem bildet eine Art Ordnungs- und Zugriffssystem",
-          "Eindeutigkeit einer Datei wird durch Dateiname und Dateipfad sichergestellt (deshalb ist es auch zB nicht möglich eine Datei in einem Verzeichnis mit einem Namen zu erstellen welche es dort bereits gibt)",
-          "Weitere Informationen (Attribute) über jede einzelne Datei, die das Dateisystem verwaltet, sogenannte Meta-Daten"
-        ]
+        "list": ["Dateisystem bildet eine Art Ordnungs- und Zugriffssystem", "Eindeutigkeit einer Datei wird durch Dateiname und Dateipfad sichergestellt (deshalb ist es auch zB nicht möglich eine Datei in einem Verzeichnis mit einem Namen zu erstellen welche es dort bereits gibt)", "Weitere Informationen (Attribute) über jede einzelne Datei, die das Dateisystem verwaltet, sogenannte Meta-Daten"]
       },
       {
         "type": "TEXT",
@@ -2674,12 +2439,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Organisation der logischen Datenblöcke auf der Blockstruktur des sekundären Speichers",
-          "Zu jeder Datei müssen (Start-)Blocknummer sowie Anzahl der Blöcke einer Datei bekannt sein",
-          "Änderungen in der Datei können den zuvor genutzten Platz überschreiten, als Konsequenz „zieht die Datei um“",
-          "Es entsteht ein Raum ungenutzten Dateninformationen auf dem Datenträger"
-        ]
+        "list": ["Organisation der logischen Datenblöcke auf der Blockstruktur des sekundären Speichers", "Zu jeder Datei müssen (Start-)Blocknummer sowie Anzahl der Blöcke einer Datei bekannt sein", "Änderungen in der Datei können den zuvor genutzten Platz überschreiten, als Konsequenz „zieht die Datei um“", "Es entsteht ein Raum ungenutzten Dateninformationen auf dem Datenträger"]
       },
       {
         "type": "LINE",
@@ -2692,11 +2452,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Zugriff auf Daten kann ...",
-        "list": [
-          "Wahlfrei (direkter Zugriff auf entsprechende Datenträgerstelle)",
-          "Sequentiell (nach entsprechender Suche – Magnetband) oder",
-          "Indexsequentiell (Suche nach Schlüsselwerten)"
-        ]
+        "list": ["Wahlfrei (direkter Zugriff auf entsprechende Datenträgerstelle)", "Sequentiell (nach entsprechender Suche – Magnetband) oder", "Indexsequentiell (Suche nach Schlüsselwerten)"]
       },
       {
         "type": "TEXT",
@@ -2705,29 +2461,17 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Globale Operationen beziehen sich direkt auf das Dateisystem",
-        "list": [
-          "Create – Ist das neue Anlegen einer Datei oder eines Verzeichnisses",
-          "Open – Ist das Öffnen einer bestehenden Datei oder Verzeichnisses",
-          "Close – Ist das permanent machen (oder Schließen) einer Datei",
-          "Delete – Ist das Entfernen einer Datei oder eines Verzeichnisses"
-        ]
+        "list": ["Create – Ist das neue Anlegen einer Datei oder eines Verzeichnisses", "Open – Ist das Öffnen einer bestehenden Datei oder Verzeichnisses", "Close – Ist das permanent machen (oder Schließen) einer Datei", "Delete – Ist das Entfernen einer Datei oder eines Verzeichnisses"]
       },
       {
         "type": "LIST",
         "content": "Lokale Operationen beziehen sich nur auf die entsprechenden Dateien",
-        "list": [
-          "Read, Write – Ist das Lesen, Schreiben einer Datei",
-          "Reset, SetPos, GetPos (Seek) – Ist das Positionieren einer Datei"
-        ]
+        "list": ["Read, Write – Ist das Lesen, Schreiben einer Datei", "Reset, SetPos, GetPos (Seek) – Ist das Positionieren einer Datei"]
       },
       {
         "type": "LIST",
         "content": "Zusätzlich gibt es noch Zustandsabfragen an einer Datei (zB. die Länge einer Datei, Zeitpunkt der letzten Änderung usw.)",
-        "list": [
-          "Legt den Inhalt von Dateien fest",
-          "Vereinbarte Konventionen der inneren Struktur, wie Informationen eines bestimmten Datentyps, beispielsweise Text, Grafik, Video, Audio, Tabellen angeordnet sind",
-          "Nur wenn diese Konventionen für die unterschiedlichen Dateiformate eingehalten werden, können die Computer- und Anwendungsprogramme diese Dateiformate lesen"
-        ]
+        "list": ["Legt den Inhalt von Dateien fest", "Vereinbarte Konventionen der inneren Struktur, wie Informationen eines bestimmten Datentyps, beispielsweise Text, Grafik, Video, Audio, Tabellen angeordnet sind", "Nur wenn diese Konventionen für die unterschiedlichen Dateiformate eingehalten werden, können die Computer- und Anwendungsprogramme diese Dateiformate lesen"]
       },
       {
         "type": "LINE",
@@ -2740,13 +2484,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Jede Dateiendung bezieht sich auf ein Anwendungsbezogenes Format",
-          "Sollen Dateien geöffnet werden, so startet der PC ein zuvor installiertes Programm",
-          "Ist das erforderliche Programm nicht verfügbar, so können die Inhalte dieser Dateien nicht korrekt wiedergegeben werden",
-          "Jede Software nutzt ihre eigenen „File Extensions“, teilweise sogar in ihren Versionen",
-          "Derzeit kennt man etwa 12.000 verschiedene Extensions"
-        ]
+        "list": ["Jede Dateiendung bezieht sich auf ein Anwendungsbezogenes Format", "Sollen Dateien geöffnet werden, so startet der PC ein zuvor installiertes Programm", "Ist das erforderliche Programm nicht verfügbar, so können die Inhalte dieser Dateien nicht korrekt wiedergegeben werden", "Jede Software nutzt ihre eigenen „File Extensions“, teilweise sogar in ihren Versionen", "Derzeit kennt man etwa 12.000 verschiedene Extensions"]
       },
       {
         "type": "TABLE",
@@ -2892,16 +2630,7 @@ export const LF4_2_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "",
         "ordered": true,
-        "list": [
-          "Einleitung",
-          "Begriff der Ergonomie",
-          "Ergonomie im IT-Bereich",
-          "Ergonomie der Software",
-          "Normen – Richtwerte – Einflüsse der Ergonomie, Lärmwerte, Klima, Beleuchtung, Farben, Farbenlehre",
-          "Gesetze und Verordnungen",
-          "Kennzeichnung",
-          "Quellen"
-        ]
+        "list": ["Einleitung", "Begriff der Ergonomie", "Ergonomie im IT-Bereich", "Ergonomie der Software", "Normen – Richtwerte – Einflüsse der Ergonomie, Lärmwerte, Klima, Beleuchtung, Farben, Farbenlehre", "Gesetze und Verordnungen", "Kennzeichnung", "Quellen"]
       },
       {
         "type": "LINE",
@@ -2914,17 +2643,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Hat der Stuhl die passende Höhe und ist der Bildschirm richtig aufgestellt?",
-          "Wie ein gesunder Arbeitsplatz aussieht – und was Firmen davon haben, ihn einzurichten.",
-          "Kleine Veränderungen können große Wirkungen haben",
-          "Beispiel: Ein paar Zentimeter größere Mülltonnenräder machen schwere Abfalltonnen beweglicher",
-          "Ein tiefer gelegtes Lastauto schont die Gelenke beim Ein- und Aussteigen, Fußstützen unter dem Schreibtisch den Rücken",
-          "Arbeitsschutz ist kein freiwilliges Angebot für die Mitarbeiter",
-          "„Gesetzliche Grundlage ist das auf europäischem Recht basierende Arbeitsschutzgesetz“",
-          "Dieses Gesetz verpflichtet Arbeitgeber dazu, körperliche als auch geistige Risiken wie etwa Stress am Arbeitsplatz einzuschätzen und ihnen entgegenzuwirken",
-          "Dieses Beratungen übernehmen Betriebsärzte, Sicherheitsfachkräften und Berufsgenossenschaften"
-        ]
+        "list": ["Hat der Stuhl die passende Höhe und ist der Bildschirm richtig aufgestellt?", "Wie ein gesunder Arbeitsplatz aussieht – und was Firmen davon haben, ihn einzurichten.", "Kleine Veränderungen können große Wirkungen haben", "Beispiel: Ein paar Zentimeter größere Mülltonnenräder machen schwere Abfalltonnen beweglicher", "Ein tiefer gelegtes Lastauto schont die Gelenke beim Ein- und Aussteigen, Fußstützen unter dem Schreibtisch den Rücken", "Arbeitsschutz ist kein freiwilliges Angebot für die Mitarbeiter", "„Gesetzliche Grundlage ist das auf europäischem Recht basierende Arbeitsschutzgesetz“", "Dieses Gesetz verpflichtet Arbeitgeber dazu, körperliche als auch geistige Risiken wie etwa Stress am Arbeitsplatz einzuschätzen und ihnen entgegenzuwirken", "Dieses Beratungen übernehmen Betriebsärzte, Sicherheitsfachkräften und Berufsgenossenschaften"]
       },
       {
         "type": "LINE",
@@ -2937,13 +2656,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "altgriech. ergon, „Arbeit“, „Werk“ und nomos, „Regel“, „Gesetz“",
-        "list": [
-          "frei übersetzt: Gesetzmäßigkeit der Arbeit",
-          "ein Bereich der Arbeitswissenschaft",
-          "um Gesundheit zu schützen und Wirtschaftlichkeit zu steigern",
-          "wichtig im Berufs- und Privatleben",
-          "zukünftig wichtiger Punkt in Schulen und im Privatbereich (zB. Wohnungseinrichtung)"
-        ]
+        "list": ["frei übersetzt: Gesetzmäßigkeit der Arbeit", "ein Bereich der Arbeitswissenschaft", "um Gesundheit zu schützen und Wirtschaftlichkeit zu steigern", "wichtig im Berufs- und Privatleben", "zukünftig wichtiger Punkt in Schulen und im Privatbereich (zB. Wohnungseinrichtung)"]
       },
       {
         "type": "LINE",
@@ -2956,15 +2669,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Wie sieht ein ergonomischer Stuhl aus",
-        "list": [
-          "5 Beine (gegen umkippen)",
-          "Sitzhöhe verstellbar",
-          "Lehnen tiefe verstellbar",
-          "Lehnen Neigung verstellbar",
-          "Lehnen Höhe verstellbar",
-          "Armlehne verstellbar",
-          "Richtige Rollen für den Bodenbelag"
-        ]
+        "list": ["5 Beine (gegen umkippen)", "Sitzhöhe verstellbar", "Lehnen tiefe verstellbar", "Lehnen Neigung verstellbar", "Lehnen Höhe verstellbar", "Armlehne verstellbar", "Richtige Rollen für den Bodenbelag"]
       },
       {
         "type": "TEXT",
@@ -2973,10 +2678,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Die „weichen“ Hartbodenrollen sind immer zweifarbig, die Fest-Kunststoffrollen sind einfarbig. Merke:",
-        "list": [
-          "Harter Boden = Weiche Rollen = Helle Rollenfarbe außen <br/> → zB. Fliesen, Laminat, Parkett",
-          "Weicher Boden = Harte Rollen = Schwarze einfarbige Rollen <br/> → zB. weiche Teppiche"
-        ]
+        "list": ["Harter Boden = Weiche Rollen = Helle Rollenfarbe außen <br/> → zB. Fliesen, Laminat, Parkett", "Weicher Boden = Harte Rollen = Schwarze einfarbige Rollen <br/> → zB. weiche Teppiche"]
       },
       {
         "type": "IMAGE",
@@ -2989,63 +2691,37 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Fläche",
-        "list": [
-          "Standardfläche 80 cm Tiefe, 160 cm Breite (Mindestanforderung Tischbreite 120 cm)",
-          "aufgeräumt, häufig verwendete Arbeitsmittel im zentralen Blickfeld"
-        ]
+        "list": ["Standardfläche 80 cm Tiefe, 160 cm Breite (Mindestanforderung Tischbreite 120 cm)", "aufgeräumt, häufig verwendete Arbeitsmittel im zentralen Blickfeld"]
       },
       {
         "type": "LIST",
         "content": "Höhe",
-        "list": [
-          "Starre Tische haben eine Höhe von 72 cm",
-          "Höhenverstellbare Schreibtische zwischen 65 und 85 cm einstellbar",
-          "Steh-Sitz-Schreibtische im Bereich von 65 bis zu 125 cm (elektrischer Stellmotor gut)"
-        ]
+        "list": ["Starre Tische haben eine Höhe von 72 cm", "Höhenverstellbare Schreibtische zwischen 65 und 85 cm einstellbar", "Steh-Sitz-Schreibtische im Bereich von 65 bis zu 125 cm (elektrischer Stellmotor gut)"]
       },
       {
         "type": "LIST",
         "content": "Material",
-        "list": [
-          "Tischoberfläche matt bis seidenmatt",
-          "Reflexionsgrad zwischen 0,2 und 0,5",
-          "Alle Kanten müssen abgerundet sein (Radius mind. 2mm)"
-        ]
+        "list": ["Tischoberfläche matt bis seidenmatt", "Reflexionsgrad zwischen 0,2 und 0,5", "Alle Kanten müssen abgerundet sein (Radius mind. 2mm)"]
       },
       {
         "type": "LIST",
         "content": "Sicherheit",
-        "list": [
-          "Standsicher, biegefest und dämpfend gegen Schwingungen und Erschütterungen",
-          "Höhenverstellung ohne Quetschen / Klemmen der Finger / sonstigen Körperpartien",
-          "Zwischenräume <= 4 mm oder >= 25 mm",
-          "Gekennzeichnet mit Prüfsiegel CE- oder GS-Zeichen"
-        ]
+        "list": ["Standsicher, biegefest und dämpfend gegen Schwingungen und Erschütterungen", "Höhenverstellung ohne Quetschen / Klemmen der Finger / sonstigen Körperpartien", "Zwischenräume <= 4 mm oder >= 25 mm", "Gekennzeichnet mit Prüfsiegel CE- oder GS-Zeichen"]
       },
       {
         "type": "LIST",
         "content": "Bein- und Fußfreiheit",
-        "list": [
-          "Beinraum nicht eingeschränkt",
-          "Genügend Bewegungsfreiheit ohne Unterbauten oder Stützelemente",
-          "Besser Tische mit T-Fuß oder C-Fuß",
-          "Füße Vollständig auf Boden abzustellen oder Fußstütze"
-        ]
+        "list": ["Beinraum nicht eingeschränkt", "Genügend Bewegungsfreiheit ohne Unterbauten oder Stützelemente", "Besser Tische mit T-Fuß oder C-Fuß", "Füße Vollständig auf Boden abzustellen oder Fußstütze"]
       },
       {
         "type": "LIST",
         "content": "Kabelführung",
-        "list": [
-          "Für Kabel müssen vertikale und horizontale Installationskanäle vorhanden sein",
-          "Verhindert Stolpern aufgrund freiliegender Kabel"
-        ]
+        "list": ["Für Kabel müssen vertikale und horizontale Installationskanäle vorhanden sein", "Verhindert Stolpern aufgrund freiliegender Kabel"]
       },
       {
         "type": "LIST",
         "content": "In greifbarer Nähe sind Gegenstände, die ständig genutzt werden",
-        "list": [
-          "Tastatur und Maus, Arbeitsgeräte"
-        ]
+        "list": ["Tastatur und Maus, Arbeitsgeräte"]
       },
       {
         "type": "IMAGE",
@@ -3054,10 +2730,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Weiter weg sind die nicht ständig gebrauchten Gegenstände",
-        "list": [
-          "Telefon (zur Bewegung)",
-          "Unwichtige Dinge (zB. Schreibblock)"
-        ]
+        "list": ["Telefon (zur Bewegung)", "Unwichtige Dinge (zB. Schreibblock)"]
       },
       {
         "type": "IMAGE",
@@ -3078,31 +2751,17 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Kennzeichen",
-        "list": [
-          "Permanente Sichtbarkeit der für die Aufgabe relevanten Objekte",
-          "Schnelle, umkehrbare, einstufige Benutzeraktionen",
-          "Hohe Interaktivität – Ersetzung komplexer Kommandos durch physische Aktionen",
-          "Veränderungen werden sofort sichtbar"
-        ]
+        "list": ["Permanente Sichtbarkeit der für die Aufgabe relevanten Objekte", "Schnelle, umkehrbare, einstufige Benutzeraktionen", "Hohe Interaktivität – Ersetzung komplexer Kommandos durch physische Aktionen", "Veränderungen werden sofort sichtbar"]
       },
       {
         "type": "LIST",
         "content": "Identität Eingabe / Ausgabe",
-        "list": [
-          "Permanente Sichtbarkeit der für die Aufgabe relevanten Objekte",
-          "Eingabe als Manipulation von Objekten",
-          "Referenzen zwischen Objekten werden durch Zeigeoperationen hergestellt"
-        ]
+        "list": ["Permanente Sichtbarkeit der für die Aufgabe relevanten Objekte", "Eingabe als Manipulation von Objekten", "Referenzen zwischen Objekten werden durch Zeigeoperationen hergestellt"]
       },
       {
         "type": "LIST",
         "content": "Grundsätze zur Bildschirmgestaltung",
-        "list": [
-          "Objekte auf dem Bildschirm sollten sich klar als Figuren herausbilden",
-          "Nur was Figur sein soll, wird zur Figur",
-          "Klare Trennung von Vorder- und Hintergrund",
-          "Erzeugung eines Tiefeneindrucks"
-        ]
+        "list": ["Objekte auf dem Bildschirm sollten sich klar als Figuren herausbilden", "Nur was Figur sein soll, wird zur Figur", "Klare Trennung von Vorder- und Hintergrund", "Erzeugung eines Tiefeneindrucks"]
       },
       {
         "type": "IMAGE",
@@ -3115,15 +2774,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Für die Gestaltung der Dialoge gelten 7 Grundregeln",
-        "list": [
-          "Aufgabenangemessenheit",
-          "Selbstbeschreibungsfähigkeit",
-          "Steuerbarkeit",
-          "Fehlertoleranz",
-          "Erwartungskonformität",
-          "Individualisierbarkeit",
-          "Lernförderlichkeit"
-        ]
+        "list": ["Aufgabenangemessenheit", "Selbstbeschreibungsfähigkeit", "Steuerbarkeit", "Fehlertoleranz", "Erwartungskonformität", "Individualisierbarkeit", "Lernförderlichkeit"]
       },
       {
         "type": "IMAGE",
@@ -3140,62 +2791,27 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Lärmwerte",
-        "list": [
-          "Lärm macht krank",
-          "Höchstens 55 dB",
-          "Gesundheitliche Beeinträchtigungen, Schwerhörigkeit, usw.",
-          "Arbeitsmotivation sinkt",
-          "Ruhige Arbeitsumgebung fördert Leistungsfähigkeit",
-          "Arbeitsplätze können durch Trennwände, schallschluckende Fußböden, geeignet tapezierte Wände, Stoffvorhänge u. a. m. Ausgerüstet werden",
-          "Eine Klimaanlage kann Lärm verursachen"
-        ]
+        "list": ["Lärm macht krank", "Höchstens 55 dB", "Gesundheitliche Beeinträchtigungen, Schwerhörigkeit, usw.", "Arbeitsmotivation sinkt", "Ruhige Arbeitsumgebung fördert Leistungsfähigkeit", "Arbeitsplätze können durch Trennwände, schallschluckende Fußböden, geeignet tapezierte Wände, Stoffvorhänge u. a. m. Ausgerüstet werden", "Eine Klimaanlage kann Lärm verursachen"]
       },
       {
         "type": "LIST",
         "content": "Klima",
-        "list": [
-          "Raumtemperatur: 20 – 22°C, im Sommer 26°C",
-          "Luftfeuchtigkeit: 40 – 70%",
-          "Heizungen und Heizlüfter regulierbar (verändern nämlich die Luftfeuchtigkeit)",
-          "Zugluft durch offene Fenster und Türen vermeiden",
-          "Sonnenlicht erhitzt die Raumtemperatur",
-          "Fenster sollten zu öffnen sein",
-          "Pflanzen regulieren Luftfeuchtigkeit und filtern die Raumluft"
-        ]
+        "list": ["Raumtemperatur: 20 – 22°C, im Sommer 26°C", "Luftfeuchtigkeit: 40 – 70%", "Heizungen und Heizlüfter regulierbar (verändern nämlich die Luftfeuchtigkeit)", "Zugluft durch offene Fenster und Türen vermeiden", "Sonnenlicht erhitzt die Raumtemperatur", "Fenster sollten zu öffnen sein", "Pflanzen regulieren Luftfeuchtigkeit und filtern die Raumluft"]
       },
       {
         "type": "LIST",
         "content": "Beleuchtung",
-        "list": [
-          "Licht seitlich einfallend auf den Computer",
-          "Blendschutz sollten auf Tisch und Bildschirm vorhanden sein",
-          "Spiegelrasterleuchten gut geeignet",
-          "Leuchtstärke: 500 – 750 lx",
-          "Der Raum sollte gleichmäßig ausgeleuchtet sein",
-          "Beleuchtung flimmer- und flackerfrei",
-          "Um Reflexionen / Spiegelungen zu vermeiden, sollte der Bildschirm im rechten Winkel zum Fenster stehen"
-        ]
+        "list": ["Licht seitlich einfallend auf den Computer", "Blendschutz sollten auf Tisch und Bildschirm vorhanden sein", "Spiegelrasterleuchten gut geeignet", "Leuchtstärke: 500 – 750 lx", "Der Raum sollte gleichmäßig ausgeleuchtet sein", "Beleuchtung flimmer- und flackerfrei", "Um Reflexionen / Spiegelungen zu vermeiden, sollte der Bildschirm im rechten Winkel zum Fenster stehen"]
       },
       {
         "type": "LIST",
         "content": "Farben",
-        "list": [
-          "Einfluss auf das Wohlbefinden",
-          "Decke: helle Farben am besten (weiß oder gelbtöne)",
-          "Dunkle Töne schlucken Licht",
-          "Farben sparsam verwenden, grundsätzlich sind helle, schwach gesättigte und kontrastarme Farben empfehlenswert",
-          "Farbe im Raum mit den Möbeln abgestimmt"
-        ]
+        "list": ["Einfluss auf das Wohlbefinden", "Decke: helle Farben am besten (weiß oder gelbtöne)", "Dunkle Töne schlucken Licht", "Farben sparsam verwenden, grundsätzlich sind helle, schwach gesättigte und kontrastarme Farben empfehlenswert", "Farbe im Raum mit den Möbeln abgestimmt"]
       },
       {
         "type": "LIST",
         "content": "Farbenlehre",
-        "list": [
-          "Rot – anregend aber auch als Warnfarbe",
-          "Blau & Grün – haben einen entspannenden und konzentrationsfördernden Effekt, zu intensiv wirken sie aber auch ermüdend",
-          "Gelb – Aktiviert das Gehirn, Eindruck von Sonnenlicht",
-          "Grau, Weiß & Schwarz – drücken in großen Flächen auf die Stimmung (hinter Computern wirken weiß und hellgrau neutral und sind deshalb besser hierfür geeignet)"
-        ]
+        "list": ["Rot – anregend aber auch als Warnfarbe", "Blau & Grün – haben einen entspannenden und konzentrationsfördernden Effekt, zu intensiv wirken sie aber auch ermüdend", "Gelb – Aktiviert das Gehirn, Eindruck von Sonnenlicht", "Grau, Weiß & Schwarz – drücken in großen Flächen auf die Stimmung (hinter Computern wirken weiß und hellgrau neutral und sind deshalb besser hierfür geeignet)"]
       },
       {
         "type": "LINE",
@@ -3244,11 +2860,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Tjänstemännens Centralorganisation (TCO) seit 1944 <br/> Dachverband der schwedischen Angestellten- und Beamtengewerkschaft",
-        "list": [
-          "Ist zusammen mit dem Energy Star das älteste noch bestehende Label, das Computerhardware unter Green IT-Aspekten bewertet",
-          "TCO ‘92 (veraltet) ist eine Erweiterung des MPR-II-Standards (Strahlungsmessung im Abstand von 30 cm) CRT-Geräte. Gewährleistet zusätzlich das Abschalten des Monitors in Ruhepausen",
-          "TCO ‘95 (auch veraltet) Prüfsiegel herkömmlicher Kathodenstrahl-Monitore (CRT), Tastaturen und Systemeinheiten. Bestimmungen der elektronischen Eigenschaften nach DIN EN ISO 9241. Bei Monitoren die Helligkeit, Kontrast, Bildstabilität und Zeichendarstellung. Allgemein Umweltverträglichkeit"
-        ]
+        "list": ["Ist zusammen mit dem Energy Star das älteste noch bestehende Label, das Computerhardware unter Green IT-Aspekten bewertet", "TCO ‘92 (veraltet) ist eine Erweiterung des MPR-II-Standards (Strahlungsmessung im Abstand von 30 cm) CRT-Geräte. Gewährleistet zusätzlich das Abschalten des Monitors in Ruhepausen", "TCO ‘95 (auch veraltet) Prüfsiegel herkömmlicher Kathodenstrahl-Monitore (CRT), Tastaturen und Systemeinheiten. Bestimmungen der elektronischen Eigenschaften nach DIN EN ISO 9241. Bei Monitoren die Helligkeit, Kontrast, Bildstabilität und Zeichendarstellung. Allgemein Umweltverträglichkeit"]
       },
       {
         "type": "TEXT",
@@ -3257,17 +2869,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "TCO ‘99 Bildschirme werden auf folgende Kriterien geprüft",
-        "list": [
-          "Flimmer- und Flackerfreiheit",
-          "Gleichmäßige Leuchtdichte",
-          "Ionisierende Strahlung muss gegen 0 gehen",
-          "Verbesserter Leuchtdichtenkontrast",
-          "Reflexionen des Bildschirmgehäuses vermeiden",
-          "Verminderter Lärm von Bildschirmen (unangenehmes Pfeifen)",
-          "Vorgeschriebene Leistungsaufnahme des Monitors im Standby-Modus und im abgeschalteten Modus (maximal 15 Watt / 5 Watt)",
-          "Keine FCKWs / chlorierte Lösungsmittel, nicht bromhaltig sein bzw. chlorierte Flammschutzmittel",
-          "Entsorgung der Geräte muss Hersteller Vertrag mit Recyclingfirma abschließen"
-        ]
+        "list": ["Flimmer- und Flackerfreiheit", "Gleichmäßige Leuchtdichte", "Ionisierende Strahlung muss gegen 0 gehen", "Verbesserter Leuchtdichtenkontrast", "Reflexionen des Bildschirmgehäuses vermeiden", "Verminderter Lärm von Bildschirmen (unangenehmes Pfeifen)", "Vorgeschriebene Leistungsaufnahme des Monitors im Standby-Modus und im abgeschalteten Modus (maximal 15 Watt / 5 Watt)", "Keine FCKWs / chlorierte Lösungsmittel, nicht bromhaltig sein bzw. chlorierte Flammschutzmittel", "Entsorgung der Geräte muss Hersteller Vertrag mit Recyclingfirma abschließen"]
       },
       {
         "type": "TEXT",
@@ -3300,19 +2902,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Begriffe des Arbeitsblattes – Themenübersicht",
-        "list": [
-          "Begriffsdefinition Lokales Netzwerk",
-          "Netzwerkdienste",
-          "„Topologie“, typische Eigenschaften, Merkmale",
-          "Physikalische Netzwerkadapter",
-          "Switch, Router, RLV, Repeater, Hub, Bridge, Gateway, Access-Point (Zweckbestimmung Eigenschaften und Einsatzmöglichkeiten)",
-          "Zugriffsverfahren – warum, wofür nötig, unterscheiden",
-          "Repeater-Regel",
-          "Strukturierte Verkabelung, Medientypen und Kabelkategorien, Normen, Richtwerte, Bestimmungen, Umgang mit Medien",
-          "Netzwerkklassen und Netzwerkadressen im LAN",
-          "PoE (Ergänzung)",
-          "Frühere Medien"
-        ]
+        "list": ["Begriffsdefinition Lokales Netzwerk", "Netzwerkdienste", "„Topologie“, typische Eigenschaften, Merkmale", "Physikalische Netzwerkadapter", "Switch, Router, RLV, Repeater, Hub, Bridge, Gateway, Access-Point (Zweckbestimmung Eigenschaften und Einsatzmöglichkeiten)", "Zugriffsverfahren – warum, wofür nötig, unterscheiden", "Repeater-Regel", "Strukturierte Verkabelung, Medientypen und Kabelkategorien, Normen, Richtwerte, Bestimmungen, Umgang mit Medien", "Netzwerkklassen und Netzwerkadressen im LAN", "PoE (Ergänzung)", "Frühere Medien"]
       },
       {
         "type": "LINE",
@@ -3325,12 +2915,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Netzwerk bezeichnet die Verbindungsmöglichkeiten zwischen Rechnern und Servern zum Zwecke des geregelten Datentransports zwischen ihnen",
-          "Nicht zwingend besteht öffentlicher Zugriff zum Internet",
-          "Maximale Ausdehnung von 10 km",
-          "LANs findet man im Regelfall als Netz in Firmen oder Privathaushalten"
-        ]
+        "list": ["Netzwerk bezeichnet die Verbindungsmöglichkeiten zwischen Rechnern und Servern zum Zwecke des geregelten Datentransports zwischen ihnen", "Nicht zwingend besteht öffentlicher Zugriff zum Internet", "Maximale Ausdehnung von 10 km", "LANs findet man im Regelfall als Netz in Firmen oder Privathaushalten"]
       },
       {
         "type": "LINE",
@@ -3343,15 +2928,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "PAN – Personal Area Network (ortsbezogene Kleinstruktur)",
-          "CAN – Car Area Network (ortsbezogene Kleinstruktur)",
-          "LAN – Local Area Network – kleinstes Netz für Firmen oder Privathaushalte",
-          "WAN – Wide Area Network – Verbindung mehrerer LANs über öffentliche Leitungen (viele Standard, früher X.25 Datex P, Daten-Direktverbindungen (DDV), Mietleitungen, Einwahl um Verbindungen zu realisieren erforderlich",
-          "MAN – Metropolitan Area Network – Netz in einem Ballungsgebiet, welches Rechner oder LANs in einem Umkreis von bis 100 km verbindet",
-          "GAN – Global Area Network – Weltumspannendes Netzwerk (meist auf Basis von Satelliten in Verbindung mit dem WAN)",
-          "CN – Corporate Network – Unternehmensnetz mit oftmals landesgroßer Auslegung"
-        ]
+        "list": ["PAN – Personal Area Network (ortsbezogene Kleinstruktur)", "CAN – Car Area Network (ortsbezogene Kleinstruktur)", "LAN – Local Area Network – kleinstes Netz für Firmen oder Privathaushalte", "WAN – Wide Area Network – Verbindung mehrerer LANs über öffentliche Leitungen (viele Standard, früher X.25 Datex P, Daten-Direktverbindungen (DDV), Mietleitungen, Einwahl um Verbindungen zu realisieren erforderlich", "MAN – Metropolitan Area Network – Netz in einem Ballungsgebiet, welches Rechner oder LANs in einem Umkreis von bis 100 km verbindet", "GAN – Global Area Network – Weltumspannendes Netzwerk (meist auf Basis von Satelliten in Verbindung mit dem WAN)", "CN – Corporate Network – Unternehmensnetz mit oftmals landesgroßer Auslegung"]
       },
       {
         "type": "LINE",
@@ -3392,13 +2969,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Ring-Topologie (veraltet)",
-          "Bus-Topologie (veraltet)",
-          "Stern-Topologie (aktuell)",
-          "Maschen-Topologie (aktuell)",
-          "Zell-Topologie (aktuell)"
-        ]
+        "list": ["Ring-Topologie (veraltet)", "Bus-Topologie (veraltet)", "Stern-Topologie (aktuell)", "Maschen-Topologie (aktuell)", "Zell-Topologie (aktuell)"]
       },
       {
         "type": "IMAGE",
@@ -3463,10 +3034,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Unterschied Hub – Switch",
-        "list": [
-          "Hub empfängt Datenpakete an einem Port und verteilt sie an alle anderen",
-          "Switch wertet Header-Information und leitet Pakete anhand der Informationen an nur zugeordneten Port zum Empfänger direkt weiter"
-        ]
+        "list": ["Hub empfängt Datenpakete an einem Port und verteilt sie an alle anderen", "Switch wertet Header-Information und leitet Pakete anhand der Informationen an nur zugeordneten Port zum Empfänger direkt weiter"]
       },
       {
         "type": "TEXT",
@@ -3475,11 +3043,7 @@ export const LF4_2_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Zugangspunkt in das WLAN",
-        "list": [
-          "Schafft die Verbindung",
-          "Gibt Anmeldeinformation weiter",
-          "Bildet kreisförmige Funkzelle"
-        ]
+        "list": ["Schafft die Verbindung", "Gibt Anmeldeinformation weiter", "Bildet kreisförmige Funkzelle"]
       },
       {
         "type": "IMAGE",
@@ -3506,5 +3070,5 @@ export const LF4_2_POSTS: PostArticle[] = [
         "content": "http://159.65.105.150:3000/images/5f54cf916e386d4735304c13"
       }
     ]
-  },
+  }
 ];

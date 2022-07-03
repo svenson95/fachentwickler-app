@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle */
+import { PostArticle } from "@models/post";
 
 export const LF8_POSTS: PostArticle[] = [
   {
@@ -126,9 +125,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://sevdesk.de/blog/oeffentlichkeitsarbeit/'>Öffentlichkeitsarbeit – warum und wie du sie betreiben solltest | https://sevdesk.de/blog/oeffentlichkeitsarbeit/ | 13.03.2021</a>"
-        ]
+        "list": ["<a href='https://sevdesk.de/blog/oeffentlichkeitsarbeit/'>Öffentlichkeitsarbeit – warum und wie du sie betreiben solltest | https://sevdesk.de/blog/oeffentlichkeitsarbeit/ | 13.03.2021</a>"]
       }
     ]
   },
@@ -167,10 +164,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kostenlose Produktplatzierung - Unternehmen stellt Produkt zur Verfügung",
-          "Produktplatzierung gegen Entgelt - Unternehmen zahlt Geld für die Produktplatzierung"
-        ]
+        "list": ["Kostenlose Produktplatzierung - Unternehmen stellt Produkt zur Verfügung", "Produktplatzierung gegen Entgelt - Unternehmen zahlt Geld für die Produktplatzierung"]
       },
       {
         "type": "SUBTITLE",
@@ -187,12 +181,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Creative Placement - Produkt ist integraler Bestandteil der Handlung. Actionheld fährt bestimmte Automarke.",
-          "On Set Placement - Das Produkt kommt nur nebenbei als Requisite vor. Werbeplakat im Hintergrund einer Szene.",
-          "Generic Placement - Produktkategorie steht im Vordergrund. Milchlobby investiert in positive Darstellung von Milch.",
-          "Information Placement - Unternehmen stellen Redaktionen Inhalte zur Verfügung. Medien nehmen Informationen in Berichterstattung auf oder verbreiten den Beitrag."
-        ]
+        "list": ["Creative Placement - Produkt ist integraler Bestandteil der Handlung. Actionheld fährt bestimmte Automarke.", "On Set Placement - Das Produkt kommt nur nebenbei als Requisite vor. Werbeplakat im Hintergrund einer Szene.", "Generic Placement - Produktkategorie steht im Vordergrund. Milchlobby investiert in positive Darstellung von Milch.", "Information Placement - Unternehmen stellen Redaktionen Inhalte zur Verfügung. Medien nehmen Informationen in Berichterstattung auf oder verbreiten den Beitrag."]
       },
       {
         "type": "LINE",
@@ -201,10 +190,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>",
-          "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"
-        ]
+        "list": ["<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>", "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"]
       }
     ]
   },
@@ -235,10 +221,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>",
-          "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"
-        ]
+        "list": ["<a href='https://welt-der-bwl.de/Product-Placement'>Product Placement Definition | https://welt-der-bwl.de/Product-Placement | 13.03.2021</a>", "<a href='https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php'>Product Placement | https://www.rechnungswesen-verstehen.de/lexikon/product-placement.php | 13.03.2021</a>"]
       }
     ]
   },
@@ -293,9 +276,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Sponsoring als Kommunikationsinstrument, Tom Toerne | 17.04.2021 | <a href='https://www.grin.com/document/190793#:~:text=Betrachtet%20man%20Sponsoring%20aus%20Unternehmenssicht,zu%20unterst%C3%BCtzen%20und%20zu%20erg%C3%A4nzen.'>https://www.grin.com/document/190793#:~:text=Betrachtet%20man%20Sponsoring%20aus%20Unternehmenssicht,zu%20unterst%C3%BCtzen%20und%20zu%20erg%C3%A4nzen.</a>"
-        ]
+        "list": ["Sponsoring als Kommunikationsinstrument, Tom Toerne | 17.04.2021 | <a href='https://www.grin.com/document/190793#:~:text=Betrachtet%20man%20Sponsoring%20aus%20Unternehmenssicht,zu%20unterst%C3%BCtzen%20und%20zu%20erg%C3%A4nzen.'>https://www.grin.com/document/190793#:~:text=Betrachtet%20man%20Sponsoring%20aus%20Unternehmenssicht,zu%20unterst%C3%BCtzen%20und%20zu%20erg%C3%A4nzen.</a>"]
       }
     ]
   },
@@ -330,11 +311,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Wahl des Distributionskanals/Vertriebskanals",
-          "Auswahl der Distributionsorgane (Mitarbeiter des Unternehmens, z. B. Vekaufsstellen)",
-          "Distributionslogistik (physische Distribution)"
-        ]
+        "list": ["Wahl des Distributionskanals/Vertriebskanals", "Auswahl der Distributionsorgane (Mitarbeiter des Unternehmens, z. B. Vekaufsstellen)", "Distributionslogistik (physische Distribution)"]
       },
       {
         "type": "LINE",
@@ -347,11 +324,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Optimale Verfügbarkeit des Produktes / der Dienstleistung",
-          "Minimierung der Kosten für Personal, Transport und Lagerung",
-          "Möglichkeit des Herstellers, die Vermarktung und Präsentation seiner Produkte beeinflussen zu können"
-        ]
+        "list": ["Optimale Verfügbarkeit des Produktes / der Dienstleistung", "Minimierung der Kosten für Personal, Transport und Lagerung", "Möglichkeit des Herstellers, die Vermarktung und Präsentation seiner Produkte beeinflussen zu können"]
       },
       {
         "type": "LINE",
@@ -360,10 +333,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Die Vielzahl der möglichen Vertriebswege muss durch das anbeitende Unternehmen auf eine effiziente Anzahl beschränkt werden. Unabhängig von der spezifischen Wahl existieren zwei Grundstrukturen zur Überwindung der Distanzen zwischen dem Hersteller und den Verbrauchern oder Verwendern:",
-        "list": [
-          "Ein <b>Direktvertrieb</b> liegt vor, wenn zwischen Produzent und Verbraucher keine unternehmensfremde Institution das Eigentum an der Leistung erwirbt",
-          "Von <b>indirektem Vertrieb</b> wird gesprochen, wenn zwischen Produzent und Konsument unternehmensfremde Institutionen zwischengeschaltet sind (Händler etc.), die auch zwischenzeitlich Eigentümer der Waren werden"
-        ]
+        "list": ["Ein <b>Direktvertrieb</b> liegt vor, wenn zwischen Produzent und Verbraucher keine unternehmensfremde Institution das Eigentum an der Leistung erwirbt", "Von <b>indirektem Vertrieb</b> wird gesprochen, wenn zwischen Produzent und Konsument unternehmensfremde Institutionen zwischengeschaltet sind (Händler etc.), die auch zwischenzeitlich Eigentümer der Waren werden"]
       },
       {
         "type": "IMAGE",
@@ -454,10 +424,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Marketing » Marketingmix » Distributionspolitik | 18.04.2021 | <a href='https://bwl-wissen.net/definition/distributionspolitik'>https://bwl-wissen.net/definition/distributionspolitik</a>",
-          "Distributionspolitik – Der Weg ist das Ziel | 18.04.2021 | <a href='https://www.marketinginstitut.biz/blog/distributionspolitik/'>https://www.marketinginstitut.biz/blog/distributionspolitik/</a>"
-        ]
+        "list": ["Marketing » Marketingmix » Distributionspolitik | 18.04.2021 | <a href='https://bwl-wissen.net/definition/distributionspolitik'>https://bwl-wissen.net/definition/distributionspolitik</a>", "Distributionspolitik – Der Weg ist das Ziel | 18.04.2021 | <a href='https://www.marketinginstitut.biz/blog/distributionspolitik/'>https://www.marketinginstitut.biz/blog/distributionspolitik/</a>"]
       }
     ]
   },
@@ -492,13 +459,8 @@ export const LF8_POSTS: PostArticle[] = [
       },
       {
         "type": "LIST",
-        "content": "Die \"4 P's\" sind:",
-        "list": [
-          "Produktpolitik (engl. <i>Product</i>)",
-          "Preispolitik (engl. <i>Price</i>)",
-          "Distributionspolitik (engl. <i>Place</i>)",
-          "Kommunikationspolitik (engl. <i>Promotion</i>)"
-        ]
+        "content": 'Die "4 P\'s" sind:',
+        "list": ["Produktpolitik (engl. <i>Product</i>)", "Preispolitik (engl. <i>Price</i>)", "Distributionspolitik (engl. <i>Place</i>)", "Kommunikationspolitik (engl. <i>Promotion</i>)"]
       },
       {
         "type": "TEXT",
@@ -515,10 +477,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Marketing-Mix – BWL-Lexikon.de | 18.05.2021 | <a href='https://www.bwl-lexikon.de/wiki/marketing-mix/'>https://www.bwl-lexikon.de/wiki/marketing-mix/</a>",
-          "Die 4Ps des Marketing-Mix verständlich erklärt – SmartMarketingBreaks | 18.05.2021 | <a href='https://smartmarketingbreaks.eu/was-ist-der-marketing-mix/'>https://smartmarketingbreaks.eu/was-ist-der-marketing-mix/</a>"
-        ]
+        "list": ["Marketing-Mix – BWL-Lexikon.de | 18.05.2021 | <a href='https://www.bwl-lexikon.de/wiki/marketing-mix/'>https://www.bwl-lexikon.de/wiki/marketing-mix/</a>", "Die 4Ps des Marketing-Mix verständlich erklärt – SmartMarketingBreaks | 18.05.2021 | <a href='https://smartmarketingbreaks.eu/was-ist-der-marketing-mix/'>https://smartmarketingbreaks.eu/was-ist-der-marketing-mix/</a>"]
       }
     ]
   },
@@ -545,12 +504,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Preispolitik bezeichnet eine Marketing-Strategie, die mit Hilfe des Verkaufspreises Kaufanreize setzen soll",
-          "Preisuntergrenzen richten sich nach den Kosten und finden in der kostenorientierten Preispolitik Anwendung",
-          "Marktorientierte Preispolitik richtet sich nach der Konkurrenz und dem Verhalten der Nachfrager",
-          "Drei Grundlegende Preisstrategien: Festpreisstrategie, Preiswettbewerbsstrategie und Preisabfolgestrategie"
-        ]
+        "list": ["Preispolitik bezeichnet eine Marketing-Strategie, die mit Hilfe des Verkaufspreises Kaufanreize setzen soll", "Preisuntergrenzen richten sich nach den Kosten und finden in der kostenorientierten Preispolitik Anwendung", "Marktorientierte Preispolitik richtet sich nach der Konkurrenz und dem Verhalten der Nachfrager", "Drei Grundlegende Preisstrategien: Festpreisstrategie, Preiswettbewerbsstrategie und Preisabfolgestrategie"]
       },
       {
         "type": "IMAGE",
@@ -568,13 +522,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Preisbildung und Veränderung",
-          "Preisdifferenzierung",
-          "Preisdurchsetzung",
-          "Definition der Verkaufskonditionen",
-          "Entwicklung von Dienstleistungen"
-        ]
+        "list": ["Preisbildung und Veränderung", "Preisdifferenzierung", "Preisdurchsetzung", "Definition der Verkaufskonditionen", "Entwicklung von Dienstleistungen"]
       },
       {
         "type": "LINE",
@@ -627,9 +575,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Marketing » Marketingmix » Preispolitik | 26.05.2021 | <a href='https://bwl-wissen.net/definition/preispolitik' target=\"_blank\" rel=\"noopener noreferrer\">https://bwl-wissen.net/definition/preispolitik</a>"
-        ]
+        "list": ['Marketing » Marketingmix » Preispolitik | 26.05.2021 | <a href=\'https://bwl-wissen.net/definition/preispolitik\' target="_blank" rel="noopener noreferrer">https://bwl-wissen.net/definition/preispolitik</a>']
       }
     ]
   },
@@ -676,13 +622,7 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Kostenarten (fixe und variable Kosten)",
-          "kostenorientierte Preisbildung (Kostenzuschlagskalkulation und Break-Even-Analyse)",
-          "nachfrageorientierte Preisbildung und Preisdifferenzierungsstrategien",
-          "und konkurrenzorientierte Preisbildung (Marktformen und deren Einfluss auf den Preis)",
-          "Konditionenpolitik"
-        ]
+        "list": ["Kostenarten (fixe und variable Kosten)", "kostenorientierte Preisbildung (Kostenzuschlagskalkulation und Break-Even-Analyse)", "nachfrageorientierte Preisbildung und Preisdifferenzierungsstrategien", "und konkurrenzorientierte Preisbildung (Marktformen und deren Einfluss auf den Preis)", "Konditionenpolitik"]
       },
       {
         "type": "TEXT",
@@ -744,10 +684,8 @@ export const LF8_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Marketing » Marketingmix » Preispolitik | 26.05.2021 | <a href='https://bwl-wissen.net/definition/preispolitik' target=\"_blank\" rel=\"noopener noreferrer\">https://bwl-wissen.net/definition/preispolitik</a>"
-        ]
+        "list": ['Marketing » Marketingmix » Preispolitik | 26.05.2021 | <a href=\'https://bwl-wissen.net/definition/preispolitik\' target="_blank" rel="noopener noreferrer">https://bwl-wissen.net/definition/preispolitik</a>']
       }
     ]
-  },
+  }
 ];

@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
+import { PostArticle } from "@models/post";
 
 const WP_POSTS: PostArticle[] = [
   {
@@ -78,11 +77,7 @@ const WP_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Beispiel: Ihr habt eine Tastatur und möchtet über die Tasten einen Text in einem Texteditor eingeben.",
         "ordered": true,
-        "list": [
-          "Tasten werden gedrückt",
-          "CPU / Prozessor des Computers verarbeitet die Eingabe (keyCode der jeweiligen Taste)",
-          "Text wird im Texteditor ausgegeben"
-        ]
+        "list": ["Tasten werden gedrückt", "CPU / Prozessor des Computers verarbeitet die Eingabe (keyCode der jeweiligen Taste)", "Text wird im Texteditor ausgegeben"]
       },
       {
         "type": "LINE",
@@ -168,7 +163,7 @@ const WP_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Ein Supermarkt verfügt über ein Kühlhaus zur Lagerung von Lebensmitteln. Zur Steuerung der Anlage steht ein \"Hand-0-Automatik-Schalter\" zur Verfügung. Die Kühlung wird im Automatikbetrieb durch ein Thermostat (B1) eingeschaltet, wenn die Temperatur über -7 °C steigt. Das Kühlaggregat kann im Handbetrieb dauerhaft eingeschaltet werden. Beim Betrieb der Kühlung leuchtet eine Meldeleuchte (P1)."
+        "content": 'Ein Supermarkt verfügt über ein Kühlhaus zur Lagerung von Lebensmitteln. Zur Steuerung der Anlage steht ein "Hand-0-Automatik-Schalter" zur Verfügung. Die Kühlung wird im Automatikbetrieb durch ein Thermostat (B1) eingeschaltet, wenn die Temperatur über -7 °C steigt. Das Kühlaggregat kann im Handbetrieb dauerhaft eingeschaltet werden. Beim Betrieb der Kühlung leuchtet eine Meldeleuchte (P1).'
       },
       {
         "type": "TEXT",
@@ -257,10 +252,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Arten",
-        "list": [
-          "Verknüfungssteuerung",
-          "Ablaufsteuerung (zB. bei einer Waschmaschine)"
-        ]
+        "list": ["Verknüfungssteuerung", "Ablaufsteuerung (zB. bei einer Waschmaschine)"]
       },
       {
         "type": "LINE",
@@ -359,15 +351,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Eine Ablaufkette besteht aus Schritten und Weiterschaltbedingungen (Transitionen)",
-          "Zwischen zwei Schritten steht immer eine Transition",
-          "Der Anfangsschritt ist zu Beginn einer Ablaufkette ohne Bedingung aktiv",
-          "In linearen Ablaufketten ist immer nur ein Schritt aktiv",
-          "Man gelangt von einem Schritt in den nächste, wenn der vorherige Schritt aktiv ist und die Transition erfüllt ist",
-          "Der nachfolgende Schritt setzt den vorherigen Schritt zurück",
-          "Den Schritten sind Aktionen zugeordnet, die vom jeweiligen Schritt ausgelöst werden"
-        ]
+        "list": ["Eine Ablaufkette besteht aus Schritten und Weiterschaltbedingungen (Transitionen)", "Zwischen zwei Schritten steht immer eine Transition", "Der Anfangsschritt ist zu Beginn einer Ablaufkette ohne Bedingung aktiv", "In linearen Ablaufketten ist immer nur ein Schritt aktiv", "Man gelangt von einem Schritt in den nächste, wenn der vorherige Schritt aktiv ist und die Transition erfüllt ist", "Der nachfolgende Schritt setzt den vorherigen Schritt zurück", "Den Schritten sind Aktionen zugeordnet, die vom jeweiligen Schritt ausgelöst werden"]
       }
     ]
   },
@@ -418,11 +402,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Folgende Kernpunkte sind bei GRAFCET einzuhalten",
-        "list": [
-          "Schritte und Transitionen müssen sich immer abwechseln - zwei Schritte oder zwei Transitionen hintereinander sind nicht erlaubt",
-          "Eine Transition ist freigegeben, wenn alle Schritte, die mit der Transition verbunden sind, aktiv sind. Eine Transition löst aus, wenn diese freigegeben ist und wenn die Transitionsbedingung erfüllt ist",
-          "Mehrere Schritte können gleichzeitig aktiv sein"
-        ]
+        "list": ["Schritte und Transitionen müssen sich immer abwechseln - zwei Schritte oder zwei Transitionen hintereinander sind nicht erlaubt", "Eine Transition ist freigegeben, wenn alle Schritte, die mit der Transition verbunden sind, aktiv sind. Eine Transition löst aus, wenn diese freigegeben ist und wenn die Transitionsbedingung erfüllt ist", "Mehrere Schritte können gleichzeitig aktiv sein"]
       },
       {
         "type": "LINE",
@@ -439,9 +419,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Aus für den Funktionsplan – jetzt gilt GRAFCET (01/2007) | 26.06.2021 | <a href='https://www.festo-didactic.com/ov3/media/customers/1100/grafcet_kompakt_2008_1.pdf'>https://www.festo-didactic.com/ov3/media/customers/1100/grafcet_kompakt_2008_1.pdf</a>"
-        ]
+        "list": ["Aus für den Funktionsplan – jetzt gilt GRAFCET (01/2007) | 26.06.2021 | <a href='https://www.festo-didactic.com/ov3/media/customers/1100/grafcet_kompakt_2008_1.pdf'>https://www.festo-didactic.com/ov3/media/customers/1100/grafcet_kompakt_2008_1.pdf</a>"]
       }
     ]
   },
@@ -558,22 +536,13 @@ const WP_POSTS: PostArticle[] = [
         "type": "LIST",
         "content": "Ablaufbeschreibung",
         "ordered": true,
-        "list": [
-          "Grundstellung: P1 =1, M1 = 0",
-          "S1: M1 = 1 (gespeichert)",
-          "B1: M2 = 1",
-          "B2: M3 = 1, M4 =1, M5 = 1, M6 =1",
-          "B3: M7 = 1 für die Dauer von 20s"
-        ]
+        "list": ["Grundstellung: P1 =1, M1 = 0", "S1: M1 = 1 (gespeichert)", "B1: M2 = 1", "B2: M3 = 1, M4 =1, M5 = 1, M6 =1", "B3: M7 = 1 für die Dauer von 20s"]
       },
       {
         "type": "LIST",
         "content": "Aufgaben",
         "ordered": true,
-        "list": [
-          "Erstellen Sie die Ablaufbeschreibung mit GRAFCET",
-          "Entwickeln Sie aus der Ablaufbeschreibung den Funktionsplan"
-        ]
+        "list": ["Erstellen Sie die Ablaufbeschreibung mit GRAFCET", "Entwickeln Sie aus der Ablaufbeschreibung den Funktionsplan"]
       }
     ]
   },
@@ -1414,14 +1383,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Programmiersprachenunabhängiger Algorithmus",
-          "Keine maschinelle Interpretation (fehlende Notationsvorschrift)",
-          "Dient lediglich der Veranschaulichung eines Algorithmus",
-          "Enthält Elemente höhrerer Programmiersprachen, natürlicher Sprache und mathematischer Notation",
-          "Die gewählten Formulierungen/Syntax sollten eindeutig, aussagekräftig und durchgängig erfolgen",
-          "Die Steuerstrukturen sollten klar erkennbar sein"
-        ]
+        "list": ["Programmiersprachenunabhängiger Algorithmus", "Keine maschinelle Interpretation (fehlende Notationsvorschrift)", "Dient lediglich der Veranschaulichung eines Algorithmus", "Enthält Elemente höhrerer Programmiersprachen, natürlicher Sprache und mathematischer Notation", "Die gewählten Formulierungen/Syntax sollten eindeutig, aussagekräftig und durchgängig erfolgen", "Die Steuerstrukturen sollten klar erkennbar sein"]
       },
       {
         "type": "LINE",
@@ -1430,9 +1392,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Pseudocode | 23.04.2021 | <a href='https://www.biancahoegel.de/computer/sprache/pseudocode.html'>https://www.biancahoegel.de/computer/sprache/pseudocode.html</a>"
-        ]
+        "list": ["Pseudocode | 23.04.2021 | <a href='https://www.biancahoegel.de/computer/sprache/pseudocode.html'>https://www.biancahoegel.de/computer/sprache/pseudocode.html</a>"]
       }
     ]
   },
@@ -1455,7 +1415,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "TEXT",
         "content": "..."
-      },
+      }
     ]
   },
   {
@@ -1477,7 +1437,7 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "TEXT",
         "content": "..."
-      },
+      }
     ]
   },
   {
@@ -1929,7 +1889,7 @@ const WP_POSTS: PostArticle[] = [
           {
             "type": "CODE",
             "language": "java",
-            "content": "package com.company;\n\nimport java.util.Scanner;\n\npublic class Main {\n\n  static boolean m1 = false;\n  static boolean m2 = false;\n  static boolean m3 = false;\n  static boolean p1 = false;\n  static int power = 0;\n\n  // value in kW\n  static int m1_consumption = 7;\n  static int m2_consumption = 5;\n  static int m3_consumption = 2;\n\n  public static void main(String[] args) {\n    start();\n  }\n\n  public static void start() {\n    System.out.println();\n    System.out.println(\"Notstromversorgung\");\n    System.out.println(\"M1 = \" + m1);\n    System.out.println(\"M2 = \" + m2);\n    System.out.println(\"M3 = \" + m3);\n    System.out.println(\"Leistung: \" + power);\n    System.out.println(\"P1: \" + p1);\n\n    Scanner input = new Scanner(Scanner.in);\n    System.out.println();\n    System.out.println(\"Enter s1 / s2 / s3\");\n    String control = input.nextLine().toUpperCase();\n    String[] args = new String[0];\n\n    switch(control) {\n      case \"S1\":\n        m1 = !m1;\n        System.out.println(\"M1 gestartet\");\n        updatePower();\n        main(args);\n      case \"S2\":\n        m2 = !m2;\n        System.out.println(\"M2 gestartet\");\n        updatePower();\n        main(args);\n      case \"S3\":\n        m3 = !m3;\n        System.out.println(\"M3 gestartet\");\n        updatePower();\n        main(args);\n      default:\n        System.out.println(\"Störung\");\n    }\n  }\n\n  public static void updatePower() {\n    int value = 0;\n    if (m1) value = value + m1_consumption;\n    if (m2) value = value + m2_consumption;\n    if (m3) value = value + m3_consumption;\n    power = value;\n\n    if (power > 7) {\n      p1 = true;\n    } else {\n      p1 = false;\n    }\n  }\n\n}"
+            "content": 'package com.company;\n\nimport java.util.Scanner;\n\npublic class Main {\n\n  static boolean m1 = false;\n  static boolean m2 = false;\n  static boolean m3 = false;\n  static boolean p1 = false;\n  static int power = 0;\n\n  // value in kW\n  static int m1_consumption = 7;\n  static int m2_consumption = 5;\n  static int m3_consumption = 2;\n\n  public static void main(String[] args) {\n    start();\n  }\n\n  public static void start() {\n    System.out.println();\n    System.out.println("Notstromversorgung");\n    System.out.println("M1 = " + m1);\n    System.out.println("M2 = " + m2);\n    System.out.println("M3 = " + m3);\n    System.out.println("Leistung: " + power);\n    System.out.println("P1: " + p1);\n\n    Scanner input = new Scanner(Scanner.in);\n    System.out.println();\n    System.out.println("Enter s1 / s2 / s3");\n    String control = input.nextLine().toUpperCase();\n    String[] args = new String[0];\n\n    switch(control) {\n      case "S1":\n        m1 = !m1;\n        System.out.println("M1 gestartet");\n        updatePower();\n        main(args);\n      case "S2":\n        m2 = !m2;\n        System.out.println("M2 gestartet");\n        updatePower();\n        main(args);\n      case "S3":\n        m3 = !m3;\n        System.out.println("M3 gestartet");\n        updatePower();\n        main(args);\n      default:\n        System.out.println("Störung");\n    }\n  }\n\n  public static void updatePower() {\n    int value = 0;\n    if (m1) value = value + m1_consumption;\n    if (m2) value = value + m2_consumption;\n    if (m3) value = value + m3_consumption;\n    power = value;\n\n    if (power > 7) {\n      p1 = true;\n    } else {\n      p1 = false;\n    }\n  }\n\n}'
           }
         ]
       }
@@ -1990,10 +1950,8 @@ const WP_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "SPS-Lehrgang.de > SPS Grundlagen > Zahlensysteme | 07.07.2021 | <a href='https://www.sps-lehrgang.de/zahlensysteme/'>https://www.sps-lehrgang.de/zahlensysteme/</a>"
-        ]
+        "list": ["SPS-Lehrgang.de > SPS Grundlagen > Zahlensysteme | 07.07.2021 | <a href='https://www.sps-lehrgang.de/zahlensysteme/'>https://www.sps-lehrgang.de/zahlensysteme/</a>"]
       }
     ]
-  },
+  }
 ];

@@ -1,5 +1,4 @@
-import { PostArticle } from '@models/post';
-/* eslint-disable quotes, quote-props, max-len, comma-dangle, @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars */
+import { PostArticle } from "@models/post";
 
 const DEUTSCH_POSTS: PostArticle[] = [
   {
@@ -125,12 +124,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "Sachebene",
-          "Appellebene",
-          "Selbstoffenbarung",
-          "Beziehungsebene"
-        ]
+        "list": ["Sachebene", "Appellebene", "Selbstoffenbarung", "Beziehungsebene"]
       },
       {
         "type": "TABLE",
@@ -185,14 +179,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Faktoren, die die Kommunikation beeinflussen",
-        "list": [
-          "Kommunikative Situation (Lärm, Tageszeit, Erlebnisse)",
-          "Sozialer Status",
-          "Alter",
-          "Wissen",
-          "Sprache",
-          "Kultur"
-        ]
+        "list": ["Kommunikative Situation (Lärm, Tageszeit, Erlebnisse)", "Sozialer Status", "Alter", "Wissen", "Sprache", "Kultur"]
       },
       {
         "type": "LINE",
@@ -201,9 +188,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://wortwuchs.net/vier-ohren-modell'>https://wortwuchs.net/vier-ohren-modell</a>"
-        ]
+        "list": ["<a href='https://wortwuchs.net/vier-ohren-modell'>https://wortwuchs.net/vier-ohren-modell</a>"]
       }
     ]
   },
@@ -227,13 +212,10 @@ const DEUTSCH_POSTS: PostArticle[] = [
         "list": [
           "Vorbereitung → Eigenmotivation",
           {
-            "content": "Einstieg, Überschrift als \"Aufhänger\"",
-            "sublist": [
-              "Schwerpunkte auswählen",
-              "Passende Visualisierung → verschiedene Medien"
-            ]
+            "content": 'Einstieg, Überschrift als "Aufhänger"',
+            "sublist": ["Schwerpunkte auswählen", "Passende Visualisierung → verschiedene Medien"]
           },
-          "Schluss → Zusammenfassung, \"Ausblick\""
+          'Schluss → Zusammenfassung, "Ausblick"'
         ]
       }
     ]
@@ -281,15 +263,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "",
-        "list": [
-          "1 - eine Überschrift",
-          "3 - max drei Farben",
-          "7 - max sieben Punkte / \"Bullets\"",
-          "9 - max neun \"Zeilen\"",
-          "Möglichst gleiche Struktur der Stichpunkte",
-          "Keine Sätze! Füllwörter \"kürzen\"",
-          "Abkürzungen sinnvoll einsetzen, Symbole statt Präposition & € \"\" - o. ä."
-        ]
+        "list": ["1 - eine Überschrift", "3 - max drei Farben", '7 - max sieben Punkte / "Bullets"', '9 - max neun "Zeilen"', "Möglichst gleiche Struktur der Stichpunkte", 'Keine Sätze! Füllwörter "kürzen"', 'Abkürzungen sinnvoll einsetzen, Symbole statt Präposition & € "" - o. ä.']
       }
     ]
   },
@@ -377,15 +351,11 @@ const DEUTSCH_POSTS: PostArticle[] = [
           },
           {
             "type": "default",
-            "columns": [
-              { "align": "middle", "content": "ein Unfall ist passiert" }
-            ]
+            "columns": [{ "align": "middle", "content": "ein Unfall ist passiert" }]
           },
           {
             "type": "default",
-            "columns": [
-              { "align": "middle", "content": "etwas Besonderes hat sich ereignet" }
-            ]
+            "columns": [{ "align": "middle", "content": "etwas Besonderes hat sich ereignet" }]
           }
         ]
       },
@@ -400,12 +370,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "<u>Persönliche Verben können auch unpersönlich verwendet werden</u>",
-        "list": [
-          "klingeln → es hat geklingelt / das Telefon klingelt",
-          "krachen → es kracht / ein lauter Donnerschlag krachte",
-          "riechen → hier richt es nach Gas / Rosen riechen gut",
-          "jucken → es juckt mich auf dem Rücken / meine Hand juckt"
-        ]
+        "list": ["klingeln → es hat geklingelt / das Telefon klingelt", "krachen → es kracht / ein lauter Donnerschlag krachte", "riechen → hier richt es nach Gas / Rosen riechen gut", "jucken → es juckt mich auf dem Rücken / meine Hand juckt"]
       }
     ]
   },
@@ -429,7 +394,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Tipp: Nutzen Sie den DUDEN oder Internet-Seiten, wie zB <a href='https://www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele' target=\"_blank\" rel=\"noopener noreferrer\">https://www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele</a>"
+        "content": 'Tipp: Nutzen Sie den DUDEN oder Internet-Seiten, wie zB <a href=\'https://www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele\' target="_blank" rel="noopener noreferrer">https://www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele</a>'
       },
       {
         "type": "TEXT",
@@ -493,7 +458,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       },
       {
         "type": "SUBTITLE",
-        "content": "2. Üben Sie im Internet die Schreibweisen, zB auf <a href='https://www.dass-das.de/' target=\"_blank\" rel=\"noopener noreferrer\">www.dass-das.de</a>"
+        "content": '2. Üben Sie im Internet die Schreibweisen, zB auf <a href=\'https://www.dass-das.de/\' target="_blank" rel="noopener noreferrer">www.dass-das.de</a>'
       },
       {
         "type": "LINE",
@@ -690,10 +655,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "Allgemeine Grundbegriffe - 1.1 Was ist Linguistik? | 02.09.2021 | <a href='https://de.wikipedia.org/wiki/Sprachtheorie' target='_blank'>https://de.wikipedia.org/wiki/Sprachtheorie</a>",
-          "Wikipedia - Sprachtheorie | 02.09.2021 | <a href='http://www.fb10.uni-bremen.de/khwagner/theorie/pdf/grundbegriffe.pdf' target='_blank'>http://www.fb10.uni-bremen.de/khwagner/theorie/pdf/grundbegriffe.pdf</a>"
-        ]
+        "list": ["Allgemeine Grundbegriffe - 1.1 Was ist Linguistik? | 02.09.2021 | <a href='https://de.wikipedia.org/wiki/Sprachtheorie' target='_blank'>https://de.wikipedia.org/wiki/Sprachtheorie</a>", "Wikipedia - Sprachtheorie | 02.09.2021 | <a href='http://www.fb10.uni-bremen.de/khwagner/theorie/pdf/grundbegriffe.pdf' target='_blank'>http://www.fb10.uni-bremen.de/khwagner/theorie/pdf/grundbegriffe.pdf</a>"]
       }
     ]
   },
@@ -713,18 +675,12 @@ const DEUTSCH_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "Wer Projekte erfolgreich durchführen will, der kommt um eine umfangreiche Projektdokumentation nicht herum. Gemäß DIN 69901 bedeutet dies eine \"Zusammenstellung ausgewählter wesentlicher Informationen über Konfiguration, Organisation, Mitteleinsatz, Probleme und deren Lösungen, Risiken, Ablauf und erreichte Ziele des Projektes.\""
+        "content": 'Wer Projekte erfolgreich durchführen will, der kommt um eine umfangreiche Projektdokumentation nicht herum. Gemäß DIN 69901 bedeutet dies eine "Zusammenstellung ausgewählter wesentlicher Informationen über Konfiguration, Organisation, Mitteleinsatz, Probleme und deren Lösungen, Risiken, Ablauf und erreichte Ziele des Projektes."'
       },
       {
         "type": "LIST",
         "content": "Eine gut strukturierte, aussagekräftige Projektdokumentation über den gesamten Projektzyklus hinweg zu führen, also von der Initiierung und Planung bis zum Abschluss des Projekts, sichert dem Projektleiter eine Reihe von Vorteilen:",
-        "list": [
-          "Informationen schneller finden",
-          "Entscheidungen nachvollziehbar treffen",
-          "Rechtssicherheit schaffen",
-          "Auskunftsfähigkeit sicherstellen",
-          "Missverständnisse vermeiden"
-        ]
+        "list": ["Informationen schneller finden", "Entscheidungen nachvollziehbar treffen", "Rechtssicherheit schaffen", "Auskunftsfähigkeit sicherstellen", "Missverständnisse vermeiden"]
       },
       {
         "type": "SUBTITLE",
@@ -764,27 +720,19 @@ const DEUTSCH_POSTS: PostArticle[] = [
         "list": [
           {
             "content": "Berücksichtigen Sie die Zielgruppe",
-            "sublist": [
-              "Der Nutzer des jeweiligen Produkts sollte die Dokumentation verstehen können. Eine Bedienungsanleitung für eine Mikrowelle sollte daher auch für Laien leicht verständlich aufgebaut sein, wohingegen ein Programmier-Handbuch mehr Fachbegriffe enthalten kann."
-            ]
+            "sublist": ["Der Nutzer des jeweiligen Produkts sollte die Dokumentation verstehen können. Eine Bedienungsanleitung für eine Mikrowelle sollte daher auch für Laien leicht verständlich aufgebaut sein, wohingegen ein Programmier-Handbuch mehr Fachbegriffe enthalten kann."]
           },
           {
             "content": "Wählen Sie aussagekräftige Titel und Untertitel",
-            "sublist": [
-              "Die Gliederung ist ein wichtiger Orientierungspunkt für den Nutzer. Geben sie zunächst einen groben Überblick über ein Thema, um sich anschließend in den Unterkapiteln einzeln damit zu befassen. Am besten sollten die Kapitel aufeinander aufbauen, damit sich der Inhalt nahtlos mit den bisher gelernten Kapiteln verknüpfen lässt."
-            ]
+            "sublist": ["Die Gliederung ist ein wichtiger Orientierungspunkt für den Nutzer. Geben sie zunächst einen groben Überblick über ein Thema, um sich anschließend in den Unterkapiteln einzeln damit zu befassen. Am besten sollten die Kapitel aufeinander aufbauen, damit sich der Inhalt nahtlos mit den bisher gelernten Kapiteln verknüpfen lässt."]
           },
           {
             "content": "Achten sie auf eine übersichtliche Präsentation",
-            "sublist": [
-              "Mithilfe des Inhaltsverzeichnisses sollten bestimmte Informationen auf Anhieb zu finden sein. Um die Gestaltung und Lesbarkeit der Dokumentation zu verbessern können zB. Infokästchen und kurze Zusammenfassungen hilfreich sein."
-            ]
+            "sublist": ["Mithilfe des Inhaltsverzeichnisses sollten bestimmte Informationen auf Anhieb zu finden sein. Um die Gestaltung und Lesbarkeit der Dokumentation zu verbessern können zB. Infokästchen und kurze Zusammenfassungen hilfreich sein."]
           },
           {
             "content": "Integrieren Sie Beispiele",
-            "sublist": [
-              "Durch praktische Beispiele und ggf. Screenshots lassen sich Resultate von bestimmten Vorgängen besser darstellen. Sie geben den Anwendern Gewissheit, dass sie Ihre Anweisungen richtig umgesetzt haben."
-            ]
+            "sublist": ["Durch praktische Beispiele und ggf. Screenshots lassen sich Resultate von bestimmten Vorgängen besser darstellen. Sie geben den Anwendern Gewissheit, dass sie Ihre Anweisungen richtig umgesetzt haben."]
           }
         ]
       },
@@ -795,9 +743,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<a href='https://www.techsmith.de/blog/gute-technische-dokumentation-erstellen'>https://www.techsmith.de/blog/gute-technische-dokumentation-erstellen</a>"
-        ]
+        "list": ["<a href='https://www.techsmith.de/blog/gute-technische-dokumentation-erstellen'>https://www.techsmith.de/blog/gute-technische-dokumentation-erstellen</a>"]
       }
     ]
   },
@@ -912,12 +858,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Stellen Sie in einer PowerPoint-Präsentation die verschiedenen Arten und Techniken des Zitierens an Beispielen dar!",
-        "list": [
-          "Merkmale und Funktion",
-          "Möglichkeiten der Kennzeichnung im Text, z. B. Zeichensetzung",
-          "Form der Quellenangabe",
-          "Besonderheiten der Sprache"
-        ]
+        "list": ["Merkmale und Funktion", "Möglichkeiten der Kennzeichnung im Text, z. B. Zeichensetzung", "Form der Quellenangabe", "Besonderheiten der Sprache"]
       },
       {
         "type": "TEXT",
@@ -941,7 +882,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       },
       {
         "type": "TEXT",
-        "content": "<b>\"wörtlich zitierte Textstelle\"</b> <sup>1</sup>"
+        "content": '<b>"wörtlich zitierte Textstelle"</b> <sup>1</sup>'
       },
       {
         "type": "TEXT",
@@ -954,10 +895,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "LIST",
         "content": "Quellen:",
-        "list": [
-          "<sup>1</sup> Definition laut Oxford Languages - <a href='https://languages.oup.com/google-dictionary-de/'>https://languages.oup.com/google-dictionary-de/</a>",
-          "<a href='https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html'>https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html</a>"
-        ]
+        "list": ["<sup>1</sup> Definition laut Oxford Languages - <a href='https://languages.oup.com/google-dictionary-de/'>https://languages.oup.com/google-dictionary-de/</a>", "<a href='https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html'>https://www.wissenschaftliches-arbeiten.org/zitieren/direkte-und-indirekte-zitate.html</a>"]
       }
     ]
   },
@@ -1005,7 +943,7 @@ const DEUTSCH_POSTS: PostArticle[] = [
       {
         "type": "TEXT",
         "hidden": true,
-        "content": "Infolge des Kaufs von \"Fair-trade-Produkten\" unterstützen wir die Bauern"
+        "content": 'Infolge des Kaufs von "Fair-trade-Produkten" unterstützen wir die Bauern'
       },
       {
         "type": "LINE",
@@ -1159,5 +1097,5 @@ const DEUTSCH_POSTS: PostArticle[] = [
         "content": "..."
       }
     ]
-  },
+  }
 ];

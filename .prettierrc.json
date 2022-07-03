@@ -6,6 +6,15 @@
       "options": {
         "printWidth": 120
       }
+    },
+    {
+      "files": ["./src/data/**/*.ts"],
+      "options": {
+        "singleQuote": false,
+        "quoteProps": "preserve",
+        "printWidth": 9999,
+        "trailingComma": "none"
+      }
     }
   ]
 }
