@@ -24,7 +24,7 @@
         *ngIf="isMobile"
       ></fe-hamburger-icon>
       <a
-        class="fe-button dashboard-btn"
+        class="fe-button secondary dashboard-btn"
         matRipple
         [routerLink]="user.isAuthenticated ? '/dashboard' : '/login'"
         [class.active-route]="router.url.startsWith('/dashboard') || router.url.startsWith('/login')"

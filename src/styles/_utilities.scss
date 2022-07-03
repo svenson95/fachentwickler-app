@@ -51,7 +51,7 @@ a.fe-button {
     cursor: pointer;
   }
 
-  &.secondary {
+  &.small {
     padding: 5px 10px 4px;
     font-size: 0.9em;
 
@@ -61,11 +61,10 @@ a.fe-button {
     }
   }
 
-  &.show-more {
+  &.secondary {
     background-color: transparent;
     color: var(--text-color-3);
     border-color: rgba(var(--grey-4-rgb), 0.4);
-    margin-left: 10px;
 
     &:hover {
       background-color: rgba(var(--grey-4-rgb), 0.3);

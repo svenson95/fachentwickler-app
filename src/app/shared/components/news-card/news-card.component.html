@@ -17,7 +17,7 @@
         <p class="date">{{ post.date | date: "dd.MM.yyyy" }}</p>
         <p class="title">{{ post.title }}</p>
       </div>
-      <button class="fe-button secondary" [routerLink]="'/mitteilungen/' + post.url" matRipple>Lesen</button>
+      <button class="fe-button small" [routerLink]="'/mitteilungen/' + post.url" matRipple>Lesen</button>
     </div>
 
     <fe-pagination-bar
