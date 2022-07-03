@@ -11,4 +11,5 @@ export enum PostElementType {
   HINT = 'HINT',
   ANSWER_GROUP = 'ANSWER_GROUP',
   TABLE_GROUP = 'TABLE_GROUP',
+  YOUTUBE_VIDEO = 'YOUTUBE_VIDEO',
 }

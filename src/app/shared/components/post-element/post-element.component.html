@@ -116,3 +116,12 @@
 <div class="post-answer-group" *ngIf="element.type === ElementType.ANSWER_GROUP && (element.hidden ? isVisible : true)">
   <fe-post-element *ngFor="let el of element.elements" [element]="el"></fe-post-element>
 </div>
+<!-- YOUTUBE-VIDEO -->
+<div class="post-youtube-video" *ngIf="element.type === ElementType.YOUTUBE_VIDEO">
+  <iframe
+    [src]="youtubeSrc"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>

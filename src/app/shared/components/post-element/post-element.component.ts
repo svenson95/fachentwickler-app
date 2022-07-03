@@ -1,4 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 import { PostElementType } from '@enums/element-type';
 import { ImageChunk } from '@models/image-data';
@@ -27,11 +28,15 @@ export class PostElementComponent implements OnInit {
 
   public isVisible = false;
 
-  constructor(private dataService: DataService) {}
+  public youtubeSrc: SafeResourceUrl;
+
+  constructor(private dataService: DataService, private sanitizer: DomSanitizer) {}
 
   public ngOnInit(): void {
     if (this.element.type === PostElementType.IMAGE) {
       this.loadImage(this.element.content);
+    } else if (this.element.type === PostElementType.YOUTUBE_VIDEO) {
+      this.youtubeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.element.content);
     }
   }
 
