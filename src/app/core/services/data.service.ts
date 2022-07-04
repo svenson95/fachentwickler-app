@@ -48,7 +48,7 @@ export class DataService {
   }
 
   public getPost(postUrl: string): Observable<PostTypes> {
-    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/url/${postUrl}/`).pipe(
+    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/url/${postUrl}`).pipe(
       map((response) => {
         // console.log('response GET post', response);
         return response;

@@ -27,7 +27,7 @@ export class MatchingPage {
     const subjectUrl = url.substring(0, url.indexOf('/', 1));
     this.header.setPageTitle(subjects.find((sub) => sub.url === subjectUrl)?.title);
 
-    const matchingUrl = url.substring(url.indexOf('/', 1), url.length);
+    const matchingUrl = url.substring(url.indexOf('/', 1) + 1);
     this.data.getPost(matchingUrl).subscribe((response) => {
       if (response !== null) {
         this.matching = response as PostMatching;

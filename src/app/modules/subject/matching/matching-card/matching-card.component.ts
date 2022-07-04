@@ -110,7 +110,9 @@ export class MatchingCardComponent implements OnInit {
 
   private setupMatchings(): void {
     this.unsolvedPairs = [];
-    this.matching.elements[this.round].forEach((pair) => {
+    // TODO: check why array in array is typeof object
+    const pairs: MatchingPair[] = Object.values(this.matching.elements[this.round]);
+    pairs.forEach((pair) => {
       this.unsolvedPairs.push(pair);
     });
     this.leftSidePairs = [...this.unsolvedPairs].sort(() => Math.random() - 0.5);
