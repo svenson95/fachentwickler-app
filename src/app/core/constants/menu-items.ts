@@ -1,5 +1,44 @@
 import { MenuItem } from '@models/menu-item';
 
+export const myClass: MenuItem[] = [
+  {
+    title: 'Mitteilungen',
+    shortTitle: 'Mitteilungen',
+    url: '/mitteilungen',
+    icon: 'mail-outline',
+  },
+  {
+    title: 'Klausuren',
+    shortTitle: 'Klausuren',
+    url: '/klausuren',
+    icon: 'school-outline',
+  },
+  {
+    title: 'Lehrplan',
+    shortTitle: 'Lehrplan',
+    url: '/lehrplan',
+    icon: 'albums-outline',
+  },
+  {
+    title: 'Lehrmaterial',
+    shortTitle: 'Lehrmaterial',
+    url: '/lehrmaterial',
+    icon: 'folder-outline',
+  },
+  {
+    title: 'Vertretungs<wbr/>plan',
+    shortTitle: 'Vertretungs<wbr/>plan',
+    url: '/vertretungsplan',
+    icon: 'today-outline',
+  },
+  {
+    title: 'Schuljahresplan',
+    shortTitle: 'Schuljahresplan',
+    url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/21_22/se-fi_21-22.pdf',
+    icon: 'calendar-outline',
+  },
+];
+
 export const subjects: MenuItem[] = [
   {
     title: 'Lernfeld 1',
@@ -89,7 +128,7 @@ export const subjects: MenuItem[] = [
     title: 'Wahlpflicht',
     shortTitle: 'WP',
     url: '/wp',
-    icon: 'server-outline',
+    icon: 'bulb-outline',
   },
   {
     title: 'WiSo',
@@ -105,6 +144,33 @@ export const subjects: MenuItem[] = [
   },
 ];
 
+export const basics: MenuItem[] = [
+  {
+    title: 'Computer',
+    shortTitle: 'Computer',
+    url: '/computer',
+    icon: 'desktop-outline',
+  },
+  {
+    title: 'Internet',
+    shortTitle: 'Internet',
+    url: '/internet',
+    icon: 'globe-outline',
+  },
+  {
+    title: 'Server',
+    shortTitle: 'Server',
+    url: '/server',
+    icon: 'server-outline',
+  },
+  {
+    title: 'Datenbanken',
+    shortTitle: 'Datenbanken',
+    url: '/datenbanken',
+    icon: 'file-tray-full-outline',
+  },
+];
+
 export const languages: MenuItem[] = [
   {
     title: 'Assembler',
@@ -116,13 +182,19 @@ export const languages: MenuItem[] = [
     title: 'Systemsprachen',
     shortTitle: 'System',
     url: '/systemsprachen',
+    icon: 'cog-outline',
+  },
+  {
+    title: 'Skriptsprachen',
+    shortTitle: 'Skript',
+    url: '/skriptsprachen',
     icon: 'terminal-outline',
   },
   {
     title: 'Backend',
     shortTitle: 'Backend',
     url: '/backend',
-    icon: 'server-outline',
+    icon: 'layers-outline',
   },
   {
     title: 'Frontend',
@@ -136,51 +208,6 @@ export const languages: MenuItem[] = [
     url: '/app',
     icon: 'phone-portrait-outline',
   },
-  {
-    title: 'Skriptsprachen',
-    shortTitle: 'Skript',
-    url: '/skriptsprachen',
-    icon: 'color-palette-outline',
-  },
 ];
 
-export const myClass: MenuItem[] = [
-  {
-    title: 'Mitteilungen',
-    shortTitle: 'Mitteilungen',
-    url: '/mitteilungen',
-    icon: 'mail-outline',
-  },
-  {
-    title: 'Klausuren',
-    shortTitle: 'Klausuren',
-    url: '/klausuren',
-    icon: 'school-outline',
-  },
-  {
-    title: 'Lehrplan',
-    shortTitle: 'Lehrplan',
-    url: '/lehrplan',
-    icon: 'file-tray-full-outline',
-  },
-  {
-    title: 'Lehrmaterial',
-    shortTitle: 'Lehrmaterial',
-    url: '/lehrmaterial',
-    icon: 'folder-outline',
-  },
-  {
-    title: 'Vertretungs<wbr/>plan',
-    shortTitle: 'Vertretungs<wbr/>plan',
-    url: '/vertretungsplan',
-    icon: 'today-outline',
-  },
-  {
-    title: 'Schuljahresplan',
-    shortTitle: 'Schuljahresplan',
-    url: 'http://www.osz-teltow.de/organisatorisches/ablaufplaene/21_22/se-fi_21-22.pdf',
-    icon: 'calendar-outline',
-  },
-];
-
-export const pages = [...subjects, ...languages, ...myClass];
+export const pages = [...myClass, ...subjects, ...languages];

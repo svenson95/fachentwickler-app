@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { languages, myClass, subjects } from '@constants/menu-items';
+import { myClass, subjects, basics, languages } from '@constants/menu-items';
 import { MenuItem } from '@models/menu-item';
 import { UserService } from '@services/user.service';
 
@@ -15,7 +15,9 @@ export class SidenavComponent {
 
   public subjects: MenuItem[] = subjects;
 
-  public language: MenuItem[] = languages;
+  public basics: MenuItem[] = basics;
+
+  public languages: MenuItem[] = languages;
 
   constructor(public router: Router, public user: UserService) {}
 }
