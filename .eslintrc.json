@@ -73,6 +73,7 @@
     "no-underscore-dangle": "off",
     "no-shadow": "off",
     "max-len": "off",
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/explicit-member-accessibility": [

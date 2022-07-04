@@ -185,7 +185,6 @@ export class ImageManagerDialogComponent {
         this.isLoadingImages = false;
 
         if (page === null) {
-          // eslint-disable-next-line prefer-destructuring
           this.selectedImage = data[0];
           this.data.getImageById(data[0]._id).subscribe((value) => {
             this.selectedImageData = value;
