@@ -41,7 +41,8 @@
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: var(--box-shadow);
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px,
+      rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   }
 
   &.show-back &__inner {
