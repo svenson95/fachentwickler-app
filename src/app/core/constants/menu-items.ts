@@ -179,15 +179,15 @@ export const languages: MenuItem[] = [
     icon: 'rocket-outline',
   },
   {
-    title: 'Systemsprachen',
+    title: 'System',
     shortTitle: 'System',
-    url: '/systemsprachen',
+    url: '/system',
     icon: 'cog-outline',
   },
   {
-    title: 'Skriptsprachen',
+    title: 'Skript',
     shortTitle: 'Skript',
-    url: '/skriptsprachen',
+    url: '/skript',
     icon: 'terminal-outline',
   },
   {
