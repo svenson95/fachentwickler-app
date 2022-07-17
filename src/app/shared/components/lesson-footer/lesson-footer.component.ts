@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { UserData, UserRole } from '@models/user';
 import { AuthService } from '@services/auth.service';
@@ -9,6 +9,7 @@ import { UserService } from '@services/user.service';
   selector: 'fe-lesson-footer',
   templateUrl: './lesson-footer.component.html',
   styleUrls: ['./lesson-footer.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LessonFooterComponent {
   @Input() public postId: string;
