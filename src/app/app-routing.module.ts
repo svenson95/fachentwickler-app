@@ -22,7 +22,6 @@ const authRoutes: Routes = [
     path: 'login',
     loadChildren: () => import('./modules/auth/login/login.module').then((m) => m.LoginPageModule),
     canActivate: [NotAuthGuardService],
-    data: { animation: 'LoginPage' },
   },
   {
     path: 'forgot-password',
@@ -34,7 +33,6 @@ const authRoutes: Routes = [
     path: 'register',
     loadChildren: () => import('./modules/auth/register/register.module').then((m) => m.RegisterPageModule),
     canActivate: [NotAuthGuardService],
-    data: { animation: 'RegisterPage' },
   },
   {
     path: 'verify',
@@ -47,7 +45,6 @@ const otherRoutes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./modules/other-pages/about/about.module').then((m) => m.AboutPageModule),
-    data: { animation: 'AboutPage' },
   },
   {
     path: 'feedback',
@@ -56,7 +53,6 @@ const otherRoutes: Routes = [
   {
     path: 'impressum',
     loadChildren: () => import('./modules/other-pages/legal/legal.module').then((m) => m.LegalPageModule),
-    data: { animation: 'LegalPage' },
   },
 ];
 
@@ -64,13 +60,11 @@ const userRoutes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./modules/user-pages/dashboard/dashboard.module').then((m) => m.DashboardPageModule),
-    data: { animation: 'DashboardPage' },
     canActivate: [AuthGuardService],
   },
   {
     path: 'mein-profil',
     loadChildren: () => import('./modules/user-pages/my-profile/my-profile.module').then((m) => m.MyProfilePageModule),
-    data: { animation: 'MyProfilePage' },
     canActivate: [AuthGuardService],
   },
   {
@@ -114,7 +108,6 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./modules/landing/landing.module').then((m) => m.LandingPageModule),
-    data: { animation: 'StartPage' },
   },
   {
     path: 'search',
@@ -135,6 +128,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
       preloadingStrategy: PreloadAllModules,
+      // TODO: check if legacy relative link resolution is still needed
       relativeLinkResolution: 'legacy',
     }),
   ],
