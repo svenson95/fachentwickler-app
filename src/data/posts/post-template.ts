@@ -260,6 +260,14 @@ export const testArticle: PostArticle = {
       "content": "<hr/>"
     },
     {
+      "type": "YOUTUBE_VIDEO",
+      "content": "https://www.youtube.com/embed/JnMAqsPbV_w"
+    },
+    {
+      "type": "LINE",
+      "content": "<hr/>"
+    },
+    {
       "type": "LIST",
       "content": "Quellen:",
       "list": ['TITLE | DATE | <a href=\'https://www.wikipedia.de/\' target="_blank" rel="noopener noreferrer">https://www.wikipedia.de/</a>']
