@@ -3,7 +3,7 @@
 ::ng-deep fe-card.news mat-card {
   .news-container {
     @include from-xs {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     @include to-xs {

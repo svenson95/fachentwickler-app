@@ -53,15 +53,18 @@
   }
 
   .weekday-group {
-    @include from-md {
-      margin-top: 10px;
-    }
-
     .weekday-item {
+      &:first-of-type {
+        .label-wrapper {
+          margin-top: 0;
+        }
+      }
+
       .label-wrapper {
         display: flex;
         align-items: center;
         margin: 25px 0 20px;
+        gap: 10px;
 
         .weekday-label {
           color: var(--text-color-3);
