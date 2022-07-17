@@ -3,52 +3,13 @@
     <fe-app-icon></fe-app-icon>
   </div>
 
-  <div class="column">
-    <p class="heading">Anmelden</p>
+  <div class="column" *ngFor="let column of columns">
+    <p class="heading">{{ column.title }}</p>
     <ul>
-      <li>
-        <a routerLink="login" [class.is-active]="router.url == '/login'"> Login </a>
-      </li>
-      <li>
-        <a routerLink="register" [class.is-active]="router.url == '/register'"> Registrieren </a>
-      </li>
-      <li>
-        <a routerLink="forgot-password" [class.is-active]="router.url == '/forgot-password'"> Passwort vergessen </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="column">
-    <p class="heading">Schülerbereich</p>
-    <ul>
-      <li>
-        <a routerLink="/dashboard" [class.is-active]="router.url == '/dashboard'"> Dashboard </a>
-      </li>
-      <li>
-        <a routerLink="mein-profil" [class.is-active]="router.url == '/mein-profil'"> Mein Profil </a>
-      </li>
-      <li>
-        <a routerLink="pruefungssimulator" [class.is-active]="router.url == '/pruefungssimulator'">
-          Prüfungssimulator
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="column">
-    <p class="heading">Plattform</p>
-    <ul>
-      <li>
-        <a routerLink="/" [class.is-active]="router.url == '/'"> Start </a>
-      </li>
-      <li>
-        <a routerLink="about" [class.is-active]="router.url == '/about'"> About </a>
-      </li>
-      <li>
-        <a routerLink="feedback" [class.is-active]="router.url == '/feedback'"> Feedback </a>
-      </li>
-      <li>
-        <a routerLink="impressum" [class.is-active]="router.url == '/impressum'"> Impressum </a>
+      <li *ngFor="let link of column.links">
+        <small>
+          <a [routerLink]="link.href" [class.is-active]="router.url.substring(1) == link.href"> {{ link.label }} </a>
+        </small>
       </li>
     </ul>
   </div>
