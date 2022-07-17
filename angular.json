@@ -134,6 +134,7 @@
   },
   "defaultProject": "fachentwickler-app",
   "cli": {
+    "analytics": false,
     "defaultCollection": "@angular-eslint/schematics"
   }
 }
