@@ -24,7 +24,7 @@ export class AuthGuardService implements CanActivate {
       return true;
     }
     if (userNotVerified) {
-      return this.router.parseUrl('/verify');
+      return this.router.parseUrl('/verifizieren');
     }
     if (!this.user.isAuthenticated) {
       return this.router.parseUrl('/login');

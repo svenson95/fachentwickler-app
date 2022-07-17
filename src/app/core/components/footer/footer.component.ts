@@ -15,8 +15,8 @@ export class FooterComponent {
       title: 'Anmelden',
       links: [
         { href: 'login', label: 'Login' },
-        { href: 'register', label: 'Registrieren' },
-        { href: 'forgot-password', label: 'Passwort vergessen' },
+        { href: 'registrieren', label: 'Registrieren' },
+        { href: 'passwort-vergessen', label: 'Passwort vergessen' },
       ],
     },
     {
@@ -24,7 +24,7 @@ export class FooterComponent {
       links: [
         { href: 'dashboard', label: 'Dashboard' },
         { href: 'mein-profil', label: 'Mein Profil' },
-        { href: 'pruefungssimulator', label: 'Prüfungssimulator' },
+        { href: 'pruefungs-simulator', label: 'Prüfungssimulator' },
       ],
     },
     {

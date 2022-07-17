@@ -24,18 +24,18 @@ const authRoutes: Routes = [
     canActivate: [NotAuthGuardService],
   },
   {
-    path: 'forgot-password',
+    path: 'passwort-vergessen',
     loadChildren: () =>
       import('./modules/auth/forgot-password/forgot-password.module').then((m) => m.ForgotPasswordPageModule),
     canActivate: [NotAuthGuardService],
   },
   {
-    path: 'register',
+    path: 'registrieren',
     loadChildren: () => import('./modules/auth/register/register.module').then((m) => m.RegisterPageModule),
     canActivate: [NotAuthGuardService],
   },
   {
-    path: 'verify',
+    path: 'verifizieren',
     loadChildren: () => import('./modules/auth/verify/verify.module').then((m) => m.VerifyPageModule),
     canActivate: [VerifyGuardService],
   },
@@ -97,7 +97,7 @@ const userRoutes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'pruefungssimulator',
+    path: 'pruefungs-simulator',
     loadChildren: () =>
       import('./modules/user-pages/audit-simulator/audit-simulator.module').then((m) => m.AuditSimulatorPageModule),
     canActivate: [AuthGuardService],
