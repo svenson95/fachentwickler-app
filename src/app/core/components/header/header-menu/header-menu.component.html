@@ -50,17 +50,15 @@
     <mat-icon>logout</mat-icon>
     <span class="label">Ausloggen</span>
   </button>
-  <ng-container *ngIf="user.data?.role === UserRole.ADMIN">
-    <hr class="horizontal" />
-    <a
-      class="menu-btn"
-      mat-menu-item
-      routerLink="/lf-1/topic/testarticle"
-      [disabled]="router.url.startsWith('/lf-1/topic/testarticle')"
-      disableRipple
-    >
-      <mat-icon>preview</mat-icon>
-      <span class="label">Testartikel</span>
-    </a>
-  </ng-container>
+  <hr class="horizontal" />
+  <a
+    class="menu-btn"
+    mat-menu-item
+    routerLink="/lf-1/topic/testarticle"
+    [disabled]="router.url.startsWith('/lf-1/topic/testarticle')"
+    disableRipple
+  >
+    <mat-icon>preview</mat-icon>
+    <span class="label">Testartikel</span>
+  </a>
 </mat-menu>
