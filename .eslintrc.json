@@ -80,6 +80,12 @@
     "no-underscore-dangle": "off",
     "no-shadow": "off",
     "max-len": "off",
+    "no-else-return": [
+      "warn",
+      {
+        "allowElseIf": true
+      }
+    ],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "class-methods-use-this": "off",
     "@typescript-eslint/no-shadow": ["error"],
