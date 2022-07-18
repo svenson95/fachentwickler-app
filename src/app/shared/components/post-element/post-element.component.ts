@@ -40,12 +40,10 @@ export class PostElementComponent implements OnInit {
     }
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public isString(value): boolean {
     return typeof value === 'string';
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public isSublistItem(item: string | SublistItem): item is SublistItem {
     return Object.prototype.hasOwnProperty.call(item, 'sublist');
   }

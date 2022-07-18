@@ -46,7 +46,6 @@ export class IndexCardComponent {
     return this.indexCards.elements[this.level + 1] === undefined;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public stripHtml(html: any): string {
     const tmp = document.createElement('div');
     tmp.innerHTML = html;

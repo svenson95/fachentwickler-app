@@ -112,7 +112,6 @@ export class ExamsPage implements OnInit, AfterViewInit {
     };
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public disableWeekend(d: Date): boolean {
     if (d.getDay() !== 0 && d.getDay() !== 6) {
       return true;

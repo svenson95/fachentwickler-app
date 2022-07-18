@@ -42,7 +42,6 @@ export class CurriculumPage implements OnInit {
     this.allWeeks.shift(); // remove school-week 0
   }
 
-  // eslint-disable-next-line class-methods-use-this
   private initSchoolYears(schoolWeeks: SchoolWeek[]): SchoolYear[] {
     const schoolYears = [new SchoolYear(1), new SchoolYear(2), new SchoolYear(3)];
 
@@ -78,7 +77,6 @@ export class CurriculumPage implements OnInit {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
   private isVisible = (el: HTMLElement): boolean => {
     const { bottom, height, top } = el.getBoundingClientRect();
     const weeksContainer = document.querySelector('.weeks-container');

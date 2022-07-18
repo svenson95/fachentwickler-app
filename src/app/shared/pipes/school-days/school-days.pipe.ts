@@ -6,7 +6,6 @@ import { SchoolWeek, WeekDays } from '@models/school-week';
   name: 'schoolDays',
 })
 export class SchoolDaysPipe implements PipeTransform {
-  // eslint-disable-next-line class-methods-use-this
   public transform(schoolWeek: SchoolWeek): WeekDays[] {
     const days: WeekDays[] = [];
 

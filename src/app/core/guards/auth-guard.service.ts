@@ -32,7 +32,6 @@ export class AuthGuardService implements CanActivate {
     return false;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   private isTestDataRequest(url: string): boolean {
     if (url.includes('info_2020_11_42')) {
       return true;

@@ -55,7 +55,6 @@ export class ImageManagerDialogComponent {
     this.getImages();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public trackByFn(index, item): any {
     return item.id;
   }
@@ -68,12 +67,10 @@ export class ImageManagerDialogComponent {
     this.dropzoneFile.splice(this.dropzoneFile.indexOf(event), 1);
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public isEmpty(files): boolean {
     return files.length === 0;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public encode(image): string {
     const dataStrings = image.chunks.map((chunk: any) => chunk.data);
     return `data:image/png;base64,${dataStrings.join('')}`;
@@ -116,7 +113,6 @@ export class ImageManagerDialogComponent {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public formatBytes(bytes, decimals = 1): string {
     if (bytes === null) {
       return '';
@@ -155,7 +151,6 @@ export class ImageManagerDialogComponent {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public showPreview(): void {
     // TODO: install image-viewer package (fullscreen)
   }

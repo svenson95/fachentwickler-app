@@ -106,12 +106,10 @@ export class MyProfilePage implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public resetProgress(): void {
     // TODO: implement backend endpoint to reset progress
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public markAllPostsAsRead(): void {
     // TODO: implement backend endpoint to mark all posts as read
   }

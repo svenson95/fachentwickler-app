@@ -13,7 +13,6 @@ import { Schedule } from '@models/schedule';
 export class ScheduleComponent {
   @Input() public schedule: Schedule;
 
-  // eslint-disable-next-line class-methods-use-this
   public subjectName = (subject: string): string => {
     const sub = subjects.find((item: MenuItem) => item.url.substring(1) === subject);
 

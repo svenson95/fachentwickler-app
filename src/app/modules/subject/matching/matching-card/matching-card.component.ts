@@ -36,7 +36,6 @@ export class MatchingCardComponent implements OnInit {
     this.setupMatchings();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public drop(event: CdkDragDrop<string[]>, list): void {
     moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
