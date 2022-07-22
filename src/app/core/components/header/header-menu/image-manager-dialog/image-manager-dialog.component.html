@@ -45,7 +45,13 @@
         </ngx-dropzone-label>
       </ngx-dropzone-image-preview>
     </div>
-    <button class="fe-button" type="submit" [isLoading]="isUploadingImage" [disabled]="isEmpty(dropzoneFile)" matRipple>
+    <button
+      class="fe-button"
+      type="submit"
+      [isLoading]="isUploadingImage"
+      [disabled]="dropzoneFile | isEmpty"
+      matRipple
+    >
       Hochladen
     </button>
   </form>
@@ -113,7 +119,7 @@
     </button>
   </div>
   <div class="recent-images-container">
-    <fe-loading-spinner *ngIf="images.length === 0 || isLoadingImages"></fe-loading-spinner>
+    <fe-loading-spinner *ngIf="(images | isEmpty) || isLoadingImages"></fe-loading-spinner>
     <div class="images-list" *ngIf="!isLoadingImages">
       <button
         class="list-item"

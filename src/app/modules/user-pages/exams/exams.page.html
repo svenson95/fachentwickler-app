@@ -14,7 +14,7 @@
   <div class="exams-column">
     <fe-loading-spinner *ngIf="allExams === undefined"></fe-loading-spinner>
     <fe-exam-item *ngFor="let exam of monthExams" [exam]="exam"></fe-exam-item>
-    <p class="no-data" *ngIf="monthExams && monthExams.length === 0">Keine Klausuren in diesem Monat</p>
+    <p class="no-data" *ngIf="monthExams | isEmpty">Keine Klausuren in diesem Monat</p>
     <p class="no-data" *ngIf="allExams === null">Fehler beim Laden der Klausuren</p>
   </div>
 </fe-card>

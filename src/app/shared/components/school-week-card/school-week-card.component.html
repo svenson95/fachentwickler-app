@@ -44,6 +44,6 @@
         </div>
       </div>
     </div>
-    <p class="no-data" *ngIf="week && week.posts.length === 0">Artikel noch nicht freigeschaltet</p>
+    <p class="no-data" *ngIf="week.posts | isEmpty">Artikel noch nicht freigeschaltet</p>
   </mat-card-content>
 </mat-card>
