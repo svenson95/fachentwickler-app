@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Route, RouterModule, Routes } from '@angular/router';
 
-import { subjects } from '@constants/menu-items';
+import { subjectLinks } from '@constants/menu-items';
 import { AuthGuardService } from '@guards/auth-guard.service';
 import { NotAuthGuardService } from '@guards/not-auth-guard.service';
 import { VerifyGuardService } from '@guards/verify-guard.service';
 
 const subjectRoutes = (): Array<Route> => {
-  const subjectPaths: Route[] = [];
-  subjects.forEach((sub) => {
-    subjectPaths.push({
+  const paths: Route[] = [];
+  subjectLinks.forEach((sub) => {
+    paths.push({
       path: sub.url.substr(1),
       loadChildren: () => import('./modules/subject/subject.module').then((m) => m.SubjectPageModule),
     });
   });
-  return subjectPaths;
+  return paths;
 };
 
 const authRoutes: Routes = [

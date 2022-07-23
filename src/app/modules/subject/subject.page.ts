@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { subjects } from '@constants/menu-items';
+import { subjectLinks } from '@constants/menu-items';
 import { PostType } from '@enums/post-type';
 import { SubjectPopulated } from '@models/subject';
 import { DataService } from '@services/data.service';
@@ -18,12 +18,12 @@ export class SubjectPage {
   public PostType = PostType;
 
   public get subjectIcon(): string {
-    const sub = subjects.find((s) => s.url === this.router.url);
+    const sub = subjectLinks.find((s) => s.url === this.router.url);
     return sub.icon.slice(0, -8);
   }
 
   constructor(private router: Router, private data: DataService, private header: HeaderService) {
-    const subject = subjects.find((sub) => sub.url === router.url);
+    const subject = subjectLinks.find((sub) => sub.url === router.url);
     this.header.setPageTitle(subject.title);
 
     this.data.getSubject(this.router.url.substring(1)).subscribe((response) => {

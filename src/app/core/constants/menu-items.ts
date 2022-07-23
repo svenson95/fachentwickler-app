@@ -210,4 +210,4 @@ export const languages: MenuItem[] = [
   },
 ];
 
-export const pages = [...myClass, ...subjects, ...languages];
+export const subjectLinks = [...basics, ...subjects];

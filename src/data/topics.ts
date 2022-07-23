@@ -154,5 +154,12 @@ const topics: TopicUnpopulated[] = [
     "url": "grammatik",
     "subject": "deutsch",
     "links": ["5f429f3d165d0ab470bc57fd", "5f429f5f165d0ab470bc57fe", "5f429f6d165d0ab470bc57ff", "5f6f8877539ea9f7ca3856eb", "5f7a5bc126fca377f7ed4e6b", "5fdfcde505e5115de4b7fb80", "5fdfd0bf8c8c2a5e54a4a401", "602106a765dbdf479177a4c4", "6021399365dbdf479177a4cd", "603cfd6eb0c00c20f201d100", "60a2f6b259a0005b1c634ab0"]
+  },
+  {
+    "title": "Grundlagen",
+    "_id": "62dc279e5dfa97f3dc4e884d",
+    "url": "grundlagen",
+    "subject": "computer",
+    "links": ["62dc3b38913d158df3744762"]
   }
 ];

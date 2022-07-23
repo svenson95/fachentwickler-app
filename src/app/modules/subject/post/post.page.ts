@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { subjectLinks } from '@constants/menu-items';
 import { testArticle } from '@data/posts/post-template';
-import { subjects } from '@constants/menu-items';
 import { PostArticle } from '@models/post';
 import { DataService } from '@services/data.service';
 import { HeaderService } from '@services/header.service';
@@ -26,7 +26,7 @@ export class PostPage {
   ) {
     const { url } = this.router;
     const subjectUrl = url.substring(0, url.indexOf('/', 2));
-    this.header.setPageTitle(subjects.find((sub) => sub.url === subjectUrl)?.title);
+    this.header.setPageTitle(subjectLinks.find((sub) => sub.url === subjectUrl)?.title);
 
     const postUrl = url.substr(url.indexOf('/', 2) + 1, url.length);
     if (postUrl === 'topic/testarticle') {
