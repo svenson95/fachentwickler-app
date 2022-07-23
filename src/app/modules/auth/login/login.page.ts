@@ -10,7 +10,6 @@ import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
-import { DashboardService } from '@services/dashboard.service';
 import { UserService } from '@services/user.service';
 
 @Component({
@@ -31,7 +30,6 @@ export class LoginPage implements OnDestroy {
     private router: Router,
     private auth: AuthService,
     private user: UserService,
-    private dashboard: DashboardService,
     private headerService: HeaderService,
     private themeService: ThemeService,
     private loadService: LoadingService,
@@ -84,7 +82,6 @@ export class LoginPage implements OnDestroy {
           this.user.data = response.data.user;
           this.user.isAuthenticated = true;
           this.user.storeData();
-          this.dashboard.init();
 
           if (this.auth.redirectUrl) {
             this.redirectTo(this.auth.redirectUrl);
