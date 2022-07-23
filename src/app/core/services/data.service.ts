@@ -10,8 +10,11 @@ import { Post } from '@models/post';
 import { ExamDate } from '@models/exam-date';
 import { ImageFile, ImageData } from '@models/image-data';
 import { SchoolNews } from '@models/school-news';
+import { Message } from '@models/message';
 
 import { PostType } from '../types/post-type';
+
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root',
@@ -29,7 +32,7 @@ export class DataService {
 
   private NEWS_ENDPOINT = `${environment.baseUrl}/news`;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private logging: LoggingService) {}
 
   public getSubject(subjectUrl: string): Observable<SubjectResponse> {
     return this.httpClient.get<SubjectResponse>(`${this.SUBJECTS_ENDPOINT}/${subjectUrl}/populated`).pipe(
@@ -118,9 +121,10 @@ export class DataService {
     const formData = new FormData();
     formData.append('file', file);
 
+    // TODO: replace any by (new) type 'ImageInput' & 'ImageData
     return this.httpClient.post<any>(`${this.IMAGES_ENDPOINT}/upload`, formData).pipe(
       map((response) => {
-        // console.log('response POST image', response);
+        this.logging.debug(new Message(`response POST images/upload`), response);
         return response;
       }),
     );
@@ -129,7 +133,7 @@ export class DataService {
   public deleteImageById(id: string): Observable<any> {
     return this.httpClient.delete<any>(`${this.IMAGES_ENDPOINT}/${id}/delete`).pipe(
       map((response) => {
-        // console.log('response DELETE image', response);
+        this.logging.debug(new Message(`response DELETE images/${id}`), response);
         return response;
       }),
     );
