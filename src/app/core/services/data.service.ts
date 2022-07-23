@@ -6,10 +6,12 @@ import { map } from 'rxjs/operators';
 import { environment } from '@env/environment';
 import { SchoolWeek } from '@models/school-week';
 import { SubjectResponse } from '@models/subject';
-import { Post, PostTypes } from '@models/post';
+import { Post } from '@models/post';
 import { ExamDate } from '@models/exam-date';
 import { ImageFile, ImageData } from '@models/image-data';
 import { SchoolNews } from '@models/school-news';
+
+import { PostType } from '../types/post-type';
 
 @Injectable({
   providedIn: 'root',
@@ -38,8 +40,8 @@ export class DataService {
     );
   }
 
-  public getPostById(postId: string): Observable<PostTypes> {
-    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/id/${postId}`).pipe(
+  public getPostById(postId: string): Observable<PostType> {
+    return this.httpClient.get<PostType>(`${this.POSTS_ENDPOINT}/id/${postId}`).pipe(
       map((response) => {
         // console.log('response GET subjects/post', response);
         return response;
@@ -47,8 +49,8 @@ export class DataService {
     );
   }
 
-  public getPost(postUrl: string): Observable<PostTypes> {
-    return this.httpClient.get<PostTypes>(`${this.POSTS_ENDPOINT}/url/${postUrl}`).pipe(
+  public getPost(postUrl: string): Observable<PostType> {
+    return this.httpClient.get<PostType>(`${this.POSTS_ENDPOINT}/url/${postUrl}`).pipe(
       map((response) => {
         // console.log('response GET post', response);
         return response;

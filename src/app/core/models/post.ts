@@ -48,5 +48,3 @@ export interface PostIndexCards extends Post {
 export interface PostMatching extends Post {
   elements: MatchingPair[][];
 }
-
-export type PostTypes = PostArticle | PostQuiz | PostMatching | PostIndexCards;

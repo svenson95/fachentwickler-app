@@ -57,5 +57,3 @@ export interface AddProgressBody {
   userId: string;
   postId: string;
 }
-
-export type EditBodyTypes = EditNameBody | EditEmailBody | EditPasswordBody | EditThemeBody;

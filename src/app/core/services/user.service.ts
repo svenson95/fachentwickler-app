@@ -6,8 +6,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { environment } from '@env/environment';
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
-import { AddProgressBody, EditBodyTypes, UserData } from '@models/user';
+import { AddProgressBody, UserData } from '@models/user';
 import { AuthUserProgressResponse, AuthUserResponse } from '@models/auth-response';
+
+import { EditBodyType } from '../types/edit-body-type';
 
 import { AuthService, CREDENTIALS_STORAGE_KEY } from './auth.service';
 import { ThemeService } from './theme.service';
@@ -113,7 +115,7 @@ export class UserService {
     );
   }
 
-  public edit(user: EditBodyTypes): Observable<AuthUserResponse> {
+  public edit(user: EditBodyType): Observable<AuthUserResponse> {
     const headers = new HttpHeaders().set('Authorization', this.auth.token);
 
     return this.httpClient

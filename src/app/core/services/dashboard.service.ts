@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { map, shareReplay, switchMap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 
 import { ExamDate } from '@models/exam-date';
-import { Post } from '@models/post';
 import { SchoolNews } from '@models/school-news';
 import { SchoolWeek } from '@models/school-week';
+
+import { PostType } from '../types/post-type';
 
 import { DataService } from './data.service';
 import { UserService } from './user.service';
@@ -20,7 +21,9 @@ export class DashboardService {
 
   public allLessons$: Observable<string[]> = this.data.getAllLessons().pipe(shareReplay(1));
 
-  public nextLesson$: Observable<Post>;
+  private nextLesson = new ReplaySubject<PostType>(1);
+
+  public readonly nextLesson$ = this.nextLesson.asObservable();
 
   public lessonsPercentage$: Observable<number>;
 
@@ -38,14 +41,11 @@ export class DashboardService {
   }
 
   public getNextLesson(): void {
-    this.nextLesson$ = this.allLessons$.pipe(
-      switchMap(async (allLessons) => {
+    this.allLessons$.subscribe(async (allLessons) => {
         const nextLessonId = allLessons.find((lessonId) => !this.user.data.progress.includes(lessonId));
         const post = await this.data.getPostById(nextLessonId).toPromise();
-        return post;
-      }),
-      shareReplay(1),
-    );
+      this.nextLesson.next(post);
+    });
   }
 
   private getSchoolWeek(): void {
