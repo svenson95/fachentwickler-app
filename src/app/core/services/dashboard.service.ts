@@ -26,10 +26,6 @@ export class DashboardService {
 
   public schoolWeek$: Observable<SchoolWeek>;
 
-  public CURRENT_SCHOOL_WEEK: number = 26;
-
-  public SCHOOL_WEEKS_LENGTH: number = 39;
-
   constructor(private data: DataService, private user: UserService) {
     this.init();
   }
