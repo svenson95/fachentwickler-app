@@ -14,5 +14,10 @@ export class PostLinkComponent {
 
   @Input('title') public title: string;
 
+  public get postRouterLink(): string {
+    const subject = this.post.subject ? this.post.subject : this.router.url;
+    return `/${subject}/${this.post.url}`;
+  }
+
   constructor(public router: Router) {}
 }
