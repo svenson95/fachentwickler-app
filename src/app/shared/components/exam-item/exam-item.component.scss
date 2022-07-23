@@ -55,18 +55,10 @@
       .date-details {
         display: flex;
         justify-content: space-between;
-        font-size: 0.7rem;
-
-        @include to-xs {
-          font-size: 0.6rem;
-        }
 
         .date,
         .days-left {
           letter-spacing: 1px;
-          margin-top: 3px;
-          margin-bottom: 3px;
-          line-height: 16px;
         }
 
         .date {
