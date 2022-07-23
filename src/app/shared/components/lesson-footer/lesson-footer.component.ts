@@ -24,7 +24,8 @@ export class LessonFooterComponent {
   constructor(public auth: AuthService, private dashboard: DashboardService, private user: UserService) {}
 
   public lessonSolved(): void {
-    this.user.setLessonSolved(this.postId);
-    this.dashboard.getNextLesson();
+    this.user.setLessonSolved(this.postId, () => {
+      this.dashboard.getNextLesson();
+    });
   }
 }
