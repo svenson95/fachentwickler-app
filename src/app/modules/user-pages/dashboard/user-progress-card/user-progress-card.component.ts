@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { SCHOOL_WEEKS_LENGTH } from '@constants/school-weeks';
 import { Post } from '@models/post';
@@ -8,6 +8,7 @@ import { UserData } from '@models/user';
   selector: 'fe-user-progress-card',
   templateUrl: './user-progress-card.component.html',
   styleUrls: ['./user-progress-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserProgressCardComponent {
   @Input() public user: UserData;
