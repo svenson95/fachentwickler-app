@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NgxDropzoneChangeEvent } from 'ngx-dropzone';
 
@@ -16,8 +16,6 @@ import { DeleteImageDialogComponent } from './delete-image-dialog/delete-image-d
   styleUrls: ['./image-manager-dialog.component.scss'],
 })
 export class ImageManagerDialogComponent {
-  @ViewChild('fileInput') public fileInput;
-
   public chunksMapping = {
     '=0': 'Keine Chunks',
     '=1': '1 Chunk',
