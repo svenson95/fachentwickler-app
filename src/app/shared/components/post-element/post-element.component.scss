@@ -3,7 +3,6 @@
 :host {
   display: flex;
   flex-direction: column;
-  overflow: auto;
 
   &::-webkit-scrollbar {
     height: var(--scrollbar-width);
