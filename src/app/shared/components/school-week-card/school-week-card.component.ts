@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 
+import { SCHOOL_WEEKS_LENGTH } from '@constants/school-weeks';
 import { SchoolWeek } from '@models/school-week';
-import { DashboardService } from '@services/dashboard.service';
 import { DataService } from '@services/data.service';
 
 @Component({
@@ -18,7 +18,9 @@ export class SchoolWeekCardComponent implements OnChanges {
 
   public isLoading: boolean;
 
-  constructor(public dataService: DataService, public dashboard: DashboardService) {}
+  public schoolWeeksLength = SCHOOL_WEEKS_LENGTH;
+
+  constructor(public dataService: DataService) {}
 
   public ngOnChanges(): void {
     if (this.showNavigation && this.weeks === undefined && this.week !== null) {

@@ -3,7 +3,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { SchoolWeek } from '@models/school-week';
 import { DataService } from '@services/data.service';
 import { HeaderService } from '@services/header.service';
-import { DashboardService } from '@services/dashboard.service';
+import { SCHOOL_WEEKS_LENGTH } from '@constants/school-weeks';
 
 import { SchoolYear } from './school-year';
 
@@ -21,12 +21,7 @@ export class CurriculumPage implements OnInit {
 
   public selectedWeek = 1;
 
-  constructor(
-    private headerService: HeaderService,
-    private dataService: DataService,
-    private dashboard: DashboardService,
-    private elementRef: ElementRef,
-  ) {
+  constructor(private headerService: HeaderService, private dataService: DataService, private elementRef: ElementRef) {
     this.headerService.setPageTitle('Lehrplan');
     this.initAllWeeks();
   }
@@ -38,7 +33,7 @@ export class CurriculumPage implements OnInit {
   }
 
   private initAllWeeks(): void {
-    this.allWeeks = Array.from(Array(this.dashboard.CURRENT_SCHOOL_WEEK + 1).keys());
+    this.allWeeks = Array.from(Array(SCHOOL_WEEKS_LENGTH + 1).keys());
     this.allWeeks.shift(); // remove school-week 0
   }
 

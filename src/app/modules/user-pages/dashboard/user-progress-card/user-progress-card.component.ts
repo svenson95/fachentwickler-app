@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+import { SCHOOL_WEEKS_LENGTH } from '@constants/school-weeks';
 import { Post } from '@models/post';
 import { UserData } from '@models/user';
-import { DashboardService } from '@services/dashboard.service';
 
 @Component({
   selector: 'fe-user-progress-card',
@@ -31,13 +31,11 @@ export class UserProgressCardComponent {
   }
 
   public get weekLength(): number {
-    return this.dashboard.SCHOOL_WEEKS_LENGTH;
+    return SCHOOL_WEEKS_LENGTH;
   }
 
   public get schoolWeekPercentage(): number {
     const currentWeek = this.nextLesson?.schoolWeek;
-    return (currentWeek / this.dashboard.SCHOOL_WEEKS_LENGTH) * 100;
+    return (currentWeek / SCHOOL_WEEKS_LENGTH) * 100;
   }
-
-  constructor(private dashboard: DashboardService) {}
 }

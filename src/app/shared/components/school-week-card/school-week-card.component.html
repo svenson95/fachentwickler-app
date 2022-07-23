@@ -19,7 +19,7 @@
       <button
         class="next-week-btn"
         (click)="setWeek(1)"
-        [disabled]="week === undefined || week.schoolWeek == dashboard.CURRENT_SCHOOL_WEEK"
+        [disabled]="week === undefined || week.schoolWeek == schoolWeeksLength"
         mat-icon-button
       >
         <mat-icon>keyboard_arrow_right</mat-icon>
