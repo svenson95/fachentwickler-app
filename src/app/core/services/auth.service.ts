@@ -6,7 +6,8 @@ import { map } from 'rxjs/operators';
 import { environment } from '@env/environment';
 import { AuthUser, RegisterUser } from '@models/user';
 import { AuthNullResponse, AuthUserResponse, AuthUserTokenResponse } from '@models/auth-response';
-
+import { LoggingService } from '@services/logging.service';
+import { Message } from '@models/message';
 /* eslint-disable quotes, quote-props, max-len */
 
 export const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';
@@ -15,7 +16,7 @@ export const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';
   providedIn: 'root',
 })
 export class AuthService {
-  public token = 'jwt';
+  public token: string;
 
   public redirectUrl: string;
 
@@ -33,12 +34,12 @@ export class AuthService {
 
   private LOGOUT_ENDPOINT = `${environment.baseUrl}/user/logout`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private logging: LoggingService) {}
 
   public login(user: AuthUser): Observable<AuthUserTokenResponse> {
     return this.http.post<AuthUserTokenResponse>(this.LOGIN_ENDPOINT, user).pipe(
       map((response) => {
-        // console.log('response POST login', response);
+        this.logging.debug(new Message('response POST user/login'), response);
         return response;
       }),
     );
@@ -47,7 +48,7 @@ export class AuthService {
   public register(user: RegisterUser): Observable<AuthUserResponse> {
     return this.http.post<AuthUserResponse>(this.REGISTER_ENDPOINT, user).pipe(
       map((response) => {
-        // console.log('response POST register', response);
+        this.logging.debug(new Message('response POST user/register'), response);
         return response;
       }),
     );
@@ -59,7 +60,7 @@ export class AuthService {
 
     return this.http.get<AuthUserResponse>(confirmationEndpoint).pipe(
       map((response) => {
-        // console.log('response POST confirm-registration', response);
+        this.logging.debug(new Message('response GET user/confirmation'), response);
         return response;
       }),
     );
@@ -70,7 +71,7 @@ export class AuthService {
 
     return this.http.post<AuthNullResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, { email }, { headers }).pipe(
       map((response) => {
-        // console.log('response POST resend-verification-code', response);
+        this.logging.debug(new Message('response POST user/resend-verification-code'), response);
         return response;
       }),
     );
@@ -79,7 +80,7 @@ export class AuthService {
   public forgotPassword(email: string): Observable<AuthNullResponse> {
     return this.http.post<AuthNullResponse>(`${this.FORGOT_PASSWORD_ENDPOINT}`, { email }).pipe(
       map((response) => {
-        // console.log('response POST forgot-password', response);
+        this.logging.debug(new Message('response POST user/forgot-password'), response);
         return response;
       }),
     );
@@ -90,7 +91,7 @@ export class AuthService {
 
     return this.http.get<AuthUserTokenResponse>(this.AUTHENTICATED_ENDPOINT, { headers }).pipe(
       map((response) => {
-        // console.log('response POST authenticated', response);
+        this.logging.debug(new Message('response POST user/authenticated'), response);
         return response;
       }),
     );
@@ -99,12 +100,12 @@ export class AuthService {
   public invalidate(): Observable<AuthNullResponse> {
     const headers = new HttpHeaders().set('Authorization', this.token);
 
-    this.token = 'jwt';
+    this.token = undefined;
     localStorage.removeItem(CREDENTIALS_STORAGE_KEY);
 
     return this.http.get<AuthNullResponse>(this.LOGOUT_ENDPOINT, { headers }).pipe(
       map((response) => {
-        // console.log('response GET user/logout', response);
+        this.logging.debug(new Message('response GET user/logout'), response);
         return response;
       }),
     );
