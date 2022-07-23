@@ -80,7 +80,7 @@ export class UserService {
     );
   }
 
-  public setLessonSolved(id: string): Promise<void> {
+  public setLessonSolved(id: string, onSuccess: Function): Promise<void> {
     if (this.data.progress.includes(id)) return;
 
     const lesson: AddProgressBody = {
@@ -94,6 +94,7 @@ export class UserService {
           duration: 3000,
           data: 'Lektion als gelesen markiert',
         });
+        onSuccess();
       },
       (error) => {
         this.snackbar.openFromComponent(SnackbarComponent, {

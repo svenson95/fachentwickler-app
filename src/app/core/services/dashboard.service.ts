@@ -42,8 +42,8 @@ export class DashboardService {
 
   public getNextLesson(): void {
     this.allLessons$.subscribe(async (allLessons) => {
-        const nextLessonId = allLessons.find((lessonId) => !this.user.data.progress.includes(lessonId));
-        const post = await this.data.getPostById(nextLessonId).toPromise();
+      const nextLessonId = allLessons.find((lessonId) => !this.user.data.progress.includes(lessonId));
+      const post = await this.data.getPostById(nextLessonId).toPromise();
       this.nextLesson.next(post);
     });
   }
