@@ -1,12 +1,12 @@
 <fe-card class="user-progress" title="Fortschritt">
   <div class="current-lesson">
     <p class="label">Lektion {{ lessonProgress }} von {{ lessonLength }}</p>
-    <mat-progress-bar [value]="lessonsPercentage"></mat-progress-bar>
+    <mat-progress-bar *ngIf="lessonsPercentage !== undefined" [value]="lessonsPercentage"></mat-progress-bar>
   </div>
 
   <div class="current-week">
     <p class="label">Schulwoche {{ weekProgress }} von {{ weekLength }}</p>
-    <mat-progress-bar [value]="schoolWeekPercentage"></mat-progress-bar>
+    <mat-progress-bar *ngIf="schoolWeekPercentage !== undefined" [value]="schoolWeekPercentage"></mat-progress-bar>
   </div>
 
   <fe-post-link *ngIf="nextLesson" [post]="nextLesson" title="Nächste Lektion"></fe-post-link>
