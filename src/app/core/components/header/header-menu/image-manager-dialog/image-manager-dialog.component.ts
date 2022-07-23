@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { NgxDropzoneChangeEvent } from 'ngx-dropzone';
 
-import { ImageData, ImageFile } from '@models/image-data';
+import { ImageChunk, ImageData, ImageFile } from '@models/image-data';
 import { UserData, UserRole } from '@models/user';
 import { DataService } from '@services/data.service';
 import { ImageManagerService } from '@services/image-manager.service';
@@ -55,28 +56,24 @@ export class ImageManagerDialogComponent {
     this.getImages();
   }
 
-  public trackByFn(index, item): any {
-    return item.id;
+  public trackByFn(index: number, item: ImageFile): any {
+    return item._id;
   }
 
-  public onSelect(event): void {
+  public onSelect(event: NgxDropzoneChangeEvent): void {
     this.dropzoneFile = [...event.addedFiles];
   }
 
-  public onRemove(event): void {
-    this.dropzoneFile.splice(this.dropzoneFile.indexOf(event), 1);
+  public onRemove(file: File): void {
+    this.dropzoneFile.splice(this.dropzoneFile.indexOf(file), 1);
   }
 
-  public isEmpty(files): boolean {
-    return files.length === 0;
-  }
-
-  public encode(image): string {
-    const dataStrings = image.chunks.map((chunk: any) => chunk.data);
+  public encode(image: ImageData): string {
+    const dataStrings = image.chunks.map((chunk: ImageChunk) => chunk.data);
     return `data:image/png;base64,${dataStrings.join('')}`;
   }
 
-  public uploadImage(event): void {
+  public uploadImage(event: Event): void {
     event.preventDefault();
     this.isUploadingImage = true;
 
@@ -113,7 +110,7 @@ export class ImageManagerDialogComponent {
     });
   }
 
-  public formatBytes(bytes, decimals = 1): string {
+  public formatBytes(bytes: number, decimals: number = 1): string {
     if (bytes === null) {
       return '';
     }
@@ -170,7 +167,7 @@ export class ImageManagerDialogComponent {
     this.getImages(this.currentPage);
   }
 
-  private getImages(page = null): void {
+  private getImages(page: number = null): void {
     this.isLoadingImages = true;
 
     this.data
