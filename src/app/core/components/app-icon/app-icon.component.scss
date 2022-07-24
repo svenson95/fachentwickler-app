@@ -32,17 +32,18 @@
 
   p.app-name {
     margin-bottom: 0;
-    color: var(--text-color-1);
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 13px;
     align-self: center;
-
-    transition: letter-spacing 600ms ease;
+    color: var(--text-color-1);
+    line-height: 12px;
+    transform: translateY(-1px);
     z-index: 1;
 
     @include to-xs {
       line-height: 11px;
+    }
+
+    small {
+      transition: letter-spacing 600ms ease;
     }
   }
 }

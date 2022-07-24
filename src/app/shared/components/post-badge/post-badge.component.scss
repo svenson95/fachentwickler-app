@@ -30,6 +30,7 @@
     align-items: center;
     width: fit-content;
     flex-shrink: 0;
+    padding: 6px 8px;
     margin-bottom: 0;
     border-radius: 4px;
 
@@ -38,7 +39,6 @@
     letter-spacing: 1.5px;
 
     @include to-md {
-      padding: 0 8px;
       float: right;
     }
 
@@ -49,10 +49,6 @@
     @include to-tiny {
       font-size: 0.5rem;
       line-height: 15px;
-    }
-
-    @include from-md {
-      padding: 0 8px;
     }
   }
 }

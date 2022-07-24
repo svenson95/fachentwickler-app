@@ -15,11 +15,10 @@ mat-card .mat-card-content p.no-data {
 button.fe-button,
 a.fe-button {
   background-color: transparent;
-  font-family: var(--font-normal);
   color: var(--tertiary-color);
   text-decoration: none;
   letter-spacing: 1px;
-  padding: 8px 12px 6px;
+  padding: 8px 12px;
 
   //.unselectable
   -webkit-touch-callout: none;

@@ -71,12 +71,15 @@
 
       ::ng-deep fe-app-icon {
         @include from-xs {
-          &:hover .app-name {
-            letter-spacing: 1px;
-            transition: letter-spacing 500ms ease-out;
-          }
-          &:active .app-name {
-            letter-spacing: 0.5px;
+          &:hover,
+          &:focus {
+            .app-name small {
+              letter-spacing: 2px !important;
+              transition: letter-spacing 500ms ease-out;
+            }
+            &:active .app-name small {
+              letter-spacing: 0.5px;
+            }
           }
         }
 
@@ -120,7 +123,6 @@
 
       .title {
         font-size: 0.9rem;
-        font-weight: 400;
         text-transform: uppercase;
         line-height: 12px;
         white-space: pre-line;
