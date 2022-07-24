@@ -48,7 +48,7 @@
       width: 180px;
     }
 
-    a.app-icon {
+    a.start-button {
       display: flex;
       justify-content: left;
       text-decoration: none;
@@ -74,11 +74,8 @@
           &:hover,
           &:focus {
             .app-name small {
-              letter-spacing: 2px !important;
+              letter-spacing: 2.5px !important;
               transition: letter-spacing 500ms ease-out;
-            }
-            &:active .app-name small {
-              letter-spacing: 0.5px;
             }
           }
         }
