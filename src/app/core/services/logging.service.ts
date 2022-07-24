@@ -17,22 +17,22 @@ export class LoggingService {
 
   private redCode = '\x1b[31m';
 
-  public debug(message: Message, ...data: any): void {
+  public debug(message: Message, ...data: any[]): void {
     if (environment.production) return;
     console.debug(`${this.blueCode}${LogLevel.DEBUG}\x1b[0m`, message.value, ...data);
   }
 
-  public info(message: Message, ...data: any): void {
+  public info(message: Message, ...data: any[]): void {
     if (environment.production) return;
     console.info(`${this.greenCode}${LogLevel.INFO}\x1b[0m`, message.value, ...data);
   }
 
-  public warn(message: Message, ...data: any): void {
+  public warn(message: Message, ...data: any[]): void {
     if (environment.production) return;
     console.warn(`${this.yellowCode}${LogLevel.WARN}\x1b[0m`, message.value, ...data);
   }
 
-  public error(message: Message, ...data: any): void {
+  public error(message: Message, ...data: any[]): void {
     if (environment.production) return;
     console.error(`${this.redCode}${LogLevel.ERROR}\x1b[0m`, message.value, ...data);
   }

@@ -35,171 +35,204 @@ export class DataService {
   constructor(private httpClient: HttpClient, private logging: LoggingService) {}
 
   public getSubject(subjectUrl: string): Observable<SubjectResponse> {
-    return this.httpClient.get<SubjectResponse>(`${this.SUBJECTS_ENDPOINT}/${subjectUrl}/populated`).pipe(
+    const endpoint = `${this.SUBJECTS_ENDPOINT}/${subjectUrl}/populated`;
+
+    return this.httpClient.get<SubjectResponse>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET subject', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getPostById(postId: string): Observable<PostType> {
-    return this.httpClient.get<PostType>(`${this.POSTS_ENDPOINT}/id/${postId}`).pipe(
+    const endpoint = `${this.POSTS_ENDPOINT}/id/${postId}`;
+
+    return this.httpClient.get<PostType>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET subjects/post', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getPost(postUrl: string): Observable<PostType> {
-    return this.httpClient.get<PostType>(`${this.POSTS_ENDPOINT}/url/${postUrl}`).pipe(
+    const endpoint = `${this.POSTS_ENDPOINT}/url/${postUrl}`;
+
+    return this.httpClient.get<PostType>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET post', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getMultiplePosts(postIdsString: string): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(`${this.POSTS_ENDPOINT}/multiple/${postIdsString}`).pipe(
+    const endpoint = `${this.POSTS_ENDPOINT}/multiple/${postIdsString}`;
+
+    return this.httpClient.get<Post[]>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET subjects/posts/(:arr)* (exam-item posts)', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getAllLessons(): Observable<string[]> {
-    return this.httpClient.get<string[]>(`${this.POSTS_ENDPOINT}/all-lessons`).pipe(
+    const endpoint = `${this.POSTS_ENDPOINT}/all-lessons`;
+
+    return this.httpClient.get<string[]>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET posts/all-lessons', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getImage(imageId: string): Observable<ImageData> {
-    return this.httpClient.get<ImageData>(`${this.IMAGES_ENDPOINT}/${imageId}`).pipe(
+    const endpoint = `${this.IMAGES_ENDPOINT}/${imageId}`;
+
+    return this.httpClient.get<ImageData>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET image', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getImageById(id: string): Observable<ImageData> {
-    return this.httpClient.get<ImageData>(`${this.IMAGES_ENDPOINT}/${id}`).pipe(
+    const endpoint = `${this.IMAGES_ENDPOINT}/${id}`;
+
+    return this.httpClient.get<ImageData>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET image', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getMultipleImages(page = 0, imagesPerPage = 10, sorting = 'descending'): Observable<ImageFile[]> {
+    const endpoint = `${this.IMAGES_ENDPOINT}/all`;
     const params = new HttpParams().set('page', String(page)).set('size', String(imagesPerPage)).set('sort', sorting);
 
-    return this.httpClient.get<ImageFile[]>(`${this.IMAGES_ENDPOINT}/all`, { params }).pipe(
+    return this.httpClient.get<ImageFile[]>(endpoint, { params }).pipe(
       map((response) => {
-        // console.log('response GET images', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getAllImagesLength(): Observable<number> {
-    return this.httpClient.get<number>(`${this.IMAGES_ENDPOINT}/count`).pipe(
+    const endpoint = `${this.IMAGES_ENDPOINT}/count`;
+
+    return this.httpClient.get<number>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET images count', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public uploadImage(file: any): Observable<any> {
-    const formData = new FormData();
-    formData.append('file', file);
+    const endpoint = `${this.IMAGES_ENDPOINT}/upload`;
+    const payload = new FormData();
+    payload.append('file', file);
 
     // TODO: replace any by (new) type 'ImageInput' & 'ImageData
-    return this.httpClient.post<any>(`${this.IMAGES_ENDPOINT}/upload`, formData).pipe(
+    return this.httpClient.post<any>(endpoint, payload).pipe(
       map((response) => {
-        this.logging.debug(new Message(`response POST images/upload`), response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         return response;
       }),
     );
   }
 
   public deleteImageById(id: string): Observable<any> {
-    return this.httpClient.delete<any>(`${this.IMAGES_ENDPOINT}/${id}/delete`).pipe(
+    const endpoint = `${this.IMAGES_ENDPOINT}/${id}/delete`;
+
+    return this.httpClient.delete<any>(endpoint).pipe(
       map((response) => {
-        this.logging.debug(new Message(`response DELETE images/${id}`), response);
+        this.logging.debug(new Message(`response DELETE ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getSchoolWeek(week: number): Observable<SchoolWeek> {
-    return this.httpClient.get<SchoolWeek>(`${this.SCHOOL_WEEK_ENDPOINT}/week/${week}`).pipe(
+    const endpoint = `${this.SCHOOL_WEEK_ENDPOINT}/week/${week}`;
+
+    return this.httpClient.get<SchoolWeek>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET posts/school-week/:number', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getAllSchoolWeeks(): Observable<SchoolWeek[]> {
-    return this.httpClient.get<SchoolWeek[]>(`${this.SCHOOL_WEEK_ENDPOINT}/all`).pipe(
+    const endpoint = `${this.SCHOOL_WEEK_ENDPOINT}/all`;
+
+    return this.httpClient.get<SchoolWeek[]>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET posts/all-school-weeks', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getAllExamDates(): Observable<ExamDate[]> {
-    return this.httpClient.get<ExamDate[]>(this.EXAM_DATES_ENDPOINT).pipe(
+    const endpoint = this.EXAM_DATES_ENDPOINT;
+
+    return this.httpClient.get<ExamDate[]>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET exam-dates', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getNews(page = 0, itemsPerPage = 10): Observable<SchoolNews[]> {
+    const endpoint = `${this.NEWS_ENDPOINT}/all`;
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const params = new HttpParams().set('page', String(page)).set('size', String(itemsPerPage));
 
-    return this.httpClient.get<SchoolNews[]>(`${this.NEWS_ENDPOINT}/all`, { headers, params }).pipe(
+    return this.httpClient.get<SchoolNews[]>(endpoint, { headers, params }).pipe(
       map((response) => {
-        // console.log('response GET news', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getLatestNews(): Observable<SchoolNews[]> {
-    return this.httpClient.get<SchoolNews[]>(`${this.NEWS_ENDPOINT}/latest`).pipe(
+    const endpoint = `${this.NEWS_ENDPOINT}/latest`;
+
+    return this.httpClient.get<SchoolNews[]>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET latest news', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getAllNewsLength(): Observable<number> {
-    return this.httpClient.get<number>(`${this.NEWS_ENDPOINT}/count`).pipe(
+    const endpoint = `${this.NEWS_ENDPOINT}/count`;
+
+    return this.httpClient.get<number>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET news count', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public getNewsObject(url: string): Observable<SchoolNews> {
-    return this.httpClient.get<SchoolNews>(`${this.NEWS_ENDPOINT}/${url}`).pipe(
+    const endpoint = `${this.NEWS_ENDPOINT}/${url}`;
+
+    return this.httpClient.get<SchoolNews>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET news object', response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );

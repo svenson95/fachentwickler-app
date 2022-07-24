@@ -5,6 +5,9 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 import { Post } from '@models/post';
+import { Message } from '@models/message';
+
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root',
@@ -20,21 +23,23 @@ export class SearchPostService {
 
   public isSearching = false;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private logging: LoggingService) {}
 
   public searchPosts(searchTerm: string): Observable<Post[]> {
+    const endpoint = `${environment.baseUrl}/search?query=${searchTerm}`;
     this.isSearching = true;
     this.searchedTerm = searchTerm;
-    return this.httpClient.get<Post[]>(`${environment.baseUrl}/search?query=${searchTerm}`).pipe(
+
+    return this.httpClient.get<Post[]>(endpoint).pipe(
       map((response) => {
-        // console.log('response GET search post', response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), response);
         this.isSearching = false;
         return response;
       }),
     );
   }
 
-  public setRedirectUrl(url): void {
+  public setRedirectUrl(url: string): void {
     this.redirectUrl = url;
   }
 }

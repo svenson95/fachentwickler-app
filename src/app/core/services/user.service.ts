@@ -8,11 +8,13 @@ import { environment } from '@env/environment';
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
 import { AddProgressBody, UserData } from '@models/user';
 import { AuthUserProgressResponse, AuthUserResponse } from '@models/auth-response';
+import { Message } from '@models/message';
 
 import { EditBodyType } from '../types/edit-body-type';
 
 import { AuthService, CREDENTIALS_STORAGE_KEY } from './auth.service';
 import { ThemeService } from './theme.service';
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root',
@@ -35,6 +37,7 @@ export class UserService {
     private snackbar: MatSnackBar,
     private auth: AuthService,
     private theme: ThemeService,
+    private logging: LoggingService,
   ) {}
 
   public resetData(): void {
@@ -70,6 +73,7 @@ export class UserService {
         }
       },
       (error) => {
+        this.logging.error(new Message('Token refresh failed'), error);
         this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: `Fehler aufgetreten!${error.error.message}`,
@@ -111,6 +115,7 @@ export class UserService {
           onSuccess();
         },
         (error) => {
+          this.logging.error(new Message('Set lesson solved failed'), error);
           this.snackbar.openFromComponent(SnackbarComponent, {
             duration: 3000,
             data: `Fehler: ${typeof error === 'string' ? error : error.message}`,
@@ -121,36 +126,42 @@ export class UserService {
   }
 
   public changePassword(code: string, newPassword: string): Observable<AuthUserResponse> {
-    const body = { code, newPassword };
+    const endpoint = this.ADD_PROGRESS_ENDPOINT;
+    const payload = { code, newPassword };
 
-    return this.httpClient.post<AuthUserResponse>(`${this.CHANGE_PASSWORD_ENDPOINT}`, body).pipe(
+    return this.httpClient.post<AuthUserResponse>(`${this.CHANGE_PASSWORD_ENDPOINT}`, payload).pipe(
       map((response) => {
-        // console.log('response POST forgot-password', response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         return response;
       }),
     );
   }
 
   public edit(user: EditBodyType): Observable<AuthUserResponse> {
+    const endpoint = this.EDIT_USER_ENDPOINT;
+    const payload = user;
     const headers = new HttpHeaders().set('Authorization', this.auth.token);
 
     return this.httpClient
-      .patch<AuthUserResponse>(this.EDIT_USER_ENDPOINT, user, {
+      .patch<AuthUserResponse>(endpoint, payload, {
         headers,
       })
       .pipe(
         map((response) => {
+          this.logging.debug(new Message(`response PATCH ${endpoint}`), `payload: ${payload}`, response);
           return response;
         }),
       );
   }
 
   private addProgress(progress: AddProgressBody): Observable<AuthUserProgressResponse> {
+    const endpoint = this.ADD_PROGRESS_ENDPOINT;
+    const payload = progress;
     const headers = new HttpHeaders().set('Authorization', this.auth.token);
 
-    return this.httpClient.post<AuthUserProgressResponse>(this.ADD_PROGRESS_ENDPOINT, progress, { headers }).pipe(
+    return this.httpClient.post<AuthUserProgressResponse>(endpoint, payload, { headers }).pipe(
       map((response) => {
-        // console.log('response POST user/add-progress', response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         if (response.success) {
           this.setData(response.data.user);
           this.storeData();

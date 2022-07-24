@@ -37,75 +37,88 @@ export class AuthService {
   constructor(private http: HttpClient, private logging: LoggingService) {}
 
   public login(user: AuthUser): Observable<AuthUserTokenResponse> {
-    return this.http.post<AuthUserTokenResponse>(this.LOGIN_ENDPOINT, user).pipe(
+    const endpoint = this.LOGIN_ENDPOINT;
+    const payload = user;
+
+    return this.http.post<AuthUserTokenResponse>(endpoint, payload).pipe(
       map((response) => {
-        this.logging.debug(new Message('response POST user/login'), response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         return response;
       }),
     );
   }
 
   public register(user: RegisterUser): Observable<AuthUserResponse> {
-    return this.http.post<AuthUserResponse>(this.REGISTER_ENDPOINT, user).pipe(
+    const endpoint = this.REGISTER_ENDPOINT;
+    const payload = user;
+
+    return this.http.post<AuthUserResponse>(endpoint, payload).pipe(
       map((response) => {
-        this.logging.debug(new Message('response POST user/register'), response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         return response;
       }),
     );
   }
 
   public verify(email: string, code: string, newEmail = null): Observable<AuthUserResponse> {
-    let confirmationEndpoint = `${this.CONFIRMATION_ENDPOINT}/${email}/${code}`;
-    if (newEmail !== null) confirmationEndpoint += `/${newEmail}`;
+    let endpoint = `${this.CONFIRMATION_ENDPOINT}/${email}/${code}`;
+    if (newEmail !== null) endpoint += `/${newEmail}`;
 
-    return this.http.get<AuthUserResponse>(confirmationEndpoint).pipe(
+    return this.http.get<AuthUserResponse>(endpoint).pipe(
       map((response) => {
-        this.logging.debug(new Message('response GET user/confirmation'), response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public resendVerificationCode(email: string): Observable<AuthNullResponse> {
+    const endpoint = `${this.RESEND_VERIFICATION_ENDPOINT}`;
+    const payload = { email };
     const headers = new HttpHeaders().set('Authorization', this.token);
 
-    return this.http.post<AuthNullResponse>(`${this.RESEND_VERIFICATION_ENDPOINT}`, { email }, { headers }).pipe(
+    return this.http.post<AuthNullResponse>(endpoint, payload, { headers }).pipe(
       map((response) => {
-        this.logging.debug(new Message('response POST user/resend-verification-code'), response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         return response;
       }),
     );
   }
 
   public forgotPassword(email: string): Observable<AuthNullResponse> {
-    return this.http.post<AuthNullResponse>(`${this.FORGOT_PASSWORD_ENDPOINT}`, { email }).pipe(
+    const endpoint = `${this.FORGOT_PASSWORD_ENDPOINT}`;
+    const payload = { email };
+
+    return this.http.post<AuthNullResponse>(endpoint, payload).pipe(
       map((response) => {
-        this.logging.debug(new Message('response POST user/forgot-password'), response);
+        this.logging.debug(new Message(`response POST ${endpoint}`), `payload: ${payload}`, response);
         return response;
       }),
     );
   }
 
   public refresh(): Observable<AuthUserTokenResponse> {
+    const endpoint = this.AUTHENTICATED_ENDPOINT;
     const headers = new HttpHeaders().set('Authorization', this.token);
 
-    return this.http.get<AuthUserTokenResponse>(this.AUTHENTICATED_ENDPOINT, { headers }).pipe(
+    return this.http.get<AuthUserTokenResponse>(endpoint, { headers }).pipe(
       map((response) => {
-        this.logging.debug(new Message('response POST user/authenticated'), response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
   }
 
   public invalidate(): Observable<AuthNullResponse> {
+    const endpoint = this.LOGOUT_ENDPOINT;
     const headers = new HttpHeaders().set('Authorization', this.token);
 
     this.token = undefined;
     localStorage.removeItem(CREDENTIALS_STORAGE_KEY);
 
-    return this.http.get<AuthNullResponse>(this.LOGOUT_ENDPOINT, { headers }).pipe(
+    return this.http.get<AuthNullResponse>(endpoint, { headers }).pipe(
       map((response) => {
-        this.logging.debug(new Message('response GET user/logout'), response);
+        this.logging.debug(new Message(`response GET ${endpoint}`), response);
         return response;
       }),
     );
