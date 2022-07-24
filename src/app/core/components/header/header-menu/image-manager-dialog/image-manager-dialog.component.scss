@@ -183,21 +183,27 @@ mat-dialog-content.image-manager {
     .image-attributes-list {
       align-self: center;
 
-      .key {
-        color: var(--text-color-3);
-        width: 90px;
-        display: inline-block;
-        text-align: end;
-        margin-right: 10px;
-        font-size: 0.8rem;
-      }
-    }
+      p {
+        display: flex;
+        margin-bottom: 0;
 
-    p {
-      margin-bottom: 0;
+        .chunks-length {
+          color: var(--text-color-3);
+        }
 
-      .chunks-length {
-        color: var(--text-color-3);
+        .key {
+          color: var(--text-color-3);
+          width: 90px;
+          display: inline-block;
+          text-align: end;
+          margin-right: 10px;
+          font-size: 0.8rem;
+          flex-shrink: 0;
+        }
+
+        .value {
+          word-break: break-word;
+        }
       }
     }
   }
