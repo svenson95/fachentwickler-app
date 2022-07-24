@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '@env/environment';
 import { Message } from '@models/message';
 
-import { LogLevel } from '../types/log-level';
+import { LogLevel } from '../../core/types/log-level';
 
 @Injectable({ providedIn: 'root' })
 export class LoggingService {

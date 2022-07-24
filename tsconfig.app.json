@@ -15,7 +15,7 @@
       "@guards/*": ["src/app/core/guards/*"],
       "@interceptors/*": ["src/app/core/interceptors/*"],
       "@models/*": ["src/app/core/models/*"],
-      "@services/*": ["src/app/core/services/*"],
+      "@services/*": ["src/app/shared/services/*"],
       "@shared-components/*": ["src/app/shared/components/*"],
       "@pipes/*": ["src/app/shared/pipes/*"],
       "@validators/*": ["src/app/shared/validators/*"]

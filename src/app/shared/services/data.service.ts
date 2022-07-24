@@ -12,7 +12,7 @@ import { ImageFile, ImageData } from '@models/image-data';
 import { SchoolNews } from '@models/school-news';
 import { Message } from '@models/message';
 
-import { PostType } from '../types/post-type';
+import { PostType } from '../../core/types/post-type';
 
 import { LoggingService } from './logging.service';
 

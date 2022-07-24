@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { environment } from '@env/environment';
 import { AuthUser, RegisterUser } from '@models/user';
 import { AuthNullResponse, AuthUserResponse, AuthUserTokenResponse } from '@models/auth-response';
-import { LoggingService } from '@services/logging.service';
+import { LoggingService } from 'src/app/shared/services/logging.service';
 import { Message } from '@models/message';
 /* eslint-disable quotes, quote-props, max-len */
 

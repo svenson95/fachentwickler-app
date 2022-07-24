@@ -10,7 +10,7 @@ import { AddProgressBody, UserData } from '@models/user';
 import { AuthUserProgressResponse, AuthUserResponse } from '@models/auth-response';
 import { Message } from '@models/message';
 
-import { EditBodyType } from '../types/edit-body-type';
+import { EditBodyType } from '../../core/types/edit-body-type';
 
 import { AuthService, CREDENTIALS_STORAGE_KEY } from './auth.service';
 import { ThemeService } from './theme.service';

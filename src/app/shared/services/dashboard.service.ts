@@ -6,7 +6,7 @@ import { ExamDate } from '@models/exam-date';
 import { SchoolWeek } from '@models/school-week';
 import { UserData } from '@models/user';
 
-import { PostType } from '../types/post-type';
+import { PostType } from '../../core/types/post-type';
 
 import { DataService } from './data.service';
 import { UserService } from './user.service';
