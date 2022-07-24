@@ -124,7 +124,6 @@
 
 .post-title {
   font-size: 1.3rem;
-  font-weight: 400;
   margin-bottom: 0;
 
   @include to-xs {
@@ -132,9 +131,13 @@
   }
 }
 
+.post-title,
+.post-subtitle {
+  font-weight: 400;
+}
+
 .post-subtitle {
   font-size: 1.2rem;
-  letter-spacing: 0.5px;
   margin-bottom: 0;
 
   @include to-xs {
@@ -247,10 +250,6 @@ hr {
 .post-table {
   border-collapse: collapse;
   table-layout: fixed;
-
-  @include to-xs {
-    font-size: 0.9rem;
-  }
 
   .table-row {
     color: var(--text-color-1);

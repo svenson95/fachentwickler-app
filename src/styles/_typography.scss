@@ -1,8 +1,9 @@
 html,
 body {
-  font-size: 100%;
+  font-size: 0.9em;
   font-family: var(--font-normal);
   font-weight: 500;
+  letter-spacing: 0.2px;
   color: var(--text-color-1);
 
   .mat-card,

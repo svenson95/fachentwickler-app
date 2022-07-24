@@ -38,14 +38,6 @@ a.fe-button {
 
   transition: background-color 100ms ease-in-out;
 
-  @include from-xs {
-    font-size: 0.9rem;
-  }
-
-  @include to-xs {
-    font-size: 0.8rem;
-  }
-
   &:hover:not(:disabled) {
     background-color: var(--button-hover-background);
     cursor: pointer;
