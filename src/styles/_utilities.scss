@@ -88,7 +88,7 @@ a.fe-button {
 fe-card.align-right {
   mat-card-content.card-content {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     .fe-button:not(:first-of-type) {
       margin-left: 20px;

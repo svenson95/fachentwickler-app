@@ -134,7 +134,7 @@ mat-dialog-container.mat-dialog-container {
 
   mat-dialog-actions.mat-dialog-actions {
     min-height: inherit;
-    justify-content: end;
+    justify-content: flex-end;
     padding-bottom: 0;
     margin-bottom: 0;
     gap: 15px;
