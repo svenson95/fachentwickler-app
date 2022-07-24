@@ -152,6 +152,7 @@ mat-dialog-content.image-manager {
 
     .image-container {
       width: 200px;
+      height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -189,6 +190,7 @@ mat-dialog-content.image-manager {
 
         .chunks-length {
           color: var(--text-color-3);
+          margin-left: 5px;
         }
 
         .key {
