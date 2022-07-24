@@ -76,10 +76,9 @@ export class UserService {
         this.logging.error(new Message('Token refresh failed'), error);
         this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: `Fehler aufgetreten!${error.error.message}`,
+          data: 'Authentifizierung fehlschlagen',
         });
-        // console.log('ERROR authenticated', error);
-        // this.invalidate();
+        this.auth.invalidate();
       },
     );
   }
