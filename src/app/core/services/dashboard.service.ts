@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { map, shareReplay, switchMap } from 'rxjs/operators';
+import { shareReplay } from 'rxjs/operators';
 import { Observable, ReplaySubject } from 'rxjs';
 
 import { ExamDate } from '@models/exam-date';
-import { SchoolNews } from '@models/school-news';
 import { SchoolWeek } from '@models/school-week';
 import { UserData } from '@models/user';
 
@@ -16,19 +15,23 @@ import { UserService } from './user.service';
   providedIn: 'root',
 })
 export class DashboardService {
-  public schoolNews: Observable<SchoolNews[]>;
-
-  public nextExams$: Observable<ExamDate[]>;
-
   public allLessons$: Observable<string[]> = this.data.getAllLessons().pipe(shareReplay(1));
 
   private nextLesson = new ReplaySubject<PostType>(1);
 
   public readonly nextLesson$ = this.nextLesson.asObservable();
 
-  public lessonsPercentage$: Observable<number>;
+  private nextExams = new ReplaySubject<ExamDate[]>(1);
 
-  public schoolWeek$: Observable<SchoolWeek>;
+  public readonly nextExams$ = this.nextExams.asObservable();
+
+  private lessonsPercentage = new ReplaySubject<number>(1);
+
+  public readonly lessonsPercentage$ = this.lessonsPercentage.asObservable();
+
+  private schoolWeek = new ReplaySubject<SchoolWeek>(1);
+
+  public readonly schoolWeek$ = this.schoolWeek.asObservable();
 
   private userData: UserData;
 
@@ -36,7 +39,7 @@ export class DashboardService {
     this.init();
   }
 
-  public init(): void {
+  private init(): void {
     this.user.data$.subscribe((data) => {
       this.userData = data;
     });
@@ -55,50 +58,42 @@ export class DashboardService {
   }
 
   private getSchoolWeek(): void {
-    this.schoolWeek$ = this.nextLesson$.pipe(
-      switchMap(async (nextLesson) => {
-        const schoolWeek = await this.data.getSchoolWeek(nextLesson.schoolWeek).toPromise();
-        return schoolWeek;
-      }),
-      shareReplay(1),
-    );
+    this.nextLesson$.subscribe(async (nextLesson) => {
+      const schoolWeek = await this.data.getSchoolWeek(nextLesson.schoolWeek).toPromise();
+      this.schoolWeek.next(schoolWeek);
+    });
   }
 
   private getNextExams(): void {
-    this.nextExams$ = this.data.getAllExamDates().pipe(
-      map((response) => {
-        const openExams = [];
+    this.data.getAllExamDates().subscribe((response) => {
+      const openExams = [];
 
-        const today = new Date();
-        today.setHours(23, 59, 59, 999);
+      const today = new Date();
+      today.setHours(23, 59, 59, 999);
 
-        response.forEach((exam) => {
-          const examDate = new Date(exam.date);
-          examDate.setHours(23, 59, 59, 999);
+      response.forEach((exam) => {
+        const examDate = new Date(exam.date);
+        examDate.setHours(23, 59, 59, 999);
 
-          if (today <= examDate) {
-            openExams.push(exam);
-          }
-        });
+        if (today <= examDate) {
+          openExams.push(exam);
+        }
+      });
 
-        openExams.sort((a, b) => {
-          if (a.date > b.date) return 1;
-          if (a.date < b.date) return -1;
-          return 0;
-        });
+      openExams.sort((a, b) => {
+        if (a.date > b.date) return 1;
+        if (a.date < b.date) return -1;
+        return 0;
+      });
 
-        return openExams;
-      }),
-      shareReplay(1),
-    );
+      this.nextExams.next(openExams);
+    });
   }
 
   private getLessonsPercentage(): void {
-    this.lessonsPercentage$ = this.allLessons$.pipe(
-      map((response) => {
-        return (this.userData.progress.length / response.length) * 100;
-      }),
-      shareReplay(1),
-    );
+    this.allLessons$.subscribe((response) => {
+      const value = (this.userData.progress.length / response.length) * 100;
+      this.lessonsPercentage.next(value);
+    });
   }
 }
