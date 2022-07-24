@@ -51,7 +51,8 @@ export class UserService {
 
   public restore(): void {
     const stored = localStorage.getItem(CREDENTIALS_STORAGE_KEY);
-    if (stored === null) return;
+    const data = JSON.parse(stored);
+    if (data.user === undefined) return;
 
     const storedData = JSON.parse(stored);
     this.data.next(storedData.user);

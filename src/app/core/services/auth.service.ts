@@ -10,7 +10,7 @@ import { LoggingService } from '@services/logging.service';
 import { Message } from '@models/message';
 /* eslint-disable quotes, quote-props, max-len */
 
-export const CREDENTIALS_STORAGE_KEY = 'fachentwickler_auth';
+export const CREDENTIALS_STORAGE_KEY = 'fachentwickler_cache';
 
 @Injectable({
   providedIn: 'root',
