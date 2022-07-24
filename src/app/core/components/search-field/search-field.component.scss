@@ -1,11 +1,10 @@
 @import "mixins";
 
-$searchbar-height: 35px;
-
 :host ::ng-deep {
   mat-form-field.search-bar-form-field {
     width: 200px;
-    border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
+    border-bottom: var(--progressbar-height) solid
+      rgba(var(--tertiary-color-rgb), 0.3);
 
     @include to-lg {
       width: 180px;
@@ -33,7 +32,6 @@ $searchbar-height: 35px;
 
       .mat-form-field-flex {
         background: var(--background-primary);
-        height: $searchbar-height;
         align-items: center;
 
         @include from-md {
@@ -47,9 +45,10 @@ $searchbar-height: 35px;
       }
 
       .mat-form-field-infix {
-        padding: 0 0 0.75em 0;
+        padding: 0 0 0.3em 0;
 
         input {
+          letter-spacing: 1px;
           vertical-align: middle;
           color: var(--text-color-1);
 

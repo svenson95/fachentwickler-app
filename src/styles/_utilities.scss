@@ -29,7 +29,8 @@ a.fe-button {
 
   outline: none;
   border: none;
-  border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
+  border-bottom: var(--progressbar-height) solid
+    rgba(var(--tertiary-color-rgb), 0.3);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   border-bottom-left-radius: 0;

@@ -43,7 +43,7 @@
     justify-content: space-between;
     width: 100%;
     color: var(--text-color-1);
-    border-bottom: 1px solid var(--background-secondary);
+    border-bottom: var(--progressbar-height) solid var(--background-secondary);
     padding: 8px 12px;
     border-radius: 0;
     cursor: pointer;

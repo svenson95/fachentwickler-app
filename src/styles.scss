@@ -242,6 +242,7 @@ mat-form-field.input.mat-form-field {
   }
 
   &.mat-form-field-appearance-fill .mat-form-field-underline::before {
+    height: var(--progressbar-height);
     background-color: rgba(var(--tertiary-color-rgb), 0.3);
   }
 

@@ -7,13 +7,13 @@ div.pagination-bar {
     border: none;
     border-radius: 0;
     transition: transform 150ms ease-out;
-    border-bottom: 1px solid var(--grey-2);
+    border-bottom: var(--progressbar-height) solid var(--grey-2);
   }
 
   button:hover:not(:disabled) {
     cursor: pointer;
     background-color: var(--button-hover-background);
-    border-bottom: 1px solid var(--tertiary-color);
+    border-bottom-color: var(--tertiary-color);
     transform: translateY(-1px);
     transition: transform 100ms ease-in;
   }
@@ -34,13 +34,13 @@ div.pagination-bar {
   button.back-btn,
   button.last-btn,
   button.page-btn ~ button.page-btn {
-    border-left: 1px solid var(--grey-2-rgb);
+    border-left: var(--progressbar-height) solid var(--grey-2-rgb);
   }
 
   button.page-btn.is-selected {
     font-weight: 700;
     background-color: rgba(var(--secondary-color-rgb), 0.1);
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
   }
 
   button:not(.page-btn) {

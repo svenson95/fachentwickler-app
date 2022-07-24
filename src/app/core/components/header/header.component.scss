@@ -12,7 +12,7 @@
   }
 
   :host-context(.dark) {
-    border-bottom: 1px solid var(--background-tertiary);
+    border-bottom: var(--progressbar-height) solid var(--background-tertiary);
   }
 
   position: absolute;

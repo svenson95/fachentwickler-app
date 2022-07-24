@@ -98,7 +98,8 @@
         span {
           color: var(--tertiary-color);
           letter-spacing: 1px;
-          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.3);
+          border-bottom: var(--progressbar-height) solid
+            rgba(var(--tertiary-color-rgb), 0.3);
           padding: 5px 10px 3px;
           flex-shrink: 0;
           transition: background 100ms ease-out;
@@ -114,7 +115,8 @@
         }
 
         &.is-open span {
-          border-bottom: 1px solid rgba(var(--grey-4-rgb), 0.3);
+          border-bottom: var(--progressbar-height) solid
+            rgba(var(--grey-4-rgb), 0.3);
         }
       }
     }
@@ -187,7 +189,7 @@
       }
 
       .horizontal-line {
-        height: 1px;
+        height: var(--progressbar-height);
         bottom: 0;
         width: 10px;
         left: -10px;
