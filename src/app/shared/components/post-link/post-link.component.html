@@ -1,4 +1,9 @@
-<a class="post-link" [routerLink]="postRouterLink" [ngClass]="{ isCompleted: post._id | alreadyRead }" matRipple>
+<a
+  class="post-link"
+  [routerLink]="postRouterLink"
+  [class.is-solved]="userData && (post._id | alreadyRead: userData.progress)"
+  matRipple
+>
   <div class="title-wrapper">
     <p class="title" [ngClass]="{ exam: post.url?.includes('test') }">
       {{ post.title }}

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 
-import { UserRole } from '@models/user';
+import { UserData, UserRole } from '@models/user';
 import { AuthService } from '@services/auth.service';
 import { UserService } from '@services/user.service';
 
@@ -9,7 +9,13 @@ import { UserService } from '@services/user.service';
   providedIn: 'root',
 })
 export class AdminGuardService implements CanActivate {
-  constructor(private auth: AuthService, private user: UserService) {}
+  private userData: UserData;
+
+  constructor(private auth: AuthService, private user: UserService) {
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
+  }
 
   public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree {
     return this.userIsAdmin(state.url);
@@ -19,7 +25,7 @@ export class AdminGuardService implements CanActivate {
     // Store the attempted URL for redirecting
     this.auth.redirectUrl = url;
 
-    if (this.user.isAuthenticated && this.user.data.role === UserRole.ADMIN) {
+    if (this.user.isAuthenticated && this.userData.role === UserRole.ADMIN) {
       return true;
     }
 

@@ -79,7 +79,7 @@ export class LoginPage implements OnDestroy {
           }
 
           this.auth.token = response.data.token;
-          this.user.data = response.data.user;
+          this.user.setData(response.data.user);
           this.user.isAuthenticated = true;
           this.user.storeData();
 

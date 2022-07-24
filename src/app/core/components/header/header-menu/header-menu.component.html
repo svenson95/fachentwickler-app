@@ -32,7 +32,7 @@
     class="menu-btn"
     mat-menu-item
     (click)="openImageManager()"
-    *ngIf="!isMobile && user.data?.role === UserRole.ADMIN"
+    *ngIf="!isMobile && userData && userData.role === UserRole.ADMIN"
     disableRipple
   >
     <mat-icon>perm_media</mat-icon>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 
+import { UserData } from '@models/user';
 import { AuthService } from '@services/auth.service';
 import { UserService } from '@services/user.service';
 
@@ -8,7 +9,13 @@ import { UserService } from '@services/user.service';
   providedIn: 'root',
 })
 export class AuthGuardService implements CanActivate {
-  constructor(private router: Router, private auth: AuthService, private user: UserService) {}
+  private userData: UserData;
+
+  constructor(private router: Router, private auth: AuthService, private user: UserService) {
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
+  }
 
   public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree {
     return this.userIsAllowedNavigateTo(state.url);
@@ -21,7 +28,7 @@ export class AuthGuardService implements CanActivate {
       return this.router.parseUrl('/login');
     }
 
-    const userIsVerified = this.user.data.active;
+    const userIsVerified = this.userData.active;
 
     if (userIsVerified) {
       return true;

@@ -5,6 +5,7 @@ import { Observable, ReplaySubject } from 'rxjs';
 import { ExamDate } from '@models/exam-date';
 import { SchoolNews } from '@models/school-news';
 import { SchoolWeek } from '@models/school-week';
+import { UserData } from '@models/user';
 
 import { PostType } from '../types/post-type';
 
@@ -29,11 +30,16 @@ export class DashboardService {
 
   public schoolWeek$: Observable<SchoolWeek>;
 
+  private userData: UserData;
+
   constructor(private data: DataService, private user: UserService) {
     this.init();
   }
 
   public init(): void {
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
     this.getNextLesson();
     this.getSchoolWeek();
     this.getNextExams();
@@ -42,7 +48,7 @@ export class DashboardService {
 
   public getNextLesson(): void {
     this.allLessons$.subscribe(async (allLessons) => {
-      const nextLessonId = allLessons.find((lessonId) => !this.user.data.progress.includes(lessonId));
+      const nextLessonId = allLessons.find((lessonId) => !this.userData.progress.includes(lessonId));
       const post = await this.data.getPostById(nextLessonId).toPromise();
       this.nextLesson.next(post);
     });
@@ -90,7 +96,7 @@ export class DashboardService {
   private getLessonsPercentage(): void {
     this.lessonsPercentage$ = this.allLessons$.pipe(
       map((response) => {
-        return (this.user.data.progress.length / response.length) * 100;
+        return (this.userData.progress.length / response.length) * 100;
       }),
       shareReplay(1),
     );

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
@@ -9,10 +9,10 @@ import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
 import { LoadingService } from '@services/loading.service';
 import { ThemeService } from '@services/theme.service';
-import { inputsMatch } from '@validators/match.validator';
 import { DashboardService } from '@services/dashboard.service';
 import { UserService } from '@services/user.service';
-import { EditEmailBody, EditNameBody, EditPasswordBody, EditThemeBody, Theme } from '@models/user';
+import { EditEmailBody, EditNameBody, EditPasswordBody, EditThemeBody, Theme, UserData } from '@models/user';
+import { inputsMatch } from '@validators/match.validator';
 
 @Component({
   selector: 'fe-my-profile-page',
@@ -28,50 +28,27 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public Theme = Theme;
 
-  public name = new FormControl(
-    { value: this.user.data.name, disabled: true },
-    { validators: [Validators.required, Validators.minLength(4)] },
-  );
+  public userData: UserData;
 
-  public email = new FormControl(
-    { value: this.user.data.email, disabled: true },
-    { validators: [Validators.required, Validators.email] },
-  );
+  public name: FormControl;
 
-  public verificationCode = new FormControl('', {
-    validators: [Validators.required],
-  });
+  public email: FormControl;
 
-  public password = new FormControl(
-    { value: 'xxxxxxxx', disabled: true },
-    { validators: [Validators.required, Validators.minLength(4)] },
-  );
+  public verificationCode: FormControl;
 
-  public confirmPassword = new FormControl('', {
-    validators: [inputsMatch('password')],
-  });
+  public password: FormControl;
 
-  public role = new FormControl({
-    value: this.user.data.role.toLowerCase(),
-    disabled: true,
-  });
+  public confirmPassword: FormControl;
 
-  public progress = new FormControl({ value: 0, disabled: true });
+  public role: FormControl;
 
-  public theme = new FormControl({
-    value: this.themeService.getActiveThemeTranslated(),
-    disabled: true,
-  });
+  public progress: FormControl;
 
-  public emailFormGroup = this.formBuilder.group({
-    email: this.email,
-    verificationCode: this.verificationCode,
-  });
+  public theme: FormControl;
 
-  public passwordFormGroup = this.formBuilder.group({
-    password: this.password,
-    confirmPassword: this.confirmPassword,
-  });
+  public emailFormGroup: FormGroup;
+
+  public passwordFormGroup: FormGroup;
 
   public isConfirmingEmail: boolean;
 
@@ -84,7 +61,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   constructor(
     private headerService: HeaderService,
     private auth: AuthService,
-    public user: UserService,
+    private user: UserService,
     public themeService: ThemeService,
     private dashboard: DashboardService,
     private loading: LoadingService,
@@ -92,13 +69,18 @@ export class MyProfilePage implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
   ) {
     this.headerService.setPageTitle('Mein Profil');
-  }
 
-  public ngOnInit(): void {
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
+
     this.subscription = this.loading.loading$.subscribe((value) => {
       this.isLoading = value;
     });
+  }
 
+  public ngOnInit(): void {
+    this.initForms();
     this.initUserProgress();
   }
 
@@ -120,7 +102,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
       this.nameInput.focus();
     } else {
       this.name.reset();
-      this.name.setValue(this.user.data.name);
+      this.name.setValue(this.userData.name);
       this.name.disable();
     }
   }
@@ -129,7 +111,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
     if (this.name.invalid) return;
 
     const data: EditNameBody = {
-      _id: this.user.data._id,
+      _id: this.userData._id,
       newName: this.name.value.toLowerCase(),
     };
 
@@ -142,7 +124,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
         });
       },
       (errorRes) => {
-        this.name.setValue(this.user.data.name);
+        this.name.setValue(this.userData.name);
         this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
           data: `Fehler: ${typeof errorRes}` === 'string' ? errorRes : errorRes.error.message,
@@ -157,7 +139,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
       this.emailInput.focus();
     } else {
       this.email.reset();
-      this.email.setValue(this.user.data.email);
+      this.email.setValue(this.userData.email);
       this.email.disable();
       this.verificationCode.reset();
       this.verificationCode.setValue('');
@@ -168,7 +150,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
   public saveChangeEmail(): void {
     if (this.email.invalid) return;
 
-    const data: EditEmailBody = { _id: this.user.data._id, email: this.email.value };
+    const data: EditEmailBody = { _id: this.userData._id, email: this.email.value };
     this.user.edit(data).subscribe(
       () => {
         this.isConfirmingEmail = true;
@@ -178,11 +160,11 @@ export class MyProfilePage implements OnInit, OnDestroy {
           data: 'Verifizierungscode versendet',
         });
       },
-      (errorRes) => {
-        this.emailFormGroup.controls.email.setValue(this.user.data.email);
+      (error) => {
+        this.emailFormGroup.controls.email.setValue(this.userData.email);
         this.snackbar.openFromComponent(SnackbarComponent, {
           duration: 3000,
-          data: typeof errorRes === 'string' ? `Fehler: ${errorRes}` : `${errorRes.message}test`,
+          data: typeof error === 'string' ? `Fehler: ${error}` : `${error.message}`,
         });
       },
     );
@@ -190,14 +172,12 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public confirmChangedEmail(): void {
     if (this.emailFormGroup.invalid) return;
-    const { email, verificationCode } = this.emailFormGroup.value;
-
-    this.auth.verify(this.user.data.email, verificationCode, email).subscribe(
+    this.auth.verify(this.userData.email, this.verificationCode.value, this.email.value).subscribe(
       (response) => {
         if (response.success) {
-          this.user.data = response.data.user;
-          this.user.storeData();
           this.email.disable();
+          this.user.setData(response.data.user);
+          this.user.storeData();
 
           this.snackbar.openFromComponent(SnackbarComponent, {
             duration: 3000,
@@ -221,7 +201,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
       this.passwordInput.focus();
     } else {
       this.password.reset();
-      this.password.setValue(this.user.data.password.substring(0, 8));
+      this.password.setValue(this.userData.password.substring(0, 8));
       this.password.disable();
       this.confirmPassword.reset();
       this.confirmPassword.setValue('');
@@ -237,7 +217,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
     } else {
       if (this.confirmPassword.invalid) return;
 
-      const data: EditPasswordBody = { _id: this.user.data._id, password: this.confirmPassword.value };
+      const data: EditPasswordBody = { _id: this.userData._id, password: this.confirmPassword.value };
       this.user.edit(data).subscribe(
         () => {
           this.password.disable();
@@ -268,7 +248,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public saveChangeTheme(): void {
     const theme = this.themeService.getActiveTheme();
-    const data: EditThemeBody = { _id: this.user.data._id, theme };
+    const data: EditThemeBody = { _id: this.userData._id, theme };
     this.user.edit(data).subscribe(
       () => {
         this.snackbar.openFromComponent(SnackbarComponent, {
@@ -285,12 +265,53 @@ export class MyProfilePage implements OnInit, OnDestroy {
     );
   }
 
-  private async initUserProgress(): Promise<void> {
-    const allLessons = await this.dashboard.allLessons$.toPromise();
-    this.progress.setValue(this.getProgressPercentage(allLessons.length));
+  private initForms(): void {
+    this.emailFormGroup = this.formBuilder.group({
+      email: this.email,
+      verificationCode: this.verificationCode,
+    });
+    this.email = new FormControl(
+      { value: this.userData.email, disabled: true },
+      { validators: [Validators.required, Validators.email] },
+    );
+    this.verificationCode = new FormControl('', {
+      validators: [Validators.required],
+    });
+
+    this.passwordFormGroup = this.formBuilder.group({
+      password: this.password,
+      confirmPassword: this.confirmPassword,
+    });
+    this.password = new FormControl(
+      { value: 'xxxxxxxx', disabled: true },
+      { validators: [Validators.required, Validators.minLength(4)] },
+    );
+    this.confirmPassword = new FormControl('', {
+      validators: [inputsMatch('password')],
+    });
+
+    this.name = new FormControl(
+      { value: this.userData.name, disabled: true },
+      { validators: [Validators.required, Validators.minLength(4)] },
+    );
+
+    this.role = new FormControl({
+      value: this.userData.role.toLowerCase(),
+      disabled: true,
+    });
+    this.progress = new FormControl({ value: 0, disabled: true });
+    this.theme = new FormControl({
+      value: this.themeService.getActiveThemeTranslated(),
+      disabled: true,
+    });
   }
 
-  private getProgressPercentage(progressLength: number): string {
-    return `${((this.user.data.progress.length / progressLength) * 100).toFixed(2)} %`;
+  private async initUserProgress(): Promise<void> {
+    const allLessons = await this.dashboard.allLessons$.toPromise();
+    this.progress.setValue(this.percentageString(allLessons.length));
+  }
+
+  private percentageString(progressLength: number): string {
+    return `${((this.userData.progress.length / progressLength) * 100).toFixed(2)} %`;
   }
 }

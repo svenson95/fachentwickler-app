@@ -1,10 +1,9 @@
-import { Component, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 
-import { Theme, UserRole } from '@models/user';
+import { Theme, UserData, UserRole } from '@models/user';
 import { MediaQueryService } from '@services/media-query.service';
 import { ThemeService } from '@services/theme.service';
 import { UserService } from '@services/user.service';
@@ -17,14 +16,14 @@ import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
   templateUrl: './header-menu.component.html',
   styleUrls: ['./header-menu.component.scss'],
 })
-export class HeaderMenuComponent implements OnInit, OnDestroy {
+export class HeaderMenuComponent {
   public UserRole = UserRole;
 
   public Theme = Theme;
 
-  public isMobile: boolean;
+  public userData: UserData;
 
-  private subscription: Subscription = new Subscription();
+  public isMobile: boolean;
 
   @ViewChild(MatMenuTrigger, { static: true })
   public menuTrigger: MatMenuTrigger;
@@ -40,16 +39,13 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     public theme: ThemeService,
     private dialog: MatDialog,
     private mediaQuery: MediaQueryService,
-  ) {}
-
-  public ngOnInit(): void {
-    this.subscription = this.mediaQuery.isMobile$.subscribe((value) => {
+  ) {
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
+    this.mediaQuery.isMobile$.subscribe((value) => {
       this.isMobile = value;
     });
-  }
-
-  public ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 
   public openLogoutDialog(): void {

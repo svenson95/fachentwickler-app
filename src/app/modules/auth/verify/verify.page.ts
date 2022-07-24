@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { SnackbarComponent } from '@core-components/snackbar/snackbar.component';
+import { UserData } from '@models/user';
 import { AuthService } from '@services/auth.service';
 import { HeaderService } from '@services/header.service';
 import { UserService } from '@services/user.service';
@@ -15,6 +16,8 @@ import { UserService } from '@services/user.service';
 })
 export class VerifyPage implements OnInit {
   @ViewChild('verificationCodeInput') public verificationCodeInput;
+
+  public userData: UserData;
 
   public formGroup: FormGroup;
 
@@ -39,6 +42,10 @@ export class VerifyPage implements OnInit {
     this.formGroup = this.formBuilder.group({
       verificationCode: [null as number, { validators: [Validators.required], updateOn: 'submit' }],
     });
+
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
   }
 
   public ngOnInit(): void {
@@ -58,7 +65,7 @@ export class VerifyPage implements OnInit {
   public verifyUser(): void {
     if (this.formGroup.invalid) return;
 
-    const email = this.user.isAuthenticated ? this.user.data.email : this.route.snapshot.paramMap.get('email');
+    const email = this.user.isAuthenticated ? this.userData.email : this.route.snapshot.paramMap.get('email');
     const verificationCode = this.formGroup.get('verificationCode').value;
 
     this.isSubmitLoading = true;
@@ -68,7 +75,7 @@ export class VerifyPage implements OnInit {
 
         if (response.success) {
           this.verificationSucceed = true;
-          this.user.data = response.data.user;
+          this.userData = response.data.user;
           this.user.storeData();
         }
 
@@ -105,10 +112,10 @@ export class VerifyPage implements OnInit {
     this.isResendLoading = true;
     this.resendTimeout = true;
 
-    this.auth.resendVerificationCode(this.user.data.email).subscribe(
+    this.auth.resendVerificationCode(this.userData.email).subscribe(
       () => {
         this.isResendLoading = false;
-        this.user.data.active = true;
+        this.userData.active = true;
 
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 2500,

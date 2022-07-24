@@ -14,9 +14,13 @@ import { UserService } from '@services/user.service';
 export class DashboardPage {
   public schedule: Schedule = schedule;
 
-  public userData: UserData = this.user.data;
+  public userData: UserData;
 
   constructor(private headerService: HeaderService, public dashboard: DashboardService, private user: UserService) {
     this.headerService.setPageTitle('Dashboard');
+
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
   }
 }

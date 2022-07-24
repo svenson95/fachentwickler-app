@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -18,7 +18,9 @@ import { ThemeService } from './theme.service';
   providedIn: 'root',
 })
 export class UserService {
-  public data: UserData;
+  private data = new ReplaySubject<UserData>(1);
+
+  public readonly data$ = this.data.asObservable();
 
   public isAuthenticated = false;
 
@@ -35,20 +37,29 @@ export class UserService {
     private theme: ThemeService,
   ) {}
 
+  public resetData(): void {
+    this.data.next(undefined);
+    this.isAuthenticated = false;
+  }
+
+  public setData(userData: UserData): void {
+    this.data.next(userData);
+  }
+
   public restore(): void {
     const stored = localStorage.getItem(CREDENTIALS_STORAGE_KEY);
     if (stored === null) return;
 
-    const data = JSON.parse(stored);
-    this.data = data.user;
-    this.auth.token = data.token;
+    const storedData = JSON.parse(stored);
+    this.data.next(storedData.user);
+    this.auth.token = storedData.token;
     this.isAuthenticated = true;
-    if (this.theme.getActiveTheme() !== data.theme) this.theme.toggleTheme();
+    if (this.theme.getActiveTheme() !== storedData.theme) this.theme.toggleTheme();
 
     this.auth.refresh().subscribe(
       (response) => {
         if (response.success) {
-          this.data = response.data.user;
+          this.data.next(response.data.user);
           this.auth.token = response.data.token;
 
           if (this.theme.getActiveTheme() !== response.data.user.theme) {
@@ -70,39 +81,43 @@ export class UserService {
   }
 
   public storeData(): void {
-    localStorage.setItem(
-      CREDENTIALS_STORAGE_KEY,
-      JSON.stringify({
-        user: this.data,
-        token: this.auth.token,
-        theme: this.theme.getActiveTheme(),
-      }),
-    );
+    this.data$.subscribe((data) => {
+      localStorage.setItem(
+        CREDENTIALS_STORAGE_KEY,
+        JSON.stringify({
+          user: data,
+          token: this.auth.token,
+          theme: this.theme.getActiveTheme(),
+        }),
+      );
+    });
   }
 
-  public setLessonSolved(id: string, onSuccess: Function): Promise<void> {
-    if (this.data.progress.includes(id)) return;
+  public setLessonSolved(id: string, onSuccess: Function): void {
+    this.data$.subscribe((data) => {
+      if (data.progress.includes(id)) return;
 
-    const lesson: AddProgressBody = {
-      userId: this.data._id,
-      postId: id,
-    };
+      const lesson: AddProgressBody = {
+        userId: data._id,
+        postId: id,
+      };
 
-    this.addProgress(lesson).subscribe(
-      () => {
-        this.snackbar.openFromComponent(SnackbarComponent, {
-          duration: 3000,
-          data: 'Lektion als gelesen markiert',
-        });
-        onSuccess();
-      },
-      (error) => {
-        this.snackbar.openFromComponent(SnackbarComponent, {
-          duration: 3000,
-          data: `Fehler: ${typeof error === 'string' ? error : error.message}`,
-        });
-      },
-    );
+      this.addProgress(lesson).subscribe(
+        () => {
+          this.snackbar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: 'Lektion als gelesen markiert',
+          });
+          onSuccess();
+        },
+        (error) => {
+          this.snackbar.openFromComponent(SnackbarComponent, {
+            duration: 3000,
+            data: `Fehler: ${typeof error === 'string' ? error : error.message}`,
+          });
+        },
+      );
+    });
   }
 
   public changePassword(code: string, newPassword: string): Observable<AuthUserResponse> {
@@ -125,9 +140,6 @@ export class UserService {
       })
       .pipe(
         map((response) => {
-          if (response.success) {
-            this.storeData();
-          }
           return response;
         }),
       );
@@ -140,7 +152,7 @@ export class UserService {
       map((response) => {
         // console.log('response POST user/add-progress', response);
         if (response.success) {
-          this.data = response.data.user;
+          this.setData(response.data.user);
           this.storeData();
         }
         return response;

@@ -27,8 +27,7 @@ export class LogoutDialogComponent {
         if (guardRoutes.includes(this.router.url.substr(1))) {
           this.router.navigateByUrl('/');
         }
-        this.user.data = undefined;
-        this.user.isAuthenticated = false;
+        this.user.resetData();
 
         this.snackBar.openFromComponent(SnackbarComponent, {
           duration: 3000,

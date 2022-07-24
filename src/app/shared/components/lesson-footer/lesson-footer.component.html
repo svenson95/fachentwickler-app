@@ -2,9 +2,9 @@
   <a class="fe-button" *ngIf="userData.role === UserRole.ADMIN" routerLink="edit" matRipple> Artikel bearbeiten </a>
   <button
     class="fe-button"
-    *ngIf="postId"
-    [isLoading]="isLoading && !(postId | alreadyRead)"
-    [disabled]="isLoading || (postId | alreadyRead)"
+    *ngIf="postId && userData.progress"
+    [isLoading]="isLoading && !(postId | alreadyRead: userData.progress)"
+    [disabled]="isLoading || (postId | alreadyRead: userData.progress)"
     (click)="lessonSolved()"
     matRipple
   >

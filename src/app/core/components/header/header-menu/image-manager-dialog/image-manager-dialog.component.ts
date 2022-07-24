@@ -22,7 +22,7 @@ export class ImageManagerDialogComponent {
     other: '# Chunks',
   };
 
-  public userData: UserData = this.user.data;
+  public userData: UserData;
 
   public UserRole = UserRole;
 
@@ -50,6 +50,9 @@ export class ImageManagerDialogComponent {
     private imageManager: ImageManagerService,
     private dialog: MatDialog,
   ) {
+    this.user.data$.subscribe((response) => {
+      this.userData = response;
+    });
     this.loadAllImagesCount();
     this.getImages();
   }

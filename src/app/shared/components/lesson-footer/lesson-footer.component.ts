@@ -17,11 +17,15 @@ export class LessonFooterComponent {
   // TODO: check if isLoading can be refactored to fe-state-button component
   @Input() public isLoading: boolean;
 
-  public userData: UserData = this.user.data;
+  public userData: UserData;
 
   public UserRole = UserRole;
 
-  constructor(public auth: AuthService, private dashboard: DashboardService, private user: UserService) {}
+  constructor(public auth: AuthService, private dashboard: DashboardService, private user: UserService) {
+    this.user.data$.subscribe((data) => {
+      this.userData = data;
+    });
+  }
 
   public lessonSolved(): void {
     this.user.setLessonSolved(this.postId, () => {

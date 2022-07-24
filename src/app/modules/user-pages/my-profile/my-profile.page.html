@@ -20,7 +20,7 @@
         <button
           class="save-change"
           (click)="saveChangeName()"
-          *ngIf="name.enabled && name.value !== user.data.name"
+          *ngIf="name.enabled && name.value !== userData?.name"
           [disabled]="email.enabled || password.enabled || isLoading"
         >
           Speichern
@@ -53,7 +53,7 @@
           <button
             class="save-change"
             type="submit"
-            *ngIf="email.enabled && email.value !== user.data.email"
+            *ngIf="email.enabled && email.value !== userData?.email"
             [disabled]="name.enabled || password.enabled || isLoading"
           >
             Speichern
@@ -168,7 +168,7 @@
         <button
           class="save-change"
           (click)="saveChangeTheme()"
-          *ngIf="themeService.getActiveTheme() !== user.data.theme"
+          *ngIf="themeService.getActiveTheme() !== userData?.theme"
           [disabled]="isConfirmingEmail || isLoading"
         >
           Speichern
