@@ -10,9 +10,9 @@ export interface CssTheme {
 export const lightTheme: CssTheme = {
   name: Theme.LIGHT,
   properties: {
-    '--background-primary': '#FFFFFF',
-    '--background-secondary': '#dddddd',
-    '--background-tertiary': '#d4d4d4',
+    '--background-primary': 'rgb(240, 240, 240)',
+    '--background-secondary': 'rgb(220, 220, 220)',
+    '--background-tertiary': 'rgb(200, 200, 200)',
     '--tertiary-color': '#94aac5',
 
     '--text-color-1': '#3C3C3C',
@@ -40,9 +40,9 @@ export const lightTheme: CssTheme = {
 export const darkTheme: CssTheme = {
   name: Theme.DARK,
   properties: {
-    '--background-primary': '#222222',
-    '--background-secondary': '#333333',
-    '--background-tertiary': '#464646',
+    '--background-primary': 'rgb(30,30,30)',
+    '--background-secondary': 'rgb(50,50,50)',
+    '--background-tertiary': 'rgb(70,70,70)',
     '--tertiary-color': 'var(--tertiary-color-dark)',
 
     '--text-color-1': '#F0F0F0',
