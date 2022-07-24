@@ -57,7 +57,7 @@ export class UserService {
     this.data.next(storedData.user);
     this.auth.token = storedData.token;
     this.isAuthenticated = true;
-    if (this.theme.getActiveTheme() !== storedData.theme) this.theme.toggleTheme();
+    if (this.theme.activeTheme !== storedData.theme) this.theme.toggleTheme();
 
     this.auth.refresh().subscribe(
       (response) => {
@@ -65,7 +65,7 @@ export class UserService {
           this.data.next(response.data.user);
           this.auth.token = response.data.token;
 
-          if (this.theme.getActiveTheme() !== response.data.user.theme) {
+          if (this.theme.activeTheme !== response.data.user.theme) {
             this.theme.toggleTheme();
           }
 
@@ -90,7 +90,7 @@ export class UserService {
         JSON.stringify({
           user: data,
           token: this.auth.token,
-          theme: this.theme.getActiveTheme(),
+          theme: this.theme.activeTheme,
         }),
       );
     });

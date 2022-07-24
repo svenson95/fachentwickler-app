@@ -243,12 +243,13 @@ export class MyProfilePage implements OnInit, OnDestroy {
 
   public toggleTheme(): void {
     this.themeService.toggleTheme();
-    this.theme.setValue(this.themeService.getActiveThemeTranslated());
+    this.theme.setValue(this.themeService.activeThemeTranslated);
   }
 
   public saveChangeTheme(): void {
-    const theme = this.themeService.getActiveTheme();
+    const theme = this.themeService.activeTheme;
     const data: EditThemeBody = { _id: this.userData._id, theme };
+
     this.user.edit(data).subscribe(
       () => {
         this.snackbar.openFromComponent(SnackbarComponent, {
@@ -301,7 +302,7 @@ export class MyProfilePage implements OnInit, OnDestroy {
     });
     this.progress = new FormControl({ value: 0, disabled: true });
     this.theme = new FormControl({
-      value: this.themeService.getActiveThemeTranslated(),
+      value: this.themeService.activeThemeTranslated,
       disabled: true,
     });
   }

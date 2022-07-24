@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   @HostBinding('class') public get activeTheme(): string {
-    return this.theme.getActiveTheme().toLowerCase();
+    return this.theme.activeTheme.toLowerCase();
   }
 
   public isMobile: boolean;

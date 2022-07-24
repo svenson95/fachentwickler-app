@@ -13,16 +13,16 @@ export class ThemeService {
     this.injectThemeCss();
   }
 
-  public getActiveTheme(): Theme {
+  public get activeTheme(): Theme {
     return this.theme.name;
   }
 
-  public getActiveThemeTranslated(): string {
+  public get activeThemeTranslated(): string {
     return this.theme.name === Theme.LIGHT ? 'Hell' : 'Dunkel';
   }
 
   public toggleTheme(): void {
-    if (this.getActiveTheme() === Theme.DARK) {
+    if (this.activeTheme === Theme.DARK) {
       this.setLightTheme();
     } else {
       this.setDarkTheme();

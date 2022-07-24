@@ -41,8 +41,8 @@
   <a class="menu-btn" mat-menu-item (click)="theme.toggleTheme()" disableRipple>
     <mat-icon>invert_colors</mat-icon>
     <span class="label">
-      <ng-container *ngIf="theme.getActiveTheme() === Theme.LIGHT">Dunkles</ng-container>
-      <ng-container *ngIf="theme.getActiveTheme() === Theme.DARK">Helles</ng-container>
+      <ng-container *ngIf="theme.activeTheme === Theme.LIGHT">Dunkles</ng-container>
+      <ng-container *ngIf="theme.activeTheme === Theme.DARK">Helles</ng-container>
       Theme aktivieren
     </span>
   </a>

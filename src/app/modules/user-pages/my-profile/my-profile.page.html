@@ -159,7 +159,7 @@
         <input matInput type="text" [formControl]="theme" />
         <mat-slide-toggle
           class="theme-toggle"
-          [checked]="themeService.getActiveTheme() == Theme.DARK"
+          [checked]="themeService.activeTheme == Theme.DARK"
           (change)="toggleTheme()"
         >
         </mat-slide-toggle>
@@ -168,7 +168,7 @@
         <button
           class="save-change"
           (click)="saveChangeTheme()"
-          *ngIf="themeService.getActiveTheme() !== userData?.theme"
+          *ngIf="themeService.activeTheme !== userData?.theme"
           [disabled]="isConfirmingEmail || isLoading"
         >
           Speichern
