@@ -25,12 +25,12 @@ hr {
   border: none;
 
   &.horizontal {
-    height: 1px;
+    height: var(--progressbar-height);
     width: 100%;
   }
 
   &.vertical {
-    width: 1px;
+    width: var(--progressbar-height);
   }
 
   &:not(.secondary) {
