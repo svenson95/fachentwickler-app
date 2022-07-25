@@ -53,13 +53,11 @@
       gap: 10px;
 
       .date-details {
-        width: 100%;
         height: fit-content;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        background: var(--background-primary);
-        border-radius: var(--border-radius);
-        padding: 6px;
+        gap: 2px;
 
         @include from-md {
           min-width: 170px;
@@ -67,18 +65,15 @@
 
         .date,
         .days-left {
-          letter-spacing: 1px;
           line-height: 15px;
         }
 
         .days-left {
-          text-align: right;
           color: var(--text-color-3);
         }
       }
 
       .show-lessons-btn {
-        width: 100%;
         display: flex;
         background: transparent;
         align-items: center;

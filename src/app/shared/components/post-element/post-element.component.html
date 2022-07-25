@@ -30,11 +30,11 @@
 <hr class="post-line horizontal" *ngIf="element.type === ElementType.LINE && (element.hidden ? isVisible : true)" />
 <!-- UNORDERED LIST -->
 <ng-container *ngIf="element.type === ElementType.LIST && !element.ordered && (element.hidden ? isVisible : true)">
-  <p class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></p>
+  <span class="post-ul-content" *ngIf="element.content" [innerHTML]="element.content"></span>
   <ul class="post-list">
-    <li class="post-ul-list" [class.sublist-container]="isSublistItem(item)" *ngFor="let item of element.list">
+    <li class="post-ul-list-item" [class.sublist-container]="isSublistItem(item)" *ngFor="let item of element.list">
       <span *ngIf="isString(item)" [innerHTML]="item"></span>
-      <span *ngIf="isSublistItem(item)" [innerHTML]="item.content"></span>
+      <span class="post-ul-sublist-content" *ngIf="isSublistItem(item)" [innerHTML]="item.content"></span>
       <ul class="post-ul-sublist" *ngIf="isSublistItem(item)">
         <li class="post-ul-sublist-item" *ngFor="let subItem of item.sublist">
           <span [innerHTML]="subItem"></span>
@@ -47,7 +47,7 @@
 <ng-container *ngIf="element.type === ElementType.LIST && element.ordered && (element.hidden ? isVisible : true)">
   <p class="post-ol-content" *ngIf="element.content" [innerHTML]="element.content"></p>
   <ol class="post-list-ordered">
-    <li class="post-ol-list" *ngFor="let item of element.list">
+    <li class="post-ol-list-item" *ngFor="let item of element.list">
       <span [innerHTML]="item"></span>
     </li>
   </ol>

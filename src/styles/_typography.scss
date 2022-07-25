@@ -39,7 +39,7 @@ fe-subject-page {
     list-style: none;
     margin-top: 0;
 
-    li::before {
+    li:not(.sublist-container)::before {
       content: "\25B8";
       color: var(--secondary-color);
       margin-left: -1rem;

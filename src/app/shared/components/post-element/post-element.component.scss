@@ -3,6 +3,7 @@
 :host {
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 
   &::-webkit-scrollbar {
     height: var(--scrollbar-width);
@@ -198,28 +199,25 @@ hr {
 
 .post-text,
 .post-ol-content,
-.post-ul-content {
+.post-ul-content,
+.post-ul-sublist-content {
   line-height: 22px;
 }
 
 .post-ol-content,
-.post-ul-content {
+.post-ul-content,
+.post-ul-sublist-content {
   margin-bottom: 10px;
 }
 
-.post-ol-list p,
-.post-ul-list p {
-  margin: 0;
+.post-ul-sublist-content {
+  display: flex;
 }
 
-.post-ol-list:not(:last-of-type),
-.post-ul-list:not(:last-of-type) {
+.post-ol-list-item:not(:last-of-type),
+.post-ul-list-item:not(:last-of-type),
+.post-ul-sublist-item:not(:last-of-type) {
   margin-bottom: 10px;
-}
-
-.post-ul-sublist {
-  padding-inline-start: 0;
-  padding-top: 3px;
 }
 
 .post-image-wrapper {
@@ -301,6 +299,8 @@ hr {
 
   code {
     width: 100%;
+    background: var(--background-secondary);
+    box-shadow: 0 0 4px rgb(var(--background-secondary), 0.5);
     padding: 20px;
     font-size: 0.9em;
 

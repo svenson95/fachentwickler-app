@@ -3,12 +3,11 @@
     <mat-icon class="date-icon">insert_invitation</mat-icon>
     <div class="date-block-wrapper">
       <div class="date-details">
-        <small>
-          <span class="date">{{ exam.date | date: "EEEE, dd.MM.yyyy" }}</span>
-          <br />
-          <span class="days-left" *ngIf="(exam.date | daysLeft) !== null">
-            {{ exam.date | daysLeft }}
-          </span>
+        <small class="date">
+          {{ exam.date | date: "EEEE, dd.MM.yyyy" }}
+        </small>
+        <small class="days-left" *ngIf="(exam.date | daysLeft) !== null">
+          {{ exam.date | daysLeft }}
         </small>
       </div>
       <button
