@@ -12,6 +12,30 @@
       padding-left: 0;
       padding-right: 0;
     }
+
+    fe-app-icon {
+      justify-content: center;
+      margin-block: 100px;
+
+      ::ng-deep {
+        div.icon-wrapper {
+          width: 64px;
+          height: 60px;
+          margin-right: 8px;
+          fill: var(--grey-3) !important;
+
+          svg {
+            height: 60px;
+          }
+        }
+
+        p.app-name small {
+          font-size: 2em;
+          line-height: 20px;
+          color: var(--grey-3) !important;
+        }
+      }
+    }
   }
 
   .ng-animating {
