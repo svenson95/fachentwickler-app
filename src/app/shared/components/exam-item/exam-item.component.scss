@@ -19,6 +19,7 @@
       background: var(--exam-background);
       padding: 10px 10px 10px 25px;
       margin-left: -30px;
+      gap: 5px;
 
       @include from-lg {
         align-self: flex-end;
@@ -31,7 +32,6 @@
       .date-icon {
         align-self: center;
         color: var(--tertiary-color);
-        margin-right: 8px;
 
         $size: 50px;
         font-size: $size;
@@ -49,67 +49,60 @@
 
     .date-block-wrapper {
       display: flex;
-      flex-direction: column;
-      margin-right: 5px;
+      align-items: center;
+      gap: 10px;
 
       .date-details {
+        width: 100%;
+        height: fit-content;
         display: flex;
         justify-content: space-between;
+        background: var(--background-primary);
+        border-radius: var(--border-radius);
+        padding: 6px;
+
+        @include from-md {
+          min-width: 170px;
+        }
 
         .date,
         .days-left {
           letter-spacing: 1px;
-        }
-
-        .date {
-          width: 180px;
-
-          @include to-xs {
-            width: 140px;
-          }
+          line-height: 15px;
         }
 
         .days-left {
-          width: 90px;
           text-align: right;
-
-          @include to-xs {
-            width: 80px;
-          }
+          color: var(--text-color-3);
         }
       }
 
       .show-lessons-btn {
+        width: 100%;
         display: flex;
         background: transparent;
         align-items: center;
-        align-self: flex-end;
         border: none;
         border-top-left-radius: var(--border-radius);
         border-top-right-radius: var(--border-radius);
         cursor: pointer;
         outline: none;
-        margin-top: 4px;
 
         &:hover span {
           background: rgba(var(--tertiary-color-rgb), 0.1);
         }
 
         span {
+          width: 100px;
+          padding: 5px 10px 3px;
+          flex-shrink: 0;
+          transition: background 100ms ease-out;
           color: var(--tertiary-color);
           letter-spacing: 1px;
           border-bottom: var(--progressbar-height) solid
             rgba(var(--tertiary-color-rgb), 0.3);
-          padding: 5px 10px 3px;
-          flex-shrink: 0;
-          transition: background 100ms ease-out;
-
-          @include from-xs {
-            width: 172px;
-          }
 
           @include to-xs {
-            width: 162px;
             font-size: 0.9em;
           }
         }
@@ -127,7 +120,7 @@
       .exam-subject {
         color: var(--grey-4);
         letter-spacing: 1px;
-        margin-bottom: 0;
+        margin-bottom: 5px;
 
         @include from-xs {
           font-size: 0.9em;
@@ -154,15 +147,8 @@
         letter-spacing: 1px;
         flex-grow: 1;
 
-        @include from-lg {
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-
-        @include to-xs {
-          font-size: 0.9em;
-          margin-top: 0;
-          margin-bottom: 3px;
+        @include to-lg {
+          margin-bottom: 10px;
         }
       }
     }
