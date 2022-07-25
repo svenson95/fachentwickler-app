@@ -12,14 +12,7 @@
     justify-content: center;
     flex-shrink: 0;
     margin-right: 5px;
-
-    @include from-xs {
-      fill: var(--secondary-color);
-    }
-
-    @include to-xs {
-      fill: var(--tertiary-color);
-    }
+    fill: var(--tertiary-color);
 
     svg {
       height: 30px;
@@ -32,14 +25,10 @@
 
   p.app-name {
     align-self: center;
-    color: var(--text-color-1);
-    line-height: 10px;
-    transform: translateY(-1px);
+    color: var(--tertiary-color);
+    line-height: 12px;
     z-index: 1;
-
-    @include to-xs {
-      line-height: 11px;
-    }
+    transform: translateY(1px);
 
     span {
       transition: letter-spacing 600ms ease;

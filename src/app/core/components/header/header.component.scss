@@ -4,16 +4,10 @@
   height: fit-content;
   width: 100%;
   justify-content: space-between;
-  background: var(--background-primary);
+  background: var(--exam-background);
   position: relative;
-
-  :host-context(.light) {
-    box-shadow: var(--box-shadow);
-  }
-
-  :host-context(.dark) {
-    border-bottom: var(--progressbar-height) solid var(--background-tertiary);
-  }
+  border-bottom: var(--progressbar-height) solid
+    rgba(var(--tertiary-color-rgb), 0.2);
 
   position: absolute;
   top: 0;
@@ -36,7 +30,7 @@
   div.header-wrapper {
     display: flex;
     width: 100%;
-    max-width: calc(190px + var(--max-width));
+    max-width: calc(170px + var(--max-width));
     justify-content: space-between;
   }
 
@@ -45,7 +39,7 @@
     flex: 0 0 auto;
 
     @include from-md {
-      width: 180px;
+      width: 170px;
     }
 
     a.start-button {
@@ -79,6 +73,13 @@
           &:focus {
             .app-name span {
               letter-spacing: 2.5px;
+              transition: letter-spacing 500ms ease-out;
+            }
+          }
+
+          &:active {
+            .app-name span {
+              letter-spacing: 1.5px;
               transition: letter-spacing 500ms ease-out;
             }
           }
@@ -199,12 +200,12 @@
   div.header-wrapper {
     .page-title .title,
     .dashboard-btn {
-      color: var(--text-color-2);
+      color: var(--tertiary-color);
     }
 
     .sidenav-btn,
     .more-menu-btn {
-      color: var(--text-color-3);
+      color: var(--tertiary-color);
     }
   }
 }
