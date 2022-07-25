@@ -12,15 +12,13 @@
         </small>
       </div>
       <button
-        class="show-lessons-btn"
+        class="fe-button show-lessons-btn"
         (click)="showLessons()"
         [class.is-open]="lessonsVisible"
-        [disabled]="lessonsVisible && examLessons === undefined"
+        [isLoading]="isLoading"
         matRipple
       >
-        <span>
-          {{ lessonsVisible ? "Lektionen ausblenden" : "Lektionen anzeigen" }}
-        </span>
+        {{ lessonsVisible ? "Lektionen ausblenden" : "Lektionen anzeigen" }}
       </button>
     </div>
   </div>
@@ -29,7 +27,7 @@
     <p class="exam-title">{{ exam.title }}</p>
   </div>
 </div>
-<div class="post-links-container" *ngIf="lessonsVisible">
+<div class="post-links-container" *ngIf="lessonsVisible && examLessons" @slide>
   <div class="post-link-wrapper" *ngFor="let lesson of examLessons; let i = index">
     <hr class="horizontal-line" />
     <hr class="vertical-line" />

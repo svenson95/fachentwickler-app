@@ -32,7 +32,7 @@ export const lightTheme: CssTheme = {
     '--box-shadow': 'rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(200, 200, 200, 0.2) 0px 4px 4px',
     '--button-shadow': 'rgba(200, 200, 200, 0.4) 0px 4px 4px, rgba(220, 220, 220, 0.5) 0px 4px 4px',
 
-    '--exam-background': 'rgba(148, 170, 197, 0.15)',
+    '--exam-background': 'rgb(212, 218, 225)',
     '--theme-toggle-color': 'var(--secondary-color)',
   },
 };
@@ -62,7 +62,7 @@ export const darkTheme: CssTheme = {
     '--box-shadow': 'rgba(0, 0, 0, 0.1) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 4px 4px',
     '--button-shadow': 'rgba(0, 0, 0, 0.2) 0px 4px 4px, rgba(0, 0, 0, 0.3) 0px 4px 4px',
 
-    '--exam-background': 'rgba(148, 170, 197, 0.3)',
+    '--exam-background': 'rgb(62, 67, 72)',
     '--theme-toggle-color': 'var(--grey-2)',
   },
 };
