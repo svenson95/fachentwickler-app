@@ -4,7 +4,7 @@ import { PostType } from '@enums/post-type';
 
 @Component({
   selector: 'fe-post-badge',
-  templateUrl: './post-badge.component.html',
+  template: `{{ typeString }}`,
   styleUrls: ['./post-badge.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

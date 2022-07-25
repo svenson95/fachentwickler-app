@@ -18,7 +18,7 @@ table.fe-schedule-table {
       flex-direction: column;
 
       &:not(:last-of-type) {
-        border-right: 1px solid var(--grey-1);
+        border-right: var(--progressbar-height) solid var(--grey-1);
       }
 
       &:first-of-type {
@@ -39,7 +39,7 @@ table.fe-schedule-table {
 
       th {
         min-height: 37px;
-        border-bottom: 1px solid var(--grey-1);
+        border-bottom: var(--progressbar-height) solid var(--grey-1);
 
         @include to-md {
           font-size: 0.8em;
@@ -69,16 +69,19 @@ table.fe-schedule-table {
 
         @include from-md {
           min-height: 80px;
+          gap: 5px;
         }
 
         @include to-md {
           min-height: 61px;
+          gap: 2px;
         }
 
         &:nth-child(2),
         &:nth-child(3),
         &:nth-child(4) {
-          border-bottom: 1px solid rgba(var(--grey-1-rgb), 0.5);
+          border-bottom: var(--progressbar-height) solid
+            rgba(var(--grey-1-rgb), 0.8);
         }
 
         &:first-child {
@@ -89,11 +92,11 @@ table.fe-schedule-table {
         .hour-teacher,
         .hour-room {
           @include to-lg {
-            font-size: 0.8rem;
+            font-size: 0.8em;
           }
 
           @include to-xs {
-            font-size: 0.65rem;
+            font-size: 0.7em;
           }
         }
 
@@ -120,12 +123,8 @@ table.fe-schedule-table {
 
         .hour-room,
         .hour-teacher {
-          @include to-md {
-            line-height: 14px;
-          }
-
           @include from-xs {
-            font-size: 0.8rem;
+            font-size: 0.8em;
           }
         }
       }
