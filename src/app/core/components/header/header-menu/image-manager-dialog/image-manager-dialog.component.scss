@@ -186,7 +186,6 @@ mat-dialog-content.image-manager {
 
       p {
         display: flex;
-        margin-bottom: 0;
 
         .chunks-length {
           color: var(--text-color-3);
@@ -262,11 +261,11 @@ ngx-dropzone-label.dropzone-labels {
   display: flex;
   align-items: center;
   font-size: 0.9em;
+  gap: 50px;
 
   p {
     color: var(--text-color-3);
     font-size: 0.8em;
-    margin: 0 20px;
   }
 
   .drop-image,
@@ -276,12 +275,11 @@ ngx-dropzone-label.dropzone-labels {
 
     ion-icon {
       font-size: 1.5em;
-      margin-right: 10px;
+      margin-right: 5px;
     }
 
-    h2 {
-      font-size: 1em;
-      margin-bottom: 0;
+    p {
+      color: rgb(113, 115, 134);
     }
   }
 }

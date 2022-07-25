@@ -14,7 +14,6 @@
 
   .label {
     align-self: center;
-    margin-bottom: 0;
     margin-right: 5px;
 
     @include from-md {
@@ -85,7 +84,6 @@
       }
 
       .title {
-        margin: 0;
         line-height: 16px;
         transition: letter-spacing 400ms ease-out;
 

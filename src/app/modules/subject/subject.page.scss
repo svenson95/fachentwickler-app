@@ -67,10 +67,6 @@
       line-height: 20px;
       padding: 6px 12px;
       border-radius: var(--border-radius);
-
-      @include from-md {
-        margin-bottom: 0;
-      }
     }
 
     hr {

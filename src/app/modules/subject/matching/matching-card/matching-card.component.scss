@@ -11,8 +11,6 @@ $easeIn-duration: 400ms;
   margin-top: 20px;
 
   .round-label {
-    margin-bottom: 0;
-
     @include to-md {
       font-size: 1em;
     }

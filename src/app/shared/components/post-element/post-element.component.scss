@@ -124,7 +124,6 @@
 
 .post-title {
   font-size: 1.3rem;
-  margin-bottom: 0;
 
   @include to-xs {
     font-size: 1.15rem;
@@ -138,7 +137,6 @@
 
 .post-subtitle {
   font-size: 1.2rem;
-  margin-bottom: 0;
 
   @include to-xs {
     font-size: 1.05rem;
@@ -147,7 +145,6 @@
 
 .post-text {
   line-height: 22px;
-  margin-bottom: 0;
 
   code {
     background: var(--background-secondary);

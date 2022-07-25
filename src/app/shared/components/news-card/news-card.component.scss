@@ -84,9 +84,6 @@
 
     .date,
     .title {
-      margin-top: 0;
-      margin-bottom: 0;
-
       @include from-lg {
         flex-shrink: 0;
       }
