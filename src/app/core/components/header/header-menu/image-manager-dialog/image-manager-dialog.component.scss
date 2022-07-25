@@ -77,14 +77,11 @@ mat-dialog-content.image-manager {
   }
 
   .recent-images-container {
+    height: 100%;
+    max-height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    overflow-y: scroll;
-    height: 100%;
-    max-height: 220px;
-    padding-right: 5px;
 
     &::-webkit-scrollbar {
       width: var(--scrollbar-width);
@@ -105,12 +102,15 @@ mat-dialog-content.image-manager {
     .images-list {
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .list-item {
-      display: flex;
       width: 100%;
+      display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 2px 8px;
       border: none;
       cursor: pointer;
@@ -124,17 +124,17 @@ mat-dialog-content.image-manager {
     .list-item {
       color: var(--text-color);
       background-color: transparent;
-      border-bottom: 1px solid var(--grey-2);
+      border-bottom: var(--progressbar-height) solid var(--grey-2);
       transition: border-bottom-color 150ms ease-out;
 
       &:hover {
-        border-bottom: 1px solid var(--tertiary-color);
+        border-bottom-color: var(--tertiary-color);
         transition: border-bottom-color 150ms ease-in;
       }
 
       &.is-selected {
         background-color: rgba(var(--secondary-color-rgb), 0.1);
-        border-bottom: 1px solid var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
         transition: border-bottom-color 150ms ease-in;
       }
     }

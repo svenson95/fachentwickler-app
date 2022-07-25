@@ -144,8 +144,6 @@
 }
 
 .post-text {
-  line-height: 22px;
-
   code {
     background: var(--background-secondary);
     padding: 2px 5px;
@@ -196,6 +194,12 @@ hr {
 
 .post-list {
   padding-inline-start: 30px;
+}
+
+.post-text,
+.post-ol-content,
+.post-ul-content {
+  line-height: 22px;
 }
 
 .post-ol-content,
