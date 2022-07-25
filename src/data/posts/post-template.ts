@@ -7,7 +7,7 @@ export const testArticle: PostArticle = {
   "title": "Testartikel",
   "description": "Thema vom 01.01.2000",
   "subject": "lf-1",
-  "type": "ARTICLE",
+  "type": "article",
   "lessonDate": "2020-01-01",
   "lastUpdate": "2020-01-01",
   "schoolWeek": 0,
@@ -19,6 +19,10 @@ export const testArticle: PostArticle = {
     {
       "type": "SUBTITLE",
       "content": "Untertitel"
+    },
+    {
+      "type": "TEXT",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias aliquam, aliquid asperiores autem cumque distinctio dolorem doloribus dolorum ducimus earum ex fuga iure maiores quod soluta vel? Aliquam, cumque. Accusamus alias atque autem blanditiis consequuntur debitis ea esse est fuga in laboriosam libero, obcaecati pariatur perspiciatis ratione reprehenderit similique tenetur ullam."
     },
     {
       "type": "TEXT",
@@ -48,7 +52,7 @@ export const testArticle: PostArticle = {
         "Lorem",
         "ipsum",
         {
-          "content": "Unordered list subtitle",
+          "content": "Sublist title",
           "sublist": ["dolor", "consectetur"]
         }
       ]
