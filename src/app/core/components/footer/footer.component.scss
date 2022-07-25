@@ -63,7 +63,9 @@
     }
 
     a {
-      text-decoration: none;
+      &:not(&:hover) {
+        text-decoration: none;
+      }
 
       @include to-md {
         line-height: 26px;
