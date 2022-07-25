@@ -71,10 +71,14 @@
 
       ::ng-deep fe-app-icon {
         @include from-xs {
+          .app-name span {
+            letter-spacing: 1px;
+          }
+
           &:hover,
           &:focus {
-            .app-name small {
-              letter-spacing: 2.5px !important;
+            .app-name span {
+              letter-spacing: 2.5px;
               transition: letter-spacing 500ms ease-out;
             }
           }
@@ -108,7 +112,6 @@
       }
 
       @include to-xs {
-        font-size: 0.8em;
         margin-left: 5px;
         padding: 0;
       }
@@ -119,9 +122,7 @@
       }
 
       .title {
-        font-size: 0.9rem;
         text-transform: uppercase;
-        line-height: 12px;
         white-space: pre-line;
         text-align: left;
 
