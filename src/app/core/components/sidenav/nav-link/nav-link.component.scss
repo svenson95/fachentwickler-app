@@ -22,16 +22,8 @@ a.nav-link.mat-list-item {
   &:focus {
     @include from-md {
       .nav-item-icon {
-        color: var(--text-color-1);
         transition: $nav-link-icon-fade-duration;
       }
-    }
-  }
-
-  &.active-route,
-  &:active {
-    .nav-item-icon {
-      color: var(--text-color-1);
     }
   }
 
@@ -49,7 +41,6 @@ a.nav-link.mat-list-item {
     &:not(.active-route) span {
       position: relative;
 
-      &:focus,
       &:before,
       &:after {
         content: "";
@@ -75,6 +66,9 @@ a.nav-link.mat-list-item {
     &:focus,
     &:hover {
       span {
+        color: var(--text-color-1);
+        transition: color 100ms ease-in-out;
+
         &:before,
         &:after {
           opacity: 1;
