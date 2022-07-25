@@ -222,9 +222,10 @@ mat-card.mat-card.card {
     border-radius: 0;
   }
 
-  .card-last-update {
+  .last-update {
     display: flex;
     justify-content: flex-end;
+    margin-top: 50px;
     color: var(--grey-3);
   }
 }

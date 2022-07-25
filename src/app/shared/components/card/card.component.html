@@ -18,7 +18,5 @@
     <ng-content></ng-content>
   </mat-card-content>
 
-  <small class="card-last-update" *ngIf="lastUpdate">
-    Letzte Aktualisierung: {{ lastUpdate | date: "dd.MM.yyyy" }}
-  </small>
+  <small class="last-update" *ngIf="lastUpdate"> Letzte Aktualisierung: {{ lastUpdate | date: "dd.MM.yyyy" }} </small>
 </mat-card>
