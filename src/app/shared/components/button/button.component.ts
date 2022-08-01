@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TextComponent {
+export class ButtonComponent {
   @Input() public isLoading: boolean;
 
   @Input() public type: 'button' | 'submit' | 'reset' = 'button';
